@@ -288,14 +288,14 @@ var notifications = [],
 var answerEditsLog = [{ id: "edit-001", context: "المحاضرة الأولى", questionNum: 1, questionText: "", oldAnswer: "الإجابة القديمة", newAnswer: "الإجابة الصحيحة الجديدة" }];
 var lecturesAddedLog = [];
 // نموذج إضافة إشعار عام (Info Notification)
-addNotification();
-//   {
-//   type: "info",
-//   title: "📢 تنبيه هام بشأن جدول الاختبارات",
-//   context: "مادة البرمجة الكائنية",
-//   questionText: "تم إتاحة نموذج اختبار تجريبي جديد على المنصة، يرجى مراجعته قبل موعد الاختبار النهائي.",
-//   score: undefined // يمكنك وضع رقم هنا إذا كان الإشعار يرتبط بنتيجة اختبار (مثال: 85)
-// }
+addNotification({
+  type: "info",
+  title: "📢 تنبيه هام بشأن جدول الاختبارات",
+  context: "مادة البرمجة الكائنية",
+  questionText:
+    "تم إتاحة نموذج اختبار تجريبي جديد على المنصة، يرجى مراجعته قبل موعد الاختبار النهائي.",
+  score: undefined, // يمكنك وضع رقم هنا إذا كان الإشعار يرتبط بنتيجة اختبار (مثال: 85)
+});
 function loadNotifications(){
   try{ var n = localStorage.getItem('notifications_data'); if(n) notifications = JSON.parse(n); }catch(e){ notifications = []; }
 }
