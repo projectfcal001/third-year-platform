@@ -35,13 +35,7 @@ var SUBJECTS_INDEX = [
     slug: "software-engineering",
     file: "datenew/subjects/software-engineering/software-engineering.js",
   },
-  {
-    name: "التدريب الميداني (Cloud Computing)",
-    en: "Field Training — Cloud Computing",
-    icon: "☁️",
-    slug: "cloud-computing",
-    file: "datenew/subjects/cloud-computing/cloud-computing.js",
-  },
+
   {
     name: "التدريب الميداني",
     en: "Field Training — Cloud Computing",
