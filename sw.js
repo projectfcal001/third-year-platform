@@ -29,6 +29,7 @@ const CDN_HOSTS = [
 ];
 
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches
       .open(CACHE)

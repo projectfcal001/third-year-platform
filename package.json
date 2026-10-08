@@ -2,6 +2,9 @@
   "name": "study-platform",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "deploy": "node build-version.js && git add . && git commit -m \"update\" && git push"
+  },
   "dependencies": {
     "googleapis": "^144.0.0"
   }
