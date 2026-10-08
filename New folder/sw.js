@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1791490879346";
+const VERSION = "v1791490008881";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -56,9 +56,7 @@ self.addEventListener("activate", (event) => {
 
 // الصفحة بتبعت "SKIP_WAITING" لما تدوسي "تحديث" في التوست (أو تلقائي في نافذة الفتح)
 self.addEventListener("message", (event) => {
-  const d = event.data;
-  if (d === "SKIP_WAITING" || (d && d.type === "SKIP_WAITING"))
-    self.skipWaiting();
+  if (event.data === "SKIP_WAITING") self.skipWaiting();
 });
 
 async function networkFirst(request, isPage) {

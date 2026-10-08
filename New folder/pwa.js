@@ -76,7 +76,7 @@
     // ★ pwa.js بيتحمّل متأخر (بعد load) فلازم نسجّل فورًا لو load عدّى
     function registerSW() {
       navigator.serviceWorker
-        .register("./sw.js", { updateViaCache: "none" })
+        .register("./sw.js")
         .then(function (reg) {
           // helper: تنفيذ التحديث (تلقائي أو يدوي)
           function applyUpdate(worker, isAuto) {
