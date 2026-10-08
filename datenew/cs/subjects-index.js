@@ -43,7 +43,7 @@ var SUBJECTS_INDEX = [
     file: "datenew/subjects/cloud-computing/cloud-computing.js",
   },
   {
-    name: "التدريب الميداني (Cloud Computing)",
+    name: "التدريب الميداني",
     en: "Field Training — Cloud Computing",
     icon: "☁️",
     slug: "cloud-computing",

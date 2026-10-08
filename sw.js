@@ -4,23 +4,18 @@ const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
   "./",
-  "./indexV3.html",
   "./index.html",
   "./app.js",
+  "./pwa.js",
   "./pdf-annotator.html",
   "./manifest.webmanifest",
-  "./pwa.js",
   "./icons/icon.svg",
   "./icons/icon-maskable.svg",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png",
-  "./icons/icon-maskable-512.png",
-  "./datenew/subjects-index.js",
-  "./datenew/graphics/graphics.js",
-  "./datenew/visual-programming/visual-programming.js",
-  "./datenew/networks/networks.js",
-  "./datenew/operating-systems/operating-systems.js",
-  "./datenew/software-engineering/software-engineering.js",
+  "./datenew/departments.js",
+  "./datenew/cs/subjects-index.js",
+  "./datenew/is/subjects-index.js",
+  "./datenew/se/subjects-index.js",
+  "./datenew/ai/subjects-index.js",
 ];
 
 // مكتبات وخطوط خارجية مسموح تتخزن أوفلاين (Google Drive والـ iframes مش هتتخزن)
