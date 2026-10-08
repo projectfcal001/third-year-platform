@@ -35,7 +35,7 @@
   if(sb>40&&sb<600)document.documentElement.style.setProperty('--sb-h',sb+'px');
 }catch(e){}})();
 /* نلتقط beforeinstallprompt لأن pwa.js بيتحمّل متأخر */
-window.addEventListener('beforeinstallprompt',function(e){window.__bip=e;});
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__bip=e;});
 </script>
 <script>var subjects = [];</script>
 <script src="datenew/departments.js" defer></script>
@@ -1504,7 +1504,7 @@ header{contain:layout style}
     if(document.readyState==='complete') start(); else window.addEventListener('load',start,{once:true});
   }
   function add(src,cb){var s=document.createElement('script');s.src=src;s.defer=true;if(cb)s.onload=cb;document.body.appendChild(s);}
-  later(2500,function(){
+  later(1200,function(){
     add('pwa.js');
   });
   later(3000,function(){ add('/_vercel/insights/script.js'); });

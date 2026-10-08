@@ -5,11 +5,13 @@
   /* ---------- ستايل الزرار والتوست (مرفوعين فوق status-bar الموقع) ---------- */
   var style = document.createElement("style");
   style.textContent =
-    ".pwa-install{position:fixed;right:16px;bottom:calc(46px + env(safe-area-inset-bottom,0px));z-index:9999;" +
-    "display:none;align-items:center;gap:8px;padding:12px 18px;border:0;border-radius:999px;cursor:pointer;" +
-    "background:#3498db;color:#fff;font-size:14px;font-weight:700;font-family:inherit;box-shadow:0 6px 20px rgba(0,0,0,.35)}" +
-    ".pwa-install.show{display:inline-flex}" +
-    ".pwa-install:hover{filter:brightness(1.15)}" +
+    ".pwa-hdr-install{width:auto!important;padding:0 14px;border-radius:999px!important;gap:6px;font-family:inherit;font-size:13px!important;font-weight:700;white-space:nowrap}" +
+    ".pwa-hdr-install[hidden]{display:none!important}" +
+    "@media(max-width:640px){.pwa-hdr-install{padding:0 10px}.pwa-hdr-install .lbl{display:none}}" +
+    ".pwa-ios{position:fixed;left:50%;bottom:calc(60px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:10000;" +
+    "max-width:calc(100% - 32px);padding:12px 18px;border-radius:14px;background:var(--bg-header,#161b22);color:#fff;font-size:13px;" +
+    "line-height:1.8;text-align:center;direction:rtl;box-shadow:0 6px 20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12)}" +
+    ".pwa-ios button{margin-top:8px;background:rgba(255,255,255,.2);border:0;color:#fff;padding:6px 14px;border-radius:20px;font:inherit;font-weight:700;cursor:pointer}" +
     ".pwa-toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);" +
     "z-index:10000;display:flex;align-items:center;gap:12px;max-width:calc(100% - 32px);padding:12px 16px;" +
     "border-radius:14px;background:#161b22;color:#fff;font-family:inherit;font-size:14px;" +
@@ -54,7 +56,7 @@
 
     // ★ نافذة "الفتح" — لو التحديث وصل خلال 20 ثانية من فتح التطبيق
     //   → نطبقه تلقائي (بدون زرار). بعد كده → زرار.
-    var COLD_START_MS = 20000;
+    var COLD_START_MS = 10000;
     var coldStartUntil = Date.now() + COLD_START_MS;
     var autoApplied = false;
     var userInteracted = false;
@@ -155,70 +157,111 @@
     });
   }
 
-  /* ---------- زرار "ثبّت التطبيق" ---------- */
+  /* ---------- زرار "ثبّت التطبيق" (في الـ header) ---------- */
+  var INSTALLED_KEY = "pwa_installed_v1";
+  var IOS_KEY = "ios_install_hint_dismissed";
+
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  // نستخدم showToast بتاع الموقع لو موجود، وإلا توست pwa.js
+  function say(msg) {
+    if (typeof window.showToast === "function") window.showToast(msg);
+    else {
+      var t = toast(msg, null, null);
+      setTimeout(function () { if (t.parentNode) t.remove(); }, 2600);
+    }
+  }
+
   var isStandalone =
     (window.matchMedia &&
       window.matchMedia("(display-mode: standalone)").matches) ||
     window.navigator.standalone === true;
   var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  var deferredPrompt = null;
+  var btn = null;
 
-  var btn = document.getElementById("installBtn");
-  if (!btn) {
+  function ensureBtn() {
+    if (btn) return btn;
+    var wrap = document.querySelector(".hdr-tools");
+    if (!wrap) return null;
     btn = document.createElement("button");
     btn.id = "installBtn";
     btn.type = "button";
-    btn.className = "pwa-install";
-    btn.textContent = "📲 ثبّت التطبيق";
-    document.body.appendChild(btn);
+    btn.className = "hdr-icon-btn pwa-hdr-install";
+    btn.title = "تثبيت التطبيق على جهازك";
+    btn.setAttribute("aria-label", "ثبّت التطبيق");
+    btn.innerHTML = '📲<span class="lbl">ثبّت التطبيق</span>';
+    btn.hidden = true;
+    btn.addEventListener("click", doInstall);
+    wrap.insertBefore(btn, wrap.firstChild);
+    return btn;
   }
-
   function showBtn() {
-    btn.classList.add("show");
-    btn.hidden = false;
+    if (isStandalone || lsGet(INSTALLED_KEY) === "1") return;
+    var b = ensureBtn();
+    if (b) b.hidden = false;
   }
   function hideBtn() {
-    btn.classList.remove("show");
-    btn.hidden = true;
+    if (btn) btn.hidden = true;
   }
 
-  if (isStandalone) {
+  function doInstall() {
+    if (!deferredPrompt) { say("⚠️ التثبيت مش متاح حالياً"); return; }
+    var p = deferredPrompt;
+    deferredPrompt = null;
+    window.__bip = null;
     hideBtn();
-  } else {
-    var deferredPrompt = null;
-    hideBtn();
+    p.prompt();
+    p.userChoice
+      .then(function (c) {
+        if (c && c.outcome === "accepted") {
+          lsSet(INSTALLED_KEY, "1");
+          say("✅ تم تثبيت التطبيق بنجاح 🎉");
+        } else {
+          say("↩ اتلغى التثبيت");
+        }
+      })
+      .catch(function () {});
+  }
 
-    function onBIP(e) {
-      e.preventDefault();
-      deferredPrompt = e;
-      showBtn();
-    }
+  function onBIP(e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    showBtn();
+  }
+
+  function showIOSHint() {
+    if (lsGet(IOS_KEY) === "1") return;
+    var box = document.createElement("div");
+    box.className = "pwa-ios";
+    box.setAttribute("role", "status");
+    box.innerHTML =
+      "📲 لتثبيت التطبيق على الآيفون:<br>اضغط زر المشاركة <b>⬆️</b> ثم <b>\"إضافة إلى الشاشة الرئيسية\"</b><br>";
+    var ok = document.createElement("button");
+    ok.type = "button";
+    ok.textContent = "فهمت ✓";
+    ok.addEventListener("click", function () {
+      box.remove();
+      lsSet(IOS_KEY, "1");
+    });
+    box.appendChild(ok);
+    document.body.appendChild(box);
+  }
+
+  if (!isStandalone && lsGet(INSTALLED_KEY) !== "1") {
     window.addEventListener("beforeinstallprompt", onBIP);
-    // ★ الحدث ممكن يكون اتطلق قبل تحميل pwa.js (اتلقط في index)
+    // الحدث ممكن يكون اتطلق قبل تحميل pwa.js (اتلقط في index)
     if (window.__bip) onBIP(window.__bip);
-
-    btn.addEventListener("click", function () {
-      if (deferredPrompt) {
-        hideBtn();
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.finally(function () {
-          deferredPrompt = null;
-        });
-      } else if (isIOS) {
-        toast(
-          '📲 اضغطي زرار المشاركة ⎋ ثم "إضافة إلى الشاشة الرئيسية"',
-          null,
-          null,
-        );
-      }
-    });
-
-    if (isIOS) showBtn(); // iOS مفيهوش beforeinstallprompt
-
-    window.addEventListener("appinstalled", function () {
-      deferredPrompt = null;
-      hideBtn();
-    });
+    if (isIOS) setTimeout(showIOSHint, 1000);
   }
+
+  window.addEventListener("appinstalled", function () {
+    deferredPrompt = null;
+    window.__bip = null;
+    lsSet(INSTALLED_KEY, "1");
+    hideBtn();
+  });
 
   /* ---------- theme-color يتغير مع الثيم ---------- */
   function syncThemeColor() {
