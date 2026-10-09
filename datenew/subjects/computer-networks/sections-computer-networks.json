@@ -1,4 +1,6 @@
 {
+  "schemaVersion": 2,
+  "subject": "networks",
   "sections": [
     {
       "id": "networks-sec-01",
