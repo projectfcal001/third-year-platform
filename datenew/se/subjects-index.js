@@ -13,6 +13,8 @@ var SUBJECTS_INDEX = [
     icon: "🌐",
     slug: "computer-networks",
     file: "datenew/subjects/computer-networks/computer-networks.js",
+    sectionsFile:
+      "datenew/subjects/computer-networks/sections-computer-networks.json",
   },
   {
     name: "نظم التشغيل",
