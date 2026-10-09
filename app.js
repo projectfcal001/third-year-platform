@@ -285,27 +285,27 @@ function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
 // ============================================================
 var notifications = [],
   notifSeq = 0;
-var answerEditsLog = [{ id: "edit-001", context: "المحاضرة الأولى", questionNum: 1, questionText: "", oldAnswer: "الإجابة القديمة", newAnswer: "الإجابة الصحيحة الجديدة" }];
+var answerEditsLog = [
+  {
+    id: "edit-001",
+    context: "المحاضرة الأولى",
+    questionNum: 1,
+    questionText: "",
+    oldAnswer: "الإجابة القديمة",
+    newAnswer: "الإجابة الصحيحة الجديدة",
+  },
+  {
+    id: "edit-002",
+    context: "المحاضرة الثاني ",
+    questionNum: 1,
+    questionText: "",
+    oldAnswer: "الإجابة القديمة",
+    newAnswer: "الإجابة الصحيحة الجديدة",
+  },
+];
 var lecturesAddedLog = [];
 // نموذج إضافة إشعار عام (Info Notification)
-addNotification(
-  {
-    type: "info",
-    title: "📢 تنبيه هام بشأن جدول الاختبارات",
-    context: "مادة البرمجة الكائنية",
-    questionText:
-      "تم إتاحة نموذج اختبار تجريبي جديد على المنصة، يرجى مراجعته قبل موعد الاختبار النهائي.",
-    score: undefined, // يمكنك وضع رقم هنا إذا كان الإشعار يرتبط بنتيجة اختبار (مثال: 85)
-  },
-  {
-    type: "info",
-    title: "📢 تنبيه هام بشأن جدول الاختبارات",
-    context: "مادة البرمجة ",
-    questionText:
-      "تم إتاحة نموذج اختبار تجريبي جديد على المنصة، يرجى مراجعته قبل موعد الاختبار النهائي.",
-    score: undefined, // يمكنك وضع رقم هنا إذا كان الإشعار يرتبط بنتيجة اختبار (مثال: 85)
-  },
-);
+addNotification({});
 function loadNotifications(){
   try{ var n = localStorage.getItem('notifications_data'); if(n) notifications = JSON.parse(n); }catch(e){ notifications = []; }
 }
