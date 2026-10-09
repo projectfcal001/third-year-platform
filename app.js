@@ -286,26 +286,41 @@ function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
 var notifications = [],
   notifSeq = 0;
 var answerEditsLog = [
+  // {
+  //   id: "edit-002",
+  //   context: "المحاضرة الثاني ",
+  //   questionNum: 1,
+  //   questionText: "",
+  //   oldAnswer: "الإجابة القديمة",
+  //   newAnswer: "الإجابة الصحيحة الجديدة",
+  // },
+];
+var lecturesAddedLog = [
   {
-    id: "edit-001",
-    context: "المحاضرة الأولى",
-    questionNum: 1,
-    questionText: "",
-    oldAnswer: "الإجابة القديمة",
-    newAnswer: "الإجابة الصحيحة الجديدة",
+    id: "lec-001",
+    subject: "الرسم بالحاسب",
+    lectureTitle: "المحاضرة 3",
+    lectureDesc: "",
+  },
+]; // نموذج إضافة إشعار عام (Info Notification)
+// addNotification({});
+var announcementsLog = [
+  {
+    id: "ann-001",
+    title: "⏰ تم تأجيل امتحان الميدتيرم",
+    message: "الموعد الجديد الأحد 20/10.",
   },
   {
-    id: "edit-002",
-    context: "المحاضرة الثاني ",
-    questionNum: 1,
-    questionText: "",
-    oldAnswer: "الإجابة القديمة",
-    newAnswer: "الإجابة الصحيحة الجديدة",
+    id: "ann-002",
+    title: "📅 تعديل في الجدول",
+    message: "سكشن 3 اتنقل من السبت للأحد الساعة 10.",
+  },
+  {
+    id: "ann-003",
+    title: "🙋 محتاجين مساعدة",
+    message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
   },
 ];
-var lecturesAddedLog = [];
-// نموذج إضافة إشعار عام (Info Notification)
-addNotification({});
 function loadNotifications(){
   try{ var n = localStorage.getItem('notifications_data'); if(n) notifications = JSON.parse(n); }catch(e){ notifications = []; }
 }
@@ -324,6 +339,13 @@ function addAuditLog(entry){
 function addLectureAddedLog(entry){
   addNotification({type:'lecture_added', title:'📚 تمت إضافة محاضرة جديدة', subject:entry.subject, lectureTitle:entry.lectureTitle, lectureDesc:entry.lectureDesc});
 }
+function addAnnouncementLog(entry) {
+  addNotification({
+    type: "announcement",
+    title: entry.title || "📢 إعلان",
+    message: entry.message,
+  });
+}
 function truncateText(text, maxLen){
   if(!text) return '';
   text = String(text);
@@ -339,31 +361,76 @@ function toggleNotifDropdown(){
   dd.classList.toggle('show');
   if(dd.classList.contains('show')) renderNotifDropdown();
 }
-function renderNotifDropdown(){
-  var list = document.getElementById('notif-list');
-  if(notifications.length === 0){ list.innerHTML = '<div class="notif-empty">لا توجد إشعارات حالياً</div>'; return; }
-  var html = '';
-  notifications.forEach(function(n){
-    var cls = n.read ? '' : 'unread';
-    html += '<div class="notif-item ' + cls + '" onclick="markNotifRead(event,' + (Number(n.id) || 0) + ')">';
-    if(n.type === 'audit'){
-      html += '<strong>' + esc(n.title) + '</strong>';
-      html += '<span class="notif-detail">📁 ' + esc(n.context) + ' | سؤال #' + esc(n.questionNum) + '</span>';
-      html += '<span class="notif-detail">📝 السؤال: ' + esc(truncateText(n.questionText, 60)) + '</span>';
-      html += '<span class="notif-detail">❌ القديمة: <del>' + esc(n.oldAnswer) + '</del> → ✅ الجديدة: <strong>' + esc(n.newAnswer) + '</strong></span>';
-    }else if(n.type === 'lecture_added'){
-      html += '<strong>' + esc(n.title) + '</strong>';
-      html += '<span class="notif-detail">📁 المادة: ' + esc(n.subject) + '</span>';
-      html += '<span class="notif-detail">📚 المحاضرة: ' + esc(n.lectureTitle) + '</span>';
-      if(n.lectureDesc) html += '<span class="notif-detail">📝 ' + esc(truncateText(n.lectureDesc, 60)) + '</span>';
-    }else{
-      html += '<strong>' + esc(n.title || 'إشعار') + '</strong>';
-      if(n.context) html += '<span class="notif-detail">📁 ' + esc(n.context) + '</span>';
-      if(n.questionText) html += '<span class="notif-detail">📝 ' + esc(truncateText(n.questionText, 60)) + '</span>';
-      if(n.score !== undefined) html += '<span class="notif-detail">🏆 النتيجة: ' + esc(n.score) + '%</span>';
+function renderNotifDropdown() {
+  var list = document.getElementById("notif-list");
+  if (notifications.length === 0) {
+    list.innerHTML = '<div class="notif-empty">لا توجد إشعارات حالياً</div>';
+    return;
+  }
+  var html = "";
+  notifications.forEach(function (n) {
+    var cls = n.read ? "" : "unread";
+    html +=
+      '<div class="notif-item ' +
+      cls +
+      '" onclick="markNotifRead(event,' +
+      (Number(n.id) || 0) +
+      ')">';
+    if (n.type === "audit") {
+      html += "<strong>" + esc(n.title) + "</strong>";
+      html +=
+        '<span class="notif-detail">📁 ' +
+        esc(n.context) +
+        " | سؤال #" +
+        esc(n.questionNum) +
+        "</span>";
+      html +=
+        '<span class="notif-detail">📝 السؤال: ' +
+        esc(truncateText(n.questionText, 60)) +
+        "</span>";
+      html +=
+        '<span class="notif-detail">❌ القديمة: <del>' +
+        esc(n.oldAnswer) +
+        "</del> → ✅ الجديدة: <strong>" +
+        esc(n.newAnswer) +
+        "</strong></span>";
+    } else if (n.type === "lecture_added") {
+      html += "<strong>" + esc(n.title) + "</strong>";
+      html +=
+        '<span class="notif-detail">📁 المادة: ' + esc(n.subject) + "</span>";
+      html +=
+        '<span class="notif-detail">📚 المحاضرة: ' +
+        esc(n.lectureTitle) +
+        "</span>";
+      if (n.lectureDesc)
+        html +=
+          '<span class="notif-detail">📝 ' +
+          esc(truncateText(n.lectureDesc, 60)) +
+          "</span>";
+    } else if (n.type === "announcement") {
+      html += "<strong>" + esc(n.title) + "</strong>";
+      if (n.message)
+        html += '<span class="notif-detail">' + esc(n.message) + "</span>";
+    } else {
+      html += "<strong>" + esc(n.title || "إشعار") + "</strong>";
+      if (n.context)
+        html += '<span class="notif-detail">📁 ' + esc(n.context) + "</span>";
+      if (n.questionText)
+        html +=
+          '<span class="notif-detail">📝 ' +
+          esc(truncateText(n.questionText, 60)) +
+          "</span>";
+      if (n.score !== undefined)
+        html +=
+          '<span class="notif-detail">🏆 النتيجة: ' + esc(n.score) + "%</span>";
     }
-    html += '<div class="notif-meta">🕐 ' + esc(n.time) + ' | 📅 ' + esc(n.date) + '</div>';
-    html += '</div>';
+    html +=
+      '<div class="notif-meta">🕐 ' +
+      esc(n.time) +
+      " | 📅 " +
+      esc(n.date) +
+      "</div>";
+    html += "</div>";
   });
   list.innerHTML = html;
 }
@@ -401,6 +468,28 @@ function syncLecturesAddedLog(){
     }
   });
   if(changed){ try{ localStorage.setItem('seen_added_lectures', JSON.stringify(seenIds)); }catch(e){} }
+}
+function syncAnnouncementsLog() {
+  var seenIds = [];
+  try {
+    seenIds = JSON.parse(localStorage.getItem("seen_announcements") || "[]");
+  } catch (e) {
+    seenIds = [];
+  }
+  if (!Array.isArray(seenIds)) seenIds = [];
+  var changed = false;
+  announcementsLog.forEach(function (entry) {
+    if (seenIds.indexOf(entry.id) === -1) {
+      addAnnouncementLog(entry);
+      seenIds.push(entry.id);
+      changed = true;
+    }
+  });
+  if (changed) {
+    try {
+      localStorage.setItem("seen_announcements", JSON.stringify(seenIds));
+    } catch (e) {}
+  }
 }
 document.addEventListener('click', function(e){
   var wrap = document.getElementById('notif-bell-wrap');
@@ -2245,8 +2334,24 @@ function showPdfMergeDialog(callback){
 // ============================================================
 // 22) النسخة الاحتياطية
 // ============================================================
-var PROGRESS_KEYS = ['dept_v1','last_open_state','themeMode','notifications_data','cg_sections_v1','seen_system_edits','seen_added_lectures','sd.insOpenDays'];
-var PROGRESS_PREFIXES = ['last_open_state_','qa_','quiz_progress_','qmark_','pdfqalam:'];
+var PROGRESS_KEYS = [
+  "dept_v1",
+  "last_open_state",
+  "themeMode",
+  "notifications_data",
+  "cg_sections_v1",
+  "seen_system_edits",
+  "seen_added_lectures",
+  "seen_announcements",
+  "sd.insOpenDays",
+];
+var PROGRESS_PREFIXES = [
+  "last_open_state_",
+  "qa_",
+  "quiz_progress_",
+  "qmark_",
+  "pdfqalam:",
+];
 var BACKUP_MAX_BYTES = 5 * 1024 * 1024;
 
 function exportProgress(){
@@ -4274,38 +4379,49 @@ function fallbackCopy(text){
 // __initApp
 // ============================================================
 function __initApp(){
-  setTimeout(function(){ document.body.classList.add('app-ready'); }, 2000);
+  setTimeout(function () {
+    document.body.classList.add("app-ready");
+  }, 2000);
 
-  if(typeof SUBJECTS_INDEX === 'undefined' || !SUBJECTS_INDEX.length){
-    document.getElementById('main-title').textContent = '⚠️ خطأ في تحميل الفهرس';
-    document.getElementById('subject-bar').innerHTML = '';
-    document.querySelector('.container').innerHTML =
-      '<div style="text-align:center;padding:50px 20px;">'+
-      '<h2 style="color:var(--danger)">⚠️ لا توجد مواد في هذا القسم لسه</h2>'+
-      '<p style="color:var(--text-hint);line-height:1.8">تأكدي إن ملف فهرس القسم <b>' + esc((findDept(CUR_DEPT)||{}).index || '') + '</b> فيه مواد</p>'+
+  if (typeof SUBJECTS_INDEX === "undefined" || !SUBJECTS_INDEX.length) {
+    document.getElementById("main-title").textContent =
+      "⚠️ خطأ في تحميل الفهرس";
+    document.getElementById("subject-bar").innerHTML = "";
+    document.querySelector(".container").innerHTML =
+      '<div style="text-align:center;padding:50px 20px;">' +
+      '<h2 style="color:var(--danger)">⚠️ لا توجد مواد في هذا القسم لسه</h2>' +
+      '<p style="color:var(--text-hint);line-height:1.8">تأكدي إن ملف فهرس القسم <b>' +
+      esc((findDept(CUR_DEPT) || {}).index || "") +
+      "</b> فيه مواد</p>" +
       '<button class="subj-btn" style="margin:10px auto" onclick="showDeptPicker(true)">🎓 تغيير القسم</button></div>';
     return;
   }
 
-  SUBJECTS_INDEX.forEach(function(m, i){ ensureSubjectSlug(m, i); });
+  SUBJECTS_INDEX.forEach(function (m, i) {
+    ensureSubjectSlug(m, i);
+  });
 
   loadNotifications();
   syncAnswerEditsLog();
   syncLecturesAddedLog();
   updateNotifBadge();
+  syncAnnouncementsLog(); // ← جديد
   loadSectionStates();
 
   /* ============================================================
      ★ قراءة الـ URL مرة واحدة
      ============================================================ */
-  var params      = new URLSearchParams(location.search);
-  var urlPage     = params.get('page');        // ★ جديد: dashboard | progress | schedule
-  var urlSubjSlug = params.get('subject');
-  var urlLecId    = params.get('lecture');
+  var params = new URLSearchParams(location.search);
+  var urlPage = params.get("page"); // ★ جديد: dashboard | progress | schedule
+  var urlSubjSlug = params.get("subject");
+  var urlLecId = params.get("lecture");
   var isLegacySchedule = /[?&]view=schedule(&|$)/.test(location.search); // legacy support
 
   var last = null;
-  try{ var r = localStorage.getItem(LSKEY); if(r) last = JSON.parse(r); }catch(e){}
+  try {
+    var r = localStorage.getItem(LSKEY);
+    if (r) last = JSON.parse(r);
+  } catch (e) {}
 
   /* ============================================================
      ★ أولوية 1: مسارات الصفحات على مستوى الجذر (قبل أي شيء)
@@ -4315,115 +4431,168 @@ function __initApp(){
      ============================================================ */
   // ✅ الجدول الدراسي (Schedule)
   // ✅ الجدول الدراسي (Schedule)
-  if(urlPage === 'schedule'){ openDashboard(true); return; }
+  if (urlPage === "schedule") {
+    openDashboard(true);
+    return;
+  }
 
   // ✅ ملخص التقدم (Dashboard) — يشمل ?page=progress القديم للتوافق
-  if(urlPage === 'dashboard' || urlPage === 'progress'){ openProgress(true); return; }
+  if (urlPage === "dashboard" || urlPage === "progress") {
+    openProgress(true);
+    return;
+  }
 
   // ✅ جدولي الشخصي
-  if(urlPage === 'myschedule'){ openMySchedule(true); return; }
-  if(isLegacySchedule){         openMySchedule(true); return; }
+  if (urlPage === "myschedule") {
+    openMySchedule(true);
+    return;
+  }
+  if (isLegacySchedule) {
+    openMySchedule(true);
+    return;
+  }
   /* ============================================================
      ★ أولوية 2: احترام آخر صفحة محفوظة
      ============================================================ */
-  if(!urlSubjSlug && last && last.view === 'dashboard'){ openDashboard(true); return; }
-  if(!urlSubjSlug && last && last.view === 'progress'){  openProgress(true);  return; }
+  if (!urlSubjSlug && last && last.view === "dashboard") {
+    openDashboard(true);
+    return;
+  }
+  if (!urlSubjSlug && last && last.view === "progress") {
+    openProgress(true);
+    return;
+  }
   /* ============================================================
      تحديد المادة الابتدائية
      ============================================================ */
   var activeList = getActiveSubjects();
   var startIdx;
 
-  if(urlSubjSlug){
+  if (urlSubjSlug) {
     startIdx = -1;
-    for(var i = 0; i < SUBJECTS_INDEX.length; i++){
-      if(SUBJECTS_INDEX[i].slug === urlSubjSlug && activeList.indexOf(i) !== -1){ startIdx = i; break; }
+    for (var i = 0; i < SUBJECTS_INDEX.length; i++) {
+      if (
+        SUBJECTS_INDEX[i].slug === urlSubjSlug &&
+        activeList.indexOf(i) !== -1
+      ) {
+        startIdx = i;
+        break;
+      }
     }
-    if(startIdx === -1){ showNotFoundPage(urlSubjSlug); return; }
+    if (startIdx === -1) {
+      showNotFoundPage(urlSubjSlug);
+      return;
+    }
   } else {
-    startIdx = (last && typeof last.subject === 'number' && activeList.indexOf(last.subject) !== -1)
-      ? last.subject
-      : (activeList[0] || 0);
+    startIdx =
+      last &&
+      typeof last.subject === "number" &&
+      activeList.indexOf(last.subject) !== -1
+        ? last.subject
+        : activeList[0] || 0;
   }
 
   currentSubject = startIdx;
   var meta = SUBJECTS_INDEX[startIdx];
-  document.getElementById('main-title').textContent = 'منصة مادة ' + meta.name + (meta.en ? ' — ' + meta.en : '');
+  document.getElementById("main-title").textContent =
+    "منصة مادة " + meta.name + (meta.en ? " — " + meta.en : "");
   renderSubjectBar();
-  requestAnimationFrame(function(){ document.body.classList.add('app-ready'); });
+  requestAnimationFrame(function () {
+    document.body.classList.add("app-ready");
+  });
 
   showSubjectLoading();
 
   /* ============================================================
      ★ تحميل المادة ثم اختيار العرض المناسب
      ============================================================ */
-  loadSubject(startIdx).then(function(){
-    var s = subjects[startIdx];
-    updateSubTabsVisibility(s);
+  loadSubject(startIdx)
+    .then(function () {
+      var s = subjects[startIdx];
+      updateSubTabsVisibility(s);
 
-    var restored = false;
+      var restored = false;
 
-    /* 1) فتح محاضرة من الـ URL */
-    if(urlLecId){
-      var lecIdx = -1;
-      for(var j = 0; j < (s.lectures || []).length; j++){
-        var lid = s.lectures[j].id || lecSlug(s.lectures[j].t);
-        if(lid === urlLecId){ lecIdx = j; break; }
+      /* 1) فتح محاضرة من الـ URL */
+      if (urlLecId) {
+        var lecIdx = -1;
+        for (var j = 0; j < (s.lectures || []).length; j++) {
+          var lid = s.lectures[j].id || lecSlug(s.lectures[j].t);
+          if (lid === urlLecId) {
+            lecIdx = j;
+            break;
+          }
+        }
+        if (lecIdx !== -1) {
+          openLecture(startIdx, lecIdx, true);
+          restored = true;
+        } else {
+          showToast("⚠️ المحاضرة مش موجودة — فتحنا المادة");
+        }
       }
-      if(lecIdx !== -1){
-        openLecture(startIdx, lecIdx, true);
+
+      /* 2) استرجاع آخر محاضرة (فقط لو مفيش URL صريح) */
+      if (
+        !restored &&
+        !urlSubjSlug &&
+        last &&
+        last.view === "lecture" &&
+        typeof last.lecture === "number" &&
+        s.lectures &&
+        s.lectures[last.lecture]
+      ) {
+        openLecture(startIdx, last.lecture);
         restored = true;
-      } else {
-        showToast('⚠️ المحاضرة مش موجودة — فتحنا المادة');
-      }
-    }
-
-    /* 2) استرجاع آخر محاضرة (فقط لو مفيش URL صريح) */
-    if(!restored && !urlSubjSlug && last && last.view === 'lecture'
-       && typeof last.lecture === 'number' && s.lectures && s.lectures[last.lecture]){
-      openLecture(startIdx, last.lecture);
-      restored = true;
-      showToast('🔙 رجعناك لآخر محاضرة مفتوحة');
-    }
-    /* 3) استرجاع آخر اختبار (فقط لو مفيش URL صريح) */
-    else if(!restored && !urlSubjSlug && last && last.view === 'quiz' && last.prop
-            && typeof last.qidx === 'number'){
-      var target = (last.prop === 'lec')
-        ? (s.lectures && s.lectures[last.qidx])
-        : (s[last.prop] && s[last.prop][last.qidx]);
-      if(target){
-        openQuiz(startIdx, last.prop, last.qidx);
-        restored = true;
-        showToast('🔙 رجعناك لآخر اختبار مفتوح');
-      }
-    }
-
-    /* 4) الحالة الافتراضية: عرض الصفحة الرئيسية */
-    if(!restored){
-      resetSubTabs();
-      renderAllLists();
-      showView('main-view');
-
-      // ★ تحديث الـ URL ليطابق المادة المفتوحة
-      if(urlSubjSlug){
-        try{
-          history.replaceState(
-            {subject: urlSubjSlug, view:'main'},
-            '',
-            location.pathname + '?subject=' + encodeURIComponent(urlSubjSlug)
-          );
-        }catch(e){}
+        showToast("🔙 رجعناك لآخر محاضرة مفتوحة");
+      } else if (
+        /* 3) استرجاع آخر اختبار (فقط لو مفيش URL صريح) */
+        !restored &&
+        !urlSubjSlug &&
+        last &&
+        last.view === "quiz" &&
+        last.prop &&
+        typeof last.qidx === "number"
+      ) {
+        var target =
+          last.prop === "lec"
+            ? s.lectures && s.lectures[last.qidx]
+            : s[last.prop] && s[last.prop][last.qidx];
+        if (target) {
+          openQuiz(startIdx, last.prop, last.qidx);
+          restored = true;
+          showToast("🔙 رجعناك لآخر اختبار مفتوح");
+        }
       }
 
-      if(last && last.tab === 'section2' && !urlSubjSlug){
-        openTab(null, 'section2');
-        if(last.subTab) openSubTab(null, last.subTab);
+      /* 4) الحالة الافتراضية: عرض الصفحة الرئيسية */
+      if (!restored) {
+        resetSubTabs();
+        renderAllLists();
+        showView("main-view");
+
+        // ★ تحديث الـ URL ليطابق المادة المفتوحة
+        if (urlSubjSlug) {
+          try {
+            history.replaceState(
+              { subject: urlSubjSlug, view: "main" },
+              "",
+              location.pathname + "?subject=" + encodeURIComponent(urlSubjSlug),
+            );
+          } catch (e) {}
+        }
+
+        if (last && last.tab === "section2" && !urlSubjSlug) {
+          openTab(null, "section2");
+          if (last.subTab) openSubTab(null, last.subTab);
+        }
       }
-    }
-  }).catch(function(err){
-    document.getElementById('lectures-list').innerHTML =
-      '<p style="color:var(--danger);padding:24px;text-align:center;font-weight:bold;">⚠️ فشل تحميل المادة: ' + esc(err.message) + '</p>';
-  });
+    })
+    .catch(function (err) {
+      document.getElementById("lectures-list").innerHTML =
+        '<p style="color:var(--danger);padding:24px;text-align:center;font-weight:bold;">⚠️ فشل تحميل المادة: ' +
+        esc(err.message) +
+        "</p>";
+    });
 }
 
 // app.js بيتحمّل بـ defer قبل subjects-index.js (نفس الترتيب الأصلي)، فنستنى DOMContentLoaded
