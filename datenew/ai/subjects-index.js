@@ -6,6 +6,8 @@ var SUBJECTS_INDEX = [
     icon: "🖼️",
     slug: "computer-graphics",
     file: "datenew/subjects/computer-graphics/computer-graphics.js",
+    sectionsFile:
+      "datenew/subjects/computer-graphics/sections-computer-graphics.json",
   },
   {
     name: "تحليل وتصميم الخوارزميات",
@@ -13,6 +15,7 @@ var SUBJECTS_INDEX = [
     icon: "🧮",
     slug: "algorithms",
     file: "datenew/subjects/algorithms/algorithms.js",
+    sectionsFile: "datenew/subjects/algorithms/sections-algorithms.json",
   },
   {
     name: "هندسة البرمجيات",
@@ -20,6 +23,8 @@ var SUBJECTS_INDEX = [
     icon: "🏗️",
     slug: "software-engineering",
     file: "datenew/subjects/software-engineering/software-engineering.js",
+    sectionsFile:
+      "datenew/subjects/software-engineering/sections-software-engineering.json",
   },
   {
     name: "تعلم الالة",
@@ -48,5 +53,7 @@ var SUBJECTS_INDEX = [
     icon: "☁️",
     slug: "cloud-computing",
     file: "datenew/subjects/cloud-computing/cloud-computing.js",
+    sectionsFile:
+      "datenew/subjects/cloud-computing/sections-cloud-computing.json",
   },
 ];

@@ -16,8 +16,8 @@ subjects.push({
       id: "graphics-lecture-01",
       t: "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       d: "تغطي المفاهيم الأساسية لرسوميات الحاسوب، تحويل المجسمات من 3D إلى 2D باستخدام الإسقاط المنظوري (Perspective Projection)، وخوارزميات تحويل الخطوط إلى بيكسلات (Rasterization).",
-      pdf: "Computer Graphics/lectures/Lec1-Computer Graphics.pdf",
-      pdf2: "Computer Graphics/Questions/new/Questions on each lecture/Lecture_1_Questions_Intro_to_Computer_Graphics.pdf",
+      pdf: "/datenew/subjects/computer-graphics/lectures/Lecture 1/Lec1-Computer Graphics.pdf",
+      pdf2: "/datenew/subjects/computer-graphics/questions/questions/Questions on each lecture/Lecture_1_Questions_Intro_to_Computer_Graphics.pdf",
       sectionTitle: "🧩 سكاشن الرسوميات",
       linkCategories: [
         {
@@ -706,8 +706,8 @@ subjects.push({
     {
       t: "المحاضرة 2: مراجعة الرياضيات (الجزء الأول: الجبر الخطي والـ Vector Spaces)",
       d: "تغطي المفاهيم الأساسية للجبر الخطي في الرسوميات الحاسوبية: مسلمات الفضاءات المتجهة (Vector Spaces)، التمثيل بالإحداثيات الديكارتية، عمليات الجمع والتكبيس (Scaling)، حساب منتصف القطعة (Midpoint)، معاملة الدوال كمتجهات، ومعايير قياس الطول (Euclidean Norm وL2 Norm للدوال).",
-      pdf: "Computer Graphics/lectures/Lecture 2/Lecture 2.pdf",
-      pdf2: "Computer Graphics/Questions/new/Questions on each lecture/Lecture2_Linear_Algebra_Questions.pdf",
+      pdf: "datenew/subjects/computer-graphics/lectures/Lecture 2/Lecture 2.pdf",
+      pdf2: "datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture2_Linear_Algebra_Questions.pdf",
 
       // فئات روابط منظمة لمادة رسوميات الحاسوب (Computer Graphics - Lecture 1)
       // فئات روابط منظمة ومخصصة لمحاضرة الجبر الخطي للرسوميات الحاسوبية (CMU Lecture 2)

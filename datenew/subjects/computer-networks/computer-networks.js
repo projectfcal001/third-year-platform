@@ -15,8 +15,8 @@ subjects.push({
       id: "networks-lecture-01",
       t: "المحاضرة الأولى",
       d: "مقدمة في الشبكات ونموذج الطبقات OSI.",
-      pdf: "Computer Networks/lectures/lec 1/Ch01 - Computer Networks - Lec 01.pdf",
-      pdf2: "Computer Networks/Questions/Questions on each lecture/Chapter 1 - Questions - Computer Networks.pdf",
+      pdf: "datenew/subjects/computer-networks/lectures/lec 1/Ch01 - Computer Networks - Lec 01.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Chapter 1 - Questions - Computer Networks.pdf",
 
       linkCategories: [
         {
@@ -1464,8 +1464,8 @@ subjects.push({
       id: "networks-lecture-02",
       t: "المحاضرة الثانية",
       d: "تبديل الدوائر (Circuit Switching)، بنية شبكة الشبكات (Network of Networks)، وتحليل أداء الشبكات (أنواع التأخير العُقدي، كثافة الحركة La/R، وفقدان الحزم).",
-      pdf: "Computer Networks/lectures/lec 2/Ch01 - Computer Networks - Lec 02.pdf",
-      pdf2: "Computer Networks/Questions/Questions on each lecture/Chapter 1 - Questions - Computer Networks.pdf",
+      pdf: "datenew/subjects/computer-networks/lectures/lec 2/Ch01 - Computer Networks - Lec 02.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Chapter 1 - Questions - Computer Networks.pdf",
       linkCategories: [
         {
           category: "فيديوهات عربية",
@@ -2376,7 +2376,7 @@ subjects.push({
         {
           t: "MidTerm 2023 — Dr. Ebram",
           d: "Questions & answers — IT351, 2023",
-          pdf: "Computer Networks/Questions/Mid/Dr. Ebram/2023/MidTerm 2023 - Questions - Networks-Answers.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Ebram/2023/MidTerm 2023 - Questions - Networks-Answers.pdf",
           questions: [
             {
               q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
@@ -2516,7 +2516,7 @@ subjects.push({
         {
           t: "MidTerm 2024 — Dr. Ebram",
           d: "Midterm questions — 2024",
-          pdf: "Computer Networks/Questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks.pdf",
           questions: [
             {
               q: "Which statement is true about Client-Server Architecture?",
@@ -2637,7 +2637,7 @@ subjects.push({
         {
           t: "MidTerm 2024 — Dr. Ebram (Version 2)",
           d: "Midterm questions — 2024, second set",
-          pdf: "Computer Networks/Questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks(2).pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks(2).pdf",
           questions: [
             {
               q: "In BitTorrent, Alice requests small-size chunks first from her neighbors.",
@@ -2710,7 +2710,7 @@ subjects.push({
         {
           t: "BIS 2025 — Dr. Ebram",
           d: "Fill in blanks + problems — 2025",
-          pdf: "Computer Networks/Questions/Mid/Dr. Ebram/2025/BIS 2025 - Dr. Ebram - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Ebram/2025/BIS 2025 - Dr. Ebram - Computer Networks.pdf",
           questions: [
             {
               q: "In a host sending data to the network, UDP receives data from the Transport layer and sends data to the Network layer.",
@@ -2763,7 +2763,7 @@ subjects.push({
         {
           t: "Mid 2025 National — Dr. Ebram",
           d: "Midterm 2025 National — Dr. Ebram",
-          pdf: "Computer Networks/Questions/Mid/Dr. Ebram/2025/Mid 2025 National Dr. Ebram.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Ebram/2025/Mid 2025 National Dr. Ebram.pdf",
           questions: [
             {
               q: "Which statement is true about Client-Server Architecture?",
@@ -2813,7 +2813,7 @@ subjects.push({
         {
           t: "Mid 2023 Summer — Dr. Ebram",
           d: "Summer midterm 2023",
-          pdf: "Computer Networks/Questions/Mid/Dr. Ebram/2023/Mid 2023 Summer.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Ebram/2023/Mid 2023 Summer.pdf",
           questions: [
             {
               q: "Which layer doesn't appear in the Internet Protocol Stack?",
@@ -2908,7 +2908,7 @@ subjects.push({
         {
           t: "Review Before Exam — 2025",
           d: "Comprehensive review questions — Dr. Nago",
-          pdf: "Computer Networks/Questions/Mid/Dr. Nago/2025/راجع نفسك قبل ما تفتحه.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Nago/2025/راجع نفسك قبل ما تفتحه.pdf",
           questions: [
             {
               q: "Which statement is correct about Distance Vector routing?",
@@ -2978,7 +2978,7 @@ subjects.push({
         {
           t: "MidTerm 2022 — Questions",
           d: "Introduction to Computer Networks — 2022 questions",
-          pdf: "Computer Networks/Questions/Mid/Dr. Tarek/2022/MidTerm 2022 - Questions - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Tarek/2022/MidTerm 2022 - Questions - Computer Networks.pdf",
           questions: [
             {
               q: "The number of layers in ISO/OSI reference model is",
@@ -3092,7 +3092,7 @@ subjects.push({
         {
           t: "MidTerm 2022 — Answers",
           d: "Introduction to Computer Networks — 2022 answers",
-          pdf: "Computer Networks/Questions/Mid/Dr. Tarek/2022/MidTerm 2022 - Answers - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Dr. Tarek/2022/MidTerm 2022 - Answers - Computer Networks.pdf",
           questions: [
             {
               q: "The number of layers in ISO/OSI reference model is",
@@ -3141,7 +3141,7 @@ subjects.push({
         {
           t: "Exam.pdf",
           d: "Mixed question bank — layers, protocols, delays",
-          pdf: "Computer Networks/Questions/Mid/Other/Exam.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Other/Exam.pdf",
           questions: [
             {
               q: "The ......... moves the individual bits of a frame from one node to the next through communication links.",
@@ -3230,7 +3230,7 @@ subjects.push({
         {
           t: "Mid Answers.pdf",
           d: "Midterm answers — set 1",
-          pdf: "Computer Networks/Questions/Mid/Other/Mid Answers.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Other/Mid Answers.pdf",
           questions: [
             {
               q: "The number of layers in ISO OSI reference model is",
@@ -3272,7 +3272,7 @@ subjects.push({
         {
           t: "MidTerm 2023 - Assessment - Computer Networks.pdf",
           d: "Assessment midterm 2023",
-          pdf: "Computer Networks/Questions/Mid/Other/MidTerm 2023 - Assessment - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Mid/Other/MidTerm 2023 - Assessment - Computer Networks.pdf",
           questions: [
             {
               q: "Which of the following layers doesn't appear in the Internet Protocol Stack?",
@@ -3352,7 +3352,7 @@ subjects.push({
         {
           t: "فاينل 2026 - Credit - د. إبرام — Computer Networks",
           d: "اختبار الفاينل لمادة Computer Networks - Credit 2026 (د. إبرام)",
-          pdf: "Computer Networks/Questions/Final/2026/Final 2026 - Computer Networks - Credit - Dr. Ebram.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Final/2026/Final 2026 - Computer Networks - Credit - Dr. Ebram.pdf",
           questions: [
             {
               q: "In Go-back-N protocol, what are the size of the respective sender and receiver buffers required for a window size of N?",
@@ -3607,7 +3607,7 @@ subjects.push({
         {
           t: "فاينل 2026 - د. ناجو — Computer Networks",
           d: "اختبار الفاينل لمادة Computer Networks - 2026 (د. ناجو)",
-          pdf: "Computer Networks/Questions/Final/2026/Final 2026 - Computer Networks - Dr. Nago.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Final/2026/Final 2026 - Computer Networks - Dr. Nago.pdf",
           questions: [
             {
               q: "A NAT translation table typically maps:",
@@ -4096,7 +4096,7 @@ subjects.push({
         {
           t: "فاينل 2026 - National - د. طارق — Computer Networks",
           d: "اختبار الفاينل لمادة Computer Networks - National 2026 (د. طارق)",
-          pdf: "Computer Networks/Questions/Final/2026/Final 2026 - National - Dr.Tarek.pdf",
+          pdf: "datenew/subjects/computer-networks/Questions/Final/2026/Final 2026 - National - Dr.Tarek.pdf",
           questions: [
             {
               q: "What is an HTTP cookie used for?",
@@ -4593,7 +4593,7 @@ subjects.push({
     {
       t: "Test Bank - Computer Networks - Final",
       d: "Final Question Bank - Computer Networks",
-      pdf: "Computer Networks/Questions/Test Bank/Test Bank - Computer Networks - Final.pdf",
+      pdf: "datenew/subjects/computer-networks/Questions/Test Bank/Test Bank - Computer Networks - Final.pdf",
       questions: [
         {
           q: "What are the two most prominent types of packet switches in today's Internet?",
@@ -5648,7 +5648,7 @@ subjects.push({
     {
       t: "Test Bank - Answers - Computer Networks",
       d: "Test Bank Answers - Computer Networks",
-      pdf: "Computer Networks/Questions/Test Bank/Test Bank - Answers - Computer Networks.pdf",
+      pdf: "datenew/subjects/computer-networks/Questions/Test Bank/Test Bank - Answers - Computer Networks.pdf",
       questions: [
         {
           q: "check bit errors.",
@@ -5965,7 +5965,7 @@ subjects.push({
     {
       t: "Test Bank Dr. Tarek",
       d: "Test Bank - Dr. Tarek",
-      pdf: "Computer Networks/Questions/Test Bank/Test Bank Dr. Tarek.pdf",
+      pdf: "datenew/subjects/computer-networks/Questions/Test Bank/Test Bank Dr. Tarek.pdf",
       questions: [
         {
           q: "A computer network:",
