@@ -3551,13 +3551,11 @@ function __fbRenderRecaptcha() {
   if (!box || _recaptchaWidgetId !== null) return;
   if (!window.grecaptcha || typeof window.grecaptcha.render !== "function")
     return;
-  // ★ على الموبايل الصغير استخدم compact بدل normal
-  var isSmall = window.innerWidth < 420;
   try {
     _recaptchaWidgetId = window.grecaptcha.render(box, {
       sitekey: RECAPTCHA_SITEKEY,
       theme: "light",
-      size: isSmall ? "compact" : "normal",
+      size: "normal",
       callback: window.onRecaptchaOk,
       "expired-callback": window.onRecaptchaExpired,
     });

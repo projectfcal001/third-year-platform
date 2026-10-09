@@ -989,6 +989,13 @@ html.fb-modal-open,html.fb-modal-open body{ overflow:hidden; }
     margin:12px 0;
     min-height:78px;
 }
+@media (max-width: 400px){
+    .fb-recaptcha-wrap{
+        zoom: 0.85;
+        margin: 4px 0 -6px;
+        min-height: 66px;
+    }
+}
 /* ★ مافيش scale خالص — الـ compact size بيتكفل بالمقاس */
 
 .fb-modal-dialog .fb-btns button:disabled{
@@ -1003,6 +1010,15 @@ html.fb-modal-open,html.fb-modal-open body{ overflow:hidden; }
     align-items:center;
     margin:12px 0;
     min-height:78px;
+}
+
+/* ★ zoom مش transform — نفس الشكل القديم بس اللمس شغال في كل مكان */
+@media (max-width: 400px){
+    .fb-recaptcha-wrap{
+        zoom: 0.85;
+        margin: 4px 0 -6px;
+        min-height: 66px;
+    }
 }
 
 /* ★ ملخص التقدم */
