@@ -137,12 +137,9 @@
           if (navigator.serviceWorker.controller) safeUpdate();
 
           // ★ فحص دوري كل 5 دقايق (شغّال بس والتطبيق ظاهر)
-          setInterval(
-            function () {
-              if (!document.hidden) safeUpdate();
-            },
-            5 * 60 * 1000,
-          );
+          setInterval(function () {
+            if (!document.hidden) safeUpdate();
+          }, 60 * 1000);
 
           // ★ فحص عند رجوع المستخدم للتطبيق (المضمون على الموبايل)
           document.addEventListener("visibilitychange", function () {
