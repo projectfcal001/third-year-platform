@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1791490879346";
+const VERSION = "v1791523137705";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -9,8 +9,9 @@ const APP_SHELL = [
   "./pwa.js",
   "./pdf-annotator.html",
   "./manifest.webmanifest",
-  "./icons/icon.svg",
-  "./icons/icon-maskable.svg",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-maskable-512.png",
   "./datenew/departments.js",
   "./datenew/cs/subjects-index.js",
   "./datenew/is/subjects-index.js",
@@ -73,7 +74,6 @@ async function networkFirst(request, isPage) {
     if (hit) return hit;
     if (isPage) {
       const page =
-        (await cache.match("./indexV3.html")) ||
         (await cache.match("./index.html")) ||
         (await cache.match("./"));
       if (page) return page;
@@ -116,9 +116,10 @@ self.addEventListener("fetch", (event) => {
       event.respondWith(networkFirst(request, true));
     } else if (
       url.pathname.endsWith("/app.js") ||
+      url.pathname.endsWith("/pwa.js") ||
       url.pathname.startsWith("/api/")
     ) {
-      // app.js لازم يطابق نسخة الـ HTML، والـ API لازم يبقى طازج (الكاش fallback أوفلاين بس)
+      // app.js و pwa.js لازم يطابقوا نسخة الـ HTML، والـ API لازم يبقى طازج (الكاش fallback أوفلاين بس)
       event.respondWith(networkFirst(request, false));
     } else {
       event.respondWith(staleWhileRevalidate(request));

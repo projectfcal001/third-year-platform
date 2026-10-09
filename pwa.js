@@ -53,8 +53,10 @@
   /* ---------- الـ Service Worker + إشعار التحديث ---------- */
   if ("serviceWorker" in navigator) {
     var userAskedUpdate = false;
+    var controllerChanged = false;
+    var hadController = !!navigator.serviceWorker.controller;
 
-    // ★ نافذة "الفتح" — لو التحديث وصل خلال 20 ثانية من فتح التطبيق
+    // ★ نافذة "الفتح" — لو التحديث وصل خلال 10 ثواني من فتح التطبيق
     //   → نطبقه تلقائي (بدون زرار). بعد كده → زرار.
     var COLD_START_MS = 10000;
     var coldStartUntil = Date.now() + COLD_START_MS;
@@ -82,7 +84,13 @@
           function applyUpdate(worker, isAuto) {
             if (isAuto) autoApplied = true;
             userAskedUpdate = true;
-            worker.postMessage("SKIP_WAITING");
+            // ★ الـ SW الجديد ممكن يكون استلم الصفحة فعلاً (skipWaiting في install)
+            //   → controllerchange حصل قبل الضغط، فنعمل reload مباشرة
+            if (controllerChanged || worker.state === "activated") {
+              window.location.reload();
+              return;
+            }
+            worker.postMessage({ type: "SKIP_WAITING" });
           }
 
           // helper: التعامل مع SW جاهز (installed + waiting)
@@ -153,6 +161,9 @@
 
     // ★ reload بس لما نكون قررنا نطبّق (تلقائي أو يدوي) — عشان الكويز ما يتقطعش
     navigator.serviceWorker.addEventListener("controllerchange", function () {
+      // أول تثبيت (مفيش controller قبله) → مفيش حاجة تتحدّث
+      if (!hadController) { hadController = true; return; }
+      controllerChanged = true;
       if (userAskedUpdate) window.location.reload();
     });
   }
