@@ -3546,23 +3546,20 @@ window.onRecaptchaExpired = function(){
   _recaptchaToken = null;
 };
 
-function __fbRenderRecaptcha() {
-  var box = document.getElementById("fb-recaptcha-box");
-  if (!box || _recaptchaWidgetId !== null) return;
-  if (!window.grecaptcha || typeof window.grecaptcha.render !== "function")
-    return;
-  try {
+function __fbRenderRecaptcha(){
+  var box = document.getElementById('fb-recaptcha-box');
+  if(!box || _recaptchaWidgetId !== null) return;
+  if(!window.grecaptcha || typeof window.grecaptcha.render !== 'function') return;
+  try{
     _recaptchaWidgetId = window.grecaptcha.render(box, {
       sitekey: RECAPTCHA_SITEKEY,
-      theme: "light",
-      size: "normal",
+      theme: 'light',
+      size: 'normal',
       callback: window.onRecaptchaOk,
-      "expired-callback": window.onRecaptchaExpired,
+      'expired-callback': window.onRecaptchaExpired
     });
-    _recaptchaState = "ready";
-  } catch (e) {
-    _recaptchaState = "failed";
-  }
+    _recaptchaState = 'ready';
+  }catch(e){ _recaptchaState = 'failed'; }
 }
 
 // بيتنادى من جوجل بعد تحميل api.js (render=explicit)
@@ -4648,3 +4645,38 @@ else { __bootDept(); }
 {
   /* <script defer src="/_vercel/insights/script.js"></script>; */
 }
+
+// ============================================================
+// ☰ قائمة الأقسام والمواد (جانبية على الموبايل / في النص على الكمبيوتر)
+// ============================================================
+(function(){
+  var btn = document.getElementById('menu-btn');
+  var bar = document.getElementById('subject-bar');
+  var back = document.getElementById('menu-backdrop');
+  if(!btn || !bar || !back) return;
+  function isOpen(){ return document.body.classList.contains('menu-open'); }
+  function place(){
+    var hd = document.querySelector('header');
+    if(hd) document.documentElement.style.setProperty('--menu-top', Math.round(hd.getBoundingClientRect().bottom + 8) + 'px');
+  }
+  function openMenu(){
+    place();
+    document.body.classList.add('menu-open');
+    back.hidden = false;
+    btn.setAttribute('aria-expanded','true');
+  }
+  function closeMenu(){
+    document.body.classList.remove('menu-open');
+    back.hidden = true;
+    btn.setAttribute('aria-expanded','false');
+  }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); isOpen() ? closeMenu() : openMenu(); });
+  back.addEventListener('click', closeMenu);
+  // أي ضغطة على قسم / الجدول / ملخص التقدم / مادة → تقفل القايمة (والـ onclick بتاعها بيشتغل الأول)
+  bar.addEventListener('click', function(e){
+    if(e.target.closest && e.target.closest('.subj-btn')) closeMenu();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && isOpen()) closeMenu(); });
+  window.addEventListener('resize', function(){ if(isOpen()) { closeMenu(); } });
+  window.addEventListener('popstate', closeMenu);
+})();
