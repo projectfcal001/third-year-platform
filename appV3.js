@@ -3564,6 +3564,7 @@ function __fbRenderRecaptcha() {
     _recaptchaState = "failed";
   }
 }
+
 // بيتنادى من جوجل بعد تحميل api.js (render=explicit)
 window.__fbRecaptchaReady = function(){
   if(window.grecaptcha && typeof window.grecaptcha.ready === 'function') window.grecaptcha.ready(__fbRenderRecaptcha);
