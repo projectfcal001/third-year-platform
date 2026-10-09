@@ -1462,7 +1462,6 @@ subjects.push({
     },
     {
       id: "networks-lecture-02",
-
       t: "المحاضرة الثانية",
       d: "تبديل الدوائر (Circuit Switching)، بنية شبكة الشبكات (Network of Networks)، وتحليل أداء الشبكات (أنواع التأخير العُقدي، كثافة الحركة La/R، وفقدان الحزم).",
       pdf: "Computer Networks/lectures/lec 2/Ch01 - Computer Networks - Lec 02.pdf",
