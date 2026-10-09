@@ -7,10 +7,10 @@ subjects.push({
   en: "Computer Graphics",
   icon: "🖼️",
   slug: "computer-graphics",
-  lectures: [
-    /* { t:"المحاضرة 1 — العنوان", d:"وصف", id:"lec-01",
-         pdf:"datenew/subjects/computer-graphics/lectures/lec-01.pdf", questions:[] } */
-  ],
+  // lectures: [
+  //   /* { t:"المحاضرة 1 — العنوان", d:"وصف", id:"lec-01",
+  //        pdf:"datenew/subjects/computer-graphics/lectures/lec-01.pdf", questions:[] } */
+  // ],
   lectures: [
     {
       id: "graphics-lecture-01",
