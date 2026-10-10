@@ -13,7 +13,7 @@ subjects.push({
       id: "cloud-orientation-01",
       t: "جلسة التعريف — Cloud Computing",
       d: "المفهوم، الخصائص، التحديات، أنواع الخدمات، نماذج النشر، الأطراف الرئيسية، التهديدات، الأمان، والوظائف",
-      pdf: "datenew/subjects/cloud-computing/lectures/Cloud Computing Orientation Session.pdf",
+      pdf: "subjects/cloud-computing/lectures/Cloud Computing Orientation Session.pdf",
       summary: {
         text: "الحوسبة السحابية هي تقديم خدمات وتطبيقات تقنية المعلومات عبر الإنترنت عند الطلب كخدمات مقاسة (Metered). من خصائصها: الخدمة الذاتية، المرونة، تجميع الموارد، والـ Virtualization. أنواع الخدمات: IaaS, PaaS, SaaS, IDaaS, SECaaS, CaaS, FaaS, XaaS. نماذج النشر: Public, Private, Community, Hybrid. الأطراف الخمسة: Consumer, Provider, Carrier, Auditor, Broker. الأمان مسؤولية مشتركة بين المزود والعميل.",
       },
