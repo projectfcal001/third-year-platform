@@ -16,7 +16,7 @@ subjects.push({
       t: "المحاضرة الأولى",
       d: "مقدمة في الشبكات ونموذج الطبقات OSI.",
       pdf: "datenew/subjects/computer-networks/lectures/lec 1/Ch01 - Computer Networks - Lec 01.pdf",
-      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Chapter 1 - Questions - Computer Networks.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Chapter 1 - Questions - Computer Networks.pdf",
 
       linkCategories: [
         {
@@ -1465,7 +1465,7 @@ subjects.push({
       t: "المحاضرة الثانية",
       d: "تبديل الدوائر (Circuit Switching)، بنية شبكة الشبكات (Network of Networks)، وتحليل أداء الشبكات (أنواع التأخير العُقدي، كثافة الحركة La/R، وفقدان الحزم).",
       pdf: "datenew/subjects/computer-networks/lectures/lec 2/Ch01 - Computer Networks - Lec 02.pdf",
-      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Chapter 1 - Questions - Computer Networks.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Chapter 1 - Questions - Computer Networks.pdf",
       linkCategories: [
         {
           category: "فيديوهات عربية",
@@ -2354,6 +2354,734 @@ subjects.push({
             "propagation delay is about the bit traveling across the link.",
           tags: ["Transmission Delay", "Propagation Delay", "Comparison"],
           ref: "Lecture 2 — Section 1.4",
+        },
+      ],
+    },
+    {
+      id: "networks-lecture-03",
+      t: "المحاضرة الثالثة — Throughput, Protocol Layers, Security & History",
+      d: "الـ Throughput والـ bottleneck، طبقات بروتوكولات الإنترنت والـ encapsulation، هجمات الشبكات، وتاريخ الإنترنت (الشابتر الأول).",
+      pdf: "datenew/subjects/computer-networks/lectures/lec 3/Ch01 - Computer Networks - Lec 03.pdf",
+      pdf2: "/datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Lecture-03-Questions.pdf",
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات باللغة العربية لمفاهيم المحاضرة الثالثة: إنتاجية البيانات (Throughput)، طبقات البروتوكول في شبكات الحاسوب، والتغليف (Encapsulation).",
+          links: [
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول Throughput، الطبقات الخمس في الإنترنت (Protocol Layers)، وعملية التغليف (Encapsulation) فديوهات (من 6 الي 7).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PL8v_bZALWLKE9Lo2BIy8nsdsakbSvQlEo",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي لكتاب Kurose & Ross: يتناول Throughput وطبقات البروتوكول والإنتاجية في الشبكات. [فيديوهات 4-7 ]",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://youtube.com/playlist?list=PLYljoJMAPFLHrCVfzuMLkJOZHhCgfSXG-&si=c2A3_89g912REXOZ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "المحاضرات الرسمية المحددة بدقة من مؤلف الكتاب Jim Kurose والمطابقة لموضوعات المحاضرة الثالثة",
+          links: [
+            {
+              t: "Jim Kurose - Section 1.4.4: Throughput",
+              d: "الشرح المباشر لمؤلف الكتاب لمفهوم إنتاجية البيانات (Throughput) والروابط والاختناقات (Bottleneck Links)[cite: 1, 3, 5]",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 المحاضرة مباشرة (Throughput)",
+                  url: "https://www.youtube.com/watch?v=hm1y4LsphQQ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Jim Kurose - Section 1.5: Protocol Layers, Service Models, and Encapsulation",
+              d: "شرح طبقات البروتوكول في الإنترنت (Application, Transport, Network, Link, Physical) وعملية التغليف (Encapsulation)[cite: 13, 16, 26]",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 Playlist كامل",
+                  url: "https://www.youtube.com/playlist?list=PL1ya5dD_M8uX-BLUF1FEvUNsYWQL5_l0O",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مراجع أكاديمية وتطبيقية متوافقة مع مفاهيم Throughput وطبقات البروتوكول وتغليف البيانات",
+          links: [
+            {
+              t: "Kurose & Ross Official Student Resources",
+              d: "الموقع الرسمي للكتاب: شرائح PowerPoint للمحاضرة الثالثة، تمارين Wireshark Labs، ومراجعة طبقات الشبكة",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://gaia.cs.umass.edu/kurose_ross/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks - Throughput in Computer Networks",
+              d: "مقالة مرجعية تفصيلية تشرح قياسات Throughput والروابط الحاكمة (Bottleneck Links)",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/computer-networks/throughput-in-computer-networks/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks - Layers of OSI Reference Model",
+              d: "شرح طبقات نموذج الاتصال وهيكل تكديس البروتوكولات (Protocol Stack)",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/layers-of-osi-model/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية لتحليل الحزم وتتبع طبقات الشبكة عبر برمجيات التحليل الحية",
+          links: [
+            {
+              t: "Wireshark - Packet Analyzer & Traceroute",
+              d: "أداة تتبع الحزم وفحص طبقات بيانات الشبكة (Headers and Payloads) لمراقبة الأداء والاتصال",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org/",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        {
+          q: "1. What is a bottleneck link?",
+          options: [
+            "The link with the highest transmission rate on the path",
+            "The link that connects the router to the server only",
+            "The link on the end-to-end path that constrains the end-to-end throughput",
+            "Any link that has no traffic flowing through it",
+          ],
+          correct: 2,
+          translation: "ما هو الـ bottleneck link؟",
+          explanation:
+            "الـ bottleneck هو الرابط الذي يحدّ من الـ throughput الكلي في المسار. ليس الأسرع ولا الفارغ من الحركة.",
+          tags: ["Bottleneck Link"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          q: "2. A server is connected to a client through one router. The server-router link rate is Rs and the router-client link rate is Rc. What is the throughput when there is no other traffic?",
+          options: ["min{Rs, Rc}", "Rs + Rc", "max{Rs, Rc}", "Rs × Rc"],
+          correct: 0,
+          translation:
+            "سيرفر متصل بعميل عبر راوتر، معدل الرابط الأول Rs والثاني Rc. كم الـ throughput بدون أي حركة أخرى؟",
+          explanation:
+            "الـ throughput هو معدل الرابط الأبطأ، أي min{Rs, Rc}. الجمع أو الضرب أو الأكبر لا يمثل عنق الزجاجة.",
+          tags: ["Throughput"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          q: "3. For a path with N links of rates R1, R2, ..., RN, the end-to-end throughput is:",
+          options: [
+            "The average of R1 to RN",
+            "R1 + R2 + ... + RN",
+            "RN only",
+            "min{R1, R2, ..., RN}",
+          ],
+          correct: 3,
+          translation:
+            "لمسار فيه N رابط بمعدلات R1 إلى RN، الـ throughput الكلي هو:",
+          explanation:
+            "الرابط الأبطأ في المسار هو من يحدد المعدل الكلي، وليس المتوسط ولا المجموع.",
+          tags: ["Throughput", "N Links"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          q: "4. According to the lecture, what is typically the constraining factor for throughput in today's Internet?",
+          options: [
+            "The Internet core",
+            "The access network",
+            "The routing protocol",
+            "The size of the IP header",
+          ],
+          correct: 1,
+          translation:
+            "حسب المحاضرة، ما العامل المحدِّد للـ throughput في الإنترنت اليوم غالبًا؟",
+          explanation:
+            "قلب الإنترنت (core) مجهّز بروابط عالية السرعة وقليلة الازدحام، فالقيد يكون عادة في شبكة الوصول (access network).",
+          tags: ["Access Network", "Throughput"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          q: "5. In Figure 1.20(b), Rs = 2 Mbps, Rc = 1 Mbps, and the common core link R = 5 Mbps is shared equally by 10 downloads. What is each download's throughput?",
+          options: ["1 Mbps", "2 Mbps", "500 kbps", "5 Mbps"],
+          correct: 2,
+          translation:
+            "في الشكل 1.20(b): Rs = 2 وRc = 1 وR = 5 ميجابت/ث تتوزع بالتساوي على 10 تحميلات. كم throughput كل تحميل؟",
+          explanation:
+            "الرابط المشترك يعطي كل تحميل 5/10 = 0.5 Mbps = 500 kbps وهو أقل من Rs وRc فيصبح هو الـ bottleneck.",
+          tags: ["Throughput", "Shared Link"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          q: "6. In layering, a layer provides its service by:",
+          options: [
+            "Performing actions within the layer and using the services of the layer directly below it",
+            "Using the services of the layer directly above it only",
+            "Bypassing all other layers",
+            "Performing actions in every layer of the stack",
+          ],
+          correct: 0,
+          translation: "في الـ layering، الطبقة تقدّم خدمتها عن طريق:",
+          explanation:
+            "كل طبقة تنفّذ أعمالًا داخلها وتستخدم خدمات الطبقة التي تحتها مباشرة وتقدّم خدمة للطبقة التي فوقها.",
+          tags: ["Layering", "Service Model"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "7. Which is a potential drawback of layering mentioned in the lecture?",
+          options: [
+            "It makes hardware more expensive",
+            "It prevents the use of TCP",
+            "It removes the need for protocols",
+            "One layer may duplicate lower-layer functionality",
+          ],
+          correct: 3,
+          translation: "أي مما يلي عيب محتمل للـ layering مذكور في المحاضرة؟",
+          explanation:
+            "من العيوب تكرار وظائف الطبقات السفلى، وأن طبقة قد تحتاج معلومة موجودة في طبقة أخرى مما يكسر فصل الطبقات.",
+          tags: ["Layering"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "8. How many layers does the Internet protocol stack have?",
+          options: ["Five", "Four", "Six", "Seven"],
+          correct: 0,
+          translation: "كم عدد طبقات Internet protocol stack؟",
+          explanation:
+            "المحاضرة: physical وlink وnetwork وtransport وapplication أي خمس طبقات. السبع تخص نموذج OSI.",
+          tags: ["Protocol Stack"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "9. Which of the following are application-layer protocols?",
+          options: [
+            "TCP, UDP and IP",
+            "HTTP, SMTP and FTP",
+            "Ethernet, WiFi and DOCSIS",
+            "PPP, IP and UDP",
+          ],
+          correct: 1,
+          translation: "أي مما يلي بروتوكولات في طبقة التطبيقات؟",
+          explanation:
+            "HTTP وSMTP وFTP (وDNS) في طبقة التطبيقات. TCP وUDP للنقل وIP للشبكة وEthernet وWiFi للربط.",
+          tags: ["Application Layer"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "10. Which service does TCP provide?",
+          options: [
+            "Connectionless service with no reliability",
+            "Routing of datagrams between hosts",
+            "Connection-oriented service with guaranteed delivery, flow control and congestion control",
+            "Moving individual bits over the medium",
+          ],
+          correct: 2,
+          translation: "أي خدمة يقدّمها TCP؟",
+          explanation:
+            "TCP يقدّم خدمة موجّهة بالاتصال مع ضمان التسليم والتحكم في التدفق والازدحام. الخدمة بلا اتصال هي UDP.",
+          tags: ["TCP", "Transport Layer"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "11. Which statement about UDP is correct?",
+          options: [
+            "It guarantees delivery of every message",
+            "It breaks long messages and throttles the sender",
+            "It is a network-layer protocol",
+            "It is a no-frills connectionless service with no reliability, flow control or congestion control",
+          ],
+          correct: 3,
+          translation: "أي عبارة عن UDP صحيحة؟",
+          explanation:
+            "UDP بسيط وبلا اتصال ولا يضمن شيئًا. ضمان التسليم وتقسيم الرسائل والتحكم في الازدحام من خصائص TCP.",
+          tags: ["UDP", "Transport Layer"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "12. Which statement about the IP protocol is correct?",
+          options: [
+            "All Internet components that have a network layer must run the IP protocol",
+            "There are several competing IP protocols in the Internet",
+            "IP is implemented only in link-layer switches",
+            "IP provides reliable end-to-end delivery",
+          ],
+          correct: 0,
+          translation: "أي عبارة عن بروتوكول IP صحيحة؟",
+          explanation:
+            "يوجد بروتوكول IP واحد فقط وكل مكوّن له network layer لازم يشغّله، ولذلك يسمى IP layer.",
+          tags: ["IP", "Network Layer"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "13. How does link-layer reliable delivery differ from TCP's reliable delivery?",
+          options: [
+            "They are exactly the same service",
+            "Link-layer reliability is end-to-end; TCP's is across one link",
+            "Link-layer reliability is across one link; TCP's is from one end system to another",
+            "Link-layer protocols never provide reliable delivery",
+          ],
+          correct: 2,
+          translation:
+            "ما الفرق بين الموثوقية في طبقة الربط والموثوقية في TCP؟",
+          explanation:
+            "بعض بروتوكولات الربط توفر تسليمًا موثوقًا بين عقدتين على رابط واحد، بينما TCP يوفره بين نظامين طرفيين.",
+          tags: ["Link Layer", "TCP"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "14. What is the job of the physical layer?",
+          options: [
+            "Moving entire frames between adjacent elements",
+            "Moving the individual bits within a frame from one node to the next",
+            "Translating names to IP addresses",
+            "Determining routes between hosts",
+          ],
+          correct: 1,
+          translation: "ما وظيفة الطبقة الفيزيائية؟",
+          explanation:
+            "الطبقة الفيزيائية تنقل البتات الفردية، أما نقل الإطار كاملًا فمهمة طبقة الربط.",
+          tags: ["Physical Layer"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          q: "15. Which layers does a link-layer switch implement?",
+          options: [
+            "Layers 1 through 3",
+            "Layers 1 through 5",
+            "Layers 3 and 4",
+            "Layers 1 and 2",
+          ],
+          correct: 3,
+          translation: "أي طبقات ينفّذها الـ link-layer switch؟",
+          explanation:
+            "السويتش ينفذ الطبقتين 1 و2 فقط، والراوتر 1 إلى 3، والـ hosts كل الطبقات الخمس.",
+          tags: ["Switch", "Router"],
+          ref: "Lecture 03 — Section 1.5.2",
+        },
+
+        {
+          q: "16. What does the transport-layer segment consist of?",
+          options: [
+            "The application-layer message plus the transport-layer header",
+            "The network-layer datagram plus the link-layer header",
+            "Only the transport-layer header",
+            "The physical-layer bits only",
+          ],
+          correct: 0,
+          translation: "مم يتكوّن الـ transport-layer segment؟",
+          explanation:
+            "الـ segment يغلّف رسالة التطبيق (M) مع رأس النقل (Ht). هذه هي الـ encapsulation.",
+          tags: ["Encapsulation", "Segment"],
+          ref: "Lecture 03 — Section 1.5.2",
+        },
+
+        {
+          q: "17. What is the network-layer packet called?",
+          options: ["Segment", "Datagram", "Frame", "Message"],
+          correct: 1,
+          translation: "ماذا يسمى حزمة طبقة الشبكة؟",
+          explanation:
+            "message للتطبيق وsegment للنقل وdatagram للشبكة وframe للربط.",
+          tags: ["PDU Names", "Datagram"],
+          ref: "Lecture 03 — Section 1.5.1 / 1.5.2",
+        },
+
+        {
+          q: "18. What is a botnet?",
+          options: [
+            "A router that blocks malicious traffic",
+            "A protocol for encrypting e-mail",
+            "A network of thousands of compromised devices controlled by an attacker",
+            "A software that records packets passively only",
+          ],
+          correct: 2,
+          translation: "ما هو الـ botnet؟",
+          explanation:
+            "الـ botnet شبكة من آلاف الأجهزة المصابة يتحكم بها المهاجم لإرسال spam أو هجمات DDoS.",
+          tags: ["Botnet", "Malware"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          q: "19. In a DDoS attack against a server with access rate R, what must the aggregate attack traffic be approximately?",
+          options: [
+            "About R bps",
+            "About R / 1000 bps",
+            "Exactly zero",
+            "Much less than R bps",
+          ],
+          correct: 0,
+          translation:
+            "في هجوم DDoS على سيرفر معدل وصوله R، كم يجب أن يكون إجمالي حركة الهجوم تقريبًا؟",
+          explanation:
+            "يلزم إجمالي حركة من كل المصادر بحدود R لشل الخدمة. الهجوم الموزع أصعب في الكشف من DoS من مصدر واحد.",
+          tags: ["DDoS", "Bandwidth Flooding"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          q: "20. Why are packet sniffers difficult to detect?",
+          options: [
+            "Because they encrypt all packets",
+            "Because they run only in wired networks",
+            "Because they change the packets' source address",
+            "Because they are passive and do not inject packets into the channel",
+          ],
+          correct: 3,
+          translation: "لماذا يصعب اكتشاف الـ packet sniffers؟",
+          explanation:
+            "الـ sniffer مستقبل سلبي يسجّل نسخًا فقط دون حقن حزم. وأفضل الدفاعات تعتمد على التشفير.",
+          tags: ["Packet Sniffer", "Cryptography"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          q: "21. What is IP spoofing?",
+          options: [
+            "Recording copies of all wireless packets",
+            "Injecting packets into the Internet with a false source address",
+            "Flooding a server with connection requests",
+            "Translating host names into IP addresses",
+          ],
+          correct: 1,
+          translation: "ما هو الـ IP spoofing؟",
+          explanation:
+            "هو إرسال حزمة بعنوان مصدر مزيّف. الحل المذكور end-point authentication. التسجيل هو sniffing.",
+          tags: ["IP Spoofing", "Authentication"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          q: "22. Why did the Internet become such an insecure place?",
+          options: [
+            "Because it was designed without any layers",
+            "Because TCP was never part of it",
+            "It was originally designed for a group of mutually trusting users on a transparent network",
+            "Because it was built only for wireless devices",
+          ],
+          correct: 2,
+          translation: "لماذا أصبح الإنترنت مكانًا غير آمن؟",
+          explanation:
+            "التصميم الأصلي افترض مستخدمين يثق بعضهم ببعض فلا حاجة للأمن، وهذا لم يعد صحيحًا اليوم.",
+          tags: ["Security", "Internet History"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          q: "23. What was the first packet-switched computer network and a direct ancestor of today's Internet?",
+          options: ["ARPAnet", "Minitel", "Netscape", "Napster"],
+          correct: 0,
+          translation:
+            "ما أول شبكة حاسبات بتبديل الحزم وسلف مباشر للإنترنت اليوم؟",
+          explanation:
+            "ARPAnet أول شبكة packet-switched. Minitel مشروع فرنسي، وNetscape متصفح، وNapster لمشاركة الملفات.",
+          tags: ["ARPAnet", "History"],
+          ref: "Lecture 03 — Section 1.7.1",
+        },
+
+        {
+          q: "24. On January 1, 1983, what was officially deployed as the new standard host protocol for ARPAnet, replacing NCP?",
+          options: ["HTTP", "DNS", "Ethernet", "TCP/IP"],
+          correct: 3,
+          translation:
+            "في 1 يناير 1983 ما الذي تم نشره رسميًا كبروتوكول قياسي جديد لـ ARPAnet بدل NCP؟",
+          explanation:
+            "الانتقال من NCP إلى TCP/IP كان flag day أي كل الأجهزة انتقلت في نفس اليوم.",
+          tags: ["TCP/IP", "History"],
+          ref: "Lecture 03 — Section 1.7.3",
+        },
+
+        {
+          q: "25. Which are the four key components of the Web developed by Berners-Lee and his associates?",
+          options: [
+            "HTML, HTTP, a Web server and a browser",
+            "TCP, UDP, IP and DNS",
+            "E-mail, chat, FTP and P2P",
+            "Router, switch, hub and modem",
+          ],
+          correct: 0,
+          translation:
+            "ما المكوّنات الأربعة للـ Web التي طوّرها Berners-Lee وزملاؤه؟",
+          explanation:
+            "المحاضرة تذكر HTML وHTTP وسيرفر ويب ومتصفح. باقي الاختيارات ليست مكوّنات الـ Web.",
+          tags: ["World Wide Web", "History"],
+          ref: "Lecture 03 — Section 1.7.4",
+        },
+
+        {
+          type: "essay",
+          q: "1. Explain end-to-end throughput and the bottleneck link for a two-link path and for an N-link path.",
+          translation:
+            "اشرح الـ throughput والـ bottleneck link لمسار من رابطين ولمسار من N رابط.",
+          answer:
+            "Throughput is a critical performance measure besides delay and packet loss.\n" +
+            "Two links (Rs, Rc): throughput = min{Rs, Rc}. If Rc < Rs the router backlog grows.\n" +
+            "N links: throughput = min{R1, R2, ..., RN}, the rate of the bottleneck link.\n" +
+            "File transfer time is approximately F / min{rates}.\n",
+          tags: ["Throughput", "Bottleneck"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          type: "essay",
+          q: "2. Why is the access network typically the throughput bottleneck, and how can intervening traffic change the throughput?",
+          translation:
+            "لماذا تكون شبكة الوصول عادة هي الـ bottleneck؟ وكيف تغيّر الحركة الأخرى الـ throughput؟",
+          answer:
+            "The Internet core is over-provisioned with high-speed links that experience little congestion, so throughput = min{Rs, Rc}.\n" +
+            "With 10 downloads sharing a core link of rate R, each gets about R/10 if the link divides rate equally.\n" +
+            "So a high-rate link can still be the bottleneck if many flows pass through it.\n",
+          tags: ["Access Network", "Shared Link"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          type: "essay",
+          q: "3. Explain protocol layering: the service model, how layers are implemented, and its drawbacks.",
+          translation:
+            "اشرح الـ layering: الـ service model وكيف تُنفّذ الطبقات وعيوبه.",
+          answer:
+            "Layers give structure to protocol design; each layer offers a service to the layer above (service model).\n" +
+            "Each layer acts within itself and uses the services of the layer below.\n" +
+            "Application and transport layers are in software in end systems; physical and link layers in the network interface card; network layer is mixed.\n" +
+            "Drawbacks: duplicated lower-layer functionality, and a layer may need information from another layer.\n",
+          tags: ["Layering"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          type: "essay",
+          q: "4. Describe the five layers of the Internet protocol stack and the name of the packet at each layer.",
+          translation:
+            "صف الطبقات الخمس في Internet protocol stack واسم الحزمة في كل طبقة.",
+          answer:
+            "Application: HTTP, SMTP, FTP, DNS; packet = message.\n" +
+            "Transport: TCP and UDP; packet = segment.\n" +
+            "Network: IP and routing protocols; packet = datagram.\n" +
+            "Link: Ethernet, WiFi, DOCSIS, PPP; packet = frame.\n" +
+            "Physical: moves individual bits, depends on the medium (copper, fiber).\n",
+          tags: ["Protocol Stack", "PDU Names"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          type: "essay",
+          q: "5. Compare TCP and UDP.",
+          translation: "قارن بين TCP وUDP.",
+          answer:
+            "TCP is connection-oriented: guaranteed delivery, flow control, breaks long messages into segments, congestion control.\n" +
+            "UDP is connectionless and no-frills: no reliability, no flow control, no congestion control.\n" +
+            "Both transport application-layer messages; the transport packet is called a segment.\n",
+          tags: ["TCP", "UDP"],
+          ref: "Lecture 03 — Section 1.5.1",
+        },
+
+        {
+          type: "essay",
+          q: "6. Explain encapsulation and which layers hosts, routers and link-layer switches implement.",
+          translation:
+            "اشرح الـ encapsulation وأي طبقات تنفذها الـ hosts والراوترات والسويتشات.",
+          answer:
+            "Hosts implement all five layers; routers layers 1 to 3; link-layer switches layers 1 and 2.\n" +
+            "Transport adds header Ht to message M to form a segment.\n" +
+            "Network adds Hn to form a datagram; link adds Hl to form a frame.\n" +
+            "At each layer a packet has header fields and a payload, usually the packet from the layer above.\n",
+          tags: ["Encapsulation"],
+          ref: "Lecture 03 — Section 1.5.2",
+        },
+
+        {
+          type: "essay",
+          q: "7. Describe the three categories of DoS attacks and explain DDoS.",
+          translation: "صف أنواع هجمات DoS الثلاثة واشرح DDoS.",
+          answer:
+            "DoS makes a network, host or infrastructure unusable by legitimate users.\n" +
+            "Categories: vulnerability attack, bandwidth flooding, connection flooding.\n" +
+            "DDoS: the attacker controls many sources (often a botnet) so aggregate traffic is about R.\n" +
+            "DDoS is much harder to detect and defend against than DoS from a single host.\n",
+          tags: ["DoS", "DDoS"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          type: "essay",
+          q: "8. Explain malware, botnets, packet sniffing and IP spoofing, and how to defend against them.",
+          translation:
+            "اشرح الـ malware والـ botnet والـ packet sniffing والـ IP spoofing وطرق الدفاع.",
+          answer:
+            "Malware infects hosts, can delete files, install spyware; self-replicating malware spreads exponentially fast.\n" +
+            "Compromised hosts form a botnet used for spam and DDoS.\n" +
+            "A packet sniffer passively records packets and is hard to detect; cryptography is a main defense.\n" +
+            "IP spoofing sends packets with a false source address; end-point authentication is needed.\n",
+          tags: ["Malware", "Sniffing", "Spoofing"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          type: "essay",
+          q: "9. Why was the Internet originally insecure?",
+          translation: "لماذا كان الإنترنت غير آمن في الأصل؟",
+          answer:
+            "It was designed around a group of mutually trusting users attached to a transparent network, so security was not needed.\n" +
+            "Today's users may not trust each other, may communicate through third parties, and may distrust hardware and software.\n" +
+            "Communication among mutually trusted users is the exception rather than the rule.\n",
+          tags: ["Security"],
+          ref: "Lecture 03 — Section 1.6",
+        },
+
+        {
+          type: "essay",
+          q: "10. Summarize the main stages in the history of the Internet from 1961 to the new millennium.",
+          translation:
+            "لخّص أهم مراحل تاريخ الإنترنت من 1961 حتى الألفية الجديدة.",
+          answer:
+            "1961-1972: packet switching invented; ARPAnet, about 15 nodes by 1972; first e-mail program 1972.\n" +
+            "1972-1980: TCP, UDP and IP conceptually in place by the end of the 1970s.\n" +
+            "1980-1990: TCP/IP deployed on January 1, 1983; DNS developed.\n" +
+            "1990s: the Web (HTML, HTTP, server, browser); killer apps e-mail, Web, instant messaging, P2P.\n" +
+            "2000s: broadband, video apps, wireless devices passed wired in 2011, social networks, cloud.\n",
+          tags: ["History"],
+          ref: "Lecture 03 — Section 1.7",
+        },
+
+        {
+          type: "essay",
+          q: "11. A server is connected to a client through one router. Rs = 5 Mbps, Rc = 2 Mbps, and there is no other traffic. Find the throughput and the time to transfer a file of F = 10 MB (1 MB = 8 Mb).",
+          translation:
+            "سيرفر وعميل وراوتر: Rs = 5 وRc = 2 ميجابت/ث ولا توجد حركة أخرى. أوجد الـ throughput وزمن نقل ملف 10 ميجابايت.",
+          answer:
+            "Formula: throughput = min{Rs, Rc}; time = F / throughput.\n" +
+            "Throughput = min{5, 2} = 2 Mbps (bottleneck is the router-client link).\n" +
+            "F = 10 MB x 8 = 80 Mb.\n" +
+            "Time = 80 / 2 = 40 seconds.\n",
+          tags: ["Throughput", "Calculation"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          type: "essay",
+          q: "12. A path has 4 links with rates R1 = 10, R2 = 4, R3 = 8 and R4 = 6 Mbps. Find the throughput and the time to send a file of 20 Mb.",
+          translation:
+            "مسار من 4 روابط معدلاتها 10 و4 و8 و6 ميجابت/ث. أوجد الـ throughput وزمن إرسال ملف 20 ميجابت.",
+          answer:
+            "Formula: throughput = min{R1, ..., RN}.\n" +
+            "Throughput = min{10, 4, 8, 6} = 4 Mbps (R2 is the bottleneck).\n" +
+            "Time = F / throughput = 20 / 4 = 5 seconds.\n",
+          tags: ["Throughput", "Calculation"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          type: "essay",
+          q: "13. Rs = 2 Mbps, Rc = 1 Mbps and a common core link R = 5 Mbps is shared equally by 10 downloads. Find the throughput of each download.",
+          translation:
+            "Rs = 2 وRc = 1 ورابط مشترك R = 5 ميجابت/ث يتقاسمه 10 تحميلات بالتساوي. أوجد throughput كل تحميل.",
+          answer:
+            "Share of the common link = R / 10 = 5 / 10 = 0.5 Mbps.\n" +
+            "Throughput = min{Rs, Rc, R/10} = min{2, 1, 0.5} = 0.5 Mbps.\n" +
+            "= 500 kbps. The bottleneck is the shared core link.\n",
+          tags: ["Shared Link", "Calculation"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          type: "essay",
+          q: "14. Same setup with 10 downloads, but Rs = 3 Mbps, Rc = 1.5 Mbps and the common link R = 20 Mbps. Find the throughput of each download and identify the bottleneck.",
+          translation:
+            "نفس الوضع مع 10 تحميلات لكن Rs = 3 وRc = 1.5 وR = 20 ميجابت/ث. أوجد throughput كل تحميل والـ bottleneck.",
+          answer:
+            "Share of the common link = 20 / 10 = 2 Mbps.\n" +
+            "Throughput = min{3, 1.5, 2} = 1.5 Mbps.\n" +
+            "The bottleneck is the client access link (Rc), not the core.\n",
+          tags: ["Shared Link", "Calculation"],
+          ref: "Lecture 03 — Section 1.4.4",
+        },
+
+        {
+          type: "essay",
+          q: "15. A server has an access rate R = 100 Mbps. In a DDoS attack each zombie sends 2 Mbps. Approximately how many zombies are needed to cripple the service?",
+          translation:
+            "سيرفر معدل وصوله R = 100 ميجابت/ث. في هجوم DDoS كل zombie يرسل 2 ميجابت/ث. كم zombie تقريبًا يلزم لشل الخدمة؟",
+          answer:
+            "Principle: aggregate attack traffic must be approximately R.\n" +
+            "Number of zombies = R / rate per zombie = 100 / 2 = 50.\n" +
+            "About 50 zombies are needed.\n",
+          tags: ["DDoS", "Calculation"],
+          ref: "Lecture 03 — Section 1.6",
         },
       ],
     },

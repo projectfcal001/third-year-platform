@@ -1126,6 +1126,7 @@ subjects.push({
       t: "المحاضرة 3 — استراتيجية Divide and Conquer ومبرهنة الماستر",
       d: "تطبيق استراتيجية فرق تسد، خوارزمية Merge Sort، وحل العلاقات التكرارية باستخدام Master Theorem.",
       id: "lec-03",
+      //lecture 01 -cloud-computing Questions
       pdf: "datenew/subjects/algorithms/lectures/Lecture 3.pdf",
       pdf2: "datenew/subjects/algorithms/questions/Questions on each lecture/CS311_Lecture3_Sorting_DivideConquer_Questions.pdf",
 
@@ -1143,6 +1144,19 @@ subjects.push({
                 {
                   label: "📖 الشرح",
                   url: "https://www.youtube.com/watch?v=e7ozTC6txss",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Start Practicing - Master Theorem & Recurrences  شرح دكتور ماجد ",
+              d: "حل العلاقات التكرارية وتطبيق Master Theorem بأسلوب مبسط",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://youtu.be/QEhxICw8F9E",
                   type: "view",
                   color: "red",
                 },

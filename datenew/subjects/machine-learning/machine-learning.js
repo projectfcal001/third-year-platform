@@ -18,7 +18,7 @@ subjects.push({
       pdf2: "/datenew/subjects/machine-learning/questions/Questions on each lecture/Machine-Learning-Lecture-01-Questions.pdf",
       // فئات محاضرات تعلم الآلة والتعرف على الأنماط (Machine Learning & Pattern Recognition)
       // المحاضرة الأولى: مقدمة في تعلم الآلة وخوارزمية الجيران الأقرب (Introduction and Nearest Neighbors)
-      linkCategories1: [
+      linkCategories: [
         {
           category: "فيديوهات عربية",
           icon: "🇪🇬",
