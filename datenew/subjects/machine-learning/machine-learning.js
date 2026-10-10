@@ -17,76 +17,165 @@ subjects.push({
       pdf: "datenew/subjects/machine-learning/lectures/Lec 1/lec01.pdf",
       pdf2: "/datenew/subjects/machine-learning/questions/Questions on each lecture/Machine-Learning-Lecture-01-Questions.pdf",
       // فئات محاضرات تعلم الآلة والتعرف على الأنماط (Machine Learning & Pattern Recognition)
-      linkCategories: [
+      // المحاضرة الأولى: مقدمة في تعلم الآلة وخوارزمية الجيران الأقرب (Introduction and Nearest Neighbors)
+      linkCategories1: [
         {
-          category:
-            "المحاضرة الأولى: مقدمة في تعلم الآلة وخوارزمية الجار الأقرب (k-NN)",
-          icon: "🤖",
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
           description:
-            "مفهوم تعلم الآلة، أنواعه، تطبيقاته، تمثيل المتجهات، وخوارزمية k-Nearest Neighbors وتحدياتها",
+            "شروحات مرئية باللغة العربية توضح المفاهيم الأساسية لتعلم الآلة وخوارزمية الجيران الأقرب وتطبيقاتها.",
           links: [
             {
-              t: "مقدمة وتعريف تعلم الآلة وأنواعه (What is ML & Types)",
-              d: "تعريف التعلّم (Tom Mitchell)، دواعي استخدام ML، وتصنيفه إلى Supervised، Unsupervised، و Reinforcement Learning",
-              icon: "📘",
+              t: "K Nearest Neighbors (KNN) Algorithm | شرح بالعربي",
+              d: "شرح تفصيلي لخوارزمية الجيران الأقرب وآلية حساب المسافات والتصنيف بناءً على تصويت الأغلبية.",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-intro-types",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=tmzZPAikEy4",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح خوارزمية K-Nearest Neighbors (KNN) ببساطة للمبتدئين",
+              d: "فيديو مبسط يشرح كيفية اختيار الجيران وأثر معامل K على دقة النموذج في التصنيف.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=xTLW-hjcVnc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح خوارزمية KNN في أقل من 6 دقائق",
+              d: "ملخص سريع لأساسيات الخوارزمية وتطبيقها المباشر في مسائل التعلم الخاضع للإشراف.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=yjNYPfWts0U",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "مقاطع مرئية باللغة الإنجليزية تقدم شرحاً رياضياً وبصرياً ممتازاً لمفهوم KNN ولعنة الأبعاد.",
+          links: [
+            {
+              t: "StatQuest: K-nearest neighbors, Clearly Explained",
+              d: "شرح متكامل من قناة StatQuest يوضح عمل الخوارزمية وااختيار قيمة K والتعامل مع الميزات المختلفة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=HVXime0nQeI",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "K-nearest Neighbors (KNN) in 3 min - Visually Explained",
+              d: "توضيح بصري سريع لكيفية تشكيل حدود القرار وتحديد الأنماط في المساحات متعددة الأبعاد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=gs9E7E0qOIc",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات وأدلة علمية تشرح الأساس الرياضي والتطبيقي لـ KNN ومقاييس المسافة ولعنة الأبعاد.",
+          links: [
+            {
+              t: "Mathematical Explanation of K-Nearest Neighbour - GeeksforGeeks",
+              d: "مرجع شامل يتناول الرياضيات المتقدمة لمقياس Distance Metric وكيفية اختيار K المناسبة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/mathematical-explanation-of-k-nearest-neighbour/",
                   type: "view",
                   color: "blue",
                 },
               ],
             },
             {
-              t: "تطبيقات تعلم الآلة وتمثيل متجهات الإدخال (Applications & Input Vectors)",
-              d: "تطبيقات Vision و NLP وأنظمة التوصية، وتحويل البيانات والتربيكسلات إلى متجهات (Input Vectors في R^d)",
-              icon: "🖼️",
+              t: "How to Choose the Right Distance Metric in KNN - GeeksforGeeks",
+              d: "مقالة تقارن بين مقاييس المسافات المختلفة مثل المسافة الإقليدية والمانهاتن والمانكوفسكي.",
+              icon: "📚",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-applications-vectors",
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/how-to-choose-the-right-distance-metric-in-knn/",
                   type: "view",
                   color: "blue",
                 },
               ],
             },
             {
-              t: "خوارزمية الجار الأقرب (Nearest Neighbors & k-NN)",
-              d: "حساب المسافة الإقليدية (Euclidean Distance)، حدود القرار (Decision Boundaries)، وآلية التصويت بالأغلبية في k-NN",
-              icon: "📊",
+              t: "How to Find The Optimal Value of K in KNN - GeeksforGeeks",
+              d: "شرح عملي لطرق اختيار المعامل الفائق K باستخدام Cross-Validation وتجنب Overfitting.",
+              icon: "📚",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-knn-algorithm",
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/how-to-find-the-optimal-value-of-k-in-knn/",
                   type: "view",
                   color: "blue",
                 },
               ],
             },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومستودعات برمجية لتجربة الخوارزمية وتصور حدود القرار تفاعلياً.",
+          links: [
             {
-              t: "ضبط المعاملات وقيم k والتثبت (Hyperparameters & Validation Sets)",
-              d: "تأثير قيمة k الصغيرة والكبيرة (Overfitting vs Underfitting)، واستخدام مجموعة التثبت (Validation Set) واختبار التعميم",
-              icon: "⚙️",
+              t: "Interactive K-Nearest Neighbors Visualizer",
+              d: "أداة تفاعلية تجريبية لتحديد نقاط البيانات وتعديل قيمة K وملاحظة تغير حدود القرار بشكل مباشر.",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-k-hyperparameters",
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.luseratech.com/knn-visual",
                   type: "view",
-                  color: "blue",
+                  color: "green",
                 },
               ],
             },
             {
-              t: "تحديات k-NN (Curse of Dimensionality, Normalization & Cost)",
-              d: "لعنة الأبعاد والشغور، التطبيع (Zero mean, unit variance)، والتكلفة الحسابية O(ND) أثناء وقت الاختبار",
-              icon: "⚠️",
+              t: "K-Nearest Neighbors Tutorial with Scikit-Learn",
+              d: "دليل برمجي لتطبيق KNN وتجهيز البيانات وتطبيع الميزات باستخدام مكتبة Scikit-Learn في بايثون.",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-knn-pitfalls",
+                  label: "🌐 فتح الموقع",
+                  url: "https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/",
                   type: "view",
-                  color: "blue",
+                  color: "green",
                 },
               ],
             },
@@ -687,75 +776,151 @@ subjects.push({
       t: "المحاضرة الثانية: شجرة القرار (Decision Trees) وتحليل الـ Bias-Variance",
       d: "بناء Decision Trees بطريقة greedy، الـ entropy والـ information gain وقواعد الـ conditional entropy، مثال Play Tennis، مقارنة الشجرة بـ kNN، الـ ensembles، وتحليل Bias-Variance والـ Bayes error.",
       pdf: "datenew/subjects/machine-learning/lectures/Lec 2/lec02.pdf",
-      pdf2: "/datenew/subjects/machine-learning/questions/Questions on each lecture/Machine-Learning-Lecture-02-Questions.pdf",
+      pdf2: "datenew/subjects/machine-learning/questions/Questions on each lecture/Machine-Learning-Lecture-02-Questions.pdf",
+      // المحاضرة الثانية: أشجار القرار وتفكيك الانحياز والتباين (Decision Trees and Bias-Variance Decomposition)
       linkCategories: [
         {
-          category:
-            "المحاضرة الثانية: أشجار القرار وتفكيك الانحياز والتباين (Decision Trees & Bias-Variance)",
-          icon: "🌳",
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
           description:
-            "بناء أشجار القرار، مفاهيم الاعتلاجة (Entropy)، كسب المعلومات (Information Gain)، وتفكيك Bias-Variance",
+            "مقاطع تعليمية بالعربية تشرح بناء أشجار القرار وحساب الإنتروبيا وكسب المعلومات وتفكيك الخطأ.",
           links: [
             {
-              t: "أساسيات أشجار القرار (Decision Trees Overview)",
-              d: "مفهوم العقد الداخلية والأوراق، التعامل مع الميزات المستمرة والمتقطعة، وأشجار التصنيف والانحدار (Regression Trees)",
-              icon: "🌿",
+              t: "شرح خوارزمية Decision Tree في تعلم الآلة بأسلوب سهل",
+              d: "شرح تفصيلي لمفهوم شجرة القرار وكيفية اختيار الميزات وتقسيم البيانات بناءً على كسب المعلومات.",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-dt-basics",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=G2AJBYnCsc0",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Decision Tree (Entropy Function and Information Gain) شرح عربي",
+              d: "توضيح شامل لدالة Entropy وكيفية حساب Information Gain بالتفصيل لبناء شجرة قرار دقيقة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=oESGP84jr80",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Decision Tree - Classification | شجرة القرارات للتصنيف",
+              d: "عرض متكامل لمبادئ التصنيف باستخدام أشجار القرار ودورها في معالجة البيانات المتنوعة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=PIOXA37gyzA",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "دروس عالمية موثوقة تبسط بناء أشجار القرار والأسس النظرية للإنتروبيا وتوازن Bias-Variance.",
+          links: [
+            {
+              t: "Decision and Classification Trees, Clearly Explained!!!",
+              d: "شرح مبسط وواضح من StatQuest لكيفية بناء أشجار القرار والتصنيف واستخدام المقاييس المختلفة للنقاء.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=_L39rN6gz7Y",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Stanford CS229: Decision Trees and Ensemble Methods",
+              d: "محاضرة جامعة ستانفورد الشاملة حول أشجار القرار والإنتروبيا ومقدمة لطرق التجميع Ensembles.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=r7T-aT8f9X4",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "م مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات وأبحاث توثق الخوارزميات الحثية لأشجار القرار وتقسيم المساحة وتحليل التباين والانحياز.",
+          links: [
+            {
+              t: "Decision Tree Algorithm in Machine Learning - GeeksforGeeks",
+              d: "دليل مقالي شامل يغطي كيفية بناء أشجار القرار وتطبيقاتها في التصنيف والانحدار مع المبادئ الرياضية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/decision-tree/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Bias-Variance Tradeoff in Machine Learning - GeeksforGeeks",
+              d: "مقالة تشرح التفصيل الرياضي لمكونات الخطأ المتوقع (Bias, Variance, Bayes Error) وتأثيرها على الأداء.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/ml-bias-variance-tradeoff/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومكتبات برمجية لتصور تفكيك الأشجار ومحاكاة حدود القرار في الفضاء.",
+          links: [
+            {
+              t: "dtreeviz: Decision Tree Visualization Library",
+              d: "مكتبة بايثون احترافية لتصور وتحليل هيكل شجرة القرار وتوزيع البيانات داخل كل عقدة بشكل تفاعلي.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://github.com/parrt/dtreeviz",
                   type: "view",
                   color: "green",
                 },
               ],
             },
             {
-              t: "قياس عدم اليقين والاعتلاجة (Entropy & Quantifying Uncertainty)",
-              d: "المفهوم الإحصائي للاعتلاجة H(Y)، تجربة رمي العملة، والفرق بين High Entropy و Low Entropy",
-              icon: "📈",
+              t: "Interactive Decision Tree Builder & Visualizer",
+              d: "أداة تفاعلية مستندة إلى الويب لبناء شجرة القرار ومتابعة عملية التقسيم التدريجي لمساحة الميزات.",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-entropy",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "كسب المعلومات وبناء الشجرة (Information Gain & Tree Induction)",
-              d: "حساب Entropy المشروط، معادل كسب المعلومات IG(S, a)، وتطبيق خوارزمية الاستقراء الجشعة (Induce Decision Tree)",
-              icon: "🧠",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-information-gain",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "معايير الشجرة الجيدة ومقارنتها بـ k-NN (Good Trees & DT vs KNN)",
-              d: "مبدأ Occam's Razor، تجنب الإفراط في المطابقة، ومقارنة إيجابيات وسلبيات أشجار القرار مقابل خوارزمية k-NN",
-              icon: "⚖️",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-dt-vs-knn",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "تفكيك الانحياز والتباين (Bias-Variance Decomposition)",
-              d: "تحليل خطأ التعميم إلى الانحياز (Bias)، التباين (Variance)، وخبر Bayes Error الناجم عن الضوضاء",
-              icon: "🎯",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-bias-variance",
+                  label: "🌐 فتح الموقع",
+                  url: "https://ai.williamtheisen.com/",
                   type: "view",
                   color: "green",
                 },

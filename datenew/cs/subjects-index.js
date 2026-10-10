@@ -52,6 +52,7 @@ var SUBJECTS_INDEX = [
     icon: "☁️",
     slug: "cloud-computing",
     file: "datenew/subjects/cloud-computing/cloud-computing.js",
-    file: "datenew/subjects/cloud-computing/sections-cloud-computing.json",
+    sectionsFile:
+      "datenew/subjects/cloud-computing/sections-cloud-computing.json",
   },
 ];

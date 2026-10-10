@@ -18,74 +18,274 @@ subjects.push({
       d: "تعريف HCI، أمثلة من الحياة اليومية، أهميته، علاقته بالمجالات الأخرى (UX / UI / Interaction Design)، مبادئ التصميم، والمكونات الرئيسية.",
       pdf: "datenew/subjects/hci/lectures/Lec 1/Lec 1.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-01-Questions.pdf",
+      // فئات روابط منظمة - المحاضرة الأولى: مقدمة في تفاعل الإنسان والحاسوب (HCI)
       linkCategories: [
         {
-          category: "المحاضرة الأولى: مقدمة في تفاعل الإنسان والحاسوب (HCI)",
-          icon: "💻",
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
           description:
-            "مفهوم HCI، أهميته، مجالاته، الفرق بين UX و UI و Interaction Design، ومكوناته الأساسية",
+            "شروحات باللغة العربية لمفاهيم HCI الأساسية، والفرق بين UI و UX والتصميم التفاعلي",
           links: [
             {
-              t: "تعريف HCI ومفهوم Interaction/Interfaces",
-              d: "مجال متعدد التخصصات يركز على تصميم وتقييم وتنفيذ الأنظمة الحوسبية التفاعلية ودراسة كيفية تفاعل البشر معها",
-              icon: "📘",
+              t: "أ. أفنان العمري - التفاعل بين الإنسان والحاسب (HCI)",
+              d: "شرح مفهوم HCI، الفرق بين Interaction و Interface، ومكونات النظام التفاعلي بالعربي",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-intro",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=6NhQBpb0SHY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "أساسيات تجربة وواجهة المستخدم (UI/UX) - الشرح العربي",
+              d: "توضيح العلاقة والفرق بين UX Design و UI Design و Interaction Design بالأمثلة",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description: "محاضرات أكاديمية عالمية ومفاهيم Don Norman في HCI و UX",
+          links: [
+            {
+              t: "Georgia Tech - Human-Computer Interaction (CS6750)",
+              d: "الكورس الأكاديمي الرسمي الشامل لمبادئ HCI والمكونات الأساسية (Users, Tasks, Tools, Interfaces, Context)",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Nielsen Norman Group - UX & HCI Core Concepts",
+              d: "شروحات قصيرة حول مبادئ التصميم (Discoverability, Feedback, Affordances, Constraints)",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات وتوثيقات أكاديمية تشرح مفاهيم HCI ومبادئ التصميم",
+          links: [
+            {
+              t: "GeeksforGeeks - Introduction to Human Computer Interaction (HCI)",
+              d: "مقال شامل يغطي تعاريف HCI، الأبعاد الخمسة، الفرق بين UI/UX، وأهمية تصميم الواجهات",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/introduction-to-human-computer-interface-hci/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Interaction Design Foundation (IxDF) - What is HCI?",
+              d: "المرجع العالمي لتفاعل الإنسان والحاسوب، مبادئ علم النفس المعرفي، وتصميم تجربة المستخدم",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.interaction-design.org/literature/topics/human-computer-interaction",
                   type: "view",
                   color: "blue",
                 },
               ],
             },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومواقع لتطبيق مبادئ HCI وتصاميم الـ UI/UX",
+          links: [
             {
-              t: "أمثلة HCI في الحياة اليومية وأهميته",
-              d: "الهواتف الذكية، أجهزة ATM، لوحات القيادة، والأنظمة الذكية؛ ويهدف لتقليل الأخطاء وزيادة الإنتاجية والرضا",
-              icon: "📱",
+              t: "Laws of UX - Visual HCI & UX Principles",
+              d: "موقع تفاعلي يستعرض قوانين ومبادئ HCI والنفسية المستخدمة في بناء الواجهات التفاعلية",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-importance",
+                  label: "🚀 فتح التفاعليات",
+                  url: "https://lawsofux.com/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Figma - Interactive UI/UX Design Tool",
+              d: "الأداة الأولى لبناء واجهات المستخدم (UI)، النماذج التفاعلية (Prototypes)، واختبار تجربة المستخدم (UX)",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ فتح الأداة",
+                  url: "https://www.figma.com/",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ], // فئات روابط منظمة - المحاضرة الأولى: مقدمة في تفاعل الإنسان والحاسوب (HCI)
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات باللغة العربية لمفاهيم HCI الأساسية، والفرق بين UI و UX والتصميم التفاعلي",
+          links: [
+            {
+              t: "أ. أفنان العمري - التفاعل بين الإنسان والحاسب (HCI)",
+              d: "شرح مفهوم HCI، الفرق بين Interaction و Interface، ومكونات النظام التفاعلي بالعربي",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=6NhQBpb0SHY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "أساسيات تجربة وواجهة المستخدم (UI/UX) - الشرح العربي",
+              d: "توضيح العلاقة والفرق بين UX Design و UI Design و Interaction Design بالأمثلة",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description: "محاضرات أكاديمية عالمية ومفاهيم Don Norman في HCI و UX",
+          links: [
+            {
+              t: "Georgia Tech - Human-Computer Interaction (CS6750)",
+              d: "الكورس الأكاديمي الرسمي الشامل لمبادئ HCI والمكونات الأساسية (Users, Tasks, Tools, Interfaces, Context)",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Nielsen Norman Group - UX & HCI Core Concepts",
+              d: "شروحات قصيرة حول مبادئ التصميم (Discoverability, Feedback, Affordances, Constraints)",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات وتوثيقات أكاديمية تشرح مفاهيم HCI ومبادئ التصميم",
+          links: [
+            {
+              t: "GeeksforGeeks - Introduction to Human Computer Interaction (HCI)",
+              d: "مقال شامل يغطي تعاريف HCI، الأبعاد الخمسة، الفرق بين UI/UX، وأهمية تصميم الواجهات",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/introduction-to-human-computer-interface-hci/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Interaction Design Foundation (IxDF) - What is HCI?",
+              d: "المرجع العالمي لتفاعل الإنسان والحاسوب، مبادئ علم النفس المعرفي، وتصميم تجربة المستخدم",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.interaction-design.org/literature/topics/human-computer-interaction",
                   type: "view",
                   color: "blue",
                 },
               ],
             },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومواقع لتطبيق مبادئ HCI وتصاميم الـ UI/UX",
+          links: [
             {
-              t: "علاقة HCI بالمجالات الأخرى (UX vs UI vs IxD)",
-              d: "الفرق بين تصميم تجربة المستخدم (UX)، واجهة المستخدم (UI)، وتصميم التفاعل (Interaction Design)",
-              icon: "🎨",
+              t: "Laws of UX - Visual HCI & UX Principles",
+              d: "موقع تفاعلي يستعرض قوانين ومبادئ HCI والنفسية المستخدمة في بناء الواجهات التفاعلية",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-design-fields",
+                  label: "🚀 فتح التفاعليات",
+                  url: "https://lawsofux.com/",
                   type: "view",
-                  color: "blue",
+                  color: "orange",
                 },
               ],
             },
             {
-              t: "مبادئ تصميم تفاعل الإنسان والحاسوب",
-              d: "تغطية مبادئ مثل Discoverability, Feedback, Constraints, Mapping, Consistency, Affordances, Simplicity",
-              icon: "⚙️",
+              t: "Figma - Interactive UI/UX Design Tool",
+              d: "الأداة الأولى لبناء واجهات المستخدم (UI)، النماذج التفاعلية (Prototypes)، واختبار تجربة المستخدم (UX)",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-principles",
-                  type: "view",
-                  color: "blue",
-                },
-              ],
-            },
-            {
-              t: "المكونات الرئيسية لنظام HCI",
-              d: "دراسة عناصر النظام الخمسة: المستخدمون (Users)، المهام (Tasks)، الأدوات (Tools)، الواجهات (Interfaces)، والسياق (Context)",
-              icon: "🧩",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-components",
-                  type: "view",
+                  label: "⭳ فتح الأداة",
+                  url: "https://www.figma.com/",
+                  type: "download",
                   color: "blue",
                 },
               ],
@@ -520,75 +720,139 @@ subjects.push({
       d: "تعريف HCI، أمثلة من الحياة اليومية، أهميته، علاقته بالمجالات الأخرى (UX / UI / Interaction Design)، مبادئ التصميم، والمكونات الرئيسية.",
       pdf: "datenew/subjects/hci/lectures/Lec 2/Lec 2.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-02-Questions.pdf",
+      // فئات روابط منظمة - المحاضرة الثانية: الإنسان (The Human) والإدراك البشري في تفاعل الإنسان والحاسوب (HCI)
       linkCategories: [
         {
-          category: "المحاضرة الثانية: العنصر البشري (The Human)",
-          icon: "🧠",
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
           description:
-            "دراسة قدرات الإنسان: الإدخال والإخراج الحسي، الذاكرة، التفكير وحل المشكلات، الأخطاء، والعواطف",
+            "شروحات باللغة العربية لعلم النفس المعرفي، الحواس، الذاكرة، وقوانين الإدراك البشري في HCI",
           links: [
             {
-              t: "الحواس وقنوات الإدخال والإخراج (Vision, Hearing, Touch, Movement)",
-              d: "الرؤية (الشبكية، Cones, Rods)، السمع (الأذن والترددات)، اللمس (المستقبلات)، والحركة وقانون فيتس (Fitts' Law)",
-              icon: "👁️",
+              t: "أ. أفنان العمري - العامل البشري والإدراك في تفاعل الإنسان والحاسب (HCI)",
+              d: "شرح تفصيلي بالعربي للحواس البشرية (الرؤية، السمع، اللمس)، الذاكرة قصيرة وطويلة الأجل، ونماذج المعالجة البشرية",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-senses",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=6NhQBpb0SHY",
                   type: "view",
-                  color: "purple",
+                  color: "red",
                 },
               ],
             },
             {
-              t: "أنواع الذاكرة ونماذج الذاكرة طويلة المدى",
-              d: "الذاكرة الحسية، الذاكرة قصيرة المدى (STM)، والذاكرة طويلة المدى (LTM) وشبكاتها الدلالية والأطر والسيناريوهات والقواعد",
-              icon: "💾",
+              t: "أساسيات علم النفس المعرفي وتجربة المستخدم (UX Psychology)",
+              d: "توضيح كيف تؤثر الذاكرة والعمليات العقلية وإدراك الألوان على تصميم واجهات المستخدم",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-memory",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
                   type: "view",
-                  color: "purple",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محاضرات أكاديمية عالمية تغطي نموذج المعالجة البشرية، الذاكرة، وقانون Fitts' Law",
+          links: [
+            {
+              t: "Georgia Tech - Human-Computer Interaction (The Human Chapter)",
+              d: "الكورس الأكاديمي الرسمي يغطي الرؤية البشرية، الذاكرة (STM & LTM)، الاستدلال، وحل المشكلات في HCI",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
+                  type: "view",
+                  color: "red",
                 },
               ],
             },
             {
-              t: "التفكير وحل المشكلات (Reasoning & Problem Solving)",
-              d: "أنواع الاستدلال (Deductive, Inductive, Abductive)، ونظريات حل المشكلات مثل Gestalt و Problem Space",
-              icon: "💡",
+              t: "Nielsen Norman Group - Cognitive Psychology in UX",
+              d: "شروحات حول الحمل المعرفي (Cognitive Load)، الذاكرة العاملة، وكيفية تصميم واجهات تتناسب مع الدماغ البشري",
+              icon: "🌍",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-reasoning",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
                   type: "view",
-                  color: "purple",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مراجع أكاديمية ومقالات تفصيلية حول النماذج العقلية، الذاكرة البشرية، وقوانين الحركة مثل Fitts' Law",
+          links: [
+            {
+              t: "GeeksforGeeks - Human Information Processing Model in HCI",
+              d: "مقال توثيقي شامل حول نظام استقبال المعلومات البشري، الذاكرة، وعمليات التفكير والاستدلال",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/human-information-processing-model-in-hci/",
+                  type: "view",
+                  color: "green",
                 },
               ],
             },
             {
-              t: "الأخطاء والأنماط الذهنية (Errors & Mental Models)",
-              d: "الفرق بين زلات التنفيذ (Slips) والأخطاء الناتجة عن الفهم الخاطئ (Mistakes) والمستويات الذهنية للمستخدم",
-              icon: "⚠️",
+              t: "Interaction Design Foundation (IxDF) - Human Cognitive Architecture & HCI",
+              d: "مكتبة المراجع العالمية لدراسة علم النفس المعرفي، الانتباه، الذاكرة طويلة المدى، وتأثير العواطف على التفاعل",
+              icon: "📚",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-errors",
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.interaction-design.org/literature/topics/human-computer-interaction",
                   type: "view",
-                  color: "purple",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات ومواقع تفاعلية لتطبيق قوانين الحركة (Fitts' Law) وقياس الحمل المعرفي",
+          links: [
+            {
+              t: "Laws of UX - Cognitive & Psychological Principles",
+              d: "موقع تفاعلي يستعرض قوانين علم النفس المعرفي وتجربة المستخدم مثل قانون Fitts وقانون Hick",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح التفاعليات",
+                  url: "https://lawsofux.com/",
+                  type: "view",
+                  color: "orange",
                 },
               ],
             },
             {
-              t: "العواطف والفروق الفردية (Emotion & Individual Differences)",
-              d: "تأثير العاطفة (Affect) على حل المشكلات وتصميم الواجهات، والفروق الفردية طويلة وقصيرة المدى بين المستخدمين",
-              icon: "👤",
+              t: "Fitts' Law Simulator - Interactive Movement & Target Testing",
+              d: "أداة تفاعلية لقياس وقت الحركة وسرعة استهداف الأزرار بناءً على مسافة وحجم الأهداف (Fitts' Law)",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec2-emotion",
-                  type: "view",
-                  color: "purple",
+                  label: "⭳ فتح الأداة",
+                  url: "https://lawsofux.com/fitts-law/",
+                  type: "download",
+                  color: "blue",
                 },
               ],
             },
@@ -1162,75 +1426,139 @@ subjects.push({
       pdf: "datenew/subjects/hci/lectures/Lec 3/Lec 3.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-03-Questions.pdf",
       // فئات محاضرات تفاعل الإنسان والحاسوب (HCI)
+      // فئات روابط منظمة - المحاضرة الثالثة: مكونات الحاسوب والأجهزة الطرفية في تفاعل الإنسان والحاسوب (HCI)
       linkCategories: [
         {
-          category: "المحاضرة الثالثة: جهاز الحاسوب والتقنيات (The Computer)",
-          icon: "🖥️",
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
           description:
-            "أجهزة الإدخال، شاشات العرض، الواقع الافتراضي، أدوات التحكم المادية، الطباعة والمسح، والذاكرة والشبكات",
+            "شروحات باللغة العربية لمكونات الحاسوب، أجهزة الإدخال والإخراج، والذاكرة في HCI",
           links: [
             {
-              t: "أجهزة إدخال النصوص (Text Entry Devices)",
-              d: "لوحات المفاتيح (QWERTY, DVORAK, Chord)، والتعرف على الخط والحديث وشاشات الهاتف ونظام T9",
-              icon: "⌨️",
+              t: "أ. أفنان العمري - أجهزة الحاسوب وأساليب التفاعل (Input & Output Devices)",
+              d: "شرح تفصيلي بالعربي لأجهزة الإدخال (لوحة المفاتيح، الفأرة، الشاشات اللمسية) والإخراج وأثرها على تفاعل المستخدم",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec3-text-entry",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=6NhQBpb0SHY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "تفاعل الإنسان والحاسوب - مكونات النظام الحاسوبي",
+              d: "مراجعة شاملة لمفاهيم الذاكرة، المعالجة، الشاشات، وتصميم التفاعل في النظم الحديثة",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محاضرات أكاديمية عالمية تغطي أجهزة الحاسوب، الشاشات، التفاعل ثلاثي الأبعاد، والواقع الافتراضي",
+          links: [
+            {
+              t: "Georgia Tech - Human-Computer Interaction (The Computer Chapter)",
+              d: "الكورس الأكاديمي الرسمي يغطي تفصيل أجهزة الإدخال، شاشات العرض، التفاعل ثلاثي الأبعاد، وقيود الأداء",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Nielsen Norman Group - Input & Interaction Design Principles",
+              d: "شروحات حول كفاءة أجهزة الإدخال، تصميم الواجهات للأجهزة المختلفة، وتجربة المستخدم المادية",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مراجع أكاديمية ومقالات تفصيلية حول أجهزة الحاسوب وقوانين التفاعل مثل Fitts' Law وتصميم الأجهزة",
+          links: [
+            {
+              t: "GeeksforGeeks - Input and Output Devices in Computer Architecture",
+              d: "مقال توثيقي شامل حول أنواع أجهزة الإدخال والإخراج وخصائصها التقنية وتأثيرها على الأداء",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/computer-organization-architecture-input-output-devices/",
                   type: "view",
                   color: "green",
                 },
               ],
             },
             {
-              t: "أجهزة التأشير والرسم (Positioning & Pointing Devices)",
-              d: "الماوس، لوحة اللمس (Touchpad)، شاشات اللمس، القلم الضوئي، تتبع العين (Eyegaze)، وأسهم الاتجاهات",
-              icon: "🖱️",
+              t: "Interaction Design Foundation (IxDF) - Hardware & Interface Devices in HCI",
+              d: "مكتبة المراجع العالمية لدراسة العلاقة بين الأجهزة المادية وتجربة المستخدم وسهولة الاستخدام",
+              icon: "📚",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec3-pointing",
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.interaction-design.org/literature/topics/human-computer-interaction",
                   type: "view",
-                  color: "green",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات ومواقع محاكاة تفاعلية لاختبار الأجهزة، النماذج ثلاثية الأبعاد، وتجربة التفاعل",
+          links: [
+            {
+              t: "Laws of UX - Interaction Design & Hardware Usability",
+              d: "موقع تفاعلي يستعرض المبادئ النفسية والحركية لتصميم الأجهزة وأنظمة التحكم وحرية الإدخال",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح التفاعليات",
+                  url: "https://lawsofux.com/",
+                  type: "view",
+                  color: "orange",
                 },
               ],
             },
             {
-              t: "أجهزة العرض والشاشات (Display Devices)",
-              d: "شاشات Bitmap، CRT، LCD، الشاشات الكبيرة، الشاشات العامة (Situated Displays)، والورق الرقمي (Digital Paper)",
-              icon: "📺",
+              t: "Blender - 3D Modeling & VR Simulation Tool",
+              d: "أداة احترافية لتصميم النماذج ثلاثية الأبعاد وبيئات الواقع الافتراضي (VR) وأنظمة التفاعل المتقدمة",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec3-displays",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "الواقع الافتراضي والتفاعل ثلاثي الأبعاد (VR & 3D Interaction)",
-              d: "التأشير في الفراغ، خوذات VR، درجات الحركة (Pitch, Yaw, Roll)، وغثيان الحركة (Motion Sickness)",
-              icon: "🥽",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec3-vr",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "الطباعة والمسح والذاكرة والشبكات (Printing, Memory & Networks)",
-              d: "أنواع الطابعات والخطوط، RAM، الذاكرة الافتراضية، الضغط، وسرعة المعالجة وقانون مور وشبكات الإنترنت",
-              icon: "🖨️",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec3-printing-memory",
-                  type: "view",
-                  color: "green",
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.blender.org/",
+                  type: "download",
+                  color: "blue",
                 },
               ],
             },

@@ -14,65 +14,106 @@ subjects.push({
       id: "neural-networks-lecture-01",
       t: "المحاضرة الأولى: مقدمة في الشبكات العصبية (Neural Networks)",
       d: "تعريف الشبكات العصبية، النيرون البيولوجي والصناعي، البنية (input / hidden / output)، عملية التعلّم، دوال التنشيط (Binary / Linear threshold / Sigmoid / Gaussian / ReLU / Tanh)، المكونات الثمانية للشبكة، والبنى Feedforward وFeedback.",
-      pdf: "/datenew/subjects/neural-networks/lectures/Lec 1/Lec 1.pdf",
-      pdf2: "/datenew/subjects/neural-networks/questions/Questions on each lecture/Neural-Networks-Lecture-01-Questions.pdf",
+      pdf: "datenew/subjects/neural-networks/lectures/Lec 1/Lec 1.pdf",
+      pdf2: "datenew/subjects/neural-networks/questions/Questions on each lecture/Neural-Networks-Lecture-01-Questions.pdf",
 
-      // فئات محتوى محاضرة مقدمة في الشبكات العصبية (Introduction to Neural Networks)
+      // فئات روابط منظمة - المحاضرة الأولى: مقدمة في الشبكات العصبية الاصطناعية (Introduction to Neural Networks)
       linkCategories: [
         {
-          category:
-            "الجزء الأول: المفاهيم الأساسية والخلية الاصطناعية (Fundamentals & Artificial Neuron)",
-          icon: "🧠",
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
           description:
-            "تعريف الشبكات العصبية، المقارنة مع الخلية البيولوجية، النموذج الحسابي، ومكونات الطبقات وعملية التعلم",
+            "شروحات باللغة العربية لمفاهيم الشبكات العصبية، الخلايا العصبية الاصطناعية، ودوال التنشيط",
           links: [
             {
-              t: "تعريف الشبكات العصبية والخلية البيولوجية (What is NN & Biological Neuron)",
-              d: "نماذج حاسوبية تحاكي الدماغ البشري؛ وتدرس انتقال الإشارات كيميائياً وكهربائياً وفاعلية التشابك العصبي (Synaptic Efficacy)",
-              icon: "📘",
+              t: "شرح الشبكات العصبية الاصطناعية (Artificial Neural Networks)",
+              d: "شرح تفصيلي لمفهوم الخلية العصبية الاصطناعية، الأوزان (Weights)، الانحياز (Bias)، ودوال التنشيط (Activation Functions)",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-intro-bio",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=bfmFfD2RIcg",
                   type: "view",
-                  color: "blue",
+                  color: "red",
                 },
               ],
             },
             {
-              t: "نموذج الخلية الاصطناعية الحسابي (Artificial Neuron Model)",
-              d: "تجميع خطي موزون للإشارات المباشرة x_j = Σ w_ij s_i + θ_j معدّل بالانحياز/العتبة وتطبيق دالة التنشيط ŷ = g(w.x + b)",
-              icon: "⚙️",
+              t: "أساسيات التعلم العميق والشبكات العصبية - الشرح العربي",
+              d: "توضيح طبقات الشبكة العصبية (Input, Hidden, Output Layers) وعمليات التدريب والانتشار العكسي",
+              icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-artificial-neuron",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
                   type: "view",
-                  color: "blue",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "شروحات أكاديمية وعالمية لمفاهيم الأبنية والانتشار العكسي ودوال التنشيط",
+          links: [
+            {
+              t: "3Blue1Brown - But what is a Neural Network?",
+              d: "الشرح البصري الأفضل عالمياً لفهم الخلايا العصبية، الطبقات المخفية، وكيفية عمل الشبكات العصبية والتعلم",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=aircAruvnKk",
+                  type: "view",
+                  color: "red",
                 },
               ],
             },
             {
-              t: "هيكلية الشبكة وعملية التعلم (Structure & Learning Process)",
-              d: "تقسيم الطبقات إلى Input و Hidden و Output، ودورة التدريب عبر Forward propagation، حساب Loss، و Backpropagation",
-              icon: "🔄",
+              t: "StatQuest: Neural Networks Part 1",
+              d: "شرح مبسط ومفصل للمفاهيم الرياضية الأساسية للشبكات العصبية والأوزان والانحياز ودوال التنشيط",
+              icon: "🌍",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-structure-learning",
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=CqOfi41LfDw",
                   type: "view",
-                  color: "blue",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات ومرجعيات تفصيلية لمكونات الشبكات العصبية ودوال التنشيط وأنواعها",
+          links: [
+            {
+              t: "GeeksforGeeks - Introduction to Artificial Neural Networks (ANN)",
+              d: "مرجع شامل يغطي بنية الشبكات العصبية، مكوناتها الثمانية الأساسية، وعمليات التعلم والتدريب",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/introduction-to-artificial-neural-networks/",
+                  type: "view",
+                  color: "green",
                 },
               ],
             },
             {
-              t: "أنواع الشبكات العصبية وتطبيقاتها (NN Types & Use Cases)",
-              d: "أنواع FNN, CNN, RNN, DNN وتطبيقاتها في التعرف على الصور، NLP، التشخيص الطبي، التنبؤ المالي، والسيارات ذاتية القيادة",
-              icon: "📱",
+              t: "DeepLearning.AI - Neural Networks and Deep Learning Resources",
+              d: "مرجع عالمي موثوق لدراسة هندسة الشبكات العصبية، دوال التنشيط (ReLU, Sigmoid, Tanh)، وعمارة الشبكات",
+              icon: "📚",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-types-apps",
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.deeplearning.ai/",
                   type: "view",
                   color: "blue",
                 },
@@ -81,109 +122,34 @@ subjects.push({
           ],
         },
         {
-          category:
-            "الجزء الثاني: دوال واقترانات التنشيط (Activation Functions)",
-          icon: "⚡",
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
           description:
-            "شرح دوال الإشارة والتنشيط المختلفة وتأثير الانحياز ومقارنة الخصائص والعيوب",
+            "أدوات تفاعلية ومحاكاة لتجربة الشبكات العصبية وتغيير الأوزان ودوال التنشيط بصرياً",
           links: [
             {
-              t: "دوال العتبة الثنائية والخطية (Binary & Linear Threshold Functions)",
-              d: "دالة التنشيط الثنائية (0/1) وتأثير الانحياز Shifted Bias، والدالة الخطية المحدودة بميل α_j = 1/x_m",
-              icon: "📈",
+              t: "TensorFlow Playground - Interactive Neural Network",
+              d: "أداة تفاعلية ممتازة من جوجل لتجربة بناء الشبكات العصبية ومراقبة تأثير دوال التنشيط والأوزان والطبقات المخفية",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-threshold-functions",
+                  label: "🚀 فتح التفاعليات",
+                  url: "https://playground.tensorflow.org/",
                   type: "view",
-                  color: "purple",
+                  color: "orange",
                 },
               ],
             },
             {
-              t: "الدالة السيجمويدية ودالة جارسون (Sigmoidal & Gaussian Functions)",
-              d: "الدالة السيجمويدية الملساء بين (0,1) مع معامل الكسب λ_j، ودالة Gaussian غير الرتيبة المحددة بالمركز c_j والانحراف σ_j",
-              icon: "📊",
+              t: "Python & NumPy - Neural Network Implementation from Scratch",
+              d: "مكتبات وأدوات البرمجة الأساسية لبناء خلية عصبية واختبار دوال التنشيط برمجياً",
+              icon: "🔧",
               actions: [
                 {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-sigmoid-gaussian",
-                  type: "view",
-                  color: "purple",
-                },
-              ],
-            },
-            {
-              t: "الخلايا الاحتمالية ودوال ReLU و Tanh (Stochastic, ReLU & Tanh)",
-              d: "الخلايا العشوائية P(x_j)، ودالة ReLU المباشرة max(0, x_j) لمكافحة Vanishing Gradient، ودالة Tanh بنطاق [-1, 1]",
-              icon: "🧮",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-relu-tanh-stochastic",
-                  type: "view",
-                  color: "purple",
-                },
-              ],
-            },
-            {
-              t: "جدول مقارنة واستخدامات دوال التنشيط (Activation Functions Comparison)",
-              d: "مقارنة النطاق، الممركزة حول الصفر، مشاكل الانحدار (Dying ReLU / Vanishing Gradient)، والتوصيات لكل طبقة",
-              icon: "⚖️",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-activation-comparison",
-                  type: "view",
-                  color: "purple",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          category:
-            "الجزء الثالث: المكونات الثمانية والعمارة والخرائط (Components, Architectures & Mappings)",
-          icon: "🏛️",
-          description:
-            "المكونات الرئيسية للشبكات العصبية، معماريات التغذية الأمامية والراجعة، وتداعي المتجهات",
-          links: [
-            {
-              t: "المكونات الثمانية للشبكات العصبية (Eight Components of NNs)",
-              d: "الخلايا، متجه حالة التنشيط X، دالة الإشارة، نمط الاتصال، قاعدة تجميع النشاط، قاعدة التنشيط، قاعدة التعلم، والبيئة",
-              icon: "🧩",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-eight-components",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "معمارية الشبكة: التغذية الأمامية والراجعة (Feedforward vs Feedback)",
-              d: "الشبكات الخالية من الحلقات (Feedforward) مقابل الشبكات ذات الحلقات الراجعة المتكررة (Feedback / Recurrent)",
-              icon: "🔁",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-architectures",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "خرائط التداعي المباشر والذاتي (Heteroassociators vs Autoassociators)",
-              d: "ربط نمطين من فضاءين مختلفين f: R^n -> R^p (Hetero) مقابل ربط النمط بنفسه في نفس الفضاء f: R^n -> R^n (Auto)",
-              icon: "🗺️",
-              actions: [
-                {
-                  label: "📖 استعراض المحتوى",
-                  url: "#lec1-mappings",
-                  type: "view",
-                  color: "green",
+                  label: "⭳ تحميل الأداة",
+                  url: "https://numpy.org/",
+                  type: "download",
+                  color: "blue",
                 },
               ],
             },

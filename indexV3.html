@@ -67,7 +67,7 @@ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();win
 --accent-hover:#d35400;--accent-active:#e67e22;--border:#f0d9b5;--shadow:rgba(230,126,34,.1);--card-border:#e67e22;--quiz-number-bg:#e67e22;
 --option-border:#e67e22;--option-text:#e67e22;--option-hover-bg:#fef5e7;--progress-bg:#fdebd0;--progress-fill-1:#e67e22;
 --progress-fill-2:#f39c12;--score-bg-1:#e67e22;--score-bg-2:#f39c12;--show-score-bg-1:#e67e22;--show-score-bg-2:#f39c12;
---show-score-shadow:rgba(230,126,34,.4);--status-bg:#e67e22;--theme-btn-active:rgba(255,255,255,.35);--badge-bg:#e67e22;
+--show-score-shadow:rgba(230,126,34,.4);--status-bg:#e67e22;--theme-btn-active:rgba(255,255,255,.35);--tab-active-bg:#b9500f;--badge-bg:#e67e22;
 --collapse-bg:#fef5e7;--collapse-border:#f0d9b5;--summary-bg:#fef5e7;--notif-bg:#fffdf7;--notif-unread-bg:#fef5e7;
 --scroll-btn-bg:#e67e22;--download-btn-bg:#d35400;--subtab-bg:#fef5e7;--subtab-active-bg:#27ae60;
 --score-circle-border:rgba(255,255,255,.3);--score-circle-bg:rgba(255,255,255,.1);--wrong-card-bg:#fdecea;--wrong-card-border:#e74c3c;
@@ -95,7 +95,7 @@ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();win
 [data-theme="afternoon"]{
 --bg-body:#f5f0e8;--bg-header:#6d4c41;--bg-content:#faf7f2;--bg-card:#efe9e0;--bg-card-hover:#e3dbd0;--bg-quiz-container:#efe9e0;
 --bg-quiz-card:#faf7f2;--text-primary:#3e2723;--text-secondary:#5d4037;--text-heading:#5d4037;--text-hint:#8d6e63;--accent:#8d6e63;
---accent-hover:#795548;--accent-active:#6d4c41;--border:#d7ccc8;--shadow:rgba(109,76,65,.1);--card-border:#8d6e63;--quiz-number-bg:#6d4c41;
+--accent-hover:#795548;--accent-active:#8d6e63;--tab-active-bg:#6d4c41;--border:#d7ccc8;--shadow:rgba(109,76,65,.1);--card-border:#8d6e63;--quiz-number-bg:#6d4c41;
 --option-border:#8d6e63;--option-text:#8d6e63;--option-hover-bg:#efe9e0;--progress-bg:#d7ccc8;--score-bg-1:#6d4c41;--score-bg-2:#8d6e63;
 --show-score-bg-1:#6d4c41;--show-score-bg-2:#8d6e63;--show-score-shadow:rgba(109,76,65,.4);--status-bg:#6d4c41;
 --theme-btn-active:rgba(255,255,255,.3);--badge-bg:#8d6e63;--collapse-bg:#efe9e0;--collapse-border:#d7ccc8;--summary-bg:#efe9e0;
@@ -202,6 +202,7 @@ header h1{margin:0 0 8px;font-size:24px}
 .tab-button{background:var(--accent-active);color:var(--text-white);border:none;padding:12px 25px;font-size:18px;cursor:pointer;border-radius:8px;transition:background .3s;font-family:inherit}
 .tab-button:hover{background:var(--accent-hover)}
 .tab-button.active{background:var(--accent)}
+.tab-button.active{background:var(--tab-active-bg,var(--accent))}
 
 .content-section{display:none;background:var(--bg-content);padding:30px;border-radius:10px;box-shadow:0 2px 5px var(--shadow);transition:background .6s}
 .content-section.active{display:block}

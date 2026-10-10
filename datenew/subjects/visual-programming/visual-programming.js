@@ -7,10 +7,10 @@ subjects.push({
   en: "Visual Programming",
   icon: "🎨",
   slug: "visual-programming",
-  lectures: [
-    /* { t:"المحاضرة 1 — العنوان", d:"وصف", id:"lec-01",
-         pdf:"datenew/subjects/visual-programming/lectures/lec-01.pdf", questions:[] } */
-  ],
+  // lectures: [
+  //   /* { t:"المحاضرة 1 — العنوان", d:"وصف", id:"lec-01",
+  //        pdf:"datenew/subjects/visual-programming/lectures/lec-01.pdf", questions:[] } */
+  // ],
   lectures: [
     {
       t: "المحاضرة الأولى",
@@ -316,13 +316,6 @@ subjects.push({
           ],
         },
       ],
-
-      // ═══════════════════════════════════════════════════════════════════
-      //  مادة: Visual Programming — البرمجة المرئية
-      //  المسار: datenew/visual-programming/visual-programming.js
-      //  المرجع: Visual Studio and C# Windows Forms
-      // ═══════════════════════════════════════════════════════════════════
-
       questions: [
         {
           q: "What is Visual Studio primarily described as in the lecture?",
@@ -1433,6 +1426,1372 @@ subjects.push({
         },
       ],
     },
+    {
+      t: "المحاضرة الثانية",
+      d: "Chapter 2 يغطي TextBox، النصوص وربطها، المتغيرات والنطاق، تحويل الأنواع، الاستثناءات، الحقول والثوابت، Focus و Tab Order.",
+      pdf: "Visual Programming/lectures/Chapter 2.pdf",
+      pdf2: "Visual Programming/Questions/Questions on each lecture/Chapter 2 - Questions - Visual Programming.pdf",
+      // فئات روابط منظمة - الفصل الثاني: معالجة البيانات وأدوات التحكم في C# WinForms (Processing Data)
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات باللغة العربية للتعامل مع أداة TextBox، تحويل النصوص إلى أرقام (Parse)، ومعالجة الاستثناءات (try-catch)",
+          links: [
+            {
+              t: "أب ديت (Update) - كورس C# WinForms وعمليات معالجة البيانات",
+              d: "شرح عملي بالعربي لقراءة المدخلات من الـ TextBox، العمليات الحسابية، وتنسيق الأرقام باستخدام ToString",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLkpG3YKjv6p5XwncCUIlPFSBNnN4mnhGA",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "أساسيات C# وتطبيقات سطح المكتب - التعامل مع المتغيرات والنطاق (Scope)",
+              d: "توضيح الفرق بين المتغيرات المحلية (Local Variables) والحقول (Fields) ومعالجة الأخطاء برمجياً",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=bfmFfD2RIcg",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "شروحات أكاديمية وعالمية لمفاهيم C# WinForms، الـ Parsing، ومعالجة الأخطاء (Exception Handling)",
+          links: [
+            {
+              t: "C# Windows Forms Application Tutorial - Parsing & Exception Handling",
+              d: "شرح مفصل لكيفية تحويل البيانات باستخدام int.Parse و double.Parse وحماية البرنامج باستخدام try-catch",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=LsK-xswGVEE",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "ProgrammingKnowledge - C# WinForms Controls (TextBox, GroupBox, Panel)",
+              d: "دليل شامل للتعامل مع خصائص العناصر، ترتيب التركيز (Tab Order)، ومفاتيح الاختصار (Access Keys)",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/user/programmingknowledge",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مرجعيات وتوثيقات رسمية لدوال C#، صياغة النصوص، وتنسيق الأرقام والعملات",
+          links: [
+            {
+              t: "Microsoft Learn - TextBox Control & Data Conversion (Parse & ToString)",
+              d: "التوثيق الرسمي من Microsoft لتعلم كيفية قراءة البيانات من الـ TextBox وتحويلها لأنواع البيانات المختلفة",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks - C# Exception Handling (try-catch) & Math Class",
+              d: "مقالات تفصيلية حول كيفية التعامل مع الأخطاء المفاجئة واستخدام الدوال الرياضية في لغة C#",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.geeksforgeeks.org/c-sharp-programming-language/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "بيئات التطوير والأدوات اللازمة لكتابة وتجربة تطبيقات C# WinForms",
+          links: [
+            {
+              t: "Microsoft Visual Studio - IDE for C# WinForms Development",
+              d: "بيئة التطوير الرسمية المتكاملة لتصميم الواجهات الرسومية، تعديل الخصائص، وكتابة أكواد C#",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://visualstudio.microsoft.com/",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "C# Fiddle - Online C# Compiler & Code Tester",
+              d: "منصة تفاعلية عبر الإنترنت لتجربة أكواد C# والعمليات الحسابية والـ Parsing بشكل سريع دون الحاجة للتثبيت",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح التفاعليات",
+                  url: "https://dotnetfiddle.net/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "What is the purpose of the TextBox control in a GUI application?",
+          options: [
+            "To display static text",
+            "To accept keyboard input from the user",
+            "To perform calculations",
+            "To close the application",
+          ],
+          correct: 1,
+          translation: "ما الغرض من عنصر التحكم TextBox في تطبيق واجهة رسومية؟",
+          explanation:
+            "TextBox يُستخدم لقبول إدخال لوحة المفاتيح من المستخدم. الخيارات الأخرى: عرض نص ثابت (Label)، إجراء حسابات (كود)، إغلاق التطبيق (زر).",
+          tags: ["TextBox", "GUI Controls"],
+          ref: "Chapter 2 - Page 1",
+        },
+        {
+          q: "Where is the TextBox tool located in the Toolbox?",
+          options: [
+            "In the Data group",
+            "In the Common Controls group",
+            "In the Containers group",
+            "In the Menus & Toolbars group",
+          ],
+          correct: 1,
+          translation: "أين توجد أداة TextBox في صندوق الأدوات؟",
+          explanation:
+            "توجد أداة TextBox في مجموعة Common Controls داخل الـ Toolbox.",
+          tags: ["TextBox", "Toolbox"],
+          ref: "Chapter 2 - Page 1",
+        },
+        {
+          q: "How is a TextBox control created on the form?",
+          options: [
+            "By single-clicking the tool",
+            "By double-clicking the tool",
+            "By dragging the tool",
+            "By right-clicking the tool",
+          ],
+          correct: 1,
+          translation: "كيف يتم إنشاء عنصر تحكم TextBox على النموذج؟",
+          explanation:
+            "يتم إنشاء TextBox بالنقر المزدوج على الأداة في صندوق الأدوات، أو بسحبها وإفلاتها.",
+          tags: ["TextBox", "Form Design"],
+          ref: "Chapter 2 - Page 1",
+        },
+        {
+          q: "In which property is the text typed into a TextBox control stored?",
+          options: [
+            "Name property",
+            "Value property",
+            "Text property",
+            "Input property",
+          ],
+          correct: 2,
+          translation: "في أي خاصية يُخزَّن النص المكتوب في TextBox؟",
+          explanation:
+            "النص المكتوب يُخزَّن في الخاصية Text. الخاصية Name لتسمية العنصر، Value غير موجودة، Input غير صحيحة.",
+          tags: ["TextBox", "Properties"],
+          ref: "Chapter 2 - Page 1",
+        },
+        {
+          q: "What data type is always returned when retrieving the contents of a TextBox's Text property?",
+          options: ["Integer", "Double", "String", "Boolean"],
+          correct: 2,
+          translation:
+            "ما نوع البيانات الذي يُرجَع دائمًا عند قراءة محتوى خاصية Text لـ TextBox؟",
+          explanation:
+            "خاصية Text تُرجع دائمًا قيمة من نوع String بغض النظر عن المحتوى.",
+          tags: ["TextBox", "Data Types"],
+          ref: "Chapter 2 - Page 2",
+        },
+        {
+          q: "In Example 1, what happens when the user clicks the readInputButton?",
+          options: [
+            "The application closes",
+            "The user's name is displayed in the outputLabel",
+            "The TextBox is cleared",
+            "A message box appears",
+          ],
+          correct: 1,
+          translation: "في المثال 1، ماذا يحدث عند النقر على readInputButton؟",
+          explanation:
+            "عند النقر على readInputButton، يتم عرض اسم المستخدم في outputLabel.",
+          tags: ["Events", "Buttons"],
+          ref: "Chapter 2 - Page 2",
+        },
+        {
+          q: "What statement is used in Example 1 to display the user's name in the outputLabel?",
+          options: [
+            'outputLabel.Text = "Hello";',
+            "outputLabel.Text = nameTextBox.Text;",
+            "nameTextBox.Text = outputLabel.Text;",
+            "MessageBox.Show(nameTextBox.Text);",
+          ],
+          correct: 1,
+          translation:
+            "ما العبارة المستخدمة في المثال 1 لعرض اسم المستخدم في outputLabel؟",
+          explanation:
+            "العبارة الصحيحة هي outputLabel.Text = nameTextBox.Text; حيث يتم نقل النص من TextBox إلى Label.",
+          tags: ["Assignment", "TextBox", "Label"],
+          ref: "Chapter 2 - Page 2",
+        },
+        {
+          q: "How do you clear the contents of a TextBox control?",
+          options: [
+            "Set Text property to null",
+            "Set Text property to 0",
+            'Set Text property to ""',
+            'Set Text property to "clear"',
+          ],
+          correct: 2,
+          translation: "كيف تمسح محتويات عنصر تحكم TextBox؟",
+          explanation: 'لمسح المحتوى، نضبط الخاصية Text على سلسلة فارغة "".',
+          tags: ["TextBox", "Clearing"],
+          ref: "Chapter 2 - Page 2",
+        },
+        {
+          q: "What is the statement to clear the nameTextBox control?",
+          options: [
+            "nameTextBox.Text = null;",
+            'nameTextBox.Text = "";',
+            "nameTextBox.Clear();",
+            "nameTextBox.Text = 0;",
+          ],
+          correct: 1,
+          translation: "ما العبارة لمسح عنصر التحكم nameTextBox؟",
+          explanation: 'العبارة الصحيحة هي nameTextBox.Text = ""; لمسح النص.',
+          tags: ["TextBox", "Clearing"],
+          ref: "Chapter 2 - Page 3",
+        },
+        {
+          q: "In Example 1, what happens when the user clicks the exitButton?",
+          options: [
+            "The name is displayed",
+            "The application is closed",
+            "The TextBox is cleared",
+            "A calculation is performed",
+          ],
+          correct: 1,
+          translation: "في المثال 1، ماذا يحدث عند النقر على exitButton؟",
+          explanation: "زر exitButton يُغلق التطبيق.",
+          tags: ["Buttons", "Exit"],
+          ref: "Chapter 2 - Page 3",
+        },
+        {
+          q: "What operation appends one string to the end of another?",
+          options: [
+            "Subtraction",
+            "Concatenation",
+            "Division",
+            "Multiplication",
+          ],
+          correct: 1,
+          translation: "ما العملية التي تضيف سلسلة إلى نهاية سلسلة أخرى؟",
+          explanation:
+            "عملية Concatenation (الربط) تُستخدم لإضافة سلسلة إلى نهاية أخرى.",
+          tags: ["Strings", "Concatenation"],
+          ref: "Chapter 2 - Page 3",
+        },
+        {
+          q: "Which operator is used in C# to concatenate strings?",
+          options: ["-", "*", "/", "+"],
+          correct: 3,
+          translation: "ما المعامل المستخدم في C# لربط السلاسل النصية؟",
+          explanation: "المعامل + يُستخدم لربط السلاسل النصية في C#.",
+          tags: ["Strings", "Operators"],
+          ref: "Chapter 2 - Page 3",
+        },
+        {
+          q: 'What is the result of the following code: string message = "Hello "+ "world";',
+          options: ['"Helloworld"', '"Hello world"', '"Hello+world"', "Error"],
+          correct: 1,
+          translation: 'ما نتيجة الكود: string message = "Hello "+ "world";',
+          explanation: 'النتيجة "Hello world" بسبب وجود مسافة بعد Hello.',
+          tags: ["Strings", "Concatenation"],
+          ref: "Chapter 2 - Page 3",
+        },
+        {
+          q: "In the string concatenation example, what is displayed in the message box?",
+          options: ["Hello", "world", "Hello world", "Hello + world"],
+          correct: 2,
+          translation: "في مثال ربط السلاسل، ماذا يُعرض في صندوق الرسالة؟",
+          explanation: 'يُعرض "Hello world" كنتيجة لربط "Hello " مع "world".',
+          tags: ["Strings", "MessageBox"],
+          ref: "Chapter 2 - Page 4",
+        },
+        {
+          q: "What does the + operator do when both operands are strings?",
+          options: [
+            "Adds them numerically",
+            "Concatenates them",
+            "Subtracts them",
+            "Multiplies them",
+          ],
+          correct: 1,
+          translation: "ماذا يفعل المعامل + عندما يكون كلا المعاملين نصيين؟",
+          explanation:
+            "عندما يكون كلا المعاملين string، يقوم المعامل + بعملية الربط (Concatenation).",
+          tags: ["Strings", "Operators"],
+          ref: "Chapter 2 - Page 4",
+        },
+        {
+          q: "In Example 2, how many TextBoxes are there for entering names?",
+          options: ["1", "2", "3", "4"],
+          correct: 1,
+          translation: "في المثال 2، كم عدد عناصر TextBox لإدخال الأسماء؟",
+          explanation:
+            "يوجد 2 TextBox في المثال 2: واحد للاسم الأول وواحد لاسم العائلة.",
+          tags: ["TextBox", "Examples"],
+          ref: "Chapter 2 - Page 4",
+        },
+        {
+          q: "What is concatenated in Example 2 to form the full name?",
+          options: [
+            "First name and last name without space",
+            "First name, space, last name",
+            "Last name, space, first name",
+            "Only first name",
+          ],
+          correct: 1,
+          translation: "ما الذي يتم ربطه في المثال 2 لتكوين الاسم الكامل؟",
+          explanation:
+            "يتم ربط الاسم الأول + مسافة + اسم العائلة لتكوين الاسم الكامل.",
+          tags: ["Strings", "Concatenation"],
+          ref: "Chapter 2 - Page 4",
+        },
+        {
+          q: "What variable is used in Example 2 to store the concatenated full name?",
+          options: ["name", "fullName", "firstName", "lastName"],
+          correct: 1,
+          translation:
+            "ما المتغير المستخدم في المثال 2 لتخزين الاسم الكامل المركّب؟",
+          explanation: "المتغير fullName يُستخدم لتخزين الاسم الكامل.",
+          tags: ["Variables", "Examples"],
+          ref: "Chapter 2 - Page 4",
+        },
+        {
+          q: "In Example 2, if first name is Ahmed and last name is Atif, what is displayed?",
+          options: ["AhmedAtif", "Atif Ahmed", "Ahmed Atif", "AhmedAtif"],
+          correct: 2,
+          translation:
+            "في المثال 2، إذا كان الاسم الأول Ahmed واسم العائلة Atif، ماذا يُعرض؟",
+          explanation:
+            'يُعرض "Ahmed Atif" (مع مسافة بين الاسم الأول واسم العائلة).',
+          tags: ["Strings", "Concatenation"],
+          ref: "Chapter 2 - Page 5",
+        },
+        {
+          q: "What button in Example 2 displays the full name?",
+          options: [
+            "exitButton",
+            "showNameButton",
+            "readInputButton",
+            "clearButton",
+          ],
+          correct: 1,
+          translation: "ما الزر في المثال 2 الذي يعرض الاسم الكامل؟",
+          explanation: "الزر showNameButton هو الذي يعرض الاسم الكامل.",
+          tags: ["Buttons", "Examples"],
+          ref: "Chapter 2 - Page 5",
+        },
+        {
+          q: "What are variables declared inside a method called?",
+          options: [
+            "Global variables",
+            "Local variables",
+            "Constant variables",
+            "Field variables",
+          ],
+          correct: 1,
+          translation: "ماذا تسمى المتغيرات المعرّفة داخل دالة؟",
+          explanation:
+            "المتغيرات المعرّفة داخل دالة تسمى Local variables (متغيرات محلية).",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 5",
+        },
+        {
+          q: "Can a local variable be accessed from another method?",
+          options: ["Yes", "No", "Only if public", "Only if static"],
+          correct: 1,
+          translation: "هل يمكن الوصول إلى متغير محلي من دالة أخرى؟",
+          explanation:
+            "لا، المتغير المحلي يمكن الوصول إليه فقط داخل الدالة التي عُرّف فيها.",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 5",
+        },
+        {
+          q: "What term describes the part of a program where a variable can be accessed?",
+          options: ["Lifetime", "Scope", "Type", "Value"],
+          correct: 1,
+          translation:
+            "ما المصطلح الذي يصف الجزء من البرنامج الذي يمكن الوصول فيه إلى المتغير؟",
+          explanation:
+            "Scope (النطاق) يصف الجزء من البرنامج الذي يمكن الوصول فيه إلى المتغير.",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 5",
+        },
+        {
+          q: "Where does a local variable's scope begin?",
+          options: [
+            "At the end of the method",
+            "At the beginning of the program",
+            "At the variable's declaration",
+            "At the class level",
+          ],
+          correct: 2,
+          translation: "أين يبدأ نطاق المتغير المحلي؟",
+          explanation: "يبدأ نطاق المتغير المحلي عند تعريف المتغير.",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 5",
+        },
+        {
+          q: "Where does a local variable's scope end?",
+          options: [
+            "At the variable's declaration",
+            "At the end of the method where declared",
+            "At the end of the program",
+            "At the beginning of the method",
+          ],
+          correct: 1,
+          translation: "أين ينتهي نطاق المتغير المحلي؟",
+          explanation:
+            "ينتهي نطاق المتغير المحلي عند نهاية الدالة التي عُرّف فيها.",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 6",
+        },
+        {
+          q: "Can multiple variables with the same name be declared in the same method?",
+          options: [
+            "Yes",
+            "No",
+            "Only if different types",
+            "Only if constants",
+          ],
+          correct: 1,
+          translation: "هل يمكن تعريف عدة متغيرات بنفس الاسم في نفس الدالة؟",
+          explanation:
+            "لا، لا يمكن تعريف متغيرين بنفس الاسم في نفس النطاق (نفس الدالة).",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 6",
+        },
+        {
+          q: "Can variables with the same name be declared in different methods?",
+          options: ["Yes", "No", "Only if local", "Only if fields"],
+          correct: 0,
+          translation: "هل يمكن تعريف متغيرات بنفس الاسم في دوال مختلفة؟",
+          explanation: "نعم، يمكن ذلك لأن كل دالة لها نطاقها الخاص.",
+          tags: ["Variables", "Scope"],
+          ref: "Chapter 2 - Page 6",
+        },
+        {
+          q: "What happens to a variable's value when a different value is assigned?",
+          options: [
+            "It remains the same",
+            "It is appended",
+            "It is replaced",
+            "It causes an error",
+          ],
+          correct: 2,
+          translation: "ماذا يحدث لقيمة المتغير عند إسناد قيمة مختلفة؟",
+          explanation: "عند إسناد قيمة جديدة، تُستبدل القيمة القديمة بالجديدة.",
+          tags: ["Variables", "Assignment"],
+          ref: "Chapter 2 - Page 6",
+        },
+        {
+          q: "In the duplicate variable names example, what is the final value displayed?",
+          options: [
+            "Large Medium-Roast Coffee",
+            "Chocolate Truffle",
+            "Medium-Roast Coffee",
+            "Chocolate",
+          ],
+          correct: 1,
+          translation:
+            "في مثال أسماء المتغيرات المكررة، ما القيمة النهائية المعروضة؟",
+          explanation: "القيمة النهائية المعروضة هي Chocolate Truffle.",
+          tags: ["Variables", "Examples"],
+          ref: "Chapter 2 - Page 6",
+        },
+        {
+          q: "Why does the code employeeID = 125; cause an error for a string variable?",
+          options: [
+            "125 is too large",
+            "It is a nonstring value",
+            "String can't hold numbers",
+            "Missing quotes",
+          ],
+          correct: 1,
+          translation: "لماذا يسبب الكود employeeID = 125; خطأ لمتغير نصي؟",
+          explanation:
+            "لأن 125 قيمة رقمية (nonstring) ولا يمكن إسنادها مباشرة لمتغير من نوع string.",
+          tags: ["Data Types", "Strings"],
+          ref: "Chapter 2 - Page 7",
+        },
+        {
+          q: "How can you store 125 in a string variable?",
+          options: [
+            "employeeID = 125;",
+            'employeeID = "125";',
+            "employeeID = int.Parse(125);",
+            "employeeID = 125.ToString();",
+          ],
+          correct: 1,
+          translation: "كيف يمكن تخزين 125 في متغير نصي؟",
+          explanation:
+            'لتخزين 125 كسلسلة نصية، نضعها بين علامتي تنصيص: employeeID = "125";',
+          tags: ["Data Types", "Strings"],
+          ref: "Chapter 2 - Page 7",
+        },
+        {
+          q: "In Example 3, what information is entered by the user?",
+          options: [
+            "Name and address",
+            "Birthdate details",
+            "Test scores",
+            "Miles and gallons",
+          ],
+          correct: 1,
+          translation: "في المثال 3، ما المعلومات التي يدخلها المستخدم؟",
+          explanation:
+            "المستخدم يُدخل تفاصيل تاريخ الميلاد (Birthdate details).",
+          tags: ["Examples", "Input"],
+          ref: "Chapter 2 - Page 7",
+        },
+        {
+          q: "How is the date string formed in Example 3?",
+          options: [
+            "Concatenating with no separators",
+            "Concatenating day of week, month, day, year with commas and spaces",
+            "Using addition",
+            "Parsing numbers",
+          ],
+          correct: 1,
+          translation: "كيف تُكوَّن سلسلة التاريخ في المثال 3؟",
+          explanation:
+            "تُكوَّن بربط يوم الأسبوع، الشهر، اليوم، السنة مع فواصل ومسافات.",
+          tags: ["Strings", "Concatenation"],
+          ref: "Chapter 2 - Page 7",
+        },
+        {
+          q: "What button clears the TextBoxes in Example 3?",
+          options: ["Show Date", "Clear", "Exit", "Calculate"],
+          correct: 1,
+          translation: "ما الزر الذي يمسح عناصر TextBox في المثال 3؟",
+          explanation: "الزر Clear هو الذي يمسح محتويات TextBoxes.",
+          tags: ["Buttons", "Examples"],
+          ref: "Chapter 2 - Page 7",
+        },
+        {
+          q: "If day of week is Friday, month June, day 1, year 1990, what is displayed?",
+          options: [
+            "FridayJune11990",
+            "Friday, June 1, 1990",
+            "1 June Friday 1990",
+            "1990, June 1, Friday",
+          ],
+          correct: 1,
+          translation:
+            "إذا كان يوم الأسبوع Friday والشهر June واليوم 1 والسنة 1990، ماذا يُعرض؟",
+          explanation: 'يُعرض "Friday, June 1, 1990" بالتنسيق الصحيح.',
+          tags: ["Strings", "Formatting"],
+          ref: "Chapter 2 - Page 8",
+        },
+        {
+          q: "How do you declare multiple string variables in one statement?",
+          options: [
+            "string lastName; firstname; middleName;",
+            "string lastname, firstname, middleName;",
+            "string lastname firstname middleName;",
+            "string (lastName, firstname, middleName);",
+          ],
+          correct: 1,
+          translation: "كيف تعرّف عدة متغيرات نصية في عبارة واحدة؟",
+          explanation:
+            "الصيغة الصحيحة: string lastname, firstname, middleName;",
+          tags: ["Variables", "Declaration"],
+          ref: "Chapter 2 - Page 8",
+        },
+        {
+          q: "Can you initialize multiple variables in one declaration statement?",
+          options: [
+            "No",
+            'Yes, like string a = "x", b = "y";',
+            "Only if same value",
+            "Only for ints",
+          ],
+          correct: 1,
+          translation: "هل يمكن تهيئة عدة متغيرات في عبارة تعريف واحدة؟",
+          explanation: 'نعم، يمكن مثل: string a = "x", b = "y";',
+          tags: ["Variables", "Initialization"],
+          ref: "Chapter 2 - Page 8",
+        },
+        {
+          q: "Can you assign a double value to an int variable without casting?",
+          options: ["Yes", "No", "Only if small", "Only if positive"],
+          correct: 1,
+          translation:
+            "هل يمكن إسناد قيمة double إلى متغير int دون تحويل صريح؟",
+          explanation:
+            "لا، لأن ذلك قد يؤدي إلى فقدان البيانات، فيجب استخدام cast.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 8",
+        },
+        {
+          q: "Can you assign an int to a double variable?",
+          options: ["No", "Yes, implicitly", "Only with cast", "Only if zero"],
+          correct: 1,
+          translation: "هل يمكن إسناد int إلى متغير double؟",
+          explanation:
+            "نعم، يتم التحويل ضمنيًا (implicitly) لأن int أصغر من double.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 8",
+        },
+        {
+          q: "Why can't you assign a decimal to a double variable?",
+          options: [
+            "Decimal has greater precision",
+            "Double is larger",
+            "Types are incompatible",
+            "Decimal is integer",
+          ],
+          correct: 0,
+          translation: "لماذا لا يمكن إسناد decimal إلى متغير double؟",
+          explanation:
+            "لأن decimal له دقة أعلى من double، والتحويل قد يسبب فقدان دقة.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 9",
+        },
+        {
+          q: "What is used to explicitly convert numeric types even with data loss?",
+          options: [
+            "Parse method",
+            "ToString method",
+            "Cast operator",
+            "+ operator",
+          ],
+          correct: 2,
+          translation:
+            "ما الذي يُستخدم لتحويل الأنواع الرقمية صراحةً حتى مع فقدان البيانات؟",
+          explanation: "يُستخدم Cast operator (عامل التحويل) مثل (int)3.9.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 9",
+        },
+        {
+          q: "What is the syntax for a cast operator?",
+          options: [
+            "(type)value",
+            "type(value)",
+            "value as type",
+            "Convert.ToType(value)",
+          ],
+          correct: 0,
+          translation: "ما صيغة عامل التحويل (cast)؟",
+          explanation: "الصيغة الصحيحة هي (type)value، مثال: (int)3.9.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 9",
+        },
+        {
+          q: "What is the result of int whole = (int)3.9;",
+          options: ["3.9", "4", "3", "Error"],
+          correct: 2,
+          translation: "ما نتيجة int whole = (int)3.9;؟",
+          explanation:
+            "النتيجة 3 لأن عملية cast تقوم بقطع الجزء العشري وليس التقريب.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 9",
+        },
+        {
+          q: "In mixed expressions, what happens when int and double are operated?",
+          options: [
+            "Error",
+            "Int converted to double, result double",
+            "Double converted to int, result int",
+            "Both stay same",
+          ],
+          correct: 1,
+          translation:
+            "في التعبيرات المختلطة، ماذا يحدث عند العمل على int و double؟",
+          explanation:
+            "يتم تحويل int إلى double تلقائيًا، وتكون النتيجة من نوع double.",
+          tags: ["Data Types", "Expressions"],
+          ref: "Chapter 2 - Page 9",
+        },
+        {
+          q: "Are double and decimal mixed expressions allowed without cast?",
+          options: ["Yes", "No", "Only addition", "Only multiplication"],
+          correct: 1,
+          translation:
+            "هل يُسمح بالتعبيرات المختلطة بين double و decimal دون تحويل؟",
+          explanation: "لا، لا يُسمح بخلط double و decimal دون cast صريح.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 10",
+        },
+        {
+          q: "How to fix double * decimal?",
+          options: [
+            "Cast decimal to double",
+            "Cast one to the other",
+            "Use Parse",
+            "Impossible",
+          ],
+          correct: 1,
+          translation: "كيف تُصلح double * decimal؟",
+          explanation: "يجب تحويل أحدهما إلى نوع الآخر باستخدام cast.",
+          tags: ["Data Types", "Casting"],
+          ref: "Chapter 2 - Page 10",
+        },
+        {
+          q: "Data entered in TextBox is stored as what type in Text property?",
+          options: [
+            "The type entered",
+            "Always string",
+            "Int if number",
+            "Double if decimal",
+          ],
+          correct: 1,
+          translation:
+            "البيانات المُدخلة في TextBox تُخزَّن كأي نوع في الخاصية Text؟",
+          explanation: "تُخزَّن دائمًا من نوع string بغض النظر عن المحتوى.",
+          tags: ["TextBox", "Data Types"],
+          ref: "Chapter 2 - Page 10",
+        },
+        {
+          q: "To store TextBox input as number, what must be done?",
+          options: [
+            "Direct assignment",
+            "Use cast",
+            "Use Parse method",
+            "Use ToString",
+          ],
+          correct: 2,
+          translation: "لتخزين إدخال TextBox كرقم، ماذا يجب أن تفعل؟",
+          explanation: "يجب استخدام طريقة Parse مثل int.Parse أو double.Parse.",
+          tags: ["TextBox", "Parsing"],
+          ref: "Chapter 2 - Page 10",
+        },
+        {
+          q: "Which method converts string to int?",
+          options: ["int.ToInt", "int.Parse", "Parse.int", "String.ToInt"],
+          correct: 1,
+          translation: "أي طريقة تحوّل string إلى int؟",
+          explanation: "الطريقة الصحيحة هي int.Parse.",
+          tags: ["Parsing", "Data Types"],
+          ref: "Chapter 2 - Page 10",
+        },
+        {
+          q: "To display a numeric variable in a Label, what must be done?",
+          options: [
+            "Direct assignment",
+            "Use Parse",
+            "Convert to string with ToString",
+            "Use cast",
+          ],
+          correct: 2,
+          translation: "لعرض متغير رقمي في Label، ماذا يجب أن تفعل؟",
+          explanation: "يجب تحويل الرقم إلى string باستخدام ToString().",
+          tags: ["Label", "ToString"],
+          ref: "Chapter 2 - Page 11",
+        },
+        {
+          q: "What does variable.ToString() do?",
+          options: [
+            "Converts to int",
+            "Converts to string",
+            "Formats number",
+            "Parses string",
+          ],
+          correct: 1,
+          translation: "ماذا تفعل variable.ToString()؟",
+          explanation: "تحوّل قيمة المتغير إلى سلسلة نصية (string).",
+          tags: ["ToString", "Data Types"],
+          ref: "Chapter 2 - Page 11",
+        },
+        {
+          q: "If one operand is string and other number in + operation, what happens?",
+          options: [
+            "Error",
+            "Number to string, concatenate",
+            "String to number, add",
+            "Depends on order",
+          ],
+          correct: 1,
+          translation:
+            "إذا كان أحد المعاملين string والآخر رقم في عملية +، ماذا يحدث؟",
+          explanation:
+            "يتم تحويل الرقم إلى string ثم يتم الربط (concatenation).",
+          tags: ["Strings", "Operators"],
+          ref: "Chapter 2 - Page 11",
+        },
+        {
+          q: "In Example 4, what is calculated?",
+          options: ["Test average", "Sale price", "MPG", "Birth date"],
+          correct: 2,
+          translation: "في المثال 4، ماذا يُحسب؟",
+          explanation: "يُحسب MPG (ميل لكل غالون).",
+          tags: ["Examples", "Calculations"],
+          ref: "Chapter 2 - Page 11",
+        },
+        {
+          q: "What types are used for miles and gallons in Example 4?",
+          options: ["Int", "String", "Double", "Decimal"],
+          correct: 2,
+          translation:
+            "ما الأنواع المستخدمة للمسافات والأميال والغالونات في المثال 4؟",
+          explanation: "يتم استخدام النوع double للتعامل مع الأعداد العشرية.",
+          tags: ["Data Types", "Examples"],
+          ref: "Chapter 2 - Page 11",
+        },
+        {
+          q: "How is MPG displayed in Example 4?",
+          options: ["As double", "With ToString()", "With Parse", "Directly"],
+          correct: 1,
+          translation: "كيف تُعرض MPG في المثال 4؟",
+          explanation: "تُعرض باستخدام ToString() لتحويل الرقم إلى نص.",
+          tags: ["ToString", "Examples"],
+          ref: "Chapter 2 - Page 12",
+        },
+        {
+          q: "What format string for currency?",
+          options: ['"n"', '"c"', '"p"', '"e"'],
+          correct: 1,
+          translation: "ما سلسلة التنسيق للعملة؟",
+          explanation: 'التنسيق "c" يُستخدم لعرض العملة (Currency).',
+          tags: ["Formatting", "Currency"],
+          ref: "Chapter 2 - Page 12",
+        },
+        {
+          q: 'What does "n" format do?',
+          options: ["Currency", "Number with commas", "Percent", "Exponential"],
+          correct: 1,
+          translation: 'ماذا يفعل التنسيق "n"؟',
+          explanation: 'التنسيق "n" يعرض رقمًا مع فواصل الآلاف.',
+          tags: ["Formatting", "Numbers"],
+          ref: "Chapter 2 - Page 12",
+        },
+        {
+          q: "How many decimal places by default in currency format?",
+          options: ["0", "1", "2", "3"],
+          correct: 2,
+          translation: "كم عدد المنازل العشرية افتراضيًا في تنسيق العملة؟",
+          explanation: 'تنسيق العملة "c" يعرض منزلتين عشريتين افتراضيًا.',
+          tags: ["Formatting", "Currency"],
+          ref: "Chapter 2 - Page 12",
+        },
+        {
+          q: "In Example 5, what is calculated?",
+          options: [
+            "MPG",
+            "Average score",
+            "Sale price after discount",
+            "Full name",
+          ],
+          correct: 2,
+          translation: "في المثال 5، ماذا يُحسب؟",
+          explanation: "يُحسب سعر البيع بعد الخصم (Sale price after discount).",
+          tags: ["Examples", "Calculations"],
+          ref: "Chapter 2 - Page 12",
+        },
+        {
+          q: "How is discount percentage converted to decimal?",
+          options: ["Multiply by 100", "Divide by 100", "Parse", "Cast"],
+          correct: 1,
+          translation: "كيف تُحوَّل نسبة الخصم إلى decimal؟",
+          explanation: "تُقسم النسبة على 100 لتحويلها إلى كسر عشري.",
+          tags: ["Calculations", "Discount"],
+          ref: "Chapter 2 - Page 13",
+        },
+        {
+          q: "How is sale price displayed in Example 5?",
+          options: [
+            'ToString("n")',
+            'ToString("c")',
+            'ToString("p")',
+            "Direct",
+          ],
+          correct: 1,
+          translation: "كيف يُعرض سعر البيع في المثال 5؟",
+          explanation: 'يُعرض باستخدام ToString("c") لتنسيق العملة.',
+          tags: ["Formatting", "Currency"],
+          ref: "Chapter 2 - Page 13",
+        },
+        {
+          q: "What is an exception?",
+          options: [
+            "Normal operation",
+            "Unexpected error",
+            "User input",
+            "Variable declaration",
+          ],
+          correct: 1,
+          translation: "ما هو الاستثناء (exception)؟",
+          explanation: "الاستثناء هو خطأ غير متوقع يحدث أثناء تنفيذ البرنامج.",
+          tags: ["Exceptions", "Errors"],
+          ref: "Chapter 2 - Page 13",
+        },
+        {
+          q: "What statement handles exceptions?",
+          options: ["if-else", "try-catch", "for loop", "while"],
+          correct: 1,
+          translation: "ما العبارة التي تتعامل مع الاستثناءات؟",
+          explanation: "تستخدم عبارة try-catch لمعالجة الاستثناءات.",
+          tags: ["Exceptions", "try-catch"],
+          ref: "Chapter 2 - Page 13",
+        },
+        {
+          q: "In try-catch, where is potentially error-prone code placed?",
+          options: ["In catch", "In try", "Outside", "In finally"],
+          correct: 1,
+          translation: "في try-catch، أين يوضع الكود المعرّض للخطأ؟",
+          explanation: "يوضع الكود المعرّض للخطأ داخل كتلة try.",
+          tags: ["Exceptions", "try-catch"],
+          ref: "Chapter 2 - Page 13",
+        },
+        {
+          q: "What happens if exception in try block?",
+          options: [
+            "Program crashes",
+            "Execution jumps to catch",
+            "Continues normally",
+            "Skips try",
+          ],
+          correct: 1,
+          translation: "ماذا يحدث إذا حدث استثناء في كتلة try؟",
+          explanation: "ينتقل التنفيذ مباشرة إلى كتلة catch.",
+          tags: ["Exceptions", "try-catch"],
+          ref: "Chapter 2 - Page 14",
+        },
+        {
+          q: "In Example 6, what is handled?",
+          options: [
+            "Division by zero",
+            "Invalid input for Parse",
+            "File not found",
+            "Overflow",
+          ],
+          correct: 1,
+          translation: "في المثال 6، ما الذي تتم معالجته؟",
+          explanation: "يتم التعامل مع إدخال غير صالح لعملية Parse.",
+          tags: ["Exceptions", "Parsing"],
+          ref: "Chapter 2 - Page 14",
+        },
+        {
+          q: "What are fields?",
+          options: [
+            "Local variables",
+            "Variables declared in class but not in methods",
+            "Constants",
+            "Parameters",
+          ],
+          correct: 1,
+          translation: "ما هي الحقول (fields)؟",
+          explanation:
+            "الحقول هي متغيرات تُعرَّف داخل الفئة (class) ولكن خارج الدوال.",
+          tags: ["Fields", "Variables"],
+          ref: "Chapter 2 - Page 14",
+        },
+        {
+          q: "What is the scope of a field?",
+          options: ["Method", "Entire class", "Block", "Program"],
+          correct: 1,
+          translation: "ما نطاق الحقل (field)؟",
+          explanation: "نطاق الحقل هو الفئة بأكملها (entire class).",
+          tags: ["Fields", "Scope"],
+          ref: "Chapter 2 - Page 14",
+        },
+        {
+          q: "What access modifier for fields by default?",
+          options: ["Public", "Private", "Protected", "Internal"],
+          correct: 1,
+          translation: "ما معدّل الوصول الافتراضي للحقول؟",
+          explanation: "الوضع الافتراضي للحقول هو private.",
+          tags: ["Fields", "Access Modifiers"],
+          ref: "Chapter 2 - Page 14",
+        },
+        {
+          q: "In Example 7, where is the name variable declared?",
+          options: ["In method", "As local", "As field", "As constant"],
+          correct: 2,
+          translation: "في المثال 7، أين يتم تعريف المتغير name؟",
+          explanation: "يتم تعريفه كحقل (field) داخل الفئة.",
+          tags: ["Fields", "Examples"],
+          ref: "Chapter 2 - Page 15",
+        },
+        {
+          q: "What is a constant field?",
+          options: [
+            "Can be changed",
+            "Cannot be changed after initialization",
+            "Local constant",
+            "Global variable",
+          ],
+          correct: 1,
+          translation: "ما هو الحقل الثابت (constant field)؟",
+          explanation: "الحقل الثابت لا يمكن تغيير قيمته بعد التهيئة الأولية.",
+          tags: ["Constants", "Fields"],
+          ref: "Chapter 2 - Page 15",
+        },
+        {
+          q: "How to declare constant field?",
+          options: [
+            "const type name = value;",
+            "constant type name = value;",
+            "type name = const value;",
+            "type const name = value;",
+          ],
+          correct: 0,
+          translation: "كيف تعرّف حقلًا ثابتًا؟",
+          explanation: "الصيغة الصحيحة: const type name = value;",
+          tags: ["Constants", "Declaration"],
+          ref: "Chapter 2 - Page 15",
+        },
+        {
+          q: "In Example 8, what is used for the banknote values?",
+          options: ["Local variables", "Fields", "Constants", "Parameters"],
+          correct: 2,
+          translation: "في المثال 8، ما المستخدم لقيم الأوراق النقدية؟",
+          explanation: "تُستخدم الثوابت (Constants) لقيم الأوراق النقدية.",
+          tags: ["Constants", "Examples"],
+          ref: "Chapter 2 - Page 15",
+        },
+        {
+          q: "What does Math.Abs do?",
+          options: ["Square root", "Absolute value", "Power", "Max"],
+          correct: 1,
+          translation: "ماذا يفعل Math.Abs؟",
+          explanation: "تُرجع الدالة Math.Abs القيمة المطلقة (Absolute value).",
+          tags: ["Math", "Functions"],
+          ref: "Chapter 2 - Page 15",
+        },
+        {
+          q: "What does Math.Pow(x, y) return?",
+          options: ["x + y", "x ^ y", "y ^ x", "x * y"],
+          correct: 1,
+          translation: "ماذا يُرجع Math.Pow(x, y)؟",
+          explanation:
+            "تُرجع الدالة Math.Pow(x, y) قيمة x مرفوعة للقوة y (x ^ y).",
+          tags: ["Math", "Functions"],
+          ref: "Chapter 2 - Page 16",
+        },
+        {
+          q: "When does a control have focus?",
+          options: [
+            "When clicked",
+            "Receives keyboard input",
+            "When hovered",
+            "Always",
+          ],
+          correct: 1,
+          translation: "متى يكون لعنصر التحكم focus؟",
+          explanation:
+            "يكون لعنصر التحكم focus عندما يستقبل إدخال لوحة المفاتيح.",
+          tags: ["Focus", "Controls"],
+          ref: "Chapter 2 - Page 16",
+        },
+        {
+          q: "How to tell which control has focus?",
+          options: [
+            "Color change",
+            "Blinking cursor in TextBox or dotted line on button",
+            "Size change",
+            "Invisible",
+          ],
+          correct: 1,
+          translation: "كيف تعرف أي عنصر تحكم لديه focus؟",
+          explanation: "يظهر مؤشر وامض في TextBox أو خط منقّط على الزر.",
+          tags: ["Focus", "Controls"],
+          ref: "Chapter 2 - Page 16",
+        },
+        {
+          q: "What changes focus?",
+          options: ["Enter key", "Tab key", "Space key", "Alt key"],
+          correct: 1,
+          translation: "ما الذي يغيّر focus؟",
+          explanation: "مفتاح Tab يُستخدم لتغيير focus بين عناصر التحكم.",
+          tags: ["Focus", "Keyboard"],
+          ref: "Chapter 2 - Page 16",
+        },
+        {
+          q: "What property controls tab order?",
+          options: ["FocusIndex", "TabOrder", "TabIndex", "OrderTab"],
+          correct: 2,
+          translation: "ما الخاصية التي تتحكم في ترتيب Tab؟",
+          explanation: "الخاصية TabIndex هي التي تتحكم في ترتيب التنقل بـ Tab.",
+          tags: ["Tab Order", "Properties"],
+          ref: "Chapter 2 - Page 16",
+        },
+        {
+          q: "Lowest TabIndex is?",
+          options: [
+            "Last in order",
+            "First in order",
+            "Irrelevant",
+            "Negative",
+          ],
+          correct: 1,
+          translation: "أقل قيمة TabIndex تكون؟",
+          explanation:
+            "أقل قيمة TabIndex تعني أن العنصر هو الأول في ترتيب Tab.",
+          tags: ["Tab Order", "Properties"],
+          ref: "Chapter 2 - Page 17",
+        },
+        {
+          q: "How to set tab order visually?",
+          options: [
+            "View > Tab Order",
+            "Edit > Tab",
+            "Tools > Order",
+            "Format > Tab",
+          ],
+          correct: 0,
+          translation: "كيف تضبط ترتيب Tab بصريًا؟",
+          explanation: "من قائمة View > Tab Order يمكن ضبط ترتيب Tab بصريًا.",
+          tags: ["Tab Order", "IDE"],
+          ref: "Chapter 2 - Page 17",
+        },
+        {
+          q: "What method moves focus?",
+          options: ["SetFocus()", "Focus()", "GetFocus()", "MoveFocus()"],
+          correct: 1,
+          translation: "ما الدالة التي تنقل focus؟",
+          explanation: "الدالة Focus() هي التي تنقل focus إلى عنصر التحكم.",
+          tags: ["Focus", "Methods"],
+          ref: "Chapter 2 - Page 17",
+        },
+        {
+          q: "What is access key?",
+          options: ["Key alone", "Alt + key", "Ctrl + key", "Shift + key"],
+          correct: 1,
+          translation: "ما هو access key؟",
+          explanation:
+            "access key هو مفتاح اختصار يتم استخدامه مع Alt لتنشيط عنصر تحكم.",
+          tags: ["Access Keys", "Keyboard"],
+          ref: "Chapter 2 - Page 17",
+        },
+        {
+          q: "How to assign access key to button?",
+          options: [
+            "& in Text before letter",
+            "* before letter",
+            "# before letter",
+            "@ before letter",
+          ],
+          correct: 0,
+          translation: "كيف تعيّن access key لزر؟",
+          explanation: "ضع & قبل الحرف في خاصية Text للزر.",
+          tags: ["Access Keys", "Buttons"],
+          ref: "Chapter 2 - Page 17",
+        },
+        {
+          q: "To display & on button?",
+          options: ["&", "&&", "\\&", "*&"],
+          correct: 1,
+          translation: "لعرض & على الزر؟",
+          explanation: "لاستعراض الرمز & نفسه، استخدم && في خاصية Text.",
+          tags: ["Access Keys", "Buttons"],
+          ref: "Chapter 2 - Page 18",
+        },
+        {
+          q: "What property changes background color?",
+          options: ["ForeColor", "BackColor", "ColorBack", "Background"],
+          correct: 1,
+          translation: "ما الخاصية التي تغيّر لون الخلفية؟",
+          explanation: "الخاصية BackColor تغيّر لون الخلفية.",
+          tags: ["Colors", "Properties"],
+          ref: "Chapter 2 - Page 18",
+        },
+        {
+          q: "What property changes text color?",
+          options: ["TextColor", "ForeColor", "ColorFore", "FontColor"],
+          correct: 1,
+          translation: "ما الخاصية التي تغيّر لون النص؟",
+          explanation: "الخاصية ForeColor تغيّر لون النص.",
+          tags: ["Colors", "Properties"],
+          ref: "Chapter 2 - Page 18",
+        },
+        {
+          q: "How to set color in code?",
+          options: [
+            "Control.BackColor = Color.Red;",
+            'Control.BackColor("Red");',
+            "Color.Set(Control, Red);",
+            "Control.Color = Red;",
+          ],
+          correct: 0,
+          translation: "كيف تضبط اللون في الكود؟",
+          explanation: "الصيغة الصحيحة: Control.BackColor = Color.Red;",
+          tags: ["Colors", "Code"],
+          ref: "Chapter 2 - Page 18",
+        },
+        {
+          q: "Property for form background image?",
+          options: ["ImageBack", "BackgroundImage", "BackImage", "FormImage"],
+          correct: 1,
+          translation: "خاصية صورة خلفية النموذج؟",
+          explanation:
+            "الخاصية BackgroundImage تُستخدم لتعيين صورة خلفية النموذج.",
+          tags: ["Forms", "Images"],
+          ref: "Chapter 2 - Page 18",
+        },
+        {
+          q: "Default BackgroundImageLayout?",
+          options: ["None", "Tile", "Center", "Stretch"],
+          correct: 1,
+          translation: "القيمة الافتراضية لـ BackgroundImageLayout؟",
+          explanation: "القيمة الافتراضية هي Tile.",
+          tags: ["Forms", "Images"],
+          ref: "Chapter 2 - Page 19",
+        },
+        {
+          q: "Which layout resizes without stretching?",
+          options: ["Stretch", "Tile", "Zoom", "None"],
+          correct: 2,
+          translation: "أي تخطيط يغيّر الحجم دون تمدد؟",
+          explanation: "التخطيط Zoom يحافظ على نسبة العرض إلى الارتفاع.",
+          tags: ["Forms", "Images"],
+          ref: "Chapter 2 - Page 19",
+        },
+        {
+          q: "What is GroupBox?",
+          options: [
+            "Text display",
+            "Container with title",
+            "Button group",
+            "Image holder",
+          ],
+          correct: 1,
+          translation: "ما هو GroupBox؟",
+          explanation: "GroupBox هو حاوية (Container) مع عنوان (Title).",
+          tags: ["GroupBox", "Containers"],
+          ref: "Chapter 2 - Page 19",
+        },
+        {
+          q: "Does GroupBox have Text property?",
+          options: ["No", "Yes, for title", "For content", "For border"],
+          correct: 1,
+          translation: "هل يمتلك GroupBox خاصية Text؟",
+          explanation: "نعم، خاصية Text تُستخدم لعنوان GroupBox.",
+          tags: ["GroupBox", "Properties"],
+          ref: "Chapter 2 - Page 19",
+        },
+        {
+          q: "How tab order in GroupBox?",
+          options: [
+            "Independent",
+            "Relative to GroupBox TabIndex",
+            "Global",
+            "None",
+          ],
+          correct: 1,
+          translation: "كيف يكون ترتيب Tab داخل GroupBox؟",
+          explanation:
+            "ترتيب Tab داخل GroupBox يكون نسبيًا إلى TabIndex الخاص بـ GroupBox.",
+          tags: ["GroupBox", "Tab Order"],
+          ref: "Chapter 2 - Page 19",
+        },
+        {
+          q: "Difference between Panel and GroupBox?",
+          options: [
+            "Panel has title",
+            "Panel no title, has BorderStyle",
+            "Same",
+            "Panel not container",
+          ],
+          correct: 1,
+          translation: "الفرق بين Panel و GroupBox؟",
+          explanation: "Panel لا يملك عنوانًا (Title)، وله BorderStyle.",
+          tags: ["Panel", "GroupBox"],
+          ref: "Chapter 2 - Page 20",
+        },
+        {
+          q: "Default BorderStyle for Panel?",
+          options: ["FixedSingle", "Fixed3D", "None", "Tile"],
+          correct: 2,
+          translation: "القيمة الافتراضية لـ BorderStyle في Panel؟",
+          explanation: "القيمة الافتراضية هي None.",
+          tags: ["Panel", "Properties"],
+          ref: "Chapter 2 - Page 20",
+        },
+        {
+          q: "In exception handling, what is created when exception thrown?",
+          options: ["Variable", "Exception object", "Method", "Class"],
+          correct: 1,
+          translation: "في معالجة الاستثناءات، ماذا يُنشأ عند إطلاق استثناء؟",
+          explanation: "يتم إنشاء كائن Exception (Exception object).",
+          tags: ["Exceptions", "Objects"],
+          ref: "Chapter 2 - Page 20",
+        },
+        {
+          q: "How to name exception object?",
+          options: [
+            "catch(ex)",
+            "catch(Exception ex)",
+            "try(ex)",
+            "exception ex",
+          ],
+          correct: 1,
+          translation: "كيف تسمي كائن الاستثناء؟",
+          explanation: "الصيغة الصحيحة: catch(Exception ex).",
+          tags: ["Exceptions", "try-catch"],
+          ref: "Chapter 2 - Page 20",
+        },
+        {
+          q: 'In formatting, what is "p" for?',
+          options: ["Percent", "Currency", "Number", "Fixed"],
+          correct: 0,
+          translation: 'في التنسيق، ما الغرض من "p"؟',
+          explanation: 'التنسيق "p" يُستخدم لعرض النسبة المئوية (Percent).',
+          tags: ["Formatting", "Percent"],
+          ref: "Chapter 2 - Page 20",
+        },
+        {
+          q: "What does Math.Min return?",
+          options: ["Maximum", "Minimum", "Average", "Sum"],
+          correct: 1,
+          translation: "ماذا يُرجع Math.Min؟",
+          explanation: "تُرجع الدالة Math.Min القيمة الصغرى (Minimum).",
+          tags: ["Math", "Functions"],
+          ref: "Chapter 2 - Page 21",
+        },
+      ],
+    },
   ],
 
   midtermsCategories: [
@@ -1444,7 +2803,7 @@ subjects.push({
         {
           t: "أسئلة مادة PPIS — د. سارة",
           d: "مجموعة من الأسئلة والأجوبة حول مفاهيم Windows Forms و C#",
-          pdf: "Visual Programming/Questions/Mid/2026/Important - PPIS - Q & A.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Mid/2026/Important - PPIS - Q & A.pdf",
           questions: [
             {
               q: "How can you determine the number of items in a ListBox?",
@@ -1601,7 +2960,7 @@ subjects.push({
         {
           t: "ميدتيرم 2026 - National — د. سارة",
           d: "أسئلة اختبار الميدتيرم لمادة PPIS - أحدث نموذج",
-          pdf: "Visual Programming/Questions/Mid/2026/MidTerm-2026-National-Dr.Sara.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Mid/2026/MidTerm-2026-National-Dr.Sara.pdf",
           questions: [
             {
               q: "Which property determines the tab order of a control?",
@@ -1810,498 +3169,9 @@ subjects.push({
       description: "other Mid",
       items: [
         {
-          t: "ميدتيرم 2022 — د. محمد مصطفى درويش",
-          d: "أسئلة اختبار الميدتيرم لمادة البرمجة المرئية (CS341) - جامعة أسيوط",
-          pdf: "Visual Programming/Questions/Mid/2022/MidTerm-2022-Questions-Visual-Programming.pdf",
-          questions: [
-            {
-              q: "What will be the output of the following C# code?\n\nint a, b;\na = (b = 10) + 5;",
-              options: [
-                "b = 10, a = 5",
-                "b = 15, a = 5",
-                "a = 15, b = 10",
-                "a = 10, b = 10",
-              ],
-              correct: 2,
-              translation: "ماذا سيكون ناتج الكود التالي؟",
-              explanation:
-                "b بتاخد 10، ثم a = 10 + 5 = 15. فالنتيجة a=15, b=10.",
-            },
-            {
-              q: "Declare variables c, thisIsAVariable, q76354 and number to be of type int.",
-              options: [
-                "int c, thisIsAVariable, q76354, number;",
-                "integer c, thisIsAVariable, q76354, number;",
-                "int c; int thisIsAVariable; int q76354; int number;",
-              ],
-              correct: 0,
-              translation:
-                "عرّف المتغيرات c، thisIsAVariable، q76354، number من نوع int.",
-              explanation:
-                "int c, thisIsAVariable, q76354, number; — الإعلان الجماعي في سطر واحد.",
-            },
-            {
-              q: 'Display "This is a C# app" on two lines in the console window. The first line should end with C#. Use method Console.WriteLine.',
-              options: [
-                'Console.WriteLine("This is a C#\\napp");',
-                'Console.WriteLine("This is a C# app");',
-              ],
-              correct: 0,
-              translation:
-                'اعرض "This is a C# app" على سطرين في نافذة الكونسول. السطر الأول ينتهي بـ C#.',
-              explanation: "\\n هو رمز السطر الجديد — بيقسّم النص على سطرين.",
-            },
-            {
-              q: "The statement while is used to execute one action when a condition is true and another when that condition is false.",
-              options: ["True", "False"],
-              correct: 1,
-              translation:
-                "عبارة while تُستخدم لتنفيذ إجراء عندما يكون الشرط صحيحاً وآخر عندما يكون خاطئاً.",
-              explanation:
-                "خطأ — while بتنفذ إجراء واحد فقط عندما الشرط صحيح. اللي بتعمل كده هي if-else.",
-            },
-            {
-              q: "PictureBoxes typically display images.",
-              options: ["True", "False"],
-              correct: 0,
-              translation: "PictureBoxes عادةً بتعرض صور.",
-              explanation: "صح — ده الغرض الأساسي منها.",
-            },
-            {
-              q: 'If the variable number is not equal to 7, display "The variable number is not equal to 7".',
-              options: [
-                'if (number != 7) Console.WriteLine("The variable number is not equal to 7");',
-                'if (number == 7) Console.WriteLine("The variable number is not equal to 7");',
-              ],
-              correct: 0,
-              translation:
-                'لو المتغير number مش بيساوي 7، اعرض "The variable number is not equal to 7".',
-              explanation: "!= معناها 'لا يساوي' — الشرط الصح.",
-            },
-            {
-              q: 'What does the following app display?\n\nusing System;\nclass Calculate\n{\n    static void Main()\n    {\n        int sum = 0;\n        int x = 1;\n        while (x <= 10)\n        {\n            sum += x;\n            x++;\n        }\n        Console.WriteLine($"The sum is: {sum}");\n    }\n}',
-              options: ["The sum is: 55", "The sum is: 45", "The sum is: 10"],
-              correct: 0,
-              translation: "ماذا يعرض التطبيق التالي؟",
-              explanation: "مجموع الأرقام من 1 إلى 10 = 55.",
-            },
-            {
-              q: "Calculate the value of 2.5 raised to the power of 3, using the Pow method.",
-              options: ["Math.Pow(2.5, 3)", "Math.Pow(3, 2.5)", "Pow(2.5, 3)"],
-              correct: 0,
-              translation: "احسب قيمة 2.5 مرفوعة للقوة 3 باستخدام دالة Pow.",
-              explanation: "Math.Pow(2.5, 3) — الأساس أولاً ثم الأس.",
-            },
-            {
-              q: "Write a statement that uses string interpolation to display the sum of the variables x and y. Assume variables x and y of type int exist and already have values.",
-              options: [
-                'Console.WriteLine($"The sum is {x + y}");',
-                'Console.WriteLine("The sum is {x + y}");',
-              ],
-              correct: 0,
-              translation:
-                "اكتب عبارة تستخدم String Interpolation لعرض مجموع x و y.",
-              explanation: "الـ $ قبل النص ضرورية لتفعيل Interpolation.",
-            },
-            {
-              q: "Determine the values of the variables in the following statement after it executes. Assume that when the statement begins executing, all variables are type int and have the value 5:\n\nproduct *= x++;",
-              options: [
-                "product = 25, x = 6",
-                "product = 30, x = 6",
-                "product = 25, x = 5",
-              ],
-              correct: 0,
-              translation:
-                "حدد قيم المتغيرات بعد تنفيذ العبارة. بافتراض أن كل المتغيرات int وقيمتها 5 عند البداية.",
-              explanation:
-                "x++ بترجع 5 الأول (Post-increment)، فـ product = 5 × 5 = 25، ثم x = 6.",
-            },
-            {
-              q: "The _______ statement, when executed in an iteration statement, skips the remaining statements in the loop body and proceeds with the next iteration of the loop.",
-              options: ["break", "continue", "foreach", "while"],
-              correct: 1,
-              translation:
-                "عبارة _______ عند تنفيذها في حلقة، تتخطى باقي العبارات في جسم الحلقة وتنتقل للتكرار التالي.",
-              explanation:
-                "continue — بتتخطى باقي التكرار الحالي وتنتقل للتالي.",
-            },
-            {
-              q: "Vary the control variable over the sequence 99, 88, 77, 66, 55, 44, 33, 22, 11, 0.",
-              options: [
-                "for (int i = 99; i >= 0; i -= 11)",
-                "for (int i = 0; i <= 99; i += 11)",
-              ],
-              correct: 0,
-              translation:
-                "غيّر متغير التحكم على التسلسل: 99، 88، 77، 66، 55، 44، 33، 22، 11، 0.",
-              explanation: "البداية 99 والتناقص بـ 11 حتى 0 (شامل).",
-            },
-            {
-              q: "The switch statement does not provide a mechanism for testing ranges of values, so you must list every value to test in a separate case label.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "عبارة switch لا توفر آلية لاختبار نطاقات القيم، لذا يجب إدراج كل قيمة في حالة منفصلة.",
-              explanation: "صح — switch بتختبر قيم محددة، مش نطاقات.",
-            },
-            {
-              q: "Use the _______ method to output the tab character.",
-              options: [
-                "Console.WriteLine()",
-                "Console.Write('\\t')",
-                'Console.Write("\\r")',
-                'Console.Write("\\\'")',
-              ],
-              correct: 1,
-              translation: "استخدم دالة _______ لإخراج رمز الجدولة (Tab).",
-              explanation: "\\t هو رمز الجدولة (Tab character).",
-            },
-            {
-              q: "What will be the output of the following C# code?\n\nclass Program\n{\n    public static void Main(string[] args)\n    {\n        int i, j;\n        i = (j = 5) + 10;\n        Console.WriteLine(i);\n        Console.WriteLine(j);\n        Console.ReadLine();\n    }\n}",
-              options: ["15\n5", "5\n15", "10\n5"],
-              correct: 0,
-              translation: "ماذا سيكون ناتج الكود التالي؟",
-              explanation: "j = 5، ثم i = 5 + 10 = 15. فيعرض 15 ثم 5.",
-            },
-            {
-              q: "Prompt the user to enter an integer.",
-              options: [
-                'Console.Write("Enter an integer: ");',
-                'Console.ReadLine("Enter an integer: ");',
-              ],
-              correct: 0,
-              translation: "اطلب من المستخدم إدخال رقم صحيح.",
-              explanation:
-                "Console.Write بتعرض رسالة بدون سطر جديد، ثم Console.ReadLine للقراءة.",
-            },
-            {
-              q: "Command-line arguments are separated by commas.",
-              options: ["True", "False"],
-              correct: 1,
-              translation: "معطيات سطر الأوامر مفصولة بفواصل.",
-              explanation: "خطأ — مفصولة بمسافات (spaces) مش فواصل.",
-            },
-            {
-              q: 'Identify and correct the errors in the following statement:\n\nif (c < 7)\n{\n    Console.WriteLine("c is less than 7");',
-              options: [
-                'Missing closing parenthesis in condition and closing brace: if (c < 7) { Console.WriteLine("c is less than 7"); }',
-                "No error",
-              ],
-              correct: 0,
-              translation: "حدد وصحح الأخطاء في العبارة التالية.",
-              explanation: "ناقص قوس إغلاق للشرط و قوس إغلاق للكتلة.",
-            },
-            {
-              q: "Control properties can be modified only by writing code.",
-              options: ["True", "False"],
-              correct: 1,
-              translation: "خصائص عناصر التحكم يمكن تعديلها فقط بكتابة الكود.",
-              explanation: "خطأ — يمكن تعديلها من نافذة الخصائص أيضاً.",
-            },
-            {
-              q: "Calculate the remainder after q is divided by divisor, and assign the result to q. Write this statement in two different ways.",
-              options: [
-                "q %= divisor; and q = q % divisor;",
-                "q = q / divisor; and q /= divisor;",
-              ],
-              correct: 0,
-              translation:
-                "احسب الباقي بعد قسمة q على divisor، وأسند الناتج إلى q. اكتب العبارة بطريقتين مختلفتين.",
-              explanation: "الـ % هي معامل الباقي (Modulo).",
-            },
-            {
-              q: "C# considers the variables number and NuMbEr to be identical.",
-              options: ["True", "False"],
-              correct: 1,
-              translation: "C# تعتبر المتغيرين number و NuMbEr متطابقين.",
-              explanation: "خطأ — C# حساسة لحالة الأحرف (Case-sensitive).",
-            },
-            {
-              q: "The break statement is required in every case of a switch statement.",
-              options: ["True", "False"],
-              correct: 1,
-              translation: "عبارة break مطلوبة في كل حالة من حالات switch.",
-              explanation:
-                "خطأ — مطلوبة فقط لو عايز تمنع Fall-through. ممكن تتجاهلها عن قصد.",
-            },
-            {
-              q: "Assign the sum of x and y to z, and increment x by 1 with ++. Use only one statement and ensure that the original value of x is used in the statement.",
-              options: ["z = x++ + y;", "z = ++x + y;"],
-              correct: 0,
-              translation:
-                "أسند مجموع x و y إلى z، وزِد x بمقدار 1 بـ ++. استخدم عبارة واحدة فقط مع ضمان استخدام القيمة الأصلية لـ x.",
-              explanation:
-                "x++ تستخدم القيمة الأصلية أولاً ثم تزيد — Post-increment.",
-            },
-            {
-              q: "A Form's background color is set using the BackColor property.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "لون خلفية النموذج يتم تعيينه باستخدام خاصية BackColor.",
-              explanation: "صح — BackColor هي الخاصية الصحيحة.",
-            },
-            {
-              q: "Specifying the order in which statements (actions) execute in an app is called program control.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "تحديد ترتيب تنفيذ العبارات في التطبيق يسمى التحكم البرمجي (Program Control).",
-              explanation: "صح — ده تعريف Program Control.",
-            },
-          ],
-        },
-        {
-          t: "ميدتيرم 2023 — د. أحمد حسني",
-          d: "أسئلة اختبار الميدتيرم لمادة البرمجة المرئية (CS341) - جامعة أسيوط (عام + علوم)",
-          pdf: "files/Visual Programming/Questions/Mid/2023/MidTerm-2023-Questions-Visual-Programming.pdf",
-          questions: [
-            {
-              q: "Which of the following is considered Specialized Methods in C#?",
-              options: [
-                "Static method",
-                "Operation method",
-                "Constructor",
-                "Operator method",
-                "ToString method",
-                "Protected method",
-              ],
-              correct: 3,
-              translation:
-                "أي مما يلي يُعتبر من الدوال المتخصصة (Specialized Methods) في C#؟",
-              explanation:
-                "Operator method — الدوال المخصصة لتحميل المعاملات (Operator Overloading).",
-            },
-            {
-              q: "What of the following tools can be used to debug the network requests from the browser?",
-              options: [
-                "Setting - Network Tab",
-                "Developer Tools - Network Tab",
-                "Developer Tools - Source Tab",
-                "Browser start page",
-                "Browser status bar",
-              ],
-              correct: 1,
-              translation:
-                "أي من الأدوات التالية يمكن استخدامها لتصحيح طلبات الشبكة من المتصفح؟",
-              explanation:
-                "Developer Tools ← Network Tab — الأداة القياسية لمراقبة طلبات الشبكة.",
-            },
-            {
-              q: "OOP Concepts includes (Choose all that apply)",
-              options: [
-                "Inheritance and Abstraction",
-                "Encapsulation",
-                "Classes",
-                "Polymorphism",
-              ],
-              correct: 0,
-              translation: "مفاهيم البرمجة كائنية التوجه (OOP) تشمل:",
-              explanation:
-                "Inheritance, Abstraction, Encapsulation, Polymorphism — الأربعة الأساسية.",
-            },
-            {
-              q: "Server program can (Choose all that apply)",
-              options: [
-                "Generate Reasonable Response",
-                "Receive Responses",
-                "Receive Requests",
-                "Send Requests",
-              ],
-              correct: 2,
-              translation: "برنامج السيرفر يمكنه:",
-              explanation:
-                "السيرفر بيستقبل الطلبات (Receive Requests) ويرد عليها — مش يرسلها.",
-            },
-            {
-              q: "C# supports multiple inheritance",
-              options: [
-                "False, every class can have only one parent or none",
-                "True, every class must have at least one parent",
-                "True, every class must inherit from a base class",
-                "False, every class must have exactly one parent",
-              ],
-              correct: 0,
-              translation: "C# تدعم الوراثة المتعددة.",
-              explanation:
-                "خطأ — كل كلاس له أب واحد على الأكثر (أو لا شيء). الوراثة المتعددة تُحقق عبر الواجهات.",
-            },
-            {
-              q: "Using top-level statement in C# means",
-              options: [
-                "Using namespaces starts at the beginning of the file",
-                "None of the above",
-                "Main method exists implicitly",
-                "There is no main method",
-                "Main method exists explicitly",
-              ],
-              correct: 2,
-              translation: "استخدام Top-level Statements في C# يعني:",
-              explanation:
-                "Main method موجودة ضمنياً — من غير ما تكتبها صراحةً.",
-            },
-            {
-              q: "In Web development, HSTS mode",
-              options: [
-                "Enable using encrypted requests and HTTPS as an option",
-                "Enforces all requests to use HTTPS",
-                "Enforces all websites to use HTTPS",
-                "Enable the client to receive invalid certificates",
-                "None",
-              ],
-              correct: 1,
-              translation: "في تطوير الويب، وضع HSTS:",
-              explanation:
-                "يفرض على كل الطلبات استخدام HTTPS — حماية من هجمات التخفيض.",
-            },
-            {
-              q: "What is True in relevant to Read-only attributes in the class?",
-              options: [
-                "They cannot change after compile time.",
-                "The data never changes.",
-                "They can only be calculated or initialized at the time of instantiation",
-                "They can change after compile time.",
-              ],
-              correct: 2,
-              translation:
-                "ما الصحيح بخصوص الخصائص للقراءة فقط (Read-only) في الكلاس؟",
-              explanation:
-                "يمكن حسابها أو تهيئتها فقط في وقت إنشاء الكائن (Instantiation).",
-            },
-            {
-              q: "Which of the following can be a class name based on best practices and naming conventions?",
-              options: ["Car", "car", "carType", "BMW", "CAR"],
-              correct: 0,
-              translation:
-                "أي مما يلي يمكن أن يكون اسم كلاس وفقاً لأفضل الممارسات واصطلاحات التسمية؟",
-              explanation:
-                "Car — PascalCase، لأن أسماء الكلاسات تبدأ بحرف كبير.",
-            },
-            {
-              q: "Which of the following is NOT a C# keyword?",
-              options: ["None", "init", "static", "var", "record"],
-              correct: 0,
-              translation: "أي مما يلي ليس كلمة مفتاحية في C#؟",
-              explanation:
-                "None — كل الكلمات التانية (init, static, var, record) كلمات مفتاحية فعلية.",
-            },
-            {
-              q: "To enable Razor pages in your .NET web application, which of the following methods is invoked in Program.cs?",
-              options: [
-                "None",
-                "app.Services.AddRazorPages();",
-                "app.UseDefaultFiles();",
-                "builder.Services.AddRazorPages();",
-                "builder.MapRazorPages();",
-                "app.UseStaticFiles();",
-              ],
-              correct: 3,
-              translation:
-                "لتفعيل صفحات Razor في تطبيق .NET الويب، أي دالة تُستدعى في Program.cs؟",
-              explanation:
-                "builder.Services.AddRazorPages(); — تُستدعى على الـ builder قبل بناء التطبيق.",
-            },
-            {
-              q: "For Web request, Put the request journey in the correct order:\n1. DNS request asking for IP\n2. DNS response with an IP\n3. HTTP request to the server\n4. Webserver routing the request to correct Server Application",
-              options: [
-                "1 -> 2 -> 3 -> 4",
-                "2 -> 1 -> 3 -> 4",
-                "1 -> 3 -> 2 -> 4",
-                "3 -> 1 -> 2 -> 4",
-              ],
-              correct: 0,
-              translation: "لطلب الويب، رتّب رحلة الطلب بالترتيب الصحيح.",
-              explanation:
-                "DNS request ← DNS response ← HTTP request ← Routing — الترتيب المنطقي.",
-            },
-            {
-              q: "What is the output of the following code? Consider `-` as new line:\n\npublic class Person\n{\n    public double Age;\n    public static int PersonCount;\n}\n\npublic class Program\n{\n    static void Main(string[] a)\n    {\n        Person p1 = new();\n        Person p2 = new();\n        p1.Age = 20;\n        p2.PersonCount = 3;\n        Console.WriteLine(p1.PersonCount);\n        Console.WriteLine(p2.Age);\n    }\n}",
-              options: ["0-20", "Error", "3-0", "0-0", "3-20"],
-              correct: 2,
-              translation: "ماذا سيكون ناتج الكود التالي؟",
-              explanation:
-                "PersonCount ثابت (Static) ومشترك = 3. Age خاص بـ p2 ولم تُعيَّن = 0. فالناتج 3 ثم 0.",
-            },
-            {
-              q: "Common Type System (CTS) in .NET refers to (Choose all that apply)",
-              options: [
-                "event",
-                "enumeration",
-                "class",
-                "structure",
-                "interface",
-                "delegate",
-              ],
-              correct: 2,
-              translation: "نظام الأنواع المشترك (CTS) في .NET يشير إلى:",
-              explanation:
-                "الـ CTS بيشمل: class, structure, enumeration, interface, delegate — مش event.",
-            },
-            {
-              q: "Which of the following URL components constructs the shortest URL that can be used to do a web request?",
-              options: [
-                "Scheme - Domain - Query String",
-                "Scheme - Domain - Fragment",
-                "Scheme - Domain - Path",
-                "Scheme - Domain",
-                "All of the above",
-              ],
-              correct: 3,
-              translation:
-                "أي من مكونات URL التالية يبني أقصر URL يمكن استخدامه لعمل طلب ويب؟",
-              explanation:
-                "Scheme + Domain فقط كافيين — زي https://example.com.",
-            },
-            {
-              q: 'What is the output of the following code when the user inputs nothing (just pressing enter)? Consider `-` refers to a new line:\n\nConsole.WriteLine("Before parsing");\nConsole.Write("What is your age? ");\nstring? input = Console.ReadLine();\ntry\n{\n    int age = int.Parse(input);\n    Console.WriteLine($"You are {age} years old.");\n}\ncatch\n{\n    Console.WriteLine("The age you entered is not valid");\n}\nConsole.WriteLine("After parsing");',
-              options: [
-                "Before Parsing - What is your age? - You are 0 years old - After parsing",
-                "None of the above",
-                "Error",
-                "Before Parsing - What is your age? - The age you entered is not valid - After parsing",
-              ],
-              correct: 3,
-              translation:
-                "ماذا سيكون ناتج الكود لو المستخدم أدخل لا شيء (ضغط Enter فقط)؟",
-              explanation:
-                "int.Parse للنص الفارغ بترمي استثناء، فيروح لـ catch ويعرض الرسالة.",
-            },
-            {
-              q: 'Given the following method implementation, which of the following is a right method invocation syntax? (choose all that apply)\n\npublic void Method1(string command = "Run!", double number = 0)\n{\n    Console.WriteLine($"{command}, with {number}");\n}',
-              options: [
-                "Method1(number: 20);",
-                'Method1(number = 20, command = "Test");',
-                "Method1(number = 20);",
-                'Method1(number: 20, command: "Test");',
-                "Method1();",
-              ],
-              correct: 0,
-              translation:
-                "بالنظر لتنفيذ الدالة التالي، أي من الاستدعاءات صحيح؟",
-              explanation:
-                "Method1(number: 20); — استخدام Named Arguments مع الاعتماد على القيمة الافتراضية للأول.",
-            },
-            {
-              q: 'Considering a main method that contains the following lines, what is the output?\n\nstring name = "Challenge";\nConsole.WriteLine($"""Hello, {{{name}}}!""");',
-              options: [
-                "Hello, {Challenge}!",
-                "Hello, {{Challenge}}!",
-                "error",
-                "Hello, {{{Challenge}}}!",
-                "Hello, Challenge!",
-              ],
-              correct: 0,
-              translation:
-                "بالنظر لدالة main اللي فيها السطور التالية، ماذا سيكون الناتج؟",
-              explanation:
-                "في Raw String Interpolation، {{ و }} بيعرضوا أقواس حرفية — فالناتج {Challenge}.",
-            },
-          ],
-        },
-        {
           t: "ميدتيرم 2024 - National — البرمجة المرئية",
           d: "اختبار الميدتيرم لمادة البرمجة المرئية - البرنامج الأهلي 2024",
-          pdf: "files/Visual Programming/Questions/Mid/2024/MidTerm-2024-National-Visual-Programming.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Mid/2024/MidTerm-2024-National-Visual-Programming.pdf",
           questions: [
             {
               q: "How can you change the text color of a GroupBox's title?",
@@ -2548,7 +3418,7 @@ subjects.push({
         {
           t: "فاينل 2026 - العام والساعات المعتمدة — البرمجة المرئية",
           d: "اختبار الفاينل لمادة البرمجة المرئية - العام والساعات المعتمدة 2026",
-          pdf: "Visual Programming/Questions/Final/2026/Final 2026 - General & Credit - Visual Programming.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Final/2026/Final 2026 - General & Credit - Visual Programming.pdf",
           questions: [
             {
               q: 'What will be displayed if the check is removed from the CheckBox?\n\nprivate void checkBox1_CheckedChanged(object sender, EventArgs e)\n{\n    if (!checkBox1.Checked)\n        MessageBox.Show("Please check me!");\n}',
@@ -2969,7 +3839,7 @@ subjects.push({
         {
           t: "فاينل 2026 - البرنامج الأهلي - د. سارة — البرمجة المرئية",
           d: "اختبار الفاينل لمادة البرمجة المرئية - البرنامج الأهلي 2026 (د. سارة)",
-          pdf: "Visual Programming/Questions/Final/2026/Final 2026 - National - Visual Programming - Dr.Sara.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Final/2026/Final 2026 - National - Visual Programming - Dr.Sara.pdf",
           questions: [
             {
               q: "How do you split a string str by multiple delimiters?",
@@ -3401,7 +4271,7 @@ subjects.push({
         {
           t: "فاينل 2026 - برنامج PPIS - د. سارة — البرمجة المرئية",
           d: "اختبار الفاينل لمادة البرمجة المرئية - برنامج PPIS 2026 (د. سارة)",
-          pdf: "Visual Programming/Questions/Final/2026/Final 2026 - PPIS - Dr. Sara.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Final/2026/Final 2026 - PPIS - Dr. Sara.pdf",
           questions: [
             {
               q: "Which method is used to programmatically add an item to a ListBox?",
@@ -3735,7 +4605,7 @@ subjects.push({
         {
           t: "فاينل 2025 - الإجابات - د. سارة — البرمجة المرئية",
           d: "إجابات اختبار الفاينل لمادة البرمجة المرئية - البرنامج الأهلي 2025 (د. سارة)",
-          pdf: "Visual Programming/Questions/Final/2025/Final 2025 - Answers - Visual Programming - Dr.Sara.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Final/2025/Final 2025 - Answers - Visual Programming - Dr.Sara.pdf",
           questions: [
             {
               q: "How do you create a jagged array that contains strings?",
