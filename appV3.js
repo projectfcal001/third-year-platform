@@ -1514,9 +1514,6 @@ function resetQuiz(){
 // ============================================================
 // 12) PDF
 // ============================================================
-// ============================================================
-// 12) PDF
-// ============================================================
 function driveId(url){
   if(!url) return null;
   var m = String(url).match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?id=|uc\?export=download&id=)([a-zA-Z0-9_-]{10,})/);
@@ -1567,9 +1564,23 @@ function downloadPDFAt(idx){
 
 var _annotatorHandlers = [];
 
+// بتغيّر شارة "ملف متاح" لـ "غير متاح" في نفس القسم
+function markFileUnavailable(iframe, kind){
+  try{
+    var sec = iframe.closest(".ld-section");
+    if(!sec) return;
+    var chip = sec.querySelector(".ld-chip");
+    if(!chip || !chip.classList.contains("ok")) return;
+    chip.textContent = "غير متاح";
+    chip.classList.remove("ok");
+    chip.classList.add(kind === "error" ? "bad" : "warn");
+  }catch(e){}
+}
+
 // رسالة الخطأ: بتتعرض لما رابط الملف غلط أو السيرفر مش بيرد
 // (نفس شكل .offline-note بس بكلام حسب نوع المشكلة)
 function replaceWithErrorNote(iframe, status){
+  markFileUnavailable(iframe, "error");
   var title, text;
   if(status === 401 || status === 403){
     title = "مش مسموح بفتح الملف ده";
@@ -1633,11 +1644,20 @@ function setupAnnotatorIframe(iframe, pdfUrl){
         // الملف مش متخزن ومعرفناش نحمّله
         if(err && err.notDownloaded){
           // أوفلاين: الرسالة القديمة زي الأول
-          if(isOffline() || navigator.onLine === false){ replaceWithNote(iframe, pdfUrl); return; }
+          if (isOffline() || navigator.onLine === false) {
+            markFileUnavailable(iframe, "offline");
+            replaceWithNote(iframe, pdfUrl);
+            return;
+          }
           // أونلاين: نشوف السيرفر موجود ولا الرابط أصلًا غلط
-          fetch(pdfUrl, {mode: "no-cors"})
-            .then(function(){ replaceWithNote(iframe, pdfUrl); })
-            .catch(function(){ replaceWithErrorNote(iframe, 0); });
+          fetch(pdfUrl, { mode: "no-cors" })
+            .then(function () {
+              markFileUnavailable(iframe, "offline");
+              replaceWithNote(iframe, pdfUrl);
+            })
+            .catch(function () {
+              replaceWithErrorNote(iframe, 0);
+            });
           return;
         }
         // أي خطأ تاني: نفس السلوك القديم
@@ -1658,12 +1678,13 @@ function setupAnnotatorIframe(iframe, pdfUrl){
 }
 
 function setupAllAnnotatorIframes(){
-  document.querySelectorAll('iframe.annotator-iframe[data-annot-url]').forEach(function(iframe){
-    var url = iframe.getAttribute("data-annot-url");
-    if(url) setupAnnotatorIframe(iframe, url);
-  });
+  document
+    .querySelectorAll("iframe.annotator-iframe[data-annot-url]")
+    .forEach(function (iframe) {
+      var url = iframe.getAttribute("data-annot-url");
+      if (url) setupAnnotatorIframe(iframe, url);
+    });
 }
-
 // ============================================================
 // 13) كروت الروابط
 // ============================================================
