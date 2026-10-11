@@ -16,8 +16,8 @@ subjects.push({
       t: "المحاضرة الأولى",
       id: "software-engineering-lec-01",
       d: "مقدمة في هندسة البرمجيات ونماذج دورة الحياة SDLC.",
-      pdf: "Software Engineering/lectures/Software Engineering Chapter 1 Lecture 1.pdf",
-      pdf2: "Software Engineering/Questions/New/Questions on each lecture/SE_Chapter1_Section1.1_Questions.pdf",
+      pdf: "datenew/subjects/software-engineering/lectures/Software Engineering Chapter 1 Lecture 1.pdf",
+      pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE_Chapter1_Section1.1_Questions.pdf",
       // فئات روابط منظمة مخصصة للفصل الأول (Chapter 1: Introduction) من كتاب Software Engineering - Ian Sommerville (10th Edition)
 
       linkCategories: [
@@ -755,8 +755,8 @@ subjects.push({
 
       t: "المحاضرة الثانية - عمليات البرمجيات (Software Processes)",
       d: "تغطية شاملة لمفاهيم الفصل الثاني: نماذج SDLC العامة (Waterfall, Incremental, Reuse-oriented)، الأنشطة الأساسية الأربعة (Specification, Development, Validation, Evolution)، التعامل مع التغيير (Prototyping & Incremental Delivery)، ونموذج CMMI.",
-      pdf: "Software Engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 2 - Software processes.pdf",
-      pdf2: "Software Engineering/Questions/New/Questions on each lecture/SE_Chapter2_Sections2.1-2.2_Questions.pdf",
+      pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 2 - Software processes.pdf",
+      pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE_Chapter2_Sections2.1-2.2_Questions.pdf",
       // فئات روابط منظمة مخصصة للفصل الثاني (Chapter 1: Introduction) من كتاب Software Engineering - Ian Sommerville (10th Edition)
       notes: "الأسئلة المطلوبة من الكتاب:  1 , 3  , 4 , 6 , 8 ",
       linkCategories: [

@@ -15,9 +15,10 @@ subjects.push({
       t: "المحاضرة الأولى: مقدمة في تعلم الآلة وخوارزمية أقرب الجيران (kNN)",
       d: "مقدمة عن تعلم الآلة وأنواعه (Supervised / Unsupervised / Reinforcement)، تمثيل البيانات كمتجهات، وخوارزمية K-Nearest Neighbors مع اختيار k والـ validation والـ curse of dimensionality والـ normalization وتكلفة الحساب.",
       pdf: "datenew/subjects/machine-learning/lectures/Lec 1/lec01.pdf",
-      pdf2: "/datenew/subjects/machine-learning/questions/Questions on each lecture/Machine-Learning-Lecture-01-Questions.pdf",
+      pdf2: "datenew/subjects/machine-learning/questions/Questions on each lecture/Machine-Learning-Lecture-01-Questions.pdf",
       // فئات محاضرات تعلم الآلة والتعرف على الأنماط (Machine Learning & Pattern Recognition)
       // المحاضرة الأولى: مقدمة في تعلم الآلة وخوارزمية الجيران الأقرب (Introduction and Nearest Neighbors)
+
       linkCategories: [
         {
           category: "فيديوهات عربية",
