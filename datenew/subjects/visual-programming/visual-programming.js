@@ -2961,8 +2961,8 @@ subjects.push({
         },
         {
           t: "ميدتيرم 2026 - National — د. سارة",
-          d: "أسئلة اختبار الميدتيرم لمادة PPIS - أحدث نموذج",
-          pdf: "datenew/subjects/visual-programming/questions/Mid/2026/MidTerm-2026-National-Dr.Sara.pdf",
+          d: "أسئلة اختبار الميدتيرم لمادة الاهليه - أحدث نموذج",
+          pdf: "datenew/subjects/visual-programming/questions/Mid/2026/MidTerm 2026 - National - Dr. Sara.pdf",
           questions: [
             {
               q: "Which property determines the tab order of a control?",

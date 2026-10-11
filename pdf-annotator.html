@@ -963,7 +963,7 @@
   $("#btnFullscreen").addEventListener("click", toggleFullscreen);
   ["fullscreenchange","webkitfullscreenchange"].forEach(ev=>document.addEventListener(ev,()=>{
     const on = fsActive(); $("#btnFullscreen").classList.toggle("active",on);
-    if(pdfDoc){ clearTimeout(resizeTimer); resizeTimer=setTimeout(()=>renderAllPages().then(updateSelBar),150); }
+    if(pdfDoc){ clearTimeout(resizeTimer); resizeTimer=setTimeout(()=>renderAllPages(true).then(updateSelBar),150); }
   }));
   $("#btnHelp").addEventListener("click",()=>helpOverlay.classList.add("show"));
   $("#helpClose").addEventListener("click",()=>helpOverlay.classList.remove("show"));
@@ -1162,8 +1162,27 @@
   navBar.addEventListener("pointerup", endNavDrag);
   navBar.addEventListener("pointercancel", endNavDrag);
 
-  async function renderAllPages(){
+  function captureScrollPos(){
+    const mr = mainEl.getBoundingClientRect();
+    let page = 1, frac = 0;
+    viewer.querySelectorAll(".page-wrap").forEach(w => {
+      const r = w.getBoundingClientRect();
+      if(r.top <= mr.top + 1){ page = parseInt(w.dataset.page,10); frac = Math.max(0, Math.min(1, (mr.top - r.top) / Math.max(1, r.height))); }
+    });
+    return { page, frac, sx: mainEl.scrollLeft / Math.max(1, mainEl.scrollWidth) };
+  }
+  function restoreScrollPos(pos){
+    if(!pos) return;
+    const w = viewer.querySelector('.page-wrap[data-page="'+pos.page+'"]');
+    if(!w) return;
+    const mr = mainEl.getBoundingClientRect();
+    const wr = w.getBoundingClientRect();
+    mainEl.scrollTop += (wr.top - mr.top) + pos.frac * wr.height;
+    mainEl.scrollLeft = pos.sx * mainEl.scrollWidth;
+  }
+  async function renderAllPages(keepPos){
     if(!pdfDoc) return;
+    const savedPos = keepPos ? captureScrollPos() : null;
     if(pageObserver) pageObserver.disconnect();
     viewer.innerHTML = "";
     renderedPages.clear();
@@ -1184,6 +1203,7 @@
       viewer.appendChild(wrap);
       pageMeta[p] = { width:w, height:h, page:page, ptW:vp1.width, ptH:vp1.height, dpr:dpr };
     }
+    restoreScrollPos(savedPos);
     pageObserver = new IntersectionObserver(entries => {
       for(const en of entries) if(en.isIntersecting){
         const p = parseInt(en.target.dataset.page,10);
@@ -3175,7 +3195,7 @@
     window.addEventListener("resize", () => {
       if(!pdfDoc) return;
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => { renderAllPages().then(updateSelBar); updateNavBar(); }, 200);
+      resizeTimer = setTimeout(() => { renderAllPages(true).then(updateSelBar); updateNavBar(); }, 200);
     });
   })();
 
