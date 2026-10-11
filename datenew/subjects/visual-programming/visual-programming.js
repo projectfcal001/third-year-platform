@@ -13,10 +13,11 @@ subjects.push({
   // ],
   lectures: [
     {
+      id: "visual-programmingl-lec-01",
       t: "المحاضرة الأولى",
       d: "مقدمة في البرمجة المرئية وواجهات المستخدم الرسومية (GUI).",
-      pdf: "Visual Programming/lectures/Chapter 1.pdf",
-      pdf2: "Visual Programming/Questions/Questions on each lecture/Chapter 1 - Questions - Visual Programming.pdf",
+      pdf: "datenew/subjects/visual-programming/lectures/Chapter 1.pdf",
+      pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Chapter 1 - Questions - Visual Programming.pdf",
 
       // فئات روابط ومنهج منظّم - Chapter 1: Introduction to Visual C# (د. سارة طارق)
 
@@ -1427,10 +1428,11 @@ subjects.push({
       ],
     },
     {
+      id: "visual-programming-lec-02",
       t: "المحاضرة الثانية",
       d: "Chapter 2 يغطي TextBox، النصوص وربطها، المتغيرات والنطاق، تحويل الأنواع، الاستثناءات، الحقول والثوابت، Focus و Tab Order.",
-      pdf: "Visual Programming/lectures/Chapter 2.pdf",
-      pdf2: "Visual Programming/Questions/Questions on each lecture/Chapter 2 - Questions - Visual Programming.pdf",
+      pdf: "datenew/subjects/visual-programming/lectures/Chapter 2.pdf",
+      pdf2: "datenew/subjects/visual-programming/c/Questions on each lecture/Chapter 2 - Questions - Visual Programming.pdf",
       // فئات روابط منظمة - الفصل الثاني: معالجة البيانات وأدوات التحكم في C# WinForms (Processing Data)
       linkCategories: [
         {
@@ -3171,7 +3173,7 @@ subjects.push({
         {
           t: "ميدتيرم 2024 - National — البرمجة المرئية",
           d: "اختبار الميدتيرم لمادة البرمجة المرئية - البرنامج الأهلي 2024",
-          pdf: "datenew/subjects/visual-programming/questions/Mid/2024/MidTerm-2024-National-Visual-Programming.pdf",
+          pdf: "datenew/subjects/visual-programming/questions/Mid/2024/MidTerm 2024 - National - Visual Programming.pdf",
           questions: [
             {
               q: "How can you change the text color of a GroupBox's title?",
