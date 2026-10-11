@@ -144,12 +144,9 @@
           if (navigator.serviceWorker.controller) safeUpdate();
 
           // ★ فحص دوري كل دقيقة (شغّال بس والتطبيق ظاهر)
-          setInterval(
-            function () {
-              if (!document.hidden) safeUpdate();
-            },
-            60 * 1000,
-          );
+          setInterval(function () {
+            if (!document.hidden) safeUpdate();
+          }, 60 * 1000);
 
           // ★ فحص عند رجوع المستخدم للتطبيق (المضمون على الموبايل)
           document.addEventListener("visibilitychange", function () {
@@ -169,7 +166,10 @@
     // ★ reload بس لما نكون قررنا نطبّق (تلقائي أو يدوي) — عشان الكويز ما يتقطعش
     navigator.serviceWorker.addEventListener("controllerchange", function () {
       // أول تثبيت (مفيش controller قبله) → مفيش حاجة تتحدّث
-      if (!hadController) { hadController = true; return; }
+      if (!hadController) {
+        hadController = true;
+        return;
+      }
       controllerChanged = true;
       if (userAskedUpdate) window.location.reload();
     });
@@ -179,15 +179,27 @@
   var INSTALLED_KEY = "pwa_installed_v1";
   var IOS_KEY = "ios_install_hint_dismissed";
 
-  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
-  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function lsGet(k) {
+    try {
+      return localStorage.getItem(k);
+    } catch (e) {
+      return null;
+    }
+  }
+  function lsSet(k, v) {
+    try {
+      localStorage.setItem(k, v);
+    } catch (e) {}
+  }
 
   // نستخدم showToast بتاع الموقع لو موجود، وإلا توست pwa.js
   function say(msg) {
     if (typeof window.showToast === "function") window.showToast(msg);
     else {
       var t = toast(msg, null, null);
-      setTimeout(function () { if (t.parentNode) t.remove(); }, 2600);
+      setTimeout(function () {
+        if (t.parentNode) t.remove();
+      }, 2600);
     }
   }
 
@@ -264,7 +276,9 @@
         null,
         null,
       );
-      setTimeout(function () { if (t.parentNode) t.remove(); }, 9000);
+      setTimeout(function () {
+        if (t.parentNode) t.remove();
+      }, 9000);
       return;
     }
     var p = deferredPrompt;
@@ -296,7 +310,7 @@
     box.className = "pwa-ios";
     box.setAttribute("role", "status");
     box.innerHTML =
-      "📲 لتثبيت التطبيق على الآيفون:<br>اضغط زر المشاركة <b>⬆️</b> ثم <b>\"إضافة إلى الشاشة الرئيسية\"</b><br>";
+      '📲 لتثبيت التطبيق على الآيفون:<br>اضغط زر المشاركة <b>⬆️</b> ثم <b>"إضافة إلى الشاشة الرئيسية"</b><br>';
     var ok = document.createElement("button");
     ok.type = "button";
     ok.textContent = "فهمت ✓";
@@ -316,7 +330,9 @@
     // أندرويد: لو المتصفح ما أطلقش الحدث خلال 3 ثواني، نعرض الزرار برضه
     // (بيشرح الخطوات اليدوية بدل ما يختفي)
     else if (/android/i.test(navigator.userAgent)) {
-      setTimeout(function () { if (!deferredPrompt) showBtn(); }, 3000);
+      setTimeout(function () {
+        if (!deferredPrompt) showBtn();
+      }, 3000);
     }
   }
 

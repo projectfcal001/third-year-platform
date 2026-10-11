@@ -40,7 +40,7 @@ function switchDept(id){
 
 function deptBtnHtml(){
   var d = findDept(CUR_DEPT);
-  if(!d) return '';
+  if (!d) return "";
   return '<button class="subj-btn dept-btn" onclick="showDeptPicker(true)" title="تغيير القسم"><span>' + (d.icon || '🎓') + '</span>' +
     '<span style="display:flex;flex-direction:column;align-items:flex-start;line-height:1.25;"><span>' + esc(d.name) + '</span>' +
     '<span style="font-size:10px;opacity:.8;font-weight:normal;">تغيير القسم ⇄</span></span></button>';
@@ -677,6 +677,8 @@ function showView(id){
   });
   document.body.classList.toggle('progress-mode', id === 'progress-view');
   if(id !== 'lecture-view' && typeof secResetUI === 'function') secResetUI();
+  if(id !== 'lecture-view' && typeof stopLectureAudio === 'function') stopLectureAudio();
+  if(id !== 'lecture-view' && typeof clearLectureVideos === 'function') clearLectureVideos();
 }
 
 function openTab(evt, id){
@@ -1204,6 +1206,8 @@ function renderQuizInto(rootEl, s, key, title, questions){
 function renderQNSidebar(){
   var sb = document.getElementById('qn-sidebar');
   if(!sb || !st) return;
+  var oldGrid = sb.querySelector('.qn-grid');
+  var prevLeft = oldGrid ? oldGrid.scrollLeft : null;
   var btns = st.data.map(function(q, i){
     var cls = 'qn-btn';
     if(i === st.current) cls += ' current';
@@ -1221,6 +1225,18 @@ function renderQNSidebar(){
       '<span><span class="qn-dot essay"></span>مقالي</span>'+
       '<span><span class="qn-dot none"></span>لم يُجب</span>'+
     '</div>';
+  /* موبايل: حافظ على مكان السكرول وخلّي السؤال الحالي ظاهر في الشريط */
+  var grid = sb.querySelector('.qn-grid');
+  if(grid && window.matchMedia && window.matchMedia('(max-width:900px)').matches){
+    if(prevLeft !== null) grid.scrollLeft = prevLeft;
+    var cur = grid.querySelector('.qn-btn.current');
+    if(cur){
+      var gr = grid.getBoundingClientRect(), cr = cur.getBoundingClientRect();
+      if(cr.left < gr.left + 4 || cr.right > gr.right - 4){
+        grid.scrollLeft += (cr.left + cr.width/2) - (gr.left + gr.width/2);
+      }
+    }
+  }
 }
 
 function renderCurrentQuestion(){
@@ -1246,6 +1262,7 @@ function renderCurrentQuestion(){
         '<span class="essay-type-badge">📝 سؤال مقالي</span>'+
         '<div class="exam-qtext'+(qLatin?' ltr':'')+'">'+esc(q.q)+'</div>'+
         qTrHTML(q, 'q'+i)+
+        qVideoSlotHTML(q)+
         '<button class="eq-toggle-btn" onclick="toggleEssayAnswer(this)">👁 اعرض الإجابة النموذجية</button>'+
         '<div class="eq-answer">'+
           '<div class="eq-answer-text">'+esc(q.answer || '').replace(/\n/g,'<br>')+'</div>'+
@@ -1260,6 +1277,7 @@ function renderCurrentQuestion(){
           '<button class="exam-nav-btn"'+(i===st.data.length-1?' disabled':'')+' onclick="examGo(1)">التالي ←</button>'+
         '</div>'+
       '</div>';
+    hydrateQVideo(area, q);
     return;
   }
 
@@ -1298,6 +1316,7 @@ function renderCurrentQuestion(){
       '</div>'+
       '<div class="exam-qtext'+(qLatin?' ltr':'')+'">'+esc(q.q)+'</div>'+
       qTrHTML(q, 'q'+i)+
+      qVideoSlotHTML(q)+
       '<div class="exam-opts">'+opts+'</div>'+
       fb +
       (answered ? qExHTML(q, 'q'+i) : '') +
@@ -1308,6 +1327,7 @@ function renderCurrentQuestion(){
       '</div>'+
       '<div class="exam-saved" id="exam-saved-msg">💾 تم حفظ إجابتك تلقائياً</div>'+
     '</div>';
+  hydrateQVideo(area, q);
 }
 
 function toggleMark(qi){
@@ -1564,6 +1584,45 @@ function downloadPDFAt(idx){
 
 var _annotatorHandlers = [];
 
+// بتغيّر شارة "ملف متاح" لـ "غير متاح" في نفس القسم
+function markFileUnavailable(iframe, kind){
+  try{
+    var sec = iframe.closest(".ld-section");
+    if(!sec) return;
+    var chip = sec.querySelector(".ld-chip");
+    if(!chip || !chip.classList.contains("ok")) return;
+    chip.textContent = "غير متاح";
+    chip.classList.remove("ok");
+    chip.classList.add(kind === "error" ? "bad" : "warn");
+  }catch(e){}
+}
+
+// رسالة الخطأ: بتتعرض لما رابط الملف غلط أو السيرفر مش بيرد
+// (نفس شكل .offline-note بس بكلام حسب نوع المشكلة)
+function replaceWithErrorNote(iframe, status){
+  markFileUnavailable(iframe, "error");
+  var title, text;
+  if(status === 401 || status === 403){
+    title = "مش مسموح بفتح الملف ده";
+    text = "الملف موجود بس صلاحية الفتح مقفولة (كود الخطأ " + status + "). لازم صاحب الملف يفعّل المشاركة، أو بلّغ المسؤول عن الموقع.";
+  } else if(status >= 400 && status < 500){
+    title = "الملف ده مش موجود";
+    text = "رابط الملف غلط أو الملف اتمسح من مكانه (كود الخطأ " + status + "). راجع الرابط، ولو المشكلة فضلت بلّغ المسؤول عن الموقع.";
+  } else {
+    title = "مش قادر أوصل للملف ده";
+    text = "الموقع اللي عليه الملف مش بيرد أو الرابط مش صحيح. جرّب بعد شوية، ولو المشكلة فضلت بلّغ المسؤول عن الموقع.";
+  }
+  var box = document.createElement("div");
+  box.className = "offline-note";
+  var b = document.createElement("b");
+  b.textContent = title + " ⚠️";
+  var p = document.createElement("p");
+  p.textContent = text;
+  box.appendChild(b);
+  box.appendChild(p);
+  if(iframe.parentNode) iframe.parentNode.replaceChild(box, iframe);
+}
+
 function setupAnnotatorIframe(iframe, pdfUrl){
   if(!iframe || !pdfUrl) return;
   if(iframe.dataset.annotSetup === "1") return;
@@ -1578,7 +1637,11 @@ function setupAnnotatorIframe(iframe, pdfUrl){
     if(timeoutId) clearTimeout(timeoutId);
     fetch(pdfUrl, {cache: "force-cache"})
       .then(function(r){
-        if(!r.ok) throw new Error("HTTP " + r.status);
+        if(!r.ok){
+          var he = new Error("HTTP " + r.status);
+          he.httpStatus = r.status;
+          throw he;
+        }
         fileCachePut(pdfUrl, r.clone());
         markOpened(pdfUrl);
         return r.arrayBuffer();
@@ -1596,7 +1659,28 @@ function setupAnnotatorIframe(iframe, pdfUrl){
         iframe.contentWindow.postMessage({type: "load-pdf", bytes: bytes, name: name}, "*");
       })
       .catch(function(err){
-        if(err && err.notDownloaded){ replaceWithNote(iframe, pdfUrl); return; }
+        // السيرفر رد بخطأ (404 / 403 ...)
+        if(err && err.httpStatus){ replaceWithErrorNote(iframe, err.httpStatus); return; }
+        // الملف مش متخزن ومعرفناش نحمّله
+        if(err && err.notDownloaded){
+          // أوفلاين: الرسالة القديمة زي الأول
+          if (isOffline() || navigator.onLine === false) {
+            markFileUnavailable(iframe, "offline");
+            replaceWithNote(iframe, pdfUrl);
+            return;
+          }
+          // أونلاين: نشوف السيرفر موجود ولا الرابط أصلًا غلط
+          fetch(pdfUrl, { mode: "no-cors" })
+            .then(function () {
+              markFileUnavailable(iframe, "offline");
+              replaceWithNote(iframe, pdfUrl);
+            })
+            .catch(function () {
+              replaceWithErrorNote(iframe, 0);
+            });
+          return;
+        }
+        // أي خطأ تاني: نفس السلوك القديم
         try{ iframe.src = "pdf-annotator.html?file=" + encodeURIComponent(pdfUrl); }catch(e){}
         showToast("مش قادر أحمّل الملف في قلم PDF: " + (err.message || ""));
       });
@@ -1614,12 +1698,13 @@ function setupAnnotatorIframe(iframe, pdfUrl){
 }
 
 function setupAllAnnotatorIframes(){
-  document.querySelectorAll('iframe.annotator-iframe[data-annot-url]').forEach(function(iframe){
-    var url = iframe.getAttribute("data-annot-url");
-    if(url) setupAnnotatorIframe(iframe, url);
-  });
+  document
+    .querySelectorAll("iframe.annotator-iframe[data-annot-url]")
+    .forEach(function (iframe) {
+      var url = iframe.getAttribute("data-annot-url");
+      if (url) setupAnnotatorIframe(iframe, url);
+    });
 }
-
 // ============================================================
 // 13) كروت الروابط
 // ============================================================
@@ -1803,6 +1888,122 @@ function renderNotesCard(lec){
 // ============================================================
 // 17) فتح الصفحات
 // ============================================================
+/* التسجيل الصوتي: يظهر في صفحة المحاضرة فقط، ومش بيشتغل إلا لما تدوسي تشغيل.
+   في بيانات المحاضرة: audio:"رابط.mp3"  أو  audio:[{t:"الجزء الأول", url:"..."}] */
+function stopLectureAudio(){
+  var root = document.getElementById('lecture-audio-root');
+  if(!root) return;
+  [].forEach.call(root.querySelectorAll('audio'), function(a){ try{ a.pause(); }catch(e){} });
+}
+function renderLectureAudio(l){
+  var root = document.getElementById('lecture-audio-root');
+  if(!root) return;
+  stopLectureAudio();
+  root.innerHTML = '';
+  var raw = l && l.audio;
+  if(!raw) return;
+  var list = Array.isArray(raw) ? raw : [raw];
+  var items = list.map(function(a){ return (typeof a === 'string') ? {t:'', url:a} : a; })
+                  .filter(function(a){ return a && typeof a.url === 'string' && a.url.trim(); });
+  if(!items.length) return;
+  var html = '<div class="lec-audio-card"><div class="lec-audio-title">🎧 التسجيل الصوتي للمحاضرة</div>' +
+    items.map(function(a){
+      return '<div class="lec-audio-item">' +
+        (a.t ? '<div class="lec-audio-name">'+esc(a.t)+'</div>' : '') +
+        '<audio controls preload="none" src="'+esc(a.url.trim())+'"></audio></div>';
+    }).join('') + '</div>';
+  root.innerHTML = html;
+}
+
+/* ====== فيديوهات الأسئلة ======
+   مش بتتحمّل ولا بتشتغل إلا لما تدوسي عليها، ولو مفيش فيديو مبيظهرش أي حاجة.
+   الأنواع المدعومة: يوتيوب، Google Drive، Vimeo، أو ملف مباشر (mp4/webm). */
+function vidParse(u){
+  if(typeof u !== 'string') return null;
+  u = u.trim(); if(!u) return null;
+  var ok = /^https:\/\/[^\s]+$/i.test(u) || (!/^[a-z][a-z0-9+.-]*:/i.test(u) && u.indexOf('//') !== 0);
+  if(!ok) return null;
+  var m = u.match(/(?:youtube\.com\/(?:watch\?(?:[^#\s]*&)?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([\w-]{11})/i);
+  if(m) return {kind:'iframe', src:'https://www.youtube-nocookie.com/embed/'+m[1]+'?autoplay=1&rel=0'};
+  m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/i) || u.match(/drive\.google\.com\/(?:open|uc)\?(?:[^#\s]*&)?id=([\w-]+)/i);
+  if(m) return {kind:'iframe', src:'https://drive.google.com/file/d/'+m[1]+'/preview'};
+  m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/i);
+  if(m) return {kind:'iframe', src:'https://player.vimeo.com/video/'+m[1]+'?autoplay=1'};
+  return {kind:'file', src:u};
+}
+function vidList(raw){
+  if(!raw) return [];
+  return (Array.isArray(raw) ? raw : [raw]).map(function(a){
+    if(typeof a === 'string') return {t:'', url:a};
+    return (a && typeof a === 'object') ? {t:String(a.t || a.label || a.title || ''), url:a.url} : null;
+  }).filter(function(a){ return a && vidParse(a.url); });
+}
+function vidItem(label, url){
+  var p = vidParse(url); if(!p) return null;
+  var wrap = document.createElement('div'); wrap.className = 'vid-item';
+  var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'vid-btn';
+  btn.setAttribute('aria-expanded','false');
+  var ic = document.createElement('span'); ic.className = 'vid-ic'; ic.textContent = '🎬';
+  var lb = document.createElement('span'); lb.className = 'vid-lb'; lb.textContent = label || 'فيديو السؤال';
+  var act = document.createElement('span'); act.className = 'vid-act'; act.textContent = 'تشغيل ▶';
+  btn.appendChild(ic); btn.appendChild(lb); btn.appendChild(act);
+  var box = document.createElement('div'); box.className = 'vid-player'; box.hidden = true;
+  btn.onclick = function(){
+    if(box.hidden){
+      box.hidden = false; box.textContent = '';
+      var el;
+      if(p.kind === 'iframe'){
+        el = document.createElement('iframe');
+        el.src = p.src; el.title = label || 'فيديو';
+        el.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+        el.allowFullscreen = true;
+        el.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      }else{
+        el = document.createElement('video');
+        el.controls = true; el.preload = 'metadata'; el.setAttribute('playsinline','');
+        el.src = p.src;
+        var pr = el.play(); if(pr && pr.catch) pr.catch(function(){});
+      }
+      box.appendChild(el);
+      act.textContent = 'إغلاق ✕'; btn.setAttribute('aria-expanded','true');
+    }else{
+      box.textContent = ''; box.hidden = true;
+      act.textContent = 'تشغيل ▶'; btn.setAttribute('aria-expanded','false');
+    }
+  };
+  wrap.appendChild(btn); wrap.appendChild(box);
+  return wrap;
+}
+/* فيديو سؤال معيّن: q.video = "رابط"  أو  {t:"شرح السؤال", url:"..."} */
+function qVideoSlotHTML(q){
+  return vidList(q && q.video).length ? '<div class="q-video-slot"></div>' : '';
+}
+function hydrateQVideo(area, q){
+  var slot = area && area.querySelector('.q-video-slot');
+  if(!slot) return;
+  vidList(q && q.video).forEach(function(v){
+    var it = vidItem(v.t || '🎥 فيديو السؤال', v.url);
+    if(it) slot.appendChild(it);
+  });
+}
+/* فيديوهات على مستوى المحاضرة: videos:[{t:"..",url:".."}] أو video:"رابط" */
+function renderLectureVideos(l){
+  var root = document.getElementById('lecture-video-root');
+  if(!root) return;
+  root.textContent = '';
+  var list = vidList(l && (l.videos || l.video));
+  if(!list.length) return;
+  var card = document.createElement('div'); card.className = 'lec-audio-card';
+  var t = document.createElement('div'); t.className = 'lec-audio-title'; t.textContent = '🎬 فيديوهات أسئلة المحاضرة';
+  card.appendChild(t);
+  list.forEach(function(v){ var it = vidItem(v.t || '🎥 فيديو', v.url); if(it) card.appendChild(it); });
+  root.appendChild(card);
+}
+function clearLectureVideos(){
+  var root = document.getElementById('lecture-video-root');
+  if(root) root.textContent = '';
+}
+
 function openLecture(subjIdx, lecIdx, skipUrlUpdate){
   currentSubject = subjIdx;
   hideNotFoundPage();
@@ -1842,6 +2043,8 @@ function openLecture(subjIdx, lecIdx, skipUrlUpdate){
   document.getElementById('lecture-content-area').innerHTML = '';
   renderNotesCard(l);
   renderSummary(l);
+  renderLectureAudio(l);
+  renderLectureVideos(l);
 
   var total = (l.questions || []).length;
   var done = Object.keys(getSavedQuizFor(s, lecQuizKey(l))).length;
@@ -2375,6 +2578,51 @@ function exportProgress(){
   showToast('💾 تم تحميل النسخة الاحتياطية (' + count + ' عنصر)');
 }
 
+/* دمج إشعارات النسخة الاحتياطية مع الحالية: بنضيف المختلف بس ومنحذفش حاجة.
+   المقارنة بالمحتوى (مش بالـ id) لأن الـ id بيتولد من الوقت وبيختلف بين الأجهزة.
+   الحد الأقصى فضل 50 زي ما هو. */
+function notifFingerprint(n){
+  n = n || {};
+  return JSON.stringify([n.type||'', n.title||'', n.message||'', n.subject||'', n.lectureTitle||'',
+    n.lectureDesc||'', n.context||'', n.questionNum==null?'':n.questionNum, n.questionText||'',
+    n.oldAnswer||'', n.newAnswer||'']);
+}
+function mergeNotificationsFromBackup(raw){
+  var bak, cur = [];
+  try{ bak = JSON.parse(raw); }catch(e){ return null; }
+  if(!Array.isArray(bak)) return null;
+  try{ cur = JSON.parse(localStorage.getItem('notifications_data') || '[]'); }catch(e){ cur = []; }
+  if(!Array.isArray(cur)) cur = [];
+  var byFp = {}, ids = {}, maxId = 0, added = 0;
+  cur.forEach(function(n){
+    if(!n || typeof n !== 'object') return;
+    byFp[notifFingerprint(n)] = n;
+    if(typeof n.id === 'number'){ ids[n.id] = 1; if(n.id > maxId) maxId = n.id; }
+  });
+  bak.forEach(function(n){
+    if(!n || typeof n !== 'object') return;
+    var fp = notifFingerprint(n), ex = byFp[fp];
+    if(ex){ if(n.read) ex.read = true; return; }
+    var c = {}; Object.keys(n).forEach(function(key){ c[key] = n[key]; });
+    if(typeof c.id !== 'number' || ids[c.id]){ c.id = ++maxId; }
+    ids[c.id] = 1; if(c.id > maxId) maxId = c.id;
+    byFp[fp] = c; cur.push(c); added++;
+  });
+  cur.sort(function(a, b){ return (b.id || 0) - (a.id || 0); });
+  if(cur.length > 50) cur = cur.slice(0, 50);
+  try{ localStorage.setItem('notifications_data', JSON.stringify(cur)); }catch(e){ return null; }
+  return {added:added, total:cur.length};
+}
+function mergeSeenList(key, raw){
+  var bak, cur = [];
+  try{ bak = JSON.parse(raw); }catch(e){ return false; }
+  if(!Array.isArray(bak)) return false;
+  try{ cur = JSON.parse(localStorage.getItem(key) || '[]'); }catch(e){ cur = []; }
+  if(!Array.isArray(cur)) cur = [];
+  bak.forEach(function(x){ if(cur.indexOf(x) === -1) cur.push(x); });
+  try{ localStorage.setItem(key, JSON.stringify(cur)); return true; }catch(e){ return false; }
+}
+
 function importProgress(ev){
   var file = ev.target.files && ev.target.files[0];
   if(ev.target) ev.target.value = '';
@@ -2387,14 +2635,24 @@ function importProgress(ev){
       try{ data = JSON.parse(reader.result); }catch(e){ showToast('❌ الملف مش JSON صالح'); return; }
       if(!data._app || data._app !== 'study-platform-backup'){ showToast('❌ الملف مش نسخة احتياطية من المنصة دي'); return; }
       if(!window.confirm('هيتم دمج النسخة مع تقدمك الحالي — متأكدة؟')) return;
-      var count = 0;
+      var count = 0, notifAdded = 0;
       Object.keys(data).forEach(function(k){
         if(k.charAt(0) === '_') return;
-        if(typeof data[k] === 'string'){
-          try{ localStorage.setItem(k, data[k]); count++; }catch(e){}
+        if(typeof data[k] !== 'string') return;
+        /* الإشعارات: دمج (إضافة المختلف فقط) بدل الاستبدال */
+        if(k === 'notifications_data'){
+          var r = mergeNotificationsFromBackup(data[k]);
+          if(r){ notifAdded = r.added; count++; }
+          return;
         }
+        /* قوائم "اتشاف" بتتدمج (اتحاد) عشان إشعارات النظام ماترجعش تظهر كجديدة */
+        if(k === 'seen_system_edits' || k === 'seen_added_lectures' || k === 'seen_announcements'){
+          if(mergeSeenList(k, data[k])) count++;
+          return;
+        }
+        try{ localStorage.setItem(k, data[k]); count++; }catch(e){}
       });
-      showToast('✅ تم دمج ' + count + ' عنصر — جاري إعادة التحميل...');
+      showToast('✅ تم دمج ' + count + ' عنصر' + (notifAdded ? ' (+' + notifAdded + ' إشعار جديد)' : '') + ' — جاري إعادة التحميل...');
       setTimeout(function(){ location.reload(); }, 1000);
     }catch(e){ showToast('❌ الملف مش نسخة احتياطية صالحة'); }
   };
@@ -2992,6 +3250,13 @@ function secRender(){
       box.appendChild(secDocRow(fakeDef, lb, lectureUrlOk(u) ? u.trim() : null, typ, off));
       n++;
     });
+  }
+
+  /* فيديوهات السكشن: videos:[{label,url}] أو video:"رابط" (مش بتظهر لو مفيش) */
+  var secVids = off ? [] : vidList(cur.videos || cur.video);
+  if(secVids.length){
+    box.appendChild(secEl('div','sec-header-row','🎬 فيديوهات الأسئلة'));
+    secVids.forEach(function(v){ var it = vidItem(v.t || '🎥 فيديو', v.url); if(it){ box.appendChild(it); n++; } });
   }
 
   if(n) body.appendChild(box);
@@ -4645,3 +4910,38 @@ else { __bootDept(); }
 {
   /* <script defer src="/_vercel/insights/script.js"></script>; */
 }
+
+// ============================================================
+// ☰ قائمة الأقسام والمواد (جانبية على الموبايل / في النص على الكمبيوتر)
+// ============================================================
+(function(){
+  var btn = document.getElementById('menu-btn');
+  var bar = document.getElementById('subject-bar');
+  var back = document.getElementById('menu-backdrop');
+  if(!btn || !bar || !back) return;
+  function isOpen(){ return document.body.classList.contains('menu-open'); }
+  function place(){
+    var hd = document.querySelector('header');
+    if(hd) document.documentElement.style.setProperty('--menu-top', Math.round(hd.getBoundingClientRect().bottom + 8) + 'px');
+  }
+  function openMenu(){
+    place();
+    document.body.classList.add('menu-open');
+    back.hidden = false;
+    btn.setAttribute('aria-expanded','true');
+  }
+  function closeMenu(){
+    document.body.classList.remove('menu-open');
+    back.hidden = true;
+    btn.setAttribute('aria-expanded','false');
+  }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); isOpen() ? closeMenu() : openMenu(); });
+  back.addEventListener('click', closeMenu);
+  // أي ضغطة على قسم / الجدول / ملخص التقدم / مادة → تقفل القايمة (والـ onclick بتاعها بيشتغل الأول)
+  bar.addEventListener('click', function(e){
+    if(e.target.closest && e.target.closest('.subj-btn')) closeMenu();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && isOpen()) closeMenu(); });
+  window.addEventListener('resize', function(){ if(isOpen()) { closeMenu(); } });
+  window.addEventListener('popstate', closeMenu);
+})();

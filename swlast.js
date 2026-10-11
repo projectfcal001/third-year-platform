@@ -1,11 +1,11 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1791700000000";
+const VERSION = "v1791748750142";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./appV2.js",
+  "./app.js",
   "./pwa.js",
   "./pdf-annotator.html",
   "./manifest.webmanifest",
