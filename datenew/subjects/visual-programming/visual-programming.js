@@ -3152,495 +3152,726 @@ subjects.push({
   }
 ],
       questions: [
-        // ─── MCQ ───
-        {
-          q: "1. In C#, which statement is used to write a single-alternative decision structure?",
-          options: ["switch", "while", "if", "for"],
-          correct: 2,
-          translation: "في C#، أي جملة تُستخدم لكتابة هيكل قرار أحادي البديل؟",
-          explanation:
-            "جملة if تُنفّذ كودًا معينًا فقط عند تحقق شرط منطقي، وهي الهيكل الأساسي للقرار أحادي البديل. switch للاختيار بين عدة بدائل، و while و for حلقات تكرار.",
-          tags: ["if statement", "decision structure"],
-          ref: "Lecture 03 — Slide 1",
-        },
-        {
-          q: "2. What appears inside the parentheses of an if statement in C#?",
-          options: [
-            "A string literal",
-            "A Boolean expression",
-            "An integer value",
-            "A variable declaration",
-          ],
-          correct: 1,
-          translation: "ماذا يظهر داخل الأقواس في جملة if بلغة C#؟",
-          explanation:
-            "جملة if تحتاج تعبيرًا منطقيًا Boolean expression يُقيَّم إلى true أو false. النص الحرفي والقيم الصحيحة لا تُستخدم كشرط.",
-          tags: ["if statement", "Boolean expression"],
-          ref: "Lecture 03 — Slide 1",
-        },
-        {
-          q: "3. In the general format of an if statement with multiple statements, what encloses the conditionally executed statements?",
-          options: [
-            "Parentheses",
-            "Square brackets",
-            "Angle brackets",
-            "Curly braces",
-          ],
-          correct: 3,
-          translation:
-            "في الصيغة العامة لجملة if مع عدة جمل، ما الذي يحيط بالجمل التي تُنفَّذ شرطيًا؟",
-          explanation:
-            "الأقواس المعقوفة { } تُحيط بمجموعة الجمل التي تُنفَّذ شرطيًا. الأقواس الهلالية تُحيط بالتعبير المنطقي، والمربعة والزاويّة لا تُستخدم لهذا الغرض في C#.",
-          tags: ["if statement", "curly braces"],
-          ref: "Lecture 03 — Slide 1",
-        },
-        {
-          q: "4. In the Test Score Average application, how many test scores does the user enter?",
-          options: ["Two", "Three", "Five", "Four"],
-          correct: 1,
-          translation:
-            "في تطبيق Test Score Average، كم عدد درجات الاختبار التي يُدخلها المستخدم؟",
-          explanation:
-            "المستخدم يُدخل ثلاث درجات اختبار ثم يُحسب المتوسط. باقي الأعداد (اثنان، أربعة، خمسة) غير مستخدمة.",
-          tags: ["Test Score Average"],
-          ref: "Lecture 03 — Slides 1-2",
-        },
-        {
-          q: "5. In the Payroll with Overtime application, overtime is calculated for hours worked more than what number?",
-          options: ["30", "45", "35", "40"],
-          correct: 3,
-          translation:
-            "في تطبيق Payroll with Overtime، تُحسب ساعات العمل الإضافي عند تجاوز كم ساعة؟",
-          explanation:
-            "الوقت الإضافي يبدأ بعد 40 ساعة عمل. الأرقام 30 و35 و45 ليست هي حدّ الساعات الأساسي.",
-          tags: ["Payroll", "overtime"],
-          ref: "Lecture 03 — Slide 3",
-        },
-        {
-          q: "6. In the Payroll with Overtime application, what multiplier is used for overtime pay?",
-          options: ["1.0", "2.0", "1.5", "0.5"],
-          correct: 2,
-          translation:
-            "في تطبيق Payroll with Overtime، ما معامل الضرب المستخدم لأجر الوقت الإضافي؟",
-          explanation:
-            "يُضرب أجر الساعة الإضافية في 1.5 (مرة ونصف). القيم 1.0 و2.0 و0.5 لا تمثل معامل الوقت الإضافي المذكور.",
-          tags: ["Payroll", "overtime pay"],
-          ref: "Lecture 03 — Slide 3",
-        },
-        {
-          q: "7. In the Loan Qualifier application, what is the minimum salary required to qualify for the loan?",
-          options: ["$30,000", "$50,000", "$40,000", "$60,000"],
-          correct: 2,
-          translation:
-            "في تطبيق Loan Qualifier، ما الحد الأدنى للراتب المطلوب للتأهل للقرض؟",
-          explanation:
-            "الحد الأدنى للراتب هو 40,000 دولار. القيم الأخرى أقل أو أعلى من الحد الفعلي المذكور في المحاضرة.",
-          tags: ["Loan Qualifier", "salary"],
-          ref: "Lecture 03 — Slide 4",
-        },
-        {
-          q: "8. In the Loan Qualifier application, what is the minimum years on the job required?",
-          options: ["2", "3", "1", "4"],
-          correct: 0,
-          translation:
-            "في تطبيق Loan Qualifier، ما الحد الأدنى لعدد سنوات العمل المطلوبة؟",
-          explanation:
-            "يجب أن يكون المتقدم قد أمضى سنتين على الأقل في وظيفته. باقي الأرقام غير مطابقة للشرط.",
-          tags: ["Loan Qualifier", "years on job"],
-          ref: "Lecture 03 — Slide 4",
-        },
-        {
-          q: "9. In the Loan Qualifier application, which logical operator is used in the condition?",
-          options: ["OR", "NOT", "XOR", "AND"],
-          correct: 3,
-          translation:
-            "في تطبيق Loan Qualifier، أي معامل منطقي يُستخدم في الشرط؟",
-          explanation:
-            "يجب تحقق الشرطين معًا (الراتب وسنوات العمل)، لذلك يُستخدم المعامل AND. OR يكفي بأحدهما، وXOR وNOT لا تعبّران عن هذا الشرط.",
-          tags: ["Loan Qualifier", "AND operator"],
-          ref: "Lecture 03 — Slide 4",
-        },
-        {
-          q: "10. In the Grader application, what grading scale is used?",
-          options: ["10-point", "5-point", "15-point", "20-point"],
-          correct: 0,
-          translation: "في تطبيق Grader، ما نظام التقدير المستخدم؟",
-          explanation:
-            "التطبيق يستخدم نظام 10 نقاط (90-100 = A، 80-89 = B، وهكذا). باقي الأنظمة غير مذكورة.",
-          tags: ["Grader", "grading scale"],
-          ref: "Lecture 03 — Slide 4",
-        },
-        {
-          q: "11. In the Grader application, what grade is given for scores 90 and above?",
-          options: ["B", "C", "A", "F"],
-          correct: 2,
-          translation: "في تطبيق Grader، ما التقدير المعطى للدرجات 90 وأعلى؟",
-          explanation:
-            "الدرجات من 90 وأعلى تأخذ تقدير A. B وC وF تُعطى لدرجات أقل حسب نظام العشر نقاط.",
-          tags: ["Grader", "grade A"],
-          ref: "Lecture 03 — Slide 5",
-        },
-        {
-          q: "12. How many logical operators are provided in C# as shown in the table?",
-          options: ["2", "5", "3", "4"],
-          correct: 2,
-          translation:
-            "كم عدد المعاملات المنطقية المتوفرة في C# كما هو موضح في الجدول؟",
-          explanation:
-            "المعاملات المنطقية في C# ثلاثة: AND (&&) وOR (||) وNOT (!). باقي الأعداد غير صحيحة.",
-          tags: ["logical operators"],
-          ref: "Lecture 03 — Slide 5",
-        },
-        {
-          q: "13. What data type in C# holds true or false values?",
-          options: ["int", "double", "string", "bool"],
-          correct: 3,
-          translation: "ما نوع البيانات في C# الذي يحمل القيم true أو false؟",
-          explanation:
-            "النوع bool مخصص للقيم المنطقية true/false. int وdouble للأعداد، وstring للنصوص.",
-          tags: ["bool", "data type"],
-          ref: "Lecture 03 — Slide 6",
-        },
-        {
-          q: "14. What are bool variables commonly used as in code?",
-          options: ["Counters", "Strings", "Arrays", "Flags"],
-          correct: 3,
-          translation: "كيف تُستخدم متغيرات bool عادةً في الكود؟",
-          explanation:
-            "متغيرات bool تُستخدم كأعلام (Flags) تُشير إلى حالة معينة. العدادات والنصوص والمصفوفات لها أنواع أخرى.",
-          tags: ["bool", "flags"],
-          ref: "Lecture 03 — Slide 6",
-        },
-        {
-          q: "15. Which operator is used to compare two strings in C#?",
-          options: ["==", "=", "<>", "!="],
-          correct: 0,
-          translation: "أي معامل يُستخدم لمقارنة نصّين في C#؟",
-          explanation:
-            "المعامل == يُستخدم لمقارنة النصوص في C#. المعامل = للإسناد فقط، و<> و!= لا يُستخدمان لمقارنة النصوص بهذه الطريقة.",
-          tags: ["string comparison", "=="],
-          ref: "Lecture 03 — Slide 6",
-        },
-        {
-          q: "16. In the Secret Word application, what is the secret word?",
-          options: ["Mark", "Ariel", "Mary", "Joe"],
-          correct: 1,
-          translation: "في تطبيق Secret Word، ما هي الكلمة السرية؟",
-          explanation:
-            "الكلمة السرية هي Ariel. باقي الأسماء استُخدمت في أمثلة أخرى داخل المحاضرة.",
-          tags: ["Secret Word"],
-          ref: "Lecture 03 — Slide 6",
-        },
-        {
-          q: "17. What method can perform a case-insensitive string comparison?",
-          options: [
-            "String.Compare with true",
-            "String.Equals",
-            "String.ToLower",
-            "String.Length",
-          ],
-          correct: 0,
-          translation:
-            "أي دالة يمكنها إجراء مقارنة نصية غير حساسة لحالة الأحرف؟",
-          explanation:
-            "String.Compare مع تمرير true تتجاهل حالة الأحرف في المقارنة. String.Equals حساسة للحالة افتراضيًا، وToLower وLength لا تُقارنان.",
-          tags: ["String.Compare", "case-insensitive"],
-          ref: "Lecture 03 — Slide 7",
-        },
-        {
-          q: "18. What do Parse methods throw when converting nonnumeric data?",
-          options: ["Warning", "Error message", "Null value", "Exception"],
-          correct: 3,
-          translation: "ماذا تُطلق دوال Parse عند تحويل بيانات غير رقمية؟",
-          explanation:
-            "دوال Parse تُطلق استثناء Exception عند فشل التحويل. Warning وError message وNull value ليست ما يُطلق فعليًا.",
-          tags: ["Parse", "Exception"],
-          ref: "Lecture 03 — Slide 7",
-        },
-        {
-          q: "19. What is a better practice than using try-catch for data conversion exceptions?",
-          options: [
-            "Using loops",
-            "Ignoring exceptions",
-            "Using switch",
-            "Preventing exceptions with TryParse",
-          ],
-          correct: 3,
-          translation:
-            "ما الممارسة الأفضل من استخدام try-catch لاستثناءات تحويل البيانات؟",
-          explanation:
-            "استخدام TryParse يمنع حدوث الاستثناء أصلًا بدل التعامل معه بعد وقوعه. الحلقات وswitch وIgnoring لا تحل المشكلة.",
-          tags: ["TryParse", "exception handling"],
-          ref: "Lecture 03 — Slide 7",
-        },
-        {
-          q: "20. What does TryParse return if conversion is successful?",
-          options: ["true", "false", "0", "null"],
-          correct: 0,
-          translation: "ماذا تُرجع TryParse إذا نجح التحويل؟",
-          explanation:
-            "TryParse تُرجع true عند نجاح التحويل، وfalse عند فشله، وتُخزِّن الناتج في المتغير الهدف.",
-          tags: ["TryParse", "return value"],
-          ref: "Lecture 03 — Slide 8",
-        },
-        {
-          q: "21. In input validation example for hours worked, what is the maximum valid hours per week?",
-          options: ["168", "40", "100", "400"],
-          correct: 0,
-          translation:
-            "في مثال التحقق من صحة ساعات العمل، ما الحد الأقصى لعدد الساعات الصحيح أسبوعيًا؟",
-          explanation:
-            "الحد الأقصى هو 168 ساعة (عدد ساعات الأسبوع كاملة). 40 هي ساعات العمل الأساسية، و100 و400 غير صحيحة.",
-          tags: ["input validation", "hours"],
-          ref: "Lecture 03 — Slide 9",
-        },
-        {
-          q: "22. In test score validation, what is the valid range?",
-          options: [
-            "0 through 50",
-            "0 through 100",
-            "0 through 90",
-            "0 through 200",
-          ],
-          correct: 1,
-          translation: "في التحقق من صحة درجات الاختبار، ما النطاق الصحيح؟",
-          explanation:
-            "النطاق الصالح للدرجات هو من 0 إلى 100. باقي النطاقات إما أضيق أو أوسع من المسموح به.",
-          tags: ["input validation", "test score range"],
-          ref: "Lecture 03 — Slide 9",
-        },
-        {
-          q: "23. How many radio buttons in a group can be selected at a time?",
-          options: ["One", "None", "All", "Multiple"],
-          correct: 0,
-          translation:
-            "كم عدد أزرار الراديو التي يمكن اختيارها في نفس الوقت داخل المجموعة؟",
-          explanation:
-            "أزرار الراديو في نفس المجموعة يسمح باختيار واحد فقط منها في الوقت نفسه، وهذه طبيعتها الفريدة.",
-          tags: ["RadioButton", "selection"],
-          ref: "Lecture 03 — Slide 9",
-        },
-        {
-          q: "24. What property of RadioButton determines if it is selected?",
-          options: ["Text", "Checked", "Visible", "Enabled"],
-          correct: 1,
-          translation:
-            "أي خاصية في RadioButton تُحدد ما إذا كان مختارًا أم لا؟",
-          explanation:
-            "خاصية Checked تكون true عند اختيار الزر، وfalse عند عدم اختياره. Text للنص، وVisible وEnabled للعرض والتفعيل.",
-          tags: ["RadioButton", "Checked"],
-          ref: "Lecture 03 — Slide 10",
-        },
-        {
-          q: "25. In the Color Mixer application, what secondary color is from red and blue?",
-          options: ["Orange", "Purple", "Green", "Yellow"],
-          correct: 1,
-          translation:
-            "في تطبيق Color Mixer، ما اللون الثانوي الناتج من الأحمر والأزرق؟",
-          explanation:
-            "الأحمر + الأزرق = بنفسجي Purple. البرتقالي من الأحمر والأصفر، والأخضر من الأزرق والأصفر، والأصفر لون أساسي.",
-          tags: ["Color Mixer", "secondary color"],
-          ref: "Lecture 03 — Slide 10",
-        },
-
-        // ─── Essay ───
-        {
-          type: "essay",
-          q: "1. Explain the difference between an if statement and an if-else statement in C#.",
-          translation: "اشرح الفرق بين جملة if وجملة if-else في C#.",
-          answer:
-            "The if statement is a single-alternative decision structure: it executes the block only when the Boolean expression is true, and does nothing when it is false.\n" +
-            "The if-else statement is a dual-alternative decision structure: the if block runs when the expression is true, and the else block runs when the expression is false.\n" +
-            "Both place the Boolean expression inside parentheses, and both enclose multiple statements inside curly braces.",
-          tags: ["if", "if-else"],
-          ref: "Lecture 03 — Slide 1",
-        },
-        {
-          type: "essay",
-          q: "2. Describe the Test Score Average application: inputs, calculation, and the Clear button behavior.",
-          translation:
-            "اوصف تطبيق Test Score Average: المدخلات، الحساب، وسلوك زر Clear.",
-          answer:
-            "The user enters three test scores into TextBoxes.\n" +
-            "The application calculates the average of the three scores and rounds it to two decimal places.\n" +
-            "If the average is greater than the named constant HIGH_SCORE = 95.0, a congratulatory message is displayed.\n" +
-            "When the Clear button is clicked, the TextBoxes and the average label are cleared.",
-          tags: ["Test Score Average"],
-          ref: "Lecture 03 — Slides 1-2",
-        },
-        {
-          type: "essay",
-          q: "3. Explain how the Payroll with Overtime application calculates gross pay.",
-          translation:
-            "اشرح كيف يحسب تطبيق Payroll with Overtime الأجر الإجمالي.",
-          answer:
-            "A named constant BASE_HOURS = 40 is defined.\n" +
-            "If hours worked are less than or equal to 40, gross pay = hours * pay rate.\n" +
-            "If hours worked exceed 40, the first 40 hours are paid at the regular rate and the extra hours are paid at 1.5 times the regular rate.\n" +
-            "Gross pay = (40 * rate) + ((hours - 40) * rate * 1.5).",
-          tags: ["Payroll", "overtime"],
-          ref: "Lecture 03 — Slide 3",
-        },
-        {
-          type: "essay",
-          q: "4. Describe the Loan Qualifier application and the logical operator used in its condition.",
-          translation:
-            "اوصف تطبيق Loan Qualifier والمعامل المنطقي المستخدم في شرطه.",
-          answer:
-            "The application asks for the applicant's salary and years on the job.\n" +
-            "The applicant qualifies only if the salary is at least $40,000 AND the years on the job are at least 2.\n" +
-            "The AND (&&) operator is used because both conditions must be true at the same time.\n" +
-            "If either condition fails, the applicant does not qualify.",
-          tags: ["Loan Qualifier", "AND"],
-          ref: "Lecture 03 — Slide 4",
-        },
-        {
-          type: "essay",
-          q: "5. What is the bool data type in C#, and how are bool variables commonly used?",
-          translation:
-            "ما هو نوع البيانات bool في C#، وكيف تُستخدم متغيرات bool عادةً؟",
-          answer:
-            "The bool data type holds one of two values: true or false.\n" +
-            "Bool variables are commonly used as flags to record a state or condition (for example, grandMaster = points > 5000).\n" +
-            "The NOT operator (!) negates a bool value: !grandMaster is true when grandMaster is false.",
-          tags: ["bool", "flags"],
-          ref: "Lecture 03 — Slide 6",
-        },
-        {
-          type: "essay",
-          q: "6. Explain how string comparison works in C# and how a case-insensitive comparison can be done.",
-          translation:
-            "اشرح كيف تعمل مقارنة النصوص في C# وكيف يمكن إجراؤها بشكل غير حساس لحالة الأحرف.",
-          answer:
-            'The == operator compares two strings but is case-sensitive by default, so "Joe" and "joe" are considered different.\n' +
-            "To compare without regard to case, use String.Compare with the third argument true (ignoreCase = true).\n" +
-            "It returns 0 when the two strings are equal ignoring case.",
-          tags: ["string comparison", "String.Compare"],
-          ref: "Lecture 03 — Slides 6-7",
-        },
-        {
-          type: "essay",
-          q: "7. Compare Parse methods and TryParse methods for data conversion in C#.",
-          translation:
-            "قارن بين دوال Parse ودوال TryParse لتحويل البيانات في C#.",
-          answer:
-            "Parse methods (like int.Parse) throw an exception when the input is not numeric.\n" +
-            "TryParse methods (like int.TryParse) do not throw; they return a bool: true if conversion succeeded and false otherwise.\n" +
-            "If conversion fails, TryParse stores 0 in the target variable and the program continues safely.\n" +
-            "Using TryParse is considered better practice than relying on try-catch.",
-          tags: ["Parse", "TryParse"],
-          ref: "Lecture 03 — Slides 7-8",
-        },
-        {
-          type: "essay",
-          q: "8. What is input validation and why is it important? Give two examples from the lecture.",
-          translation:
-            "ما هو التحقق من صحة الإدخال ولماذا هو مهم؟ اذكر مثالين من المحاضرة.",
-          answer:
-            "Input validation is the process of inspecting input data to confirm it is valid before using it.\n" +
-            "It prevents runtime errors, wrong results, and application crashes.\n" +
-            "Example 1: hours worked per week must be between 0 and 168.\n" +
-            "Example 2: test scores must be between 0 and 100.\n" +
-            "When invalid data is found, the program should display a specific error message for the affected TextBox.",
-          tags: ["input validation"],
-          ref: "Lecture 03 — Slide 9",
-        },
-        {
-          type: "essay",
-          q: "9. Compare RadioButton and CheckBox controls in Windows Forms.",
-          translation:
-            "قارن بين عنصري RadioButton و CheckBox في Windows Forms.",
-          answer:
-            "RadioButtons let the user select one option from a group; only one can be selected at a time.\n" +
-            "They are grouped inside a GroupBox or Panel, and the Checked property reports whether a button is selected.\n" +
-            "The CheckedChanged event fires when the selection changes.\n" +
-            "CheckBoxes, in contrast, allow multiple selections at the same time; the Checked property is true when the box is selected, and the Text property holds the displayed label.",
-          tags: ["RadioButton", "CheckBox"],
-          ref: "Lecture 03 — Slides 9-11",
-        },
-        {
-          type: "essay",
-          q: "10. Describe the main properties and methods of the ListBox control in C#.",
-          translation: "اوصف أهم خصائص ودوال عنصر ListBox في C#.",
-          answer:
-            "ListBox displays a list of items and shows a scroll bar when items exceed the visible space.\n" +
-            "At design time items are added through the Items property collection.\n" +
-            "At runtime: Items.Add adds an item, Items.Clear removes all items, Items.RemoveAt removes the item at a given index, and Items.Count reports the number of items.\n" +
-            "SelectedItem returns the selected item, and SelectedIndex returns its index (-1 if no item is selected).\n" +
-            "The first item has index 0, and the last has index n-1.",
-          tags: ["ListBox"],
-          ref: "Lecture 03 — Slides 12-15",
-        },
-
-        // ─── Calculation / Problems ───
-        {
-          type: "essay",
-          q: "11. A payroll program uses BASE_HOURS = 40 and an overtime multiplier of 1.5. If an employee works 45 hours at $20 per hour, calculate the gross pay.",
-          translation:
-            "برنامج رواتب يستخدم BASE_HOURS = 40 ومعامل الوقت الإضافي 1.5. إذا عمل موظف 45 ساعة بأجر 20 دولارًا للساعة، احسب الأجر الإجمالي.",
-          answer:
-            "Given: hours = 45, rate = $20, BASE_HOURS = 40, overtime multiplier = 1.5.\n" +
-            "Regular pay = 40 * 20 = $800.\n" +
-            "Overtime hours = 45 - 40 = 5.\n" +
-            "Overtime pay = 5 * 20 * 1.5 = $150.\n" +
-            "Gross pay = 800 + 150 = $950.",
-          tags: ["Payroll", "calculation"],
-          ref: "Lecture 03 — Slide 3",
-        },
-        {
-          type: "essay",
-          q: "12. In the Test Score Average application, three test scores 85, 92, and 98 are entered. Calculate the average rounded to two decimal places and state whether a congratulatory message is shown (HIGH_SCORE = 95.0).",
-          translation:
-            "في تطبيق Test Score Average، أُدخلت ثلاث درجات: 85 و92 و98. احسب المتوسط مقربًا لخانتين عشريتين واذكر هل تظهر رسالة تهنئة (HIGH_SCORE = 95.0).",
-          answer:
-            "Given: score1 = 85, score2 = 92, score3 = 98, HIGH_SCORE = 95.0.\n" +
-            "Average = (85 + 92 + 98) / 3 = 275 / 3 = 91.666...\n" +
-            "Rounded to two decimals = 91.67.\n" +
-            "Since 91.67 is not greater than 95.0, the congratulatory message is NOT displayed.",
-          tags: ["Test Score Average", "calculation"],
-          ref: "Lecture 03 — Slides 1-2",
-        },
-        {
-          type: "essay",
-          q: "13. In the Loan Qualifier application, an applicant has a salary of $45,000 and 3 years on the job. Determine whether the applicant qualifies.",
-          translation:
-            "في تطبيق Loan Qualifier، متقدم راتبه 45,000 دولار وعمل 3 سنوات. حدد هل يتأهل للقرض.",
-          answer:
-            "Condition: salary >= $40,000 AND years >= 2.\n" +
-            "$45,000 >= $40,000 is true.\n" +
-            "3 >= 2 is true.\n" +
-            "Both conditions are true, so the applicant QUALIFIES for the loan.",
-          tags: ["Loan Qualifier", "calculation"],
-          ref: "Lecture 03 — Slide 4",
-        },
-        {
-          type: "essay",
-          q: "14. The Range Checker accepts numbers from 1 through 10. Decide if each input is accepted: (a) 5, (b) 0, (c) 12, (d) 10.",
-          translation:
-            "تطبيق Range Checker يقبل الأرقام من 1 إلى 10. حدد هل يُقبل كل إدخال: (أ) 5، (ب) 0، (ج) 12، (د) 10.",
-          answer:
-            "Valid condition: number >= 1 AND number <= 10.\n" +
-            "(a) 5 -> accepted.\n" +
-            "(b) 0 -> rejected (less than 1).\n" +
-            "(c) 12 -> rejected (greater than 10).\n" +
-            "(d) 10 -> accepted (inclusive upper bound).",
-          tags: ["Range Checker", "calculation"],
-          ref: "Lecture 03 — Slide 5",
-        },
-        {
-          type: "essay",
-          q: "15. A ListBox contains 6 items. (a) Index of the first item? (b) Index of the last item? (c) SelectedIndex when no item is selected? (d) SelectedIndex when the item at index 3 is selected?",
-          translation:
-            "يحتوي ListBox على 6 عناصر. (أ) فهرس العنصر الأول؟ (ب) فهرس العنصر الأخير؟ (ج) قيمة SelectedIndex إذا لم يُختر أي عنصر؟ (د) قيمة SelectedIndex عند اختيار العنصر صاحب الفهرس 3؟",
-          answer:
-            "The first item has index 0.\n" +
-            "With 6 items, the last item has index 6 - 1 = 5.\n" +
-            "If no item is selected, SelectedIndex = -1.\n" +
-            "If the item at index 3 is selected, SelectedIndex returns 3.",
-          tags: ["ListBox", "SelectedIndex", "calculation"],
-          ref: "Lecture 03 — Slide 13",
-        },
-      ],
+  {
+    "q": "In C#, what statement is used to write a single-alternative decision structure?",
+    "options": ["switch", "if", "while", "for"],
+    "correct": 1,
+    "translation": "في C#، ما الجملة المستخدمة لكتابة تركيب قرار بديل واحد؟",
+    "explanation": "جملة if تُستخدم لتنفيذ أوامر عند تحقق شرط منطقي فقط. أما switch و while و for فليست مخصصة لتركيب القرار البديل الواحد.",
+    "tags": ["if statement", "decision structure"],
+    "ref": "Chapter 3 — Q1"
+  },
+  {
+    "q": "What appears inside the parentheses of an if statement in C#?",
+    "options": ["A string literal", "A Boolean expression", "An integer value", "A variable declaration"],
+    "correct": 1,
+    "translation": "ماذا يظهر داخل الأقواس في جملة if في C#؟",
+    "explanation": "جملة if تحتاج تعبيرًا منطقيًا Boolean expression ينتج true أو false.",
+    "tags": ["if statement", "Boolean expression"],
+    "ref": "Chapter 3 — Q2"
+  },
+  {
+    "q": "In the general format of the if statement with multiple statements, what encloses the conditionally executed statements?",
+    "options": ["Parentheses", "Square brackets", "Curly braces", "Angle brackets"],
+    "correct": 2,
+    "translation": "في الصيغة العامة لجملة if مع عدة أوامر، ما الذي يحيط بالأوامر المنفذة شرطيًا؟",
+    "explanation": "الأقواس curly braces { } تُستخدم لتجميع عدة أوامر داخل if.",
+    "tags": ["if statement", "syntax"],
+    "ref": "Chapter 3 — Q3"
+  },
+  {
+    "q": "In the Test Score Average application, how many test scores does the user enter?",
+    "options": ["Two", "Three", "Four", "Five"],
+    "correct": 1,
+    "translation": "في تطبيق Test Score Average، كم عدد درجات الاختبار التي يدخلها المستخدم؟",
+    "explanation": "التطبيق يطلب ثلاث درجات ثم يحسب المتوسط.",
+    "tags": ["Test Score Average", "input"],
+    "ref": "Chapter 3 — Q4"
+  },
+  {
+    "q": "In the Test Score Average application, a congratulatory message is displayed if the average is greater than what value?",
+    "options": ["90", "95", "100", "85"],
+    "correct": 1,
+    "translation": "في تطبيق Test Score Average، تظهر رسالة تهنئة إذا كان المتوسط أكبر من أي قيمة؟",
+    "explanation": "الشرط هو أن يكون المتوسط أكبر من 95.0.",
+    "tags": ["Test Score Average", "if statement"],
+    "ref": "Chapter 3 — Q5"
+  },
+  {
+    "q": "In the Test Score Average application, what happens when the Clear button is clicked?",
+    "options": ["Calculates the average", "Clears the TextBoxes and average", "Exits the application", "Displays a message"],
+    "correct": 1,
+    "translation": "في تطبيق Test Score Average، ماذا يحدث عند النقر على زر Clear؟",
+    "explanation": "زر Clear يمسح محتوى TextBoxes وقيمة المتوسط.",
+    "tags": ["Test Score Average", "Clear button"],
+    "ref": "Chapter 3 — Q6"
+  },
+  {
+    "q": "In the code for the Test Score Average application, what constant is used for the high score value?",
+    "options": ["90.0", "95.0", "100.0", "85.0"],
+    "correct": 1,
+    "translation": "في كود تطبيق Test Score Average، ما الثابت المستخدم لقيمة الدرجة العالية؟",
+    "explanation": "الثابت المستخدم هو 95.0.",
+    "tags": ["Test Score Average", "constants"],
+    "ref": "Chapter 3 — Q7"
+  },
+  {
+    "q": "What is the general format of the if-else statement in C#?",
+    "options": ["if (expression) {statements; } else {statements; }", "if (expression) statements; else statements;", "switch (expression) { case: statements; }", "while (expression) { statements; }"],
+    "correct": 0,
+    "translation": "ما الصيغة العامة لجملة if-else في C#؟",
+    "explanation": "الصيغة الصحيحة تضع الأوامر داخل { } بعد if وبعد else.",
+    "tags": ["if-else", "syntax"],
+    "ref": "Chapter 3 — Q8"
+  },
+  {
+    "q": "In the if-else statement, which part executes if the Boolean expression is false?",
+    "options": ["The if clause", "The else clause", "Both clauses", "Neither clause"],
+    "correct": 1,
+    "translation": "في جملة if-else، أي جزء يتم تنفيذه إذا كان التعبير المنطقي false؟",
+    "explanation": "عندما يكون الشرط false ينفذ else clause.",
+    "tags": ["if-else", "Boolean expression"],
+    "ref": "Chapter 3 — Q9"
+  },
+  {
+    "q": "In the Payroll with Overtime application, overtime is calculated for hours worked more than what number?",
+    "options": ["30", "35", "40", "45"],
+    "correct": 2,
+    "translation": "في تطبيق Payroll with Overtime، يتم حساب الوقت الإضافي للعمل أكثر من أي رقم؟",
+    "explanation": "الوقت الإضافي يبدأ بعد 40 ساعة.",
+    "tags": ["Payroll", "overtime"],
+    "ref": "Chapter 3 — Q10"
+  },
+  {
+    "q": "In the Payroll with Overtime application, what multiplier is used for overtime pay?",
+    "options": ["1.0", "1.5", "2.0", "0.5"],
+    "correct": 1,
+    "translation": "في تطبيق Payroll with Overtime، ما معامل الضرب المستخدم لأجر الوقت الإضافي؟",
+    "explanation": "أجر الوقت الإضافي يُحسب بمعامل 1.5.",
+    "tags": ["Payroll", "overtime"],
+    "ref": "Chapter 3 — Q11"
+  },
+  {
+    "q": "In the code for Payroll with Overtime, what is the named constant for base hours?",
+    "options": ["30m", "35m", "40m", "45m"],
+    "correct": 2,
+    "translation": "في كود Payroll with Overtime، ما الثابت المسمى لساعات الأساس؟",
+    "explanation": "الثابت BASE_HOURS يساوي 40m.",
+    "tags": ["Payroll", "constants"],
+    "ref": "Chapter 3 — Q12"
+  },
+  {
+    "q": "In the Loan Qualifier application, what is the minimum salary required to qualify for the loan?",
+    "options": ["$30,000", "$40,000", "$50,000", "$60,000"],
+    "correct": 1,
+    "translation": "في تطبيق Loan Qualifier، ما الحد الأدنى للراتب المطلوب للتأهل للقرض؟",
+    "explanation": "الحد الأدنى للراتب هو 40,000 دولار.",
+    "tags": ["Loan Qualifier", "conditions"],
+    "ref": "Chapter 3 — Q13"
+  },
+  {
+    "q": "In the Loan Qualifier application, what is the minimum years on the job required?",
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "translation": "في تطبيق Loan Qualifier، ما الحد الأدنى لعدد سنوات العمل المطلوبة؟",
+    "explanation": "الحد الأدنى هو سنتان.",
+    "tags": ["Loan Qualifier", "conditions"],
+    "ref": "Chapter 3 — Q14"
+  },
+  {
+    "q": "In the code for Loan Qualifier, what constant is used for minimum years on job?",
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "translation": "في كود Loan Qualifier، ما الثابت المستخدم للحد الأدنى لسنوات العمل؟",
+    "explanation": "الثابت MIN_YEARS يساوي 2.",
+    "tags": ["Loan Qualifier", "constants"],
+    "ref": "Chapter 3 — Q15"
+  },
+  {
+    "q": "In the Grader application, what grading scale is used?",
+    "options": ["5-point", "10-point", "15-point", "20-point"],
+    "correct": 1,
+    "translation": "في تطبيق Grader، ما مقياس الدرجات المستخدم؟",
+    "explanation": "يستخدم التطبيق مقياس 10-point.",
+    "tags": ["Grader", "grading scale"],
+    "ref": "Chapter 3 — Q16"
+  },
+  {
+    "q": "In the Grader application, what grade is given for scores 90 and above?",
+    "options": ["A", "B", "C", "F"],
+    "correct": 0,
+    "translation": "في تطبيق Grader، ما الدرجة المعطاة للعلامات 90 وأعلى؟",
+    "explanation": "العلامة 90 وأعلى تأخذ تقدير A.",
+    "tags": ["Grader", "nested if"],
+    "ref": "Chapter 3 — Q17"
+  },
+  {
+    "q": "What makes the logic of nested decision structures simpler in C#?",
+    "options": ["if-else-if statement", "switch statement", "while loop", "for loop"],
+    "correct": 0,
+    "translation": "ما الذي يبسّط منطق تراكيب القرار المتداخلة في C#؟",
+    "explanation": "جملة if-else-if تجعل السلاسل المتداخلة أوضح وأسهل.",
+    "tags": ["nested if", "if-else-if"],
+    "ref": "Chapter 3 — Q18"
+  },
+  {
+    "q": "How many logical operators are provided in C# as shown in the table?",
+    "options": ["2", "3", "4", "5"],
+    "correct": 1,
+    "translation": "كم عدد المعاملات المنطقية في C# كما في الجدول؟",
+    "explanation": "يوجد ثلاثة معاملات منطقية: && و || و !.",
+    "tags": ["logical operators", "C#"],
+    "ref": "Chapter 3 — Q19"
+  },
+  {
+    "q": "In the Range Checker application, what range is considered acceptable?",
+    "options": ["1 through 5", "1 through 10", "1 through 15", "1 through 20"],
+    "correct": 1,
+    "translation": "في تطبيق Range Checker، ما النطاق المقبول؟",
+    "explanation": "النطاق المقبول هو من 1 إلى 10.",
+    "tags": ["Range Checker", "logical AND"],
+    "ref": "Chapter 3 — Q20"
+  },
+  {
+    "q": "What data type in C# holds true or false values?",
+    "options": ["int", "double", "bool", "string"],
+    "correct": 2,
+    "translation": "ما نوع البيانات في C# الذي يحمل القيم true أو false؟",
+    "explanation": "النوع bool مخصص للقيم المنطقية true/false.",
+    "tags": ["bool", "data types"],
+    "ref": "Chapter 3 — Q21"
+  },
+  {
+    "q": "In the example with bool grandMaster, what value is assigned if points > 5000?",
+    "options": ["false", "true", "0", "1"],
+    "correct": 1,
+    "translation": "في مثال bool grandMaster، ما القيمة المعطاة إذا كانت points > 5000؟",
+    "explanation": "عند تحقق الشرط يتم تعيين grandMaster = true.",
+    "tags": ["bool", "if statement"],
+    "ref": "Chapter 3 — Q22"
+  },
+  {
+    "q": "What are bool variables commonly used as in code?",
+    "options": ["Counters", "Flags", "Strings", "Arrays"],
+    "correct": 1,
+    "translation": "كيف تُستخدم متغيرات bool عادةً في الكود؟",
+    "explanation": "تُستخدم غالبًا كـ Flags تشير إلى حالة true/false.",
+    "tags": ["bool", "flags"],
+    "ref": "Chapter 3 — Q23"
+  },
+  {
+    "q": "Which operator is used to compare two strings in C#?",
+    "options": ["=", "==", "!=", "Equals"],
+    "correct": 1,
+    "translation": "أي معامل يُستخدم لمقارنة نصين في C#؟",
+    "explanation": "تُقارن النصوص في C# باستخدام ==.",
+    "tags": ["string comparison", "operators"],
+    "ref": "Chapter 3 — Q24"
+  },
+  {
+    "q": "In the Secret Word application, what is the secret word?",
+    "options": ["Ariel", "Mark", "Mary", "Joe"],
+    "correct": 0,
+    "translation": "في تطبيق Secret Word، ما الكلمة السرية؟",
+    "explanation": "الكلمة السرية هي Ariel.",
+    "tags": ["Secret Word", "string comparison"],
+    "ref": "Chapter 3 — Q25"
+  },
+  {
+    "q": "In string comparison, are \"Joe\" and \"joe\" considered equal by default?",
+    "options": ["Yes", "No", "Only if lowercase", "Only if uppercase"],
+    "correct": 1,
+    "translation": "في مقارنة النصوص، هل \"Joe\" و \"joe\" متساويان افتراضيًا؟",
+    "explanation": "المقارنة الافتراضية حساسة لحالة الأحرف، لذلك ليسا متساويين.",
+    "tags": ["string comparison", "case sensitivity"],
+    "ref": "Chapter 3 — Q26"
+  },
+  {
+    "q": "What method can perform a case-insensitive string comparison?",
+    "options": ["String.Equals", "String.Compare with true", "String.ToLower", "String.Length"],
+    "correct": 1,
+    "translation": "ما الدالة التي يمكنها المقارنة بين النصوص دون مراعاة حالة الأحرف؟",
+    "explanation": "String.Compare مع تمرير true تتجاهل حالة الأحرف.",
+    "tags": ["string comparison", "String.Compare"],
+    "ref": "Chapter 3 — Q27"
+  },
+  {
+    "q": "What do Parse methods throw when converting nonnumeric data?",
+    "options": ["Warning", "Exception", "Error message", "Null value"],
+    "correct": 1,
+    "translation": "ماذا ترمي دوال Parse عند تحويل بيانات غير رقمية؟",
+    "explanation": "ترمي Exception عند فشل التحويل.",
+    "tags": ["Parse", "exceptions"],
+    "ref": "Chapter 3 — Q28"
+  },
+  {
+    "q": "What is a better practice than using try-catch for data conversion exceptions?",
+    "options": ["Using loops", "Preventing exceptions with TryParse", "Ignoring exceptions", "Using switch"],
+    "correct": 1,
+    "translation": "ما الممارسة الأفضل من استخدام try-catch في تحويل البيانات؟",
+    "explanation": "الأفضل منع حدوث الاستثناء باستخدام TryParse.",
+    "tags": ["TryParse", "validation"],
+    "ref": "Chapter 3 — Q29"
+  },
+  {
+    "q": "Which TryParse method converts a string to an int?",
+    "options": ["double.TryParse", "decimal.TryParse", "int.TryParse", "bool.TryParse"],
+    "correct": 2,
+    "translation": "أي دالة TryParse تحول نصًا إلى int؟",
+    "explanation": "int.TryParse مخصصة لتحويل النص إلى عدد صحيح int.",
+    "tags": ["TryParse", "int"],
+    "ref": "Chapter 3 — Q30"
+  },
+  {
+    "q": "What does TryParse return if conversion is successful?",
+    "options": ["false", "true", "0", "null"],
+    "correct": 1,
+    "translation": "ماذا ترجع TryParse إذا نجح التحويل؟",
+    "explanation": "ترجع true عند نجاح التحويل.",
+    "tags": ["TryParse", "return value"],
+    "ref": "Chapter 3 — Q31"
+  },
+  {
+    "q": "In validating multiple TextBoxes, what should the program do when invalid data is found?",
+    "options": ["Ignore it", "Display a general error", "Display specific error for each TextBox", "Exit the program"],
+    "correct": 2,
+    "translation": "عند التحقق من عدة TextBoxes، ماذا يجب أن يفعل البرنامج عند وجود بيانات غير صحيحة؟",
+    "explanation": "الأفضل عرض رسالة خطأ محددة لكل TextBox.",
+    "tags": ["validation", "TextBox"],
+    "ref": "Chapter 3 — Q32"
+  },
+  {
+    "q": "In the Add Two Numbers Application, what happens if non-integer is entered?",
+    "options": ["Adds anyway", "Shows error for specific TextBox", "Crashes", "Clears all"],
+    "correct": 1,
+    "translation": "في تطبيق Add Two Numbers، ماذا يحدث إذا أُدخل رقم غير صحيح؟",
+    "explanation": "يظهر خطأ خاص بالـ TextBox المعني.",
+    "tags": ["validation", "Add Two Numbers"],
+    "ref": "Chapter 3 — Q33"
+  },
+  {
+    "q": "What is the process of inspecting input data for validity?",
+    "options": ["Data conversion", "Input validation", "Exception handling", "String comparison"],
+    "correct": 1,
+    "translation": "ما عملية فحص بيانات الإدخال للتأكد من صحتها؟",
+    "explanation": "هذه العملية تسمى Input validation.",
+    "tags": ["validation", "input"],
+    "ref": "Chapter 3 — Q34"
+  },
+  {
+    "q": "In input validation example for hours worked, what is the maximum valid hours per week?",
+    "options": ["168", "400", "40", "100"],
+    "correct": 0,
+    "translation": "في مثال التحقق من ساعات العمل، ما الحد الأقصى الصحيح للساعات أسبوعيًا؟",
+    "explanation": "الحد الأقصى 168 ساعة في الأسبوع.",
+    "tags": ["validation", "hours"],
+    "ref": "Chapter 3 — Q35"
+  },
+  {
+    "q": "In test score validation, what is the valid range?",
+    "options": ["0 through 50", "0 through 100", "0 through 90", "0 through 200"],
+    "correct": 1,
+    "translation": "في التحقق من درجة الاختبار، ما النطاق الصحيح؟",
+    "explanation": "الدرجات الصحيحة من 0 إلى 100.",
+    "tags": ["validation", "test scores"],
+    "ref": "Chapter 3 — Q36"
+  },
+  {
+    "q": "What controls allow selecting one choice from several?",
+    "options": ["TextBoxes", "Labels", "Radio buttons", "Check boxes"],
+    "correct": 2,
+    "translation": "ما العناصر التي تسمح باختيار واحد من عدة اختيارات؟",
+    "explanation": "Radio buttons تسمح باختيار واحد فقط من المجموعة.",
+    "tags": ["RadioButton", "controls"],
+    "ref": "Chapter 3 — Q37"
+  },
+  {
+    "q": "How many radio buttons in a group can be selected at a time?",
+    "options": ["None", "One", "All", "Multiple"],
+    "correct": 1,
+    "translation": "كم عدد أزرار الراديو التي يمكن اختيارها في المجموعة في وقت واحد؟",
+    "explanation": "يمكن اختيار زر راديو واحد فقط في المجموعة.",
+    "tags": ["RadioButton", "selection"],
+    "ref": "Chapter 3 — Q38"
+  },
+  {
+    "q": "How are radio buttons grouped?",
+    "options": ["Inside GroupBox or Panel", "Inside Label", "Inside Button", "Inside TextBox"],
+    "correct": 0,
+    "translation": "كيف يتم تجميع أزرار الراديو؟",
+    "explanation": "توضع داخل GroupBox أو Panel لتشكيل مجموعة.",
+    "tags": ["RadioButton", "GroupBox"],
+    "ref": "Chapter 3 — Q39"
+  },
+  {
+    "q": "What property of RadioButton determines if it is selected?",
+    "options": ["Text", "Checked", "Visible", "Enabled"],
+    "correct": 1,
+    "translation": "ما خاصية RadioButton التي تحدد ما إذا كان مختارًا؟",
+    "explanation": "الخاصية Checked تحدد حالة الاختيار.",
+    "tags": ["RadioButton", "Checked"],
+    "ref": "Chapter 3 — Q40"
+  },
+  {
+    "q": "In code, how do you check if a RadioButton is selected?",
+    "options": ["if (radio.Checked)", "if (radio.Text == true)", "if (radio.Visible)", "if (radio.Enabled)"],
+    "correct": 0,
+    "translation": "في الكود، كيف تتحقق من أن RadioButton مختار؟",
+    "explanation": "يتم التحقق باستخدام if (radio.Checked).",
+    "tags": ["RadioButton", "Checked"],
+    "ref": "Chapter 3 — Q41"
+  },
+  {
+    "q": "In the Color Mixer application, what secondary color is from red and blue?",
+    "options": ["Orange", "Green", "Purple", "Yellow"],
+    "correct": 2,
+    "translation": "في تطبيق Color Mixer، ما اللون الثانوي الناتج من الأحمر والأزرق؟",
+    "explanation": "الأحمر + الأزرق = البنفسجي Purple.",
+    "tags": ["Color Mixer", "RadioButton"],
+    "ref": "Chapter 3 — Q42"
+  },
+  {
+    "q": "What event occurs when a RadioButton's Checked property changes?",
+    "options": ["Click", "CheckedChanged", "TextChanged", "Focus"],
+    "correct": 1,
+    "translation": "ما الحدث الذي يقع عند تغير خاصية Checked لـ RadioButton؟",
+    "explanation": "الحدث هو CheckedChanged.",
+    "tags": ["RadioButton", "events"],
+    "ref": "Chapter 3 — Q43"
+  },
+  {
+    "q": "In the Color Theme application, what happens when a radio button is selected?",
+    "options": ["Form background changes immediately", "Message box appears", "Application exits", "Nothing"],
+    "correct": 0,
+    "translation": "في تطبيق Color Theme، ماذا يحدث عند اختيار زر راديو؟",
+    "explanation": "يتغير لون خلفية النموذج فورًا.",
+    "tags": ["Color Theme", "RadioButton"],
+    "ref": "Chapter 3 — Q44"
+  },
+  {
+    "q": "What controls allow multiple selections?",
+    "options": ["Radio buttons", "Buttons", "Check boxes", "Labels"],
+    "correct": 2,
+    "translation": "ما العناصر التي تسمح باختيارات متعددة؟",
+    "explanation": "Check boxes تسمح باختيار أكثر من عنصر.",
+    "tags": ["CheckBox", "controls"],
+    "ref": "Chapter 3 — Q45"
+  },
+  {
+    "q": "What property of CheckBox holds the displayed text?",
+    "options": ["Checked", "Text", "Selected", "Value"],
+    "correct": 1,
+    "translation": "ما خاصية CheckBox التي تحمل النص المعروض؟",
+    "explanation": "الخاصية Text تحمل النص الظاهر.",
+    "tags": ["CheckBox", "Text"],
+    "ref": "Chapter 3 — Q46"
+  },
+  {
+    "q": "In CheckBox, what does Checked = True mean?",
+    "options": ["Unchecked", "Selected", "Disabled", "Hidden"],
+    "correct": 1,
+    "translation": "في CheckBox، ماذا تعني Checked = True؟",
+    "explanation": "تعني أن العنصر مختار Selected.",
+    "tags": ["CheckBox", "Checked"],
+    "ref": "Chapter 3 — Q47"
+  },
+  {
+    "q": "In the switch statement, what is it an alternative to?",
+    "options": ["if-else-if", "for loop", "while loop", "try-catch"],
+    "correct": 0,
+    "translation": "جملة switch تعتبر بديلًا عن ماذا؟",
+    "explanation": "switch بديل لسلسلة if-else-if.",
+    "tags": ["switch", "if-else-if"],
+    "ref": "Chapter 3 — Q48"
+  },
+  {
+    "q": "What control displays a list of items?",
+    "options": ["TextBox", "Label", "ListBox", "Button"],
+    "correct": 2,
+    "translation": "ما العنصر الذي يعرض قائمة من العناصر؟",
+    "explanation": "ListBox يعرض قائمة عناصر.",
+    "tags": ["ListBox", "controls"],
+    "ref": "Chapter 3 — Q49"
+  },
+  {
+    "q": "When does a scroll bar appear in a ListBox?",
+    "options": ["Always", "When items exceed display space", "Never", "On click"],
+    "correct": 1,
+    "translation": "متى يظهر شريط التمرير في ListBox؟",
+    "explanation": "يظهر عندما تتجاوز العناصر المساحة المتاحة للعرض.",
+    "tags": ["ListBox", "scroll bar"],
+    "ref": "Chapter 3 — Q50"
+  },
+  {
+    "q": "How do you add items to ListBox at design time?",
+    "options": ["Code only", "Items property collection", "Text property", "Checked property"],
+    "correct": 1,
+    "translation": "كيف تضيف عناصر إلى ListBox في وقت التصميم؟",
+    "explanation": "عبر مجموعة Items property collection.",
+    "tags": ["ListBox", "design time"],
+    "ref": "Chapter 3 — Q51"
+  },
+  {
+    "q": "What property stores the selected item in ListBox?",
+    "options": ["SelectedIndex", "SelectedItem", "Items.Count", "Text"],
+    "correct": 1,
+    "translation": "ما الخاصية التي تخزن العنصر المختار في ListBox؟",
+    "explanation": "الخاصية SelectedItem تحمل العنصر المختار.",
+    "tags": ["ListBox", "SelectedItem"],
+    "ref": "Chapter 3 — Q52"
+  },
+  {
+    "q": "What value is SelectedIndex if no item is selected?",
+    "options": ["0", "1", "-1", "null"],
+    "correct": 2,
+    "translation": "ما قيمة SelectedIndex إذا لم يتم اختيار أي عنصر؟",
+    "explanation": "تكون القيمة -1 عند عدم وجود اختيار.",
+    "tags": ["ListBox", "SelectedIndex"],
+    "ref": "Chapter 3 — Q53"
+  },
+  {
+    "q": "In Time Zone application, what is displayed when a city is selected?",
+    "options": ["Time", "Time zone name", "Weather", "Population"],
+    "correct": 1,
+    "translation": "في تطبيق Time Zone، ماذا يظهر عند اختيار مدينة؟",
+    "explanation": "يظهر اسم المنطقة الزمنية Time zone name.",
+    "tags": ["Time Zone", "ListBox"],
+    "ref": "Chapter 3 — Q54"
+  },
+  {
+    "q": "How do you add an item to ListBox at runtime?",
+    "options": ["Items.Add", "Items.Clear", "Items.RemoveAt", "Items.Count"],
+    "correct": 0,
+    "translation": "كيف تضيف عنصرًا إلى ListBox في وقت التشغيل؟",
+    "explanation": "تستخدم Items.Add.",
+    "tags": ["ListBox", "Items.Add"],
+    "ref": "Chapter 3 — Q55"
+  },
+  {
+    "q": "In Number List application, what numbers are added to the ListBox?",
+    "options": ["1 to 5", "Shown in the image", "Random", "User input"],
+    "correct": 1,
+    "translation": "في تطبيق Number List، ما الأرقام التي تُضاف إلى ListBox؟",
+    "explanation": "الأرقام موضحة في صورة التطبيق.",
+    "tags": ["Number List", "ListBox"],
+    "ref": "Chapter 3 — Q56"
+  },
+  {
+    "q": "What property reports the number of items in ListBox?",
+    "options": ["Items.Add", "Items.Clear", "Items.Count", "Items.RemoveAt"],
+    "correct": 2,
+    "translation": "ما الخاصية التي تخبر بعدد العناصر في ListBox؟",
+    "explanation": "Items.Count ترجع عدد العناصر.",
+    "tags": ["ListBox", "Items.Count"],
+    "ref": "Chapter 3 — Q57"
+  },
+  {
+    "q": "What method erases all items in ListBox?",
+    "options": ["Items.Add", "Items.Clear", "Items.Count", "Items.RemoveAt"],
+    "correct": 1,
+    "translation": "ما الدالة التي تمسح كل العناصر في ListBox؟",
+    "explanation": "Items.Clear تمسح جميع العناصر.",
+    "tags": ["ListBox", "Items.Clear"],
+    "ref": "Chapter 3 — Q58"
+  },
+  {
+    "q": "What method removes an item at a specific index in ListBox?",
+    "options": ["Items.Add", "Items.Clear", "Items.Count", "Items.RemoveAt"],
+    "correct": 3,
+    "translation": "ما الدالة التي تحذف عنصرًا عند فهرس محدد في ListBox؟",
+    "explanation": "Items.RemoveAt تحذف حسب الفهرس.",
+    "tags": ["ListBox", "Items.RemoveAt"],
+    "ref": "Chapter 3 — Q59"
+  },
+  {
+    "q": "In the Adds, removes and clears ListBox items Application, what does the Clear button do?",
+    "options": ["Adds item", "Removes selected", "Deletes all entries", "Exits app"],
+    "correct": 2,
+    "translation": "في تطبيق إضافة وحذف ومسح عناصر ListBox، ماذا يفعل زر Clear؟",
+    "explanation": "يحذف كل المدخلات.",
+    "tags": ["ListBox", "Clear button"],
+    "ref": "Chapter 3 — Q60"
+  },
+  {
+    "q": "In the if statement without braces, how many statements are conditionally executed?",
+    "options": ["All following", "One", "None", "Multiple"],
+    "correct": 1,
+    "translation": "في جملة if بدون أقواس، كم عدد الأوامر التي تُنفذ شرطيًا؟",
+    "explanation": "بدون أقواس يتم تنفيذ أمر واحد فقط.",
+    "tags": ["if statement", "syntax"],
+    "ref": "Chapter 3 — Q61"
+  },
+  {
+    "q": "In Test Score Average, how is the average rounded?",
+    "options": ["1 decimal place", "2 decimal places", "No rounding", "To integer"],
+    "correct": 1,
+    "translation": "في Test Score Average، كيف يتم تقريب المتوسط؟",
+    "explanation": "يتم التقريب إلى منزلتين عشريتين.",
+    "tags": ["Test Score Average", "rounding"],
+    "ref": "Chapter 3 — Q62"
+  },
+  {
+    "type": "essay",
+    "q": "In Payroll with Overtime, if hours <= 40, how is gross pay calculated?",
+    "translation": "في تطبيق Payroll with Overtime، إذا كانت الساعات <= 40، كيف يُحسب الأجر الإجمالي؟",
+    "answer": "grossPay = hours * payRate.\nNo overtime multiplier is applied because hours are within the base limit.",
+    "tags": ["Payroll", "overtime"],
+    "ref": "Chapter 3 — Q63"
+  },
+  {
+    "q": "In Loan Qualifier, what logical operator is used in the condition?",
+    "options": ["OR", "NOT", "AND", "XOR"],
+    "correct": 2,
+    "translation": "في Loan Qualifier، ما المعامل المنطقي المستخدم في الشرط؟",
+    "explanation": "يستخدم AND للتحقق من شرطين معًا.",
+    "tags": ["Loan Qualifier", "logical AND"],
+    "ref": "Chapter 3 — Q64"
+  },
+  {
+    "q": "In Grader, how many nested if statements are used initially?",
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "translation": "في Grader، كم عدد جمل if المتداخلة المستخدمة مبدئيًا؟",
+    "explanation": "يبدأ الحل بأربع جمل if متداخلة لتغطية التقديرات.",
+    "tags": ["Grader", "nested if"],
+    "ref": "Chapter 3 — Q65"
+  },
+  {
+    "q": "What is the symbol for the AND logical operator in C#?",
+    "options": ["&", "&&", "|", "^"],
+    "correct": 1,
+    "translation": "ما رمز المعامل المنطقي AND في C#؟",
+    "explanation": "رمز AND هو &&.",
+    "tags": ["logical operators", "AND"],
+    "ref": "Chapter 3 — Q66"
+  },
+  {
+    "q": "In Range Checker, what operator checks if number >= 1 and <= 10?",
+    "options": ["OR", "NOT", "AND", "None"],
+    "correct": 2,
+    "translation": "في Range Checker، ما المعامل الذي يتحقق من أن الرقم >= 1 و <= 10؟",
+    "explanation": "يستخدم AND للتحقق من الشرطين معًا.",
+    "tags": ["Range Checker", "logical AND"],
+    "ref": "Chapter 3 — Q67"
+  },
+  {
+    "q": "In bool example, what does !grandMaster mean?",
+    "options": ["grandMaster is true", "grandMaster is false", "Set to true", "Set to false"],
+    "correct": 1,
+    "translation": "في مثال bool، ماذا يعني !grandMaster؟",
+    "explanation": "! تعني النفي، أي أن grandMaster يساوي false.",
+    "tags": ["bool", "NOT operator"],
+    "ref": "Chapter 3 — Q68"
+  },
+  {
+    "q": "In string comparison example, what are name1 and name2?",
+    "options": ["Mary and Mark", "Joe and joe", "Ariel and Mark", "JOE and joe"],
+    "correct": 0,
+    "translation": "في مثال مقارنة النصوص، ما هما name1 و name2؟",
+    "explanation": "القيمتان هما Mary و Mark.",
+    "tags": ["string comparison", "example"],
+    "ref": "Chapter 3 — Q69"
+  },
+  {
+    "q": "In String.Compare with true, what does it return if equal ignoring case?",
+    "options": ["1", "-1", "0", "true"],
+    "correct": 2,
+    "translation": "في String.Compare مع true، ماذا ترجع إذا كان النصان متساويين مع تجاهل حالة الأحرف؟",
+    "explanation": "ترجع 0 عند التساوي.",
+    "tags": ["String.Compare", "string comparison"],
+    "ref": "Chapter 3 — Q70"
+  },
+  {
+    "q": "In TryParse, what is assigned to the target variable if conversion fails?",
+    "options": ["null", "0", "Exception", "Original string"],
+    "correct": 1,
+    "translation": "في TryParse، ماذا يُسند إلى المتغير الهدف إذا فشل التحويل؟",
+    "explanation": "غالبًا يُسند 0 للمتغير الرقمي عند الفشل.",
+    "tags": ["TryParse", "conversion"],
+    "ref": "Chapter 3 — Q71"
+  },
+  {
+    "q": "In Add Two Numbers code, how many if statements check for valid input?",
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "translation": "في كود Add Two Numbers، كم عدد جمل if التي تتحقق من صحة الإدخال؟",
+    "explanation": "توجد جملتا if، واحدة لكل TextBox.",
+    "tags": ["Add Two Numbers", "validation"],
+    "ref": "Chapter 3 — Q72"
+  },
+  {
+    "q": "In input validation for payroll, what if hours > 168?",
+    "options": ["Accept", "Error message", "Calculate overtime", "Set to 40"],
+    "correct": 1,
+    "translation": "في التحقق من إدخال الرواتب، ماذا يحدث إذا كانت الساعات > 168؟",
+    "explanation": "تظهر رسالة خطأ لأن القيمة غير صحيحة.",
+    "tags": ["validation", "payroll"],
+    "ref": "Chapter 3 — Q73"
+  },
+  {
+    "q": "Default value of RadioButton Checked property?",
+    "options": ["True", "False", "Null", "0"],
+    "correct": 1,
+    "translation": "ما القيمة الافتراضية لخاصية Checked في RadioButton؟",
+    "explanation": "القيمة الافتراضية هي False.",
+    "tags": ["RadioButton", "Checked"],
+    "ref": "Chapter 3 — Q74"
+  },
+  {
+    "q": "In Color Mixer, if same color selected in both groups?",
+    "options": ["Mix to secondary", "Set form to that color", "Error", "No change"],
+    "correct": 1,
+    "translation": "في Color Mixer، إذا تم اختيار نفس اللون في المجموعتين؟",
+    "explanation": "يتم تعيين لون النموذج إلى ذلك اللون.",
+    "tags": ["Color Mixer", "RadioButton"],
+    "ref": "Chapter 3 — Q75"
+  },
+  {
+    "q": "How to create CheckedChanged event handler?",
+    "options": ["Click the control", "Double-click the control", "Right-click", "Properties"],
+    "correct": 1,
+    "translation": "كيف تنشئ معالج حدث CheckedChanged؟",
+    "explanation": "بالنقر المزدوج على العنصر.",
+    "tags": ["events", "CheckedChanged"],
+    "ref": "Chapter 3 — Q76"
+  },
+  {
+    "q": "In Check Boxes, how many can be selected?",
+    "options": ["One", "None", "Any number", "All"],
+    "correct": 2,
+    "translation": "في Check Boxes، كم عدد العناصر التي يمكن اختيارها؟",
+    "explanation": "يمكن اختيار أي عدد من العناصر.",
+    "tags": ["CheckBox", "selection"],
+    "ref": "Chapter 3 — Q77"
+  },
+  {
+    "q": "In ListBox, first item index?",
+    "options": ["-1", "0", "1", "null"],
+    "correct": 1,
+    "translation": "في ListBox، ما فهرس العنصر الأول؟",
+    "explanation": "الفهرسة تبدأ من 0.",
+    "tags": ["ListBox", "index"],
+    "ref": "Chapter 3 — Q78"
+  },
+  {
+    "q": "In SelectedIndex property, last index is?",
+    "options": ["n", "n-1", "0", "-1"],
+    "correct": 1,
+    "translation": "في خاصية SelectedIndex، ما الفهرس الأخير؟",
+    "explanation": "إذا كان عدد العناصر n، فالفهرس الأخير هو n-1.",
+    "tags": ["ListBox", "SelectedIndex"],
+    "ref": "Chapter 3 — Q79"
+  },
+  {
+    "q": "In Example 11, what button removes the selected item?",
+    "options": ["Add", "Remove", "Clear", "Exit"],
+    "correct": 1,
+    "translation": "في المثال 11، ما الزر الذي يحذف العنصر المختار؟",
+    "explanation": "زر Remove يحذف العنصر المحدد.",
+    "tags": ["ListBox", "Remove button"],
+    "ref": "Chapter 3 — Q80"
+  }
+],
     },
   ],
 
