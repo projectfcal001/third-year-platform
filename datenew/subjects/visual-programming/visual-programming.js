@@ -1434,34 +1434,77 @@ subjects.push({
       pdf: "datenew/subjects/visual-programming/lectures/Chapter 2.pdf",
       pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Chapter 2 - Questions - Visual Programming.pdf",
       // فئات روابط منظمة - الفصل الثاني: معالجة البيانات وأدوات التحكم في C# WinForms (Processing Data)
+      // المحاضرة الثانية: معالجة البيانات وتطوير الواجهات الرسومية باستخدام C# Windows Forms (Chapter 2: Processing Data)
+
+      // المحاضرة الثانية: معالجة البيانات وتطوير الواجهات الرسومية باستخدام C# Windows Forms (Chapter 2: Processing Data)
+
       linkCategories: [
         {
           category: "فيديوهات عربية",
           icon: "🇪🇬",
           description:
-            "شروحات باللغة العربية للتعامل مع أداة TextBox، تحويل النصوص إلى أرقام (Parse)، ومعالجة الاستثناءات (try-catch)",
+            "شروحات باللغة العربية لأساسيات C# وWindows Forms والـ Controls — من المصادر الرسمية لـ Microsoft والمحتوى العربي المُتحقّق منه",
           links: [
             {
-              t: "أب ديت (Update) - كورس C# WinForms وعمليات معالجة البيانات",
-              d: "شرح عملي بالعربي لقراءة المدخلات من الـ TextBox، العمليات الحسابية، وتنسيق الأرقام باستخدام ToString",
+              t: "كورس C# و Windows Forms الشامل - حسونة أكاديمي",
+              d: "سلسلة شروحات متكاملة للغة C# وتطبيقات Windows Forms والتعامل مع أدوات الواجهة والأحداث",
               icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLkpG3YKjv6p5XwncCUIlPFSBNnN4mnhGA",
+                  label: "🎬 القائمة الكاملة",
+                  url: "https://youtube.com/playlist?list=PLHIfW1KZRIfnbNoGB0NdoRdllq9fdo6uM",
                   type: "view",
                   color: "red",
                 },
               ],
             },
             {
-              t: "أساسيات C# وتطبيقات سطح المكتب - التعامل مع المتغيرات والنطاق (Scope)",
-              d: "توضيح الفرق بين المتغيرات المحلية (Local Variables) والحقول (Fields) ومعالجة الأخطاء برمجياً",
+              t: "سلسلة C# وتطبيقات الواجهات الرسومية",
+              d: "قائمة تشغيل تعليمية تغطي أساسيات C# والواجهات الرسومية ومعالجة البيانات للأستاذ د. محمد",
               icon: "🇪🇬",
               actions: [
                 {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=bfmFfD2RIcg",
+                  label: "🎬 القائمة الكاملة",
+                  url: "https://youtube.com/playlist?list=PLmoWijvitK0Ry_ZHeihcU44SVQqHwpIvn",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "أساسيات #C للمبتدئين الأوليين - Microsoft Learn (بالعربي)",
+              d: "سلسلة Microsoft الرسمية بالعربية (25 حلقة): الحصول على الأدوات، كتابة الكود، تصحيح الأخطاء، وفهم بنية البرنامج",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 السلسلة الكاملة",
+                  url: "https://learn.microsoft.com/ar-sa/shows/c-fundamentals-for-absolute-beginners",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "إنشاء أول برنامج C# - Microsoft Learn بالعربي",
+              d: "الحلقة الثالثة: إنشاء أول برنامج C# وفهم Visual Studio — يطابق بداية الفصل",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🎬 الحلقة 3",
+                  url: "https://learn.microsoft.com/ar-sa/shows/c-fundamentals-for-absolute-beginners/03",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "تشريح أول برنامج C# - فهم بنية الكود",
+              d: "الحلقة الرابعة: فهم مكونات الكود، Namespaces وClasses — يطابق قسم Introduction to C# Code",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🎬 الحلقة 4",
+                  url: "https://learn.microsoft.com/ar-sa/shows/c-fundamentals-for-absolute-beginners/04",
                   type: "view",
                   color: "red",
                 },
@@ -1473,29 +1516,42 @@ subjects.push({
           category: "فيديوهات عالمية",
           icon: "🌍",
           description:
-            "شروحات أكاديمية وعالمية لمفاهيم C# WinForms، الـ Parsing، ومعالجة الأخطاء (Exception Handling)",
+            "محاضرات عالمية مُتحقّق منها تغطي Windows Forms والـ Controls والـ Event Handlers",
           links: [
             {
-              t: "C# Windows Forms Application Tutorial - Parsing & Exception Handling",
-              d: "شرح مفصل لكيفية تحويل البيانات باستخدام int.Parse و double.Parse وحماية البرنامج باستخدام try-catch",
+              t: "Intro to Windows Forms (WinForms) - IAmTimCorey",
+              d: "شرح شامل (313K مشاهدة، 1:35 ساعة): ما هو WinForms، كيفية البناء، أفضل الممارسات — مطابق لمحتوى الفصل",
               icon: "🌍",
               actions: [
                 {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=LsK-xswGVEE",
+                  label: "🎬 المحاضرة",
+                  url: "https://www.youtube.com/watch?v=0zLZQesgV5o",
                   type: "view",
                   color: "red",
                 },
               ],
             },
             {
-              t: "ProgrammingKnowledge - C# WinForms Controls (TextBox, GroupBox, Panel)",
-              d: "دليل شامل للتعامل مع خصائص العناصر، ترتيب التركيز (Tab Order)، ومفاتيح الاختصار (Access Keys)",
+              t: "Windows Forms and Event Handlers - AngelSix",
+              d: "شرح عملي (309K مشاهدة): إنشاء Calculator UI مع Button Event Handlers — يطابق مثال Hello World والـ Click Events",
               icon: "🌍",
               actions: [
                 {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/user/programmingknowledge",
+                  label: "🎬 المحاضرة",
+                  url: "https://www.youtube.com/watch?v=W6vJ_c9Mt6A",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Complete Guide to Windows Forms - 3CodeCamp",
+              d: "كورس شامل (3+ ساعات): تحميل Visual Studio، الـ Toolbox Components، بناء تطبيق عملي — مرجع كامل",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 الكورس الكامل",
+                  url: "https://www.youtube.com/watch?v=SD1VbUYUO7U",
                   type: "view",
                   color: "red",
                 },
@@ -1507,62 +1563,194 @@ subjects.push({
           category: "مواقع ومراجع",
           icon: "📚",
           description:
-            "مرجعيات وتوثيقات رسمية لدوال C#، صياغة النصوص، وتنسيق الأرقام والعملات",
+            "التوثيق الرسمي من Microsoft — يغطي كل مفاهيم الفصل بالتفصيل",
           links: [
             {
-              t: "Microsoft Learn - TextBox Control & Data Conversion (Parse & ToString)",
-              d: "التوثيق الرسمي من Microsoft لتعلم كيفية قراءة البيانات من الـ TextBox وتحويلها لأنواع البيانات المختلفة",
+              t: "Create a Windows Forms app with C# - Visual Studio Tutorial",
+              d: "التوثيق الرسمي: إنشاء مشروع، إضافة Controls، التعامل مع Events — مطابق لخطوات الفصل بالضبط",
               icon: "📚",
               actions: [
                 {
-                  label: "🚀 فتح المقال",
-                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+                  label: "🚀 فتح الـ Tutorial",
+                  url: "https://learn.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio",
                   type: "view",
                   color: "green",
                 },
               ],
             },
             {
-              t: "GeeksforGeeks - C# Exception Handling (try-catch) & Math Class",
-              d: "مقالات تفصيلية حول كيفية التعامل مع الأخطاء المفاجئة واستخدام الدوال الرياضية في لغة C#",
+              t: "C# Documentation - Official Reference",
+              d: "المرجع الرسمي للغة C#: Fundamentals, Language Reference, Tutorials — لفهم Namespaces وClasses وMethods",
               icon: "📚",
               actions: [
                 {
-                  label: "🌐 فتح الموقع",
-                  url: "https://www.geeksforgeeks.org/c-sharp-programming-language/",
+                  label: "🚀 فتح المرجع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
                   type: "view",
                   color: "blue",
+                },
+              ],
+            },
+            {
+              t: "General Structure of a C# Program",
+              d: "شرح رسمي لبنية برنامج C#: Namespaces, Types, Statements — يطابق قسم Introduction to C# Code",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح الشرح",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Windows Forms Designer Overview",
+              d: "شرح رسمي للـ Designer: إضافة وترتيب Controls، تعديل Properties، كتابة Event Handlers",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح الشرح",
+                  url: "https://learn.microsoft.com/en-us/visualstudio/designers/windows-forms-designer-overview",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Add Controls to a Form",
+              d: "شرح رسمي لإضافة Controls إلى Form — يطابق قسم Adding Controls to a Form",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح الشرح",
+                  url: "https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-add-to-a-form",
+                  type: "view",
+                  color: "green",
                 },
               ],
             },
           ],
         },
         {
-          category: "أدوات ومحاكاة",
-          icon: "🔧",
+          category: "Events & Event Handlers",
+          icon: "⚡",
           description:
-            "بيئات التطوير والأدوات اللازمة لكتابة وتجربة تطبيقات C# WinForms",
+            "مصادر للجزء الخاص بالـ Event Handler مثل displayButton_Click وMessageBox.Show",
           links: [
             {
-              t: "Microsoft Visual Studio - IDE for C# WinForms Development",
-              d: "بيئة التطوير الرسمية المتكاملة لتصميم الواجهات الرسومية، تعديل الخصائص، وكتابة أكواد C#",
+              t: "C# Events - Official Documentation",
+              d: "شرح رسمي لمفهوم Events في C# وكيف تتعامل Controls مع الأحداث",
+              icon: "⚡",
+              actions: [
+                {
+                  label: "🚀 فتح الشرح",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/events/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "How to Handle Control Events",
+              d: "شرح رسمي لإنشاء وربط Event Handlers مع Controls في Windows Forms",
+              icon: "⚡",
+              actions: [
+                {
+                  label: "🚀 فتح الشرح",
+                  url: "https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-add-an-event-handler",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Picture Viewer Tutorial - Adding Code",
+              d: "تطبيق عملي: إضافة Event Handlers وكتابة الكود — يطابق مثال Hello World",
+              icon: "⚡",
+              actions: [
+                {
+                  label: "🚀 فتح الـ Tutorial",
+                  url: "https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-windows-forms-picture-viewer-code",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مشاريع تطبيقية",
+          icon: "🚀",
+          description:
+            "مشاريع عملية من Microsoft تطبق كل مفاهيم الفصل: إنشاء مشروع، تصميم GUI، إضافة Controls، كتابة Events",
+          links: [
+            {
+              t: "Hello World Windows Forms App",
+              d: "تطبيق Hello World الرسمي — مطابق تماماً لمثال الفصل: إنشاء Button، تغيير Text، كتابة MessageBox.Show",
+              icon: "👋",
+              actions: [
+                {
+                  label: "🚀 ابدأ التطبيق",
+                  url: "https://learn.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Picture Viewer - Complete Project",
+              d: "مشروع متكامل: إنشاء Layout، إضافة Controls، كتابة Event Handlers — تطبيق شامل لمفاهيم الفصل",
+              icon: "🖼️",
+              actions: [
+                {
+                  label: "🚀 ابدأ المشروع",
+                  url: "https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-windows-forms-picture-viewer-layout",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Windows Forms Math Quiz",
+              d: "مشروع تطبيقي: إنشاء مشروع، إضافة Labels وButtons، التعامل مع Controls — يعزز فهم الفصل",
+              icon: "🧮",
+              actions: [
+                {
+                  label: "🚀 ابدأ المشروع",
+                  url: "https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-windows-forms-math-quiz-create-project-add-controls",
+                  type: "view",
+                  color: "purple",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات التطوير",
+          icon: "🔧",
+          description: "الأدوات المطلوبة لتطبيق مفاهيم الفصل عملياً",
+          links: [
+            {
+              t: "Visual Studio Community - Free Download",
+              d: "تحميل بيئة التطوير المتكاملة (IDE) المجانية — الأداة الأساسية المطلوبة في الفصل",
               icon: "🔧",
               actions: [
                 {
-                  label: "⭳ تحميل الأداة",
-                  url: "https://visualstudio.microsoft.com/",
+                  label: "⭳ تحميل Visual Studio",
+                  url: "https://visualstudio.microsoft.com/downloads/",
                   type: "download",
                   color: "blue",
                 },
               ],
             },
             {
-              t: "C# Fiddle - Online C# Compiler & Code Tester",
-              d: "منصة تفاعلية عبر الإنترنت لتجربة أكواد C# والعمليات الحسابية والـ Parsing بشكل سريع دون الحاجة للتثبيت",
+              t: ".NET Fiddle - Online C# Compiler",
+              d: "محرر أونلاين لتجربة كود C# مباشرة — مفيد لفهم Namespaces وClasses بدون تثبيت",
               icon: "🔧",
               actions: [
                 {
-                  label: "🚀 فتح التفاعليات",
+                  label: "🚀 فتح المحرر",
                   url: "https://dotnetfiddle.net/",
                   type: "view",
                   color: "orange",
@@ -2791,6 +2979,666 @@ subjects.push({
           explanation: "تُرجع الدالة Math.Min القيمة الصغرى (Minimum).",
           tags: ["Math", "Functions"],
           ref: "Chapter 2 - Page 21",
+        },
+      ],
+    },
+    //وصلنا لسلايد 51
+    {
+      id: "visual-programming-lecture-03",
+      t: "المحاضرة 03 — هياكل القرار في C#",
+      notes: "وصلنا لسلايد 51 .",
+      d: "شرح هياكل القرار (if, if-else, if-else-if, switch) بلغة C#، المعاملات المنطقية، المتغيرات المنطقية bool، مقارنة النصوص، التحقق من صحة الإدخال، وأدوات RadioButton و CheckBox و ListBox.",
+      pdf: "datenew/subjects/visual-programming/lectures/Chapter 3.pdf",
+      pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Chapter 3 - Questions - Visual Programming.pdf",
+// المحاضرة الثالثة: اتخاذ القرار وهياكل التحكم في C# وتطبيقات Windows Forms (Decision Structures, if-else, switch, RadioButtons, CheckBoxes, ListBoxes, TryParse)
+ linkCategories : [
+  {
+    category: "فيديوهات عربية",
+    icon: "🇪🇬",
+    description: "شروحات باللغة العربية تغطي هياكل اتخاذ القرار في C#، جمل الشرط if و else و switch، والتعامل مع أدوات الواجهة مثل RadioButtons و CheckBoxes و ListBoxes",
+    links: [
+      {
+        t: "كورس C# الشامل - جمل التحكم واتخاذ القرار - حسونة أكاديمي",
+        d: "شرح تفصيلي باللغة العربية لجمل الشرط if, else if, switch والعمليات المنطقية في لغة C#",
+        icon: "🇪🇬",
+        actions: [
+          {
+            label: "🎬 مشاهدة القائمة",
+            url: "https://www.youtube.com/playlist?list=PLHIfW1KZRIfnbNoGB0NdoRdllq9fdo6uM",
+            type: "view",
+            color: "red"
+          }
+        ]
+      },
+      {
+        t: "شرح الأدوات والتحكم في Windows Forms - الأستاذ د. محمد",
+        d: "تطبيق عملي على استخدام RadioButton و CheckBox و ListBox وكتابة الأحداث في C#",
+        icon: "🇪🇬",
+        actions: [
+          {
+            label: "🎬 مشاهدة القائمة",
+            url: "https://www.youtube.com/playlist?list=PLmoWijvitK0Ry_ZHeihcU44SVQqHwpIvn",
+            type: "view",
+            color: "red"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "فيديوهات عالمية",
+    icon: "🌍",
+    description: "محاضرات تقنية عالمية تشرح تفاصيل اتخاذ القرار، التحقق من المدخلات باستخدام TryParse، وبرمجة عناصر التحكم في Windows Forms",
+    links: [
+      {
+        t: "C# Selection Statements (if, else, switch) - Tim Corey",
+        d: "شرح احترافي لعمليات اتخاذ القرار، جمل الشرط، وتجنب الأخطاء البرمجية في C#",
+        icon: "🌍",
+        actions: [
+          {
+            label: "🎬 مشاهدة المحاضرة",
+            url: "https://www.youtube.com/watch?v=0zLZQesgV5o",
+            type: "view",
+            color: "red"
+          }
+        ]
+      },
+      {
+        t: "Windows Forms Controls Deep Dive (RadioButtons, CheckBoxes, ListBoxes) - 3CodeCamp",
+        d: "تطبيق عملي متقدم لربط عناصر تحكم الواجهة الرسومية مع الأكواد البرمجية ومعالجة الأحداث",
+        icon: "🌍",
+        actions: [
+          {
+            label: "🎬 مشاهدة المحاضرة",
+            url: "https://www.youtube.com/watch?v=SD1VbUYUO7U",
+            type: "view",
+            color: "red"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "مواقع ومراجع",
+    icon: "📚",
+    description: "التوثيق الرسمي من Microsoft لفهم هياكل اتخاذ القرار، العمليات المنطقية، دوال TryParse، وأدوات WinForms",
+    links: [
+      {
+        t: "Selection statements (C# Reference) - Microsoft Docs",
+        d: "التوثيق الرسمي لجمل if, else, و switch وكيفية كتابة التعبيرات المنطقية في C#",
+        icon: "📚",
+        actions: [
+          {
+            label: "🚀 فتح المقال",
+            url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements",
+            type: "view",
+            color: "blue"
+          }
+        ]
+      },
+      {
+        t: "Boolean logical operators - Microsoft Reference",
+        d: "شرح تفصيلي للعمليات المنطقية && و || و ! لبناء تعبيرات شرطية معقدة",
+        icon: "📚",
+        actions: [
+          {
+            label: "🚀 فتح المقال",
+            url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators",
+            type: "view",
+            color: "blue"
+          }
+        ]
+      },
+      {
+        t: "How to parse strings to numbers using TryParse - Microsoft Learn",
+        d: "أفضل ممارسات التحقق من المدخلات ومنع استثناءات التحويل باستخدام دوال TryParse في C#",
+        icon: "📚",
+        actions: [
+          {
+            label: "🚀 فتح المقال",
+            url: "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number",
+            type: "view",
+            color: "green"
+          }
+        ]
+      },
+      {
+        t: "Windows Forms ListBox Control Overview - Microsoft Learn",
+        d: "المرجع الرسمي لعناصر ListBox، الخصائص SelectedItem و SelectedIndex، وإدارة العناصر",
+        icon: "📚",
+        actions: [
+          {
+            label: "🚀 فتح المقال",
+            url: "https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/listbox-control-windows-forms",
+            type: "view",
+            color: "orange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "أدوات ومحاكاة",
+    icon: "🔧",
+    description: "البيئات والأدوات البرمجية اللازمة لكتابة وتجربة أكواد اتخاذ القرار وتطبيقات Windows Forms",
+    links: [
+      {
+        t: "Visual Studio Community - Free IDE",
+        d: "بيئة التطوير المتكاملة الرسمية من Microsoft لتصميم واجهات WinForms وكتابة كود C#",
+        icon: "🔧",
+        actions: [
+          {
+            label: "⭳ تحميل الأداة",
+            url: "https://visualstudio.microsoft.com/downloads/",
+            type: "download",
+            color: "blue"
+          }
+        ]
+      },
+      {
+        t: ".NET Fiddle - Online C# Compiler",
+        d: "محرر ومترجم أونلاين لتجربة جمل الشرط والـ switch واختبار الأكواد بدون تثبيت برامج",
+        icon: "🔧",
+        actions: [
+          {
+            label: "🌐 فتح الموقع",
+            url: "https://dotnetfiddle.net/",
+            type: "view",
+            color: "orange"
+          }
+        ]
+      }
+    ]
+  }
+],
+      questions: [
+        // ─── MCQ ───
+        {
+          q: "1. In C#, which statement is used to write a single-alternative decision structure?",
+          options: ["switch", "while", "if", "for"],
+          correct: 2,
+          translation: "في C#، أي جملة تُستخدم لكتابة هيكل قرار أحادي البديل؟",
+          explanation:
+            "جملة if تُنفّذ كودًا معينًا فقط عند تحقق شرط منطقي، وهي الهيكل الأساسي للقرار أحادي البديل. switch للاختيار بين عدة بدائل، و while و for حلقات تكرار.",
+          tags: ["if statement", "decision structure"],
+          ref: "Lecture 03 — Slide 1",
+        },
+        {
+          q: "2. What appears inside the parentheses of an if statement in C#?",
+          options: [
+            "A string literal",
+            "A Boolean expression",
+            "An integer value",
+            "A variable declaration",
+          ],
+          correct: 1,
+          translation: "ماذا يظهر داخل الأقواس في جملة if بلغة C#؟",
+          explanation:
+            "جملة if تحتاج تعبيرًا منطقيًا Boolean expression يُقيَّم إلى true أو false. النص الحرفي والقيم الصحيحة لا تُستخدم كشرط.",
+          tags: ["if statement", "Boolean expression"],
+          ref: "Lecture 03 — Slide 1",
+        },
+        {
+          q: "3. In the general format of an if statement with multiple statements, what encloses the conditionally executed statements?",
+          options: [
+            "Parentheses",
+            "Square brackets",
+            "Angle brackets",
+            "Curly braces",
+          ],
+          correct: 3,
+          translation:
+            "في الصيغة العامة لجملة if مع عدة جمل، ما الذي يحيط بالجمل التي تُنفَّذ شرطيًا؟",
+          explanation:
+            "الأقواس المعقوفة { } تُحيط بمجموعة الجمل التي تُنفَّذ شرطيًا. الأقواس الهلالية تُحيط بالتعبير المنطقي، والمربعة والزاويّة لا تُستخدم لهذا الغرض في C#.",
+          tags: ["if statement", "curly braces"],
+          ref: "Lecture 03 — Slide 1",
+        },
+        {
+          q: "4. In the Test Score Average application, how many test scores does the user enter?",
+          options: ["Two", "Three", "Five", "Four"],
+          correct: 1,
+          translation:
+            "في تطبيق Test Score Average، كم عدد درجات الاختبار التي يُدخلها المستخدم؟",
+          explanation:
+            "المستخدم يُدخل ثلاث درجات اختبار ثم يُحسب المتوسط. باقي الأعداد (اثنان، أربعة، خمسة) غير مستخدمة.",
+          tags: ["Test Score Average"],
+          ref: "Lecture 03 — Slides 1-2",
+        },
+        {
+          q: "5. In the Payroll with Overtime application, overtime is calculated for hours worked more than what number?",
+          options: ["30", "45", "35", "40"],
+          correct: 3,
+          translation:
+            "في تطبيق Payroll with Overtime، تُحسب ساعات العمل الإضافي عند تجاوز كم ساعة؟",
+          explanation:
+            "الوقت الإضافي يبدأ بعد 40 ساعة عمل. الأرقام 30 و35 و45 ليست هي حدّ الساعات الأساسي.",
+          tags: ["Payroll", "overtime"],
+          ref: "Lecture 03 — Slide 3",
+        },
+        {
+          q: "6. In the Payroll with Overtime application, what multiplier is used for overtime pay?",
+          options: ["1.0", "2.0", "1.5", "0.5"],
+          correct: 2,
+          translation:
+            "في تطبيق Payroll with Overtime، ما معامل الضرب المستخدم لأجر الوقت الإضافي؟",
+          explanation:
+            "يُضرب أجر الساعة الإضافية في 1.5 (مرة ونصف). القيم 1.0 و2.0 و0.5 لا تمثل معامل الوقت الإضافي المذكور.",
+          tags: ["Payroll", "overtime pay"],
+          ref: "Lecture 03 — Slide 3",
+        },
+        {
+          q: "7. In the Loan Qualifier application, what is the minimum salary required to qualify for the loan?",
+          options: ["$30,000", "$50,000", "$40,000", "$60,000"],
+          correct: 2,
+          translation:
+            "في تطبيق Loan Qualifier، ما الحد الأدنى للراتب المطلوب للتأهل للقرض؟",
+          explanation:
+            "الحد الأدنى للراتب هو 40,000 دولار. القيم الأخرى أقل أو أعلى من الحد الفعلي المذكور في المحاضرة.",
+          tags: ["Loan Qualifier", "salary"],
+          ref: "Lecture 03 — Slide 4",
+        },
+        {
+          q: "8. In the Loan Qualifier application, what is the minimum years on the job required?",
+          options: ["2", "3", "1", "4"],
+          correct: 0,
+          translation:
+            "في تطبيق Loan Qualifier، ما الحد الأدنى لعدد سنوات العمل المطلوبة؟",
+          explanation:
+            "يجب أن يكون المتقدم قد أمضى سنتين على الأقل في وظيفته. باقي الأرقام غير مطابقة للشرط.",
+          tags: ["Loan Qualifier", "years on job"],
+          ref: "Lecture 03 — Slide 4",
+        },
+        {
+          q: "9. In the Loan Qualifier application, which logical operator is used in the condition?",
+          options: ["OR", "NOT", "XOR", "AND"],
+          correct: 3,
+          translation:
+            "في تطبيق Loan Qualifier، أي معامل منطقي يُستخدم في الشرط؟",
+          explanation:
+            "يجب تحقق الشرطين معًا (الراتب وسنوات العمل)، لذلك يُستخدم المعامل AND. OR يكفي بأحدهما، وXOR وNOT لا تعبّران عن هذا الشرط.",
+          tags: ["Loan Qualifier", "AND operator"],
+          ref: "Lecture 03 — Slide 4",
+        },
+        {
+          q: "10. In the Grader application, what grading scale is used?",
+          options: ["10-point", "5-point", "15-point", "20-point"],
+          correct: 0,
+          translation: "في تطبيق Grader، ما نظام التقدير المستخدم؟",
+          explanation:
+            "التطبيق يستخدم نظام 10 نقاط (90-100 = A، 80-89 = B، وهكذا). باقي الأنظمة غير مذكورة.",
+          tags: ["Grader", "grading scale"],
+          ref: "Lecture 03 — Slide 4",
+        },
+        {
+          q: "11. In the Grader application, what grade is given for scores 90 and above?",
+          options: ["B", "C", "A", "F"],
+          correct: 2,
+          translation: "في تطبيق Grader، ما التقدير المعطى للدرجات 90 وأعلى؟",
+          explanation:
+            "الدرجات من 90 وأعلى تأخذ تقدير A. B وC وF تُعطى لدرجات أقل حسب نظام العشر نقاط.",
+          tags: ["Grader", "grade A"],
+          ref: "Lecture 03 — Slide 5",
+        },
+        {
+          q: "12. How many logical operators are provided in C# as shown in the table?",
+          options: ["2", "5", "3", "4"],
+          correct: 2,
+          translation:
+            "كم عدد المعاملات المنطقية المتوفرة في C# كما هو موضح في الجدول؟",
+          explanation:
+            "المعاملات المنطقية في C# ثلاثة: AND (&&) وOR (||) وNOT (!). باقي الأعداد غير صحيحة.",
+          tags: ["logical operators"],
+          ref: "Lecture 03 — Slide 5",
+        },
+        {
+          q: "13. What data type in C# holds true or false values?",
+          options: ["int", "double", "string", "bool"],
+          correct: 3,
+          translation: "ما نوع البيانات في C# الذي يحمل القيم true أو false؟",
+          explanation:
+            "النوع bool مخصص للقيم المنطقية true/false. int وdouble للأعداد، وstring للنصوص.",
+          tags: ["bool", "data type"],
+          ref: "Lecture 03 — Slide 6",
+        },
+        {
+          q: "14. What are bool variables commonly used as in code?",
+          options: ["Counters", "Strings", "Arrays", "Flags"],
+          correct: 3,
+          translation: "كيف تُستخدم متغيرات bool عادةً في الكود؟",
+          explanation:
+            "متغيرات bool تُستخدم كأعلام (Flags) تُشير إلى حالة معينة. العدادات والنصوص والمصفوفات لها أنواع أخرى.",
+          tags: ["bool", "flags"],
+          ref: "Lecture 03 — Slide 6",
+        },
+        {
+          q: "15. Which operator is used to compare two strings in C#?",
+          options: ["==", "=", "<>", "!="],
+          correct: 0,
+          translation: "أي معامل يُستخدم لمقارنة نصّين في C#؟",
+          explanation:
+            "المعامل == يُستخدم لمقارنة النصوص في C#. المعامل = للإسناد فقط، و<> و!= لا يُستخدمان لمقارنة النصوص بهذه الطريقة.",
+          tags: ["string comparison", "=="],
+          ref: "Lecture 03 — Slide 6",
+        },
+        {
+          q: "16. In the Secret Word application, what is the secret word?",
+          options: ["Mark", "Ariel", "Mary", "Joe"],
+          correct: 1,
+          translation: "في تطبيق Secret Word، ما هي الكلمة السرية؟",
+          explanation:
+            "الكلمة السرية هي Ariel. باقي الأسماء استُخدمت في أمثلة أخرى داخل المحاضرة.",
+          tags: ["Secret Word"],
+          ref: "Lecture 03 — Slide 6",
+        },
+        {
+          q: "17. What method can perform a case-insensitive string comparison?",
+          options: [
+            "String.Compare with true",
+            "String.Equals",
+            "String.ToLower",
+            "String.Length",
+          ],
+          correct: 0,
+          translation:
+            "أي دالة يمكنها إجراء مقارنة نصية غير حساسة لحالة الأحرف؟",
+          explanation:
+            "String.Compare مع تمرير true تتجاهل حالة الأحرف في المقارنة. String.Equals حساسة للحالة افتراضيًا، وToLower وLength لا تُقارنان.",
+          tags: ["String.Compare", "case-insensitive"],
+          ref: "Lecture 03 — Slide 7",
+        },
+        {
+          q: "18. What do Parse methods throw when converting nonnumeric data?",
+          options: ["Warning", "Error message", "Null value", "Exception"],
+          correct: 3,
+          translation: "ماذا تُطلق دوال Parse عند تحويل بيانات غير رقمية؟",
+          explanation:
+            "دوال Parse تُطلق استثناء Exception عند فشل التحويل. Warning وError message وNull value ليست ما يُطلق فعليًا.",
+          tags: ["Parse", "Exception"],
+          ref: "Lecture 03 — Slide 7",
+        },
+        {
+          q: "19. What is a better practice than using try-catch for data conversion exceptions?",
+          options: [
+            "Using loops",
+            "Ignoring exceptions",
+            "Using switch",
+            "Preventing exceptions with TryParse",
+          ],
+          correct: 3,
+          translation:
+            "ما الممارسة الأفضل من استخدام try-catch لاستثناءات تحويل البيانات؟",
+          explanation:
+            "استخدام TryParse يمنع حدوث الاستثناء أصلًا بدل التعامل معه بعد وقوعه. الحلقات وswitch وIgnoring لا تحل المشكلة.",
+          tags: ["TryParse", "exception handling"],
+          ref: "Lecture 03 — Slide 7",
+        },
+        {
+          q: "20. What does TryParse return if conversion is successful?",
+          options: ["true", "false", "0", "null"],
+          correct: 0,
+          translation: "ماذا تُرجع TryParse إذا نجح التحويل؟",
+          explanation:
+            "TryParse تُرجع true عند نجاح التحويل، وfalse عند فشله، وتُخزِّن الناتج في المتغير الهدف.",
+          tags: ["TryParse", "return value"],
+          ref: "Lecture 03 — Slide 8",
+        },
+        {
+          q: "21. In input validation example for hours worked, what is the maximum valid hours per week?",
+          options: ["168", "40", "100", "400"],
+          correct: 0,
+          translation:
+            "في مثال التحقق من صحة ساعات العمل، ما الحد الأقصى لعدد الساعات الصحيح أسبوعيًا؟",
+          explanation:
+            "الحد الأقصى هو 168 ساعة (عدد ساعات الأسبوع كاملة). 40 هي ساعات العمل الأساسية، و100 و400 غير صحيحة.",
+          tags: ["input validation", "hours"],
+          ref: "Lecture 03 — Slide 9",
+        },
+        {
+          q: "22. In test score validation, what is the valid range?",
+          options: [
+            "0 through 50",
+            "0 through 100",
+            "0 through 90",
+            "0 through 200",
+          ],
+          correct: 1,
+          translation: "في التحقق من صحة درجات الاختبار، ما النطاق الصحيح؟",
+          explanation:
+            "النطاق الصالح للدرجات هو من 0 إلى 100. باقي النطاقات إما أضيق أو أوسع من المسموح به.",
+          tags: ["input validation", "test score range"],
+          ref: "Lecture 03 — Slide 9",
+        },
+        {
+          q: "23. How many radio buttons in a group can be selected at a time?",
+          options: ["One", "None", "All", "Multiple"],
+          correct: 0,
+          translation:
+            "كم عدد أزرار الراديو التي يمكن اختيارها في نفس الوقت داخل المجموعة؟",
+          explanation:
+            "أزرار الراديو في نفس المجموعة يسمح باختيار واحد فقط منها في الوقت نفسه، وهذه طبيعتها الفريدة.",
+          tags: ["RadioButton", "selection"],
+          ref: "Lecture 03 — Slide 9",
+        },
+        {
+          q: "24. What property of RadioButton determines if it is selected?",
+          options: ["Text", "Checked", "Visible", "Enabled"],
+          correct: 1,
+          translation:
+            "أي خاصية في RadioButton تُحدد ما إذا كان مختارًا أم لا؟",
+          explanation:
+            "خاصية Checked تكون true عند اختيار الزر، وfalse عند عدم اختياره. Text للنص، وVisible وEnabled للعرض والتفعيل.",
+          tags: ["RadioButton", "Checked"],
+          ref: "Lecture 03 — Slide 10",
+        },
+        {
+          q: "25. In the Color Mixer application, what secondary color is from red and blue?",
+          options: ["Orange", "Purple", "Green", "Yellow"],
+          correct: 1,
+          translation:
+            "في تطبيق Color Mixer، ما اللون الثانوي الناتج من الأحمر والأزرق؟",
+          explanation:
+            "الأحمر + الأزرق = بنفسجي Purple. البرتقالي من الأحمر والأصفر، والأخضر من الأزرق والأصفر، والأصفر لون أساسي.",
+          tags: ["Color Mixer", "secondary color"],
+          ref: "Lecture 03 — Slide 10",
+        },
+
+        // ─── Essay ───
+        {
+          type: "essay",
+          q: "1. Explain the difference between an if statement and an if-else statement in C#.",
+          translation: "اشرح الفرق بين جملة if وجملة if-else في C#.",
+          answer:
+            "The if statement is a single-alternative decision structure: it executes the block only when the Boolean expression is true, and does nothing when it is false.\n" +
+            "The if-else statement is a dual-alternative decision structure: the if block runs when the expression is true, and the else block runs when the expression is false.\n" +
+            "Both place the Boolean expression inside parentheses, and both enclose multiple statements inside curly braces.",
+          tags: ["if", "if-else"],
+          ref: "Lecture 03 — Slide 1",
+        },
+        {
+          type: "essay",
+          q: "2. Describe the Test Score Average application: inputs, calculation, and the Clear button behavior.",
+          translation:
+            "اوصف تطبيق Test Score Average: المدخلات، الحساب، وسلوك زر Clear.",
+          answer:
+            "The user enters three test scores into TextBoxes.\n" +
+            "The application calculates the average of the three scores and rounds it to two decimal places.\n" +
+            "If the average is greater than the named constant HIGH_SCORE = 95.0, a congratulatory message is displayed.\n" +
+            "When the Clear button is clicked, the TextBoxes and the average label are cleared.",
+          tags: ["Test Score Average"],
+          ref: "Lecture 03 — Slides 1-2",
+        },
+        {
+          type: "essay",
+          q: "3. Explain how the Payroll with Overtime application calculates gross pay.",
+          translation:
+            "اشرح كيف يحسب تطبيق Payroll with Overtime الأجر الإجمالي.",
+          answer:
+            "A named constant BASE_HOURS = 40 is defined.\n" +
+            "If hours worked are less than or equal to 40, gross pay = hours * pay rate.\n" +
+            "If hours worked exceed 40, the first 40 hours are paid at the regular rate and the extra hours are paid at 1.5 times the regular rate.\n" +
+            "Gross pay = (40 * rate) + ((hours - 40) * rate * 1.5).",
+          tags: ["Payroll", "overtime"],
+          ref: "Lecture 03 — Slide 3",
+        },
+        {
+          type: "essay",
+          q: "4. Describe the Loan Qualifier application and the logical operator used in its condition.",
+          translation:
+            "اوصف تطبيق Loan Qualifier والمعامل المنطقي المستخدم في شرطه.",
+          answer:
+            "The application asks for the applicant's salary and years on the job.\n" +
+            "The applicant qualifies only if the salary is at least $40,000 AND the years on the job are at least 2.\n" +
+            "The AND (&&) operator is used because both conditions must be true at the same time.\n" +
+            "If either condition fails, the applicant does not qualify.",
+          tags: ["Loan Qualifier", "AND"],
+          ref: "Lecture 03 — Slide 4",
+        },
+        {
+          type: "essay",
+          q: "5. What is the bool data type in C#, and how are bool variables commonly used?",
+          translation:
+            "ما هو نوع البيانات bool في C#، وكيف تُستخدم متغيرات bool عادةً؟",
+          answer:
+            "The bool data type holds one of two values: true or false.\n" +
+            "Bool variables are commonly used as flags to record a state or condition (for example, grandMaster = points > 5000).\n" +
+            "The NOT operator (!) negates a bool value: !grandMaster is true when grandMaster is false.",
+          tags: ["bool", "flags"],
+          ref: "Lecture 03 — Slide 6",
+        },
+        {
+          type: "essay",
+          q: "6. Explain how string comparison works in C# and how a case-insensitive comparison can be done.",
+          translation:
+            "اشرح كيف تعمل مقارنة النصوص في C# وكيف يمكن إجراؤها بشكل غير حساس لحالة الأحرف.",
+          answer:
+            'The == operator compares two strings but is case-sensitive by default, so "Joe" and "joe" are considered different.\n' +
+            "To compare without regard to case, use String.Compare with the third argument true (ignoreCase = true).\n" +
+            "It returns 0 when the two strings are equal ignoring case.",
+          tags: ["string comparison", "String.Compare"],
+          ref: "Lecture 03 — Slides 6-7",
+        },
+        {
+          type: "essay",
+          q: "7. Compare Parse methods and TryParse methods for data conversion in C#.",
+          translation:
+            "قارن بين دوال Parse ودوال TryParse لتحويل البيانات في C#.",
+          answer:
+            "Parse methods (like int.Parse) throw an exception when the input is not numeric.\n" +
+            "TryParse methods (like int.TryParse) do not throw; they return a bool: true if conversion succeeded and false otherwise.\n" +
+            "If conversion fails, TryParse stores 0 in the target variable and the program continues safely.\n" +
+            "Using TryParse is considered better practice than relying on try-catch.",
+          tags: ["Parse", "TryParse"],
+          ref: "Lecture 03 — Slides 7-8",
+        },
+        {
+          type: "essay",
+          q: "8. What is input validation and why is it important? Give two examples from the lecture.",
+          translation:
+            "ما هو التحقق من صحة الإدخال ولماذا هو مهم؟ اذكر مثالين من المحاضرة.",
+          answer:
+            "Input validation is the process of inspecting input data to confirm it is valid before using it.\n" +
+            "It prevents runtime errors, wrong results, and application crashes.\n" +
+            "Example 1: hours worked per week must be between 0 and 168.\n" +
+            "Example 2: test scores must be between 0 and 100.\n" +
+            "When invalid data is found, the program should display a specific error message for the affected TextBox.",
+          tags: ["input validation"],
+          ref: "Lecture 03 — Slide 9",
+        },
+        {
+          type: "essay",
+          q: "9. Compare RadioButton and CheckBox controls in Windows Forms.",
+          translation:
+            "قارن بين عنصري RadioButton و CheckBox في Windows Forms.",
+          answer:
+            "RadioButtons let the user select one option from a group; only one can be selected at a time.\n" +
+            "They are grouped inside a GroupBox or Panel, and the Checked property reports whether a button is selected.\n" +
+            "The CheckedChanged event fires when the selection changes.\n" +
+            "CheckBoxes, in contrast, allow multiple selections at the same time; the Checked property is true when the box is selected, and the Text property holds the displayed label.",
+          tags: ["RadioButton", "CheckBox"],
+          ref: "Lecture 03 — Slides 9-11",
+        },
+        {
+          type: "essay",
+          q: "10. Describe the main properties and methods of the ListBox control in C#.",
+          translation: "اوصف أهم خصائص ودوال عنصر ListBox في C#.",
+          answer:
+            "ListBox displays a list of items and shows a scroll bar when items exceed the visible space.\n" +
+            "At design time items are added through the Items property collection.\n" +
+            "At runtime: Items.Add adds an item, Items.Clear removes all items, Items.RemoveAt removes the item at a given index, and Items.Count reports the number of items.\n" +
+            "SelectedItem returns the selected item, and SelectedIndex returns its index (-1 if no item is selected).\n" +
+            "The first item has index 0, and the last has index n-1.",
+          tags: ["ListBox"],
+          ref: "Lecture 03 — Slides 12-15",
+        },
+
+        // ─── Calculation / Problems ───
+        {
+          type: "essay",
+          q: "11. A payroll program uses BASE_HOURS = 40 and an overtime multiplier of 1.5. If an employee works 45 hours at $20 per hour, calculate the gross pay.",
+          translation:
+            "برنامج رواتب يستخدم BASE_HOURS = 40 ومعامل الوقت الإضافي 1.5. إذا عمل موظف 45 ساعة بأجر 20 دولارًا للساعة، احسب الأجر الإجمالي.",
+          answer:
+            "Given: hours = 45, rate = $20, BASE_HOURS = 40, overtime multiplier = 1.5.\n" +
+            "Regular pay = 40 * 20 = $800.\n" +
+            "Overtime hours = 45 - 40 = 5.\n" +
+            "Overtime pay = 5 * 20 * 1.5 = $150.\n" +
+            "Gross pay = 800 + 150 = $950.",
+          tags: ["Payroll", "calculation"],
+          ref: "Lecture 03 — Slide 3",
+        },
+        {
+          type: "essay",
+          q: "12. In the Test Score Average application, three test scores 85, 92, and 98 are entered. Calculate the average rounded to two decimal places and state whether a congratulatory message is shown (HIGH_SCORE = 95.0).",
+          translation:
+            "في تطبيق Test Score Average، أُدخلت ثلاث درجات: 85 و92 و98. احسب المتوسط مقربًا لخانتين عشريتين واذكر هل تظهر رسالة تهنئة (HIGH_SCORE = 95.0).",
+          answer:
+            "Given: score1 = 85, score2 = 92, score3 = 98, HIGH_SCORE = 95.0.\n" +
+            "Average = (85 + 92 + 98) / 3 = 275 / 3 = 91.666...\n" +
+            "Rounded to two decimals = 91.67.\n" +
+            "Since 91.67 is not greater than 95.0, the congratulatory message is NOT displayed.",
+          tags: ["Test Score Average", "calculation"],
+          ref: "Lecture 03 — Slides 1-2",
+        },
+        {
+          type: "essay",
+          q: "13. In the Loan Qualifier application, an applicant has a salary of $45,000 and 3 years on the job. Determine whether the applicant qualifies.",
+          translation:
+            "في تطبيق Loan Qualifier، متقدم راتبه 45,000 دولار وعمل 3 سنوات. حدد هل يتأهل للقرض.",
+          answer:
+            "Condition: salary >= $40,000 AND years >= 2.\n" +
+            "$45,000 >= $40,000 is true.\n" +
+            "3 >= 2 is true.\n" +
+            "Both conditions are true, so the applicant QUALIFIES for the loan.",
+          tags: ["Loan Qualifier", "calculation"],
+          ref: "Lecture 03 — Slide 4",
+        },
+        {
+          type: "essay",
+          q: "14. The Range Checker accepts numbers from 1 through 10. Decide if each input is accepted: (a) 5, (b) 0, (c) 12, (d) 10.",
+          translation:
+            "تطبيق Range Checker يقبل الأرقام من 1 إلى 10. حدد هل يُقبل كل إدخال: (أ) 5، (ب) 0، (ج) 12، (د) 10.",
+          answer:
+            "Valid condition: number >= 1 AND number <= 10.\n" +
+            "(a) 5 -> accepted.\n" +
+            "(b) 0 -> rejected (less than 1).\n" +
+            "(c) 12 -> rejected (greater than 10).\n" +
+            "(d) 10 -> accepted (inclusive upper bound).",
+          tags: ["Range Checker", "calculation"],
+          ref: "Lecture 03 — Slide 5",
+        },
+        {
+          type: "essay",
+          q: "15. A ListBox contains 6 items. (a) Index of the first item? (b) Index of the last item? (c) SelectedIndex when no item is selected? (d) SelectedIndex when the item at index 3 is selected?",
+          translation:
+            "يحتوي ListBox على 6 عناصر. (أ) فهرس العنصر الأول؟ (ب) فهرس العنصر الأخير؟ (ج) قيمة SelectedIndex إذا لم يُختر أي عنصر؟ (د) قيمة SelectedIndex عند اختيار العنصر صاحب الفهرس 3؟",
+          answer:
+            "The first item has index 0.\n" +
+            "With 6 items, the last item has index 6 - 1 = 5.\n" +
+            "If no item is selected, SelectedIndex = -1.\n" +
+            "If the item at index 3 is selected, SelectedIndex returns 3.",
+          tags: ["ListBox", "SelectedIndex", "calculation"],
+          ref: "Lecture 03 — Slide 13",
         },
       ],
     },
