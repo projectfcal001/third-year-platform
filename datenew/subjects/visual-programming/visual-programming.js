@@ -1432,7 +1432,7 @@ subjects.push({
       t: "المحاضرة الثانية",
       d: "Chapter 2 يغطي TextBox، النصوص وربطها، المتغيرات والنطاق، تحويل الأنواع، الاستثناءات، الحقول والثوابت، Focus و Tab Order.",
       pdf: "datenew/subjects/visual-programming/lectures/Chapter 2.pdf",
-      pdf2: "datenew/subjects/visual-programming/c/Questions on each lecture/Chapter 2 - Questions - Visual Programming.pdf",
+      pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Chapter 2 - Questions - Visual Programming.pdf",
       // فئات روابط منظمة - الفصل الثاني: معالجة البيانات وأدوات التحكم في C# WinForms (Processing Data)
       linkCategories: [
         {

@@ -16,8 +16,9 @@ subjects.push({
       t: "المحاضرة الأولى",
       d: "مقدمة في نظم التشغيل والعمليات Processes.",
       id: "os-lec-01",
-      pdf: "../operating-systems/lectures/chapter 1 - OS.pdf",
-      pdf2: "subjects/operating-systems/questions/New/Questions on each lecture/OS_Chapter1_Slides1-23_Questions.pdf",
+      pdf: "/datenew/subjects/operating-systems/lectures/chapter 1 - OS.pdf",
+      notes: " Slides 1-23 .",
+      pdf2: "/datenew/subjects/operating-systems/questions/Questions on each lecture/OS_Chapter1_Slides1-23_Questions.pdf",
       // فئات روابط منظمة مخصصة للجزء الأول فقط (من صفحة 1 إلى صفحة 23) من الفصل الأول
       linkCategories: [
         {
@@ -1223,7 +1224,8 @@ subjects.push({
       d: "مقدمة في نظم التشغيل والعمليات: التخزين المؤقت، تعدد البرمجة، المشاركة الزمنية، النمط المزدوج، وإدارة العمليات.",
       id: "os-lec-02",
       pdf: "datenew/subjects/operating-systems/lectures/chapter 1 - OS.pdf",
-      pdf2: "subjects/operating-systems/qsuestions/New/Questions on each lecture/OS_Chapter1_Slides24-30_Questions.pdf",
+      notes: "Slides 24 - 30.",
+      pdf2: "datenew/subjects/operating-systems/questions/Questions on each lecture/OS_Chapter1_Slides24-30_Questions.pdf",
       // فئات روابط منظمة مخصصة للجزء الثاني فقط (من صفحة 24 إلى صفحة 30) من الفصل الأول
       linkCategories: [
         {

@@ -39,54 +39,9 @@ subjects.push({
                 },
               ],
             },
-            {
-              t: "أساسيات تجربة وواجهة المستخدم (UI/UX) - الشرح العربي",
-              d: "توضيح العلاقة والفرق بين UX Design و UI Design و Interaction Design بالأمثلة",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
           ],
         },
-        {
-          category: "فيديوهات عالمية",
-          icon: "🌍",
-          description: "محاضرات أكاديمية عالمية ومفاهيم Don Norman في HCI و UX",
-          links: [
-            {
-              t: "Georgia Tech - Human-Computer Interaction (CS6750)",
-              d: "الكورس الأكاديمي الرسمي الشامل لمبادئ HCI والمكونات الأساسية (Users, Tasks, Tools, Interfaces, Context)",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "Nielsen Norman Group - UX & HCI Core Concepts",
-              d: "شروحات قصيرة حول مبادئ التصميم (Discoverability, Feedback, Affordances, Constraints)",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-          ],
-        },
+
         {
           category: "مواقع ومراجع",
           icon: "📚",
@@ -127,19 +82,6 @@ subjects.push({
           description:
             "أدوات تفاعلية ومواقع لتطبيق مبادئ HCI وتصاميم الـ UI/UX",
           links: [
-            {
-              t: "Laws of UX - Visual HCI & UX Principles",
-              d: "موقع تفاعلي يستعرض قوانين ومبادئ HCI والنفسية المستخدمة في بناء الواجهات التفاعلية",
-              icon: "🔧",
-              actions: [
-                {
-                  label: "🚀 فتح التفاعليات",
-                  url: "https://lawsofux.com/",
-                  type: "view",
-                  color: "orange",
-                },
-              ],
-            },
             {
               t: "Figma - Interactive UI/UX Design Tool",
               d: "الأداة الأولى لبناء واجهات المستخدم (UI)، النماذج التفاعلية (Prototypes)، واختبار تجربة المستخدم (UX)",
@@ -756,40 +698,7 @@ subjects.push({
             },
           ],
         },
-        {
-          category: "فيديوهات عالمية",
-          icon: "🌍",
-          description:
-            "محاضرات أكاديمية عالمية تغطي نموذج المعالجة البشرية، الذاكرة، وقانون Fitts' Law",
-          links: [
-            {
-              t: "Georgia Tech - Human-Computer Interaction (The Human Chapter)",
-              d: "الكورس الأكاديمي الرسمي يغطي الرؤية البشرية، الذاكرة (STM & LTM)، الاستدلال، وحل المشكلات في HCI",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "Nielsen Norman Group - Cognitive Psychology in UX",
-              d: "شروحات حول الحمل المعرفي (Cognitive Load)، الذاكرة العاملة، وكيفية تصميم واجهات تتناسب مع الدماغ البشري",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-          ],
-        },
+
         {
           category: "مواقع ومراجع",
           icon: "📚",
@@ -830,19 +739,6 @@ subjects.push({
           description:
             "أدوات ومواقع تفاعلية لتطبيق قوانين الحركة (Fitts' Law) وقياس الحمل المعرفي",
           links: [
-            {
-              t: "Laws of UX - Cognitive & Psychological Principles",
-              d: "موقع تفاعلي يستعرض قوانين علم النفس المعرفي وتجربة المستخدم مثل قانون Fitts وقانون Hick",
-              icon: "🔧",
-              actions: [
-                {
-                  label: "🚀 فتح التفاعليات",
-                  url: "https://lawsofux.com/",
-                  type: "view",
-                  color: "orange",
-                },
-              ],
-            },
             {
               t: "Fitts' Law Simulator - Interactive Movement & Target Testing",
               d: "أداة تفاعلية لقياس وقت الحركة وسرعة استهداف الأزرار بناءً على مسافة وحجم الأهداف (Fitts' Law)",
@@ -1447,74 +1343,15 @@ subjects.push({
                 },
               ],
             },
-            {
-              t: "تفاعل الإنسان والحاسوب - مكونات النظام الحاسوبي",
-              d: "مراجعة شاملة لمفاهيم الذاكرة، المعالجة، الشاشات، وتصميم التفاعل في النظم الحديثة",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
           ],
         },
-        {
-          category: "فيديوهات عالمية",
-          icon: "🌍",
-          description:
-            "محاضرات أكاديمية عالمية تغطي أجهزة الحاسوب، الشاشات، التفاعل ثلاثي الأبعاد، والواقع الافتراضي",
-          links: [
-            {
-              t: "Georgia Tech - Human-Computer Interaction (The Computer Chapter)",
-              d: "الكورس الأكاديمي الرسمي يغطي تفصيل أجهزة الإدخال، شاشات العرض، التفاعل ثلاثي الأبعاد، وقيود الأداء",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLAWXFhe0N1vI492zbfS_7LneXflL3S1B2",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "Nielsen Norman Group - Input & Interaction Design Principles",
-              d: "شروحات حول كفاءة أجهزة الإدخال، تصميم الواجهات للأجهزة المختلفة، وتجربة المستخدم المادية",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/c/NielsenNormanGroup/playlists",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-          ],
-        },
+
         {
           category: "مواقع ومراجع",
           icon: "📚",
           description:
             "مراجع أكاديمية ومقالات تفصيلية حول أجهزة الحاسوب وقوانين التفاعل مثل Fitts' Law وتصميم الأجهزة",
           links: [
-            {
-              t: "GeeksforGeeks - Input and Output Devices in Computer Architecture",
-              d: "مقال توثيقي شامل حول أنواع أجهزة الإدخال والإخراج وخصائصها التقنية وتأثيرها على الأداء",
-              icon: "📚",
-              actions: [
-                {
-                  label: "🚀 فتح المقال",
-                  url: "https://www.geeksforgeeks.org/computer-organization-architecture-input-output-devices/",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
             {
               t: "Interaction Design Foundation (IxDF) - Hardware & Interface Devices in HCI",
               d: "مكتبة المراجع العالمية لدراسة العلاقة بين الأجهزة المادية وتجربة المستخدم وسهولة الاستخدام",
@@ -1536,19 +1373,6 @@ subjects.push({
           description:
             "أدوات ومواقع محاكاة تفاعلية لاختبار الأجهزة، النماذج ثلاثية الأبعاد، وتجربة التفاعل",
           links: [
-            {
-              t: "Laws of UX - Interaction Design & Hardware Usability",
-              d: "موقع تفاعلي يستعرض المبادئ النفسية والحركية لتصميم الأجهزة وأنظمة التحكم وحرية الإدخال",
-              icon: "🔧",
-              actions: [
-                {
-                  label: "🚀 فتح التفاعليات",
-                  url: "https://lawsofux.com/",
-                  type: "view",
-                  color: "orange",
-                },
-              ],
-            },
             {
               t: "Blender - 3D Modeling & VR Simulation Tool",
               d: "أداة احترافية لتصميم النماذج ثلاثية الأبعاد وبيئات الواقع الافتراضي (VR) وأنظمة التفاعل المتقدمة",

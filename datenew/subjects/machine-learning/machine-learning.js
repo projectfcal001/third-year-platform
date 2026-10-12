@@ -880,19 +880,7 @@ subjects.push({
                 },
               ],
             },
-            {
-              t: "Bias-Variance Tradeoff in Machine Learning - GeeksforGeeks",
-              d: "مقالة تشرح التفصيل الرياضي لمكونات الخطأ المتوقع (Bias, Variance, Bayes Error) وتأثيرها على الأداء.",
-              icon: "📚",
-              actions: [
-                {
-                  label: "🚀 فتح المقال",
-                  url: "https://www.geeksforgeeks.org/ml-bias-variance-tradeoff/",
-                  type: "view",
-                  color: "blue",
-                },
-              ],
-            },
+
           ],
         },
         {

@@ -38,19 +38,6 @@ subjects.push({
                 },
               ],
             },
-            {
-              t: "أساسيات التعلم العميق والشبكات العصبية - الشرح العربي",
-              d: "توضيح طبقات الشبكة العصبية (Input, Hidden, Output Layers) وعمليات التدريب والانتشار العكسي",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PLp44XwM31XG5a8G_87A8OwfS9fS2I12i0",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
           ],
         },
         {
@@ -93,19 +80,6 @@ subjects.push({
           description:
             "مقالات ومرجعيات تفصيلية لمكونات الشبكات العصبية ودوال التنشيط وأنواعها",
           links: [
-            {
-              t: "GeeksforGeeks - Introduction to Artificial Neural Networks (ANN)",
-              d: "مرجع شامل يغطي بنية الشبكات العصبية، مكوناتها الثمانية الأساسية، وعمليات التعلم والتدريب",
-              icon: "📚",
-              actions: [
-                {
-                  label: "🚀 فتح المقال",
-                  url: "https://www.geeksforgeeks.org/introduction-to-artificial-neural-networks/",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
             {
               t: "DeepLearning.AI - Neural Networks and Deep Learning Resources",
               d: "مرجع عالمي موثوق لدراسة هندسة الشبكات العصبية، دوال التنشيط (ReLU, Sigmoid, Tanh)، وعمارة الشبكات",

@@ -291,6 +291,14 @@ js
   pdf2: "datenew/subjects/computer-networks/questions/net-4-questions.pdf",
   sectionTitle: "🧩 سكاشن Transport Layer",
 
+  audio: [
+    { t: "الجزء الأول", url: "datenew/subjects/computer-networks/lectures/net-4-part1.mp3" }
+  ],
+
+  videos: [
+    { t: "حل أسئلة المحاضرة", url: "https://youtu.be/XXXXXXXXXXX" }
+  ],
+
   links: [
     { t: "🎥 تسجيل الفيديو", d: "المحاضرة كاملة", url: "https://example.com/net-4-video" },
     { t: "📑 السلايدات", url: "https://example.com/net-4-slides" }
@@ -325,6 +333,7 @@ js
       ],
       correct: 0,
       translation: "What is the difference between TCP and UDP?",
+      video: { t: "شرح السؤال", url: "https://youtu.be/XXXXXXXXXXX" },
       explanation: "TCP يضمن التسليم والترتيب عبر Handshake — UDP أسرع بدون ضمانات."
     },
     {
@@ -377,6 +386,8 @@ sectionTitle	string	❌	عنوان قسم السكشن
 chapter	string	❌	اسم الفصل (بديل لـ chapters)
 links[]	array	❌	روابط مباشرة
 linkCategories[]	array	❌	روابط مجمّعة
+audio	url / array	❌	تسجيل صوتي: "رابط" أو [{t, url}] (ملف mp3 مباشر) — مبيشتغلش إلا لما الطالب يضغط تشغيل
+videos[]	array	❌	فيديوهات المحاضرة [{t, url}] (أو video: "رابط") — مبتشتغلش إلا بالضغط
 questions[]	array	❌	بنك الأسئلة
 notes	string	❌	ملاحظات وتكاليف
 summary	object	❌	ملخص (pdf أو text)
@@ -422,6 +433,28 @@ json
     { "label": "شرح إضافي",        "url": "https://example.com/extra",   "type": "video" }
   ],
 
+  "videos": [
+    { "label": "حل الواجب", "url": "https://youtu.be/XXXXXXXXXXX" }
+  ],
+
+  "linkCategories": [
+    {
+      "category": "فيديوهات عربية",
+      "icon": "🇪🇬",
+      "description": "شروحات بالعربية",
+      "links": [
+        {
+          "t": "شرح TCP vs UDP",
+          "d": "مقارنة مبسطة بالعربي",
+          "icon": "🇪🇬",
+          "actions": [
+            { "label": "📖 الشرح", "url": "https://youtube.com/...", "type": "view", "color": "red" }
+          ]
+        }
+      ]
+    }
+  ],
+
   "task": {
     "title": "واجب الأسبوع الرابع",
     "url": "datenew/subjects/computer-networks/sections/net-sec-05-task.pdf",
@@ -459,6 +492,8 @@ sectionTitle	string	❌	عنوان القسم
 notes	string	❌	ملاحظة المعيد
 materials	object	❌	ملفات أساسية
 extraFiles[]	array	❌	ملفات إضافية
+videos[]	array	❌	فيديوهات [{label, url}] (أو video: "رابط")
+linkCategories[]	array	❌	روابط مجمّعة بنفس شكل المحاضرة
 task	object	❌	ملف المهمة
 * واحد منهم على الأقل مطلوب.
 
@@ -475,12 +510,22 @@ exercises	📝	فتح
 solution	✅	فتح
 recording	🎥	مشاهدة
 extraLinks	🔗	فتح
+videos	🎬	تشغيل (بالضغط)
+linkCategories	🔗	فتح (نفس كروت المحاضرة)
 
 5.7) 📌 حالات السكشن
 الحالة	تظهر إزاي
 available	متاح (أخضر)
 soon	قريبًا (أصفر)
 unavailable	غير متاح (برتقالي)
+
+5.8) 🎬 فيديوهات وروابط السكشن
+json
+"videos": [ { "label": "حل الواجب", "url": "https://youtu.be/XXXXXXXXXXX" } ]      ← أو "video": "رابط" لفيديو واحد
+📌 الفيديو مبيتحمّلش ولا بيشتغل إلا لما الطالب يضغط عليه، ولو مفيش videos مبيظهرش أي حاجة.
+📌 الأنواع المدعومة: YouTube / Google Drive (الملف مشارك للكل) / Vimeo / ملف mp4 أو webm مباشر — برابط https:// أو مسار نسبي (datenew/subjects/{slug}/sections/x.mp4).
+📌 linkCategories بنفس هيكل المحاضرة بالظبط (category / icon / description / links[] فيها t و d و icon و actions[]) وبتظهر تحت عنوان 🔗 روابط ومصادر بنفس كروت المحاضرة. الروابط غير الصالحة بتتشال.
+📌 videos و linkCategories مبيظهروش لو حالة السكشن soon أو unavailable.
 
 ════════════════════════════════════════════════════════════
 
@@ -497,7 +542,8 @@ js
   ],
   correct: 0,                       // ← الإجابة الصحيحة (يبدأ من 0)
   translation: "What is an Array?",  // (اختياري)
-  explanation: "الـ Array مصفوفة..."  // (اختياري)
+  explanation: "الـ Array مصفوفة...",  // (اختياري)
+  video: "https://youtu.be/XXXXXXXXXXX"  // (اختياري) — فيديو للسؤال
 }
 📌 قواعد مهمة
 correct يبدأ من 0 (مش 1): 0 = الأولى / 1 = التانية / 2 = التالتة / 3 = الرابعة
@@ -515,7 +561,8 @@ js
   tags: ["مهم", "فصل 2"],            // (اختياري)
   ref: "المرجع: الكتاب ص 45",        // (اختياري)
   translation: "Explain...",         // (اختياري)
-  explanation: "السبب..."            // (اختياري)
+  explanation: "السبب...",           // (اختياري)
+  video: { t: "شرح السؤال", url: "https://..." }  // (اختياري)
 }
 📌 إزاي بيتحسب في الدرجة؟
 الأسئلة المقالية مش بتتحسب في نسبة الدرجة، وبتظهر كـ 📝 مقالي: X في تفاصيل النتيجة.
@@ -524,6 +571,7 @@ js
 6.3) 🌐 الترجمة والشرح (اختياري لأي سؤال)
 🌐 ترجمة السؤال — زر قابل للطي (لوحة رمادية فاتحة)
 💡 لماذا هذه الإجابة؟ — زر قابل للطي (لوحة زرقاء فاتحة)
+🎬 فيديو السؤال — زر بيفتح المشغّل (مبيشتغلش إلا بالضغط) — شوف 8.7
 
 ════════════════════════════════════════════════════════════
 
@@ -631,6 +679,7 @@ linkCategories: [
     ]
   }
 ]
+📌 لو المحاضرة مفيهاش أي روابط (links / linkCategories) قسم 🔗 روابط المحاضرة بيتخفي كله، وترقيم الأقسام بيتظبط لوحده.
 
 8.5) 📖 الفصول (Chapters)
 الطريقة 1 (مصفوفة chapters على مستوى المادة):
@@ -642,6 +691,23 @@ chapters: [
 الطريقة 2 (على مستوى المحاضرة): lectures: [ { t: "محاضرة 1", chapter: "الفصل الأول", ... } ]
 كل فصل بيظهر أكورديون، والأول بيفتح تلقائيًا.
 
+8.6) 🎧 التسجيل الصوتي للمحاضرة
+js
+audio: "datenew/subjects/{slug}/lectures/x-part1.mp3"                                  ← تسجيل واحد
+audio: [ { t: "الجزء الأول", url: "..." }, { t: "الجزء الثاني", url: "..." } ]       ← أكتر من تسجيل
+📌 بيظهر في صفحة المحاضرة بس، ومبيتحمّلش ولا بيشتغل إلا لما الطالب يضغط تشغيل، وبيقف لما يخرج من المحاضرة. لو مفيش audio مبيظهرش أي حاجة.
+📌 لازم ملف صوت مباشر (mp3 / m4a / ogg) برابط https:// أو مسار نسبي — روابط Google Drive العادية غالبًا مبتشتغلش.
+
+8.7) 🎬 فيديوهات المحاضرة وفيديو السؤال
+js
+videos: [ { t: "حل أسئلة الجزء الأول", url: "https://youtu.be/XXXXXXXXXXX" } ]        ← على مستوى المحاضرة (أو video: "رابط")
+{ q: "...", options: [...], correct: 0, video: "https://youtu.be/XXXXXXXXXXX" }      ← على مستوى السؤال (MCQ أو مقالي)
+video: { t: "شرح السؤال", url: "..." }   أو   video: [ { t, url }, { t, url } ]
+📌 فيديوهات المحاضرة بتظهر في كارت 🎬 أعلى صفحة المحاضرة. فيديو السؤال بيظهر تحت نص السؤال وقبل الاختيارات (في المحاضرة والميدتيرم والفاينل وبنوك الأسئلة).
+📌 مبيتحمّلش ولا بيشتغل إلا بالضغط، وبيتقفل بزرار إغلاق. لو الطالب اختار إجابة بعد تشغيل فيديو السؤال، السؤال بيتعاد رسمه والفيديو بيتقفل.
+📌 الأنواع المدعومة: YouTube / Google Drive (الملف مشارك للكل) / Vimeo / ملف mp4 أو webm مباشر — برابط https:// أو مسار نسبي.
+📌 فيديوهات السكشن في 5.8.
+
 ════════════════════════════════════════════════════════════
 
 📘 الجزء 9: الإشعارات والإعلانات — كيف تضيف إشعار لأي حاجة
@@ -649,6 +715,7 @@ chapters: [
 - بتتحفظ في localStorage تحت notifications_data — الحد الأقصى 50 إشعار (الأقدم بيتشال).
 - كل إشعار: id (تلقائي) / title / read / time / date / type.
 - ⚠️ الإشعارات والمقروء متخزنة على جهاز الطالب (مش مشتركة بين الأقسام ولا الأجهزة).
+- استيراد النسخة الاحتياطية بيدمج الإشعارات: بيضيف اللي مش موجود بس (المقارنة بالمحتوى) وبيسيب الحالية، والحد الأقصى برضه 50.
 - المصفوفات الثابتة في app.js (answerEditsLog / lecturesAddedLog / announcementsLog) بتتقارن بمفاتيح "اللي اتشاف" في localStorage، وبتضيف الجديد بس لكل طالب.
 
 📌 أنواع الإشعارات الجاهزة
@@ -749,10 +816,12 @@ js
   pdf:  "datenew/subjects/SUBJ/lectures/[filename].pdf",
   pdf2: "datenew/subjects/SUBJ/questions/[filename]-questions.pdf",
   sectionTitle: "🧩 سكاشن [المحاضرة]",
+  audio: [ { t: "[العنوان]", url: "datenew/subjects/SUBJ/lectures/[audio].mp3" } ],
+  videos: [ { t: "[العنوان]", url: "https://..." } ],
   links: [ { t: "🎥 تسجيل الفيديو", url: "https://..." } ],
   linkCategories: [],
   questions: [
-    { q: "[سؤال MCQ]", options: ["أ","ب","ج","د"], correct: 0, translation: "[English]", explanation: "[الشرح]" },
+    { q: "[سؤال MCQ]", options: ["أ","ب","ج","د"], correct: 0, translation: "[English]", explanation: "[الشرح]", video: { t: "[العنوان]", url: "https://..." } },
     { type: "essay", q: "[سؤال مقالي]", answer: "[الإجابة النموذجية]", tags: ["tag1"], ref: "[المرجع]" }
   ],
   notes: "[ملاحظات وتكاليف]",
@@ -780,6 +849,8 @@ json
     "extraLinks": [ { "label": "[اسم الرابط]", "url": "https://..." } ]
   },
   "extraFiles": [ { "label": "[ملف إضافي]", "url": "datenew/subjects/SUBJ/sections/[file].pdf", "type": "pdf" } ],
+  "videos": [ { "label": "[عنوان الفيديو]", "url": "https://..." } ],
+  "linkCategories": [ { "category": "[التصنيف]", "icon": "📚", "description": "[وصف]", "links": [ { "t": "[عنوان]", "d": "[وصف]", "actions": [ { "label": "[زر]", "url": "https://...", "type": "view", "color": "blue" } ] } ] } ],
   "task": { "title": "[عنوان الواجب]", "url": "datenew/subjects/SUBJ/sections/[task].pdf", "dueDate": "YYYY-MM-DD", "notes": "[تعليمات التسليم]" }
 }
 
@@ -877,7 +948,8 @@ id / name / en / icon / index / active (شوف الجزء 2).
 📈 ملخص التقدم لكل المواد
 📌 جدولي الشخصي + كشف تعارضات
 👨‍🏫 دليل الدكاترة (أكورديون بالأيام)
-🗺️ خريطة الأسئلة + تعليم ⭐
+🗺️ خريطة الأسئلة + تعليم ⭐ (على الموبايل: شريط أرقام بسكرول أفقي)
+🎧🎬 تسجيل صوتي للمحاضرة + فيديوهات (محاضرة / سؤال / سكشن) — بتشتغل بالضغط بس
 📄 PDF Annotator (قلم/تظليل/دمج تعديلات) — pdf-annotator.html
 💬 نموذج الاقتراحات (reCAPTCHA + صور + حد 5/يوم)
 🔍 بحث شامل
@@ -916,6 +988,7 @@ dept_v1, last_open_state, themeMode, notifications_data, cg_sections_v1, seen_sy
 البادئات (PROGRESS_PREFIXES):
 last_open_state_, qa_, quiz_progress_, qmark_, pdfqalam:
 الحد: 5 ميجا (BACKUP_MAX_BYTES).
+الاستيراد: notifications_data بتتدمج (يضيف المختلف بس ويسيب الحالي، المقارنة بالمحتوى مش بالـ id، والمقروء يفضل مقروء، الحد 50) وكذلك seen_system_edits / seen_added_lectures / seen_announcements (اتحاد). باقي المفاتيح بتتكتب من النسخة.
 لو ضفت مفتاح جديد: ضيفه في PROGRESS_KEYS (أو بادئة في PROGRESS_PREFIXES) في app.js (قسم 22).
 
 ════════════════════════════════════════════════════════════
@@ -1060,7 +1133,7 @@ reCAPTCHA مش بتحمّل	مشكلة إنترنت	افتح النموذج تا
 
 📘 الجزء 20: ملحق — الإيموجي الموصى بها
 محاضرة 🎓 / سكشن 🧩 / فيديو 🎥 / PDF 📄 / تمارين 📝 / حل ✅ / ملخص 📝 / واجب 📌
-ملفات إضافية 📎 / رابط 🔗 / عربي 🇪🇬 / عالمي 🌍 / مرجع 📚 / أداة 🔧
+ملفات إضافية 📎 / رابط 🔗 / عربي 🇪🇬 / عالمي 🌍 / مرجع 📚 / أداة 🔧 / تسجيل صوتي 🎧 / فيديو سؤال 🎬
 ميدتيرم 📝 / فاينل 🎓 / بنك أسئلة 🏦 / فصل 📘 / تنبيه ⚠️ / جديد 🆕 / قديم 🕐
 قسم 🎓 / علوم حاسب 💻 / نظم معلومات 🗄️ / هندسة برمجيات 🏗️ / ذكاء اصطناعي 🤖
 

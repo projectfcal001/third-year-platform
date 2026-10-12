@@ -13,7 +13,7 @@ subjects.push({
       id: "cloud-orientation-lec-01",
       t: "جلسة التعريف — Cloud Computing",
       d: "المفهوم، الخصائص، التحديات، أنواع الخدمات، نماذج النشر، الأطراف الرئيسية، التهديدات، الأمان، والوظائف",
-      pdf: "datenew/subjects/cloud-computing/lectures/Cloud Computing Orientation Session.pdf",
+      pdf: "datenew/subjects/cloud-computing/lectures/lec1/Cloud Computing Orientation Session.pdf",
       // محاضرة: Cloud Computing Orientation Session (المركز المصري للحوسبة السحابية - EC3) | الموضوع الرئيسي: مدخل شامل إلى الحوسبة السحابية وبنيتها التحتية وأمنها
       pdf2: "datenew/subjects/cloud-computing/questions/Questions on each lecture/lecture_01_cloud-computing_Questions.pdf",
       linkCategories: [
@@ -724,61 +724,6 @@ subjects.push({
       // محاضرة أساسيات الشبكات (Network Fundamentals): تغطي مفاهيم الشبكات، العنونة (IP/MAC)، أجهزة الشبكة، نماذج التواصل (OSI & TCP/IP)، طرق تعيين العناوين (DHCP/DORA/APIPA)، وأوامر الفحص والتشخيص.
 
       linkCategories: [
-        {
-          category: "فيديوهات عربية",
-          icon: "🇪🇬",
-          description:
-            "شروحات مرئية باللغة العربية تبسط مفاهيم شبكات الحاسب، العنونة المنطقية والفيزيائية، وأجهزة ونماذج الشبكات.",
-          links: [
-            {
-              t: "كورس أساسيات الشبكات - Network Fundamentals",
-              d: "شرح شامل لمفهوم شبكات الحاسوب، مشاركة الموارد، الفرق بين IP Address و MAC Address، وأجهزة الشبكة المختلفة.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=qi9I0_cW4pM",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "شرح نموذج OSI Model ونموذج TCP/IP وأوامر الشبكة",
-              d: "توضيح تفصيلي لطبقات نموذج OSI السبع ونموذج TCP/IP الأربع، مع تطبيق عملي لأهم أوامر الشبكة مثل ping و ipconfig.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=HhqR5OSsmk0",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          category: "فيديوهات عالمية",
-          icon: "🌍",
-          description:
-            "دروس وسلاسل عالمية متخصصة توضح معمارية الشبكات والبروتوكولات وطرق تعيين عناوين IP وعملية DORA.",
-          links: [
-            {
-              t: "Network Fundamentals Course by NetworkChuck",
-              d: "سلسلة تفاعلية عالمية تشرح كيفية عمل شبكات الحاسوب، بروتوكولات التواصل، وطريقة عمل IP و MAC و DHCP.",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "🌐 فتح الموقع",
-                  url: "https://www.youtube.com/watch?v=qi9I0_cW4pM",
-                  type: "view",
-                  color: "blue",
-                },
-              ],
-            },
-          ],
-        },
         {
           category: "مواقع ومراجع",
           icon: "📚",
