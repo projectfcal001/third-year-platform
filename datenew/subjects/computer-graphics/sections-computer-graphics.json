@@ -5,8 +5,9 @@
     {
       "id": "computer-graphics-sec-01",
       "subject": "computer-graphics",
-      "lecture": "المحاضرة الأولى",
+      "lecture": "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       "lectureId": "computer-graphics-lec-01",
+
       "instructorId": "INS-Ahamd",
       "instructorName": "م. احمد هشام ",
       "groupName": "سكشن A",

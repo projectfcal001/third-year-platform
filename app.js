@@ -345,6 +345,15 @@ var lecturesAddedLog = [
     lectureTitle: "المحاضرة 3",
     lectureDesc: "",
     depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+    effective_to: 2026 - 10 - 13,
+  },
+  {
+    id: "lec-001",
+    subject: "هندسة البرمجيان",
+    lectureTitle: "المحاضرة 3",
+    lectureDesc: "",
+    depts: "all", // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+    effective_to: 2026 - 13 - 10,
   },
 ]; // نموذج إضافة إشعار عام (Info Notification)
 // addNotification({});
