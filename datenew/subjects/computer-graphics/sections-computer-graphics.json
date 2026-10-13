@@ -7,12 +7,18 @@
       "subject": "computer-graphics",
       "lecture": "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       "lectureId": "computer-graphics-lec-01",
-
       "instructorId": "INS-Ahamd",
       "instructorName": "م. احمد هشام ",
       "groupName": "سكشن A",
       "status": "available",
       "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
+      "materials": {
+        "file": {
+          "label": "ملف السكشن",
+          "url": "datenew/subjects/visual-programming/sections/section01/GUI.pdf",
+          "type": "pdf"
+        }
+      },
       "links": [
         {
           "t": "ملف السكشن",
@@ -32,13 +38,20 @@
     {
       "id": "computer-graphics-sec-02",
       "subject": "computer-graphics",
-      "lecture": "المحاضرة الأولى",
+      "lecture": "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       "lectureId": "computer-graphics-lec-01",
       "instructorId": "INS-Ahamd",
       "instructorName": "م. احمد هشام ",
-      "groupName": "سكشن A",
+      "groupName": "سكشن  B",
       "status": "available",
       "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
+      "materials": {
+        "file": {
+          "label": "ملف السكشن",
+          "url": "datenew/subjects/visual-programming/sections/section01/GUI.pdf",
+          "type": "pdf"
+        }
+      },
       "links": [
         {
           "t": "ملف السكشن",
