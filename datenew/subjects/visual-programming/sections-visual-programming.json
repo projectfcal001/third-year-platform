@@ -45,40 +45,7 @@
           "url": "datenew/subjects/visual-programming/sections/section02/Sheat2.pdf",
           "type": "pdf"
         }
-      },
-      "audio": [
-        {
-          "t": "شرح الواجب",
-          "url": "datenew/subjects/computer-networks/sections/net-sec-05-explain.mp3"
-        }
-      ],
-
-      "videos": [
-        { "label": "حل الواجب", "url": "https://youtu.be/XXXXXXXXXXX" }
-      ],
-
-      "linkCategories": [
-        {
-          "category": "فيديوهات عربية",
-          "icon": "🇪🇬",
-          "description": "شروحات بالعربية",
-          "links": [
-            {
-              "t": "شرح TCP vs UDP",
-              "d": "مقارنة مبسطة بالعربي",
-              "icon": "🇪🇬",
-              "actions": [
-                {
-                  "label": "📖 الشرح",
-                  "url": "https://youtube.com/...",
-                  "type": "view",
-                  "color": "red"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      }
     }
   ]
 }
