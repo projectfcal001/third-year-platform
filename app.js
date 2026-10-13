@@ -328,14 +328,15 @@ function notifVisible(n){
 }
 function visibleNotifications(){ return notifications.filter(notifVisible); }
 var answerEditsLog = [
-  // {
-  //   id: "edit-002",
-  //   context: "المحاضرة الثاني ",
-  //   questionNum: 1,
-  //   questionText: "",
-  //   oldAnswer: "الإجابة القديمة",
-  //   newAnswer: "الإجابة الصحيحة الجديدة",
-  // },
+  {
+    id: "edit-002",
+    context: "المحاضرة الثاني ",
+    questionNum: 1,
+    questionText: "",
+    oldAnswer: "الإجابة القديمة",
+    newAnswer: "الإجابة الصحيحة الجديدة",
+    depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+  },
 ];
 var lecturesAddedLog = [
   {
@@ -343,7 +344,7 @@ var lecturesAddedLog = [
     subject: "الرسم بالحاسب",
     lectureTitle: "المحاضرة 3",
     lectureDesc: "",
-    depts: "all", // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+    depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
   },
 ]; // نموذج إضافة إشعار عام (Info Notification)
 // addNotification({});
@@ -352,19 +353,25 @@ var announcementsLog = [
     id: "ann-001",
     title: "⏰ تم تأجيل امتحان الميدتيرم",
     message: "الموعد الجديد الأحد 20/10.",
-    depts: "all",
+    depts: "ai",
   },
   {
     id: "ann-002",
     title: "📅 تعديل في الجدول",
     message: "سكشن 3 اتنقل من السبت للأحد الساعة 10.",
-    depts: "all", // مثال لقسم معين: depts: "cs"
+    depts: "cs", // مثال لقسم معين: depts: "cs"
   },
   {
     id: "ann-003",
     title: "🙋 محتاجين مساعدة",
     message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
-    depts: "all", // مثال لأكتر من قسم: depts: ["cs", "ai"]
+    depts: ["cs", "ai"], // مثال لأكتر من قسم: depts: ["cs", "ai"]
+  },
+  {
+    id: "ann-004",
+    title: "🙋 محتاجين مساعدة",
+    message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
+    depts: ["cs", "ai", "is"], // مثال لأكتر من قسم: depts: ["cs", "ai"]
   },
 ];
 function loadNotifications(){
