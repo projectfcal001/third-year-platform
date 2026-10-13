@@ -677,6 +677,7 @@ function showView(id){
   });
   document.body.classList.toggle('progress-mode', id === 'progress-view');
   if(id !== 'lecture-view' && typeof secResetUI === 'function') secResetUI();
+  if(id !== 'lecture-view' && typeof closeLectureMedia === 'function') closeLectureMedia(false);
   if(id !== 'lecture-view' && typeof stopLectureAudio === 'function') stopLectureAudio();
   if(id !== 'lecture-view' && typeof clearLectureVideos === 'function') clearLectureVideos();
 }
@@ -953,7 +954,10 @@ function renderLecturesList(){
     if(!b.group) return b.html;
     var g = b.group, meta = lecChapterMeta(s, g.name) || {};
     var ck = currentSubject + '|' + g.name;
-    var open = (_chapOpen[ck] === undefined) ? (g.name === firstGroup) : _chapOpen[ck];
+    /* الحالة الافتراضية: meta.open (true/false) لو متحددة. وإلا: الفصل اللي خلصتي كل أسئلته بيتقفل، وأي فصل لسه فيه أسئلة ناقصة (وكل اللي بعده) بيتفتح */
+    var chapDone = g.total > 0 && g.done >= g.total;
+    var dfltOpen = (typeof meta.open === 'boolean') ? meta.open : !chapDone;
+    var open = (_chapOpen[ck] === undefined) ? dfltOpen : _chapOpen[ck];
     var info = g.cards.length + ' محاضرة' + (g.total ? ' • ' + Math.min(g.done, g.total) + '/' + g.total + ' سؤال' : '');
     return '<div class="lc-cat lec-chapter'+(open ? ' open' : '')+'" data-ck="'+escAttr(ck)+'">'+
       '<div class="lc-cat-head" onclick="toggleLecChapter(this)">'+
@@ -1239,6 +1243,65 @@ function renderQNSidebar(){
   }
 }
 
+/* نسخ / مشاركة السؤال مع الإجابة الصحيحة */
+function questionShareText(q){
+  var out = [String(q.q || '').trim()];
+  if(isEssay(q)){
+    if(q.answer) out.push('', '✅ الإجابة النموذجية:', String(q.answer).trim());
+  }else{
+    var opts = q.options || [];
+    opts.forEach(function(op, oi){
+      var latin = isLatinText(op);
+      var letter = latin ? String.fromCharCode(65 + oi) : (AR_LETTERS[oi] || String(oi + 1));
+      out.push(letter + ') ' + op);
+    });
+    if(opts[q.correct] !== undefined){
+      var lt = isLatinText(opts[q.correct]);
+      var cl = lt ? String.fromCharCode(65 + q.correct) : (AR_LETTERS[q.correct] || String(q.correct + 1));
+      out.push('', '✅ الإجابة الصحيحة: ' + cl + ') ' + opts[q.correct]);
+    }
+  }
+  return out.join('\n');
+}
+function copyPlainText(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise(function(res, rej){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly','');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      ok ? res() : rej(new Error('copy failed'));
+    }catch(e){ rej(e); }
+  });
+}
+function copyQuestion(i){
+  var q = st && st.data && st.data[i]; if(!q) return;
+  copyPlainText(questionShareText(q))
+    .then(function(){ showToast('📋 اتنسخ السؤال مع الإجابة الصحيحة'); })
+    .catch(function(){ showToast('⚠️ مقدرتش أنسخ — جرّبي تاني'); });
+}
+function shareQuestion(i){
+  var q = st && st.data && st.data[i]; if(!q) return;
+  var text = questionShareText(q);
+  if(navigator.share){
+    var data = {text: text};
+    try{ if(/^https?:$/.test(location.protocol)) data.url = location.origin + location.pathname; }catch(e){}
+    navigator.share(data).catch(function(err){
+      if(err && err.name === 'AbortError') return;
+      copyQuestion(i);
+    });
+  }else{
+    copyPlainText(text)
+      .then(function(){ showToast('📤 المشاركة مش مدعومة هنا — اتنسخ السؤال والإجابة'); })
+      .catch(function(){ showToast('⚠️ مقدرتش أشارك — جرّبي تاني'); });
+  }
+}
+
 function renderCurrentQuestion(){
   var area = document.getElementById('qa-area');
   if(!area || !st || !st.data.length){ if(area) area.innerHTML = ''; return; }
@@ -1257,7 +1320,11 @@ function renderCurrentQuestion(){
         '<span class="exam-counter">'+(i+1)+' / '+st.data.length+'</span>'+
         '<div class="exam-qtop">'+
           '<span class="eq-num">السؤال '+(i+1)+' من '+st.data.length+'</span>'+
-          '<button class="qmark-btn '+(isMarked?'on':'')+'" onclick="toggleMark('+i+')" title="علّمي السؤال">'+(isMarked?'⭐ معلّم':'☆ علّم')+'</button>'+
+          '<span class="q-tools">'+
+            '<button class="q-act-btn" onclick="copyQuestion('+i+')" title="انسخ السؤال مع الإجابة الصحيحة">📋 نسخ</button>'+
+            '<button class="q-act-btn" onclick="shareQuestion('+i+')" title="شارك السؤال مع الإجابة الصحيحة">📤 مشاركة</button>'+
+            '<button class="qmark-btn '+(isMarked?'on':'')+'" onclick="toggleMark('+i+')" title="علّمي السؤال">'+(isMarked?'⭐ معلّم':'☆ علّم')+'</button>'+
+          '</span>'+
         '</div>'+
         '<span class="essay-type-badge">📝 سؤال مقالي</span>'+
         '<div class="exam-qtext'+(qLatin?' ltr':'')+'">'+esc(q.q)+'</div>'+
@@ -1312,7 +1379,11 @@ function renderCurrentQuestion(){
       '<span class="exam-counter">'+(i+1)+' / '+st.data.length+'</span>'+
       '<div class="exam-qtop">'+
         '<span class="eq-num">السؤال '+(i+1)+' من '+st.data.length+'</span>'+
-        '<button class="qmark-btn '+(isMarked?'on':'')+'" onclick="toggleMark('+i+')" title="علّمي السؤال — يظهر في ملف Word">'+(isMarked?'⭐ معلّم':'☆ علّم')+'</button>'+
+        '<span class="q-tools">'+
+          '<button class="q-act-btn" onclick="copyQuestion('+i+')" title="انسخ السؤال مع الإجابة الصحيحة">📋 نسخ</button>'+
+          '<button class="q-act-btn" onclick="shareQuestion('+i+')" title="شارك السؤال مع الإجابة الصحيحة">📤 مشاركة</button>'+
+          '<button class="qmark-btn '+(isMarked?'on':'')+'" onclick="toggleMark('+i+')" title="علّمي السؤال — يظهر في ملف Word">'+(isMarked?'⭐ معلّم':'☆ علّم')+'</button>'+
+        '</span>'+
       '</div>'+
       '<div class="exam-qtext'+(qLatin?' ltr':'')+'">'+esc(q.q)+'</div>'+
       qTrHTML(q, 'q'+i)+
@@ -1891,9 +1962,34 @@ function renderNotesCard(lec){
 /* التسجيل الصوتي: يظهر في صفحة المحاضرة فقط، ومش بيشتغل إلا لما تدوسي تشغيل.
    في بيانات المحاضرة: audio:"رابط.mp3"  أو  audio:[{t:"الجزء الأول", url:"..."}] */
 function stopLectureAudio(){
-  var root = document.getElementById('lecture-audio-root');
-  if(!root) return;
-  [].forEach.call(root.querySelectorAll('audio'), function(a){ try{ a.pause(); }catch(e){} });
+  var lv = document.getElementById('lecture-view');
+  if(!lv) return;
+  [].forEach.call(lv.querySelectorAll('audio'), function(a){ try{ a.pause(); }catch(e){} });
+}
+/* يوقف أي صوت/فيديو شغّال: onlySec=true → اللي جوه صفحة السكشن بس، وإلا كل صفحة المحاضرة */
+function closeLectureMedia(onlySec){
+  var scope = onlySec ? document.getElementById('sec-body') : document.getElementById('lecture-view');
+  if(!scope) return;
+  [].forEach.call(scope.querySelectorAll('audio,video'), function(m){ try{ m.pause(); }catch(e){} });
+  [].forEach.call(scope.querySelectorAll('.vid-btn[aria-expanded="true"]'), function(b){ try{ b.click(); }catch(e){} });
+}
+/* تسجيل صوتي للسكشن: audio:"رابط" أو [{t,url}] — بنفس شكل المحاضرة */
+function secAudioCard(raw){
+  if(!raw) return null;
+  var items = (Array.isArray(raw) ? raw : [raw]).map(function(a){
+    return (typeof a === 'string') ? {t:'', url:a} : a;
+  }).filter(function(a){ return a && typeof a.url === 'string' && lectureUrlOk(a.url.trim()); });
+  if(!items.length) return null;
+  var card = document.createElement('div'); card.className = 'lec-audio-card';
+  var ttl = document.createElement('div'); ttl.className = 'lec-audio-title'; ttl.textContent = '🎧 التسجيل الصوتي للسكشن';
+  card.appendChild(ttl);
+  items.forEach(function(a){
+    var it = document.createElement('div'); it.className = 'lec-audio-item';
+    if(a.t){ var nm = document.createElement('div'); nm.className = 'lec-audio-name'; nm.textContent = String(a.t); it.appendChild(nm); }
+    var au = document.createElement('audio'); au.controls = true; au.preload = 'none'; au.src = a.url.trim();
+    it.appendChild(au); card.appendChild(it);
+  });
+  return card;
 }
 function renderLectureAudio(l){
   var root = document.getElementById('lecture-audio-root');
@@ -1924,11 +2020,19 @@ function vidParse(u){
   var ok = /^https:\/\/[^\s]+$/i.test(u) || (!/^[a-z][a-z0-9+.-]*:/i.test(u) && u.indexOf('//') !== 0);
   if(!ok) return null;
   var m = u.match(/(?:youtube\.com\/(?:watch\?(?:[^#\s]*&)?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([\w-]{11})/i);
-  if(m) return {kind:'iframe', src:'https://www.youtube-nocookie.com/embed/'+m[1]+'?autoplay=1&rel=0'};
+  if(m){
+    var ytq = 'autoplay=1&rel=0&playsinline=1';
+    /* origin بيمنع خطأ 153 — بيتضاف بس لما الصفحة على http/https (مش file://) */
+    try{ if(/^https?:$/.test(location.protocol)) ytq += '&origin=' + encodeURIComponent(location.origin); }catch(e){}
+    return {kind:'iframe', src:'https://www.youtube-nocookie.com/embed/'+m[1]+'?'+ytq,
+            open:'https://www.youtube.com/watch?v='+m[1], site:'يوتيوب'};
+  }
   m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/i) || u.match(/drive\.google\.com\/(?:open|uc)\?(?:[^#\s]*&)?id=([\w-]+)/i);
-  if(m) return {kind:'iframe', src:'https://drive.google.com/file/d/'+m[1]+'/preview'};
+  if(m) return {kind:'iframe', src:'https://drive.google.com/file/d/'+m[1]+'/preview',
+                open:'https://drive.google.com/file/d/'+m[1]+'/view', site:'Drive'};
   m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/i);
-  if(m) return {kind:'iframe', src:'https://player.vimeo.com/video/'+m[1]+'?autoplay=1'};
+  if(m) return {kind:'iframe', src:'https://player.vimeo.com/video/'+m[1]+'?autoplay=1',
+                open:'https://vimeo.com/'+m[1], site:'Vimeo'};
   return {kind:'file', src:u};
 }
 function vidList(raw){
@@ -1948,16 +2052,25 @@ function vidItem(label, url){
   var act = document.createElement('span'); act.className = 'vid-act'; act.textContent = 'تشغيل ▶';
   btn.appendChild(ic); btn.appendChild(lb); btn.appendChild(act);
   var box = document.createElement('div'); box.className = 'vid-player'; box.hidden = true;
+  /* رابط احتياطي: لو التضمين اتحجب (خطأ 153 / الفيديو مش مسموح تضمينه) يفتحه في موقعه */
+  var link = null;
+  if(p.open){
+    link = document.createElement('a'); link.className = 'vid-open'; link.hidden = true;
+    link.href = p.open; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    link.textContent = '↗ لو الفيديو مش بيشتغل هنا، افتحه على ' + (p.site || 'الموقع');
+  }
   btn.onclick = function(){
     if(box.hidden){
       box.hidden = false; box.textContent = '';
       var el;
       if(p.kind === 'iframe'){
         el = document.createElement('iframe');
-        el.src = p.src; el.title = label || 'فيديو';
-        el.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
-        el.allowFullscreen = true;
+        /* referrerpolicy لازم قبل src — يوتيوب بيرفض (خطأ 153) لو مفيش Referer */
         el.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+        el.title = label || 'فيديو';
+        el.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media; clipboard-write';
+        el.allowFullscreen = true;
+        el.src = p.src;
       }else{
         el = document.createElement('video');
         el.controls = true; el.preload = 'metadata'; el.setAttribute('playsinline','');
@@ -1965,13 +2078,16 @@ function vidItem(label, url){
         var pr = el.play(); if(pr && pr.catch) pr.catch(function(){});
       }
       box.appendChild(el);
+      if(link) link.hidden = false;
       act.textContent = 'إغلاق ✕'; btn.setAttribute('aria-expanded','true');
     }else{
       box.textContent = ''; box.hidden = true;
+      if(link) link.hidden = true;
       act.textContent = 'تشغيل ▶'; btn.setAttribute('aria-expanded','false');
     }
   };
   wrap.appendChild(btn); wrap.appendChild(box);
+  if(link) wrap.appendChild(link);
   return wrap;
 }
 /* فيديو سؤال معيّن: q.video = "رابط"  أو  {t:"شرح السؤال", url:"..."} */
@@ -3111,6 +3227,7 @@ function secRender(){
       body = document.getElementById('sec-body'),
       title = document.getElementById('sec-title');
   lv.classList.toggle('sec-open', secState.view !== 'lecture');
+  closeLectureMedia(secState.view === 'lecture');
   body.textContent = '';
   if(secState.view === 'lecture') return;
   window.scrollTo({top:0, behavior:'smooth'});
@@ -3251,6 +3368,10 @@ function secRender(){
       n++;
     });
   }
+
+  /* تسجيل صوتي للسكشن: audio:"رابط" أو [{t,url}] (مش بيظهر لو مفيش، ومبيشتغلش إلا بالضغط على تشغيل) */
+  var secAud = off ? null : secAudioCard(cur.audio);
+  if(secAud){ box.appendChild(secAud); n++; }
 
   /* فيديوهات السكشن: videos:[{label,url}] أو video:"رابط" (مش بتظهر لو مفيش) */
   var secVids = off ? [] : vidList(cur.videos || cur.video);

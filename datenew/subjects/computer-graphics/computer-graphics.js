@@ -121,7 +121,12 @@ subjects.push({
           ],
         },
       ],
-
+      videos: [
+        {
+          t: "حل أسئلة المحاضرة",
+          url: "https://www.youtube.com/watch?v=PhxV_JrXeVk",
+        },
+      ],
       questions: [
         // ─── MCQ ───
         {
