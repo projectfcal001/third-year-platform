@@ -1674,146 +1674,756 @@ subjects.push({
         },
       ],
     },
-    /* // محاضرة الجبر الخطي للرسوميات الحاسوبية (Linear Algebra in Computer Graphics - CMU 15-462)
-const linkCategories = [
-  {
-    category: "فيديوهات عربية",
-    icon: "🇪🇬",
-    description: "شروحات باللغة العربية تشرح مفاهيم المتجهات، الفضاءات المتجهة، والعمليات الأساسية في الجبر الخطي",
-    links: [
-      {
-        t: "SpicyCoders - المتجهات | Vectors | الجبر الخطى",
-        d: "شرح تفصيلي لمفهوم المتجهات، المركبات الديكارتية، وحساب طول المتجه (Magnitude) والعمليات عليها",
-        icon: "🇪🇬",
-        actions: [
-          {
-            label: "📖 مشاهدة الفيديو",
-            url: "https://www.youtube.com/watch?v=lMahHHwQ_Eo",
-            type: "view",
-            color: "red"
-          }
-        ]
-      },
-      {
-        t: "د. أحمد حجاج - الجبر الخطي (فيديوهات التركيبات والفضاءات المتجهة)",
-        d: "شرح أكاديمي للتركيبات الخطية (Linear Combinations) والاستقلال الخطي ومجموعات التوليد",
-        icon: "🇪🇬",
-        actions: [
-          {
-            label: "📖 فتح قائمة التشغيل",
-            url: "https://www.youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_",
-            type: "view",
-            color: "red"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    category: "فيديوهات عالمية",
-    icon: "🌍",
-    description: "محاضرات أكاديمية رسمية من جامعة كارنيغي ميلون (CMU) وسلسلة 3Blue1Brown الهندسية المرئية",
-    links: [
-      {
-        t: "Prof. Keenan Crane - CMU 15-462 Math Review Part I: Linear Algebra",
-        d: "المحاضرة الأكاديمية الرسمية لمؤلف الشرائح تشمل المتجهات، الفضاءات المتجهة، المعيار، والجداء الداخلي",
-        icon: "🌍",
-        actions: [
-          {
-            label: "🎬 مشاهدة المحاضرة",
-            url: "https://youtu.be/2c8XQlQApx8",
-            type: "view",
-            color: "red"
-          },
-          {
-            label: "🌐 الموقع الرسمي للمساق",
-            url: "http://15462.courses.cs.cmu.edu/fall2020/",
-            type: "view",
-            color: "blue"
-          }
-        ]
-      },
-      {
-        t: "3Blue1Brown - Essence of Linear Algebra",
-        d: "سلسلة مرئية تفاعلية تشرح جوهر المتجهات، الفضاءات، المعيار (Norm)، والضرب القياسي (Dot Product)",
-        icon: "🌍",
-        actions: [
-          {
-            label: "📖 فتح القائمة",
-            url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
-            type: "view",
-            color: "red"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    category: "مواقع ومراجع",
-    icon: "📚",
-    description: "مقالات هندسية متخصصة تربط بين الرياضيات والرسوميات الحاسوبية",
-    links: [
-      {
-        t: "Scratchapixel - Geometry: Points, Vectors and Norms",
-        d: "مرجع متقدم يشرح تمثيل النقاط، المتجهات، المعايير (Norms)، والعمليات الرياضية المستخدمة في محركات الرسوميات ثلاثية الأبعاد",
-        icon: "📚",
-        actions: [
-          {
-            label: "🚀 فتح المقال",
-            url: "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/geometry/points-vectors-and-normals.html",
-            type: "view",
-            color: "green"
-          }
-        ]
-      },
-      {
-        t: "Khan Academy - Linear Algebra",
-        d: "مراجعة شاملة ومبسطة لمفاهيم المتجهات، الفضاءات الجزئية، والتحويلات الخطية",
-        icon: "📚",
-        actions: [
-          {
-            label: "🌐 زيارة الموقع",
-            url: "https://www.khanacademy.org/math/linear-algebra",
-            type: "view",
-            color: "blue"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    category: "أدوات ومحاكاة",
-    icon: "🔧",
-    description: "أدوات تفاعلية لمحاكاة العمليات على المتجهات والتحويلات الرياضية هندسياً",
-    links: [
-      {
-        t: "PhET Interactive Simulation - Vector Addition",
-        d: "أداة محاكاة تفاعلية لجمع المتجهات، قياس المعيار، وتحليل المركبات في الفضاء الثنائي والثلاثي",
-        icon: "🔧",
-        actions: [
-          {
-            label: "🚀 فتح المحاكاة",
-            url: "https://phet.colorado.edu/en/simulations/vector-addition",
-            type: "view",
-            color: "orange"
-          }
-        ]
-      },
-      {
-        t: "GeoGebra 3D Visualizer",
-        d: "بيئة تفاعلية ثلاثية الأبعاد لبناء المتجهات، حساب الجداء الداخلي، وتصور الفضاءات المتجهة هندسياً",
-        icon: "🔧",
-        actions: [
-          {
-            label: "🚀 فتح الأداة 3D",
-            url: "https://www.geogebra.org/3d",
-            type: "view",
-            color: "orange"
-          }
-        ]
-      }
-    ]
-  }
-]; */
+    {
+      id: "computer-graphics-lecture-03",
+      t: "المحاضرة 3: الجبر الخطي (Inner Product, Linear Maps, Span, Basis)",
+      d: "الجزء الثاني من مراجعة الجبر الخطي: الـ inner product وخصائصه، الـ linear maps مقابل الـ affine، والـ span والـ basis والـ orthonormal basis.",
+      pdf: "/datenew/subjects/computer-graphics/lectures/Lecture 3/Lecture 3.pdf",
+      pdf2: "/datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-03-Questions.pdf",
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات باللغة العربية تشرح مفاهيم المتجهات، الفضاءات المتجهة، والعمليات الأساسية في الجبر الخطي",
+          links: [
+            {
+              t: "SpicyCoders - المتجهات | Vectors | الجبر الخطى",
+              d: "شرح تفصيلي لمفهوم المتجهات، المركبات الديكارتية، وحساب طول المتجه (Magnitude) والعمليات عليها",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=lMahHHwQ_Eo",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "د. أحمد حجاج - الجبر الخطي (فيديوهات التركيبات والفضاءات المتجهة)",
+              d: "شرح أكاديمي للتركيبات الخطية (Linear Combinations) والاستقلال الخطي ومجموعات التوليد",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 فتح قائمة التشغيل",
+                  url: "https://www.youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محاضرات أكاديمية رسمية من جامعة كارنيغي ميلون (CMU) وسلسلة 3Blue1Brown الهندسية المرئية",
+          links: [
+            {
+              t: "Prof. Keenan Crane - CMU 15-462 Math Review Part I: Linear Algebra",
+              d: "المحاضرة الأكاديمية الرسمية لمؤلف الشرائح تشمل المتجهات، الفضاءات المتجهة، المعيار، والجداء الداخلي",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 مشاهدة المحاضرة",
+                  url: "https://youtu.be/2c8XQlQApx8",
+                  type: "view",
+                  color: "red",
+                },
+                {
+                  label: "🌐 الموقع الرسمي للمساق",
+                  url: "http://15462.courses.cs.cmu.edu/fall2020/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "3Blue1Brown - Essence of Linear Algebra",
+              d: "سلسلة مرئية تفاعلية تشرح جوهر المتجهات، الفضاءات، المعيار (Norm)، والضرب القياسي (Dot Product)",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات هندسية متخصصة تربط بين الرياضيات والرسوميات الحاسوبية",
+          links: [
+            {
+              t: "Scratchapixel - Geometry: Points, Vectors and Norms",
+              d: "مرجع متقدم يشرح تمثيل النقاط، المتجهات، المعايير (Norms)، والعمليات الرياضية المستخدمة في محركات الرسوميات ثلاثية الأبعاد",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/geometry/points-vectors-and-normals.html",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Khan Academy - Linear Algebra",
+              d: "مراجعة شاملة ومبسطة لمفاهيم المتجهات، الفضاءات الجزئية، والتحويلات الخطية",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 زيارة الموقع",
+                  url: "https://www.khanacademy.org/math/linear-algebra",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية لمحاكاة العمليات على المتجهات والتحويلات الرياضية هندسياً",
+          links: [
+            {
+              t: "PhET Interactive Simulation - Vector Addition",
+              d: "أداة محاكاة تفاعلية لجمع المتجهات، قياس المعيار، وتحليل المركبات في الفضاء الثنائي والثلاثي",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح المحاكاة",
+                  url: "https://phet.colorado.edu/en/simulations/vector-addition",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "GeoGebra 3D Visualizer",
+              d: "بيئة تفاعلية ثلاثية الأبعاد لبناء المتجهات، حساب الجداء الداخلي، وتصور الفضاءات المتجهة هندسياً",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة 3D",
+                  url: "https://www.geogebra.org/3d",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. Which of the following are other names for the inner product?",
+          options: [
+            "Cross product and vector product",
+            "Outer product and tensor product",
+            "Scalar product and dot product",
+            "Matrix product and norm product",
+          ],
+          correct: 2,
+          translation: "إيه الأسماء التانية للـ inner product؟",
+          explanation:
+            "الـ inner product بيتسمى كمان scalar product أو dot product (وبيتكتب <u,v> أو u•v). الـ cross product شيء مختلف وبيطلّع vector مش رقم.",
+          tags: ["Inner Product", "Dot Product"],
+          ref: "Lecture 03 — Slide 30",
+        },
+
+        {
+          q: "2. What does the inner product measure, in contrast to the norm?",
+          options: [
+            'How well two vectors "line up" (their alignment)',
+            "The length of a single vector",
+            "The area enclosed by two vectors",
+            "The number of components in a vector",
+          ],
+          correct: 0,
+          translation: "الـ inner product بيقيس إيه، بعكس الـ norm؟",
+          explanation:
+            "الـ norm بيقيس الطول، أما الـ inner product فبيقيس مدى توافق اتجاه (orientation) متجهين مع بعض. الاختيارين الأول والتاني بيتكلموا عن الطول والمساحة، مش عن التوافق.",
+          tags: ["Inner Product", "Orientation"],
+          ref: "Lecture 03 — Slide 29",
+        },
+
+        {
+          q: "3. Which equation expresses the symmetry property of the inner product?",
+          options: [
+            "<u,v> = -<v,u>",
+            "<u,v> = <u,u>",
+            "<u,v> = 0 for all u,v",
+            "<u,v> = <v,u>",
+          ],
+          correct: 3,
+          translation: "أنهي معادلة بتعبّر عن خاصية التماثل (symmetry)؟",
+          explanation:
+            "الترتيب مش مهم: u متوافق مع v بنفس قدر توافق v مع u. المعادلة التانية معناها إن الترتيب بيعكس الإشارة وده غلط.",
+          tags: ["Symmetry"],
+          ref: "Lecture 03 — Slide 30",
+        },
+
+        {
+          q: "4. For unit vectors |u| = |v| = 1, the inner product <u,v> measures:",
+          options: [
+            "The sum of the lengths of the two vectors",
+            "The extent of one vector along the direction of the other",
+            "The distance between the tips of the vectors",
+            "The volume spanned by the two vectors",
+          ],
+          correct: 1,
+          translation:
+            "لو u و v طولهم 1 (unit vectors)، الـ inner product بيقيس إيه؟",
+          explanation:
+            "للـ unit vectors بيمثل الـ inner product امتداد (projection) متجه على اتجاه التاني. مجموع الأطوال أو المسافة بين الرأسين مش هو اللي بيقيسه.",
+          tags: ["Projection", "Unit Vector"],
+          ref: "Lecture 03 — Slide 31",
+        },
+
+        {
+          q: "5. If we scale the vector u by a factor of 2, what happens to the inner product <u,v>?",
+          options: [
+            "It is also multiplied by 2",
+            "It stays the same",
+            "It is divided by 2",
+            "It is squared",
+          ],
+          correct: 0,
+          translation: "لو ضربنا u في 2، إيه اللي بيحصل للـ <u,v>؟",
+          explanation:
+            "خاصية الـ scaling: لو كبّرنا أي متجه، الـ inner product بيكبر بنفس المعامل. فبيتضاعف مش بيثبت ولا بيتربّع.",
+          tags: ["Scaling"],
+          ref: "Lecture 03 — Slide 31",
+        },
+
+        {
+          q: "6. What does the positivity property require of <u,u>?",
+          options: [
+            "It should always be negative",
+            "It should always be exactly zero",
+            "It should be positive (or at least non-negative)",
+            "It should always equal 1",
+          ],
+          correct: 2,
+          translation: "خاصية الـ positivity بتطلب إيه من <u,u>؟",
+          explanation:
+            "المتجه لازم يكون متوافق مع نفسه، فالـ inner product بتاعه مع نفسه لازم يبقى موجب أو على الأقل غير سالب. القيمة 1 بتنطبق على الـ unit vectors بس.",
+          tags: ["Positivity"],
+          ref: "Lecture 03 — Slide 32",
+        },
+
+        {
+          q: "7. If we define |u| = sqrt(<u,u>), then <u,u> is equal to:",
+          options: [
+            "|u|, the length of u",
+            "|u|^2, the squared length of u",
+            "2|u|",
+            "1 for every vector u",
+          ],
+          correct: 1,
+          translation: "لو عرّفنا |u| = sqrt(<u,u>)، يبقى <u,u> بتساوي إيه؟",
+          explanation:
+            "من تعريف الـ norm، تربيع الطرفين بيدّي <u,u> = |u|^2. الاختيار الأخير صح للـ unit vectors بس.",
+          tags: ["Norm", "Positivity"],
+          ref: "Lecture 03 — Slide 32",
+        },
+
+        {
+          q: "8. According to the formal definition, an inner product is any function that assigns to two vectors u, v:",
+          options: [
+            "Another vector w of the same length",
+            "A matrix of size n x n",
+            "A set of basis vectors",
+            "A number <u,v> satisfying certain properties",
+          ],
+          correct: 3,
+          translation:
+            "حسب التعريف الرسمي، الـ inner product هو أي دالة بتدّي لأي متجهين u و v إيه؟",
+          explanation:
+            "التعريف بيقول إنه دالة بترجّع رقم (scalar) يحقق مجموعة خصائص. مش بترجّع متجه ولا مصفوفة.",
+          tags: ["Inner Product", "Definition"],
+          ref: "Lecture 03 — Slide 33",
+        },
+
+        {
+          q: "9. The Euclidean inner product of two n-vectors u and v is defined as:",
+          options: [
+            "The sum over i of u_i + v_i",
+            "The product over i of u_i * v_i",
+            "The sum over i of (u_i - v_i)^2",
+            "The sum over i of u_i * v_i",
+          ],
+          correct: 3,
+          translation:
+            "الـ Euclidean inner product لمتجهين n-vectors بيتعرّف إزاي؟",
+          explanation:
+            "بنضرب المركّبات المتناظرة ونجمع النواتج. الجمع بدل الضرب أو الضرب الكلي أو مربع الفرق (ده مربع المسافة) كلهم غلط.",
+          tags: ["Euclidean", "Cartesian"],
+          ref: "Lecture 03 — Slide 34",
+        },
+
+        {
+          q: "10. For u = (4,1) and v = (1,3), the Euclidean inner product <u,v> is:",
+          options: ["12", "7", "8", "4"],
+          correct: 1,
+          translation: "لو u = (4,1) و v = (1,3)، قيمة <u,v> كام؟",
+          explanation:
+            "<u,v> = 4*1 + 1*3 = 4 + 3 = 7. الرقم 12 ناتج 4*3 بالغلط، و8 ناتج جمع كل الأرقام.",
+          tags: ["Euclidean", "Example"],
+          ref: "Lecture 03 — Slide 34",
+        },
+
+        {
+          q: "11. For the L2 inner product of two functions, a small value means:",
+          options: [
+            'The functions do not "line up" much',
+            "The functions are identical",
+            "Both functions are constant",
+            "Both functions have a large norm",
+          ],
+          correct: 0,
+          translation:
+            "في الـ L2 inner product لدالتين، القيمة الصغيرة معناها إيه؟",
+          explanation:
+            "زي المتجهات، القيمة الصغيرة معناها إن الدالتين مش متوافقتين كتير. التطابق بيدّي قيمة كبيرة.",
+          tags: ["L2 Inner Product", "Functions"],
+          ref: "Lecture 03 — Slide 35",
+        },
+
+        {
+          q: "12. Measuring the norm of the derivative of an image mainly captures:",
+          options: [
+            "Overall brightness",
+            "The file size",
+            "Edges",
+            "The image resolution",
+          ],
+          correct: 2,
+          translation: "قياس norm مشتقة الصورة بيلقط إيه أساسًا؟",
+          explanation:
+            "المشتقة بتكبر عند التغيّر السريع في القيم، يعني عند الحواف. السطوع مش هو اللي بتقيسه المشتقة.",
+          tags: ["Derivative", "Edges"],
+          ref: "Lecture 03 — Slide 36",
+        },
+
+        {
+          q: "13. A smooth blue-sky image with few details will have a derivative norm that is:",
+          options: [
+            "Larger than that of a detailed image",
+            "Exactly infinite",
+            "Smaller than that of a detailed image",
+            "Always equal to its brightness",
+          ],
+          correct: 2,
+          translation:
+            "صورة سما زرقاء ناعمة من غير تفاصيل، الـ norm بتاع مشتقتها هيكون:",
+          explanation:
+            "السما فيها حواف قليلة جدًا فالمشتقة صغيرة، أما صورة الكلب المفصّلة فمشتقتها أكبر.",
+          tags: ["Images", "Norm of Derivative"],
+          ref: "Lecture 03 — Slide 36",
+        },
+
+        {
+          q: "14. According to the lecture, the choice of inner product depends on:",
+          options: [
+            "The application",
+            "The number of pixels in the image",
+            "The programming language used",
+            "Nothing, there is only one valid choice",
+          ],
+          correct: 0,
+          translation: "حسب المحاضرة، اختيار الـ inner product بيعتمد على إيه؟",
+          explanation:
+            "في طرق كتير لقياس الحجم والتوافق، والاختيار بيتحدد حسب التطبيق. مفيش اختيار واحد صالح للكل.",
+          tags: ["Inner Product", "Signals"],
+          ref: "Lecture 03 — Slide 36",
+        },
+
+        {
+          q: "15. Which of the following is NOT given as a reason why linear maps are useful for graphics?",
+          options: [
+            "Systems of linear equations are easy to solve computationally",
+            "Rotation, translation and scaling can be expressed as linear maps",
+            "Maps can be approximated as linear maps over short distances or times",
+            "Linear maps always preserve the distances between points",
+          ],
+          correct: 3,
+          translation:
+            "أنهي واحدة دي مش من الأسباب اللي ذكرتها المحاضرة لفايدة الـ linear maps؟",
+          explanation:
+            "الأسباب هي: سهولة حل المعادلات الخطية، تمثيل التحويلات الأساسية، والتقريب الخطي محليًا. حفظ المسافات مش خاصية عامة للـ linear maps (التكبير مثلًا بيغيّرها).",
+          tags: ["Linear Maps", "Graphics"],
+          ref: "Lecture 03 — Slide 37",
+        },
+
+        {
+          q: "16. Which theorem justifies approximating a general map by a linear map over a short distance?",
+          options: [
+            "Pythagorean theorem",
+            "Taylor's theorem",
+            "Fundamental theorem of algebra",
+            "Central limit theorem",
+          ],
+          correct: 1,
+          translation:
+            "أنهي نظرية بتبرر تقريب أي map بـ linear map على مسافة قصيرة؟",
+          explanation:
+            "نظرية تايلور هي اللي ذكرتها المحاضرة، وبتتستخدم في الهندسة والأنيميشن والرندرنج ومعالجة الصور.",
+          tags: ["Taylor", "Linear Approximation"],
+          ref: "Lecture 03 — Slide 37",
+        },
+
+        {
+          q: "17. Geometrically, the key idea of a linear map is that it:",
+          options: [
+            "Takes lines to curves while keeping the origin fixed",
+            "Takes lines to lines while keeping the origin fixed",
+            "Takes lines to lines but moves the origin",
+            "Keeps all angles between lines unchanged",
+          ],
+          correct: 1,
+          translation: "هندسيًا، الفكرة الأساسية للـ linear map إنه:",
+          explanation:
+            "الـ linear map بيحوّل الخطوط لخطوط ويفضّل f(0) = 0. الـ nonlinear map هو اللي بيحوّل الخطوط لمنحنيات.",
+          tags: ["Linear Map", "Geometry"],
+          ref: "Lecture 03 — Slide 38",
+        },
+
+        {
+          q: "18. Which pair of conditions defines a linear map f algebraically?",
+          options: [
+            "f(u+v) = f(u) f(v) and f(au) = f(u) + a",
+            "f(u+v) = f(u) + f(v) and f(0) = 1",
+            "f(au) = f(u)^a and f(u+v) = f(u)",
+            "f(u+v) = f(u) + f(v) and f(au) = a f(u)",
+          ],
+          correct: 3,
+          translation: "أنهي زوج من الشروط بيعرّف الـ linear map جبريًا؟",
+          explanation:
+            "لازم الجمع والضرب في scalar يتبادلوا مع الـ map: نجمع ثم نطبّق f يساوي نطبّق f ثم نجمع، ونفس الشيء للـ scaling.",
+          tags: ["Linear Map", "Algebraic Definition"],
+          ref: "Lecture 03 — Slide 40",
+        },
+
+        {
+          q: "19. For maps between R^m and R^n, a map is linear if it can be written as:",
+          options: [
+            "f(u_1,...,u_m) = sum of u_i * a_i for fixed vectors a_i",
+            "f(u_1,...,u_m) = sum of u_i^2 for all i",
+            "f(u_1,...,u_m) = u_1 * u_2 * ... * u_m",
+            "f(u_1,...,u_m) = a + sum of u_i",
+          ],
+          correct: 0,
+          translation:
+            "للـ maps بين R^m و R^n، الـ map يبقى linear لو اتكتب كـ:",
+          explanation:
+            "الـ map الخطي هو توليفة خطية (linear combination) من مجموعة ثابتة من المتجهات a_i. الصيغ التانية فيها تربيع أو ضرب أو ثابت مضاف.",
+          tags: ["Linear Combination", "Coordinates"],
+          ref: "Lecture 03 — Slide 41",
+        },
+
+        {
+          q: "20. Why is f(x) = ax + b (with b not equal to 0) NOT a linear function?",
+          options: [
+            "Because its graph is not a straight line",
+            "Because it is not defined at x = 0",
+            "Because f(0) is not 0, and it does not preserve sums",
+            "Because a must be negative",
+          ],
+          correct: 2,
+          translation: "ليه f(x) = ax + b (لما b مش صفر) مش دالة خطية؟",
+          explanation:
+            "الرسم بتاعها خط مستقيم فبيخدع، لكن مش بيعدّي بنقطة الأصل وفيه f(x+y) ≠ f(x)+f(y). دي اسمها affine function.",
+          tags: ["Affine", "Linear"],
+          ref: "Lecture 03 — Slide 43",
+        },
+
+        {
+          q: "21. Which trick lets graphics turn affine functions such as translation into linear ones?",
+          options: [
+            "Homogeneous coordinates",
+            "Polar coordinates",
+            "Taylor expansion",
+            "Orthonormal projection",
+          ],
+          correct: 0,
+          translation:
+            "أنهي حيلة بتخلّي الـ affine functions زي الـ translation تتحول لـ linear؟",
+          explanation:
+            "المحاضرة وعدت إننا هنشوف الـ homogeneous coordinates كحيلة مهمة في الجرافيكس لتحويل الـ affine لـ linear.",
+          tags: ["Homogeneous Coordinates", "Translation"],
+          ref: "Lecture 03 — Slide 43",
+        },
+
+        {
+          q: "22. Geometrically, the span of two non-parallel vectors u, v in the plane is:",
+          options: [
+            "Only the vectors u and v themselves",
+            "The set of all vectors of the form au + bv",
+            "Only the vectors of unit length",
+            "The single point at the origin",
+          ],
+          correct: 1,
+          translation:
+            "هندسيًا، الـ span لمتجهين u و v مش متوازيين في المستوى هو:",
+          explanation:
+            "الـ span هو كل المتجهات اللي ممكن تتكتب كتوليفة خطية au + bv لأي رقمين a و b.",
+          tags: ["Span", "Linear Combination"],
+          ref: "Lecture 03 — Slide 45",
+        },
+
+        {
+          q: "23. The image of any linear map is:",
+          options: [
+            "Always a single vector",
+            "Always the whole target space",
+            "The span of some collection of vectors",
+            "The set of unit vectors only",
+          ],
+          correct: 2,
+          translation: "الـ image لأي linear map هو:",
+          explanation:
+            "المحاضرة بتربط بين الاتنين: الـ image هو الـ span لمجموعة متجهات (مثلًا a1 و a2). مش لازم يغطي الفضاء كله.",
+          tags: ["Image", "Span"],
+          ref: "Lecture 03 — Slide 46",
+        },
+
+        {
+          q: "24. Exactly n vectors e_1,...,e_n whose span is R^n are called:",
+          options: [
+            "An orthogonal complement",
+            "An affine map",
+            "A scalar product",
+            "A basis for R^n",
+          ],
+          correct: 3,
+          translation: "n متجه بالظبط الـ span بتاعهم هو R^n بيتسموا:",
+          explanation:
+            "لو عندنا n متجه بالظبط وبيولّدوا R^n كله، يبقوا basis. ولاحظ إن فيه اختيارات كتير للـ basis.",
+          tags: ["Basis", "Span"],
+          ref: "Lecture 03 — Slide 47",
+        },
+
+        {
+          q: "25. An orthonormal basis consists of vectors that are:",
+          options: [
+            "Mutually parallel and of unit length",
+            "Unit length and mutually orthogonal",
+            "Orthogonal but of arbitrary lengths",
+            "Of equal length but not necessarily orthogonal",
+          ],
+          correct: 1,
+          translation: "الـ orthonormal basis متكوّن من متجهات:",
+          explanation:
+            "الـ orthonormal معناها unit length (normal) + متعامدة على بعض (ortho). لو ناقص شرط يبقى مش orthonormal.",
+          tags: ["Orthonormal Basis"],
+          ref: "Lecture 03 — Slide 48",
+        },
+
+        {
+          type: "essay",
+          q: "1. Explain the motivation for the inner product and how it relates to the norm.",
+          translation:
+            "اشرح الدافع لاستخدام الـ inner product وعلاقته بالـ norm.",
+          answer:
+            "Besides magnitude, vectors have orientation.\n" +
+            'The norm measures length; the inner product measures how well two vectors "line up".\n' +
+            "Similar-looking vectors (or images) give a large alignment; very different ones give a small one.\n" +
+            "It is also called the scalar product or dot product, written <u,v> or u.v.",
+          tags: ["Inner Product", "Norm"],
+          ref: "Lecture 03 — Slide 29",
+        },
+
+        {
+          type: "essay",
+          q: "2. What natural properties do we expect from a measure of alignment (symmetry, scaling, positivity)? Explain each geometrically.",
+          translation:
+            "إيه الخصائص الطبيعية المتوقعة من مقياس التوافق (symmetry, scaling, positivity)؟ اشرح كل واحدة هندسيًا.",
+          answer:
+            "Symmetry: <u,v> = <v,u>, since u is as aligned with v as v is with u (renaming vectors changes nothing).\n" +
+            "Scaling: for unit vectors the inner product is the extent of one vector along the other; scaling a vector scales the inner product.\n" +
+            "Positivity: a vector is always aligned with itself, so <u,u> is positive (or at least non-negative).",
+          tags: ["Symmetry", "Scaling", "Positivity"],
+          ref: "Lecture 03 — Slide 30 to Slide 32",
+        },
+
+        {
+          type: "essay",
+          q: "3. Show why <u,u> equals the squared norm |u|^2.",
+          translation: "وضّح ليه <u,u> بتساوي مربع الـ norm يعني |u|^2.",
+          answer:
+            "For a unit vector, a vector is fully aligned with itself, so <u,u> = 1.\n" +
+            "Writing any u as |u| times a unit vector and using the scaling property gives <u,u> = |u|^2.\n" +
+            "Hence |u| = sqrt(<u,u>): the inner product defines the length.",
+          tags: ["Norm", "Positivity"],
+          ref: "Lecture 03 — Slide 32",
+        },
+
+        {
+          type: "essay",
+          q: "4. Define the Euclidean inner product and compute it for u = (4,1), v = (1,3).",
+          translation:
+            "عرّف الـ Euclidean inner product واحسبه لـ u = (4,1) و v = (1,3).",
+          answer:
+            "For n-vectors: <u,v> = sum_{i=1..n} u_i v_i.\n" +
+            "Example: <u,v> = 4*1 + 1*3 = 7.",
+          tags: ["Euclidean", "Example"],
+          ref: "Lecture 03 — Slide 34",
+        },
+
+        {
+          type: "essay",
+          q: "5. Explain the L2 inner product of functions and what it measures.",
+          translation: "اشرح الـ L2 inner product للدوال وبيقيس إيه.",
+          answer:
+            'Just as for vectors, we can define an inner product for functions that measures how well two functions "line up".\n' +
+            "It is defined for square-integrable functions, e.g. on the unit interval.\n" +
+            "A small value means the functions do not line up much.",
+          tags: ["L2", "Functions"],
+          ref: "Lecture 03 — Slide 35",
+        },
+
+        {
+          type: "essay",
+          q: "6. How can the norm of a derivative be used to measure images? Give an example.",
+          translation: "إزاي ممكن نستخدم norm المشتقة لقياس الصور؟ مثال.",
+          answer:
+            'To find images with "interesting stuff", measure the norm of the derivative, which captures edges.\n' +
+            "A detailed image (dog with a plaid coat) has a larger derivative norm.\n" +
+            "A smooth blue sky has a smaller one.\n" +
+            "The choice of inner product or norm depends on the application.",
+          tags: ["Derivative", "Images"],
+          ref: "Lecture 03 — Slide 36",
+        },
+
+        {
+          type: "essay",
+          q: "7. Why are linear maps useful in graphics? List the reasons given in the lecture.",
+          translation:
+            "ليه الـ linear maps مفيدة في الجرافيكس؟ اذكر الأسباب في المحاضرة.",
+          answer:
+            "1) Systems of linear equations are easy to solve computationally.\n" +
+            "2) Basic transformations (rotation, translation, scaling) can be expressed as linear maps.\n" +
+            "3) Any map can be approximated by a linear map over a short distance/time (Taylor's theorem), used in geometry, animation, rendering and image processing.",
+          tags: ["Linear Maps", "Graphics"],
+          ref: "Lecture 03 — Slide 37",
+        },
+
+        {
+          type: "essay",
+          q: "8. Define a linear map geometrically and algebraically.",
+          translation: "عرّف الـ linear map هندسيًا وجبريًا.",
+          answer:
+            "Geometric: linear maps take lines to lines while keeping the origin fixed, so f(0) = 0.\n" +
+            "Algebraic: f maps vectors to vectors and f(u+v) = f(u) + f(v), f(au) = a f(u).\n" +
+            "In coordinates (R^m to R^n): f(u_1,...,u_m) = sum u_i a_i, a linear combination of fixed vectors a_i.",
+          tags: ["Linear Map", "Definition"],
+          ref: "Lecture 03 — Slide 38 to Slide 41",
+        },
+
+        {
+          type: "essay",
+          q: "9. Explain the difference between linear and affine maps using f(x) = ax + b.",
+          translation:
+            "اشرح الفرق بين الـ linear و الـ affine باستخدام f(x) = ax + b.",
+          answer:
+            "The graph is a line, but it does not pass through the origin: f(0) = b, not 0 (for b not 0).\n" +
+            "It also does not preserve sums: f(x+y) = a(x+y)+b, while f(x)+f(y) = a(x+y)+2b.\n" +
+            "So it is affine, not linear.\n" +
+            "Homogeneous coordinates turn affine functions such as translation into linear ones.",
+          tags: ["Affine", "Linear"],
+          ref: "Lecture 03 — Slide 42 to Slide 43",
+        },
+
+        {
+          type: "essay",
+          q: "10. Explain span, basis and orthonormal basis, and the common bug related to non-orthonormal bases.",
+          translation:
+            "اشرح الـ span والـ basis والـ orthonormal basis، والغلطة الشائعة مع الـ basis غير orthonormal.",
+          answer:
+            "Span: all linear combinations of the vectors, e.g. au + bv; the image of a linear map is a span.\n" +
+            "Basis: exactly n vectors whose span is R^n (many choices exist).\n" +
+            "Orthonormal basis: vectors are unit length and mutually orthogonal, so the sum u_1^2+...+u_n^2 stays the length of u.\n" +
+            "Common bug: projecting a vector onto a basis that is NOT orthonormal while still using the standard norm / inner product.",
+          tags: ["Span", "Basis", "Orthonormal"],
+          ref: "Lecture 03 — Slide 45 to Slide 48",
+        },
+
+        {
+          type: "essay",
+          q: "11. Compute the Euclidean inner product of u = (2,3) and v = (5,-1).",
+          translation:
+            "احسب الـ Euclidean inner product لـ u = (2,3) و v = (5,-1).",
+          answer:
+            "Given: u = (2,3), v = (5,-1).\n" +
+            "Law: <u,v> = u_1 v_1 + u_2 v_2.\n" +
+            "<u,v> = 2*5 + 3*(-1) = 10 - 3 = 7.",
+          tags: ["Euclidean", "Calculation"],
+          ref: "Lecture 03 — Slide 34",
+        },
+
+        {
+          type: "essay",
+          q: "12. For u = (3,4), compute <u,u> and the norm |u| using |u| = sqrt(<u,u>).",
+          translation:
+            "لـ u = (3,4) احسب <u,u> والـ norm |u| باستخدام |u| = sqrt(<u,u>).",
+          answer:
+            "Law: <u,u> = u_1^2 + u_2^2 and |u| = sqrt(<u,u>).\n" +
+            "<u,u> = 3^2 + 4^2 = 9 + 16 = 25.\n" +
+            "|u| = sqrt(25) = 5.",
+          tags: ["Norm", "Calculation"],
+          ref: "Lecture 03 — Slide 32",
+        },
+
+        {
+          type: "essay",
+          q: "13. Given <u,v> = 7 for u = (4,1), v = (1,3), compute <3u, v> and <u, 2v> using the scaling property, then verify <3u, v> directly.",
+          translation:
+            "لو <u,v> = 7 لـ u = (4,1) و v = (1,3)، احسب <3u,v> و <u,2v> بخاصية الـ scaling وتحقق من <3u,v> مباشرة.",
+          answer:
+            "Law (scaling): <au,v> = a<u,v> = <u,av>.\n" +
+            "<3u,v> = 3*7 = 21; <u,2v> = 2*7 = 14.\n" +
+            "Check: 3u = (12,3), so <3u,v> = 12*1 + 3*3 = 21.",
+          tags: ["Scaling", "Calculation"],
+          ref: "Lecture 03 — Slide 31",
+        },
+
+        {
+          type: "essay",
+          q: "14. Show that f(x) = 2x + 3 is not linear by testing f(0) and f(1+2) versus f(1)+f(2).",
+          translation:
+            "وضّح إن f(x) = 2x + 3 مش linear باختبار f(0) و f(1+2) مقابل f(1)+f(2).",
+          answer:
+            "Law: a linear map needs f(0) = 0 and f(u+v) = f(u) + f(v).\n" +
+            "f(0) = 3, which is not 0.\n" +
+            "f(1+2) = f(3) = 9, but f(1) + f(2) = 5 + 7 = 12.\n" +
+            "Since 9 is not 12, f is not linear (it is affine).",
+          tags: ["Affine", "Calculation"],
+          ref: "Lecture 03 — Slide 43",
+        },
+
+        {
+          type: "essay",
+          q: "15. Let f: R^2 -> R^3 be linear with a1 = (1,0,2) and a2 = (0,1,1). Compute f(u) for u = (3,2).",
+          translation:
+            "لو f: R^2 -> R^3 خطية و a1 = (1,0,2) و a2 = (0,1,1)، احسب f(u) لـ u = (3,2).",
+          answer:
+            "Law: f(u) = u_1 a_1 + u_2 a_2.\n" +
+            "f(u) = 3*(1,0,2) + 2*(0,1,1) = (3,0,6) + (0,2,2) = (3,2,8).",
+          tags: ["Linear Map", "Calculation"],
+          ref: "Lecture 03 — Slide 41",
+        },
+      ],
+    },
   ],
 });

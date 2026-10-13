@@ -3289,6 +3289,33 @@ function secSectionTitle(){
 }
 
 
+/* ★ روابط السكشن: بتنضّف الروابط (https فقط) وبتدعم نفس شكل روابط المحاضرة */
+function secCleanLinks(arr){
+  var out = [];
+  (Array.isArray(arr) ? arr : []).forEach(function(L){
+    if(!L || typeof L !== 'object') return;
+    var c = {}; for(var k in L){ if(Object.prototype.hasOwnProperty.call(L,k)) c[k] = L[k]; }
+    if(Array.isArray(L.actions)){
+      c.actions = L.actions.filter(function(x){ return x && typeof x === 'object' && secUrl(x.url); });
+      if(!c.actions.length) return;
+    }else{
+      if(!secUrl(L.url)) return;
+    }
+    out.push(c);
+  });
+  return out;
+}
+function secCleanCategories(arr){
+  var out = [];
+  (Array.isArray(arr) ? arr : []).forEach(function(cat){
+    if(!cat || typeof cat !== 'object') return;
+    var c = {}; for(var k in cat){ if(Object.prototype.hasOwnProperty.call(cat,k)) c[k] = cat[k]; }
+    c.links = secCleanLinks(cat.links);
+    if(c.links.length) out.push(c);
+  });
+  return out;
+}
+
 /* ★ التعديلات 2 + 3 + 4 + 5 + 6: secRender الجديدة */
 function secRender(){
   var lv = document.getElementById('lecture-view'),
@@ -3450,6 +3477,22 @@ function secRender(){
 
   if(n) body.appendChild(box);
 
+  /* روابط ومصادر السكشن: links:[{t,d,icon,actions|url}] و linkCategories:[{category,icon,description,links}]
+     (بتظهر بنفس شكل روابط المحاضرة، ومش بتظهر لو مفيش) */
+  var nl = 0;
+  if(!off){
+    var secLk = secCleanLinks(cur.links || mats.links);
+    var secCt = secCleanCategories(cur.linkCategories || mats.linkCategories);
+    if(secLk.length || secCt.length){
+      nl = secLk.length;
+      secCt.forEach(function(c){ nl += c.links.length; });
+      body.appendChild(secEl('div','sec-header-row','🔗 روابط ومصادر'));
+      var lkBox = secEl('div','sec-links'); lkBox.id = 'sec-links-box';
+      body.appendChild(lkBox);
+      renderLectureLinks('sec-links-box', secLk, secCt);
+    }
+  }
+
   /* ★ التعديل 4: task */
   var task = cur.task;
   if(task && typeof task === 'object' && (task.url || task.title)){
@@ -3465,7 +3508,7 @@ function secRender(){
     body.appendChild(tb);
   }
 
-  if(!n && !notes && !task) body.appendChild(secEl('p','ld-hint','لا توجد مواد لهذا المعيد حتى الآن.'));
+  if(!n && !nl && !notes && !task) body.appendChild(secEl('p','ld-hint','لا توجد مواد لهذا المعيد حتى الآن.'));
 }
 
 function secFail(e){

@@ -63,7 +63,7 @@ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();win
 
 [data-theme="morning"]{
 --bg-body:#fef9ef;--bg-header:#a8510c;--bg-content:#fffdf7;--bg-card:#fef5e7;--bg-card-hover:#fdebd0;--bg-quiz-container:#fef5e7;
---bg-quiz-card:#fffdf7;--text-primary:#5d4037;--text-secondary:#795548;--text-heading:#bf6516;--text-hint:#a1887f;--accent:#e67e22;
+--bg-quiz-card:#fffdf7;--text-primary:#5d4037;--text-secondary:#795548;--text-heading:#bf6516;--text-hint:#7d645c;--accent:#e67e22;
 --accent-hover:#d35400;--accent-active:#e67e22;--border:#f0d9b5;--shadow:rgba(230,126,34,.1);--card-border:#e67e22;--quiz-number-bg:#e67e22;
 --option-border:#e67e22;--option-text:#e67e22;--option-hover-bg:#fef5e7;--progress-bg:#fdebd0;--progress-fill-1:#e67e22;
 --progress-fill-2:#f39c12;--score-bg-1:#e67e22;--score-bg-2:#f39c12;--show-score-bg-1:#e67e22;--show-score-bg-2:#f39c12;
@@ -94,7 +94,7 @@ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();win
 
 [data-theme="afternoon"]{
 --bg-body:#f5f0e8;--bg-header:#6d4c41;--bg-content:#faf7f2;--bg-card:#efe9e0;--bg-card-hover:#e3dbd0;--bg-quiz-container:#efe9e0;
---bg-quiz-card:#faf7f2;--text-primary:#3e2723;--text-secondary:#5d4037;--text-heading:#5d4037;--text-hint:#8d6e63;--accent:#8d6e63;
+--bg-quiz-card:#faf7f2;--text-primary:#3e2723;--text-secondary:#5d4037;--text-heading:#5d4037;--text-hint:#725950;--accent:#8d6e63;
 --accent-hover:#795548;--accent-active:#8d6e63;--tab-active-bg:#6d4c41;--border:#d7ccc8;--shadow:rgba(109,76,65,.1);--card-border:#8d6e63;--quiz-number-bg:#6d4c41;
 --option-border:#8d6e63;--option-text:#8d6e63;--option-hover-bg:#efe9e0;--progress-bg:#d7ccc8;--score-bg-1:#6d4c41;--score-bg-2:#8d6e63;
 --show-score-bg-1:#6d4c41;--show-score-bg-2:#8d6e63;--show-score-shadow:rgba(109,76,65,.4);--status-bg:#6d4c41;
@@ -110,7 +110,7 @@ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();win
 
 [data-theme="night"]{
 --bg-body:#0a0a14;--bg-header:#12121f;--bg-content:#12121f;--bg-card:#1a1a2e;--bg-card-hover:#22223a;--bg-quiz-container:#0a0a14;
---bg-quiz-card:#12121f;--text-primary:#d4d4e8;--text-secondary:#9999bb;--text-heading:#eef;--text-hint:#668;--accent:#6c8cff;
+--bg-quiz-card:#12121f;--text-primary:#d4d4e8;--text-secondary:#9999bb;--text-heading:#eef;--text-hint:#8c8ca9;--accent:#6c8cff;
 --accent-hover:#8da4ff;--accent-active:#12121f;--border:#2a2a44;--shadow:rgba(0,0,0,.5);--card-border:#6c8cff;--quiz-number-bg:#2a2a44;
 --option-border:#6c8cff;--option-text:#6c8cff;--option-hover-bg:#1a1a2e;--progress-bg:#2a2a44;--score-bg-1:#12121f;--score-bg-2:#2a2a44;
 --score-circle-border:rgba(108,140,255,.2);--score-circle-bg:rgba(108,140,255,.05);--wrong-card-bg:#2a1520;--correct-card-bg:#152a1a;
@@ -136,9 +136,10 @@ header h1{margin:0 0 8px;font-size:24px}
 .theme-pill:hover{background:var(--theme-btn-active);transform:scale(1.04)}
 .theme-pill.active{border-color:var(--text-white);background:var(--theme-btn-active);box-shadow:0 0 12px rgba(255,255,255,.2)}
 .demo-btn{background:#e67e22;color:#fff;border:none;padding:6px 12px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:bold;transition:all .3s}
-.auto-visible .demo-btn{animation:demoPulse 1.5s infinite}
+.auto-visible .demo-btn{position:relative;isolation:isolate}
+.auto-visible .demo-btn::after{content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(230,126,34,.4);z-index:-1;pointer-events:none;animation:demoPulse 1.5s infinite;will-change:transform,opacity}
 .demo-btn:hover{filter:brightness(1.15);transform:scale(1.05)}
-@keyframes demoPulse{0%,100%{box-shadow:0 0 0 0 rgba(230,126,34,.4)}50%{box-shadow:0 0 0 8px rgba(230,126,34,0)}}
+@keyframes demoPulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.35,1.6);opacity:0}}
 .auto-only{display:none}
 .auto-visible .auto-only{display:inline-block}
 
@@ -646,6 +647,7 @@ body.app-ready #main-view{opacity:1;visibility:visible;transition:opacity .2s ea
 .sum-text{margin:0;padding:14px 16px;background:var(--bg-quiz-card);border:2px solid var(--border);border-radius:12px;color:var(--text-primary);font-size:15px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
 
 /* ★ التعديلات 3+4: ستايلات ملفات إضافية + ملف مهمة */
+.sec-links{margin-bottom:10px}
 .sec-header-row{font-weight:bold;font-size:14px;color:var(--text-heading);padding:10px 14px;background:var(--bg-card-hover);border-radius:10px;margin:4px 0 6px}
 .sec-picker-title{font-weight:bold;color:var(--text-heading);margin:6px 0 10px;padding:10px 14px;background:var(--bg-card-hover);border-radius:10px}
 .sec-group-name{display:inline-block;background:var(--accent);color:#fff;padding:4px 12px;border-radius:14px;font-size:12px;font-weight:bold;margin:0 0 10px}
