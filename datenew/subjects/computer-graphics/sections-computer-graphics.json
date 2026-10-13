@@ -19,17 +19,24 @@
           "type": "pdf"
         }
       },
-      "links": [
+      "linkCategories": [
         {
-          "t": "ملف السكشن",
-          "d": "دي ملف اول سكشن ال كان علي openGL ,تم التحويل الي webGL",
-          "icon": "🇪🇬",
-          "actions": [
+          "category": "ملفات السكشن",
+          "icon": "📄",
+          "description": "ملف السكشن الرسمي للتحميل والمذاكرة",
+          "links": [
             {
-              "label": "📥 تحميل ",
-              "url": "https://drive.google.com/file/d/1yBSWsqATJVX5oblzDwJnD7FD40k9zz6i/view?usp=drive_link",
-              "type": "download",
-              "color": "red"
+              "t": "ملف السكشن",
+              "d": "دي ملف اول سكشن ال كان علي openGL ,تم التحويل الي webGL",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📥 تحميل",
+                  "url": "https://drive.google.com/file/d/1yBSWsqATJVX5oblzDwJnD7FD40k9zz6i/view?usp=drive_link",
+                  "type": "download",
+                  "color": "red"
+                }
+              ]
             }
           ]
         }
@@ -52,21 +59,7 @@
           "type": "pdf"
         }
       },
-      "links": [
-        {
-          "t": "ملف السكشن",
-          "d": "ملف السكشن العملي لتقنية WebGL والتطبيقات البرمجية للرسوميات ثلاثية الأبعاد وعرضها عبر المتصفح",
-          "icon": "🇪🇬",
-          "actions": [
-            {
-              "label": "📥 تحميل ",
-              "url": "",
-              "type": "download",
-              "color": "red"
-            }
-          ]
-        }
-      ],
+
 
       "linkCategories": [
         {
