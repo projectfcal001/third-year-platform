@@ -3288,6 +3288,7 @@ function secSectionTitle(){
   return '🧩 السكشن';
 }
 
+
 /* ★ التعديلات 2 + 3 + 4 + 5 + 6: secRender الجديدة */
 function secRender(){
   var lv = document.getElementById('lecture-view'),
