@@ -12,13 +12,6 @@
       "groupName": "سكشن A",
       "status": "available",
       "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
-      "materials": {
-        "file": {
-          "label": "ملف السكشن",
-          "url": "datenew/subjects/visual-programming/sections/section01/GUI.pdf",
-          "type": "pdf"
-        }
-      },
       "linkCategories": [
         {
           "category": "ملفات السكشن",
@@ -32,7 +25,7 @@
               "actions": [
                 {
                   "label": "📥 تحميل",
-                  "url": "https://drive.google.com/file/d/1yBSWsqATJVX5oblzDwJnD7FD40k9zz6i/view?usp=drive_link",
+                  "url": "https://drive.google.com/uc?export=download&id=1yBSWsqATJVX5oblzDwJnD7FD40k9zz6i",
                   "type": "download",
                   "color": "red"
                 }
@@ -52,13 +45,7 @@
       "groupName": "سكشن  B",
       "status": "available",
       "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
-      "materials": {
-        "file": {
-          "label": "ملف السكشن",
-          "url": "datenew/subjects/visual-programming/sections/section01/GUI.pdf",
-          "type": "pdf"
-        }
-      },
+
 
 
       "linkCategories": [
