@@ -1,3 +1,219 @@
 {
-  "sections": []
+  "schemaVersion": 2,
+  "subject": "computer-graphics",
+  "sections": [
+    {
+      "id": "computer-graphics-sec-01",
+      "subject": "computer-graphics",
+      "lecture": "المحاضرة الأولى",
+      "lectureId": "computer-graphics-lec-01",
+      "instructorId": "INS-Ahamd",
+      "instructorName": "م. احمد هشام ",
+      "groupName": "سكشن A",
+      "status": "available",
+      "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
+      "links": [
+        {
+          "t": "ملف السكشن",
+          "d": "دي ملف اول سكشن ال كان علي openGL ,تم التحويل الي webGL",
+          "icon": "🇪🇬",
+          "actions": [
+            {
+              "label": "📥 تحميل ",
+              "url": "https://drive.google.com/file/d/1yBSWsqATJVX5oblzDwJnD7FD40k9zz6i/view?usp=drive_link",
+              "type": "download",
+              "color": "red"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "computer-graphics-sec-02",
+      "subject": "computer-graphics",
+      "lecture": "المحاضرة الأولى",
+      "lectureId": "computer-graphics-lec-01",
+      "instructorId": "INS-Ahamd",
+      "instructorName": "م. احمد هشام ",
+      "groupName": "سكشن A",
+      "status": "available",
+      "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
+      "links": [
+        {
+          "t": "ملف السكشن",
+          "d": "ملف السكشن العملي لتقنية WebGL والتطبيقات البرمجية للرسوميات ثلاثية الأبعاد وعرضها عبر المتصفح",
+          "icon": "🇪🇬",
+          "actions": [
+            {
+              "label": "📥 تحميل ",
+              "url": "",
+              "type": "download",
+              "color": "red"
+            }
+          ]
+        }
+      ],
+
+      "linkCategories": [
+        {
+          "category": "فيديوهات عربية",
+          "icon": "🇪🇬",
+          "description": "شروحات باللغة العربية لتقنية WebGL وإطار Three.js والمفاهيم الأساسية للرسوميات عبر المتصفح",
+          "links": [
+            {
+              "t": "مقدمة إلى WebGL و Three.js - أكاديمية حسوب",
+              "d": "سلسلة شاملة تشرح بناء المشاهد ثلاثية الأبعاد، تهيئة الكاميرات، الأضواء، وتحريك المجسمات برمجياً",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📖 الشرح",
+                  "url": "https://academy.hsoub.com/programming/javascript/%D9%85%D9%82%D8%AF%D9%85%D8%A9-%D8%A5%D9%84%D9%89-webgl-%D8%AA%D8%B9%D8%B1%D9%8A%D9%81-r481/",
+                  "type": "view",
+                  "color": "red"
+                }
+              ]
+            },
+            {
+              "t": "Three.js بالعربي - Code with Posidoon",
+              "d": "دروس تفاعلية باللغة العربية لتصميم وتأطير الأشكال وتطبيق الإكساءات (Textures) والمواد (Materials)",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📖 الشرح",
+                  "url": "https://www.youtube.com/watch?v=IyUVKrUEaOo",
+                  "type": "view",
+                  "color": "red"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "category": "فيديوهات عالمية",
+          "icon": "🌍",
+          "description": "شروحات أكاديمية وسلاسل تعليمية عالمية لشرح WebGL بدون مكتبات خارجية ومفاهيم GLSL",
+          "links": [
+            {
+              "t": "Indigo Code - WebGL Tutorial Series",
+              "d": "سلسلة برمجية وبنائية تشرح WebGL من الصفر: Hello Triangle، التحويلات، الإكساءات، وإضاءة Phong",
+              "icon": "🌍",
+              "actions": [
+                {
+                  "label": "📖 الشرح",
+                  "url": "https://www.youtube.com/watch?v=7VN4QqOtvt0",
+                  "type": "view",
+                  "color": "red"
+                }
+              ]
+            },
+            {
+              "t": "Invent Box - Learn WebGL in a Nutshell",
+              "d": "شرح مكثف لآلية عمل WebGL، كيفية الربط بين Vertex Shader و Fragment Shader ومعالجة مصفوفة العرض",
+              "icon": "🌍",
+              "actions": [
+                {
+                  "label": "📖 الشرح",
+                  "url": "https://www.youtube.com/watch?v=bP7_FeP9kU4",
+                  "type": "view",
+                  "color": "red"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "category": "م مواقع ومراجع",
+          "icon": "📚",
+          "description": "توثيقات ومراجع تفاعلية تشرح خط معالجة WebGL ومحركات مظللات GLSL بشكل مبسط ودقيق",
+          "links": [
+            {
+              "t": "WebGL Fundamentals / WebGL2 Fundamentals",
+              "d": "المرجع القياسي الأول لتعلم WebGL2 و WebGL من المبادئ الأساسية بدون تعقيدات أوراك OpenGL القديمة",
+              "icon": "📚",
+              "actions": [
+                {
+                  "label": "🚀 فتح الموقع",
+                  "url": "https://webglfundamentals.org/",
+                  "type": "view",
+                  "color": "green"
+                }
+              ]
+            },
+            {
+              "t": "The Book of Shaders",
+              "d": "دليل تفاعلي وتدريجي لإتقان مظللات القطع (Fragment Shaders) ولغة GLSL وتوليد الأشكال والأنماط",
+              "icon": "📚",
+              "actions": [
+                {
+                  "label": "🚀 فتح المقال",
+                  "url": "https://thebookofshaders.com/",
+                  "type": "view",
+                  "color": "blue"
+                }
+              ]
+            },
+            {
+              "t": "WebGL Academy",
+              "d": "بيئة تطوير تفاعلية عبر المتصفح لتعلم الخوارزميات ثلاثية الأبعاد وخوارزميات الظلال Shadow Mapping",
+              "icon": "📚",
+              "actions": [
+                {
+                  "label": "🚀 فتح الموقع",
+                  "url": "https://www.webglacademy.com/",
+                  "type": "view",
+                  "color": "blue"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "category": "أدوات ومحاكاة",
+          "icon": "🔧",
+          "description": "بيئات تجريب وأدوات تحليل لأداء بطاقات الرسوميات ومحاكاة المظللات في الوقت الفعلي",
+          "links": [
+            {
+              "t": "Shadertoy - Interactive GLSL Shaders",
+              "d": "منصة عالمية تفاعلية لكتابة واستعراض مظللات GLSL المعقدة وتقنيات Raymarching المباشرة",
+              "icon": "🔧",
+              "actions": [
+                {
+                  "label": "🚀 فتح التفاعليات",
+                  "url": "https://www.shadertoy.com/",
+                  "type": "view",
+                  "color": "orange"
+                }
+              ]
+            },
+            {
+              "t": "GLSL Sandbox",
+              "d": "محرر تفاعلي خفيف لعرض واختبار شفرات GLSL المباشرة والتحكم بالمخرجات بواسطة الفأرة والوقت",
+              "icon": "🔧",
+              "actions": [
+                {
+                  "label": "🌐 فتح المحرر",
+                  "url": "https://glslsandbox.com/",
+                  "type": "view",
+                  "color": "blue"
+                }
+              ]
+            },
+            {
+              "t": "WebGL Report",
+              "d": "أداة فحص واختبار قدرات وإمكانيات WebGL المتاحة في المتصفح ومعرفة حدود المعالج الرسومي (GPU)",
+              "icon": "🔧",
+              "actions": [
+                {
+                  "label": "🌐 فتح التتقرير",
+                  "url": "https://webglreport.com/",
+                  "type": "view",
+                  "color": "blue"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

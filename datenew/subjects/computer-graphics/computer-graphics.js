@@ -13,7 +13,7 @@ subjects.push({
   // ],
   lectures: [
     {
-      id: "graphics-lecture-01",
+      id: "graphics-lecture-lec-01",
       t: "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       d: "تغطي المفاهيم الأساسية لرسوميات الحاسوب، تحويل المجسمات من 3D إلى 2D باستخدام الإسقاط المنظوري (Perspective Projection)، وخوارزميات تحويل الخطوط إلى بيكسلات (Rasterization).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 1/Lec1-Computer Graphics.pdf",
@@ -704,6 +704,8 @@ subjects.push({
       ],
     },
     {
+      id: "graphics-lecture-02",
+
       t: "المحاضرة 2: مراجعة الرياضيات (الجزء الأول: الجبر الخطي والـ Vector Spaces)",
       d: "تغطي المفاهيم الأساسية للجبر الخطي في الرسوميات الحاسوبية: مسلمات الفضاءات المتجهة (Vector Spaces)، التمثيل بالإحداثيات الديكارتية، عمليات الجمع والتكبيس (Scaling)، حساب منتصف القطعة (Midpoint)، معاملة الدوال كمتجهات، ومعايير قياس الطول (Euclidean Norm وL2 Norm للدوال).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 2/Lecture 2.pdf",
@@ -1672,5 +1674,146 @@ subjects.push({
         },
       ],
     },
+    /* // محاضرة الجبر الخطي للرسوميات الحاسوبية (Linear Algebra in Computer Graphics - CMU 15-462)
+const linkCategories = [
+  {
+    category: "فيديوهات عربية",
+    icon: "🇪🇬",
+    description: "شروحات باللغة العربية تشرح مفاهيم المتجهات، الفضاءات المتجهة، والعمليات الأساسية في الجبر الخطي",
+    links: [
+      {
+        t: "SpicyCoders - المتجهات | Vectors | الجبر الخطى",
+        d: "شرح تفصيلي لمفهوم المتجهات، المركبات الديكارتية، وحساب طول المتجه (Magnitude) والعمليات عليها",
+        icon: "🇪🇬",
+        actions: [
+          {
+            label: "📖 مشاهدة الفيديو",
+            url: "https://www.youtube.com/watch?v=lMahHHwQ_Eo",
+            type: "view",
+            color: "red"
+          }
+        ]
+      },
+      {
+        t: "د. أحمد حجاج - الجبر الخطي (فيديوهات التركيبات والفضاءات المتجهة)",
+        d: "شرح أكاديمي للتركيبات الخطية (Linear Combinations) والاستقلال الخطي ومجموعات التوليد",
+        icon: "🇪🇬",
+        actions: [
+          {
+            label: "📖 فتح قائمة التشغيل",
+            url: "https://www.youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_",
+            type: "view",
+            color: "red"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "فيديوهات عالمية",
+    icon: "🌍",
+    description: "محاضرات أكاديمية رسمية من جامعة كارنيغي ميلون (CMU) وسلسلة 3Blue1Brown الهندسية المرئية",
+    links: [
+      {
+        t: "Prof. Keenan Crane - CMU 15-462 Math Review Part I: Linear Algebra",
+        d: "المحاضرة الأكاديمية الرسمية لمؤلف الشرائح تشمل المتجهات، الفضاءات المتجهة، المعيار، والجداء الداخلي",
+        icon: "🌍",
+        actions: [
+          {
+            label: "🎬 مشاهدة المحاضرة",
+            url: "https://youtu.be/2c8XQlQApx8",
+            type: "view",
+            color: "red"
+          },
+          {
+            label: "🌐 الموقع الرسمي للمساق",
+            url: "http://15462.courses.cs.cmu.edu/fall2020/",
+            type: "view",
+            color: "blue"
+          }
+        ]
+      },
+      {
+        t: "3Blue1Brown - Essence of Linear Algebra",
+        d: "سلسلة مرئية تفاعلية تشرح جوهر المتجهات، الفضاءات، المعيار (Norm)، والضرب القياسي (Dot Product)",
+        icon: "🌍",
+        actions: [
+          {
+            label: "📖 فتح القائمة",
+            url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+            type: "view",
+            color: "red"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "مواقع ومراجع",
+    icon: "📚",
+    description: "مقالات هندسية متخصصة تربط بين الرياضيات والرسوميات الحاسوبية",
+    links: [
+      {
+        t: "Scratchapixel - Geometry: Points, Vectors and Norms",
+        d: "مرجع متقدم يشرح تمثيل النقاط، المتجهات، المعايير (Norms)، والعمليات الرياضية المستخدمة في محركات الرسوميات ثلاثية الأبعاد",
+        icon: "📚",
+        actions: [
+          {
+            label: "🚀 فتح المقال",
+            url: "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/geometry/points-vectors-and-normals.html",
+            type: "view",
+            color: "green"
+          }
+        ]
+      },
+      {
+        t: "Khan Academy - Linear Algebra",
+        d: "مراجعة شاملة ومبسطة لمفاهيم المتجهات، الفضاءات الجزئية، والتحويلات الخطية",
+        icon: "📚",
+        actions: [
+          {
+            label: "🌐 زيارة الموقع",
+            url: "https://www.khanacademy.org/math/linear-algebra",
+            type: "view",
+            color: "blue"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "أدوات ومحاكاة",
+    icon: "🔧",
+    description: "أدوات تفاعلية لمحاكاة العمليات على المتجهات والتحويلات الرياضية هندسياً",
+    links: [
+      {
+        t: "PhET Interactive Simulation - Vector Addition",
+        d: "أداة محاكاة تفاعلية لجمع المتجهات، قياس المعيار، وتحليل المركبات في الفضاء الثنائي والثلاثي",
+        icon: "🔧",
+        actions: [
+          {
+            label: "🚀 فتح المحاكاة",
+            url: "https://phet.colorado.edu/en/simulations/vector-addition",
+            type: "view",
+            color: "orange"
+          }
+        ]
+      },
+      {
+        t: "GeoGebra 3D Visualizer",
+        d: "بيئة تفاعلية ثلاثية الأبعاد لبناء المتجهات، حساب الجداء الداخلي، وتصور الفضاءات المتجهة هندسياً",
+        icon: "🔧",
+        actions: [
+          {
+            label: "🚀 فتح الأداة 3D",
+            url: "https://www.geogebra.org/3d",
+            type: "view",
+            color: "orange"
+          }
+        ]
+      }
+    ]
+  }
+]; */
   ],
 });

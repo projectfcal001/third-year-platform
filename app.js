@@ -285,6 +285,48 @@ function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
 // ============================================================
 var notifications = [],
   notifSeq = 0;
+
+/* ---------- تحديد القسم للإشعار ----------
+   في أي إدخال (إعلان / محاضرة / تعديل إجابة) ضيف الحقل depts:
+     depts: 'all'                  → يظهر لكل الأقسام (ده الافتراضي لو مكتبتش حاجة)
+     depts: 'cs'                   → قسم واحد
+     depts: ['cs','ai']            → لحد 4 أقسام
+   الأسماء المقبولة: ai / cs / is / se  أو بالعربي (علوم حاسب، ذكاء اصطناعي، نظم معلومات، هندسة برمجيات).
+   الطالب مش بيشوف إن الإشعار تابع لقسم؛ بس بيظهر له لو القسم الحالي بتاعه من ضمن الأقسام.
+   لو بدّل القسم يشوف إشعارات القسم الجديد، ولو رجع يرجعله إشعارات قسمه الأول. */
+var DEPT_ALIASES = {
+  ai: ['ai', 'ذكاء اصطناعي', 'ذكاء', 'الذكاء الاصطناعي'],
+  cs: ['cs', 'علوم حاسب', 'علوم الحاسب', 'علوم حاسب آلي'],
+  is: ['is', 'نظم معلومات', 'نظم المعلومات'],
+  se: ['se', 'هندسة برمجيات', 'هندسة البرمجيات']
+};
+function normDeptToken(t){
+  t = String(t || '').trim().toLowerCase();
+  if(!t) return '';
+  if(t === 'all' || t === 'الكل' || t === 'عام') return 'all';
+  for(var id in DEPT_ALIASES){
+    if(DEPT_ALIASES[id].indexOf(t) !== -1) return id;
+  }
+  return t;   // لو id قسم جديد مضاف في departments.js
+}
+/* بيرجّع null = كل الأقسام، أو مصفوفة (حد أقصى 4) */
+function normalizeDepts(d){
+  if(d === undefined || d === null || d === '') return null;
+  var arr = Array.isArray(d) ? d : [d];
+  var out = [];
+  for(var i = 0; i < arr.length; i++){
+    var t = normDeptToken(arr[i]);
+    if(t === 'all') return null;
+    if(t && out.indexOf(t) === -1) out.push(t);
+  }
+  out = out.slice(0, 4);
+  return out.length ? out : null;
+}
+function notifVisible(n){
+  if(!n.depts || !n.depts.length) return true;       // عام
+  return !!CUR_DEPT && n.depts.indexOf(CUR_DEPT) !== -1;
+}
+function visibleNotifications(){ return notifications.filter(notifVisible); }
 var answerEditsLog = [
   // {
   //   id: "edit-002",
@@ -301,6 +343,7 @@ var lecturesAddedLog = [
     subject: "الرسم بالحاسب",
     lectureTitle: "المحاضرة 3",
     lectureDesc: "",
+    depts: "all", // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
   },
 ]; // نموذج إضافة إشعار عام (Info Notification)
 // addNotification({});
@@ -309,16 +352,19 @@ var announcementsLog = [
     id: "ann-001",
     title: "⏰ تم تأجيل امتحان الميدتيرم",
     message: "الموعد الجديد الأحد 20/10.",
+    depts: "all",
   },
   {
     id: "ann-002",
     title: "📅 تعديل في الجدول",
     message: "سكشن 3 اتنقل من السبت للأحد الساعة 10.",
+    depts: "all", // مثال لقسم معين: depts: "cs"
   },
   {
     id: "ann-003",
     title: "🙋 محتاجين مساعدة",
     message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
+    depts: "all", // مثال لأكتر من قسم: depts: ["cs", "ai"]
   },
 ];
 function loadNotifications(){
@@ -329,21 +375,24 @@ function addNotification(notif){
   notif.id = Date.now() + (++notifSeq); notif.read = false;
   notif.time = formatTime(new Date()); notif.date = new Date().toLocaleDateString('ar-EG');
   if(!notif.type) notif.type = 'info';
+  notif.depts = normalizeDepts(notif.depts);
+  if(!notif.depts) delete notif.depts;
   notifications.unshift(notif);
   if(notifications.length > 50) notifications = notifications.slice(0,50);
   saveNotifications(); updateNotifBadge(); renderNotifDropdown();
 }
 function addAuditLog(entry){
-  addNotification({type:'audit', title:'📝 تم تعديل إجابة سؤال', context:entry.context, questionNum:entry.questionNum, questionText:entry.questionText, oldAnswer:entry.oldAnswer, newAnswer:entry.newAnswer});
+  addNotification({type:'audit', title:'📝 تم تعديل إجابة سؤال', context:entry.context, questionNum:entry.questionNum, questionText:entry.questionText, oldAnswer:entry.oldAnswer, newAnswer:entry.newAnswer, depts:entry.depts});
 }
 function addLectureAddedLog(entry){
-  addNotification({type:'lecture_added', title:'📚 تمت إضافة محاضرة جديدة', subject:entry.subject, lectureTitle:entry.lectureTitle, lectureDesc:entry.lectureDesc});
+  addNotification({type:'lecture_added', title:'📚 تمت إضافة محاضرة جديدة', subject:entry.subject, lectureTitle:entry.lectureTitle, lectureDesc:entry.lectureDesc, depts:entry.depts});
 }
 function addAnnouncementLog(entry) {
   addNotification({
     type: "announcement",
     title: entry.title || "📢 إعلان",
     message: entry.message,
+    depts: entry.depts,
   });
 }
 function truncateText(text, maxLen){
@@ -353,7 +402,7 @@ function truncateText(text, maxLen){
 }
 function updateNotifBadge(){
   var b = document.getElementById('notif-badge');
-  var unread = notifications.filter(function(n){ return !n.read; }).length;
+  var unread = visibleNotifications().filter(function(n){ return !n.read; }).length;
   if(unread > 0){ b.style.display='flex'; b.textContent = unread>99 ? '99+' : unread; } else b.style.display='none';
 }
 function toggleNotifDropdown(){
@@ -363,12 +412,13 @@ function toggleNotifDropdown(){
 }
 function renderNotifDropdown() {
   var list = document.getElementById("notif-list");
-  if (notifications.length === 0) {
+  var shown = visibleNotifications();
+  if (shown.length === 0) {
     list.innerHTML = '<div class="notif-empty">لا توجد إشعارات حالياً</div>';
     return;
   }
   var html = "";
-  notifications.forEach(function (n) {
+  shown.forEach(function (n) {
     var cls = n.read ? "" : "unread";
     html +=
       '<div class="notif-item ' +
@@ -441,7 +491,8 @@ function markNotifRead(e, id){
 }
 function clearAllNotifications(e){
   e.stopPropagation();
-  notifications = []; saveNotifications(); updateNotifBadge(); renderNotifDropdown();
+  notifications = notifications.filter(function(n){ return !notifVisible(n); });   // بيمسح المعروض بس، وإشعارات الأقسام التانية تفضل
+  saveNotifications(); updateNotifBadge(); renderNotifDropdown();
 }
 function syncAnswerEditsLog(){
   var seenIds = [];
@@ -450,7 +501,7 @@ function syncAnswerEditsLog(){
   var changed = false;
   answerEditsLog.forEach(function(entry){
     if(seenIds.indexOf(entry.id) === -1){
-      addAuditLog({context:entry.context, questionNum:entry.questionNum, questionText:entry.questionText, oldAnswer:entry.oldAnswer, newAnswer:entry.newAnswer});
+      addAuditLog({context:entry.context, questionNum:entry.questionNum, questionText:entry.questionText, oldAnswer:entry.oldAnswer, newAnswer:entry.newAnswer, depts:entry.depts});
       seenIds.push(entry.id); changed = true;
     }
   });
@@ -1498,7 +1549,7 @@ function showResults(silent){
   var res = {score:pct, correct:correct, wrong:(total-correct), total:total, date:new Date().toLocaleDateString('ar-EG')};
   saveScore(st.subject, st.key, res);
   if(!silent){
-    addNotification({title:'🏆 نتيجة: '+st.title, context:st.subject.name, score:pct});
+    addNotification({title:'🏆 نتيجة: '+st.title, context:st.subject.name, score:pct, depts:CUR_DEPT ? [CUR_DEPT] : null});
     showToast('تم حفظ النتيجة: '+pct+'%');
   }
 

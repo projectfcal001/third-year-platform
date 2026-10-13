@@ -16,6 +16,7 @@ subjects.push({
       t: "المحاضرة الأولى",
       d: "مقدمة في نظم التشغيل والعمليات Processes.",
       id: "os-lec-01",
+      notes: "من صفحة 1 لي 24.",
       pdf: "/datenew/subjects/operating-systems/lectures/chapter 1 - OS.pdf",
       notes: " Slides 1-23 .",
       pdf2: "/datenew/subjects/operating-systems/questions/Questions on each lecture/OS_Chapter1_Slides1-23_Questions.pdf",

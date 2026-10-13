@@ -3085,6 +3085,666 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "networks-lecture-04",
+      t: "المحاضرة 1: الفصل الثاني - طبقة التطبيق (مبادئ تطبيقات الشبكة)",
+      d: "مبادئ تطبيقات الشبكة: معماريات التطبيقات (Client-Server وP2P)، تواصل الـ processes، الـ sockets، العنونة، وخدمات طبقة النقل المتاحة للتطبيقات.",
+      pdf: "datenew/subjects/computer-networks/lectures/lec 4/Ch02 - Computer Networks - Lec 01.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Ch02-Lecture-01-Questions.pdf",
+      // محاضرة شبكات الحاسوب: الفصل الثاني - طبقة التطبيقات (Application Layer)، هندسة التطبيقات، العمليات، الـ Sockets، وخدمات طبقة النقل
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات باللغة العربية لكتاب Kurose & Ross تغطي الفصل الثاني: طبقة التطبيقات، مبادئ تطبيقات الشبكة، هندسة العملاء والخوادم ونظام P2P.",
+          links: [
+            {
+              t: "Computer Networking - Chapter 2 Application Layer 2A",
+              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول مبادئ تطبيقات الشبكة، هندسة التطبيقات (Client-Server و P2P)، والعمليات (Processes) والاتصال [فيديوهات من 8 إلى 9].",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://youtube.com/playlist?list=PLYljoJMAPFLHrCVfzuMLkJOZHhCgfSXG-&si=c2A3_89g912REXOZ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول Throughput، الطبقات الخمس في الإنترنت (Protocol Layers)، وعملية التغليف (Encapsulation) [فيديوهات من 8 إلى 9].",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PL8v_bZALWLKE9Lo2BIy8nsdsakbSvQlEo",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "المحاضرات الرسمية المحددة بدقة من مؤلف الكتاب Jim Kurose حول مفاهيم طبقة التطبيقات والعمليات والـ Sockets.",
+          links: [
+            {
+              t: "Jim Kurose - 2.1 Principles of the Application Layer",
+              d: "الشرح المباشر لمؤلف الكتاب لمبادئ تطبيقات الشبكة، هندسة التطبيقات (Client-Server و P2P)، وكيفية تواصل العمليات والـ Sockets.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 المحاضرة مباشرة",
+                  url: "https://www.youtube.com/watch?v=abeupgK5z48",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Jim Kurose - 2.2 The Web and HTTP (part 1)",
+              d: "شرح تفصيلي لتطبيق الويب وبروتوكول HTTP وعلاقة العمليات بين المتصفح والخادم عبر واجهة برمجة التطبيقات (Sockets).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 متابعة الشرح",
+                  url: "https://www.youtube.com/watch?v=S9GEPaQ1lFs",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مراجع أكاديمية ومواقع رسمية تغطي مفاهيم طبقة التطبيقات، عناوين IP والمنافذ (Ports)، والبرمجيات.",
+          links: [
+            {
+              t: "Kurose & Ross Official Student Resources",
+              d: "الموقع الرسمي للكتاب: شرائح PowerPoint للفصل الثاني، تمارين Wireshark Labs، وملخصات مفاهيم طبقة التطبيقات.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://gaia.cs.umass.edu/kurose_ross/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks - Application Layer Protocols",
+              d: "مقالة مرجعية تفصيلية تشرح دور طبقة التطبيقات والبروتوكولات القياسية والخدمات التي تقدمها للتطبيقات.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/computer-network-layers/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks - Socket Programming in C/C++",
+              d: "شرح تطبيقي لواجهة البرمجة (API) للـ Sockets وكيفية بناء تطبيقات الشبكة وتواصل العمليات عبر الشبكة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/socket-programming-cc/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية لتحليل الحزم وتتبع اتصالات شبكات الحاسوب بين العمليات والـ Sockets.",
+          links: [
+            {
+              t: "Wireshark - Packet Analyzer & Network Tool",
+              d: "أداة قياسية لفحص وتتبع حزم بيانات طبقة التطبيقات ورؤية تواصل العمليات عبر الشبكة الحية والتحقق من التغليف.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org/",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ─── MCQ ───
+        {
+          q: "1. Which statement correctly distinguishes application architecture from network architecture?",
+          options: [
+            "Both are designed by the application developer for each new application",
+            "The network architecture is designed by the developer, while the application architecture is fixed",
+            "The application architecture is designed by the developer, while the network architecture is fixed from the developer's perspective",
+            "Both are fixed and the developer can only choose between them",
+          ],
+          correct: 2,
+          translation: "أي جملة بتفرّق صح بين معمارية التطبيق ومعمارية الشبكة؟",
+          explanation:
+            "معمارية التطبيق بيصمّمها المطوّر وبتحدد إزاي التطبيق متوزع على الأجهزة، أما معمارية الشبكة (الخمس طبقات) فثابتة وبتقدم خدمات للتطبيقات. باقي الاختيارات بتعكس الأدوار أو بتعتبر الاتنين ثابتين أو الاتنين من تصميم المطوّر وده غلط.",
+          tags: ["Application Architecture", "Network Architecture"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "2. On which devices does a developer write and run application software?",
+          options: [
+            "Only on end systems",
+            "On routers and link-layer switches",
+            "On all network-core devices",
+            "On both end systems and routers",
+          ],
+          correct: 0,
+          translation: "المطوّر بيكتب ويشغّل برامج التطبيق على أنهي أجهزة؟",
+          explanation:
+            "برامج التطبيق بتتكتب وتشتغل على الـ end systems بس، ومش محتاج (وكمان مش هتقدر) تكتب برامج على أجهزة قلب الشبكة زي الـ routers والـ switches. التصميم ده سهّل تطوير التطبيقات بسرعة.",
+          tags: ["End Systems", "Network Core"],
+          ref: "Lecture 01 — Section 2.1",
+        },
+        {
+          q: "3. Which statement about clients in a client-server architecture is TRUE?",
+          options: [
+            "Clients must be always-on with a fixed IP address",
+            "Clients communicate directly with each other to share the load",
+            "Clients are housed in data centers",
+            "Clients do not communicate directly with each other",
+          ],
+          correct: 3,
+          translation: "أي جملة عن الـ clients في معمارية client-server صحيحة؟",
+          explanation:
+            "في client-server الـ clients بتتواصل مع السيرفر بس، ومفيش اتصال مباشر بينها (زي متصفحين على الويب). الـ always-on والعنوان الثابت من خصائص السيرفر مش الـ client، والاتصال المباشر بين الأجهزة من خصائص P2P.",
+          tags: ["Client-Server", "Clients"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "4. Which pair of properties describes the server in a client-server architecture?",
+          options: [
+            "Intermittently connected host with a changing address",
+            "Always-on host with a fixed, well-known IP address",
+            "Host owned and controlled by home users",
+            "Host that never receives requests from clients",
+          ],
+          correct: 1,
+          translation: "أي زوج من الخصائص بيوصف السيرفر في client-server؟",
+          explanation:
+            "السيرفر دايمًا شغال وليه عنوان IP ثابت ومعروف، عشان أي client يقدر يوصله في أي وقت. الأجهزة المتقطعة الاتصال اللي بيتحكم فيها المستخدمين هي الـ peers في P2P.",
+          tags: ["Server", "IP Address"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "5. Why is a data center often used in a client-server application?",
+          options: [
+            "Because clients need to talk directly to each other",
+            "A single server host cannot keep up with all client requests, so many hosts form a powerful virtual server",
+            "Because data centers remove the need for IP addresses",
+            "Because P2P applications require them",
+          ],
+          correct: 1,
+          translation: "ليه بنستخدم data center في تطبيقات client-server؟",
+          explanation:
+            "سيرفر واحد غالبًا مش هيقدر يستحمل كل الطلبات، فبنستخدم data center فيه عدد كبير من الأجهزة عشان نعمل سيرفر افتراضي قوي. باقي الاختيارات مالهاش علاقة بسبب استخدامه.",
+          tags: ["Data Center", "Scalability"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "6. Which application is given as a popular example of a P2P architecture?",
+          options: ["The Web", "FTP", "Telnet", "BitTorrent"],
+          correct: 3,
+          translation: "أي تطبيق اتذكر كمثال شهير على معمارية P2P؟",
+          explanation:
+            "BitTorrent هو المثال المذكور لـ P2P file sharing. الويب وFTP وTelnet كلها أمثلة لـ client-server.",
+          tags: ["P2P", "BitTorrent"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "7. What does the self-scalability of P2P architectures mean?",
+          options: [
+            "Each peer adds service capacity to the system while also generating workload",
+            "Peers never request files from other peers",
+            "The system relies on one powerful dedicated server",
+            "Server bandwidth grows automatically in data centers",
+          ],
+          correct: 0,
+          translation: "إيه معنى الـ self-scalability في معمارية P2P؟",
+          explanation:
+            "كل peer بيطلب ملفات (يعني بيزوّد الحِمل) وفي نفس الوقت بيوزّع ملفات لغيره (يعني بيزوّد قدرة الخدمة)، فالنظام بيكبر لوحده. الاختيارات التانية بتتكلم عن سيرفرات مخصصة وده عكس P2P.",
+          tags: ["P2P", "Self-Scalability"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "8. Which challenges do P2P applications face because of their highly decentralized structure?",
+          options: [
+            "High server infrastructure costs and server bandwidth",
+            "The need for an always-on server with a fixed address",
+            "Security, performance, and reliability",
+            "Inability of peers to communicate directly",
+          ],
+          correct: 2,
+          translation:
+            "إيه التحديات اللي بتواجه تطبيقات P2P بسبب طبيعتها اللامركزية؟",
+          explanation:
+            "التحديات هي الأمان والأداء والموثوقية. تكلفة السيرفرات والـ bandwidth ميزة P2P بتتفاداها أصلًا، وكمان الـ peers بتتصل ببعض مباشرة.",
+          tags: ["P2P", "Challenges"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "9. Which description fits the peers in a P2P architecture?",
+          options: [
+            "Always-on servers owned by the service provider",
+            "Routers located in the network core",
+            "Dedicated hosts in a data center",
+            "Intermittently connected desktops and laptops controlled by users in homes, universities, and offices",
+          ],
+          correct: 3,
+          translation: "أي وصف بيناسب الـ peers في معمارية P2P؟",
+          explanation:
+            "الـ peers أجهزة مستخدمين (desktops وlaptops) بتتصل وتفصل، ومش مملوكة لمقدم الخدمة. السيرفرات الدايمة الشغل والـ data centers خاصة بـ client-server.",
+          tags: ["Peers", "P2P"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          q: "10. In operating-system jargon, what actually communicates across a network?",
+          options: [
+            "Programs that are not running",
+            "Sockets",
+            "Processes",
+            "Protocol layers",
+          ],
+          correct: 2,
+          translation:
+            "في مصطلحات نظم التشغيل، إيه اللي بيتواصل فعليًا عبر الشبكة؟",
+          explanation:
+            "اللي بيتواصل هو الـ processes (البرنامج وهو شغال جوه الـ end system) مش البرامج نفسها. الـ socket مجرد واجهة بتبعت وتستقبل منها الـ process.",
+          tags: ["Process", "End System"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "11. How do processes running on two different end systems communicate?",
+          options: [
+            "By exchanging messages across the computer network",
+            "By interprocess communication governed by the operating system",
+            "By sharing the same memory space",
+            "By directly connecting their sockets without any network",
+          ],
+          correct: 0,
+          translation: "إزاي الـ processes على جهازين مختلفين بتتواصل؟",
+          explanation:
+            "بتتبادل رسائل (messages) عبر الشبكة. الـ interprocess communication اللي بيحكمها نظام التشغيل خاصة بالـ processes على نفس الجهاز، ومش محل اهتمام المحاضرة.",
+          tags: ["Messages", "Process"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "12. In a communication session, which process is labeled the client?",
+          options: [
+            "The process that waits to be contacted",
+            "The process that initiates the communication",
+            "The process running on the faster host",
+            "The process that uploads the file",
+          ],
+          correct: 1,
+          translation: "في جلسة اتصال، أي process بيتسمى client؟",
+          explanation:
+            "الـ client هو اللي بيبدأ الاتصال ويتواصل أول مرة مع الطرف التاني، والـ server هو اللي مستني يتكلموه. الـ uploading peer في P2P هو الـ server مش الـ client.",
+          tags: ["Client Process", "Session"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "13. In P2P file sharing, Peer A asks Peer B to send a specific file. What are their roles in this session?",
+          options: [
+            "Peer A is the server and Peer B is the client",
+            "Both peers are servers",
+            "Peer A is the client and Peer B is the server",
+            "Neither is a client or a server",
+          ],
+          correct: 2,
+          translation:
+            "في P2P لو Peer A طلب ملف من Peer B، إيه دور كل واحد في الجلسة دي؟",
+          explanation:
+            "A هو اللي بدأ الطلب فهو الـ client، وB اللي بيبعت الملف فهو الـ server في الجلسة دي. نفس الـ peer ممكن يبقى client في جلسة وserver في جلسة تانية.",
+          tags: ["P2P", "Client and Server"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "14. What is a socket?",
+          options: [
+            "The software interface between the application layer and the transport layer within a host",
+            "The physical link between two hosts",
+            "The interface between the network layer and the link layer",
+            "A router port that forwards packets",
+          ],
+          correct: 0,
+          translation: "إيه هو الـ socket؟",
+          explanation:
+            "الـ socket هو واجهة برمجية بين طبقة التطبيق وطبقة النقل جوه نفس الجهاز، وبيتسمى كمان API. مش وصلة فيزيائية ومش بين طبقتي الشبكة والـ link.",
+          tags: ["Socket", "API"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "15. In the house-and-door analogy, what does the socket correspond to?",
+          options: [
+            "The house itself",
+            "The postal address",
+            "The road between houses",
+            "The door of the house",
+          ],
+          correct: 3,
+          translation: "في تشبيه البيت والباب، الـ socket بيقابل إيه؟",
+          explanation:
+            "الـ process هو البيت والـ socket هو الباب اللي الرسالة بتخرج منه وتدخل منه. الشبكة اللي تحت هي وسيلة النقل بين الأبواب.",
+          tags: ["Socket", "Process"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "16. What control does the developer have on the transport-layer side of the socket?",
+          options: [
+            "Complete control over how the transport protocol is implemented",
+            "Choosing the transport protocol and perhaps fixing a few parameters such as maximum buffer and segment sizes",
+            "Choosing the route packets take through the network",
+            "No control at all, even over protocol choice",
+          ],
+          correct: 1,
+          translation:
+            "المطوّر عنده تحكم في إيه ناحية الـ transport layer من الـ socket؟",
+          explanation:
+            "تحكمه محدود: اختيار بروتوكول النقل، ويمكن ضبط شوية parameters زي أقصى buffer وsegment size. باقي التحكم عند نظام التشغيل.",
+          tags: ["Transport Layer", "Developer Control"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "17. Which two pieces of information identify the receiving process on the Internet?",
+          options: [
+            "The IP address of the host and a destination port number",
+            "The host name and the socket buffer size",
+            "The IP address and the transport protocol name",
+            "The port number and the application's file name",
+          ],
+          correct: 0,
+          translation:
+            "أنهي معلومتين بيحددوا الـ process المستقبِل على الإنترنت؟",
+          explanation:
+            "عنوان الـ IP بيحدد الجهاز ورقم الـ port بيحدد الـ process (الـ socket) جواه، لأن الجهاز الواحد ممكن يشغّل تطبيقات كتير.",
+          tags: ["Addressing", "Port Number"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "18. According to the lecture, an IP address is:",
+          options: [
+            "A 16-bit quantity that identifies a process",
+            "A 48-bit quantity that identifies a socket",
+            "A 128-bit quantity that identifies a web page",
+            "A 32-bit quantity that uniquely identifies a host",
+          ],
+          correct: 3,
+          translation: "حسب المحاضرة، عنوان الـ IP هو:",
+          explanation:
+            "المحاضرة بتقول إن الـ IP address كمية من 32 bit بتحدد الجهاز بشكل فريد. باقي الأحجام غير صحيحة حسب المحاضرة، وكمان العنوان بيحدد جهاز مش process.",
+          tags: ["IP Address", "32-bit"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "19. Which pair of well-known port numbers is correct according to the lecture?",
+          options: [
+            "Web server: 25, SMTP mail server: 80",
+            "Web server: 80, SMTP mail server: 25",
+            "Web server: 80, SMTP mail server: 80",
+            "Web server: 25, SMTP mail server: 25",
+          ],
+          correct: 1,
+          translation: "أي زوج من أرقام الـ ports المعروفة صحيح حسب المحاضرة؟",
+          explanation:
+            "السيرفر بتاع الويب بيستخدم port 80 وسيرفر الإيميل (SMTP) بيستخدم port 25. باقي الاختيارات بتبدّل الأرقام أو بتكررها.",
+          tags: ["Port Numbers", "SMTP"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          q: "20. Which set lists the four dimensions of transport-layer services?",
+          options: [
+            "Reliability, routing, addressing, and timing",
+            "Throughput, encryption, switching, and security",
+            "Reliable data transfer, throughput, timing, and security",
+            "Reliable data transfer, routing, timing, and framing",
+          ],
+          correct: 2,
+          translation:
+            "أنهي مجموعة بتمثل الأبعاد الأربعة لخدمات الـ transport layer؟",
+          explanation:
+            "الأبعاد الأربعة هي: reliable data transfer وthroughput وtiming وsecurity. الـ routing والـ addressing والـ framing مش من خدمات النقل المذكورة هنا.",
+          tags: ["Transport Services", "Four Dimensions"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+        {
+          q: "21. What does a reliable data transfer service guarantee?",
+          options: [
+            "Data always arrives within 100 msec",
+            "Data sent by one process is delivered correctly and completely to the other process",
+            "The sender always gets at least a fixed throughput",
+            "All transmitted data is encrypted",
+          ],
+          correct: 1,
+          translation: "إيه اللي بتضمنه خدمة reliable data transfer؟",
+          explanation:
+            "بتضمن إن البيانات توصل صح وكاملة للـ process التاني. ضمان زمن 100 msec ده timing، وضمان معدل ثابت ده throughput، والتشفير ده security.",
+          tags: ["Reliable Data Transfer"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+        {
+          q: "22. Which kind of applications can tolerate some data loss?",
+          options: [
+            "Electronic mail",
+            "Financial applications",
+            "Loss-tolerant multimedia applications such as conversational audio/video",
+            "File transfer",
+          ],
+          correct: 2,
+          translation:
+            "أنهي نوع من التطبيقات ممكن يتحمل فقدان جزء من البيانات؟",
+          explanation:
+            "التطبيقات الـ multimedia زي المكالمات الصوتية/الفيديو بتتحمل فقد بسيط. الإيميل ونقل الملفات والتطبيقات المالية محتاجة نقل موثوق لأن فقد البيانات ليه عواقب سيئة.",
+          tags: ["Loss-Tolerant", "Multimedia"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+        {
+          q: "23. Which of the following is an elastic application?",
+          options: [
+            "Internet telephony that needs 32 kbps",
+            "A multimedia application with a fixed required throughput",
+            "Any bandwidth-sensitive application",
+            "Web transfers",
+          ],
+          correct: 3,
+          translation: "أنهي واحد من دول يعتبر elastic application؟",
+          explanation:
+            "الـ elastic applications (زي الإيميل ونقل الملفات والويب) بتستفيد بأي قدر من الـ throughput متاح، قليل أو كتير. التطبيقات اللي ليها متطلب throughput محدد اسمها bandwidth-sensitive.",
+          tags: ["Elastic Applications", "Throughput"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+        {
+          q: "24. Which type of application benefits most from a guarantee that data arrives no more than 100 msec later?",
+          options: [
+            "Interactive real-time applications such as multiplayer games",
+            "Electronic mail",
+            "File transfer",
+            "Web document transfer",
+          ],
+          correct: 0,
+          translation:
+            "أنهي نوع تطبيقات بيستفيد أكتر من ضمان إن البيانات توصل في أقل من 100 msec؟",
+          explanation:
+            "التطبيقات التفاعلية real-time (الاتصال الصوتي، الألعاب الجماعية، teleconferencing) محتاجة قيود زمن صارمة. التطبيقات غير الـ real-time كل اللي بتفضّله إن التأخير يبقى أقل، ومفيش قيد صارم.",
+          tags: ["Timing", "Real-Time"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+        {
+          q: "25. In the sending host, a transport protocol encrypts data and the receiving host decrypts it. Which security service does this provide?",
+          options: [
+            "Guaranteed throughput",
+            "Timing guarantee",
+            "Confidentiality",
+            "Reliable data transfer",
+          ],
+          correct: 2,
+          translation:
+            "لو الـ transport protocol بيشفّر البيانات عند المرسل وبيفكّها عند المستقبل، ده بيوفر أنهي خدمة أمان؟",
+          explanation:
+            "ده بيحقق الـ confidentiality، يعني حتى لو حد راقب البيانات في الطريق مش هيفهمها. الـ transport كمان ممكن يقدم data integrity وend-point authentication.",
+          tags: ["Security", "Confidentiality"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+
+        // ─── Essay ───
+        {
+          type: "essay",
+          q: "1. Explain the difference between application architecture and network architecture, and name the two predominant application architectures.",
+          translation:
+            "اشرح الفرق بين معمارية التطبيق ومعمارية الشبكة، واذكر المعماريتين الأساسيتين للتطبيقات.",
+          answer:
+            "The network architecture (e.g., the five-layer Internet architecture) is fixed and provides a specific set of services to applications.\n" +
+            "The application architecture is designed by the application developer and dictates how the application is structured over the various end systems.\n" +
+            "The two predominant paradigms are the client-server architecture and the peer-to-peer (P2P) architecture.\n",
+          tags: ["Application Architecture"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          type: "essay",
+          q: "2. Describe the client-server architecture and its main characteristics. Give examples of applications that use it.",
+          translation:
+            "اشرح معمارية client-server وخصائصها الأساسية، مع أمثلة على تطبيقات بتستخدمها.",
+          answer:
+            "There is an always-on host called the server that services requests from many other hosts called clients.\n" +
+            "Clients do not communicate directly with each other (e.g., two browsers do not talk directly).\n" +
+            "The server has a fixed, well-known IP address, so a client can always contact it by sending a packet to that address.\n" +
+            "Examples: the Web, FTP, Telnet, and e-mail.\n",
+          tags: ["Client-Server"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          type: "essay",
+          q: "3. Why are data centers used in client-server applications? Give examples of services that run in data centers.",
+          translation:
+            "ليه بنستخدم الـ data centers في تطبيقات client-server؟ اذكر أمثلة لخدمات بتشتغل فيها.",
+          answer:
+            "A single server host is often incapable of keeping up with all client requests; for example, a popular social-networking site would be overwhelmed by one server.\n" +
+            "A data center houses a large number of hosts that together create a powerful virtual server.\n" +
+            "Examples: search engines (Google, Bing, Baidu), Internet commerce (Amazon, eBay, Alibaba), Web-based e-mail (Gmail, Yahoo Mail), and social media (Facebook, Instagram, Twitter, WeChat).\n",
+          tags: ["Data Center"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          type: "essay",
+          q: "4. Describe the P2P architecture. What are its advantages and challenges?",
+          translation: "اشرح معمارية P2P، وإيه مميزاتها وتحدياتها؟",
+          answer:
+            "P2P has minimal (or no) reliance on dedicated servers; the application exploits direct communication between pairs of intermittently connected hosts called peers.\n" +
+            "Peers are desktops and laptops controlled by users, mostly in homes, universities, and offices; an example is BitTorrent.\n" +
+            "Advantage 1: self-scalability, because each peer generates workload by requesting files but also adds service capacity by distributing files.\n" +
+            "Advantage 2: cost effectiveness, since significant server infrastructure and server bandwidth are not required.\n" +
+            "Challenges: security, performance, and reliability, due to the highly decentralized structure.\n",
+          tags: ["P2P"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          type: "essay",
+          q: "5. Compare the client-server and P2P architectures in terms of communication, server dependence, and scalability.",
+          translation:
+            "قارن بين معماريتي client-server وP2P من حيث الاتصال والاعتماد على السيرفر والقدرة على التوسع.",
+          answer:
+            "Communication: in client-server, clients talk only to the server; in P2P, peers communicate directly with each other.\n" +
+            "Server dependence: client-server relies on an always-on server (often in a data center) with a fixed IP address; P2P has minimal or no reliance on dedicated servers.\n" +
+            "Scalability: client-server needs more servers or a data center to handle load; P2P is self-scaling because every peer adds capacity.\n" +
+            "Cost and issues: P2P is cost effective but faces security, performance, and reliability challenges.\n",
+          tags: ["Client-Server", "P2P"],
+          ref: "Lecture 01 — Section 2.1.1",
+        },
+        {
+          type: "essay",
+          q: "6. Define client and server processes. Can one process be both? Explain with examples from the Web and P2P file sharing.",
+          translation:
+            "عرّف الـ client والـ server processes. هل ممكن process واحد يبقى الاتنين؟ اشرح بأمثلة من الويب وP2P.",
+          answer:
+            "In the context of a communication session, the process that initiates the communication is the client; the process that waits to be contacted to begin the session is the server.\n" +
+            "Web: the browser process initiates contact with the Web server process, so the browser is the client and the Web server is the server.\n" +
+            "P2P: when Peer A asks Peer B for a file, Peer A is the client and Peer B is the server for that session.\n" +
+            "A process in P2P can be both a client and a server (it can both upload and download), but within any given session one is labeled the client and the other the server.\n",
+          tags: ["Client Process", "Server Process"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          type: "essay",
+          q: "7. What is a socket? Explain the house-and-door analogy and the developer's control on each side of the socket.",
+          translation:
+            "إيه هو الـ socket؟ اشرح تشبيه البيت والباب، وتحكم المطوّر في كل ناحية من الـ socket.",
+          answer:
+            "A socket is the software interface through which a process sends messages into and receives messages from the network; it lies between the application layer and the transport layer within a host and is also called the API between the application and the network.\n" +
+            "Analogy: the process is like a house and the socket is its door. The sender pushes the message out of its door, assuming a transportation infrastructure on the other side delivers it to the door of the destination process.\n" +
+            "The developer controls everything on the application-layer side of the socket.\n" +
+            "On the transport-layer side, the developer can only choose the transport protocol and perhaps fix a few parameters such as maximum buffer and maximum segment sizes.\n",
+          tags: ["Socket"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          type: "essay",
+          q: "8. Explain how a process is addressed in the Internet. Give examples of well-known port numbers.",
+          translation:
+            "اشرح إزاي بنحدد عنوان الـ process على الإنترنت، مع أمثلة على أرقام ports معروفة.",
+          answer:
+            "Two pieces of information are needed: the address of the host and an identifier that specifies the receiving process in the destination host.\n" +
+            "The host is identified by its IP address, a 32-bit quantity that uniquely identifies the host.\n" +
+            "A destination port number identifies the receiving process (more specifically, the receiving socket), because a host may run many network applications.\n" +
+            "Examples: a Web server is identified by port 80, and a mail server process using SMTP by port 25.\n",
+          tags: ["Addressing", "Port Number"],
+          ref: "Lecture 01 — Section 2.1.2",
+        },
+        {
+          type: "essay",
+          q: "9. Explain the reliable data transfer and throughput services of a transport protocol. What are loss-tolerant, bandwidth-sensitive, and elastic applications?",
+          translation:
+            "اشرح خدمتي reliable data transfer وthroughput في الـ transport protocol. وإيه معنى loss-tolerant وbandwidth-sensitive وelastic؟",
+          answer:
+            "Reliable data transfer: guarantees data sent by one end is delivered correctly and completely to the other end, so the sender can pass data into the socket with complete confidence. It is needed by e-mail, file transfer, remote host access, Web transfers, and financial applications.\n" +
+            "Loss-tolerant applications (e.g., conversational audio/video) can tolerate some data loss.\n" +
+            "Throughput: available throughput is the rate at which the sending process can deliver bits to the receiving process, and it can fluctuate because other sessions share the path. A protocol could guarantee a throughput of at least r bits/sec.\n" +
+            "Bandwidth-sensitive applications have specific throughput requirements (e.g., Internet telephony encoding voice at 32 kbps); some use adaptive coding to match available throughput.\n" +
+            "Elastic applications (e-mail, file transfer, Web transfers) can use as much or as little throughput as is available.\n",
+          tags: ["Reliable Data Transfer", "Throughput"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the timing and security services that a transport-layer protocol can provide to applications.",
+          translation:
+            "اشرح خدمتي الـ timing والـ security اللي ممكن الـ transport-layer protocol يقدمهم للتطبيقات.",
+          answer:
+            "Timing: a protocol can guarantee, for example, that every bit sent into the socket arrives at the receiver's socket no more than 100 msec later.\n" +
+            "This suits interactive real-time applications such as Internet telephony, virtual environments, teleconferencing, and multiplayer games; long delays cause unnatural pauses or make the application feel less realistic.\n" +
+            "For non-real-time applications, lower delay is preferable but no tight constraint is placed on end-to-end delay.\n" +
+            "Security: the protocol can encrypt data at the sending host and decrypt it at the receiving host, providing confidentiality even if the data is observed in transit.\n" +
+            "It can also provide data integrity and end-point authentication (covered in Chapter 8).\n",
+          tags: ["Timing", "Security"],
+          ref: "Lecture 01 — Section 2.1.3",
+        },
+      ],
+    },
   ],
   chapters: [
     {
@@ -3092,6 +3752,7 @@ subjects.push({
       icon: "📘", // أيقونة (اختياري)
       d: "مقدمة وأساسيات", // وصف (اختياري)
       lectures: [0, 1, 2], // ← أرقام المحاضرات في الفصل
+      open: false,
     },
   ],
 
