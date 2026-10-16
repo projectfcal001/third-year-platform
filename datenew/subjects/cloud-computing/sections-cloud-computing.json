@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "subject": "computer-networks",
+  "subject": "cloud-computing",
   "sections": [
     {
-      "id": "computer-networks-sec-01",
-      "subject": "computer-networks",
-      "lecture": "Lab 1: Get IP address, subnet mask, gateway, MAC address, connectivity, ARP, and DORA",
-      "lectureId": "computer-networks-lab-01",
+      "id": "cloud-computing-sec-01",
+      "subject": "cloud-computing",
+      "lecture": "المحاضرة 2: أساسيات الشبكات (Network Fundamentals)",
+      "lectureId": "cloud-orientation-lec-02",
       "instructorId": "INS-Ahamd",
       "instructorName": "م. امير",
       "groupName": "سكشن 1",

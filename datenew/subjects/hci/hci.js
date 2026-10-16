@@ -658,7 +658,6 @@ subjects.push({
     {
       id: "hci-lecture-02",
       t: "المحاضرة 2: الإنسان (The Human)",
-      d: "قدرات الإنسان في إدخال/إخراج المعلومات (الرؤية، السمع، اللمس، الحركة)، الذاكرة، التفكير والتعلم، الأخطاء، العواطف، والفروق الفردية.",
       d: "تعريف HCI، أمثلة من الحياة اليومية، أهميته، علاقته بالمجالات الأخرى (UX / UI / Interaction Design)، مبادئ التصميم، والمكونات الرئيسية.",
       pdf: "datenew/subjects/hci/lectures/Lec 2/Lec 2.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-02-Questions.pdf",
