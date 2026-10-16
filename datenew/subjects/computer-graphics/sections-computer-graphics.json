@@ -45,22 +45,28 @@
       "groupName": "سكشن  B",
       "status": "available",
       "sectionTitle": "🖼️ سكاشن رسم بالحاسب  ",
-      "links": [
+
+      "linkCategories": [
         {
-          "t": "ملف السكشن",
-          "d": "دي ملف اول سكشن ال كان علي openGL ,تم التحويل الي webGL",
+          "category": "ملف السكشن",
           "icon": "🇪🇬",
-          "actions": [
+          "description": "",
+          "links": [
             {
-              "label": "📥 تحميل",
-              "url": "datenew/subjects/computer-graphics/sections/Sec 2/index.html",
-              "type": "download",
-              "color": "red"
+              "t": "ملف السكشن",
+              "d": "دي ملف اول سكشن ال كان علي openGL ,تم التحويل الي webGL",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📥 تحميل",
+                  "url": "datenew/subjects/computer-graphics/sections/Sec 2/index.html",
+                  "type": "download",
+                  "color": "red"
+                }
+              ]
             }
           ]
-        }
-      ],
-      "linkCategories": [
+        },
         {
           "category": "فيديوهات عربية",
           "icon": "🇪🇬",

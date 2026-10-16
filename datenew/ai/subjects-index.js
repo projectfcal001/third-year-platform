@@ -32,6 +32,8 @@ var SUBJECTS_INDEX = [
     icon: "🤖",
     slug: "machine-learning",
     file: "datenew/subjects/machine-learning/machine-learning.js",
+    sectionsFile:
+      "datenew/subjects/machine-learning/sections-machine-learning.json",
   },
   {
     name: "الشبكات العصبية",
@@ -39,6 +41,8 @@ var SUBJECTS_INDEX = [
     icon: "🧠",
     slug: "neural-networks",
     file: "datenew/subjects/neural-networks/neural-networks.js",
+    sectionsFile:
+      "datenew/subjects/neural-networks/sections-neural-networks.json",
   },
   {
     name: "تفاعل الانسان والحاسب",
@@ -46,6 +50,7 @@ var SUBJECTS_INDEX = [
     icon: "🖱️",
     slug: "hci",
     file: "datenew/subjects/hci/hci.js",
+    sectionsFile: "/datenew/subjects/hci/sections-hci.json",
   },
   {
     name: "التدريب الميداني",
