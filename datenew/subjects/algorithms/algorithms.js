@@ -1733,5 +1733,885 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "algorithms-lecture-04",
+      t: "المحاضرة 4: الجرافات (Graphs) وشجرة الامتداد الأدنى (MST)",
+      d: "تمثيل الجرافات (مصفوفة وقائمة التجاور)، Hand-Shaking Lemma، ثم شجرة الامتداد الأدنى وخوارزمية Prim ومقارنتها بـ Kruskal.",
+      pdf: "datenew/subjects/algorithms/lectures/CS 311 lec.4 by Majid A. Askar.pdf.pdf",
+      pdf2: "/datenew/subjects/algorithms/questions/Questions on each lecture/Lecture-04-Questions.pdf",
+      // CS 311 - Lecture 7: Graphs, Graph Representations, and Minimum Spanning Trees (MST)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات عربية لفهم الجراف والشجرة الممتدة الأقل تكلفة، مع خطوات حل أمثلة على خوارزميتي Prim وKruskal.",
+          links: [
+            {
+              t: "شرح وحل مثال خوارزمية Prim's Algorithm - Minimum Spanning Tree",
+              d: "شرح مفهوم Minimum Spanning Tree ثم تنفيذ خوارزمية Prim خطوة بخطوة على مثال موزون، مع اختيار أقل حافة تربط الشجرة الحالية برأس لم يُضف بعد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=7Miiq52nwzs",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح وحل مثال خوارزمية Kruskal Algorithm - Minimum Spanning Tree",
+              d: "شرح خوارزمية Kruskal من خلال ترتيب الحواف حسب الوزن، وإضافة الحافة الأقل تكلفة ما دامت لا تُنشئ دورة، حتى تتكون الشجرة الممتدة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=SVqszHPv-I8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح خوارزمية بريم Prim Algorithm",
+              d: "شرح عربي إضافي لخوارزمية Prim وفكرة إيجاد أقل شجرة ممتدة في رسم بياني موزون، مع توضيح طريقة الاختيار التدريجي للحواف.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=-dBtzo2WDPk",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات تعليمية باللغة الإنجليزية أو من قنوات تعليمية دولية تشرح تمثيل الجراف وخوارزميات MST بالأمثلة.",
+          links: [
+            {
+              t: "Representation of Graph using Adjacency Matrix and Adjacency List - Techdose",
+              d: "يقارن بين Adjacency Matrix وAdjacency List، ويشرح تمثيل الجراف الموجه وغير الموجه، ومزايا كل بنية وتكلفتها في الذاكرة والعمليات.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch video",
+                  url: "https://www.youtube.com/watch?v=4R7chuhzq7k",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Graph Representation using Adjacency Matrix and Adjacency List - GATEHUB",
+              d: "شرح بصري لكيفية تخزين الرؤوس والحواف في المصفوفة وقائمة المجاورة، مع مناقشة تعقيد المساحة وبعض العمليات الأساسية.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch video",
+                  url: "https://www.youtube.com/watch?v=Gs_YMksyM_k",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Prim's Algorithm for MST - GeeksforGeeks",
+              d: "فيديو يوضح مفهوم spanning tree وMST وكيفية اختيار الحواف ذات الوزن الأقل لبناء شجرة تشمل جميع الرؤوس دون تكوين دورة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch video",
+                  url: "https://www.youtube.com/watch?v=eB61LXLZVqs",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Kruskal's Algorithm: Minimum Spanning Tree Tutorial",
+              d: "شرح لخوارزمية Kruskal مع مثال وتطبيق برمجي، ويركز على ترتيب الحواف واختيار الحافة التي لا تُنشئ دورة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch video",
+                  url: "https://www.youtube.com/watch?v=xDrLSOxaFrA",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Graphs: Representation - Algorithms with Attitude",
+              d: "مقدمة مرئية لتمثيل الجراف مع مقارنة Adjacency Matrix وAdjacency List وتوضيح تأثير اختيار طريقة التمثيل على العمليات.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch video",
+                  url: "https://www.youtube.com/watch?v=WQ2Tzlxl_Xo",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات ومراجع تفصيلية لتعريف الجراف، وطرق تمثيله، ودرجات الرؤوس، ولمّة المصافحة، وخصائص MST وتحليل Prim وKruskal.",
+          links: [
+            {
+              t: "Introduction to Graphs - GeeksforGeeks",
+              d: "مدخل إلى Graph Data Structure ومفاهيم Vertex وEdge، مع أساسيات تمثيل الجراف باستخدام المصفوفة وقائمة المجاورة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/introduction-to-graphs-data-structure-and-algorithm-tutorials/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Graph and its Representations - GeeksforGeeks",
+              d: "شرح مباشر لـ Adjacency Matrix وAdjacency List وكيفية تمثيل اتصال الرؤوس، وهو مناسب لمقارنة استهلاك الذاكرة وتكلفة الاستعلام عن الحواف.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/graph-and-its-representations/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Graph Theory Basics - GeeksforGeeks",
+              d: "يغطي المصطلحات الأساسية مثل Degree وIn-degree وOut-degree وHandshaking Theorem، بما في ذلك علاقات مجموع درجات الرؤوس بعدد الحواف.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/engineering-mathematics/mathematics-graph-theory-basics/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Handshaking Lemma and Interesting Tree Properties - GeeksforGeeks",
+              d: "شرح لمّة المصافحة: في الجراف غير الموجه يساوي مجموع درجات الرؤوس ضعف عدد الحواف، مع أمثلة تساعد على فهم العلاقة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/handshaking-lemma-and-interesting-tree-properties/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "What is Minimum Spanning Tree (MST)? - GeeksforGeeks",
+              d: "يعرف spanning tree وMST، ويوضح أن الهدف هو ربط جميع الرؤوس بأقل مجموع لأوزان الحواف، مع مقدمة إلى Prim وKruskal.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/what-is-minimum-spanning-tree-mst/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Prim's Algorithm for Minimum Spanning Tree - GeeksforGeeks",
+              d: "شرح خطوات Prim وتهيئة قيم key، واختيار الرأس ذي المفتاح الأصغر، وتحديث مفاتيح الرؤوس المجاورة. يناقش أيضًا الفرق بين تمثيل المصفوفة واستخدام Min-Heap.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/prims-minimum-spanning-tree-mst-greedy-algo-5/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Kruskal's Minimum Spanning Tree Algorithm - GeeksforGeeks",
+              d: "شرح فرز الحواف تصاعديًا بحسب الوزن، واختبار ما إذا كانت إضافة الحافة ستكوّن دورة، والتوقف بعد اختيار V-1 حافة في الجراف المتصل.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Minimum Spanning Trees - Princeton Algorithms",
+              d: "مرجع أكاديمي يشرح MST وخوارزميتي Prim وKruskal ودور Priority Queue وUnion-Find، ويتناول الأداء والتعقيد في التنفيذ.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المرجع",
+                  url: "https://algs4.cs.princeton.edu/43mst/index.php",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Minimum Spanning Tree - Prim's Algorithm - CP-Algorithms",
+              d: "شرح تقني لخوارزمية Prim، وفكرة إضافة أقل حافة تصل الشجرة الحالية برأس خارجها، مع مناقشة التعقيد الزمني واختلافه حسب التنفيذ.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المرجع",
+                  url: "https://cp-algorithms.com/graph/mst_prim.html",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Minimum Spanning Tree - Kruskal's Algorithm - CP-Algorithms",
+              d: "شرح خوارزمية Kruskal من خلال ترتيب الحواف ودمج المكونات المتصلة، مع توضيح منع الدورات وتحليل الأداء واستخدام Disjoint Set Union.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المرجع",
+                  url: "https://cp-algorithms.com/graph/mst_kruskal.html",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية لرسم الجرافات وتعديل أوزان الحواف ومشاهدة بناء MST خطوة بخطوة، بالإضافة إلى تجربة تمثيلات الجراف المختلفة.",
+          links: [
+            {
+              t: "VisuAlgo - Minimum Spanning Tree (Prim's and Kruskal's)",
+              d: "محاكاة تفاعلية لخوارزميتي Prim وKruskal؛ يمكن تتبع الحواف المختارة، وملاحظة تجنب الدورات، ومقارنة طريقة نمو الشجرة والمكونات الوسيطة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🧪 فتح المحاكاة",
+                  url: "https://visualgo.net/en/mst?slide=1",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "VisuAlgo - Graph Data Structures",
+              d: "أداة لتجربة الجرافات وفهم Directed وUndirected وWeighted Graph، ومقارنة Adjacency Matrix وAdjacency List وEdge List.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🧪 فتح المحاكاة",
+                  url: "https://visualgo.net/en/graphds?slide=1",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Graph Online - Graph Editor and Algorithms",
+              d: "محرر تفاعلي لإنشاء الرؤوس والحواف وتعيين الأوزان وتجربة خوارزميات على الرسم البياني، بما في ذلك إيجاد Minimum Spanning Tree وحساب درجات الرؤوس.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://graphonline.ru/en/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Graph Online - Help: Algorithms and Graph Editing",
+              d: "تعليمات استخدام أداة رسم الجراف وتعديله، مع خطوات الوصول إلى خوارزمية Minimum Spanning Tree وعرض درجات الرؤوس ومصفوفة المجاورة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "📖 فتح دليل الاستخدام",
+                  url: "https://graphonline.ru/en/wiki/Help/Help",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Virtual Labs - Prim's Algorithm Demo",
+              d: "تجربة تعليمية تفاعلية لخوارزمية Prim تعرض اختيار رأس البداية، وإضافة أقل حافة متاحة، وتكرار العملية حتى تضم الشجرة جميع الرؤوس.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🧪 تشغيل التجربة",
+                  url: "https://ds2-iiith.vlabs.ac.in/exp/min-spanning-trees/prims-algorithm/demo-of-prims-algorithm.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        {
+          q: "1. In a graph G = (V, E), what does E represent?",
+          options: [
+            "The set of vertices of G",
+            "The set of pairs of vertices of G (the edge set)",
+            "The set of weights of the edges of G",
+            "The set of all paths in G",
+          ],
+          correct: 1,
+          translation: "في الجراف G = (V, E)، ماذا تمثل E؟",
+          explanation:
+            "E هي مجموعة الأضلاع (edge set) وهي مجموعة أزواج من رؤوس G. مجموعة الرؤوس هي V، أما الأوزان فتُعرَّف بدالة منفصلة w في الجراف الموزون.",
+          tags: ["Graph", "Edge set"],
+          ref: "Lecture 07 — Graph",
+        },
+        {
+          q: "2. In which kind of graph are the edges ordered pairs of vertices?",
+          options: [
+            "An undirected graph",
+            "An unweighted graph",
+            "A spanning tree",
+            "A directed graph (digraph)",
+          ],
+          correct: 3,
+          translation:
+            "في أي نوع من الجرافات تكون الأضلاع أزواجًا مرتبة من الرؤوس؟",
+          explanation:
+            "الجراف الموجّه (digraph) أضلاعه أزواج مرتبة، فالضلع (1,2) يختلف عن (2,1). الجراف غير الموجّه أضلاعه أزواج غير مرتبة، والـ spanning tree هو subgraph وليس نوعًا من الجرافات بهذا المعنى.",
+          tags: ["Directed graph", "Digraph"],
+          ref: "Lecture 07 — Graph",
+        },
+        {
+          q: "3. Which of the following is an application of a minimum spanning tree mentioned in the lecture?",
+          options: [
+            "Designing a minimum-cost network (telephone, power, cable, road) that connects all sites",
+            "Sorting an array in linear time",
+            "Multiplying two large integers",
+            "Solving the Tower of Hanoi puzzle",
+          ],
+          correct: 0,
+          translation:
+            "أي مما يلي هو تطبيق على شجرة الامتداد الأدنى (MST) ذُكر في المحاضرة؟",
+          explanation:
+            "الـ MST يعطي أقل تكلفة لشبكة تربط كل المواقع (تليفون، كهرباء، كابلات، طرق). الاختيارات الأخرى مواضيع من المحاضرة السابقة (Linear sorting، ضرب الأعداد الكبيرة، Tower of Hanoi) ولا علاقة لها بالـ MST.",
+          tags: ["MST", "Applications", "Network design"],
+          ref: "Lecture 07 — MST Applications",
+        },
+        {
+          q: "4. In an edge weighted graph G = (V, E, w), the weight function w maps each edge to which set?",
+          options: [
+            "The set of vertices V",
+            "A subset of the edges E",
+            "The set of real numbers",
+            "The set of spanning trees of G",
+          ],
+          correct: 2,
+          translation:
+            "في الجراف الموزون G = (V, E, w)، الدالة w بتحوّل كل ضلع إلى أي مجموعة؟",
+          explanation:
+            "المحاضرة تعرّف w: E -> R أي أن كل ضلع يأخذ وزنًا هو عدد حقيقي. ولذلك يمكن أن يكون الوزن سالبًا، مثل الضلع (2,3) الذي وزنه -16 في المثال.",
+          tags: ["Weighted graph", "Weight function"],
+          ref: "Lecture 07 — Edge Weighted Graph",
+        },
+        {
+          q: "5. In the directed weighted example, w(1,5) = 15 while w(5,1) = 14. What does this show?",
+          options: [
+            "The graph must actually be undirected",
+            "In a directed graph the two directions between the same vertices can have different weights",
+            "Edge weights must always be positive",
+            "Vertices 1 and 5 are not adjacent",
+          ],
+          correct: 1,
+          translation:
+            "في مثال الجراف الموجّه الموزون، w(1,5) = 15 بينما w(5,1) = 14. ماذا يوضح ذلك؟",
+          explanation:
+            "في الجراف الموجّه (1,5) و(5,1) ضلعان مختلفان وكل واحد له وزنه. الاختيار الثالث غلط لأن المثال نفسه فيه وزن سالب (-16)، والرابع غلط لأن بين 1 و5 ضلعين فعلًا.",
+          tags: ["Directed weighted graph", "Edge weight"],
+          ref: "Lecture 07 — Edge Weighted Graph",
+        },
+        {
+          q: "6. In the undirected edge weighted example, which statement is true?",
+          options: [
+            "w(1,5) = w(5,1) = 17",
+            "w(1,5) = 15 and w(5,1) = 14",
+            "w(1,5) = 17 but w(5,1) = 0",
+            "w(5,1) is undefined",
+          ],
+          correct: 0,
+          translation: "في مثال الجراف الموزون غير الموجّه، أي عبارة صحيحة؟",
+          explanation:
+            "في الجراف غير الموجّه الضلع (1,5) هو نفسه (5,1) فله وزن واحد هو 17. القيمتان 15 و14 هما للمثال الموجّه.",
+          tags: ["Undirected weighted graph"],
+          ref: "Lecture 07 — Edge Weighted Graph",
+        },
+        {
+          q: "7. In the adjacency matrix of a graph, A[i, j] = 1 exactly when:",
+          options: [
+            "i is equal to j",
+            "the weight of (i, j) is positive",
+            "vertex i has a larger degree than vertex j",
+            "the pair (i, j) belongs to E(G)",
+          ],
+          correct: 3,
+          translation: "في مصفوفة التجاور، تكون A[i, j] = 1 بالضبط عندما:",
+          explanation:
+            "التعريف: A[i,j] = 1 لو (i,j) ينتمي إلى E(G) وإلا 0. المصفوفة العادية لا تهتم بالأوزان ولا بالدرجات.",
+          tags: ["Adjacency matrix"],
+          ref: "Lecture 07 — Adjacency Matrix",
+        },
+        {
+          q: "8. Which property does the adjacency matrix of an undirected graph have?",
+          options: [
+            "All of its entries are equal to 1",
+            "Non-zero entries appear only on the diagonal",
+            "It is symmetric, because (i, j) and (j, i) denote the same edge",
+            "It is always upper triangular",
+          ],
+          correct: 2,
+          translation:
+            "ما الخاصية التي تتميز بها مصفوفة التجاور لجراف غير موجّه؟",
+          explanation:
+            "لأن الضلع غير الموجّه (i,j) هو نفسه (j,i) تظهر القيمة 1 في الموضعين، فتكون المصفوفة متماثلة (مثال المحاضرة يوضح ذلك). المصفوفة للجراف الموجّه هي التي قد لا تكون متماثلة.",
+          tags: ["Adjacency matrix", "Symmetric"],
+          ref: "Lecture 07 — Adjacency Matrix",
+        },
+        {
+          q: "9. In the weighted adjacency matrix, what is A[i, j] when i is not equal to j and (i, j) is not an edge?",
+          options: ["0", "infinity", "1", "-1"],
+          correct: 1,
+          translation:
+            "في مصفوفة التجاور الموزونة، ماذا تكون A[i, j] لو i لا تساوي j و(i, j) ليس ضلعًا؟",
+          explanation:
+            "التعريف: w(i,j) لو الضلع موجود، و0 لو i = j، وinfinity في باقي الحالات. لا نستخدم 0 لأن 0 قد يكون وزنًا حقيقيًا، ولا نستخدم 1 أو -1 لأنهما أوزان محتملة.",
+          tags: ["Weighted adjacency matrix", "Infinity"],
+          ref: "Lecture 07 — Weighted Adjacency Matrix",
+        },
+        {
+          q: "10. If a min-heap is used for the priority queue Q, what is the running time of MST-Prim, where n = |V| and m = |E|?",
+          options: ["O(m lg n)", "O(n^2 * m)", "O(m + n)", "O(lg n)"],
+          correct: 0,
+          translation:
+            "لو استخدمنا min-heap كطابور أولوية Q، ما زمن تشغيل MST-Prim حيث n = |V| و m = |E|؟",
+          explanation:
+            "هناك n استدعاء لـ ExtractMin وm استدعاء لـ DecreaseKey، وكل واحد منهم O(lg n)، فالإجمالي O((n+m) lg n) = O(m lg n) لأن n - 1 <= m في جراف متصل. الاختيارات الأخرى لا تعكس تكلفة عمليات الـ heap.",
+          tags: ["Prim", "Running time", "Min-heap"],
+          ref: "Lecture 07 — Review: Prim's Algorithm",
+        },
+        {
+          q: "11. In the (weighted) adjacency list structure, what does Adj[i] contain?",
+          options: [
+            "All vertices of V(G) in increasing order",
+            "The weights of all edges in G",
+            "The pairs <j, w(i, j)> for every edge (i, j) in E(G)",
+            "The edges that are not incident to vertex i",
+          ],
+          correct: 2,
+          translation: "في هيكل قائمة التجاور (الموزونة)، ماذا تحتوي Adj[i]؟",
+          explanation:
+            "Adj[i] = { <j, w(i,j)> | (i,j) in E(G) } أي أزواج (الجار، وزن الضلع) لكل ضلع خارج من i. القائمة تحتوي الجيران فقط وليس كل الرؤوس.",
+          tags: ["Adjacency list"],
+          ref: "Lecture 07 — (Weighted) Adjacency List Structure",
+        },
+        {
+          q: "12. What is the space complexity (number of memory cells) of an adjacency matrix?",
+          options: ["O(V + E)", "O(E)", "O(V log V)", "O(V^2)"],
+          correct: 3,
+          translation: "ما تعقيد المساحة (عدد خلايا الذاكرة) لمصفوفة التجاور؟",
+          explanation:
+            "المصفوفة V x V فتأخذ O(V^2) بغض النظر عن عدد الأضلاع. O(V + E) هي مساحة قائمة التجاور.",
+          tags: ["Adjacency matrix", "Space complexity"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          q: "13. What is the space complexity of an adjacency list structure?",
+          options: ["O(V^2)", "O(V + E)", "O(V * E)", "O(1)"],
+          correct: 1,
+          translation: "ما تعقيد المساحة لهيكل قائمة التجاور؟",
+          explanation:
+            "نحتاج خلية لكل رأس في المصفوفة Adj ثم عقدة لكل ضلع، فالمجموع O(V + E). لذلك هي أوفر من المصفوفة في الجرافات المتفرقة (sparse).",
+          tags: ["Adjacency list", "Space complexity"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          q: "14. How long does it take to test whether (u, v) is in E(G) using an adjacency matrix?",
+          options: ["O(1)", "O(V)", "O(|Adj[u]|)", "O(V + E)"],
+          correct: 0,
+          translation:
+            "كم يستغرق اختبار هل (u, v) ينتمي إلى E(G) باستخدام مصفوفة التجاور؟",
+          explanation:
+            "نقرأ الخلية A[u][v] مباشرة فيكون الزمن O(1). في قائمة التجاور نحتاج المرور على Adj[u] فيكون O(|Adj[u]|).",
+          tags: ["Adjacency matrix", "Edge lookup"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          q: "15. How long does it take to test whether (u, v) is in E(G) using an adjacency list?",
+          options: ["O(1)", "O(V^2)", "O(|Adj[u]|)", "O(V + E)"],
+          correct: 2,
+          translation:
+            "كم يستغرق اختبار هل (u, v) ينتمي إلى E(G) باستخدام قائمة التجاور؟",
+          explanation:
+            "يجب البحث عن v داخل القائمة Adj[u] فالزمن O(|Adj[u]|). O(1) هي زمن المصفوفة، وO(V + E) هي زمن المرور على كل الهيكل.",
+          tags: ["Adjacency list", "Edge lookup"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          q: "16. How long does it take to list the vertices adjacent to a vertex u using an adjacency matrix?",
+          options: ["O(1)", "O(|Adj[u]|)", "O(V^2)", "O(V)"],
+          correct: 3,
+          translation:
+            "كم يستغرق سرد الرؤوس المجاورة للرأس u باستخدام مصفوفة التجاور؟",
+          explanation:
+            "يجب فحص الصف الكامل الخاص بـ u (V خلية) فالزمن O(V). في القائمة يكون O(|Adj[u]|) لأننا نمر على الجيران فقط.",
+          tags: ["Adjacency matrix", "Neighbors"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          q: "17. In MST-Prim(G, w, r), how are the key values initialized?",
+          options: [
+            "key[r] = 0 for the start vertex r, and key[u] = infinity for every other vertex",
+            "key[u] = 0 for every vertex",
+            "key[u] = w(u, r) for every vertex",
+            "key[r] = infinity and key[u] = 0 for all other vertices",
+          ],
+          correct: 0,
+          translation: "في MST-Prim(G, w, r)، كيف تُهيَّأ قيم key؟",
+          explanation:
+            "نضع key[r] = 0 حتى يكون r أول رأس يُستخرج من Q، وباقي الرؤوس infinity، وp[r] = NULL. باقي الاختيارات تجعل ExtractMin يختار رأسًا غير r أو يربك الخوارزمية.",
+          tags: ["Prim", "Initialization"],
+          ref: "Lecture 07 — Prim's Algorithm",
+        },
+        {
+          q: "18. For a vertex v in a directed graph, how is deg(v) defined?",
+          options: [
+            "deg(v) = outdeg(v) - indeg(v)",
+            "deg(v) = outdeg(v) + indeg(v)",
+            "deg(v) = |Adj[v]| only",
+            "deg(v) = |E|",
+          ],
+          correct: 1,
+          translation: "لرأس v في جراف موجّه، كيف تُعرَّف deg(v)؟",
+          explanation:
+            "في الجراف الموجّه deg(v) = outdeg(v) + indeg(v). |Adj[v]| تساوي outdeg(v) فقط، لذلك الاختيار الثالث ناقص.",
+          tags: ["Degree", "Indegree", "Outdegree"],
+          ref: "Lecture 07 — The Hand-Shaking Lemma",
+        },
+        {
+          q: "19. According to the Hand-Shaking Lemma, for any graph the sum of deg(v) over all vertices equals:",
+          options: ["|E|", "|V|", "2|E|", "|V| + |E|"],
+          correct: 2,
+          translation:
+            "حسب Hand-Shaking Lemma، مجموع deg(v) لكل الرؤوس في أي جراف يساوي:",
+          explanation:
+            "كل ضلع يساهم بدرجة واحدة عند كل طرف من طرفيه، أي 2 في المجموع، فالمجموع = 2|E|. القيمة |E| هي مجموع indeg أو مجموع outdeg في الجراف الموجّه.",
+          tags: ["Hand-Shaking Lemma", "Degree"],
+          ref: "Lecture 07 — The Hand-Shaking Lemma",
+        },
+        {
+          q: "20. For any directed graph, the sum of indeg(v) over all vertices (which also equals the sum of outdeg(v)) is:",
+          options: ["2|E|", "|V|", "|V|^2", "|E|"],
+          correct: 3,
+          translation:
+            "في أي جراف موجّه، مجموع indeg(v) لكل الرؤوس (وهو أيضًا يساوي مجموع outdeg(v)) هو:",
+          explanation:
+            "كل ضلع موجّه له رأس بداية واحد (يزيد outdeg) ورأس نهاية واحد (يزيد indeg)، فكل من المجموعين = |E|. أما 2|E| فهو مجموع deg الكلية.",
+          tags: ["Indegree", "Outdegree", "Directed graph"],
+          ref: "Lecture 07 — The Hand-Shaking Lemma",
+        },
+        {
+          q: "21. What is a spanning tree of a connected, undirected graph G = (V, E)?",
+          options: [
+            "A connected subgraph of G that forms an undirected tree incident with each vertex",
+            "A subgraph made only of the lightest edge at each vertex",
+            "A directed subgraph that contains every cycle of G",
+            "Any subgraph of G with exactly |V| edges",
+          ],
+          correct: 0,
+          translation:
+            "ما هي شجرة الامتداد (spanning tree) لجراف متصل غير موجّه G = (V, E)؟",
+          explanation:
+            "هي subgraph متصل يكوّن شجرة غير موجّهة ويلمس كل رؤوس G. الاختيارات الأخرى غلط: الشجرة لا تحتوي دورات، وليست موجّهة، وعدد أضلاعها |V| - 1 وليس |V|.",
+          tags: ["Spanning tree", "Subgraph"],
+          ref: "Lecture 07 — Minimum Spanning Tree (MST)",
+        },
+        {
+          q: "22. In a weighted graph G = (V, E, W), what is the weight of a subgraph?",
+          options: [
+            "The number of edges in the subgraph",
+            "The sum of the weights of the edges in the subgraph",
+            "The largest edge weight in the subgraph",
+            "The sum of the degrees of its vertices",
+          ],
+          correct: 1,
+          translation: "في جراف موزون G = (V, E, W)، ما هو وزن الـ subgraph؟",
+          explanation:
+            "وزن الـ subgraph هو مجموع أوزان أضلاعه. على هذا الأساس الـ MST هو شجرة الامتداد ذات أقل مجموع وزن.",
+          tags: ["Subgraph weight", "MST"],
+          ref: "Lecture 07 — Minimum Spanning Tree (MST)",
+        },
+        {
+          q: "23. In the lecture's example graph G (vertices a, b, c, d, e), what is the cost of the minimum spanning tree T?",
+          options: ["20", "18", "16", "14"],
+          correct: 2,
+          translation:
+            "في مثال المحاضرة للجراف G (الرؤوس a, b, c, d, e)، ما تكلفة شجرة الامتداد الأدنى T؟",
+          explanation:
+            "الـ MST يستخدم الأضلاع 3 + 2 + 4 + 7 = 16. القيمة 20 هي تكلفة شجرة أخرى T' (3 + 5 + 4 + 8) وهي أغلى فليست minimum.",
+          tags: ["MST", "Cost"],
+          ref: "Lecture 07 — Minimum Spanning Tree (example graph G)",
+        },
+        {
+          q: "24. Which algorithm grows a single tree by repeatedly adding the least-cost edge that connects a vertex in the tree to a vertex not in the tree?",
+          options: [
+            "Kruskal's algorithm",
+            "Heap sort",
+            "The Hand-Shaking Lemma",
+            "Prim's algorithm",
+          ],
+          correct: 3,
+          translation:
+            "أي خوارزمية تنمّي شجرة واحدة بإضافة أقل ضلع تكلفة يربط رأسًا داخل الشجرة برأس خارجها في كل خطوة؟",
+          explanation:
+            "هذا وصف خوارزمية Prim، والحل الوسيط فيها دائمًا subtree. Kruskal يضيف أقل ضلع لا يكوّن دورة وحله الوسيط spanning forest. وHeap sort خوارزمية ترتيب، والـ Lemma نظرية في الدرجات.",
+          tags: ["Prim", "Greedy"],
+          ref: "Lecture 07 — Finding a MST",
+        },
+        {
+          q: "25. In Kruskal's algorithm, what is the intermediary solution during the run?",
+          options: [
+            "A spanning forest",
+            "A subtree",
+            "A single vertex",
+            "A directed cycle",
+          ],
+          correct: 0,
+          translation: "في خوارزمية Kruskal، ما هو الحل الوسيط أثناء التنفيذ؟",
+          explanation:
+            "Kruskal يضيف أقل ضلع لا يكوّن دورة، فتتكون عدة أشجار منفصلة تُدمج تدريجيًا أي spanning forest. الـ subtree هو الحل الوسيط في Prim.",
+          tags: ["Kruskal", "Spanning forest"],
+          ref: "Lecture 07 — Finding a MST",
+        },
+        {
+          type: "essay",
+          q: "1. Define a graph G = (V, E) and distinguish between undirected and directed graphs, giving the lecture's examples.",
+          translation:
+            "عرّف الجراف G = (V, E) وفرّق بين الجراف غير الموجّه والموجّه مع أمثلة المحاضرة.",
+          answer:
+            "A graph G = (V, E) consists of V = V(G), the vertex set, and E = E(G), the edge set, which is a set of pairs of vertices of G.\n" +
+            "Undirected graph: edges are unordered pairs of vertices, so (u, v) and (v, u) are the same edge. Example: V = {1,...,6}, E = {(1,2),(1,4),(1,5),(2,3),(2,5),(3,5),(4,5)}.\n" +
+            "Directed graph (digraph): edges are ordered pairs, so (u, v) and (v, u) are different edges. Example: E = {(1,2),(1,4),(1,5),(3,2),(4,4),(4,5),(5,1),(5,2),(5,3)}, which even contains the edge (4,4) from vertex 4 to itself.\n" +
+            "In both examples vertex 6 has no incident edges.",
+          tags: ["Graph", "Directed", "Undirected"],
+          ref: "Lecture 07 — Graph",
+        },
+        {
+          type: "essay",
+          q: "2. What is an edge weighted graph? Explain how the weights differ between the undirected and the directed example.",
+          translation:
+            "ما هو الجراف الموزون؟ اشرح كيف تختلف الأوزان بين المثال غير الموجّه والمثال الموجّه.",
+          answer:
+            "An edge weighted graph is G = (V, E, w) where w: E -> R assigns a real number (possibly negative) to every edge.\n" +
+            "Undirected example: w(1,5) = w(5,1) = 17, because (1,5) and (5,1) are the same edge.\n" +
+            "Directed example: w(1,5) = 15 but w(5,1) = 14, because they are two different edges, each with its own weight.\n" +
+            "Negative weights are allowed, e.g. the edge (2,3) has weight -16.",
+          tags: ["Weighted graph"],
+          ref: "Lecture 07 — Edge Weighted Graph",
+        },
+        {
+          type: "essay",
+          q: "3. Explain the adjacency matrix and the weighted adjacency matrix, including their definitions.",
+          translation:
+            "اشرح مصفوفة التجاور ومصفوفة التجاور الموزونة مع تعريف كل منهما.",
+          answer:
+            "Adjacency matrix: A[i, j] = 1 if (i, j) is in E(G), and 0 otherwise, for i, j in V(G). For an undirected graph it is symmetric.\n" +
+            "Weighted adjacency matrix: A[i, j] = w(i, j) if (i, j) is in E(G); A[i, j] = 0 if i = j and (i, j) is not in E(G); A[i, j] = infinity otherwise.\n" +
+            "Example (undirected weighted graph): the first row is 0, 6, infinity, 9, 2, infinity, because vertex 1 has edges to vertices 2, 4 and 5 with weights 6, 9 and 2.",
+          tags: ["Adjacency matrix", "Weighted"],
+          ref: "Lecture 07 — Adjacency Matrix / Weighted Adjacency Matrix",
+        },
+        {
+          type: "essay",
+          q: "4. Describe the (weighted) adjacency list structure.",
+          translation: "صِف هيكل قائمة التجاور (الموزونة).",
+          answer:
+            "Adj is an array indexed by the vertices; Adj[i] = { <j, w(i, j)> | (i, j) is in E(G) } for i in V(G).\n" +
+            "Each entry of Adj[i] is a node holding a neighbor j and the weight w(i, j), linked to the next node of the list.\n" +
+            "Example: in the first undirected weighted graph, Adj[1] holds the nodes (2, 6), (4, 9), (5, 2), and Adj[6] is empty because vertex 6 has no edges.\n" +
+            "For undirected graphs each edge appears in two lists; |Adj[v]| equals deg(v).",
+          tags: ["Adjacency list"],
+          ref: "Lecture 07 — (Weighted) Adjacency List Structure",
+        },
+        {
+          type: "essay",
+          q: "5. State the Hand-Shaking Lemma and define degree, in-degree and out-degree.",
+          translation:
+            "اذكر Hand-Shaking Lemma وعرّف degree وin-degree وout-degree.",
+          answer:
+            "Undirected G: deg(v) = |{u | (v,u) in E(G)}| = |Adj[v]|.\n" +
+            "Digraph G: outdeg(v) = |{u | (v,u) in E(G)}| = |Adj[v]|, indeg(v) = |{u | (u,v) in E(G)}|, and deg(v) = outdeg(v) + indeg(v).\n" +
+            "Hand-Shaking Lemma: for any graph, directed or undirected, the sum of deg(v) over all v in V(G) equals 2|E|.\n" +
+            "For any directed graph, the sum of indeg(v) equals the sum of outdeg(v), and both equal |E|.",
+          tags: ["Hand-Shaking Lemma", "Degree"],
+          ref: "Lecture 07 — The Hand-Shaking Lemma",
+        },
+        {
+          type: "essay",
+          q: "6. Compare the adjacency matrix and the adjacency list in terms of space and time.",
+          translation:
+            "قارن بين مصفوفة التجاور وقائمة التجاور من حيث المساحة والزمن.",
+          answer:
+            "Space: matrix O(V^2) versus list O(V + E).\n" +
+            "Initialize structure: matrix O(V^2), list O(V + E).\n" +
+            "Scan (incident edges of) all vertices: matrix O(V^2), list O(V + E).\n" +
+            "List vertices adjacent to u: matrix O(V), list O(|Adj[u]|).\n" +
+            "Is (u, v) in E(G)?: matrix O(1), list O(|Adj[u]|).\n" +
+            "So the matrix is better for fast edge lookup, while the list is better for space and for scanning neighbors, especially in sparse graphs.",
+          tags: ["Matrix vs list", "Complexity"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          type: "essay",
+          q: "7. Define a spanning tree and a minimum spanning tree, and mention some applications of an MST.",
+          translation:
+            "عرّف شجرة الامتداد وشجرة الامتداد الأدنى واذكر بعض تطبيقات الـ MST.",
+          answer:
+            "A spanning tree of a connected, undirected graph G = (V, E) is a connected subgraph of G that forms an undirected tree incident with each vertex.\n" +
+            "In a weighted graph G = (V, E, W) the weight of a subgraph is the sum of the weights of its edges.\n" +
+            "A minimum spanning tree is a spanning tree with the minimum weight. Example: T has cost 3+2+4+7 = 16 while another spanning tree T' has cost 3+5+4+8 = 20.\n" +
+            "Applications: network design (telephone, electrical power, hydraulic, TV cable, computer, road). The MST gives a minimum-cost network connecting all sites, i.e. the most economical construction.",
+          tags: ["MST", "Spanning tree", "Applications"],
+          ref: "Lecture 07 — Minimum Spanning Tree (MST)",
+        },
+        {
+          type: "essay",
+          q: "8. Explain Prim's algorithm (MST-Prim) step by step.",
+          translation: "اشرح خوارزمية Prim (MST-Prim) خطوة بخطوة.",
+          answer:
+            "Prim grows a single tree by repeatedly adding the least-cost edge that connects a vertex in the existing tree to a vertex not in the tree. The intermediary solution is a subtree.\n" +
+            "Initialization: Q = V[G]; key[u] = infinity for every u; key[r] = 0 for the chosen start vertex r; p[r] = NULL.\n" +
+            "While Q is not empty: u = ExtractMin(Q); for each v in Adj[u], if v is in Q and w(u, v) < key[v], then p[v] = u and key[v] = w(u, v).\n" +
+            "The parent pointers p[] give the edges of the MST when Q becomes empty.",
+          tags: ["Prim", "MST-Prim"],
+          ref: "Lecture 07 — Prim's Algorithm",
+        },
+        {
+          type: "essay",
+          q: "9. Compare Prim's and Kruskal's algorithms for finding an MST.",
+          translation: "قارن بين خوارزميتي Prim وKruskal لإيجاد الـ MST.",
+          answer:
+            "Both are principal greedy methods for finding an MST. MSTs satisfy the optimal substructure property: an optimal tree is composed of optimal subtrees.\n" +
+            "Prim: grow a single tree by repeatedly adding the least-cost edge that connects a vertex in the existing tree to a vertex not in it. The intermediary solution is a subtree.\n" +
+            "Kruskal: grow a tree by repeatedly adding the least-cost edge that does not introduce a cycle among the edges included so far. The intermediary solution is a spanning forest.",
+          tags: ["Prim", "Kruskal", "Greedy"],
+          ref: "Lecture 07 — Finding a MST",
+        },
+        {
+          type: "essay",
+          q: "10. What is the hidden cost in the MST-Prim code, and what is its running time with a min-heap?",
+          translation:
+            "ما هي التكلفة الخفية في كود MST-Prim، وما زمن التشغيل عند استخدام min-heap؟",
+          answer:
+            "The hidden cost is the update key[v] = w(u, v): when the key of a vertex stored in the min-heap changes, the heap must be fixed, which is the DecreaseKey operation. ExtractMin deletes the smallest element from the min-heap.\n" +
+            "There are n = |V| ExtractMin calls and (at most) m = |E| DecreaseKey calls.\n" +
+            "With a min-heap for Q each operation costs O(lg n), so the time is O((n + m) lg n) = O(m lg n), because for a connected graph n - 1 <= m.\n" +
+            "The priority queue implementation has a large impact on the performance.",
+          tags: ["Prim", "DecreaseKey", "Running time"],
+          ref: "Lecture 07 — Review: Prim's Algorithm",
+        },
+        {
+          type: "essay",
+          q: "11. Using E = {(1,2),(1,4),(1,5),(2,3),(2,5),(3,5),(4,5)} on V = {1,...,6} (undirected), compute deg(v) for every vertex and verify the Hand-Shaking Lemma.",
+          translation:
+            "باستخدام E = {(1,2),(1,4),(1,5),(2,3),(2,5),(3,5),(4,5)} على V = {1,...,6} (جراف غير موجّه)، احسب deg(v) لكل رأس وتحقق من Hand-Shaking Lemma.",
+          answer:
+            "Formula: deg(v) = |Adj[v]|, and the sum of deg(v) = 2|E|.\n" +
+            "Given: |E| = 7, so 2|E| = 14.\n" +
+            "Adj[1] = {2,4,5} -> deg = 3; Adj[2] = {1,3,5} -> deg = 3; Adj[3] = {2,5} -> deg = 2; Adj[4] = {1,5} -> deg = 2; Adj[5] = {1,2,3,4} -> deg = 4; Adj[6] = {} -> deg = 0.\n" +
+            "Sum = 3 + 3 + 2 + 2 + 4 + 0 = 14 = 2 * 7, so the lemma holds.",
+          tags: ["Hand-Shaking Lemma", "Degree"],
+          ref: "Lecture 07 — The Hand-Shaking Lemma",
+        },
+        {
+          type: "essay",
+          q: "12. For the digraph with E = {(1,2),(1,4),(1,5),(3,2),(4,4),(4,5),(5,1),(5,2),(5,3)} on V = {1,...,6}, compute indeg and outdeg of every vertex and check the lemma for directed graphs.",
+          translation:
+            "للجراف الموجّه E = {(1,2),(1,4),(1,5),(3,2),(4,4),(4,5),(5,1),(5,2),(5,3)} على V = {1,...,6}، احسب indeg وoutdeg لكل رأس وتحقق من النظرية للجرافات الموجّهة.",
+          answer:
+            "Formulas: outdeg(v) = |{u | (v,u) in E}|, indeg(v) = |{u | (u,v) in E}|, and the sum of indeg = the sum of outdeg = |E|.\n" +
+            "Given: |E| = 9.\n" +
+            "outdeg: v1 = 3, v2 = 0, v3 = 1, v4 = 2 (edges (4,4) and (4,5)), v5 = 3, v6 = 0. Sum = 9.\n" +
+            "indeg: v1 = 1, v2 = 3, v3 = 1, v4 = 2 (edges (1,4) and (4,4)), v5 = 2, v6 = 0. Sum = 9.\n" +
+            "Both sums equal |E| = 9, so the lemma holds. Also deg(4) = 2 + 2 = 4.",
+          tags: ["Indegree", "Outdegree"],
+          ref: "Lecture 07 — The Hand-Shaking Lemma",
+        },
+        {
+          type: "essay",
+          q: "13. A graph has |V| = 1000 vertices and |E| = 3000 edges. Compare the memory needed by an adjacency matrix and by an adjacency list.",
+          translation:
+            "جراف فيه |V| = 1000 رأس و|E| = 3000 ضلع. قارن حجم الذاكرة المطلوبة لمصفوفة التجاور وقائمة التجاور.",
+          answer:
+            "Formulas: matrix space = O(V^2); list space = O(V + E).\n" +
+            "Matrix: V^2 = 1000^2 = 1,000,000 cells.\n" +
+            "List: V + E = 1000 + 3000 = 4000 units (up to a constant factor, since an undirected edge appears in two lists).\n" +
+            "The list needs about 250 times fewer cells, so for this sparse graph the adjacency list is much more economical.",
+          tags: ["Space complexity", "Matrix vs list"],
+          ref: "Lecture 07 — Adjacency Matrix vs Adjacency List",
+        },
+        {
+          type: "essay",
+          q: "14. Graph G has edges: a-b = 5, a-c = 3, b-c = 2, b-e = 4, c-d = 7, e-d = 8. Compute the cost of the spanning trees T = {a-c, b-c, b-e, c-d} and T' = {a-c, a-b, b-e, e-d}, and show how Prim finds the MST starting from a.",
+          translation:
+            "الجراف G أضلاعه: a-b = 5، a-c = 3، b-c = 2، b-e = 4، c-d = 7، e-d = 8. احسب تكلفة شجرتي الامتداد T وT' ووضح كيف تجد Prim الـ MST بالبدء من a.",
+          answer:
+            "Formula: cost of a tree = sum of its edge weights.\n" +
+            "Cost(T) = 3 + 2 + 4 + 7 = 16. Cost(T') = 3 + 5 + 4 + 8 = 20. So T is better (difference 4).\n" +
+            "Prim from a: tree {a}; cheapest crossing edge is a-c (3) -> add c.\n" +
+            "Tree {a,c}: crossing edges a-b (5), c-b (2), c-d (7) -> add b-c (2).\n" +
+            "Tree {a,b,c}: crossing edges b-e (4), c-d (7) -> add b-e (4).\n" +
+            "Tree {a,b,c,e}: crossing edges c-d (7), e-d (8) -> add c-d (7). Total = 3 + 2 + 4 + 7 = 16, which is the MST.",
+          tags: ["MST", "Prim", "Cost"],
+          ref: "Lecture 07 — Minimum Spanning Tree (example graph G)",
+        },
+        {
+          type: "essay",
+          q: "15. Run MST-Prim with a min-heap on a connected graph with n = 1000 vertices and m = 5000 edges. How many ExtractMin and DecreaseKey calls are made at most, and what is the approximate running time?",
+          translation:
+            "نفّذ MST-Prim مع min-heap على جراف متصل فيه n = 1000 رأس وm = 5000 ضلع. كم عدد استدعاءات ExtractMin وDecreaseKey على الأكثر، وما الزمن التقريبي؟",
+          answer:
+            "Formula: time = O((n + m) lg n) = O(m lg n) for a connected graph.\n" +
+            "ExtractMin is called n = 1000 times; DecreaseKey is called at most m = 5000 times.\n" +
+            "Each heap operation costs O(lg n), and lg 1000 is about 10.\n" +
+            "Time is about (1000 + 5000) * 10 = 60,000 basic steps, i.e. on the order of m lg n = 5000 * 10 = 50,000 (the same order).",
+          tags: ["Prim", "Running time"],
+          ref: "Lecture 07 — Review: Prim's Algorithm",
+        },
+      ],
+    },
   ],
 });

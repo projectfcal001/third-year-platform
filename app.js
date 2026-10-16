@@ -10,7 +10,7 @@ function findDept(id){
   }
   return null;
 }
-var CUR_DEPT = (function(){
+function __resolveCurDept(){
   try{
     var u = new URLSearchParams(location.search).get('dept');   // رابط مشاركة: ?dept=ai
     if(u && findDept(u)){ localStorage.setItem(DEPT_KEY, u); return u; }
@@ -18,17 +18,157 @@ var CUR_DEPT = (function(){
     if(s && findDept(s)) return s;
   }catch(e){}
   return null;
-})();
+}
+var CUR_DEPT = __resolveCurDept();
+
+// ============================================================
+// تحميل ملفات الداتا بمقاومة النت الضعيف:
+//   1) محاولات متكررة (مهلة لكل محاولة)  2) لو فشلت كلها نفتح النسخة المحفوظة
+//   على الجهاز كأن مفيش نت (نفس سلوك الأوفلاين)  3) لو مفيش نسخة: رسالة واضحة
+// ============================================================
+var DATA_TRIES = 3, DATA_TIMEOUTS = [6000, 8000, 10000];
+var WEAK_NET = false;   // بتبقى true لما التحميل يفشل ونشتغل من النسخة المحفوظة
+
+function __wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+function __maxTries(){ return (navigator.onLine === false) ? 1 : DATA_TRIES; }
+
+// طلب واحد بمهلة، وبيقرا الجسم كله جوّه المهلة (عشان النت الضعيف ممكن يعلّق في النص)
+function __netGet(url, opts, ms){
+  return new Promise(function(resolve, reject){
+    var ctl = window.AbortController ? new AbortController() : null, done = false;
+    var t = setTimeout(function(){
+      if(done) return; done = true;
+      try{ if(ctl) ctl.abort(); }catch(e){}
+      reject(new Error('timeout'));
+    }, ms);
+    var o = {}; for(var k in (opts || {})) o[k] = opts[k];
+    if(ctl) o.signal = ctl.signal;
+    fetch(url, o).then(function(r){
+      return r.text().then(function(txt){ return {status: r.status, ok: r.ok, text: txt}; });
+    }).then(function(res){
+      if(done) return; done = true; clearTimeout(t); resolve(res);
+    }).catch(function(e){
+      if(done) return; done = true; clearTimeout(t); reject(e);
+    });
+  });
+}
+
+function __cacheMatch(url){
+  try{
+    if(window.caches) return caches.match(url, {ignoreSearch: true}).catch(function(){ return undefined; });
+  }catch(e){}
+  return Promise.resolve(undefined);
+}
+
+function __notifyRetry(n, max){
+  try{
+    var els = document.querySelectorAll('.loader-text');
+    for(var i = 0; i < els.length; i++) els[i].textContent = '📶 النت ضعيف… بنحاول تاني (' + n + '/' + max + ')';
+  }catch(e){}
+}
+
+function __enterWeakNetMode(){
+  if(WEAK_NET) return;
+  WEAK_NET = true;
+  try{
+    if(!document.body || document.getElementById('weaknet-bar')) return;
+    var b = document.createElement('div');
+    b.id = 'weaknet-bar'; b.setAttribute('role', 'status');
+    b.style.cssText = 'position:fixed;left:8px;right:8px;bottom:8px;z-index:99999;background:#111;color:#fff;' +
+      'padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.5;display:flex;gap:10px;' +
+      'align-items:center;justify-content:space-between;box-shadow:0 4px 16px rgba(0,0,0,.35);direction:rtl';
+    var sp = document.createElement('span');
+    sp.textContent = '📴 النت ضعيف — فتحنا النسخة المحفوظة على جهازك';
+    var bt = document.createElement('button');
+    bt.type = 'button'; bt.textContent = '🔄 جرّبي النت تاني';
+    bt.style.cssText = 'background:#fff;color:#111;border:0;border-radius:8px;padding:6px 12px;font-weight:bold;cursor:pointer;white-space:nowrap';
+    bt.onclick = function(){ location.reload(); };
+    b.appendChild(sp); b.appendChild(bt);
+    document.body.appendChild(b);
+  }catch(e){}
+}
+window.addEventListener('online', function(){
+  WEAK_NET = false;
+  var b = document.getElementById('weaknet-bar'); if(b && b.parentNode) b.parentNode.removeChild(b);
+});
+
+function __scriptTag(src){
+  return new Promise(function(resolve, reject){
+    var sc = document.createElement('script');
+    sc.src = src; sc.async = true;
+    sc.onload = function(){ resolve(); };
+    sc.onerror = function(){ if(sc.parentNode) sc.parentNode.removeChild(sc); reject(new Error('load')); };
+    document.head.appendChild(sc);
+  });
+}
+
+function __scriptFromCache(src){
+  return __cacheMatch(src).then(function(r){
+    if(!r) throw new Error('nocache');
+    return r.text();
+  }).then(function(txt){
+    var sc = document.createElement('script');
+    sc.text = txt;
+    document.head.appendChild(sc);            // بيتنفّذ فورًا
+    if(sc.parentNode) sc.parentNode.removeChild(sc);
+  });
+}
+
+function loadDataScript(src){
+  var attempt = 0, max = __maxTries();
+  function tryNet(){
+    var ms = DATA_TIMEOUTS[Math.min(attempt, DATA_TIMEOUTS.length - 1)];
+    attempt++;
+    return __netGet(src, null, ms).then(function(res){
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      return __scriptTag(src);                // بعد ما اتأكدنا إن النت وصّل الملف
+    }).catch(function(err){
+      if(attempt < max){
+        __notifyRetry(attempt + 1, max);
+        return __wait(attempt * 800).then(tryNet);
+      }
+      throw err;
+    });
+  }
+  return tryNet().catch(function(){
+    return __scriptFromCache(src).then(function(){ __enterWeakNetMode(); });
+  }).catch(function(){
+    var e = new Error('📴 النت ضعيف ومفيش نسخة محفوظة من الملف ده على جهازك — جرّبي تاني لما النت يتحسن');
+    e.weakNet = true;
+    throw e;
+  });
+}
+
+function loadJSONResilient(url, opts){
+  var attempt = 0, max = __maxTries();
+  function go(){
+    var ms = DATA_TIMEOUTS[Math.min(attempt, DATA_TIMEOUTS.length - 1)];
+    attempt++;
+    return __netGet(url, opts, ms).then(function(res){
+      if(res.status === 404) return res;                       // مفيش داعي نعيد على ملف مش موجود
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      return res;
+    }).catch(function(err){
+      if(attempt < max) return __wait(attempt * 800).then(go);
+      throw err;
+    });
+  }
+  return go().catch(function(err){
+    return __cacheMatch(url).then(function(r){
+      if(!r) throw err;
+      return r.text().then(function(txt){
+        __enterWeakNetMode();
+        return {status: 200, ok: true, text: txt};
+      });
+    });
+  });
+}
 
 function loadDeptIndex(id){
   return new Promise(function(resolve, reject){
     var d = findDept(id);
     if(!d){ reject(new Error('قسم غير معروف')); return; }
-    var sc = document.createElement('script');
-    sc.src = d.index;
-    sc.onload = function(){ resolve(d); };
-    sc.onerror = function(){ reject(new Error('فشل تحميل فهرس القسم: ' + d.index)); };
-    document.head.appendChild(sc);
+    loadDataScript(d.index).then(function(){ resolve(d); }).catch(reject);
   });
 }
 
@@ -147,23 +287,16 @@ function loadSubject(i){
   if(_loadingPromises[meta.slug]) return _loadingPromises[meta.slug];
 
   var before = subjects.length;
-  var p = new Promise(function(resolve, reject){
-    var script = document.createElement('script');
-    script.src = meta.file;
-    script.async = true;
-    script.onload = function(){
-      var added = subjects.length - before;
-      var data = null;
-      if(added === 1){ data = subjects.pop(); }
-      else if(added > 1){ data = subjects.splice(before, added)[0]; }
-      if(!data){ reject(new Error('الملف ما أضافش بيانات للمادة')); return; }
-      subjects[i] = data;
-      normalizeSubject(data);
-      ensureSubjectSlug(SUBJECTS_INDEX[i], i);
-      resolve(data);
-    };
-    script.onerror = function(){ reject(new Error('فشل تحميل الملف: ' + meta.file)); };
-    document.head.appendChild(script);
+  var p = loadDataScript(meta.file).then(function(){
+    var added = subjects.length - before;
+    var data = null;
+    if(added === 1){ data = subjects.pop(); }
+    else if(added > 1){ data = subjects.splice(before, added)[0]; }
+    if(!data){ throw new Error('الملف ما أضافش بيانات للمادة'); }
+    subjects[i] = data;
+    normalizeSubject(data);
+    ensureSubjectSlug(SUBJECTS_INDEX[i], i);
+    return data;
   });
 
   _loadingPromises[meta.slug] = p;
@@ -583,7 +716,7 @@ function showToast(msg){
 // ملفات أوفلاين: لو مفيش نت والملف لسه مش محمّل
 // ============================================================
 var OPENED_KEY = 'opened_files_v1', FILE_CACHE = 'opened-files-v1', _offlinePending = {};
-function isOffline(){ return typeof navigator.onLine === 'boolean' && !navigator.onLine; }
+function isOffline(){ return WEAK_NET || (typeof navigator.onLine === 'boolean' && !navigator.onLine); }
 function openedSet(){ try{ return JSON.parse(localStorage.getItem(OPENED_KEY)) || {}; }catch(e){ return {}; } }
 function wasOpened(url){ return !!openedSet()[url]; }
 function markOpened(url){
@@ -723,7 +856,7 @@ function selectSubject(i, skipUrlUpdate){
       document.getElementById('lectures-list').innerHTML =
         '<p style="color:var(--danger);padding:24px;text-align:center;font-weight:bold;">⚠️ ' + esc(err.message) + '</p>' +
         '<p style="text-align:center;color:var(--text-hint);">تأكدي إن الملف موجود في مجلد datenew/</p>';
-      showToast('فشل تحميل المادة');
+      showToast('📴 فشل تحميل المادة — اتأكد من النت وجرّب تاني');
     });
   }else{
     resetSubTabs();
@@ -1223,13 +1356,13 @@ function answeredCount(){
   return n;
 }
 
-function renderQuizInto(rootEl, s, key, title, questions){
+function renderQuizInto(rootEl, s, key, title, questions, ctx){
   detachQNSidebar();
   st = {
     subject: s, key: key, title: title || 'اختبار',
     data: (questions || []).slice(),
     answered: {}, marks: {}, current: 0, finished: false,
-    root: rootEl
+    root: rootEl, ctx: ctx || null
   };
   var saved = getSavedQuizFor(s, key);
   Object.keys(saved).forEach(function(k){
@@ -1311,8 +1444,22 @@ function renderQNSidebar(){
 }
 
 /* نسخ / مشاركة السؤال مع الإجابة الصحيحة */
+function quizContextHeader(){
+  if(!st) return '';
+  var lines = [];
+  var subj = st.subject && st.subject.name;
+  var c = st.ctx || {};
+  var name = c.name || st.title || '';
+  if(subj) lines.push('📚 المادة: ' + subj);
+  if(c.kind === 'midterms')       lines.push('📝 نوع الامتحان: ميدتيرم', '🏷 اسم الامتحان: ' + name);
+  else if(c.kind === 'finals')    lines.push('🎓 نوع الامتحان: فاينال', '🏷 اسم الامتحان: ' + name);
+  else if(c.kind === 'testBanks') lines.push('🏦 نوع الامتحان: بنك أسئلة', '🏷 اسم الامتحان: ' + name);
+  else if(name)                   lines.push('🧠 المحاضرة: ' + name);
+  return lines.join('\n');
+}
 function questionShareText(q){
-  var out = [String(q.q || '').trim()];
+  var hdr = quizContextHeader();
+  var out = hdr ? [hdr, '', String(q.q || '').trim()] : [String(q.q || '').trim()];
   if(isEssay(q)){
     if(q.answer) out.push('', '✅ الإجابة النموذجية:', String(q.answer).trim());
   }else{
@@ -1357,7 +1504,6 @@ function shareQuestion(i){
   var text = questionShareText(q);
   if(navigator.share){
     var data = {text: text};
-    try{ if(/^https?:$/.test(location.protocol)) data.url = location.origin + location.pathname; }catch(e){}
     navigator.share(data).catch(function(err){
       if(err && err.name === 'AbortError') return;
       copyQuestion(i);
@@ -2267,7 +2413,7 @@ function openLectureQuizSection(){
     return;
   }
   if(!st || st.key !== lecQuizKey(l) || st.root !== root){
-    renderQuizInto(root, s, lecQuizKey(l), l.t, l.questions);
+    renderQuizInto(root, s, lecQuizKey(l), l.t, l.questions, {kind:'lecture', name:l.t});
   }else{
     setQuizMode(true);
   }
@@ -2342,7 +2488,7 @@ function openQuiz(subjIdx, prop, idx){
     root.innerHTML = '<p class="ld-hint" style="font-size:16px;">⚠️ مفيش أسئلة متاحة هنا.</p>';
     setQuizMode(false);
   }else{
-    renderQuizInto(root, s, qKey, e.t, qs);
+    renderQuizInto(root, s, qKey, e.t, qs, {kind: (isLec ? 'lecture' : prop), name: e.t});
     applySectionStates();
   }
   showView('quiz-view');
@@ -2647,7 +2793,7 @@ function openSearchResult(i){
     loadSubject(r.si).then(function(){
       if(r.type === 'lecture'){ openLecture(r.si, r.li); }
       else{ openQuizAtQuestion(r.si, r.prop, r.ei, r.qi); }
-    }).catch(function(err){ showToast('فشل تحميل المادة'); });
+    }).catch(function(err){ showToast('📴 فشل تحميل المادة — اتأكد من النت وجرّب تاني'); });
     return;
   }
   if(r.type === 'lecture'){ openLecture(r.si, r.li); }
@@ -3142,11 +3288,11 @@ function secLoad(){
   if(_secPromisesBySubject[slug]) return _secPromisesBySubject[slug];
 
   var path = secFileForSubject(meta);
-  _secPromisesBySubject[slug] = fetch(path, {headers:{Accept:'application/json'}})
+  _secPromisesBySubject[slug] = loadJSONResilient(path, {headers:{Accept:'application/json'}})
     .then(function(r){
       if(r.status === 404) throw new Error('NOFILE');
       if(!r.ok) throw new Error('HTTP');
-      return r.json();
+      return JSON.parse(r.text);
     })
     .then(function(j){
       if(!j || !Array.isArray(j.sections)) throw new Error('BAD');
@@ -4765,7 +4911,7 @@ window.addEventListener('popstate', function(e){
 
   if(!subjects[subjIdx]){
     showSubjectLoading();
-    loadSubject(subjIdx).then(doOpen).catch(function(){ showToast('فشل تحميل المادة'); });
+    loadSubject(subjIdx).then(doOpen).catch(function(){ showToast('📴 فشل تحميل المادة — اتأكد من النت وجرّب تاني'); });
   } else {
     doOpen();
   }
@@ -5086,14 +5232,24 @@ function __initApp(){
     })
     .catch(function (err) {
       document.getElementById("lectures-list").innerHTML =
-        '<p style="color:var(--danger);padding:24px;text-align:center;font-weight:bold;">⚠️ فشل تحميل المادة: ' +
-        esc(err.message) +
-        "</p>";
+        '<p style="color:var(--danger);padding:24px;text-align:center;font-weight:bold;line-height:1.8;">⚠️ ' +
+        (err && err.weakNet ? '' : 'فشل تحميل المادة: ') + esc(err.message) +
+        '<br><button class="subj-btn" style="margin-top:12px" onclick="location.reload()">🔄 إعادة المحاولة</button></p>';
     });
 }
 
 // app.js بيتحمّل بـ defer قبل subjects-index.js (نفس الترتيب الأصلي)، فنستنى DOMContentLoaded
 function __bootDept(){
+  if(typeof DEPARTMENTS === 'undefined' || !DEPARTMENTS.length){
+    // ملف الأقسام ما اتحمّلش (غالبًا النت ضعيف): نعيد المحاولة، ولو فشل نكمّل بنفس رسالة الخطأ القديمة
+    loadDataScript('datenew/departments.js')
+      .then(function(){ CUR_DEPT = __resolveCurDept(); __bootDept2(); })
+      .catch(function(){ __bootDept2(); });
+    return;
+  }
+  __bootDept2();
+}
+function __bootDept2(){
   if(typeof DEPARTMENTS === 'undefined' || !DEPARTMENTS.length){
     document.getElementById('main-title').textContent = '⚠️ خطأ في تحميل الأقسام';
     document.getElementById('subject-bar').innerHTML = '';

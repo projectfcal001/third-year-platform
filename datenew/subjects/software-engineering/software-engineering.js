@@ -1765,5 +1765,728 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "se-lecture-03",
+      t: "المحاضرة 3: التطوير الرشيق للبرمجيات (Agile Software Development)",
+      d: "مبررات طرق Agile وبيان Agile ومبادئها، ممارسات XP (user stories، refactoring، test-first، pair programming)، إدارة المشاريع بـ Scrum، وتوسيع Agile.",
+      pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 3 - Agile software development.pdf",
+      pdf2: "/datenew/subjects/software-engineering/questions/Questions on each lecture/SE-Lecture-03-Questions.pdf",
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "فيديوهات تعليمية باللغة العربية تشرح أساسيات منهجيات Agile (سكرم، XP، ...).",
+          links: [
+            {
+              t: "ما هي منهجية الأجايل Agile؟ ولماذا أصبحت الأشهر في إدارة المشاريع؟",
+              d: "مقدمة لمنهجية تطوير البرمجيات الرشيقة Agile وأهم مميزاتها.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=MpeUJRRVdM8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "المبادئ الـ12 في Agile ببساطة: السر الحقيقي لنجاح المشاريع الحديثة",
+              d: "شرح مبسّط لأهم المبادئ الاثني عشر في منهجية Agile.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=cAjCxnzGDAY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "كورس كامل: شرح إدارة المشاريع الرشيقة (Agile & Scrum) - د. أحمد السنوسي",
+              d: "محاضرة شاملة تشرح منهجيات Agile و Scrum من الأساس للاحتراف.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=a8P3i8smmBw",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات تعليمية باللغة الإنجليزية حول Agile وScrum وأطر عمل Agile الأخرى.",
+          links: [
+            {
+              t: "Agile Software Development and Extreme Programming (Lecture 3) - Edureka",
+              d: "محاضرة تشرح أطر عمل Agile المختلفة مثل Scrum وKanban وLean وXP.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch Video",
+                  url: "https://www.youtube.com/watch?v=KogKKAgN5Ps",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "What is Agile Project Management? (3min overview)",
+              d: "شرح مختصر لمفهوم الإدارة الرشيقة للمشاريع (Agile PM) وفوائدها.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch Video",
+                  url: "https://www.youtube.com/watch?v=3wMQZ_0gkt8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Scrum in 10 Minutes (David Sabine, PST) - Scrum.org",
+              d: "فيديو قصير يشرح إطار عمل Scrum (الأدوار، الأحداث، والوثائق الرئيسية).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ Watch Video",
+                  url: "https://www.youtube.com/watch?v=NtTXWAlIMC8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مواقع ومراجع تشرح مفاهيم Agile وأطر عملها (Scrum وXP وغيرها) باللغتين العربية والإنجليزية.",
+          links: [
+            {
+              t: "What is Scrum? - دليل إطار عمل Agile (Atlassian)",
+              d: "دليل Atlassian يوضح مكونات إطار عمل Scrum وكيفية استخدامه في إدارة المشاريع.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.atlassian.com/agile/scrum",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "ما المقصود بإطار Scrum؟ - شرح إطار Scrum - AWS",
+              d: "مقالة باللغة العربية تشرح إطار Scrum (سكرم) ومفاهيمه الرئيسية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://aws.amazon.com/ar/what-is/scrum/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Agile Methodology - GeeksforGeeks",
+              d: "مقال شامل يتناول أساسيات منهجية Agile ومبادئها الأساسية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-testing/what-is-agile-methodology/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "البرمجة القصوى (Extreme Programming) - هارفارد بيزنس ريفيو بالعربية",
+              d: "شرح لمعنى البرمجة القصوى (XP) وأهم ممارساتها في تطوير البرمجيات.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://hbrarabic.com/%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85-%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9/%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D8%A7%D9%84%D9%82%D8%B5%D9%88%D9%89/",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات برمجية لدعم منهجيات Agile، مثل إدارة المشاريع والأتمتة والاختبارات (Jira، Jest، GitHub Actions).",
+          links: [
+            {
+              t: "Jira (Atlassian) - إدارة المشاريع بنهج Agile",
+              d: "أداة شهيرة لإدارة المشاريع وتنظيم العمل باستخدام Scrum أو Kanban.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.atlassian.com/software/jira",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "GitHub Actions - التكامل المستمر (CI)",
+              d: "منصة CI/CD مدمجة مع GitHub لأتمتة البناء والاختبار والنشر.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://github.com/features/actions",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Jest - إطار اختبار JavaScript",
+              d: "إطار عمل لاختبار تطبيقات JavaScript (Node.js/React) بسهولة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://jestjs.io",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. According to the chapter, what is the most critical requirement for most business systems?",
+          options: [
+            "Complete and stable requirements",
+            "Rapid software development and delivery",
+            "Detailed design documentation",
+            "Minimal use of development tools",
+          ],
+          correct: 1,
+          translation: "حسب الفصل، ما هو أهم متطلب لمعظم أنظمة الأعمال؟",
+          explanation:
+            "الشركات تعمل في بيئة سريعة التغير فتحتاج برمجيات جديدة بسرعة لاستغلال الفرص، وقد تتنازل أحيانًا عن بعض الجودة أو المتطلبات مقابل التسليم السريع. وجود متطلبات كاملة ومستقرة شبه مستحيل في هذه البيئة.",
+          tags: ["Agile", "Rapid delivery"],
+          ref: "Lecture 03 — Chapter introduction",
+        },
+        {
+          q: "2. For which type of software is a plan-driven approach still the right one, according to the chapter?",
+          options: [
+            "Small mobile apps",
+            "Short-lived marketing websites",
+            "Prototypes built for demonstrations",
+            "Safety-critical control systems where a complete analysis is essential",
+          ],
+          correct: 3,
+          translation:
+            "لأي نوع من البرمجيات يظل النهج المبني على الخطة (plan-driven) هو الأنسب حسب الفصل؟",
+          explanation:
+            "الأنظمة الحرجة للسلامة مثل أنظمة التحكم تحتاج تحليلًا كاملًا للنظام، فالـ plan-driven مناسب لها. أما في بيئة الأعمال السريعة فقد يسبب مشاكل حقيقية.",
+          tags: ["Plan-driven", "Safety-critical"],
+          ref: "Lecture 03 — Chapter introduction",
+        },
+        {
+          q: "3. Which of the following is a common characteristic of all agile methods?",
+          options: [
+            "Specification, design and implementation are interleaved",
+            "A complete detailed specification is written before any coding",
+            "Testing is done only after the whole system is built",
+            "A new release is made once a year",
+          ],
+          correct: 0,
+          translation: "أي مما يلي خاصية مشتركة بين كل طرق Agile؟",
+          explanation:
+            "في Agile عمليات المواصفات والتصميم والتنفيذ متداخلة ولا توجد مواصفات تفصيلية. الاختيارات الأخرى تصف نهجًا تقليديًا، كما أن الإصدارات في Agile تكون كل أسبوعين أو ثلاثة.",
+          tags: ["Agile characteristics", "Interleaving"],
+          ref: "Lecture 03 — Chapter introduction",
+        },
+        {
+          q: "4. How does iteration differ between plan-driven and agile development (Figure 3.1)?",
+          options: [
+            "Plan-driven iterates across activities and agile iterates within activities",
+            "Neither approach iterates",
+            "In plan-driven development iteration occurs within activities, while in agile it occurs across activities",
+            "Agile uses formal documents between stages while plan-driven does not",
+          ],
+          correct: 2,
+          translation:
+            "كيف يختلف التكرار (iteration) بين التطوير plan-driven وAgile (الشكل 3.1)؟",
+          explanation:
+            "في plan-driven يحدث التكرار داخل كل نشاط وتُستخدم مستندات رسمية للتواصل بين المراحل، أما في Agile فيحدث عبر الأنشطة فتُطوَّر المتطلبات والتصميم معًا. الاختيار الأول معكوس والرابع معكوس أيضًا.",
+          tags: ["Plan-driven", "Agile", "Iteration"],
+          ref: "Lecture 03 — Chapter introduction (Figure 3.1)",
+        },
+        {
+          q: "5. According to the agile manifesto, which item is valued more than following a plan?",
+          options: [
+            "Comprehensive documentation",
+            "Responding to change",
+            "Contract negotiation",
+            "Processes and tools",
+          ],
+          correct: 1,
+          translation:
+            "حسب بيان Agile (manifesto)، أي عنصر يُقدَّر أكثر من اتباع الخطة؟",
+          explanation:
+            "القيم الأربع: الأفراد والتفاعلات على العمليات والأدوات، والبرمجيات العاملة على التوثيق الشامل، وتعاون العميل على التفاوض على العقد، والاستجابة للتغيير على اتباع الخطة. بقية الاختيارات مذكورة كعناصر أقل قيمة.",
+          tags: ["Agile manifesto", "Values"],
+          ref: "Lecture 03 — 3.1 Agile methods",
+        },
+        {
+          q: "6. Which agile principle says that the skills of the team should be exploited and team members should develop their own ways of working?",
+          options: [
+            "People, not process",
+            "Incremental delivery",
+            "Maintain simplicity",
+            "Embrace change",
+          ],
+          correct: 0,
+          translation:
+            "أي مبدأ من مبادئ Agile ينص على استغلال مهارات الفريق وترك أعضائه يطورون طرق عملهم بأنفسهم؟",
+          explanation:
+            "مبدأ People, not process يعترف بمهارات الفريق ويتجنب العمليات الإلزامية. Incremental delivery عن التسليم على دفعات، وMaintain simplicity عن البساطة، وEmbrace change عن توقع تغيّر المتطلبات.",
+          tags: ["Agile principles", "People not process"],
+          ref: "Lecture 03 — 3.1 Agile methods (Figure 3.2)",
+        },
+        {
+          q: "7. For which kinds of system development have agile methods been particularly successful?",
+          options: [
+            "Large systems built by many geographically dispersed teams",
+            "Safety-critical systems with heavy regulation",
+            "Systems tightly integrated with other systems built in parallel",
+            "Small or medium-sized product development, and custom systems with a committed customer and few external stakeholders",
+          ],
+          correct: 3,
+          translation: "في أي أنواع تطوير الأنظمة نجحت طرق Agile بشكل خاص؟",
+          explanation:
+            "نجحت في تطوير المنتجات الصغيرة والمتوسطة، وفي الأنظمة المخصصة داخل مؤسسة حيث العميل ملتزم بالمشاركة وعدد الجهات الخارجية والقوانين قليل. الاختيارات الأخرى بيئات تحتاج تنسيقًا وخطة.",
+          tags: ["Agile", "Product development"],
+          ref: "Lecture 03 — 3.1 Agile methods",
+        },
+        {
+          q: "8. Why was the name 'Extreme Programming' (XP) chosen?",
+          options: [
+            "It was developed for extreme sports software",
+            "It requires programmers to work extreme hours",
+            "It pushes recognized good practices, such as iterative development, to 'extreme' levels",
+            "It uses the largest possible amount of documentation",
+          ],
+          correct: 2,
+          translation: "لماذا سُمّيت 'Extreme Programming' (XP) بهذا الاسم؟",
+          explanation:
+            "الاسم صاغه Kent Beck لأن النهج دفع الممارسات الجيدة المعروفة مثل التطوير التكراري إلى مستويات 'متطرفة'. وهو يرفض العمل لساعات طويلة (Sustainable pace)، فالاختيار الثاني خطأ.",
+          tags: ["XP", "Kent Beck"],
+          ref: "Lecture 03 — 3.2 Agile development techniques",
+        },
+        {
+          q: "9. In XP, what does the practice 'collective ownership' mean?",
+          options: [
+            "Only the senior developer owns the core code",
+            "Pairs of developers work on all areas of the system, so anyone can change anything and everyone takes responsibility for all the code",
+            "Each developer owns one module exclusively",
+            "The customer owns the source code",
+          ],
+          correct: 1,
+          translation: "في XP، ماذا تعني ممارسة 'collective ownership'؟",
+          explanation:
+            "الأزواج يعملون على كل أجزاء النظام فلا تتكون جزر خبرة ويتحمل الجميع مسؤولية كل الكود. هذا عكس ملكية كل مبرمج لوحدة واحدة.",
+          tags: ["XP", "Collective ownership"],
+          ref: "Lecture 03 — 3.2 Agile development techniques (Figure 3.4)",
+        },
+        {
+          q: "10. Which XP practice requires that, once finished work is integrated into the whole system, all the unit tests in the system must pass?",
+          options: [
+            "Continuous integration",
+            "Sustainable pace",
+            "Small releases",
+            "Simple design",
+          ],
+          correct: 0,
+          translation:
+            "أي ممارسة في XP تتطلب أنه بعد دمج العمل المنتهي في النظام يجب أن تنجح كل اختبارات الوحدة؟",
+          explanation:
+            "Continuous integration: بمجرد انتهاء المهمة تُدمج في النظام كله ويجب أن تنجح كل unit tests بعد كل دمج. Small releases عن الإصدارات المتكررة، وSimple design عن التصميم بقدر الحاجة فقط.",
+          tags: ["XP", "Continuous integration"],
+          ref: "Lecture 03 — 3.2 Agile development techniques (Figure 3.4)",
+        },
+        {
+          q: "11. Why does XP consider large amounts of overtime unacceptable (sustainable pace)?",
+          options: [
+            "It increases the cost of development tools",
+            "It violates the customer contract",
+            "The net effect is often to reduce code quality and medium-term productivity",
+            "It makes pair programming impossible",
+          ],
+          correct: 2,
+          translation:
+            "لماذا تعتبر XP العمل الإضافي الكبير غير مقبول (sustainable pace)؟",
+          explanation:
+            "الفصل يوضح أن الأثر الصافي للإفراط في العمل غالبًا هو انخفاض جودة الكود والإنتاجية على المدى المتوسط. باقي الأسباب غير مذكورة.",
+          tags: ["XP", "Sustainable pace"],
+          ref: "Lecture 03 — 3.2 Agile development techniques (Figure 3.4)",
+        },
+        {
+          q: "12. What is the principal problem with user stories mentioned in the chapter?",
+          options: [
+            "Customers cannot understand them",
+            "They require a formal specification language",
+            "They cannot be broken into tasks",
+            "Completeness: it is difficult to judge whether enough stories have been written to cover all essential requirements",
+          ],
+          correct: 3,
+          translation:
+            "ما المشكلة الرئيسية في قصص المستخدم (user stories) المذكورة في الفصل؟",
+          explanation:
+            "المشكلة هي الاكتمال: يصعب الحكم إن كانت القصص تغطي كل المتطلبات الأساسية، وقد لا تعطي قصة واحدة صورة حقيقية للنشاط لأن المستخدم الخبير يترك تفاصيل. على العكس، الناس يربطون بالقصص بسهولة وتُقسَّم إلى tasks.",
+          tags: ["User stories", "Completeness"],
+          ref: "Lecture 03 — 3.2.1 User stories",
+        },
+        {
+          q: "13. What is refactoring in XP?",
+          options: [
+            "Rewriting the whole system at the end of the project",
+            "Continuously looking for and implementing code improvements to keep the code simple and avoid structural degradation",
+            "Adding generality to the code to anticipate future changes",
+            "Removing all tests after a release",
+          ],
+          correct: 1,
+          translation: "ما هو الـ refactoring في XP؟",
+          explanation:
+            "هو البحث المستمر عن تحسينات للكود وتنفيذها فورًا حتى لو لم تكن هناك حاجة عاجلة، لتجنب تدهور بنية البرنامج مع التغييرات المتتالية. XP ترفض 'التصميم للتغيير' بإضافة العمومية مسبقًا.",
+          tags: ["Refactoring", "XP"],
+          ref: "Lecture 03 — 3.2.2 Refactoring",
+        },
+        {
+          q: "14. What does test-first development mean?",
+          options: [
+            "Writing automated tests for new functionality before implementing that functionality",
+            "Testing the system only after a code review",
+            "Letting an external team write the tests later",
+            "Skipping unit tests for simple tasks",
+          ],
+          correct: 0,
+          translation:
+            "ماذا يعني التطوير بكتابة الاختبارات أولًا (test-first development)؟",
+          explanation:
+            "تُكتب الاختبارات (باستخدام إطار اختبار آلي مثل JUnit) قبل كتابة الكود، فتُعرّف الواجهة وسلوك الوظيفة وتقل سوء الفهم. الاختيارات الأخرى تصف اختبارًا متأخرًا أو خارجيًا.",
+          tags: ["Test-first", "TDD"],
+          ref: "Lecture 03 — 3.2.3 Test-first development",
+        },
+        {
+          q: "15. What is the problem of 'test-lag' in testing?",
+          options: [
+            "Automated tests run too slowly",
+            "Tests fail at random",
+            "The developer works faster than the tester, so implementation gets ahead of testing and tests tend to be skipped",
+            "The customer delays writing acceptance tests",
+          ],
+          correct: 2,
+          translation: "ما هي مشكلة 'test-lag' في الاختبار؟",
+          explanation:
+            "تحدث حين يعمل المطوّر أسرع من المختبِر فيتقدم التنفيذ على الاختبار ويميل الفريق لتخطي الاختبارات للحفاظ على الجدول. الـ test-first يتفادى ذلك.",
+          tags: ["Test-lag", "Testing"],
+          ref: "Lecture 03 — 3.2.3 Test-first development",
+        },
+        {
+          q: "16. Why does pair programming work as an informal review process?",
+          options: [
+            "A manager checks every pair at the end of the day",
+            "Pairs stay the same for the whole project",
+            "Only one developer types the code",
+            "Each line of code is looked at by at least two people",
+          ],
+          correct: 3,
+          translation: "لماذا يعمل pair programming كعملية مراجعة غير رسمية؟",
+          explanation:
+            "لأن كل سطر كود يراه شخصان على الأقل. هو أرخص وأسهل تنظيمًا من المراجعات الرسمية (code inspections) لكنه غالبًا يكتشف أخطاء أقل منها. الأزواج في XP تتغير ديناميكيًا.",
+          tags: ["Pair programming", "Review"],
+          ref: "Lecture 03 — 3.2.4 Pair programming",
+        },
+        {
+          q: "17. What did the studies with more experienced programmers (Arisholm et al.) find about pair programming?",
+          options: [
+            "A significant loss of productivity compared with two programmers working alone, with some quality benefits that did not fully compensate",
+            "Productivity was doubled",
+            "No difference in productivity or quality",
+            "Pair programming produced more errors",
+          ],
+          correct: 0,
+          translation:
+            "ماذا وجدت الدراسات على مبرمجين أكثر خبرة (Arisholm وزملاؤه) عن pair programming؟",
+          explanation:
+            "وجدوا فقدانًا ملحوظًا في الإنتاجية مقارنة بمبرمجين يعملان منفردين، مع فوائد جودة لم تعوّض الكلفة بالكامل. دراسة Williams على الطلاب وجدت إنتاجية مماثلة. ومع ذلك مشاركة المعرفة تقلل المخاطر عند ترك أعضاء الفريق.",
+          tags: ["Pair programming", "Productivity"],
+          ref: "Lecture 03 — 3.2.4 Pair programming",
+        },
+        {
+          q: "18. What is the recommended maximum size of a Scrum development team?",
+          options: [
+            "Three people",
+            "Seven people",
+            "Twelve people",
+            "Twenty people",
+          ],
+          correct: 1,
+          translation: "ما الحد الأقصى الموصى به لحجم فريق التطوير في Scrum؟",
+          explanation:
+            "Development team: مجموعة منظِّمة لنفسها لا تزيد عن سبعة أشخاص.",
+          tags: ["Scrum", "Development team"],
+          ref: "Lecture 03 — 3.3 Agile project management (Figure 3.8)",
+        },
+        {
+          q: "19. How long is a Scrum sprint usually?",
+          options: [
+            "1 to 3 days",
+            "1 to 2 months",
+            "2 to 4 weeks",
+            "6 to 12 months",
+          ],
+          correct: 2,
+          translation: "كم تستغرق دورة Sprint عادةً في Scrum؟",
+          explanation:
+            "الـ Sprint هو تكرار تطوير (development iteration) مدته عادةً من 2 إلى 4 أسابيع وبطول ثابت.",
+          tags: ["Scrum", "Sprint"],
+          ref: "Lecture 03 — 3.3 Agile project management (Figure 3.8)",
+        },
+        {
+          q: "20. What is the job of the Product Owner in Scrum?",
+          options: [
+            "Making sure the Scrum process is followed and shielding the team from outside interference",
+            "Writing all the code of the product",
+            "Deciding top-down who works on which task",
+            "Identifying product features or requirements, prioritizing them, and continuously reviewing the product backlog",
+          ],
+          correct: 3,
+          translation: "ما دور الـ Product Owner في Scrum؟",
+          explanation:
+            "الـ Product Owner يحدد الميزات أو المتطلبات ويرتبها حسب الأولوية ويراجع الـ product backlog باستمرار. الاختيار الأول دور الـ ScrumMaster، والثالث غير صحيح لأن الفريق ينظّم نفسه.",
+          tags: ["Scrum", "Product Owner"],
+          ref: "Lecture 03 — 3.3 Agile project management (Figure 3.8)",
+        },
+        {
+          q: "21. What is the product backlog in Scrum?",
+          options: [
+            "A list of 'to do' items the Scrum team must tackle, such as features, requirements, user stories or supplementary tasks",
+            "A list of bugs found after the release",
+            "Only the work selected for the current sprint",
+            "The minutes of the daily Scrum",
+          ],
+          correct: 0,
+          translation: "ما هو الـ product backlog في Scrum؟",
+          explanation:
+            "هو قائمة بنود العمل التي يجب أن يتناولها الفريق: ميزات، متطلبات، user stories أو مهام مساعدة مثل تعريف المعمارية أو التوثيق. أما العمل المختار للـ sprint فيسمى sprint backlog.",
+          tags: ["Scrum", "Product backlog"],
+          ref: "Lecture 03 — 3.3 Agile project management (Figure 3.8)",
+        },
+        {
+          q: "22. What is 'velocity' in Scrum?",
+          options: [
+            "The speed of the team's network connection",
+            "An estimate of how much product backlog effort a team can cover in a single sprint",
+            "The number of developers in the team",
+            "The date of the final delivery",
+          ],
+          correct: 1,
+          translation: "ما هي الـ 'velocity' في Scrum؟",
+          explanation:
+            "هي تقدير لحجم جهد الـ product backlog الذي يستطيع الفريق إنجازه في sprint واحد، وتُستخدم لتقدير ما يمكن تغطيته في الـ sprint القادم ولقياس تحسن الأداء.",
+          tags: ["Scrum", "Velocity"],
+          ref: "Lecture 03 — 3.3 Agile project management (Figure 3.8)",
+        },
+        {
+          q: "23. What happens to items that cannot be completed within a sprint?",
+          options: [
+            "The sprint is extended until they are finished",
+            "They are deleted from the project",
+            "They are returned to the product backlog, because sprints are never extended",
+            "They are handed to the ScrumMaster",
+          ],
+          correct: 2,
+          translation: "ماذا يحدث للبنود التي لا يمكن إنجازها داخل الـ sprint؟",
+          explanation:
+            "لا تُمدَّد الـ sprints أبدًا لاستيعاب العمل غير المنتهي، وتُعاد البنود إلى الـ product backlog.",
+          tags: ["Scrum", "Sprint backlog"],
+          ref: "Lecture 03 — 3.3 Agile project management",
+        },
+        {
+          q: "24. Which statement about the ScrumMaster is correct?",
+          options: [
+            "He or she prioritizes the product backlog",
+            "He or she writes the sprint backlog alone",
+            "He or she directs the team top-down",
+            "He or she ensures the Scrum process is followed and interfaces with the rest of the company, and Scrum developers insist this is not a project manager",
+          ],
+          correct: 3,
+          translation: "أي عبارة عن الـ ScrumMaster صحيحة؟",
+          explanation:
+            "الـ ScrumMaster مسؤول عن اتباع عملية Scrum وإرشاد الفريق والتعامل مع باقي الشركة وحماية الفريق من التشتت، ومطورو Scrum يؤكدون أنه ليس project manager. ترتيب الـ backlog من مهام الـ Product Owner، ولا يوجد توجيه من أعلى لأسفل.",
+          tags: ["Scrum", "ScrumMaster"],
+          ref: "Lecture 03 — 3.3 Agile project management (Figure 3.8)",
+        },
+        {
+          q: "25. What is the purpose of the daily Scrum meeting?",
+          options: [
+            "A short meeting to review progress and prioritize the work to be done that day",
+            "A formal review presented to senior management",
+            "Planning the next product release",
+            "Writing the project documentation",
+          ],
+          correct: 0,
+          translation: "ما الغرض من اجتماع الـ Scrum اليومي؟",
+          explanation:
+            "هو اجتماع قصير (يُفضَّل وجهًا لوجه ويشمل كل الفريق) لمراجعة التقدم وترتيب عمل اليوم: ماذا أنجز كل فرد وما المشاكل وما المخطط للغد. الاختيارات الأخرى ليست غرضه.",
+          tags: ["Scrum", "Daily meeting"],
+          ref: "Lecture 03 — 3.3 Agile project management",
+        },
+        {
+          type: "essay",
+          q: "1. Compare plan-driven and agile development, explaining why agile methods appeared.",
+          translation:
+            "قارن بين التطوير plan-driven وAgile مع شرح سبب ظهور طرق Agile.",
+          answer:
+            "Plan-driven development separates the process into stages with outputs (for example a requirements specification) used to plan the next activity. Iteration occurs within activities and formal documents communicate between stages.\n" +
+            "Agile treats design and implementation as the central activities and incorporates requirements elicitation and testing into them. Iteration occurs across activities, so requirements and design are developed together.\n" +
+            "Plan-driven overhead is justified for large, critical, long-lived systems built by multiple teams, but for small and medium business systems the overhead dominates and requirements changes force rework.\n" +
+            "Dissatisfaction with heavyweight approaches led to agile methods in the late 1990s (Extreme Programming, Scrum, DSDM), which focus on delivering working software quickly and avoiding documentation that will never be used.\n" +
+            "In practice the two can be mixed: plan-driven processes may use agile practices and agile methods may include some planned activities.",
+          tags: ["Agile", "Plan-driven"],
+          ref: "Lecture 03 — Chapter introduction and 3.1",
+        },
+        {
+          type: "essay",
+          q: "2. State the agile manifesto and the principles of agile methods.",
+          translation: "اذكر بيان Agile (manifesto) ومبادئ طرق Agile.",
+          answer:
+            "The manifesto values: individuals and interactions over processes and tools; working software over comprehensive documentation; customer collaboration over contract negotiation; responding to change over following a plan. The items on the right still have value, but those on the left are valued more.\n" +
+            "Principles (Figure 3.2): customer involvement (customers provide and prioritize requirements and evaluate iterations); embrace change (expect requirements to change); incremental delivery (customer specifies the requirements of each increment); maintain simplicity (in the software and in the process); people, not process (exploit team skills and let the team choose its own ways of working).",
+          tags: ["Agile manifesto", "Principles"],
+          ref: "Lecture 03 — 3.1 Agile methods",
+        },
+        {
+          type: "essay",
+          q: "3. What are the common characteristics of agile methods and in which situations do they work well?",
+          translation:
+            "ما الخصائص المشتركة لطرق Agile وفي أي مواقف تعمل جيدًا؟",
+          answer:
+            "Common characteristics: (1) specification, design and implementation are interleaved, with no detailed specification and minimal design documentation; (2) the system is developed in a series of increments, with end-users and stakeholders involved in specifying and evaluating each increment; (3) extensive tool support (automated testing, configuration management, integration, UI production tools).\n" +
+            "Increments are small, with new releases typically every two or three weeks, and informal communication is used instead of formal documents.\n" +
+            "They work well for product development of small or medium-sized products, and for custom systems within an organization with a committed customer and few external stakeholders or regulations.\n" +
+            "They work because the customer and team can communicate continuously, the system is stand-alone, and co-located teams can use informal communication.",
+          tags: ["Agile characteristics"],
+          ref: "Lecture 03 — Chapter introduction and 3.1",
+        },
+        {
+          type: "essay",
+          q: "4. List and explain the main Extreme Programming practices.",
+          translation: "اذكر واشرح أهم ممارسات Extreme Programming.",
+          answer:
+            "Incremental planning: requirements are recorded on story cards and the stories for a release are chosen by time available and priority; developers break them into tasks.\n" +
+            "Small releases: the minimal useful set of functionality is released first and frequent releases add functionality.\n" +
+            "Simple design: enough design to meet current requirements and no more. Test-first development: automated unit tests are written before the functionality.\n" +
+            "Refactoring: continuous code improvement to keep code simple. Pair programming: developers work in pairs and check each other's work.\n" +
+            "Collective ownership: anyone can change anything. Continuous integration: finished work is integrated at once and all unit tests must pass.\n" +
+            "Sustainable pace: large overtime is not acceptable. On-site customer: a customer representative is available full time and defines acceptance tests.",
+          tags: ["XP", "Practices"],
+          ref: "Lecture 03 — 3.2 Agile development techniques (Figure 3.4)",
+        },
+        {
+          type: "essay",
+          q: "5. Explain user stories: how they are used in planning, and their advantages and problems.",
+          translation:
+            "اشرح قصص المستخدم (user stories): كيف تُستخدم في التخطيط ومميزاتها ومشاكلها.",
+          answer:
+            "A user story is a scenario of use that might be experienced by a system user. The customer works with the team to write a story card that briefly describes it; the example in the chapter is the 'Prescribing medication' story for the Mentcare system.\n" +
+            "The team breaks stories into tasks, estimates effort, and the customer prioritizes the stories for the next release, aiming for functionality that can be implemented in about two weeks.\n" +
+            "Advantage: people find stories easier to relate to than conventional requirements documents or use cases, and they help involve users in suggesting requirements.\n" +
+            "Problem: completeness. It is hard to judge whether enough stories cover all essential requirements or whether a single story gives a true picture, because experienced users leave things out.",
+          tags: ["User stories", "Story cards"],
+          ref: "Lecture 03 — 3.2.1 User stories",
+        },
+        {
+          type: "essay",
+          q: "6. Explain refactoring: why XP uses it and what its limitations are.",
+          translation: "اشرح الـ refactoring: لماذا تستخدمه XP وما حدوده.",
+          answer:
+            "Traditional software engineering says to design for change. XP discards this because anticipated changes often never materialize, so adding generality is wasted effort.\n" +
+            "Instead the code is refactored constantly: the team looks for improvements and implements them immediately, even without an immediate need.\n" +
+            "Reason: local changes during incremental development degrade the software structure (duplicated code, inappropriate reuse of parts). Refactoring improves structure and readability. Examples: reorganizing a class hierarchy to remove duplication, renaming attributes and methods, replacing similar code with library calls.\n" +
+            "Limitations: development pressure may delay refactoring, and some changes cannot be handled by code-level refactoring and require architecture changes.",
+          tags: ["Refactoring"],
+          ref: "Lecture 03 — 3.2.2 Refactoring",
+        },
+        {
+          type: "essay",
+          q: "7. Explain test-first development and the problems of ensuring complete test coverage.",
+          translation:
+            "اشرح الـ test-first development ومشاكل ضمان تغطية اختبارات كاملة.",
+          answer:
+            "Test-first development: instead of writing code and then tests, tests are written before the code, so problems are discovered during development. Writing tests implicitly defines an interface and specification of behavior, reducing misunderstandings.\n" +
+            "Key features in XP: test-first development, incremental test development from scenarios, user involvement in test development and validation, and automated testing frameworks such as JUnit. Each task generates one or more unit tests, and the customer helps develop acceptance tests.\n" +
+            "It avoids test-lag, where implementation gets ahead of testing.\n" +
+            "Coverage problems: programmers prefer programming and may write incomplete tests; some tests (for example display logic and screen workflow in a complex UI) are hard to write incrementally; a large set of tests may give a false impression of completeness and crucial parts may stay untested.",
+          tags: ["Test-first", "Testing"],
+          ref: "Lecture 03 — 3.2.3 Test-first development",
+        },
+        {
+          type: "essay",
+          q: "8. Discuss the advantages of pair programming and the results of studies on its productivity.",
+          translation:
+            "ناقش مميزات pair programming ونتائج الدراسات عن إنتاجيته.",
+          answer:
+            "Pair programming: two programmers sit at the same computer, and pairs are created dynamically so all team members work with each other.\n" +
+            "Advantages: (1) it supports collective ownership and responsibility (egoless programming); (2) it acts as an informal review process since each line is seen by at least two people, cheaper and easier than formal inspections though it finds fewer errors; (3) it encourages refactoring because others benefit immediately.\n" +
+            "Studies: with student volunteers (Williams et al.) productivity was comparable to two people working independently, because pairs discuss before development and have fewer false starts and less rework. Studies with experienced programmers (Arisholm et al.) found a significant loss of productivity, with quality benefits that did not fully compensate.\n" +
+            "Knowledge sharing reduces project risk when team members leave, which may by itself make it worthwhile.",
+          tags: ["Pair programming"],
+          ref: "Lecture 03 — 3.2.4 Pair programming",
+        },
+        {
+          type: "essay",
+          q: "9. Describe the Scrum sprint cycle and the main Scrum roles and terms, and mention the benefits users report.",
+          translation:
+            "صِف دورة الـ sprint في Scrum وأهم الأدوار والمصطلحات والفوائد التي يذكرها المستخدمون.",
+          answer:
+            "Scrum is a framework for organizing agile projects that follows the agile manifesto but does not mandate specific practices such as pair programming or test-first development. It gives some external visibility of what is going on.\n" +
+            "Cycle: the input is the product backlog. At the start of each sprint (2 to 4 weeks, fixed length) the Product Owner prioritizes items; the team selects what it can complete using velocity, creating the sprint backlog, and self-organizes. During the sprint the team holds daily Scrums, optionally using a Scrum board. At the end a review meeting improves the process and gives input to the next backlog review. Each sprint produces a potentially shippable product increment. Unfinished items return to the backlog.\n" +
+            "Roles: development team (self-organizing, at most seven people), Product Owner (prioritizes backlog), ScrumMaster (ensures the process is followed and interfaces with the company; not formally a project manager).\n" +
+            "Benefits: manageable chunks, unstable requirements do not hold up progress, team visibility improves communication and morale, customers see on-time increments and give feedback, and trust between customers and developers is established.",
+          tags: ["Scrum", "Sprint"],
+          ref: "Lecture 03 — 3.3 Agile project management",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the issues of scaling agile methods and how Scrum is adapted for distributed development.",
+          translation:
+            "اشرح مشاكل توسيع طرق Agile وكيف يُكيَّف Scrum للتطوير الموزع.",
+          answer:
+            "Agile methods were designed for small co-located teams communicating informally. Scaling has two facets: scaling up to large systems too big for one small team, and scaling out from specialized teams to widespread use in a large company with many years of experience.\n" +
+            "Scrum was designed for co-located teams meeting daily, but much development now involves distributed teams in different places, which gives access to lower cost staff and specialist skills and allows 24-hour development.\n" +
+            "Distributed Scrum (Figure 3.10) requires: videoconferencing between product owner and team; the ScrumMaster located with the development team; the Product Owner visiting the developers to build trust; real-time communications such as instant messaging and video calls; continuous integration so everyone knows the product state; and a common development environment for all teams.",
+          tags: ["Scaling agile", "Distributed Scrum"],
+          ref: "Lecture 03 — 3.3 and 3.4 Scaling agile methods",
+        },
+      ],
+    },
   ],
 });

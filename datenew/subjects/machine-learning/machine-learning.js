@@ -880,7 +880,6 @@ subjects.push({
                 },
               ],
             },
-
           ],
         },
         {
@@ -1514,6 +1513,809 @@ subjects.push({
             "Regression tree leaf value = mean of the targets = (2 + 4 + 6) / 3 = 4.",
           tags: ["Bias-Variance", "Regression Tree"],
           ref: "Lecture 02 — Slides 10 and 53-54",
+        },
+      ],
+    },
+    {
+      id: "ml-lecture-03",
+      t: "المحاضرة 3: الانحدار الخطي (Linear Regression)",
+      d: "إعداد التعلم المُشرَف، الانحدار الخطي البسيط وطريقة المربعات الصغرى، النموذج متعدد الخصائص، دالة الخسارة والتكلفة، والـ vectorization ومصفوفة التصميم.",
+      pdf: "datenew/subjects/machine-learning/lectures/Lec 3/lec03-2.pptx.pdf",
+      pdf2: "datenew/subjects/machine-learning/questions/Questions on each lecture/ML-Lecture-03-Questions.pdf",
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "فيديوهات عربية تشرح مفاهيم الانحدار الخطي البسيط والمتعدد، بما في ذلك تفسير المعاملات (الميل والثابت) واستخدام النموذج للتنبؤ بالقيم.",
+          links: [
+            {
+              t: "معادلة الانحدار الخطي البسيط | شرح التنبؤ بالمستقبل",
+              d: "يوضح هذا الفيديو كيفية إيجاد معادلة الانحدار الخطي البسيط بالتفصيل، مع مثال عملي لحساب الميل والثابت واستخدامهما في التنبؤ بقيم جديدة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الشرح",
+                  url: "https://www.youtube.com/watch?v=uq8tr7zxzPs",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "كورس تعلم الآلة | ١٢. شرح الانحدار الخطي (Linear Regression)",
+              d: "في هذا الفيديو التعليمي يشرح شادي أمجد خوارزمية الانحدار الخطي البسيط، مع تطبيق عملي في بايثون لبناء النموذج وحساب المعاملات (الميل والاعتراض) واستخدامه للتنبؤ.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الشرح",
+                  url: "https://www.youtube.com/watch?v=c_1a2KZUVe8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "ما هو الانحدار الخطي؟ — Shand Academy",
+              d: "شرح مبسط باللغة العربية يقدم مفهوم الانحدار الخطي (Linear Regression)، وكيفية رسم أفضل خط مناسب للبيانات واستخدامه في التنبؤ، مع أمثلة تطبيقية.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الشرح",
+                  url: "https://www.youtube.com/watch?v=1VPbwM3wL4o",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "مصادر تعليمية عالمية باللغة الإنجليزية تشرح نموذج الانحدار الخطي، ودوال الخسارة، وتجربة تحسين النموذج باستخدام الانحدار التدريجي، مع أمثلة وبصريات لتوضيح المفاهيم.",
+          links: [
+            {
+              t: "Linear Regression — Google Machine Learning Crash Course",
+              d: "درس شامل من Google يشرح مفهوم الانحدار الخطي ومعادلة النموذج (y' = w₀ + w₁x₁ + ...)، ودور دالة الخسارة، وكيفية تحسين المعاملات باستخدام النزول التدريجي (Gradient Descent).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 فتح الدرس",
+                  url: "https://developers.google.com/machine-learning/crash-course/linear-regression",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Linear Regression, Clearly Explained — StatQuest",
+              d: "فيديو تعليمي من قناة StatQuest يقدمه Josh Starmer، يشرح الانحدار الخطي بوضوح مع صور مرئية للمفاهيم الأساسية مثل اختيار خط أفضل تمثيلاً للبيانات وشرح دور الميل والثابت.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الشرح",
+                  url: "https://www.youtube.com/watch?v=7ArmBVF2dCs",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Regression line example — Khan Academy",
+              d: "شرح عملي من أكاديمية خان يوضح كيفية رسم أفضل خط مستقيم (انحدار خطي) لنقاط بيانات معطاة والتنبؤ بالقيم المستقبلية، كأبسط تطبيق لمفهوم الانحدار الخطي.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الشرح",
+                  url: "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/regression-line-example",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مراجع تقنية ووثائق رسمية توضِّح معادلات الانحدار الخطي وطريقة الحل بالحد الأدنى لمجموع المربعات، بالإضافة إلى المكتبات المستخدمة في التطبيق (NumPy, SciPy, scikit-learn).",
+          links: [
+            {
+              t: "Scikit-learn — LinearRegression",
+              d: "المرجع الرسمي لفئة LinearRegression في Scikit-learn، يشرح كيفية تدريب نموذج الانحدار الخطي (Ordinary Least Squares) لحساب المعاملات coef_ والثابت intercept_، واستخدام الدالة predict للتنبؤ بالنتائج.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح التوثيق",
+                  url: "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "SciPy — linregress",
+              d: "توثيق دالة scipy.stats.linregress لحساب انحدار خطي بسيط بين مجموعتين من القيم، حيث تُرجع الميل (slope) والثابت (intercept) ومعامل الارتباط (rvalue) والخطأ المعياري كنواتج رئيسية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح التوثيق",
+                  url: "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "NumPy — numpy.dot",
+              d: "المرجع الرسمي لدالة numpy.dot في مكتبة NumPy التي تحسب الضرب النقطي للمتجهات والمصفوفات، وهو أساسي في التمثيل المتجهي للانحدار الخطي عند استخدام y = wᵀx + b.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح التوثيق",
+                  url: "https://numpy.org/doc/stable/reference/generated/numpy.dot.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Scikit-learn — Linear models",
+              d: "قسم النماذج الخطية في وثائق Scikit-learn، يغطي نماذج الانحدار (OLS) والانحدار المنتظم مثل Ridge وLasso، ويوضح أهداف كل نموذج وكيفية استخدامه مع توضيح رياضي مبسط.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المرجع",
+                  url: "https://scikit-learn.org/stable/api/sklearn.linear_model.html",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات وتطبيقات تفاعلية لتجربة الانحدار الخطي عملياً، تشمل تمارين برمجية تفاعلية، وبيئات تنفيذ Python عبر الإنترنت، بالإضافة إلى أدوات رسم بيانية لفهم العلاقة بين النقاط وخط الانحدار.",
+          links: [
+            {
+              t: "Google — Linear Regression Interactive Exercises",
+              d: "تمارين تفاعلية من Google Machine Learning Crash Course لفهم معاملات الانحدار الخطي ودالة الخسارة وGradient Descent، تتضمن اختبارات قصيرة وبرمجة عملية عبر Colab.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح التمارين",
+                  url: "https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/linear_regression_taxi.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=linear_regression",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Google Colab",
+              d: "بيئة عمل تفاعلية عبر المتصفح لتشغيل أكواد Python وتطبيقات التعلم الآلي دون إعداد محلي، يمكن استخدامها لتجربة أمثلة الانحدار الخطي مع NumPy وscikit-learn بسهولة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح Colab",
+                  url: "https://colab.research.google.com/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "GeoGebra Graphing Calculator",
+              d: "أداة رسم بياني تفاعلية تمكنك من تخطيط نقاط البيانات وإنشاء الخط المستقيم المناسب (best fit line)، لتصور تأثير تغيير الميل والثابت على النموذج الانحداري.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح أداة الرسم",
+                  url: "https://www.geogebra.org/graphing",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Desmos Graphing Calculator",
+              d: "حاسبة رسومية عبر الإنترنت تتيح رسم النقاط البيانية والخطوط المستقيمة تفاعلياً، مما يساعد على دراسة العلاقة بين المتغيرات ورؤية توافق بيانات الانحدار الخطي بشكل بصري.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح Desmos",
+                  url: "https://www.desmos.com/calculator",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. What is the task of linear regression, as stated in the lecture?",
+          options: [
+            "Group unlabeled data into clusters",
+            "Predict scalar-valued targets (for example stock prices)",
+            "Classify images into discrete categories",
+            "Compress data into fewer dimensions",
+          ],
+          correct: 1,
+          translation:
+            "ما هي مهمة الانحدار الخطي (linear regression) كما ورد في المحاضرة؟",
+          explanation:
+            "المهمة هي التنبؤ بقيم مستهدفة عددية (scalar-valued targets) مثل أسعار الأسهم، والبنية هي دالة خطية للمدخلات. التجميع والتصنيف وضغط البيانات مهام أخرى.",
+          tags: ["Linear regression", "Task"],
+          ref: "Lecture 03 — Slide 2: Linear Regression",
+        },
+        {
+          q: "2. In the modular approach to ML, which component expresses a preference over different models?",
+          options: [
+            "The model",
+            "The loss function",
+            "The optimization algorithm",
+            "The regularizer",
+          ],
+          correct: 3,
+          translation:
+            "في النهج المعياري (modular) للتعلم الآلي، أي مكوّن يعبّر عن تفضيل بين النماذج المختلفة؟",
+          explanation:
+            "الـ regularizer يعبّر عن التفضيل بين النماذج (قيد أو عقوبة). الـ model يصف العلاقات بين المتغيرات، والـ loss function تقيس مدى ملاءمة النموذج للبيانات، والـ optimization algorithm تُستخدم لإيجاد النموذج الأمثل.",
+          tags: ["Modular approach", "Regularizer"],
+          ref: "Lecture 03 — Slide 3: A Modular Approach to ML",
+        },
+        {
+          q: "3. In the supervised learning setup, what is the objective?",
+          options: [
+            "Learn a function f: X -> T from the data such that t is approximately y = f(x)",
+            "Find clusters in X without using the targets t",
+            "Maximize the number of features in x",
+            "Make y exactly equal to x for every example",
+          ],
+          correct: 0,
+          translation:
+            "في إعداد التعلم المُشرَف (supervised learning)، ما هو الهدف؟",
+          explanation:
+            "الهدف تعلّم دالة f: X -> T من البيانات D = {(x(i), t(i))} بحيث يكون t قريبًا من y = f(x). الاختيار الثاني وصف للتعلم غير المُشرَف.",
+          tags: ["Supervised learning", "Objective"],
+          ref: "Lecture 03 — Slide 4: Supervised Learning Setup",
+        },
+        {
+          q: "4. In the simple linear regression model Y = b0 + b1 X, what does b1 represent?",
+          options: [
+            "The y-intercept",
+            "The dependent variable",
+            "The slope of the line",
+            "The error term",
+          ],
+          correct: 2,
+          translation:
+            "في نموذج الانحدار الخطي البسيط Y = b0 + b1 X، ماذا تمثل b1؟",
+          explanation:
+            "b1 هي ميل الخط (slope) وتساوي Δy/Δx. أما b0 فهي المقطع y-intercept، وY هو المتغير التابع.",
+          tags: ["Simple linear regression", "Slope"],
+          ref: "Lecture 03 — Slide 6: Simple Linear Regression Model",
+        },
+        {
+          q: "5. In the simple linear regression model Y = b0 + b1 X, what does b0 represent?",
+          options: [
+            "The slope of the line",
+            "The y-intercept",
+            "The independent variable",
+            "The residual",
+          ],
+          correct: 1,
+          translation: "في النموذج Y = b0 + b1 X، ماذا تمثل b0؟",
+          explanation:
+            "b0 هي المقطع (y-intercept) أي قيمة y عند x = 0. الميل هو b1، والمتغير المستقل هو x.",
+          tags: ["Simple linear regression", "Intercept"],
+          ref: "Lecture 03 — Slide 6: Simple Linear Regression Model",
+        },
+        {
+          q: "6. Why is the model Y = b0 + b1 X called 'simple'?",
+          options: [
+            "Because it has only one X",
+            "Because it has no parameters",
+            "Because it has no error term",
+            "Because it uses the squared loss",
+          ],
+          correct: 0,
+          translation: "لماذا يُسمّى النموذج Y = b0 + b1 X 'بسيطًا' (simple)؟",
+          explanation:
+            "لأنه يحتوي على متغير مستقل واحد فقط X. وجود المعاملات والخطأ والـ squared loss لا علاقة له بكلمة simple.",
+          tags: ["Simple linear model"],
+          ref: "Lecture 03 — Slide 7: Simple Linear Model",
+        },
+        {
+          q: "7. What does 'linear in the parameters' mean?",
+          options: [
+            "X appears only in the first power",
+            "The model has only one parameter",
+            "The data points lie exactly on a line",
+            "No parameter appears as an exponent or is multiplied or divided by another parameter",
+          ],
+          correct: 3,
+          translation: "ماذا تعني عبارة 'linear in the parameters'؟",
+          explanation:
+            "تعني أن أي معامل لا يظهر كأس ولا يُضرب أو يُقسم على معامل آخر. الاختيار الأول يصف 'linear in the predictor variable' وهو شرط مختلف.",
+          tags: ["Linear in parameters"],
+          ref: "Lecture 03 — Slide 7: Simple Linear Model",
+        },
+        {
+          q: "8. What does 'linear in the predictor variable (X)' mean?",
+          options: [
+            "No parameter is multiplied by another parameter",
+            "The model has exactly one parameter",
+            "X appears only in the first power",
+            "X is always positive",
+          ],
+          correct: 2,
+          translation:
+            "ماذا تعني عبارة 'linear in the predictor variable (X)'؟",
+          explanation:
+            "تعني أن X يظهر بالأس الأول فقط (بدون X تربيع مثلًا). الاختيار الأول يخص الخطية في المعاملات.",
+          tags: ["Linear in predictor"],
+          ref: "Lecture 03 — Slide 7: Simple Linear Model",
+        },
+        {
+          q: "9. In the scikit-learn example (Example 2), which attribute of the fitted LinearRegression model gives the slope?",
+          options: [
+            "model.intercept_",
+            "model.coef_[0]",
+            "model.predict",
+            "model.fit",
+          ],
+          correct: 1,
+          translation:
+            "في مثال scikit-learn (Example 2)، أي خاصية في نموذج LinearRegression بعد التدريب تعطي الميل (slope)؟",
+          explanation:
+            "الكود يطبع Slope باستخدام model.coef_[0] وIntercept باستخدام model.intercept_. أما fit وpredict فهما دالتان للتدريب والتنبؤ وليستا قيم المعاملات.",
+          tags: ["scikit-learn", "coef_"],
+          ref: "Lecture 03 — Example 2: Linear Regression in Public Policy",
+        },
+        {
+          q: "10. In the 'Minimizing error' slide, what are the sums of squared errors of the fitted line and of the horizontal line Y = mean(Y)?",
+          options: [
+            "20.43 for the fitted line and 1647.33 for the mean line",
+            "1647.33 for the fitted line and 20.43 for the mean line",
+            "Both are equal to 20.43",
+            "Both are equal to 1647.33",
+          ],
+          correct: 0,
+          translation:
+            "في شريحة 'Minimizing error'، كم مجموع مربعات الأخطاء للخط المُلائم وللخط الأفقي Y = mean(Y)؟",
+          explanation:
+            "الخط المُلائم (least squares) أعطى 20.43 بينما الخط الأفقي عند المتوسط أعطى 1647.33، أي أن خط least squares هو الذي يصغّر الخطأ. الاختيار الثاني معكوس.",
+          tags: ["Least squares", "Sum of squared errors"],
+          ref: "Lecture 03 — Slide 12: Minimizing error",
+        },
+        {
+          q: "11. What does the least squares method minimize?",
+          options: [
+            "The sum of the absolute x values",
+            "The number of data points",
+            "The sum of squared errors, sum of (y_i - b0 - b1 x_i)^2",
+            "The slope of the line",
+          ],
+          correct: 2,
+          translation: "ماذا تُصغّر طريقة المربعات الصغرى (least squares)؟",
+          explanation:
+            "تُصغّر مجموع مربعات الأخطاء Σ(yi − β0 − β1xi)² ويُنتج منه الخط ŷ = β0 + β1x. لا تصغّر الميل ولا عدد النقاط.",
+          tags: ["Least squares"],
+          ref: "Lecture 03 — Slide 11: Least Squares",
+        },
+        {
+          q: "12. How is the residual of the i-th point defined?",
+          options: [
+            "x_i - mean(x)",
+            "y_hat_i - x_i",
+            "y_i + y_hat_i",
+            "R_i = y_i - y_hat_i",
+          ],
+          correct: 3,
+          translation: "كيف يُعرَّف الـ residual للنقطة رقم i؟",
+          explanation:
+            "الـ residual هو الفرق بين القيمة الحقيقية والمتوقعة: Ri = yi − ŷi. وفي دالة الخسارة لاحقًا في المحاضرة يُكتب كـ y − t (التنبؤ ناقص الهدف) والمقصود نفس الحجم.",
+          tags: ["Residual"],
+          ref: "Lecture 03 — Slide 11: Least Squares",
+        },
+        {
+          q: "13. If we assume a normal error, how should the residuals look?",
+          options: [
+            "All equal to zero",
+            "Approximately normal",
+            "Always increasing",
+            "Always positive",
+          ],
+          correct: 1,
+          translation:
+            "إذا افترضنا أن الخطأ طبيعي (normal)، كيف يجب أن تبدو البواقي (residuals)؟",
+          explanation:
+            "الشريحة تنص على أنه لو افترضنا خطأ طبيعيًا فالبواقي يجب أن تبدو طبيعية التوزيع. لا يمكن أن تكون كلها صفرًا لأن النقاط ليست على خط واحد.",
+          tags: ["Residuals", "Normal error"],
+          ref: "Lecture 03 — Slide 11: Least Squares",
+        },
+        {
+          q: "14. Which formula gives the least squares slope estimate?",
+          options: [
+            "b1 = SSxy / SSx",
+            "b1 = SSx / SSxy",
+            "b1 = SSxy * SSx",
+            "b1 = SSxy - SSx",
+          ],
+          correct: 0,
+          translation: "أي صيغة تعطي تقدير الميل بطريقة المربعات الصغرى؟",
+          explanation:
+            "الميل = SSxy / SSx حيث SSxy = Σ(xi − x̄)(yi − ȳ) وSSx = Σ(xi − x̄)². القسمة بالعكس أو الضرب أو الطرح غير صحيحة.",
+          tags: ["Least squares", "Slope formula"],
+          ref: "Lecture 03 — Slide 13: The Simple Linear Regression Model",
+        },
+        {
+          q: "15. Which formula gives the least squares intercept estimate?",
+          options: [
+            "b0 = y_bar + b1 * x_bar",
+            "b0 = x_bar - b1 * y_bar",
+            "b0 = y_bar - b1 * x_bar",
+            "b0 = b1 / x_bar",
+          ],
+          correct: 2,
+          translation:
+            "أي صيغة تعطي تقدير المقطع (intercept) بطريقة المربعات الصغرى؟",
+          explanation:
+            "المقطع = ȳ − β1·x̄، أي أن خط الانحدار يمر بنقطة المتوسطات. الاختيارات الأخرى تبدّل المتغيرات أو الإشارة.",
+          tags: ["Least squares", "Intercept formula"],
+          ref: "Lecture 03 — Slide 13: The Simple Linear Regression Model",
+        },
+        {
+          q: "16. Which expression equals SSx in the lecture?",
+          options: [
+            "Sum of (x_i - x_bar)(y_i - y_bar)",
+            "Sum of y_i^2 - (sum of y_i)^2 / n",
+            "(sum of x_i)^2 / n",
+            "Sum of (x_i - x_bar)^2 = sum of x_i^2 - (sum of x_i)^2 / n",
+          ],
+          correct: 3,
+          translation: "أي تعبير يساوي SSx في المحاضرة؟",
+          explanation:
+            "SSx = Σ(xi − x̄)² = Σxi² − (Σxi)²/n. الاختيار الأول هو SSxy، والثاني خاص بـ y، والثالث جزء فقط من الصيغة.",
+          tags: ["SSx", "Sum of squares"],
+          ref: "Lecture 03 — Slide 13: The Simple Linear Regression Model",
+        },
+        {
+          q: "17. In the education-income example the slope is 3.74. How is it interpreted?",
+          options: [
+            "On average, each additional year of education raises income by $3.74 thousand",
+            "Income is $3.74 thousand when education is zero",
+            "Education falls by 3.74 years for each $1000 of income",
+            "3.74 percent of people have a degree",
+          ],
+          correct: 0,
+          translation: "في مثال التعليم والدخل الميل = 3.74. كيف يُفسَّر؟",
+          explanation:
+            "الميل يعني أنه في المتوسط كل سنة تعليم إضافية ترفع الدخل بمقدار 3.74 ألف دولار (الدخل بالآلاف). الاختيار الثاني تفسير للمقطع وليس الميل.",
+          tags: ["Interpretation", "Slope"],
+          ref: "Lecture 03 — Slide 18: The Least Squares Regression Line",
+        },
+        {
+          q: "18. In the same example the intercept is -13.93. According to the lecture, what is this value?",
+          options: [
+            "The average income of everyone in the sample",
+            "The expected income at zero education, which is meaningless here",
+            "The slope of the line",
+            "The standard error of the estimate",
+          ],
+          correct: 1,
+          translation:
+            "في نفس المثال المقطع = -13.93. ما هذه القيمة حسب المحاضرة؟",
+          explanation:
+            "هي الدخل المتوقع لشخص مستوى تعليمه صفر، وهي قيمة بلا معنى هنا (دخل سالب). متوسط الدخل في العينة هو 30.2 وليس -13.93.",
+          tags: ["Interpretation", "Intercept"],
+          ref: "Lecture 03 — Slide 18: The Least Squares Regression Line",
+        },
+        {
+          q: "19. In the education-income example, which variable is the dependent variable?",
+          options: ["Education", "The sample size", "Income", "The intercept"],
+          correct: 2,
+          translation:
+            "في مثال التعليم والدخل، أي متغير هو المتغير التابع (dependent)؟",
+          explanation:
+            "المتغير التابع هو ما نريد التنبؤ به وتحليله وهو الدخل (y)، والتعليم هو المتغير المستقل (x) الذي يُفترض أنه يؤثر في الدخل.",
+          tags: ["Dependent variable", "Independent variable"],
+          ref: "Lecture 03 — Slide 15: Dependent and Independent Variables",
+        },
+        {
+          q: "20. In the multi-feature linear model y = w^T x + b, what are the parameters?",
+          options: [
+            "The features x and the targets t",
+            "Only the target t",
+            "The loss and the regularizer",
+            "The weights w and the bias (intercept) b",
+          ],
+          correct: 3,
+          translation:
+            "في النموذج الخطي متعدد الخصائص y = w^T x + b، ما هي المعاملات (parameters)؟",
+          explanation:
+            "المعاملات هي الأوزان w والـ bias/intercept b. أما x فهي الخصائص (المدخلات) وt هو الهدف، وهما بيانات وليسا معاملات.",
+          tags: ["Parameters", "Weights", "Bias"],
+          ref: "Lecture 03 — Slide 19: Model",
+        },
+        {
+          q: "21. The squared error loss is L(y, t) = 1/2 (y - t)^2. Why is the factor 1/2 used?",
+          options: [
+            "It makes calculations convenient",
+            "It keeps the loss below 1",
+            "It converts the loss into a probability",
+            "It removes the need for the residual",
+          ],
+          correct: 0,
+          translation:
+            "دالة الخسارة المربعة L(y, t) = 1/2 (y - t)^2. لماذا يُستخدم العامل 1/2؟",
+          explanation:
+            "المحاضرة تذكر أن الـ 1/2 يجعل الحسابات مريحة (عند الاشتقاق يلغي الأس 2). لا يجعل الخسارة أقل من 1 ولا يحوّلها إلى احتمال.",
+          tags: ["Squared error loss"],
+          ref: "Lecture 03 — Slide 20: Loss Function",
+        },
+        {
+          q: "22. What is a cost function, according to the lecture?",
+          options: [
+            "The loss for a single example",
+            "The loss function averaged over all training examples (the empirical or average loss)",
+            "The number of parameters in the model",
+            "The time needed to train the model",
+          ],
+          correct: 1,
+          translation: "ما هي دالة التكلفة (cost function) حسب المحاضرة؟",
+          explanation:
+            "هي دالة الخسارة مُتوسَّطة على كل أمثلة التدريب وتسمى أيضًا empirical أو average loss. الخسارة لمثال واحد هي الـ loss function.",
+          tags: ["Cost function", "Average loss"],
+          ref: "Lecture 03 — Slide 20: Loss Function",
+        },
+        {
+          q: "23. Why is vectorized code such as y = np.dot(w, x) + b preferred over Python loops?",
+          options: [
+            "It uses more memory, so it is more accurate",
+            "It removes the bias term",
+            "It is simpler and much faster (less interpreter overhead, optimized linear algebra libraries, GPU support)",
+            "It works only with one feature",
+          ],
+          correct: 2,
+          translation:
+            "لماذا يُفضَّل الكود المتجه (vectorized) مثل y = np.dot(w, x) + b على حلقات Python؟",
+          explanation:
+            "لأنه أبسط وأسهل قراءة وأسرع بكثير: يقلل عبء مفسر Python ويستخدم مكتبات جبر خطي محسّنة ودعمًا من العتاد، والضرب المصفوفي سريع على GPU. لا علاقة له بالدقة أو الـ bias.",
+          tags: ["Vectorization", "NumPy"],
+          ref: "Lecture 03 — Slides 22-23: Loops vs Vectorized Code",
+        },
+        {
+          q: "24. After adding a column of 1s to the design matrix X, how are the predictions for the whole dataset written?",
+          options: [
+            "y = X + w",
+            "y = X^T w^T",
+            "y = w / X",
+            "y = Xw, with X in R^(N x (D+1)) and w in R^(D+1)",
+          ],
+          correct: 3,
+          translation:
+            "بعد إضافة عمود من الأحاد إلى مصفوفة التصميم X، كيف تُكتب التنبؤات لكل مجموعة البيانات؟",
+          explanation:
+            "ندمج الـ bias مع الأوزان فيصبح w = (b, w1, ..., wD) وتصبح y = Xw حيث X أبعادها N x (D+1). باقي الصيغ لا تحقق أبعاد الضرب.",
+          tags: ["Design matrix", "Bias"],
+          ref: "Lecture 03 — Slide 26: Combining Bias and Weights",
+        },
+        {
+          q: "25. For J = 1/2 ||y - t||^2 without the 1/N normalizer, what is true about the minimizer?",
+          options: [
+            "It does not depend on N (although the optimization might)",
+            "It depends strongly on N",
+            "It is always zero",
+            "It cannot be found",
+          ],
+          correct: 0,
+          translation:
+            "بالنسبة لـ J = 1/2 ||y - t||^2 بدون المعامل 1/N، ما الصحيح عن النقطة المُصغِّرة (minimizer)؟",
+          explanation:
+            "الشريحة تنص على أن الـ minimizer لا يعتمد على N (لكن عملية الـ optimization قد تتأثر). هذه الصيغة تقابل مجموع الخسائر وليس متوسطها.",
+          tags: ["Cost function", "Normalizer"],
+          ref: "Lecture 03 — Slide 25: Computing Squared Error Cost",
+        },
+        {
+          type: "essay",
+          q: "1. Explain the supervised learning setup and the modular approach to ML.",
+          translation:
+            "اشرح إعداد التعلم المُشرَف والنهج المعياري (modular) للتعلم الآلي.",
+          answer:
+            "Supervised learning: input x in X is a vector of features, target t in T, and the data is D = {(x(i), t(i)) for i = 1, ..., N}. The objective is to learn a function f: X -> T from the data such that t is approximately y = f(x).\n" +
+            "Modular approach: choose a model describing relationships between variables; define a loss function quantifying how well the model fits the data; choose a regularizer expressing a preference over different models.\n" +
+            "Then fit a model that minimizes the loss function and satisfies the regularizer's constraint or penalty, possibly using an optimization algorithm.",
+          tags: ["Supervised learning", "Modular approach"],
+          ref: "Lecture 03 — Slides 3-4",
+        },
+        {
+          type: "essay",
+          q: "2. Describe the simple linear regression model and explain what 'simple', 'linear in the parameters' and 'linear in the predictor' mean.",
+          translation:
+            "صِف نموذج الانحدار الخطي البسيط واشرح معنى simple وlinear in the parameters وlinear in the predictor.",
+          answer:
+            "Model: Y = b0 + b1 X, where y is the dependent variable, x is the independent variable, b0 is the y-intercept and b1 is the slope of the line (slope = change in y over change in x).\n" +
+            "Simple: there is only one X.\n" +
+            "Linear in the parameters: no parameter appears as an exponent or is multiplied or divided by another parameter.\n" +
+            "Linear in the predictor variable (X): X appears only in the first power.\n" +
+            "Regression analysis estimates a functional relationship between X and Y, and the regression equation is used to predict a value of Y for a given X.",
+          tags: ["Simple linear regression"],
+          ref: "Lecture 03 — Slides 5-8",
+        },
+        {
+          type: "essay",
+          q: "3. Explain the difference between a mathematical and a statistical relation, and why an error term is needed.",
+          translation:
+            "اشرح الفرق بين العلاقة الرياضية والعلاقة الإحصائية ولماذا نحتاج حد الخطأ.",
+          answer:
+            "In a mathematical relation all points lie exactly on the line y = -5.3562 + 3.3988x. In a statistical relation the scatterplot shows that the points are not on a line.\n" +
+            "So, in addition to the relationship Y = b0 + b1 X, there is an error term, and the actual response is the line plus an error.\n" +
+            "The Y's are the response (dependent) variable and the x's are the independent variables.\n" +
+            "The line is estimated by least squares, which finds the line that minimizes the errors.",
+          tags: ["Statistical relation", "Error"],
+          ref: "Lecture 03 — Slides 9-10",
+        },
+        {
+          type: "essay",
+          q: "4. Explain the least squares method and how the slope and intercept are computed.",
+          translation:
+            "اشرح طريقة المربعات الصغرى (least squares) وكيف يُحسب الميل والمقطع.",
+          answer:
+            "Least squares minimizes the sum of squared errors: sum of (y_i - b0 - b1 x_i)^2, giving the fitted line y_hat = b0_hat + b1_hat x.\n" +
+            "The residuals R_i = y_i - y_hat_i should look normal if a normal error is assumed.\n" +
+            "Slope: b1_hat = SSxy / SSx. Intercept: b0_hat = y_bar - b1_hat * x_bar.\n" +
+            "SSx = sum of (x_i - x_bar)^2 = sum of x_i^2 - (sum of x_i)^2 / n; SSxy = sum of (x_i - x_bar)(y_i - y_bar) = sum of x_i y_i - (sum of x_i)(sum of y_i) / n.\n" +
+            "Example: the fitted line has a sum of squared errors of 20.43, while the horizontal line Y = mean(Y) has 1647.33.",
+          tags: ["Least squares", "Formulas"],
+          ref: "Lecture 03 — Slides 11-13",
+        },
+        {
+          type: "essay",
+          q: "5. Describe the education and income example and interpret the regression coefficients.",
+          translation: "صِف مثال التعليم والدخل وفسّر معاملات الانحدار.",
+          answer:
+            "An economist samples 10 individuals and records education (years) and income (in $1000s) to find the least squares line. Income (y) is the dependent variable and education (x) the independent variable that most affects income.\n" +
+            "Sums: sum x = 118, sum x^2 = 1450, sum y = 302, sum xy = 3779. SSxy = 215.4, SSx = 57.6, so slope = 215.4 / 57.6 = 3.74 and intercept = 30.2 - 3.74 * 11.8 = -13.93.\n" +
+            "Line: y_hat = -13.93 + 3.74 x.\n" +
+            "Slope: on average each additional year of education raises income by $3.74 thousand. Intercept: the expected income at zero education, which is meaningless here.",
+          tags: ["Example", "Interpretation"],
+          ref: "Lecture 03 — Slides 14-18",
+        },
+        {
+          type: "essay",
+          q: "6. Describe the multi-feature linear model, its parameters and why it is useful.",
+          translation:
+            "صِف النموذج الخطي متعدد الخصائص ومعاملاته ولماذا هو مفيد.",
+          answer:
+            "Model: a linear function of the features x = (x_1, ..., x_D) in R^D that makes a prediction y in R of the target t in R: y = f(x) = sum over j of w_j x_j + b = w^T x + b.\n" +
+            "Parameters are the weights w and the bias or intercept b.\n" +
+            "We want the prediction to be close to the target: y is approximately t.\n" +
+            "It is a highly interpretable model, which is useful for debugging.",
+          tags: ["Linear model", "Parameters"],
+          ref: "Lecture 03 — Slide 19: Model",
+        },
+        {
+          type: "essay",
+          q: "7. Define the loss function and the cost function for linear regression.",
+          translation:
+            "عرّف دالة الخسارة (loss) ودالة التكلفة (cost) في الانحدار الخطي.",
+          answer:
+            "The loss function L(y, t) defines how badly the algorithm's prediction y fits the target t for some example x.\n" +
+            "Squared error loss: L(y, t) = 1/2 (y - t)^2, where y - t is the residual and we want to minimize its magnitude; the factor 1/2 makes calculations convenient.\n" +
+            "The cost function is the loss averaged over all training examples (the empirical or average loss): J(w, b) = 1/(2N) * sum over i of (y(i) - t(i))^2 = 1/(2N) * sum over i of (w^T x(i) + b - t(i))^2.\n" +
+            "Without the 1/N normalizer J corresponds to the sum of losses; the minimizer does not depend on N.",
+          tags: ["Loss function", "Cost function"],
+          ref: "Lecture 03 — Slides 20 and 25",
+        },
+        {
+          type: "essay",
+          q: "8. Explain vectorization and its benefits, comparing a loop with vectorized code.",
+          translation:
+            "اشرح الـ vectorization ومميزاته مع مقارنة الحلقة بالكود المتجه.",
+          answer:
+            "Loop version for one data point: y = b; for j in range(M): y += w[j] * x[j]. Excessive super/sub scripts are hard to work with and Python loops are slow.\n" +
+            "Vectorized version: express algorithms with vectors and matrices, w = (w_1, ..., w_D)^T and x = (x_1, ..., x_D)^T, so y = w^T x + b, written in code as y = np.dot(w, x) + b.\n" +
+            "Benefits: the code is simpler and more readable with no dummy variables or indices; it is much faster because it cuts down Python interpreter overhead, uses highly optimized linear algebra libraries with hardware support, and matrix multiplication is very fast on a GPU.",
+          tags: ["Vectorization"],
+          ref: "Lecture 03 — Slides 22-23",
+        },
+        {
+          type: "essay",
+          q: "9. Explain how predictions for the whole dataset are computed using the design matrix, and how the bias is combined with the weights.",
+          translation:
+            "اشرح كيف تُحسب تنبؤات كل مجموعة البيانات باستخدام مصفوفة التصميم وكيف يُدمج الـ bias مع الأوزان.",
+          answer:
+            "Put the training examples into a design matrix X (one row per example) and the targets into the target vector t. The predictions for the whole dataset are y = Xw + b1, where 1 is a vector of ones.\n" +
+            "The squared error cost across the dataset is J = 1/(2N) ||y - t||^2.\n" +
+            "To combine the bias and the weights, add a column of 1s to the design matrix: X in R^(N x (D+1)) and w = (b, w_1, ..., w_D) in R^(D+1). The predictions become simply y = Xw.",
+          tags: ["Design matrix", "Bias"],
+          ref: "Lecture 03 — Slides 24-26",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the two Python examples in the lecture (scipy linregress and scikit-learn LinearRegression).",
+          translation:
+            "اشرح مثالَي Python في المحاضرة (scipy linregress وscikit-learn LinearRegression).",
+          answer:
+            "Example 1: the age and speed of 13 cars are plotted with plt.scatter. Then stats.linregress(x, y) returns slope, intercept, r, p and std_err; a function myfunc(x) = slope * x + intercept maps every x to a predicted value, and plt.plot draws the regression line over the scatter. The printed loss is 0.428.\n" +
+            "Example 2 (public policy): government spending on employment programs is used to predict the unemployment rate. The arrays are reshaped, a LinearRegression model is created and trained with model.fit(spending, unemployment).\n" +
+            "model.predict([[95]]) predicts the unemployment rate for a new spending value, model.coef_[0] gives the slope and model.intercept_ gives the intercept.",
+          tags: ["Python", "scikit-learn"],
+          ref: "Lecture 03 — Examples (age/speed and public policy)",
+        },
+        {
+          type: "essay",
+          q: "11. Education-income example: using sum x = 118, sum x^2 = 1450, sum y = 302, sum xy = 3779 and n = 10, compute SSx, SSxy, the slope and the intercept, then predict the income of a person with 12 years of education.",
+          translation:
+            "مثال التعليم والدخل: باستخدام Σx = 118 وΣx² = 1450 وΣy = 302 وΣxy = 3779 وn = 10، احسب SSx وSSxy والميل والمقطع ثم تنبأ بدخل شخص تعليمه 12 سنة.",
+          answer:
+            "Formulas: SSx = sum x^2 - (sum x)^2 / n; SSxy = sum xy - (sum x)(sum y) / n; b1 = SSxy / SSx; b0 = y_bar - b1 * x_bar.\n" +
+            "SSxy = 3779 - (118)(302) / 10 = 3779 - 3563.6 = 215.4.\n" +
+            "SSx = 1450 - (118)^2 / 10 = 1450 - 1392.4 = 57.6.\n" +
+            "b1 = 215.4 / 57.6 = 3.74. b0 = 302/10 - 3.74 * (118/10) = 30.2 - 44.13 = -13.93.\n" +
+            "Line: y_hat = -13.93 + 3.74 x. For x = 12: y_hat = -13.93 + 44.88 = 30.95, i.e. about $30.95 thousand.",
+          tags: ["Least squares", "Computation"],
+          ref: "Lecture 03 — Slides 16-18",
+        },
+        {
+          type: "essay",
+          q: "12. Public policy example: for spending x = 50, 60, ..., 120 (million $) and unemployment y = 9.5, 9.0, 8.7, 8.0, 7.8, 7.2, 6.8, 6.5 (%), compute the least squares line by hand and predict the unemployment rate for a spending of 95.",
+          translation:
+            "مثال السياسة العامة: للإنفاق x = 50 و60 ... و120 (مليون دولار) والبطالة y = 9.5 و9.0 و8.7 و8.0 و7.8 و7.2 و6.8 و6.5 (%)، احسب خط least squares يدويًا وتنبأ بنسبة البطالة عند إنفاق 95.",
+          answer:
+            "Formulas: SSx, SSxy, b1 = SSxy / SSx, b0 = y_bar - b1 * x_bar.\n" +
+            "n = 8: sum x = 680, so x_bar = 85; sum y = 63.5, so y_bar = 7.9375; sum x^2 = 62000; sum xy = 5214.\n" +
+            "SSx = 62000 - 680^2 / 8 = 62000 - 57800 = 4200. SSxy = 5214 - (680)(63.5) / 8 = 5214 - 5397.5 = -183.5.\n" +
+            "b1 = -183.5 / 4200 = -0.0437. b0 = 7.9375 - (-0.0437)(85) = 11.65.\n" +
+            "Line: y_hat = 11.65 - 0.0437 x. For x = 95: y_hat = 11.65 - 4.15 = about 7.50 percent. The negative slope means more spending is associated with lower unemployment (this is what model.coef_[0] and model.predict([[95]]) return in the code).",
+          tags: ["Least squares", "Prediction"],
+          ref: "Lecture 03 — Example 2: Linear Regression in Public Policy",
+        },
+        {
+          type: "essay",
+          q: "13. A model predicts y = (3, 5, 2, 7) for four examples whose targets are t = (2, 5, 4, 6). Compute the cost J = 1/(2N) * sum of (y - t)^2.",
+          translation:
+            "نموذج تنبأ بـ y = (3, 5, 2, 7) لأربعة أمثلة أهدافها t = (2, 5, 4, 6). احسب التكلفة J = 1/(2N) * Σ(y - t)².",
+          answer:
+            "Formula: J = 1/(2N) * sum of (y(i) - t(i))^2, with N = 4.\n" +
+            "Residuals y - t: 1, 0, -2, 1.\n" +
+            "Squares: 1, 0, 4, 1, whose sum is 6.\n" +
+            "J = 6 / (2 * 4) = 0.75.",
+          tags: ["Cost function", "Computation"],
+          ref: "Lecture 03 — Slide 20: Loss Function",
+        },
+        {
+          type: "essay",
+          q: "14. A linear model has w = (2, -1, 0.5) and b = 1. Compute the prediction for x = (3, 4, 2). Also give the shapes of X and w if there are N = 100 examples and D = 5 features and the bias is combined with the weights.",
+          translation:
+            "نموذج خطي فيه w = (2, -1, 0.5) وb = 1. احسب التنبؤ لـ x = (3, 4, 2). وأعطِ أبعاد X وw لو N = 100 مثال وD = 5 خصائص مع دمج الـ bias في الأوزان.",
+          answer:
+            "Formula: y = w^T x + b.\n" +
+            "y = 2*3 + (-1)*4 + 0.5*2 + 1 = 6 - 4 + 1 + 1 = 4 (in code: np.dot(w, x) + b).\n" +
+            "With the bias combined and a column of 1s added: X is in R^(N x (D+1)) = 100 x 6 and w is in R^(D+1), a vector of length 6, so that y = Xw.",
+          tags: ["Linear model", "Design matrix"],
+          ref: "Lecture 03 — Slides 19, 22 and 26",
+        },
+        {
+          type: "essay",
+          q: "15. Decision tree quiz: the training set below classifies names as location or person. Attribute 1 is 'first name' and attribute 2 is 'geo-term'. (George Washington Bridge: yes, yes, location; John Hancock Tower: yes, yes, location; Ronald Reagan Building: yes, yes, location; Azore Islands: no, yes, location; Michael Jackson: yes, no, person; Justin Bieber: yes, no, person; Lady Gaga: no, no, person; Adele: yes, no, person; Stalin: no, no, person.) Which attribute is more useful, and why?",
+          translation:
+            "سؤال Decision tree: مجموعة التدريب تصنّف الأسماء إلى location أو person. الخاصية 1 هي 'first name' والخاصية 2 هي 'geo-term'. أي خاصية أكثر فائدة ولماذا؟",
+          answer:
+            "Split on attribute 1 (first name): yes gives 3 locations and 3 persons (mixed); no gives 1 location and 2 persons (mixed). Both branches are impure, so it separates the classes poorly.\n" +
+            "Split on attribute 2 (geo-term): yes gives 4 locations and 0 persons; no gives 0 locations and 5 persons. Both branches are pure.\n" +
+            "Therefore attribute 2 (geo-term) is more useful: it perfectly separates the two classes, while attribute 1 leaves both branches mixed.",
+          tags: ["Decision tree", "Attribute selection"],
+          ref: "Lecture 03 — Quiz slide (decision tree)",
         },
       ],
     },

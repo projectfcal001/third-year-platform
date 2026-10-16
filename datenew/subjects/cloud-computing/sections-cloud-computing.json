@@ -1,3 +1,26 @@
 {
-  "sections": []
+  "schemaVersion": 2,
+  "subject": "computer-networks",
+  "sections": [
+    {
+      "id": "computer-networks-sec-01",
+      "subject": "computer-networks",
+      "lecture": "Lab 1: Get IP address, subnet mask, gateway, MAC address, connectivity, ARP, and DORA",
+      "lectureId": "computer-networks-lab-01",
+      "instructorId": "INS-Ahamd",
+      "instructorName": "م. امير",
+      "groupName": "سكشن 1",
+      "status": "available",
+      "sectionTitle": "🌐 لاب 1 - Computer Networks",
+      "materials": {
+        "file": {
+          "label": "ملف اللاب",
+          "url": "datenew/subjects/computer-networks/sections/Lab-1-CN__1_.pdf",
+          "type": "pdf"
+        },
+
+        "solution": "datenew/subjects/cloud-computing/sections/Lab1_Computer_Network_Solution.pdf"
+      }
+    }
+  ]
 }
