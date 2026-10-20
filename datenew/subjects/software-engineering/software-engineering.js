@@ -19,6 +19,8 @@ subjects.push({
       pdf: "datenew/subjects/software-engineering/lectures/Software Engineering Chapter 1 Lecture 1.pdf",
       pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE_Chapter1_Section1.1_Questions.pdf",
       // فئات روابط منظمة مخصصة للفصل الأول (Chapter 1: Introduction) من كتاب Software Engineering - Ian Sommerville (10th Edition)
+      notes:
+        "الأسئلة المطلوبة من الكتاب:  1 , 2  ,3, 5 , 6 , 10  ,ال علينا في الفصل دي   1.1 Professional software development ",
 
       linkCategories: [
         {
@@ -758,7 +760,8 @@ subjects.push({
       pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 2 - Software processes.pdf",
       pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE_Chapter2_Sections2.1-2.2_Questions.pdf",
       // فئات روابط منظمة مخصصة للفصل الثاني (Chapter 1: Introduction) من كتاب Software Engineering - Ian Sommerville (10th Edition)
-      notes: "الأسئلة المطلوبة من الكتاب:  1 , 3  , 4 , 6 , 8 ",
+      notes:
+        "الأسئلة المطلوبة من الكتاب:  1 , 3  , 4 , 6 , 8  ,ال علينا في الفصل دي  2.1 Software process models , 2.2 Process activities",
       linkCategories: [
         {
           category: "فيديوهات عربية",
@@ -834,27 +837,6 @@ subjects.push({
                 {
                   label: "📖 مشاهدة الشرح",
                   url: "https://www.youtube.com/watch?v=DybqiqW27h0",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          category: "كل شي يخص السكشن والتمارين",
-          icon: "💻",
-          description:
-            "حلول وشرح تمارين الفصل الثاني (Software Processes Exercises) من كتاب Sommerville",
-          links: [
-            {
-              t: "حلول وشرح تمارين Chapter 2",
-              d: "شرح وتوضيح إجابات أسئلة الفصل الثاني الـ 10 المقررة، بما فيها اختيار النموذج المناسب لكل نظام وإدارة النماذج الأولية وتحسين العمليات CMMI",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "🔍 عرض الملف",
-                  url: "https://drive.google.com/drive/folders/10a_t6aVTjLf6EBqJE-3OHFl76VelSvDt?usp=drive_link",
                   type: "view",
                   color: "red",
                 },
@@ -1769,8 +1751,11 @@ subjects.push({
       id: "se-lecture-03",
       t: "المحاضرة 3: التطوير الرشيق للبرمجيات (Agile Software Development)",
       d: "مبررات طرق Agile وبيان Agile ومبادئها، ممارسات XP (user stories، refactoring، test-first، pair programming)، إدارة المشاريع بـ Scrum، وتوسيع Agile.",
+      notes:
+        "3.4 Scaling agile   للقراء فقط  ,   الأسئلة المطلوبة من الكتاب:  من 1 لحد 7",
+
       pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 3 - Agile software development.pdf",
-      pdf2: "/datenew/subjects/software-engineering/questions/Questions on each lecture/SE-Lecture-03-Questions.pdf",
+      pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE-Lecture-03-Questions.pdf",
       linkCategories: [
         {
           category: "فيديوهات عربية",

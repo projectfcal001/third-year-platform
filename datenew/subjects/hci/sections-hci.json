@@ -27,7 +27,7 @@
           "actions": [
             {
               "label": "📥 تحميل",
-              "url": "datenew/subjects/hci/sections/Sec 1/HCI-Lab 1.zip",
+              "url": "https://drive.google.com/uc?export=download&id=1V0_dHvC4cA6B2xGZoaYyai-6OECjGSl3",
               "type": "download",
               "color": "red"
             }
@@ -60,7 +60,7 @@
           "actions": [
             {
               "label": "📥 تحميل",
-              "url": "datenew/subjects/hci/sections/Sec 2/HCI-Lab 2.zip",
+              "url": "https://drive.google.com/uc?export=download&id=1gxjkGeHC_oxmzkvMKYsvLNYjr5X7tG30",
               "type": "download",
               "color": "red"
             }
@@ -92,7 +92,7 @@
             "actions": [
               {
                 "label": "📥 تحميل",
-                "url": "datenew/subjects/hci/sections/Sec 3/HCI-Lab 3.zip",
+                "url": "https://drive.google.com/uc?export=download&id=1wvysdFIYhETedKBcaALbwTQHHMnahFk8",
                 "type": "download",
                 "color": "red"
               }

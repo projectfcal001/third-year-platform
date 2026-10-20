@@ -18,22 +18,7 @@
           "url": "datenew/subjects/machine-learning/sections/Sec 1/Introduction to Machine learning_compressed (1).pdf",
           "type": "pdf"
         }
-      },
-      "links": [
-        {
-          "t": "تحميل ملف العمل بتاع السكشن",
-          "d": "",
-          "icon": "🇪🇬",
-          "actions": [
-            {
-              "label": "📥 تحميل",
-              "url": "datenew/subjects/machine-learning/sections/Sec 1/Introduction-to-ML.zip",
-              "type": "download",
-              "color": "red"
-            }
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "machine-learning-sec-02",
@@ -48,21 +33,27 @@
       "materials": {
         "file": {
           "label": "ملف اللاب",
-          "url": "datenew/subjects/machine-learning/sections/Sec 2/KNN vs K-Means.pdf",
+          "url": "datenew/subjects/machine-learning/sections/Sec 2/KNN vs K-Means_compressed.pdf",
           "type": "pdf"
         }
       },
-      "links": [
+      "linkCategories": [
         {
-          "t": "تحميل ملف العمل بتاع السكشن",
-          "d": "",
-          "icon": "🇪🇬",
-          "actions": [
+          "category": " ملف السكشن",
+
+          "links": [
             {
-              "label": "📥 تحميل",
-              "url": "datenew/subjects/machine-learning/sections/Sec 2/knn_kmeans.ipynb",
-              "type": "download",
-              "color": "red"
+              "t": "تحميل ملف العمل بتاع السكشن",
+              "d": "",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📥 تحميل",
+                  "url": "https://drive.google.com/uc?export=download&id=10Tr75nd6h0WtyeH-5lODp2RBMz6Itk1v",
+                  "type": "download",
+                  "color": "red"
+                }
+              ]
             }
           ]
         }

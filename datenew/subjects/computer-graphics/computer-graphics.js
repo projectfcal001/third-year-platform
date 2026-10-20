@@ -1678,8 +1678,9 @@ subjects.push({
       id: "computer-graphics-lecture-03",
       t: "المحاضرة 3: الجبر الخطي (Inner Product, Linear Maps, Span, Basis)",
       d: "الجزء الثاني من مراجعة الجبر الخطي: الـ inner product وخصائصه، الـ linear maps مقابل الـ affine، والـ span والـ basis والـ orthonormal basis.",
-      pdf: "/datenew/subjects/computer-graphics/lectures/Lecture 3/Lecture 3.pdf",
-      pdf2: "/datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-03-Questions.pdf",
+     notes:"البداية من صفحة 29 لحد 48.",
+      pdf: "datenew/subjects/computer-graphics/lectures/Lecture 3/Lecture 3.pdf",
+      pdf2: "datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-03-Questions.pdf",
       linkCategories: [
         {
           category: "فيديوهات عربية",
