@@ -1,20 +1,13 @@
-/* pwa.js — تسجيل الـ Service Worker + زرار التثبيت + إشعار التحديث */
+/* pwa.js — تسجيل الـ Service Worker + زرار التثبيت (في الهيدر فقط) + إشعار التحديث */
 (function () {
   "use strict";
 
-  /* ---------- ستايل الزرار والتوست (مرفوعين فوق status-bar الموقع) ---------- */
+  /* ---------- ستايل الزرار والتوست ---------- */
   var style = document.createElement("style");
   style.textContent =
     ".pwa-hdr-install{width:auto!important;padding:0 14px;border-radius:999px!important;gap:6px;font-family:inherit;font-size:13px!important;font-weight:700;white-space:nowrap}" +
     ".pwa-hdr-install[hidden]{display:none!important}" +
     "@media(max-width:640px){.pwa-hdr-install{padding:0 10px}.pwa-hdr-install .lbl{display:none}}" +
-    ".pwa-fab{display:none;position:fixed;right:16px;bottom:calc(52px + env(safe-area-inset-bottom,0px));z-index:4000;" +
-    "align-items:center;height:44px;padding:0 4px 0 14px;border-radius:999px;background:#3498db;color:#fff;" +
-    "box-shadow:0 6px 20px rgba(0,0,0,.35);font-family:inherit;font-size:14px;font-weight:700}" +
-    ".pwa-fab[hidden]{display:none!important}" +
-    ".pwa-fab button{border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}" +
-    ".pwa-fab .x{opacity:.85;padding:8px 10px;font-size:13px}" +
-    "@media(max-width:640px){.pwa-fab:not([hidden]){display:inline-flex}}" +
     ".pwa-ios{position:fixed;left:50%;bottom:calc(60px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:4000;" +
     "max-width:calc(100% - 32px);padding:12px 18px;border-radius:14px;background:var(--bg-header,#161b22);color:#fff;font-size:13px;" +
     "line-height:1.8;text-align:center;direction:rtl;box-shadow:0 6px 20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12)}" +
@@ -175,7 +168,7 @@
     });
   }
 
-  /* ---------- زرار "ثبّت التطبيق" (في الـ header) ---------- */
+  /* ---------- زرار "ثبّت التطبيق" (في الـ header فقط — اتشال الزرار العايم) ---------- */
   var INSTALLED_KEY = "pwa_installed_v1";
   var IOS_KEY = "ios_install_hint_dismissed";
 
@@ -227,45 +220,13 @@
     wrap.insertBefore(btn, wrap.firstChild);
     return btn;
   }
-  // زرار عايم على الموبايل بس (الـ header ضيق فالزرار هناك أيقونة صغيرة)
-  var fab = null;
-  var FAB_KEY = "pwa_fab_dismissed";
-  var FAB_SNOOZE_MS = 3 * 24 * 60 * 60 * 1000; // لو قفلته يستنى 3 أيام
-  function ensureFab() {
-    if (fab) return fab;
-    var t = parseInt(lsGet(FAB_KEY) || "0", 10);
-    if (t && Date.now() - t < FAB_SNOOZE_MS) return null;
-    fab = document.createElement("div");
-    fab.className = "pwa-fab";
-    fab.hidden = true;
-    var go = document.createElement("button");
-    go.type = "button";
-    go.textContent = "📲 ثبّت التطبيق";
-    go.addEventListener("click", doInstall);
-    var x = document.createElement("button");
-    x.type = "button";
-    x.className = "x";
-    x.setAttribute("aria-label", "إغلاق");
-    x.textContent = "✕";
-    x.addEventListener("click", function () {
-      fab.hidden = true;
-      lsSet(FAB_KEY, String(Date.now()));
-    });
-    fab.appendChild(go);
-    fab.appendChild(x);
-    document.body.appendChild(fab);
-    return fab;
-  }
   function showBtn() {
     if (isStandalone || lsGet(INSTALLED_KEY) === "1") return;
     var b = ensureBtn();
     if (b) b.hidden = false;
-    var f = ensureFab();
-    if (f) f.hidden = false;
   }
   function hideBtn() {
     if (btn) btn.hidden = true;
-    if (fab) fab.hidden = true;
   }
 
   function doInstall() {
