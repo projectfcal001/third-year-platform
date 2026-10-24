@@ -38,6 +38,11 @@
 /* نلتقط beforeinstallprompt لأن pwa.js بيتحمّل متأخر */
 window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__bip=e;});
 </script>
+<script>
+/* Vercel Web Analytics */
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <script>var subjects = [];</script>
 <script src="datenew/departments.js" defer></script>
 <script src="app.js" defer></script>
@@ -1539,7 +1544,7 @@ select option:disabled{color:var(--text-hint)}
             <p class="meta" id="d-stamp"></p>
         </div>
 
-        <!-- ★ ملخص التقدم (Dashboard) -->
+        <!-- ★ م��خص التقدم (Dashboard) -->
         <div id="progress-view" class="content-section">
             <h2 style="margin:0 0 6px;">📈 ملخص التقدم</h2>
             <p style="color:var(--text-hint);margin:0 0 16px;font-size:13px;">كل المواد وكل المحاضرات — حليت كام سؤال من أصل كام، والدرجة لو موجودة.</p>
@@ -1704,7 +1709,6 @@ select option:disabled{color:var(--text-hint)}
   later(1200,function(){
     add('pwa.js');
   });
-  later(3000,function(){ add('/_vercel/insights/script.js'); });
 })();
 </script>
 </body>
