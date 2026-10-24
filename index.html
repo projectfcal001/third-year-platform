@@ -40,7 +40,7 @@ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();win
 </script>
 <script>var subjects = [];</script>
 <script src="datenew/departments.js" defer></script>
-<script src="app.js" defer></script>
+<script src="app-v4.js" defer></script>
 <style>
 /* ============================================================
    1) الثيمات
@@ -1026,46 +1026,7 @@ html.fb-modal-open,html.fb-modal-open body{ overflow:hidden; }
     border-radius:50%;
     animation:spin .8s linear infinite;
 }
-/* ============================================================
-   ★ reCAPTCHA wrapper
-   ============================================================ */
-.fb-recaptcha-wrap{
-    display:flex;
-    justify-content:center;
-    margin:12px 0;
-    min-height:78px;
-    /* عشان الـ iframe بتاع جوجل ميتجاوزش العرض */
-    transform-origin:center;
-}
-
-/* على الموبايل الصغير نعمل scale عشان يبان كامل */
-@media (max-width: 400px){
-    .fb-recaptcha-wrap{
-        zoom:0.85;
-        margin:4px 0 -6px;
-        min-height:66px;
-    }
-}
-
-.fb-modal-dialog .fb-btns button:disabled{
-    opacity:.5;
-    cursor:not-allowed;
-    transform:none !important;
-    filter:none !important;
-}
-.fb-recaptcha-wrap{
-    display:flex;
-    justify-content:center;
-    margin:12px 0;
-    min-height:78px;
-}
-@media (max-width: 400px){
-    .fb-recaptcha-wrap{
-        zoom:0.85;
-        margin:4px 0 -6px;
-        min-height:66px;
-    }
-}
+.fb-modal-dialog .fb-btns button:disabled{opacity:.5;cursor:not-allowed;transform:none!important;filter:none!important}
 
 /* ★ ملخص التقدم */
 #progress-view .pg-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:0 0 16px}
@@ -1091,88 +1052,6 @@ html.fb-modal-open,html.fb-modal-open body{ overflow:hidden; }
 .offline-note{border:2px dashed var(--warning);background:var(--bg-card);border-radius:12px;padding:16px;text-align:center;color:var(--text-primary);margin:10px 0}
 .offline-note b{display:block;font-size:16px;margin-bottom:6px}
 .offline-note p{margin:0 0 10px;color:var(--text-secondary);font-size:13px;line-height:1.7}
-/* ★ نموذج الاقتراحات: شيل المساحة الفاضية تحت زر الإرسال */
-.fb-modal-dialog{padding-bottom:14px;height:auto}
-.fb-modal-dialog .fb-body{padding-bottom:0}
-.fb-modal-dialog #fb-status:empty{display:none}
-@media (max-width:520px){
-  .fb-modal-dialog{padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
-}
-/* ═══════════════════════════════════════════════════════════
-   ★★★ الحل  — نسخة  لإزالة المساحة الفارغة ★★★
-   ═══════════════════════════════════════════════════════════ */
-
-/* 1) اختفي #fb-status تماماً لو فاضي (بما فيه المسافات والـ line-height) */
-html body .fb-modal-dialog #fb-status:empty {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    line-height: 0 !important;
-    font-size: 0 !important;
-    overflow: hidden !important;
-}
-
-/* 2) شيل كل padding/margin/space من آخر عنصرين جوه body */
-html body .fb-modal-dialog .fb-body > *:last-child,
-html body .fb-modal-dialog .fb-body > *:nth-last-child(2) {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* 3) الـ body: خلّي ارتفاعه بمقدار محتواه بالظبط */
-html body .fb-modal-dialog .fb-body {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    height: auto !important;
-    min-height: 0 !important;
-    flex: 0 0 auto !important;
-}
-
-/* 4) الـ dialog: خلّيه shrink-to-fit محتواه */
-html body .fb-modal-dialog {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: 88vh !important;
-    flex: 0 0 auto !important;
-    align-self: center !important;
-    padding-bottom: 8px !important;
-    /* لا تعتمد على dvh للتوافق */
-}
-
-/* 5) الـ overlay: خلي الـ dialog في وسط الشاشة */
-html body .fb-modal-overlay.show {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 16px !important;
-}
-
-/* 6) إصلاح أزرار الإرسال - شيل أي مسافة تحتها */
-html body .fb-modal-dialog .fb-btns {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* 7) على الموبايل: خليها نافذة من تحت بحجم محتواها */
-@media (max-width: 520px) {
-    html body .fb-modal-overlay.show {
-        align-items: flex-end !important;
-        padding: 0 !important;
-    }
-    html body .fb-modal-dialog {
-        align-self: flex-end !important;
-        max-height: 90vh !important;
-        max-height: 90dvh !important;
-        border-radius: 16px 16px 0 0 !important;
-        padding-bottom: max(8px, env(safe-area-inset-bottom, 0px)) !important;
-    }
-}
-
 /* ============================================================
    ⚡ Performance additions
    ============================================================ */
@@ -1214,42 +1093,253 @@ header{contain:layout style}
 .dept-close:hover{background:var(--bg-card-hover);color:var(--text-primary)}
 
 /* ============================================================
-   ☰ قائمة الأقسام والمواد (جانبية على الموبايل / في النص على الكمبيوتر)
+   ✦ v2 — واجهة جديدة: شريط جانبي + هيدر مسطّح + تبويبات + كروت + فوتر
    ============================================================ */
-.menu-btn{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 auto 8px;padding:7px 18px;border-radius:999px;background:var(--theme-btn-bg);border:2px solid transparent;color:var(--text-white);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s}
-.menu-btn:hover,.menu-btn[aria-expanded="true"]{background:var(--theme-btn-active)}
-.menu-bars{display:inline-flex;flex-direction:column;gap:4px;width:20px}
-.menu-bars i{display:block;height:2.5px;border-radius:2px;background:currentColor;transition:transform .25s,opacity .2s}
-.menu-btn[aria-expanded="true"] .menu-bars i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"] .menu-bars i:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"] .menu-bars i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+:root{
+  --rail-w:76px;--rail-w-open:304px;--foot-h:58px;
+  --rail-bg:var(--bg-header);--rail-fg:#fff;--rail-accent:#fff;
+  --rail-line:rgba(255,255,255,.16);--rail-hover:rgba(255,255,255,.09);--rail-active:rgba(255,255,255,.16);
+  --hdr-fg:var(--text-heading);
+  --ctl-bg:rgba(127,127,127,.12);--ctl-bg-hover:rgba(127,127,127,.22);--ctl-line:rgba(127,127,127,.30);
+}
+@supports (background:color-mix(in srgb,red 10%,transparent)){
+  :root{
+    --ctl-bg:color-mix(in srgb,var(--text-primary) 8%,transparent);
+    --ctl-bg-hover:color-mix(in srgb,var(--text-primary) 16%,transparent);
+    --ctl-line:color-mix(in srgb,var(--text-primary) 20%,transparent);
+  }
+}
+/* الثيم الغامق: بنفسجي/نيلي زي التصميم */
+html[data-theme="night"]{
+  --bg-body:#0d0b21;--bg-header:#15122f;--bg-content:#15122f;--bg-card:#1f1b42;--bg-card-hover:#292455;
+  --bg-quiz-container:#0d0b21;--bg-quiz-card:#15122f;
+  --text-primary:#e6e3f7;--text-secondary:#b9b3df;--text-heading:#f6f4ff;--text-hint:#a99bd9;
+  --accent:#6b74f0;--accent-hover:#8c94ff;--border:#322c63;--card-border:#6b74f0;
+  --option-border:#6b74f0;--option-text:#a0a7ff;--option-hover-bg:#1f1b42;--progress-bg:#322c63;
+  --score-bg-1:#2b2566;--score-bg-2:#4b43a8;--show-score-bg-1:#2b2566;--show-score-bg-2:#4b43a8;
+  --show-score-shadow:rgba(107,116,240,.32);--status-bg:#0d0b21;--badge-bg:#6b74f0;
+  --collapse-bg:#1f1b42;--collapse-border:#322c63;--summary-bg:#1f1b42;
+  --notif-bg:#15122f;--notif-unread-bg:#241f52;--scroll-btn-bg:#5a62e0;--subtab-bg:#1f1b42;
+  --quiz-number-bg:#322c63;--tab-active-bg:#5a62e0;
+  --rail-bg:#171338;--rail-accent:#9aa2ff;
+}
 
-#subject-bar{position:fixed;z-index:3000;min-height:0!important;margin:0;visibility:hidden;opacity:0;transition:opacity .22s,transform .25s,visibility 0s linear .25s;background:var(--bg-header);overflow-y:auto;overscroll-behavior:contain;box-shadow:0 12px 40px rgba(0,0,0,.45);border:1px solid var(--border)}
-body.menu-open #subject-bar{visibility:visible;opacity:1;transition:opacity .22s,transform .25s,visibility 0s}
-#subject-bar::before{content:"📚 الأقسام والمواد";flex-basis:100%;text-align:center;font-weight:700;font-size:15px;color:var(--text-white);padding:4px 0 10px;border-bottom:1px solid rgba(255,255,255,.15);margin-bottom:4px}
-.menu-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2990}
+/* ---------- الهيدر (مسطّح) ---------- */
+body header{position:static;z-index:auto;background:transparent;color:var(--hdr-fg);box-shadow:none;transition:none;contain:style;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1160px;margin:0 auto;padding:26px 20px 10px;text-align:start}
+body header h1{margin:0;padding:0;min-height:0;display:block;flex:1;min-width:0;text-align:start;
+  font-size:clamp(20px,2.1vw,28px);line-height:1.4;font-weight:700;color:var(--hdr-fg)}
+.t-dept,.t-sub{display:block}
+.t-dept{font-size:1em;font-weight:800}
+.t-sub{font-size:.58em;font-weight:600;opacity:.85;margin-top:4px;line-height:1.5}
+.t-en{display:none}
+body header .header-row{display:flex;align-items:center;flex-wrap:nowrap;gap:12px;padding:0;flex-shrink:0}
+body header .notif-bell-wrap{position:relative;top:auto;left:auto;margin:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--ctl-bg);border:1px solid var(--ctl-line);transition:background .2s}
+body header .notif-bell-wrap:hover{background:var(--ctl-bg-hover)}
+body header .notif-bell{display:grid;place-items:center;font-size:0;color:var(--hdr-fg);transform:none}
+body header .notif-bell svg{width:22px;height:22px}
+body header .notif-badge{top:-5px;left:auto;right:-5px;width:20px;height:20px;font-size:11px}
+body header .theme-controls{display:flex;flex-wrap:nowrap;gap:2px;padding:4px;border-radius:999px;background:var(--ctl-bg);border:1px solid var(--ctl-line)}
+body header .theme-pill{width:42px;height:38px;padding:0;gap:0;justify-content:center;border-radius:999px;border:2px solid transparent;background:transparent;color:var(--hdr-fg);font-size:18px;box-shadow:none}
+body header .theme-pill:hover{background:var(--ctl-bg-hover);transform:none}
+body header .theme-pill.active{background:var(--ctl-bg-hover);border-color:var(--accent);box-shadow:none}
+body header .theme-pill svg{width:18px;height:18px}
+.theme-pill .tp-lbl{display:none}
+body header .hdr-tools{position:static;display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;background:var(--ctl-bg);border:1px solid var(--ctl-line)}
+body header .hdr-icon-btn{width:40px;height:40px;border-radius:50%;background:transparent;border:0;color:var(--hdr-fg);font-size:18px;transition:background .2s}
+body header .hdr-icon-btn:hover{background:var(--ctl-bg-hover);transform:none}
+body header .hdr-install{width:auto;padding:0 14px;gap:8px;border-radius:999px;font:inherit;font-size:13px;font-weight:700;white-space:nowrap}
+body header .hdr-install svg{width:18px;height:18px;flex-shrink:0}
+body header .hdr-install[hidden]{display:none}
+
+/* ---------- زرار القائمة ---------- */
+.menu-lbl{display:none}
+.menu-btn{display:flex;align-items:center;justify-content:center;margin:0;padding:0;width:46px;height:46px;border-radius:14px;cursor:pointer;color:var(--rail-fg);background:transparent;border:0;transition:right .26s ease,background .2s}
+.menu-bars{display:inline-flex;flex-direction:column;gap:5px;width:22px}
+.menu-bars i{display:block;height:2.5px;border-radius:2px;background:currentColor;transition:transform .25s,opacity .2s}
+.menu-btn[aria-expanded="true"] .menu-bars i:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] .menu-bars i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .menu-bars i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.menu-btn:focus-visible{outline:2px solid var(--rail-accent);outline-offset:2px}
+
+/* ---------- الشريط الجانبي (الشكل الموسّع هو الأساس) ---------- */
+#subject-bar{position:fixed;z-index:3000;top:0;right:0;bottom:0;left:auto;width:min(86vw,var(--rail-w-open));max-width:none;margin:0;
+  padding:16px 14px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:flex-start;align-items:stretch;gap:6px;
+  min-height:0!important;contain:none;background:var(--rail-bg);color:var(--rail-fg);border:0;border-inline-start:1px solid var(--rail-line);
+  overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--rail-line) transparent;
+  visibility:visible;opacity:1;transition:width .26s ease,transform .26s ease,visibility 0s}
+#subject-bar::before{content:none;display:none}
+#subject-bar .subj-btn{display:flex;align-items:center;justify-content:flex-start;gap:12px;width:100%;min-height:50px;padding:0 8px;border:0;border-radius:12px;
+  background:transparent;color:var(--rail-fg);font-size:16px;font-weight:600;text-align:start;box-shadow:none;transform:none;position:relative;transition:background .2s}
+#subject-bar .subj-btn:hover{background:var(--rail-hover);transform:none}
+#subject-bar .subj-btn.active{background:var(--rail-active);color:var(--rail-fg);box-shadow:inset -4px 0 0 var(--rail-accent)}
+#subject-bar .subj-btn:focus-visible{outline:2px solid var(--rail-accent);outline-offset:-2px}
+#subject-bar .subj-btn>span:first-child{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;font-size:22px}
+#subject-bar .subj-btn>span:nth-child(2){flex:1;min-width:0}
+#subject-bar .dept-head{display:flex;align-items:center;gap:12px;min-height:50px;padding:0 8px;font-size:18px;font-weight:800;color:var(--rail-fg)}
+#subject-bar .dept-head-ic{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;font-size:26px}
+#subject-bar .dept-btn{justify-content:center;gap:8px;min-height:46px;margin:2px 0 8px;padding:0 12px;font-size:15px;border:1px solid var(--rail-line)}
+#subject-bar .dept-btn>span:first-child{width:auto;height:auto;flex:0 0 auto;font-size:17px}
+#subject-bar .nav-sep{flex:0 0 auto;margin:12px 8px 2px;font-weight:800;font-size:15px;color:var(--rail-fg);opacity:.9}
+#subject-bar .nav-close{display:none}
+.menu-backdrop{position:fixed;inset:0;z-index:2990;background:rgba(0,0,0,.55)}
 .menu-backdrop[hidden]{display:none}
 
-/* كمبيوتر: لوحة في نص الصفحة تحت الزرار */
+/* ---------- كمبيوتر: شريط أيقونات يمين، بيتوسّع لقايمة ---------- */
 @media (min-width:641px){
-  #subject-bar{top:var(--menu-top,110px);left:50%;transform:translate(-50%,-10px);width:min(900px,calc(100vw - 40px));max-height:calc(100vh - var(--menu-top,110px) - 70px);border-radius:16px;padding:14px 16px 16px}
-  body.menu-open #subject-bar{transform:translate(-50%,0)}
-  .menu-backdrop{background:rgba(0,0,0,.25)}
+  body{padding-right:var(--rail-w)}
+  body.footer-hidden{--foot-h:0px}
+  #subject-bar{bottom:var(--foot-h,58px)}
+  body.menu-open #subject-bar{box-shadow:-14px 0 40px rgba(0,0,0,.4)}
+  .menu-backdrop{background:transparent}
+  body .menu-btn{position:fixed;top:14px;right:calc((var(--rail-w) - 46px)/2);z-index:3100}
+  body .menu-btn:hover{background:var(--rail-hover)}
+  body.menu-open .menu-btn{right:calc(var(--rail-w-open) - 46px - 14px)}
+  /* الشكل المطوي: أيقونات بس */
+  body:not(.menu-open) #subject-bar{width:var(--rail-w);padding:76px 12px 14px}
+  body:not(.menu-open) #subject-bar .subj-btn{justify-content:center;padding:0}
+  body:not(.menu-open) #subject-bar .subj-btn>span:nth-child(2),
+  body:not(.menu-open) #subject-bar .dept-head,
+  body:not(.menu-open) #subject-bar .dept-btn,
+  body:not(.menu-open) #subject-bar .nav-sep span{display:none!important}
+  body:not(.menu-open) #subject-bar .nav-sep{height:1px;margin:8px 10px;background:var(--rail-line)}
+  .qn-sidebar{top:16px;max-height:calc(100vh - 32px)}
 }
-/* موبايل: قايمة جانبية تحت الجرس */
+
+/* ---------- موبايل: قايمة جانبية من اليمين + هيدر شبكي ---------- */
 @media (max-width:640px){
-  .menu-btn{position:absolute;top:44px;left:8px;margin:0;width:32px;height:32px;padding:0;gap:0}
-  .menu-lbl{display:none}
-  .menu-bars{width:16px;gap:3px}
-  .menu-btn[aria-expanded="true"] .menu-bars i:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
-  .menu-btn[aria-expanded="true"] .menu-bars i:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
-  #subject-bar{top:0;bottom:0;left:0;height:100vh;height:100dvh;width:min(82vw,320px);flex-direction:column;flex-wrap:nowrap;justify-content:flex-start;align-items:stretch;gap:8px;padding:16px 12px calc(70px + env(safe-area-inset-bottom,0px));border-radius:0 18px 18px 0;border-width:0 1px 0 0;transform:translateX(-105%)}
-  body.menu-open #subject-bar{transform:translateX(0)}
-  #subject-bar .subj-btn{width:100%;justify-content:flex-start;font-size:14px;padding:10px 12px}
+  #subject-bar{height:100vh;height:100dvh;border-radius:20px 0 0 20px;border-inline-start:0;transform:translateX(105%);visibility:hidden;
+    transition:transform .26s ease,visibility 0s linear .26s;box-shadow:-14px 0 40px rgba(0,0,0,.45)}
+  body.menu-open #subject-bar{transform:none;visibility:visible;transition:transform .26s ease,visibility 0s}
   body.menu-open{overflow:hidden}
+  #subject-bar .nav-close{display:flex;align-items:center;justify-content:center;gap:0;position:absolute;top:14px;left:14px;width:44px;min-height:44px;height:44px;padding:0;border-radius:50%;background:var(--rail-active);font-size:20px;line-height:1;z-index:2}
+  #subject-bar .nav-close>span:first-child{width:auto;height:auto;flex:0 0 auto;font-size:20px;line-height:1;display:block}
+  #subject-bar .dept-head{padding-inline-end:52px;font-size:17px}
+
+  body header{--hdr-fg:#fff;--ctl-bg:rgba(255,255,255,.10);--ctl-bg-hover:rgba(255,255,255,.20);--ctl-line:rgba(255,255,255,.22);
+    display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"menu title bell" "theme theme tools";gap:6px 8px;align-items:center;
+    max-width:none;padding:8px 10px;background:var(--bg-header);color:#fff;border-bottom:1px solid var(--rail-line);box-shadow:0 4px 14px var(--shadow)}
+  body header .header-row{display:contents}
+  body header h1{grid-area:title;align-self:center;text-align:center;font-size:17px;line-height:1.35;font-weight:800;padding:0;min-height:0;color:#fff;display:block;overflow:hidden}
+  .t-sub{font-size:12.5px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body header .notif-bell-wrap{grid-area:bell;justify-self:end;width:38px;height:38px}
+  body header .notif-bell svg{width:19px;height:19px}
+  body header .notif-badge{top:-4px;right:-4px;width:17px;height:17px;font-size:10px}
+  body header .hdr-tools{grid-area:tools;justify-self:end;gap:4px;padding:0;background:none;border:0}
+  body header .hdr-icon-btn{width:34px;height:34px;background:var(--ctl-bg);border:1px solid var(--ctl-line);font-size:15px}
+  body header .hdr-install{width:34px;padding:0}
+  body header .hdr-install .hdr-lbl{display:none}
+  body header .menu-btn{grid-area:menu;justify-self:start;width:38px;height:38px;border-radius:50%;background:var(--ctl-bg);border:1px solid var(--ctl-line);color:#fff}
+  body header .menu-bars{width:18px;gap:4px}
+  body header .menu-btn[aria-expanded="true"] .menu-bars i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  body header .menu-btn[aria-expanded="true"] .menu-bars i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  body.hdr-away .menu-btn{position:fixed;top:10px;right:10px;z-index:2500;background:var(--bg-header);box-shadow:0 4px 16px rgba(0,0,0,.4)}
+  body header .theme-controls{grid-area:theme;display:flex;justify-content:flex-start;gap:6px;padding:0;background:none;border:0;min-width:0}
+  body header .theme-pill{flex:1 1 0;min-width:0;width:auto;height:36px;padding:0 6px;gap:5px;font-size:12.5px;font-weight:700;border:1.5px solid var(--ctl-line);background:var(--ctl-bg);color:#fff;white-space:nowrap}
+  body header .theme-pill svg{width:15px;height:15px}
+  body header .theme-pill.active{border-color:var(--rail-accent,#fff);background:var(--ctl-bg-hover)}
+  .theme-pill .tp-lbl{display:inline}
 }
-@media (prefers-reduced-motion:reduce){#subject-bar,.menu-bars i{transition:none}}
+
+/* ---------- بحث + تبويبات ---------- */
+.search-box{position:relative;margin-bottom:18px}
+.search-box .search-ic{position:absolute;inset-inline-start:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--accent);pointer-events:none}
+.search-input{padding:15px 48px;border-radius:16px;font-size:16px;background:var(--bg-card);border:1px solid var(--border)}
+.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--show-score-shadow)}
+.container{max-width:1160px;margin:14px auto 20px}
+#main-view.content-section{background:transparent;box-shadow:none;padding:0}
+.tabs{justify-content:flex-start;gap:8px;margin:0 0 18px}
+.tab-button{background:transparent;color:var(--text-secondary);border:2px solid transparent;border-radius:14px;padding:13px 34px;min-width:150px;font-size:18px;font-weight:700;transition:background .2s,color .2s}
+.tab-button:hover{background:var(--ctl-bg);color:var(--text-heading)}
+.tab-button.active,.tab-button.active:hover{background:var(--tab-active-bg,var(--accent));color:#fff;box-shadow:0 8px 22px var(--show-score-shadow)}
+.tab-pre{display:none}
+#section1.content-section,#section2.content-section{padding:28px 26px 22px;border-radius:24px;background:var(--bg-content);border:1px solid var(--border);box-shadow:none}
+#section1>h2,#section2 h2{font-size:28px;margin:6px 0 8px;color:var(--text-heading)}
+#section1>p{margin:0 0 20px;font-size:15px;line-height:1.8}
+@media (max-width:640px){
+  .container{margin:10px auto;padding:0 10px 40px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .tab-button{min-width:0;padding:15px 6px;font-size:15px;border-color:var(--border);border-radius:16px}
+  .tab-button.active{border-color:transparent}
+  .tab-pre{display:inline}
+  #section1.content-section,#section2.content-section{padding:18px 14px 14px;border-radius:20px}
+  #section1>h2,#section2 h2{font-size:26px}
+}
+
+/* ---------- كروت المحاضرات ---------- */
+.card{border-radius:16px;padding:18px 22px;gap:14px}
+.card:hover{transform:translateX(-4px)}
+.card-text h3{font-size:18px;line-height:1.6}
+.badge.new{background:color-mix(in srgb,var(--text-hint) 40%,transparent);color:var(--text-heading);opacity:1}
+.card-foot{display:contents}
+.card-chips{display:none}
+.card-chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--text-secondary);white-space:nowrap}
+.card-chip.ok{color:#2fbf9f}
+@media (max-width:640px){
+  .card{flex-direction:column;align-items:stretch;padding:18px 16px;gap:12px}
+  .card-text{min-width:0}
+  .card-text h3{font-size:19px}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%}
+  .card-chips{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+}
+
+/* ---------- الفوتر ---------- */
+body{padding-bottom:calc(var(--foot-h,58px) + 24px)}
+body.footer-hidden{padding-bottom:0}
+#site-footer{padding:10px 20px;border-top:1px solid var(--rail-line)}
+.footer-help-btn{padding:10px 20px;font-size:14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.24)}
+.footer-center{font-size:13px}
+.footer-powered{font-size:12px}
+@media (min-width:900px){
+  .footer-inner{position:relative;min-height:40px;max-width:none}
+  .footer-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;white-space:nowrap;pointer-events:none}
+}
+@media (max-width:640px){
+  body{padding-bottom:calc(var(--foot-h,110px) + 16px)}
+  #site-footer{padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))}
+  .footer-help-btn{padding:11px 14px;font-size:14px}
+}
+#pdf-sec,.qs-section,.exam-qcard{scroll-margin-top:20px}
+
+/* ---------- نموذج الاقتراحات: لا مسافة فاضية تحت زرار الإرسال ----------
+   السبب: القاعدة العامة iframe{width:100%;height:600px} كانت بتكبّر iframe بتاع
+   reCAPTCHA (اللي حجمه بييجي من width/height attributes) لـ 600px، فبيطلع سكرول فاضي
+   تحت الزرار — وده بيحصل بس لما الـ reCAPTCHA يشتغل. هنا بنثبّت حجمه 304×78. */
+.fb-modal-dialog{height:auto;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px)}
+.fb-modal-dialog #fb-status{margin:2px 0 0}
+.fb-modal-dialog #fb-status:empty{display:none}
+.fb-recaptcha-wrap{display:flex;justify-content:center;flex:0 0 auto;height:78px;margin:12px 0 8px;overflow:hidden}
+.fb-recaptcha-wrap #fb-recaptcha-box{width:304px;height:78px;flex:0 0 304px}
+.fb-recaptcha-wrap iframe{width:304px!important;height:78px!important;max-width:none!important;border:0}
+.fb-recaptcha-wrap textarea{display:none!important}
+@media (max-width:400px){.fb-recaptcha-wrap{zoom:.85}}
+@media (prefers-reduced-motion:reduce){#subject-bar,.menu-bars i,.menu-btn{transition:none!important}}
+
+/* قوائم الاختيار (select): خلفية ونص واضحين في كل الثيمات (الغامق كان أبيض على أبيض على الكمبيوتر) */
+html[data-theme="night"]{color-scheme:dark}
+select{color-scheme:inherit}
+select option,select optgroup{background-color:var(--bg-card,#fff);color:var(--text-primary,#000)}
+select option:checked,select option:hover{background-color:var(--accent);color:#fff}
+select option:disabled{color:var(--text-hint)}
+/* زرار تثبيت مكرر (من pwa.js) */
+.dup-install{display:none!important}
+/* زرار إغلاق واحد بس: زرار القائمة (☰ → ✕) بيطلع فوق القايمة في الموبايل */
+#subject-bar .nav-close{display:none!important}
+@media (max-width:640px){
+  body.menu-open .menu-btn{position:fixed!important;top:14px!important;right:calc(min(86vw,304px) - 44px - 14px)!important;left:auto!important;width:44px!important;height:44px!important;z-index:3100!important;background:rgba(255,255,255,.18)!important;border:0!important;color:#fff!important;box-shadow:none!important}
+  body.menu-open .menu-btn .menu-bars{width:18px}
+}
 </style>
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z2v353uvbp");
+</script>
+
 </head>
 <body>
 
@@ -1258,22 +1348,23 @@ body.menu-open #subject-bar{visibility:visible;opacity:1;transition:opacity .22s
     <script>try{var __t=localStorage.getItem("mainTitle");if(__t)document.getElementById("main-title").textContent=__t}catch(e){}</script>
     <button type="button" id="menu-btn" class="menu-btn" aria-label="القائمة: الأقسام والمواد" aria-controls="subject-bar" aria-expanded="false"><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-lbl">القائمة</span></button>
     <div class="header-row">
-        <div class="theme-controls" id="theme-controls">
-            <button class="theme-pill" data-mode="noon" onclick="setThemeMode('noon')">☀️ فاتح</button>
-            <button class="theme-pill" data-mode="night" onclick="setThemeMode('night')">🌙 غامق</button>
-            <button class="theme-pill" data-mode="auto" onclick="setThemeMode('auto')">🔄 تلقائي</button>
-        </div>
-        <div class="notif-bell-wrap" id="notif-bell-wrap" onclick="toggleNotifDropdown()">
-            <span class="notif-bell">🔔</span>
+        <div class="notif-bell-wrap" id="notif-bell-wrap" onclick="toggleNotifDropdown()" role="button" tabindex="0" aria-label="الإشعارات" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleNotifDropdown()}">
+            <span class="notif-bell" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10.3 20a1.9 1.9 0 0 0 3.4 0"/></svg></span>
             <span class="notif-badge" id="notif-badge">0</span>
             <div class="notif-dropdown" id="notif-dropdown">
                 <h4>🔔 مركز الإشعارات <button class="notif-clear" onclick="clearAllNotifications(event)">مسح الكل</button></h4>
                 <div id="notif-list"><div class="notif-empty">لا توجد إشعارات حالياً</div></div>
             </div>
         </div>
+        <div class="theme-controls" id="theme-controls" role="group" aria-label="مظهر الصفحة">
+            <button class="theme-pill" data-mode="noon" onclick="setThemeMode('noon')" title="فاتح" aria-label="فاتح"><span class="tp-ic">☀️</span><span class="tp-lbl">فاتح</span></button>
+            <button class="theme-pill" data-mode="night" onclick="setThemeMode('night')" title="غامق" aria-label="غامق"><span class="tp-ic">🌙</span><span class="tp-lbl">غامق</span></button>
+            <button class="theme-pill" data-mode="auto" onclick="setThemeMode('auto')" title="تلقائي" aria-label="تلقائي"><span class="tp-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></span><span class="tp-lbl">تلقائي</span></button>
+        </div>
         <div class="hdr-tools">
-            <button class="hdr-icon-btn" onclick="exportProgress()" title="💾 نسخة احتياطية (تصدير)">💾</button>
-            <button class="hdr-icon-btn" onclick="document.getElementById('import-file').click()" title="📂 استيراد نسخة احتياطية">📂</button>
+            <button type="button" class="hdr-icon-btn hdr-install" id="install-btn" onclick="installApp()" title="ثبّت التطبيق" aria-label="ثبّت التطبيق" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg><span class="hdr-lbl">ثبّت التطبيق</span></button>
+            <button class="hdr-icon-btn" onclick="exportProgress()" title="💾 نسخة احتياطية (تصدير)" aria-label="نسخة احتياطية (تصدير)">💾</button>
+            <button class="hdr-icon-btn" onclick="document.getElementById('import-file').click()" title="📂 استيراد نسخة احتياطية" aria-label="استيراد نسخة احتياطية">📂</button>
         </div>
     </div>
 </header>
@@ -1291,14 +1382,15 @@ body.menu-open #subject-bar{visibility:visible;opacity:1;transition:opacity .22s
     <div class="container">
         <div id="main-view" class="content-section active">
             <div class="search-box">
-                <input type="text" class="search-input" id="search-input" dir="auto" placeholder="🔍 ابحثي في المحاضرات والأسئلة..." oninput="doSearch()">
+                <svg class="search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input type="text" class="search-input" id="search-input" dir="auto" placeholder="ابحث في المحاضرات والأسئلة..." aria-label="بحث في المحاضرات والأسئلة" oninput="doSearch()">
                 <button class="search-clear" id="search-clear" onclick="clearSearch()" title="مسح البحث">✕</button>
             </div>
             <div class="search-results" id="search-results"></div>
 
             <div class="tabs">
-                <button class="tab-button active" onclick="openTab(event, 'section1')">القسم الأول: المحاضرات</button>
-                <button class="tab-button" onclick="openTab(event, 'section2')">القسم الثاني: الأسئلة</button>
+                <button class="tab-button active" onclick="openTab(event, 'section1')"><span class="tab-pre">القسم الأول: </span>المحاضرات</button>
+                <button class="tab-button" onclick="openTab(event, 'section2')"><span class="tab-pre">القسم الثاني: </span>الأسئلة</button>
             </div>
             <div id="section1" class="content-section active">
                 <h2>المحاضرات</h2>
@@ -1368,6 +1460,20 @@ body.menu-open #subject-bar{visibility:visible;opacity:1;transition:opacity .22s
                     <div id="ld-summary-attach"></div>
                     <div class="sum-actions" id="ld-summary-actions"><button class="btn-sm" id="ld-summary-toggle" type="button" onclick="toggleSummaryText()" aria-expanded="false">📖 قراءة الملخص نصيًا</button></div>
                     <p class="sum-text" id="ld-summary-text" hidden></p>
+                </div>
+            </div>
+
+            <div class="ld-section" id="ld-transcript" style="display:none">
+                <div class="ld-header" onclick="toggleTranscript()" title="فتح / إغلاق القسم">
+                    <span class="ld-num">3</span>
+                    <span class="ld-title">🎙️ تفريغ صوت المحاضرة</span>
+                    <span class="ld-chip" id="ld-transcript-chip"></span>
+                    <span class="ld-arrow">▶</span>
+                </div>
+                <div class="ld-body">
+                    <div id="ld-transcript-attach"></div>
+                    <div class="sum-actions" id="ld-transcript-actions"><button class="btn-sm" id="ld-transcript-toggle" type="button" onclick="toggleTranscriptText()" aria-expanded="false">📖 قراءة التفريغ نصيًا</button></div>
+                    <p class="sum-text" id="ld-transcript-text" hidden></p>
                 </div>
             </div>
 
