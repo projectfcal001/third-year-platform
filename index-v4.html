@@ -1692,9 +1692,8 @@ select option:disabled{color:var(--text-hint)}
 
 <div class="toast" id="toast"></div>
 <script>
-/* تحميل متأخر لـ pwa.js و Vercel Insights (بعد load + تأخير + idle) */
+/* تحميل متأخر لـ pwa.js فقط (تم إزالة Vercel Insights نهائياً) */
 (function(){
-  window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};
   function later(ms,fn){
     function go(){ if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:1500}); else fn(); }
     function start(){ setTimeout(go,ms); }
@@ -1704,8 +1703,9 @@ select option:disabled{color:var(--text-hint)}
   later(1200,function(){
     add('pwa.js');
   });
-  later(3000,function(){ add('/_vercel/insights/script.js'); });
 })();
 </script>
+
+
 </body>
 </html>
