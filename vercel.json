@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/clarity-script.js",
+      "destination": "https://www.clarity.ms/tag/z2v353uvbp"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
