@@ -1813,5 +1813,981 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "os-lecture-03",
+      t: "المحاضرة 3 — Chapter 3: Processes",
+      d: "مفهوم الـ Process وحالاته وPCB والـ Schedulers والـ Context Switch وعمليات الإنشاء والإنهاء والتواصل بين العمليات (IPC).",
+      pdf: "datenew/subjects/operating-systems/lectures/ch3 Processes-1-25_compressed.pdf",
+      pdf2: "datenew/subjects/operating-systems/questions/Questions on each lecture/Lecture-03-Questions.pdf",
+      // المحاضرة: Chapter 3 - Processes (Operating System Concepts, Silberschatz) — Process Concept, States, PCB, Scheduling Queues, Schedulers, Context Switch, Process Creation/Termination, Cooperating Processes, IPC
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمفاهيم العمليات (Processes) في أنظمة التشغيل: حالات العملية، PCB، الجدولة، والـ IPC.",
+          links: [
+            {
+              t: "ما هو Process في نظام التشغيل؟ شرح بالعربي",
+              d: "فيديو عربي يشرح مفهوم العملية (Process) في نظام التشغيل والمكونات الأساسية ليها زي Program Counter و Stack و Data Section و Heap. مرتبط مباشرة بقسم Process Concept في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=0Dzw7BQ_hmU",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح Processes ببساطة في نظام التشغيل",
+              d: "شرح مبسط للعمليات (Processes) في نظام التشغيل، بيغطي حالات العملية (States) وآلية إنشائها وإنهائها. مفيد لفهم أقسام Process State و Operations on Processes في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=ykzFTxGdRTo",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "كورس أنظمة التشغيل باللغة العربية",
+              d: "Playlist كامل لأنظمة التشغيل بالعربي، بيغطي Processes و Process States وكل مفاهيم المحاضرة. منصة تعليمية عربية شاملة للطلبة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ فتح الـ Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLHKTPL-jkzUqgHIBdC2I16QqZCSDN_6oS",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "نظم التشغيل - Operating Systems (بالعربي)",
+              d: "Playlist شامل لنظم التشغيل باللغة العربية من د. أحمد حجاج، بيغطي العمليات والجدولة وإدارة الذاكرة. مرتبط بكل أقسام المحاضرة ومفيد كمرجع عربي متكامل.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ فتح الـ Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "شرح بالإنجليزي لمفاهيم المحاضرة من قناة Neso Academy التعليمية الشهيرة في أنظمة التشغيل.",
+          links: [
+            {
+              t: "Processes — Chapter 3 (Operating System) — Neso Academy",
+              d: "Playlist كامل من Neso Academy عن Chapter 3: Processes، بيغطي Process Concept و States و PCB و Scheduling Queues و Schedulers و Context Switch. ده المرجع الأساسي المطابق للمحاضرة بالظبط.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Open Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgKl0MbI6kbI5ffNt7BF8Fn",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Operating System — Full Course (Neso Academy)",
+              d: "الكورس الكامل لأنظمة التشغيل من Neso Academy، فيه Chapter 3: Processes بـ 15 محاضرة. كل المحتوى متطابق مع فصول كتاب Silberschatz اللي المحاضرة مبنية عليه.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 Visit Course Page",
+                  url: "https://www.nesoacademy.org/cs/03-operating-system",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Operating System — Neso Academy Channel Playlist",
+              d: "الـ Playlist الكامل لقناة Neso Academy عن أنظمة التشغيل، فيه شروحات لكل فصول الكتاب بما فيها Process Management و CPU Scheduling. مناسب لمراجعة سريعة قبل الامتحان.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Open Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "CPU Scheduling — Chapter 5 (Operating System)",
+              d: "Playlist من Neso Academy عن CPU Scheduling، مكمل لقسم Schedulers في المحاضرة. بيشرح الفرق بين Long-term و Short-term Scheduler وأنواع الجدولة بتفصيل أكبر.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Open Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLBlnK6fEyqRitWSE_AyyySWfhRgyA-rHk",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات ومراجع تعليمية بالعربي والإنجليزي تشرح كل مفاهيم المحاضرة بالتفصيل مع الرسومات التوضيحية.",
+          links: [
+            {
+              t: "States of a Process in Operating Systems — GeeksforGeeks",
+              d: "مقال شامل عن حالات العملية الخمس (new, ready, running, waiting, terminated) والانتقالات بينها. مرتبط مباشرة بقسم Process State في المحاضرة وفيه رسمة الـ state diagram.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/states-of-a-process-in-operating-systems",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Process Control Block (PCB) in OS — GeeksforGeeks",
+              d: "شرح تفصيلي للـ PCB ومكوناته: Process State و PC و CPU Registers و Scheduling Information و Memory Management Info و Accounting Info و I/O Status. مرتبط بقسم PCB في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/process-control-block-in-os",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Process Control Block — Wikipedia",
+              d: "مقال Wikipedia موثوق عن PCB، يشرح دوره في إدارة العمليات و Context Switch وبنيته (Process Identification + Process State + Process Control). مرجع أكاديمي شامل.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://en.wikipedia.org/wiki/Process_control_block",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Types of Scheduling Queues — GeeksforGeeks",
+              d: "شرح أنواع طوابير الجدولة: Job Queue و Ready Queue و Device Queue وكيف العمليات بتهاجر بينهم. مرتبط بقسم Process Scheduling Queues في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/types-of-scheduling-queues",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Difference between Long-Term and Short-Term Scheduler — GeeksforGeeks",
+              d: "مقال بيقارن بين Long-term و Short-term Scheduler، بيوضح إن Long-term بيتحكم في الـ degree of multiprogramming و Short-term بينفذ الـ CPU scheduling. مرتبط مباشرة بقسم Schedulers.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/difference-between-long-term-and-short-term-scheduler",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Context Switching in Operating System — GeeksforGeeks",
+              d: "شرح الـ Context Switching والـ overhead المرتبط بيه واعتماده على hardware support. مرتبط بقسم Context Switch في المحاضرة وبيوضح ليه الوقت ده considered overhead.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/context-switch-in-operating-system",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Inter Process Communication (IPC) — GeeksforGeeks",
+              d: "شرح الـ IPC والنموذجين الأساسيين: Shared Memory (أسرع، للبيانات الكبيرة) و Message Passing (أبطأ، للبيانات الصغيرة). مرتبط بقسم Cooperating Processes و IPC في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Process Creation and Deletions in Operating Systems — GeeksforGeeks",
+              d: "شرح إنشاء العمليات (Process Creation) من الـ parent و الـ child وإنهائها (Process Termination) ومفهوم Cascading Termination. مرتبط بقسم Operations on Processes في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/operating-systems/process-creation-and-deletions-in-operating-systems",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "الفصل الثاني: العمليات (Processes) في أنظمة التشغيل — حسوب",
+              d: "مقال عربي من أكاديمية حسوب يشرح العمليات (Processes) في أنظمة التشغيل، بيتناول التجريد والعزل ومكونات العملية. مرتبط بقسم Process Concept ومرجع عربي ممتاز.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://academy.hsoub.com/programming/c/%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA-processes-%D9%81%D9%8A-%D8%A3%D9%86%D8%B8%D9%85%D8%A9-%D8%A7%D9%84%D8%AA%D8%B4%D8%BA%D9%8A%D9%84-r977",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "التواصل بين العمليات (IPC) — ويكيبيديا العربية",
+              d: "مقال ويكيبيديا بالعربي عن الـ Interprocess Communication (IPC)، بيشرح آليات التواصل بين العمليات ومشاركة البيانات. مرتبط بقسم Cooperating Processes و IPC في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84_%D8%A8%D9%8A%D9%86_%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "تبديل السياق (Context Switch) — ويكيبيديا العربية",
+              d: "مقال ويكيبيديا بالعربي عن تبديل السياق (Context Switch)، بيشرح آلية حفظ حالة العملية واسترجاعها في تعدد المهام. مرتبط بقسم Context Switch في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://ar.wikipedia.org/wiki/%D8%AA%D8%A8%D8%AF%D9%8A%D9%84_%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D9%82",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومحاكاة لتجربة مفاهيم المحاضرة: حالات العمليات، PCB، وجدولة الـ CPU بشكل مرئي.",
+          links: [
+            {
+              t: "OS Simulator — Process Management Visualization",
+              d: "محاكي تفاعلي للعمليات بيعرض العمليات في حالاتها (running, ready, waiting) مع PCB مستقل لكل عملية فيه معلومات حالتها. ممتاز لفهم Process State و PCB و Scheduling Queues بشكل بصري.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح المحاكي",
+                  url: "https://teach-sim.com/os",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Process Scheduling Solver",
+              d: "أداة تفاعلية لحل مسائل جدولة العمليات بـ Gantt Chart، تقدر تدخل Arrival Time و Burst Time وتشوف النتائج. مفيد لفهم عملي لـ Ready Queue و Short-term Scheduler.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://process-scheduling-solver.boonsuen.com",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "CPU Scheduling Simulator",
+              d: "محاكي تفاعلي لخوارزميات جدولة الـ CPU (FCFS, SJF, RR, Priority) مع Step-by-Step Mode و Gantt Chart و Performance Metrics. مرتبط بمفاهيم Schedulers و Context Switch في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح المحاكي",
+                  url: "https://smartcpuscheduler.com",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "CPU Scheduling Algorithm Calculator",
+              d: "حاسبة لخوارزميات جدولة الـ CPU تحسب Average Turnaround Time و Waiting Time و Throughput لخوارزميات مختلفة (FCFS, SJF, SRTF, Priority, Round Robin). مفيد لفهم تأثير الـ schedulers على الأداء.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://www.algorithmroom.com/calculator/process-scheduling",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. What is a process?",
+          options: [
+            "A program stored on the hard disk",
+            "A set of jobs sent to the operating system for execution",
+            "A program in execution",
+            "A table that stores information about a program",
+          ],
+          correct: 2,
+          translation: "ما هو الـ process؟",
+          explanation:
+            "الـ process هو برنامج قيد التنفيذ (a program in execution) وتنفيذه لازم يتقدم بشكل تسلسلي. البرنامج المخزن على القرص مش process، والـ jobs مفهوم الـ batch system، والجدول ده الـ PCB.",
+          tags: ["Process Concept"],
+          ref: "Lecture 3 — Slide: Process Concept",
+          likely: "high",
+        },
+        {
+          q: "2. Which option correctly lists what a process includes?",
+          options: [
+            "Program counter, stack, data section, and heap",
+            "Program counter, ready queue, data section, and PCB",
+            "Stack, job pool, heap, and scheduler",
+            "PCB, device queue, stack, and context switch",
+          ],
+          correct: 0,
+          translation: "أي اختيار يعرض بشكل صحيح ما يتضمنه الـ process؟",
+          explanation:
+            "الـ process بيتضمن program counter وstack وdata section وheap. الباقي (queues وPCB وscheduler وcontext switch) مفاهيم إدارة العمليات مش مكونات الـ process نفسه.",
+          tags: ["Process Concept", "Process in Memory"],
+          ref: "Lecture 3 — Slides: Process Concept / Process in Memory",
+          likely: "high",
+        },
+        {
+          q: "3. Which part of a process contains the global variables?",
+          options: ["Stack", "Heap", "Program counter", "Data section"],
+          correct: 3,
+          translation:
+            "أي جزء من الـ process يحتوي على المتغيرات العامة (global variables)؟",
+          explanation:
+            "الـ data section هو اللي فيه الـ global variables. الـ stack فيه البيانات المؤقتة (متغيرات محلية وبارامترات الدوال)، والـ heap ذاكرة بتتحجز وقت التشغيل، والـ program counter بيشاور على النشاط الحالي.",
+          tags: ["Process in Memory", "Data Section"],
+          ref: "Lecture 3 — Slide: Process Concept",
+          likely: "high",
+        },
+        {
+          q: "4. What does the ready state mean?",
+          options: [
+            "Instructions are being executed",
+            "The process is waiting to be assigned to a processor",
+            "The process is waiting for some event to occur",
+            "The process is being created",
+          ],
+          correct: 1,
+          translation: "ماذا تعني حالة ready؟",
+          explanation:
+            "الـ ready معناها العملية مستنية تتخصص لها معالج (CPU). الأولى هي running، والثالثة waiting، والرابعة new.",
+          tags: ["Process State"],
+          ref: "Lecture 3 — Slide: Process State",
+          likely: "high",
+        },
+        {
+          q: "5. In the process state diagram, which event moves a process from the running state back to the ready state?",
+          options: [
+            "Interrupt",
+            "Scheduler dispatch",
+            "I/O or event completion",
+            "Admitted",
+          ],
+          correct: 0,
+          translation:
+            "في مخطط حالات الـ process، أي حدث ينقل العملية من running إلى ready؟",
+          explanation:
+            "الـ interrupt بيرجّع العملية من running لـ ready. الـ scheduler dispatch من ready لـ running، والـ I/O or event completion من waiting لـ ready، والـ admitted من new لـ ready.",
+          tags: ["Process State", "State Diagram"],
+          ref: "Lecture 3 — Slide: Diagram of Process State",
+          likely: "high",
+        },
+        {
+          q: "6. In the process state diagram, which event moves a process from the ready state to the running state?",
+          options: [
+            "Admitted",
+            "Exit",
+            "Scheduler dispatch",
+            "I/O or event wait",
+          ],
+          correct: 2,
+          translation:
+            "في مخطط حالات الـ process، أي حدث ينقل العملية من ready إلى running؟",
+          explanation:
+            "الـ scheduler dispatch هو اختيار الـ CPU scheduler للعملية من الـ ready queue. الـ admitted من new لـ ready، والـ exit من running لـ terminated، والـ I/O or event wait من running لـ waiting.",
+          tags: ["Process State", "State Diagram"],
+          ref: "Lecture 3 — Slide: Diagram of Process State",
+          likely: "high",
+        },
+        {
+          q: "7. In the process state diagram, which event moves a process from the running state to the waiting state?",
+          options: [
+            "Admitted",
+            "Interrupt",
+            "I/O or event completion",
+            "I/O or event wait",
+          ],
+          correct: 3,
+          translation:
+            "في مخطط حالات الـ process، أي حدث ينقل العملية من running إلى waiting؟",
+          explanation:
+            "لما العملية تطلب I/O أو تستنى حدث بتتحول من running لـ waiting (I/O or event wait). الـ I/O or event completion بيعمل العكس: بيرجّعها من waiting لـ ready.",
+          tags: ["Process State", "State Diagram"],
+          ref: "Lecture 3 — Slide: Diagram of Process State",
+          likely: "high",
+        },
+        {
+          q: "8. How is each process represented in the operating system?",
+          options: [
+            "By an entry in the job pool",
+            "By a process control block (PCB)",
+            "By the header of the ready queue",
+            "By the program counter register",
+          ],
+          correct: 1,
+          translation: "كيف يتم تمثيل كل process داخل نظام التشغيل؟",
+          explanation:
+            "كل process بيتمثل في الـ OS بـ PCB (ويسمى كمان task control block). الـ job pool هو مكان تخزين كل العمليات على القرص، والـ program counter مجرد حقل واحد جوه الـ PCB.",
+          tags: ["PCB"],
+          ref: "Lecture 3 — Slide: Process Control Block (PCB)",
+          likely: "high",
+        },
+        {
+          q: "9. Which PCB field stores the process priority?",
+          options: [
+            "CPU scheduling information",
+            "Memory-management information",
+            "Accounting information",
+            "I/O status information",
+          ],
+          correct: 0,
+          translation: "أي حقل في الـ PCB يخزن أولوية الـ process؟",
+          explanation:
+            "الـ CPU scheduling information فيها كل البارامترات المتعلقة بالجدولة زي الـ priority. الـ memory-management فيها قيم base وlimit، والـ accounting فيها استهلاك الـ CPU والحدود الزمنية، والـ I/O status فيها الأجهزة والملفات المفتوحة.",
+          tags: ["PCB", "CPU Scheduling Information"],
+          ref: "Lecture 3 — Slide: Process Control Block (PCB)",
+          likely: "high",
+        },
+        {
+          q: "10. What is the job of the long-term scheduler (job scheduler)?",
+          options: [
+            "To select which process in the ready queue executes next",
+            "To swap processes out of memory to reduce multiprogramming",
+            "To select which processes are brought from the job pool into the ready queue in main memory",
+            "To save the state of the old process and load the state of the new one",
+          ],
+          correct: 2,
+          translation: "ما وظيفة الـ long-term scheduler (job scheduler)؟",
+          explanation:
+            "الـ long-term scheduler بيختار العمليات اللي هتتنقل من الـ job pool (على القرص) للـ ready queue في الذاكرة الرئيسية، وبيتحكم في degree of multiprogramming. الأولى للـ short-term، والثانية للـ medium-term، والرابعة هي الـ context switch.",
+          tags: ["Schedulers", "Long-Term Scheduler"],
+          ref: "Lecture 3 — Slide: Schedulers",
+          likely: "high",
+        },
+        {
+          q: "11. What is the job of the short-term scheduler (CPU scheduler)?",
+          options: [
+            "To control the degree of multiprogramming",
+            "To select which process in the ready queue should be executed next and allocate the CPU to it",
+            "To bring new jobs from the hard disk to main memory",
+            "To swap processes in and out of memory",
+          ],
+          correct: 1,
+          translation: "ما وظيفة الـ short-term scheduler (CPU scheduler)؟",
+          explanation:
+            "الـ short-term scheduler بيختار العملية الجاية من الـ ready queue ويدّيها الـ CPU. التحكم في degree of multiprogramming وجلب jobs من القرص وظيفة الـ long-term، والـ swapping للـ medium-term.",
+          tags: ["Schedulers", "Short-Term Scheduler"],
+          ref: "Lecture 3 — Slide: Schedulers",
+          likely: "high",
+        },
+        {
+          q: "12. According to the lecture, what is the main difference between the long-term and the short-term scheduler?",
+          options: [
+            "The type of memory they use",
+            "The number of processes they create",
+            "The type of I/O devices they manage",
+            "How frequently they are invoked (time)",
+          ],
+          correct: 3,
+          translation:
+            "حسب المحاضرة، ما الفرق الرئيسي بين الـ long-term والـ short-term scheduler؟",
+          explanation:
+            "الفرق الرئيسي هو الزمن: الـ short-term بيتنفذ كل حوالي 100 ملي ثانية ولازم يكون سريع، والـ long-term بياخد ثواني أو دقايق وممكن يكون بطيء. الاختيارات التانية مش ذكرتها المحاضرة كفرق.",
+          tags: ["Schedulers", "Long-Term vs Short-Term"],
+          ref: "Lecture 3 — Slides: Schedulers / Schedulers (Cont.)",
+          likely: "high",
+        },
+        {
+          q: "13. What is the idea behind medium-term scheduling?",
+          options: [
+            "To control the degree of multiprogramming by swapping processes out and in",
+            "To select the next process for the CPU every 100 milliseconds",
+            "To create child processes from parent processes",
+            "To increase the number of CPU registers saved on an interrupt",
+          ],
+          correct: 0,
+          translation: "ما فكرة الـ medium-term scheduling؟",
+          explanation:
+            "الـ medium-term scheduler بيستخدم الـ swap لزيادة أو تقليل عدد العمليات فيتحكم في degree of multiprogramming في أنظمة الـ time-sharing. الباقي وظايف الـ short-term أو إنشاء العمليات.",
+          tags: ["Schedulers", "Medium-Term Scheduler", "Swapping"],
+          ref: "Lecture 3 — Slide: Addition of Medium Term Scheduling",
+          likely: "high",
+        },
+        {
+          q: "14. Which description matches an I/O-bound process?",
+          options: [
+            "Spends more time doing computations, with few very long CPU bursts",
+            "Spends no time waiting for I/O devices",
+            "Spends more time doing I/O than computations, with many short CPU bursts",
+            "Stays permanently in the new state",
+          ],
+          correct: 2,
+          translation: "أي وصف يطابق الـ I/O-bound process؟",
+          explanation:
+            "الـ I/O-bound بيقضي وقت في الـ I/O أكتر من الحسابات وعنده CPU bursts قصيرة كتير. الوصف الأول للـ CPU-bound.",
+          tags: ["I/O-Bound", "CPU-Bound"],
+          ref: "Lecture 3 — Slide: Schedulers (Cont.)",
+          likely: "high",
+        },
+        {
+          q: "15. What happens if all processes in the system are I/O-bound?",
+          options: [
+            "The I/O waiting queue will be empty",
+            "The ready queue will be empty",
+            "The job queue will be empty",
+            "The context-switch time will become zero",
+          ],
+          correct: 1,
+          translation: "ماذا يحدث إذا كانت كل العمليات في النظام I/O-bound؟",
+          explanation:
+            "لو كلها I/O-bound فهتقضي وقتها في الانتظار على الأجهزة وبالتالي الـ ready queue هتفضل فاضية تقريبًا. العكس: لو كلها CPU-bound يبقى الـ I/O waiting queue هي اللي تفضى. عشان كده الـ schedulers لازم تختار mix كويس من النوعين.",
+          tags: ["I/O-Bound", "Ready Queue"],
+          ref: "Lecture 3 — Slide: Schedulers (Cont.)",
+          likely: "high",
+        },
+        {
+          q: "16. Why is context-switch time considered overhead?",
+          options: [
+            "Because the CPU runs at a slower speed during the switch",
+            "Because it creates a new child process each time",
+            "Because it deletes the old process from memory",
+            "Because the system does no useful work while switching",
+          ],
+          correct: 3,
+          translation: "لماذا يعتبر زمن الـ context switch overhead؟",
+          explanation:
+            "أثناء الـ context switch النظام بيحفظ حالة العملية القديمة ويحمّل حالة الجديدة ومبيعملش شغل مفيد. والزمن بيعتمد على دعم الـ hardware. الاختيارات التانية مش وصف صحيح للـ context switch.",
+          tags: ["Context Switch"],
+          ref: "Lecture 3 — Slide: Context Switch",
+          likely: "high",
+        },
+        {
+          q: "17. According to the lecture, which statement correctly compares the two IPC models?",
+          options: [
+            "Shared memory is faster and suits large amounts of data; message passing suits small amounts of data and is slower",
+            "Message passing is faster and suits large amounts of data; shared memory suits small amounts of data",
+            "Both models are equally fast but differ in the type of data",
+            "Shared memory is used only by independent processes",
+          ],
+          correct: 0,
+          translation:
+            "حسب المحاضرة، أي عبارة تقارن بشكل صحيح بين نموذجي الـ IPC؟",
+          explanation:
+            "الـ shared memory أسرع ومناسب لكميات البيانات الكبيرة، والـ message passing للكميات الصغيرة وأبطأ. والـ IPC أصلًا للـ cooperating processes مش independent.",
+          tags: ["IPC", "Shared Memory", "Message Passing"],
+          ref: "Lecture 3 — Slide: Cooperating Processes",
+          likely: "high",
+        },
+        {
+          q: "18. Which statement describes an independent process?",
+          options: [
+            "It can affect or be affected by the execution of another process",
+            "It always shares data through shared memory",
+            "It cannot affect or be affected by the execution of another process",
+            "It is always the parent of other processes",
+          ],
+          correct: 2,
+          translation: "أي عبارة تصف الـ independent process؟",
+          explanation:
+            "الـ independent process لا يؤثر ولا يتأثر بتنفيذ أي process تاني ولا بيشارك بيانات. الأولى هي تعريف الـ cooperating process.",
+          tags: ["Independent Process", "Cooperating Process"],
+          ref: "Lecture 3 — Slide: Cooperating Processes",
+          likely: "high",
+        },
+        {
+          q: "19. What is cascading termination?",
+          options: [
+            "The child process returns its output data to the parent through wait",
+            "The parent process aborts a child that exceeded its allocated resources",
+            "A process asks the operating system to delete it using exit",
+            "When a parent terminates, the OS terminates all its children",
+          ],
+          correct: 3,
+          translation: "ما هو الـ cascading termination؟",
+          explanation:
+            "الـ cascading termination هو إنهاء كل الأبناء بواسطة الـ OS لما الأب يتوقف، لأن بعض أنظمة التشغيل مش بتسمح للابن يكمل بعد انتهاء أبوه. الباقي حالات تانية: wait وabort وexit.",
+          tags: ["Process Termination", "Cascading Termination"],
+          ref: "Lecture 3 — Slide: Process Termination",
+          likely: "high",
+        },
+        {
+          q: "20. When a process executes its last statement, what does it do and what happens next?",
+          options: [
+            "It calls abort and its parent is terminated",
+            "It asks the OS to delete it (exit), its output is passed to the parent via wait, and its resources are deallocated",
+            "It stays in the waiting state until the parent exits",
+            "It is moved to the job pool on the hard disk",
+          ],
+          correct: 1,
+          translation:
+            "عندما ينفذ الـ process آخر جملة فيه، ماذا يفعل وماذا يحدث بعد ذلك؟",
+          explanation:
+            "العملية بتطلب من الـ OS حذفها (exit)، ويتم إرسال بيانات الخرج للأب عن طريق wait، وبعدين الـ OS بيفرّج الموارد. الـ abort بيستخدمه الأب لإنهاء الابن، مش العكس.",
+          tags: ["Process Termination", "exit", "wait"],
+          ref: "Lecture 3 — Slide: Process Termination",
+          likely: "high",
+        },
+        {
+          q: "21. Which of the following is NOT listed as an advantage of process cooperation?",
+          options: [
+            "Reduced context-switch time",
+            "Information sharing",
+            "Computation speed-up",
+            "Modularity",
+          ],
+          correct: 0,
+          translation:
+            "أي مما يلي ليس من مميزات التعاون بين العمليات (process cooperation) المذكورة؟",
+          explanation:
+            "المميزات الأربعة هي: information sharing وcomputation speed-up وmodularity وconvenience. تقليل زمن الـ context switch مش منها.",
+          tags: ["Cooperating Processes", "Advantages"],
+          ref: "Lecture 3 — Slide: Cooperating Processes (advantages)",
+          likely: "high",
+        },
+        {
+          q: "22. What is the heap in a process?",
+          options: [
+            "Memory that contains temporary data such as local variables",
+            "Memory that is dynamically allocated during process run time",
+            "The memory that contains the global variables",
+            "The register that points to the next instruction",
+          ],
+          correct: 1,
+          translation: "ما هو الـ heap في الـ process؟",
+          explanation:
+            "الـ heap ذاكرة بتتحجز ديناميكيًا أثناء تشغيل الـ process. الأولى هي الـ stack، والثالثة الـ data section، والرابعة الـ program counter.",
+          tags: ["Heap", "Process in Memory"],
+          ref: "Lecture 3 — Slide: Process Concept",
+          likely: "medium",
+        },
+        {
+          q: "23. Which queue is the set of all processes residing in main memory that are ready and waiting to execute?",
+          options: [
+            "Job queue",
+            "Device queue",
+            "Ready queue",
+            "Waiting queue of the hard disk",
+          ],
+          correct: 2,
+          translation:
+            "أي queue هي مجموعة كل العمليات الموجودة في الذاكرة الرئيسية الجاهزة والمنتظرة للتنفيذ؟",
+          explanation:
+            "الـ ready queue هي العمليات في الذاكرة الرئيسية الجاهزة للتنفيذ. الـ job queue كل العمليات في النظام (job pool على القرص)، والـ device queues العمليات المنتظرة لجهاز I/O.",
+          tags: ["Scheduling Queues", "Ready Queue"],
+          ref: "Lecture 3 — Slide: Process Scheduling Queues",
+          likely: "medium",
+        },
+        {
+          q: "24. What does a device queue contain?",
+          options: [
+            "All the processes in the system",
+            "Processes in main memory waiting for the CPU",
+            "Processes that have terminated",
+            "Processes waiting for an I/O device",
+          ],
+          correct: 3,
+          translation: "ماذا تحتوي الـ device queue؟",
+          explanation:
+            "الـ device queues فيها العمليات المنتظرة لجهاز I/O. كل العمليات في النظام هي الـ job queue، والمنتظرة للـ CPU هي الـ ready queue.",
+          tags: ["Scheduling Queues", "Device Queue"],
+          ref: "Lecture 3 — Slide: Process Scheduling Queues",
+          likely: "medium",
+        },
+        {
+          q: "25. How is each scheduling queue stored, according to the lecture?",
+          options: [
+            "As a linked list of PCBs, where each PCB points to the next one",
+            "As an array of CPU registers",
+            "As a stack of processes in the hard disk",
+            "As a table of program counters",
+          ],
+          correct: 0,
+          translation: "كيف يتم تخزين كل scheduling queue حسب المحاضرة؟",
+          explanation:
+            "كل queue بتتخزن كـ linked list: رأس الـ ready queue فيه مؤشرات لأول وآخر PCB، وكل PCB فيه حقل مؤشر للـ PCB التالي.",
+          tags: ["Scheduling Queues", "Linked List", "PCB"],
+          ref: "Lecture 3 — Slide: Process Scheduling Queues",
+          likely: "medium",
+        },
+        {
+          q: "26. In terms of execution, which two possibilities exist when a process creates a new process?",
+          options: [
+            "Parent and child share all resources, or share no resources",
+            "Child is a duplicate of the parent, or has a program loaded into it",
+            "Parent and children execute concurrently, or the parent waits until the children terminate",
+            "Parent terminates immediately, or the child terminates immediately",
+          ],
+          correct: 2,
+          translation:
+            "من حيث التنفيذ، ما الاحتمالان عند إنشاء process لـ process جديد؟",
+          explanation:
+            "من حيث التنفيذ: الأب والأبناء ينفذوا بالتوازي (concurrently)، أو الأب يستنى لحد ما الأبناء يخلصوا. الاختيار الأول عن مشاركة الموارد، والثاني عن الـ address space.",
+          tags: ["Process Creation"],
+          ref: "Lecture 3 — Slide: Process Creation",
+          likely: "medium",
+        },
+        {
+          q: "27. Which PCB field includes the list of I/O devices allocated to the process and a list of open files?",
+          options: [
+            "CPU scheduling information",
+            "Memory-management information",
+            "Accounting information",
+            "I/O status information",
+          ],
+          correct: 3,
+          translation:
+            "أي حقل في الـ PCB يحتوي على قائمة أجهزة الـ I/O المخصصة للـ process وقائمة الملفات المفتوحة؟",
+          explanation:
+            "الـ I/O status information بتشمل الأجهزة المخصصة والملفات المفتوحة. الـ accounting فيها استهلاك الـ CPU وأرقام العمليات والحدود الزمنية.",
+          tags: ["PCB", "I/O Status Information"],
+          ref: "Lecture 3 — Slide: Process Control Block (PCB)",
+          likely: "medium",
+        },
+        {
+          q: "28. Which description matches a batch system?",
+          options: [
+            "User programs or tasks are executed simultaneously using CPU scheduling",
+            "A number of jobs are sent for execution, the OS transfers control from one job to the next, and the user does not interact directly with the OS",
+            "The user interacts with every job while it runs",
+            "Processes migrate between queues using swapping only",
+          ],
+          correct: 1,
+          translation: "أي وصف يطابق الـ batch system؟",
+          explanation:
+            "في الـ batch system بيتبعت عدد من الـ jobs والـ OS بينقل التحكم من job للتالي والمستخدم مش بيتفاعل مباشرة مع الـ OS. الوصف الأول للـ time-shared systems.",
+          tags: ["Batch System", "Time-Shared Systems"],
+          ref: "Lecture 3 — Slide: Process Concept",
+          likely: "medium",
+        },
+
+        {
+          type: "essay",
+          q: "1. Define a process and list the components it includes.",
+          translation: "عرّف الـ process واذكر المكونات التي يتضمنها.",
+          answer:
+            "A process is a program in execution; process execution must progress in a sequential fashion.\n" +
+            "A process includes:\n" +
+            "- Program counter: indicates the current activity.\n" +
+            "- Stack: contains temporary data such as local variables and function parameters.\n" +
+            "- Data section: contains global variables.\n" +
+            "- Heap: memory that is dynamically allocated during process run time.",
+          tags: ["Process Concept"],
+          ref: "Lecture 3 — Slide: Process Concept",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Draw and label the process state diagram and explain the five states and the transitions between them.",
+          translation:
+            "ارسم وسمِّ مخطط حالات الـ process واشرح الحالات الخمس والانتقالات بينها.",
+          answer:
+            "States:\n" +
+            "- new: the process is being created.\n" +
+            "- ready: the process is waiting to be assigned to a processor.\n" +
+            "- running: instructions are being executed.\n" +
+            "- waiting: the process is waiting for some event to occur.\n" +
+            "- terminated: the process has finished execution.\n" +
+            "Transitions (as labeled in the diagram):\n" +
+            "- new to ready: admitted.\n" +
+            "- ready to running: scheduler dispatch.\n" +
+            "- running to ready: interrupt.\n" +
+            "- running to waiting: I/O or event wait.\n" +
+            "- waiting to ready: I/O or event completion.\n" +
+            "- running to terminated: exit.",
+          tags: ["Process State", "State Diagram"],
+          ref: "Lecture 3 — Slides: Process State / Diagram of Process State",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. What is a Process Control Block (PCB)? List the information associated with each process.",
+          translation:
+            "ما هو الـ Process Control Block (PCB)؟ اذكر المعلومات المرتبطة بكل process.",
+          answer:
+            "Each process is represented in the OS by a PCB, also known as a task control block. It holds:\n" +
+            "- Process state (ready, running, etc.).\n" +
+            "- Program counter: the address of the next instruction to be executed.\n" +
+            "- CPU registers: their information must be stored when an interrupt occurs so the process can continue correctly afterward.\n" +
+            "- CPU scheduling information: parameters such as process priority.\n" +
+            "- Memory-management information: such as the values of the base and limit registers.\n" +
+            "- Accounting information: amount of CPU used, process numbers, time limits.\n" +
+            "- I/O status information: I/O devices allocated to the process, list of open files.",
+          tags: ["PCB"],
+          ref: "Lecture 3 — Slides: Process Control Block (PCB)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Compare the long-term, short-term, and medium-term schedulers.",
+          translation:
+            "قارن بين الـ long-term والـ short-term والـ medium-term schedulers.",
+          answer:
+            "Long-term scheduler (job scheduler): selects which processes are brought from the job pool on the hard disk into the ready queue in main memory. It controls the degree of multiprogramming (the number of processes in memory). It is invoked very infrequently (seconds, minutes), may be slow, and could take minutes to bring a new job into memory.\n" +
+            "Short-term scheduler (CPU scheduler): selects which process in the ready queue should be executed next and allocates the CPU. It is invoked very frequently (milliseconds, about once every 100 ms), so it must be fast.\n" +
+            "Medium-term scheduler: uses swapping to reduce or increase the number of processes in memory, controlling the degree of multiprogramming in time-sharing systems.\n" +
+            "Main difference between long-term and short-term: time (how often they are invoked).",
+          tags: ["Schedulers"],
+          ref: "Lecture 3 — Slides: Schedulers / Medium Term Scheduling / Schedulers (Cont.)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Compare I/O-bound and CPU-bound processes. Why should the schedulers choose a good mix of both?",
+          translation:
+            "قارن بين الـ I/O-bound والـ CPU-bound processes. ولماذا يجب أن تختار الـ schedulers خليطًا جيدًا من النوعين؟",
+          answer:
+            "I/O-bound process: spends more time doing I/O than computations; has many short CPU bursts.\n" +
+            "CPU-bound process: spends more time doing computations; has few very long CPU bursts.\n" +
+            "Why a good mix: if all processes are I/O-bound, the ready queue will be empty (the CPU is idle). If all processes are CPU-bound, the I/O waiting queue will be empty (the I/O devices are idle). A good mix keeps both the CPU and the I/O devices busy.",
+          tags: ["I/O-Bound", "CPU-Bound", "Schedulers"],
+          ref: "Lecture 3 — Slide: Schedulers (Cont.)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. What is a context switch? Why is it considered overhead?",
+          translation: "ما هو الـ context switch؟ ولماذا يعتبر overhead؟",
+          answer:
+            "When the CPU switches to another process, the system must save the state of the old process and load the saved state for the new process. This is a context switch (the state is kept in the PCB).\n" +
+            "Context-switch time is overhead because the system does no useful work while switching. Its time depends on hardware support.",
+          tags: ["Context Switch", "PCB"],
+          ref: "Lecture 3 — Slides: Context Switch / CPU Switch From Process to Process",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Describe the process scheduling queues and how they are stored.",
+          translation:
+            "صف طوابير جدولة العمليات (scheduling queues) وكيف يتم تخزينها.",
+          answer:
+            "- Job queue: the set of all processes in the system, stored in the job pool (on the hard disk).\n" +
+            "- Ready queue: the set of all processes residing in main memory, ready and waiting to execute.\n" +
+            "- Device queues: the set of processes waiting for an I/O device.\n" +
+            "Processes migrate among the various queues during their lifetime.\n" +
+            "Each queue is stored as a linked list: the ready queue header contains pointers to the first and final PCBs in the list, and each PCB includes a pointer field that points to the next PCB in the queue.",
+          tags: ["Scheduling Queues", "Linked List"],
+          ref: "Lecture 3 — Slides: Process Scheduling Queues / Ready Queue And Various I/O Device Queues",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Explain process creation and the possibilities that exist when a process creates a new process.",
+          translation:
+            "اشرح إنشاء العمليات (process creation) والاحتمالات الموجودة عندما ينشئ process آخر جديدًا.",
+          answer:
+            "A parent process creates children processes, which in turn create other processes, forming a tree of processes.\n" +
+            "Possibilities in terms of resource sharing: parent and children share all resources; children share a subset of the parent's resources; or parent and child share no resources.\n" +
+            "Possibilities in terms of execution: parent and children execute concurrently; or the parent waits until the children terminate.\n" +
+            "Possibilities in terms of address space of the new process: the child is a duplicate of the parent (same program and data); or the child has a program loaded into it.",
+          tags: ["Process Creation", "Process Tree"],
+          ref: "Lecture 3 — Slides: Process Creation / Process Creation (Cont.)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Explain process termination and cascading termination.",
+          translation:
+            "اشرح إنهاء العمليات (process termination) والـ cascading termination.",
+          answer:
+            "A process terminates when it executes its last statement and asks the OS to delete it (exit). Output data is passed from the child to the parent via wait, and the process' resources are deallocated by the OS.\n" +
+            "A parent may terminate its children (abort) when: the child has exceeded its allocated resources, the task assigned to the child is no longer required, or the parent is exiting.\n" +
+            "Cascading termination: some operating systems do not allow a child to continue if its parent terminates, so all the children are terminated. It is usually started by the OS when a parent terminates.",
+          tags: ["Process Termination", "Cascading Termination"],
+          ref: "Lecture 3 — Slide: Process Termination",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Compare independent and cooperating processes, and compare the two IPC models.",
+          translation:
+            "قارن بين الـ independent والـ cooperating processes، وقارن بين نموذجي الـ IPC.",
+          answer:
+            "Independent process: cannot affect or be affected by the execution of another process; it does not share data with other processes, so no cooperation is needed.\n" +
+            "Cooperating process: can affect or be affected by the execution of another process; it requires an interprocess communication (IPC) mechanism that allows it to exchange data.\n" +
+            "IPC models:\n" +
+            "- Shared memory: faster; suitable for a large amount of data.\n" +
+            "- Message passing: suitable for a small amount of data; slower.",
+          tags: ["Cooperating Processes", "IPC"],
+          ref: "Lecture 3 — Slides: Cooperating Processes / Communications Models",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Mention the advantages of process cooperation.",
+          translation:
+            "اذكر مميزات التعاون بين العمليات (process cooperation).",
+          answer:
+            "- Information sharing: two processes share the same file, which is faster than each reading its own copy; the file can be loaded once for both.\n" +
+            "- Computation speed-up: dividing a process into sub-processes that execute concurrently speeds up the computation.\n" +
+            "- Modularity: building the system in a modular fashion, with system functions divided into separate processes.\n" +
+            "- Convenience: a user may execute many tasks at the same time, such as printing and watching a movie.",
+          tags: ["Cooperating Processes", "Advantages"],
+          ref: "Lecture 3 — Slide: Cooperating Processes (advantages)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain the difference between a batch system and a time-shared system.",
+          translation:
+            "اشرح الفرق بين الـ batch system والـ time-shared system.",
+          answer:
+            "Batch system (jobs): a number of jobs are sent for execution; the OS transfers control from one job to the next. The user does not interact directly with the OS; the user just prepares the data and program for the job and sends it with other jobs to the OS for execution.\n" +
+            "Time-shared systems (user programs or tasks): programs or tasks are executed simultaneously using CPU scheduling.",
+          tags: ["Batch System", "Time-Shared Systems"],
+          ref: "Lecture 3 — Slide: Process Concept",
+          likely: "medium",
+        },
+      ],
+    },
   ],
 });

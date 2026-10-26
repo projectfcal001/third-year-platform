@@ -2002,5 +2002,944 @@ subjects.push({
         },
       ],
     },
+    // المحاضرة: Interaction Design Basics — أساسيات تصميم التفاعل (الأهداف، القيود، المستخدم، السيناريوهات، التنقل، تصميم الشاشة، النمذجة والتكرار)
+    {
+      id: "hci-lecture-05",
+      t: "Interaction Design Basics",
+      d: "أساسيات تصميم التفاعل: الأهداف والقيود، عملية التصميم، المستخدم والـ Persona، السيناريوهات، تصميم التنقل، تصميم الشاشة، والنماذج الأولية والتكرار.",
+      pdf: "datenew/subjects/hci/lectures/Lec 5/Ch 5_HCI_compressed.pdf",
+      pdf2: "datenew/subjects/hci/questions/Questions on each lecture/Lecture-05-Questions.pdf",
+      // المحاضرة: Interaction Design Basics — أساسيات تصميم التفاعل (الأهداف والقيود، المستخدم والـ Persona، السيناريوهات، التنقل، تصميم الشاشة، النمذجة والتكرار، التوطين)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "قناة وكورسات عربية بالعربي الفصيح لتغطية مفاهيم تصميم التفاعل وتجربة المستخدم.",
+          links: [
+            {
+              t: "كورس تصميم UX/UI وتصميم المنتجات من البداية",
+              d: "بليلايست عربي كامل يشرح التفكير التصميمي (Design Thinking) وأبحاث المستخدم وبناء الـ Persona وتصميم التفاعل — مرتبط بموضوعات المحاضرة حول المستخدم والسيناريوهات وعملية التصميم.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة البلايلايست",
+                  url: "https://www.youtube.com/playlist?list=PL1h8Fv-RGaUJU3qOThMMja-ACCU1Vn4NF",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "أسس تصميم تجربة المستخدم (UX) بالعربي — Coursera",
+              d: "كورس مجاني بالعربي من Coursera يغطي أساسيات تصميم تجربة المستخدم والـ Design Thinking والـ User-Centered Design — مرتبط مباشرة بتعريف المحاضرة للتصميم والقاعدة الذهبية «افهم موادّك».",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح الكورس",
+                  url: "https://www.coursera.org/learn/foundations-of-user-experience-ux-design-arabic",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "خريطة تعلم UX/UI Designer بالعربي (Figma Community)",
+              d: "ملف داخل Figma Community يقدم خريطة طريق عربية لتعلم تصميم تجربة المستخدم وواجهة المستخدم خطوة بخطوة — مرتبط بكل أجزاء عملية التصميم المذكورة في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح الخريطة",
+                  url: "https://www.figma.com/community/file/1252399728161316440/ux-ui-designer-roadmap",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "قنوات ومقاطع موثوقة بالإنجليزي تشرح نفس مفاهيم المحاضرة بعمق أكبر.",
+          links: [
+            {
+              t: "Interaction Design Foundation — YouTube Channel",
+              d: "قناة IxDF الرسمية وفيها مقطع «Interaction Design Basics» و«5 Principles of Interaction» — مرتبط بتعريف التصميم وتفهم المواد والقاعدة الذهبية للمحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ زيارة القناة",
+                  url: "https://www.youtube.com/@InteractionDesignOrg",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Nielsen Norman Group — YouTube Channel",
+              d: "قناة NNGroup فيها شروحات لأبحاث المستخدم والـ Persona والـ Breadcrumbs وتصميم التنقل — مفاهيم مذكورة مباشرة في المحاضرة (الـ Persona، الـ Breadcrumbs، أفكار التنقل).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ زيارة القناة",
+                  url: "https://www.youtube.com/channel/UC2oCugzU6W8-h95W7eBTUEg",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Don Norman — Authorized Videos Playlist",
+              d: "بلايلايست من NN/G فيه فيديوهات لـ Don Norman مؤسس مصطلح UX يشرح التصميم العاطفي وتصميم الأشياء اليومية — يربط بفهم المحاضرة لمبدأ «الجمال والوظيفة» والـ Human-Centered Design.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة البلايلايست",
+                  url: "https://www.youtube.com/playlist?list=PLJOFJ3Ok_idv_6hQGNt23xVXuQwKFmfxG",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "User Persona and Scenarios (YouTube)",
+              d: "مقطع فيديو يشرح كيف نبني Personas و Scenarios للمستخدمين المُجزئين — مرتبط مباشرة بقسمي Persona و Scenarios في المحاضرة وكيف نستخدم الـ Persona كمستخدم بديل.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ تشغيل الفيديو",
+                  url: "https://www.youtube.com/watch?v=ZveHCx0ms8c",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات مرجعية موثوقة تشرح نفس المفاهيم بأمثلة إضافية وبيانات بحثية.",
+          links: [
+            {
+              t: "What is Interaction Design? — Figma Resource Library",
+              d: "مقال شامل من Figma يعرّف Interaction Design ويفصّل أبعاده الخمسة ومبادئه — مرتبط بتعريف المحاضرة للتصميم والأهداف والقيود و«فهم موادّك».",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.figma.com/resource-library/interaction-design",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Personas Make Users Memorable — Nielsen Norman Group",
+              d: "مقال من NN/G يشرح فكرة الـ Persona ودورها في User-Centered Design — مرتبط مباشرة بقسم Persona في المحاضرة و«استخدامها كمستخدم بديل».",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.nngroup.com/articles/persona",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Breadcrumbs: 11 Design Guidelines — NN/G",
+              d: "مقال يقدم 11 قاعدة لتصميم الـ Breadcrumbs — مرتبط مباشرة بقسم «Local (where you are – breadcrumbs)» في المحاضرة ووظيفة الـ Breadcrumbs في إظهار مسار الموقع.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.nngroup.com/articles/breadcrumbs",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Prototyping in HCI — GeeksforGeeks",
+              d: "مقال يشرح النمذجة في HCI ودورها في عملية التصميم التكرارية — مرتبط بقسم Prototyping في المحاضرة ومبدأ «You never get it right first time».",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/prototyping-in-human-computer-interactionhci",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Internationalization vs Localization — UXPin",
+              d: "مقال يفرّق بين Internationalization و Localization مع ممارسات عملية — مرتبط بقسم «Across countries and cultures» في المحاضرة واستخدام قاعدة بيانات resource بدل النص الحرفي.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.uxpin.com/studio/blog/internationalization-vs-localization-in-app-design",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "The Encyclopedia of HCI — Interaction Design Foundation",
+              d: "موسوعة مجانية من IxDF يكتبها أكثر من 100 مصمم محترف، تغطي تصميم المنتجات والخدمات التفاعلية — مرجع شامل لمفاهيم المحاضرة كلها من تعريف التصميم للنمذجة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموسوعة",
+                  url: "https://ixdf.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات وتوتورالز عملية لتطبيق مفاهيم المحاضرة (النمذجة، التنقل، تصميم الشاشة).",
+          links: [
+            {
+              t: "Figma — أداة تصميم ونمذجة تفاعلية",
+              d: "Figma هي أداة مجانية للتصميم والنمذجة التفاعلية (prototyping) لتطبيق مفاهيم المحاضرة عمليًا: تصميم الشاشة، التجميع، المحاذاة، المسافة الفاضية، والنمذجة التكرارية.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.figma.com",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Guide to Prototyping in Figma — Official Docs",
+              d: "دليل Figma الرسمي لإنشاء النماذج التفاعلية والتدفقات — مرتبط بقسم Prototyping في المحاضرة وحلقة «prototype → evaluate → (re-)design».",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الدليل",
+                  url: "https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Free Figma Prototype Tutorials — Figma Community",
+              d: "توتورالز مجانية تفاعلية لتعلّم النمذجة في Figma خطوة بخطوة (إطارات، اتصالات، انتقالات) — تطبيق مباشر لمبدأ التكرار والنمذجة في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوتورالز",
+                  url: "https://www.figma.com/community/design-tutorials/prototyping",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "How to Create an Interactive Prototype in Figma (YouTube)",
+              d: "مقطع تعليمي خطوة بخطوة لإنشاء نموذج تفاعلي في Figma من البداية للنهاية — مناسب لتطبيق حلقة التكرار في المحاضرة عمليًا.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "▶ تشغيل الفيديو",
+                  url: "https://www.youtube.com/watch?v=3TSnohhwbpc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. According to the lecture, what is design?",
+          options: [
+            "Achieving goals within constraints",
+            "Drawing aesthetically pleasing screens",
+            "Writing program code",
+            "Selecting color palettes",
+          ],
+          correct: 0,
+          translation: "وفقًا للمحاضرة، ما هو التصميم؟",
+          explanation:
+            "التصميم هو تحقيق الأهداف ضمن القيود. الأهداف = الغرض (لمَن ولماذا يريدونه). القيود = المواد والمنصات والأجهزة والوقت والتكاليف والخلفية. باقي الاختيارات تمثل أجزاء سطحية فقط من عملية التصميم وليست تعريفه الكامل.",
+          tags: ["Design", "Goals", "Constraints"],
+          ref: "Lecture 05 — Section: What is design?",
+          likely: "high",
+        },
+        {
+          q: "2. The golden rule of design states that you should:",
+          options: [
+            "Always follow form over function",
+            "Understand your materials",
+            "Iterate exactly three times",
+            "Keep the design as simple as possible",
+          ],
+          correct: 1,
+          translation: "القاعدة الذهبية للتصميم تنص على أنه يجب عليك:",
+          explanation:
+            "القاعدة الذهبية للتصميم هي «افهم موادّك». في HCI ده معناه تفهم الحاسوب (قيوده وأدواته ومنصاته)، وتفهم الناس (نفسية واجتماعيًا وأخطاء البشر)، وتفهم التفاعل بينهم. الاختيارات التانية مبادئ تانية مش القاعدة الذهبية.",
+          tags: ["Golden Rule", "Materials"],
+          ref: "Lecture 05 — Section: Golden rule of design",
+          likely: "high",
+        },
+        {
+          q: "3. For HCI, understanding your materials means understanding:",
+          options: [
+            "Only the programming language used",
+            "Only the UI component library",
+            "Computers, people, and their interaction",
+            "Only the underlying hardware",
+          ],
+          correct: 2,
+          translation: "في HCI، فهم موادّك معناه فهم:",
+          explanation:
+            "المحاضرة بتقول إن لازم نفهم: (1) الحاسوب بقيوده وأدواته ومنصاته، (2) الناس بجوانبهم النفسية والاجتماعية وأخطاء البشر، (3) والتفاعل بينهم. الاختيارات التانية جزئية ومش كاملة.",
+          tags: ["Materials", "Computers", "People"],
+          ref: "Lecture 05 — Section: Understand your materials (for HCI)",
+          likely: "high",
+        },
+        {
+          q: "4. Which of the following is NOT one of the design constraints mentioned in the lecture?",
+          options: ["Time", "Costs", "Platforms", "Weather"],
+          correct: 3,
+          translation: "أيٌّ مما يلي ليس من قيود التصميم المذكورة في المحاضرة؟",
+          explanation:
+            "القيود المذكورة هي: المواد والمنصات والأجهزة والوقت والتكاليف والخلفية. الطقس (Weather) ليس من القيود المذكورة. الاختيارات التانية كلها قيود حقيقية مذكورة في الشريحة.",
+          tags: ["Constraints"],
+          ref: "Lecture 05 — Section: What is design? (Constraints)",
+          likely: "medium",
+        },
+        {
+          q: "5. The design process described in the lecture begins with:",
+          options: [
+            "Requirements / what is wanted",
+            "Implementation and deployment",
+            "Evaluation",
+            "Prototyping",
+          ],
+          correct: 0,
+          translation: "عملية التصميم الموصوفة في المحاضرة تبدأ بـ:",
+          explanation:
+            "الخطوات حسب المحاضرة: Requirements (ما الموجود وما المطلوب) → Analysis → Design → Iteration and Prototyping → Implementation and Deployment. فلابد نبدأ بتحديد المتطلبات. التنفيذ والتقييم والنمذجة خطوات لاحقة.",
+          tags: ["Design Process", "Requirements"],
+          ref: "Lecture 05 — Section: Steps ...",
+          likely: "high",
+        },
+        {
+          q: "6. A persona is best described as:",
+          options: [
+            "A real user you have interviewed",
+            "A description of an example user, not necessarily a real person",
+            "The project manager's profile",
+            "The designer's own profile",
+          ],
+          correct: 1,
+          translation: "يُوصف الـ Persona أفضل وصف بأنه:",
+          explanation:
+            "الـ Persona هو وصف لمستخدم «مثالي»، مش بالضرورة شخص حقيقي، يُستخدم كمستخدم بديل: «ماذا كانت ستظن Betty؟». التفاصيل مهمة عشان تخليه حقيقيًا. الاختيار الأول غلط لأن الـ Persona مش لازم يكون شخص حقيقي بالضرورة.",
+          tags: ["Persona", "User Focus"],
+          ref: "Lecture 05 — Section: Persona",
+          likely: "high",
+        },
+        {
+          q: "7. According to the lecture, scenarios are mainly used to:",
+          options: [
+            "Replace the need for user testing",
+            "Document the source code of the system",
+            "Communicate design stories and validate other models",
+            "Serve as the database schema",
+          ],
+          correct: 2,
+          translation: "وفقًا للمحاضرة، السيناريوهات تُستخدم أساسًا لـ:",
+          explanation:
+            "السيناريوهات قصص للتصميم، تُستخدم لـ: (1) التواصل مع الآخرين (مصممين وعملاء ومستخدمين)، (2) التحقق من النماذج الأخرى بـ«تشغيلها» ضدها، (3) التعبير عن الديناميكيات. هي مش بديل عن اختبار المستخدم ولا عن قاعدة البيانات ولا عن كود المصدر.",
+          tags: ["Scenarios", "Communication"],
+          ref: "Lecture 05 — Section: Use scenarios to ...",
+          likely: "high",
+        },
+        {
+          q: "8. According to the lecture, scenarios are linear because:",
+          options: [
+            "The designer is lazy",
+            "The system requires it",
+            "Users always prefer linear flows",
+            "Time is linear and our lives are linear",
+          ],
+          correct: 3,
+          translation: "وفقًا للمحاضرة، السيناريوهات خطية لأن:",
+          explanation:
+            "المحاضرة بتقول: «الوقت خطي - حياتنا خطية»، لكن السيناريوهات لا تُظهر البدائل. فالخطية تأتي من طبيعة الزمن والحياة، مش من كسل المصمم ولا من متطلبات النظام.",
+          tags: ["Scenarios", "Linearity"],
+          ref: "Lecture 05 — Section: Scenarios (Linearity)",
+          likely: "medium",
+        },
+        {
+          q: "9. The step-by-step walkthrough of a scenario considers which three aspects?",
+          options: [
+            "What users can see, do, and think",
+            "Only the visual design of the screens",
+            "Only the technical stack used",
+            "Only the marketing goals",
+          ],
+          correct: 0,
+          translation:
+            "المراجعة خطوة بخطوة للسيناريو تأخذ في الاعتبار أي ثلاث جوانب؟",
+          explanation:
+            "السيناريو يغطي: ماذا يمكن للمستخدم أن يرى (مخططات ولقطات شاشة)، وماذا يفعل (لوحة المفاتيح والماوس)، وماذا يفكر فيه. الجوانب البصرية والفنية والتسويقية وحدها قاصرة.",
+          tags: ["Scenarios", "Walkthrough"],
+          ref: "Lecture 05 — Section: Scenarios ...",
+          likely: "high",
+        },
+        {
+          q: "10. Which of the following is NOT one of the levels of navigation design?",
+          options: [
+            "Widget choice (menus, buttons, etc.)",
+            "Database schema design",
+            "Screen design (arrangement of buttons)",
+            "Application navigation design",
+          ],
+          correct: 1,
+          translation: "أيٌّ مما يلي ليس من مستويات تصميم التنقل؟",
+          explanation:
+            "المستويات المذكورة: اختيار الـ Widget، تصميم الشاشة، تصميم تنقل التطبيق، والبيئة (تطبيقات أخرى ونظام التشغيل). تصميم قاعدة البيانات مش من مستويات التنقل.",
+          tags: ["Navigation", "Levels"],
+          ref: "Lecture 05 — Section: Navigation design (Levels)",
+          likely: "high",
+        },
+        {
+          q: "11. Breadcrumbs are used to:",
+          options: [
+            "Replace the global navigation bar entirely",
+            "Add decorative icons to the page",
+            "Show path through website hierarchy and aid navigation",
+            "Display advertisements",
+          ],
+          correct: 2,
+          translation: "تُستخدم فُتات الخبز (Breadcrumbs) لـ:",
+          explanation:
+            "الـ Breadcrumbs بتوضح مكانك الحالي ضمن هرم الموقع وبتعرض المسار وروابط حية للمستويات الأعلى. هي مش بديل عن التنقل العام ولا عن التنقل المحلي، بل مكمّلة له. الإعلانات والأيقونات الزخرفية مش وظيفتها.",
+          tags: ["Navigation", "Breadcrumbs"],
+          ref: "Lecture 05 — Section: Local (where you are – breadcrumbs)",
+          likely: "high",
+        },
+        {
+          q: '12. The "big button trap" warns designers about:',
+          options: [
+            "Buttons that are too small to click",
+            "Color contrast issues on buttons",
+            "Buttons with no text labels",
+            "Lots of room for extra text, but where do they actually go?",
+          ],
+          correct: 3,
+          translation: "يحذّر «فخ الزر الكبير» (big button trap) المصممين من:",
+          explanation:
+            "المحاضرة بتسأل «فين بيمشيوا؟» يعني الزراير الكبيرة بتيجي بمساحة كبيرة للنص لكن مش واضح الوجهة. الفخ مش في الحجم ولا التباين ولا غياب النص، بل في غموض الوجهة.",
+          tags: ["Navigation", "Big Button Trap"],
+          ref: "Lecture 05 — Section: Beware the big button trap",
+          likely: "medium",
+        },
+        {
+          q: "13. Network diagrams in navigation design are used to:",
+          options: [
+            "Show different paths through the system",
+            "Show a strict tree-like structure",
+            "Replace hierarchical diagrams",
+            "Display database connections only",
+          ],
+          correct: 0,
+          translation:
+            "تُستخدم المخططات الشبكية (Network diagrams) في تصميم التنقل لـ:",
+          explanation:
+            "Network diagrams بتعرض مسارات مختلفة عبر النظام (بمعنى آخر مسارات متعددة بين الشاشات). الـ Hierarchical diagrams بتعرض شكل شجري. الاختيار التالت غلط لأن النوعين مكملين لبعض، والتالت غلط لأنها مش لقواعد البيانات بس.",
+          tags: ["Navigation", "Network Diagrams"],
+          ref: "Lecture 05 — Section: Network diagrams",
+          likely: "high",
+        },
+        {
+          q: "14. The basic principles of screen design and layout include:",
+          options: [
+            "Only color theory",
+            "Grouping, alignment, and use of white space",
+            "Only typography choices",
+            "Animation principles only",
+          ],
+          correct: 1,
+          translation: "تشمل المبادئ الأساسية لتصميم الشاشة وتنسيقها:",
+          explanation:
+            "المحاضرة ذكرت: التجميع والبنية والترتيب (grouping, structure, order)، والمحاذاة (alignment)، واستخدام المسافة البيضاء (white space). نظرية الألوان والطباعة والأنيميشن مبادئ تانية مش الأساس المذكور هنا.",
+          tags: ["Screen Design", "Layout"],
+          ref: "Lecture 05 — Section: Screen design and layout (basic principles)",
+          likely: "high",
+        },
+        {
+          q: '15. The principle "form follows function" means that:',
+          options: [
+            "Aesthetics should always come first",
+            "Code structure dictates the UI",
+            "Design should match the user's task and purpose",
+            "All forms should be circular in shape",
+          ],
+          correct: 2,
+          translation:
+            "مبدأ «الشكل يتبع الوظيفة» (form follows function) يعني:",
+          explanation:
+            "المبدأ معناه إن الشكل يتبع الوظيفة: نسأل إيه اللي المستخدم بيعمله، نفكر المعلومات والمقارنات والترتيب، نصمم على أساس الوظيفة. الجمال أولاً غلط، وكود الـ UI مش اللي يفرض الشكل، والشكل الدائري مجرد مثال مضحك.",
+          tags: ["Screen Design", "Form Follows Function"],
+          ref: "Lecture 05 — Section: Basic principles (ask / think / design)",
+          likely: "high",
+        },
+        {
+          q: "16. For English and European text, the lecture recommends aligning:",
+          options: [
+            "Center-aligned for readability",
+            "Right-aligned for emphasis",
+            "Justified for a clean look",
+            "Left-aligned because that is how we read",
+          ],
+          correct: 3,
+          translation: "بالنسبة للنص الإنجليزي والأوروبي، توصي المحاضرة بـ:",
+          explanation:
+            "القراءة من الشمال لليمين (في الإنجليزي والأوروبي)، فالمحاذاة لليسار هي الأسهل للمسح. المحاذاة لليمين أو في الوسط «مناسبة للمؤثرات الخاصة لكن صعبة المسح»، والـ Justified مش مذكور كتوصية.",
+          tags: ["Alignment", "Text"],
+          ref: "Lecture 05 — Section: Alignment - text",
+          likely: "high",
+        },
+        {
+          q: "17. When displaying names for scanning, the lecture suggests:",
+          options: [
+            "Putting surnames first (e.g., Dix, Alan)",
+            "Sorting by first name only",
+            "Random order to add variety",
+            "Always centering the names",
+          ],
+          correct: 0,
+          translation: "عند عرض الأسماء لأغراض المسح، تقترح المحاضرة:",
+          explanation:
+            "المستخدم غالبًا بيمسح للألقاب (surnames)، فنضع اللقب أول (مثل: Dix, Alan) عشان أسهل في المسح. الترتيب عشوائي أو توسيط الأسماء مش المسح السهل، والترتيب بالاسم الأول بس غلط.",
+          tags: ["Alignment", "Names"],
+          ref: "Lecture 05 — Section: Alignment - names",
+          likely: "medium",
+        },
+        {
+          q: "18. To make multi-column data easier to scan, the lecture suggests using:",
+          options: [
+            "Brighter colors for emphasis",
+            "Leaders or greying (vertical too)",
+            "Larger fonts only",
+            "Removing the columns",
+          ],
+          correct: 1,
+          translation:
+            "لتسهيل مسح البيانات متعددة الأعمدة، تقترح المحاضرة استخدام:",
+          explanation:
+            "المسح عبر فجوات الأعمدة صعب، فالمحاضرة بتقترح: (1) Leaders (نقاط رابطة)، (2) Greying (تعتيق عمودي كمان). الألوان الألمع والخط الأكبر مش الحل المذكور، وحذف الأعمدة مش عملي.",
+          tags: ["Alignment", "Multiple Columns"],
+          ref: "Lecture 05 — Section: Multiple columns (2 / 3)",
+          likely: "medium",
+        },
+        {
+          q: "19. White space in design serves to:",
+          options: [
+            "Waste space on the screen",
+            "Add background images",
+            "Separate, structure, and highlight",
+            "Replace missing content",
+          ],
+          correct: 2,
+          translation: "المسافة البيضاء في التصميم تؤدي وظيفة:",
+          explanation:
+            "المحاضرة بتقول إن المسافة الفاضية بتخدم ثلاث أغراض: تفصل (separate)، تُبنى (structure)، وبتُبرز (highlight). مثال الـ counter بيوضح إن ما تشوفه هو الفجوات بين العناصر، فالمسافة مش هدر ولا خلفية ولا بديل عن محتوى.",
+          tags: ["White Space", "Layout"],
+          ref: "Lecture 05 — Section: White space (space to ...)",
+          likely: "high",
+        },
+        {
+          q: '20. The "counter" example in the lecture is used to illustrate:',
+          options: [
+            "A shopping cart interface",
+            "A numeric display only",
+            "A button design pattern",
+            "The contrast between what you see and the gaps between",
+          ],
+          correct: 3,
+          translation: "يُستخدم مثال «الكونتر» (the counter) في المحاضرة لـ:",
+          explanation:
+            "المحاضرة بتعمل مقارنة بين «WHAT YOU SEE» (ما تراه) و«THE GAPS BETWEEN» (الفجوات بينها)، يعني المسافة البيضاء كمانها من العناصر مهمة زي العناصر نفسها. مش عربة تسوق ولا عرض رقمي ولا نمط زر.",
+          tags: ["White Space", "Counter Example"],
+          ref: "Lecture 05 — Section: White space - the counter",
+          likely: "medium",
+        },
+        {
+          q: "21. For physical controls (e.g., a microwave), grouping should be based on:",
+          options: [
+            "Function (e.g., defrost settings, type of food, time to cook)",
+            "Random order",
+            "Color only",
+            "Size only",
+          ],
+          correct: 0,
+          translation:
+            "بالنسبة للأزرار المادية (مثل الميكروويف)، يجب أن يكون التجميع مبنياً على:",
+          explanation:
+            "المحاضرة بتجمع الأزرار حسب الوظيفة: إعدادات الإذابة Defrost settings، نوع الطعام type of food، وقت الطبخ time to cook. الترتيب العشوائي أو اللون أو الحجم لوحده مش أساس التجميع.",
+          tags: ["Physical Controls", "Grouping"],
+          ref: "Lecture 05 — Section: Physical controls (grouping of items)",
+          likely: "medium",
+        },
+        {
+          q: "22. According to the lecture, aesthetically pleasing designs:",
+          options: [
+            "Decrease productivity",
+            "Increase user satisfaction and improve productivity",
+            "Have no effect on users",
+            "Always conflict with usability",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، التصاميم الجميلة جذريًا (aesthetically pleasing):",
+          explanation:
+            "المحاضرة بتقول إن التصاميم الجذابة بتزيد رضا المستخدم وبتحسّن الإنتاجية. بس الجمال والوظيفة ممكن يتعارضوا في حالات (زي خلفيات نصية صعبة القراءة). فمش دايماً بيتعارضوا، ومش بيسببو إنتاجية.",
+          tags: ["Aesthetics", "Utility"],
+          ref: "Lecture 05 — Section: Aesthetics and utility",
+          likely: "high",
+        },
+        {
+          q: "23. According to the lecture, beauty and utility may conflict when:",
+          options: [
+            "Never — they always work together",
+            "Only in mobile applications",
+            "Mixed visual styles or backgrounds behind text make it hard to read",
+            "Only in websites with images",
+          ],
+          correct: 2,
+          translation: "وفقًا للمحاضرة، قد يتعارض الجمال والوظيفة عندما:",
+          explanation:
+            "أمثلة المحاضرة: أنماط بصرية مختلطة بتبقى سهلة التمييز بس، تصميم نضيف قليل التمايز بيخلطط، خلفيات ورا نص صعبة القراءة (حلوة بس صعبة). مش محصور في موبايل أو ويب، ومش «أبدًا».",
+          tags: ["Aesthetics", "Utility", "Conflict"],
+          ref: "Lecture 05 — Section: Aesthetics and utility (Beauty and utility may conflict)",
+          likely: "medium",
+        },
+        {
+          q: "24. The lecture recommends using color in interfaces:",
+          options: [
+            "As much as possible to attract attention",
+            "Only red and green for status",
+            "Only for buttons and links",
+            "Sparingly, to reinforce other information",
+          ],
+          correct: 3,
+          translation: "توصي المحاضرة باستخدام اللون في الواجهات:",
+          explanation:
+            "اللون كتير بيُستاءل لأنه «موجود»، لكن لازم يُستخدم بحذر عشان يعزز معلومات تانية، وننتبه لعمى الألوان (colour blind) وحدود شاشات قديمة. استخدامه بكثرة أو لونين بس أو للأزرار فقط غلط.",
+          tags: ["Color", "Design"],
+          ref: "Lecture 05 — Section: Colour and 3D",
+          likely: "high",
+        },
+        {
+          q: "25. According to the lecture, 3D effects are best used for:",
+          options: [
+            "Physical information and some graphs",
+            "All text for emphasis",
+            "Pie charts always",
+            "Buttons only",
+          ],
+          correct: 0,
+          translation: "وفقًا للمحاضرة، تأثيرات الـ 3D أفضل استخدامها مع:",
+          explanation:
+            "الـ 3D كويس للمعلومات المادية وبعض الرسوم البيانية، لكن لو اتحطَّط بيتستخدم (نص في perspective، فطيرة 3D). مش كل النص ولا كل الفطاير ولا الأزرار بس.",
+          tags: ["3D", "Color"],
+          ref: "Lecture 05 — Section: Colour and 3D (3D effects)",
+          likely: "medium",
+        },
+        {
+          q: '26. Which of the following is NOT listed as a "bad use of colour"?',
+          options: [
+            "Overuse without a good reason",
+            "Adjusting your monitor to greys to test readability",
+            "Poor use of contrast",
+            "Ignoring colour blindness",
+          ],
+          correct: 1,
+          translation: "أيٌّ مما يلي ليس من «الاستخدام السيء للون» المذكور؟",
+          explanation:
+            "الاستخدام السيء يشمل: الإفراط بلا سبب، تجاهل عمى الألوان، وسوء التباين. أما ضبط الشاشة على الرمادي لاختبار القراءة فهي نصيحة جيدة (do adjust your set!) ومش من الأخطاء. فالاختيار التاني هو الصحيح لأنه «مش سيء».",
+          tags: ["Color", "Bad Use"],
+          ref: "Lecture 05 — Section: Bad use of colour",
+          likely: "medium",
+        },
+        {
+          q: "27. Localisation, as defined in the lecture, means:",
+          options: [
+            "Same interface for all users worldwide",
+            "Removing language options",
+            "Changing interfaces for particular cultures/languages",
+            "Using only one language throughout",
+          ],
+          correct: 2,
+          translation: "تعني التوطين (Localisation) كما وردت في المحاضرة:",
+          explanation:
+            "الـ Localisation هي تغيير الواجهات لثقافات ولغات معينة. الـ Internationalisation هي بناء المنتج عشان يقبل التعديل، والـ Globalisation هي اختيار رموز تنفع في كل مكان. فالاختيار التالت هو الصحيح، والتاني والرابع غلط، والأول غلط.",
+          tags: ["Localization", "Internationalization"],
+          ref: "Lecture 05 — Section: Across countries and cultures",
+          likely: "high",
+        },
+        {
+          q: "28. Globalisation, as defined in the lecture, means:",
+          options: [
+            "Forcing one culture's design on everyone",
+            "Translating the UI word-for-word only",
+            "Using only English worldwide",
+            "Choosing symbols etc. that work everywhere",
+          ],
+          correct: 3,
+          translation: "تعني العولمة (Globalisation) كما وردت في المحاضرة:",
+          explanation:
+            "الـ Globalisation هي محاولة اختيار رموز ورموز بصريه تنفع في كل مكان. مش فرض تصميم ثقافة، ولا ترجمة حرفية، ولا استخدام إنجليزي فقط. ده يشبه اختيار رموز مشتركة عالميًا.",
+          tags: ["Globalization", "Cultures"],
+          ref: "Lecture 05 — Section: Across countries and cultures (globalisation)",
+          likely: "high",
+        },
+        {
+          q: "29. To support language changes in a localized interface, the lecture recommends using:",
+          options: [
+            "A 'resource' database instead of literal text",
+            "Hard-coded strings in source code",
+            "Re-designing the whole interface for each language",
+            "Avoiding translation entirely",
+          ],
+          correct: 0,
+          translation:
+            "لدعم تغييرات اللغة في واجهة معرّبة، توصي المحاضرة باستخدام:",
+          explanation:
+            "بدل النص الحرفي (literal text) في الكود، استخدم قاعدة بيانات «resource» فيها النصوص المترجمة. بس انتبه إن الترجمة بتغيّر المقاسات وترتيب الشمال-اليمين. الكود الجاف (hard-coded) أو إعادة التصميم لكل لغة أو تجنب الترجمة كلها غلط.",
+          tags: ["Localization", "Resource Database"],
+          ref: "Lecture 05 — Section: Across countries and cultures (simply change language?)",
+          likely: "medium",
+        },
+        {
+          q: "30. The lecture warns that cultural symbols such as tick and cross:",
+          options: [
+            "Mean the same thing in every culture",
+            "Can have opposite meanings in different cultures",
+            "Should never be used in interfaces",
+            "Are always positive worldwide",
+          ],
+          correct: 1,
+          translation:
+            "تحذّر المحاضرة من أن الرموز الثقافية مثل الصحيحة والخطأ (tick/cross):",
+          explanation:
+            "في بعض الثقافات الـ tick و الـ cross معناه موجب وسالب (+ve / -ve)، وفي ثقافات تانية معناه «حدّد هذا» (mark this). فمش نفس المعنى في كل مكان، ومش دايماً موجبة، ومش ممنوع استخدامها بس لازم تنتبه.",
+          tags: ["Cultural Symbols", "Localization"],
+          ref: "Lecture 05 — Section: Across countries and cultures (deeper issues)",
+          likely: "medium",
+        },
+        {
+          q: "31. The prototyping principle in the lecture states:",
+          options: [
+            "Get it right the first time",
+            "Skip prototyping in agile projects",
+            "You never get it right first time; iterate",
+            "Only prototype once, then ship",
+          ],
+          correct: 2,
+          translation: "ينص مبدأ النمذجة في المحاضرة على:",
+          explanation:
+            "المحاضرة بتقول صراحةً «You never get it right first time» يعني مش هتظبطها من المرة الأولى. لازم تكرر: prototype → evaluate → (re-)design. الوصول للصح من المرة الأولى أو تجاوز النمذجة أو نمذجة وحدة بس كلها غلط.",
+          tags: ["Prototyping", "Iteration"],
+          ref: "Lecture 05 — Section: Prototyping (You never get it right first time)",
+          likely: "high",
+        },
+        {
+          q: "32. The prototyping iteration loop described in the lecture is:",
+          options: [
+            "Design → deploy → done",
+            "Code → test → ship",
+            "Sketch → final product",
+            "Prototype → evaluate → (re-)design",
+          ],
+          correct: 3,
+          translation: "حلقة تكرار النمذجة الموصوفة في المحاضرة هي:",
+          explanation:
+            "المحاضرة بتعطي الدايرة: prototype → evaluate → design / re-design → done. لو مش تمامًا، نعيد الكرة. الاختيارات التانية عمليات تطوير برمجي خطي مش دايرة تكرار تصميمي.",
+          tags: ["Prototyping", "Iteration Loop"],
+          ref: "Lecture 05 — Section: Prototyping (if at first you don't succeed ...)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "1. Define design as presented in the lecture, and explain its goals and constraints.",
+          translation: "عرّف التصميم كما ورد في المحاضرة، واشرح أهدافه وقيوده.",
+          answer:
+            'Design is defined in the lecture as "achieving goals within constraints."\nGoals (the purpose):\n  - Who the design is for (the intended users).\n  - Why those users want it (their needs and motivations).\nConstraints (the things that bound the design):\n  - Materials, platforms, and devices available.\n  - Time available for delivery.\n  - Costs and budget.\n  - Background of the team and context.\nIn short, design is the act of meeting the users\' purpose within the limits of the available materials, time, money, and context.',
+          tags: ["Design", "Goals", "Constraints"],
+          ref: "Lecture 05 — Section: What is design?",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '2. Explain the golden rule of design and, for HCI, what it means to "understand your materials".',
+          translation:
+            "اشرح القاعدة الذهبية للتصميم، وماذا يعني في HCI «افهم موادّك».",
+          answer:
+            'The golden rule of design is: "understand your materials."\nFor Human–Computer Interaction, this means understanding three things:\n  1. Computers — their limitations, capacities, available tools, and the platforms they run on.\n  2. People — their psychological and social aspects, including human error.\n  3. The interaction between computers and people — how the two sides influence each other.\nWithout understanding these three layers, designers cannot make sound decisions about what is feasible, what users actually need, and how the two will work together.',
+          tags: ["Golden Rule", "Materials", "HCI"],
+          ref: "Lecture 05 — Section: Golden rule of design + Understand your materials",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. List and briefly describe the steps of the design process as presented in the lecture.",
+          translation:
+            "اذكر واشرح باختصار خطوات عملية التصميم كما عرضت في المحاضرة.",
+          answer:
+            "The lecture lists the following steps:\n  1. Requirements — what is there now and what is wanted.\n  2. Analysis — ordering and understanding the requirements and context.\n  3. Design — deciding what to do and how to make design choices.\n  4. Iteration and prototyping — getting it right by trying, and finding what is really needed.\n  5. Implementation and deployment — building the system and getting it out to users.\nThese steps are not strictly linear; techniques such as interviews, ethnography, scenarios, task analysis, guidelines, heuristics, dialogue notations, and precise specifications can be applied at several points, and evaluation runs throughout.",
+          tags: ["Design Process", "Steps"],
+          ref: "Lecture 05 — Section: Steps ...",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. What is a persona? Explain how it is used as a surrogate user during design.",
+          translation:
+            "ما هو الـ Persona؟ اشرح كيف يُستخدم كمستخدم بديل خلال التصميم.",
+          answer:
+            'A persona is a description of an "example" user.\nKey characteristics:\n  - It is not necessarily a real person — it is a synthesized description.\n  - It is used as a surrogate user throughout design: the team keeps asking, "what would Betty think?"\n  - Details matter — adding concrete personal details (name, age, habits, goals) makes the persona feel "real," which helps designers reason about design decisions empathetically.\nBy anchoring design discussions around a persona, the team maintains a consistent user perspective rather than designing for an abstract or self-referential audience.',
+          tags: ["Persona", "User Focus"],
+          ref: "Lecture 05 — Section: Persona",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Discuss the purpose and characteristics of scenarios in interaction design.",
+          translation: "ناقش غرض وخصائص السيناريوهات في تصميم التفاعل.",
+          answer:
+            'Scenarios are "stories for design." Their purposes:\n  - Communicate with others (designers, clients, users).\n  - Validate other models by "playing" the scenario against them.\n  - Express dynamics: a screenshot shows appearance, while a scenario shows behaviour.\nCharacteristics:\n  - They are linear because time is linear and our lives are linear — but this also means they do not show alternatives.\n  - A scenario is a step-by-step walkthrough that considers what users can see (sketches, screen shots), what they do (keyboard, mouse, etc.), and what they are thinking.\n  - Scenarios are used and reused throughout the design process.',
+          tags: ["Scenarios", "Walkthrough", "Dynamics"],
+          ref: "Lecture 05 — Sections: Scenarios / Use scenarios to ...",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Compare local, global, and wider-level navigation design as presented in the lecture.",
+          translation:
+            "قارن بين تصميم التنقل المحلي والعالمي والأوسع كما ورد في المحاضرة.",
+          answer:
+            'Navigation design considers structure at several levels:\n  - Local — looking out from a single screen. Includes breadcrumbs (showing the path through the web site hierarchy) and live links to higher levels. Designers should "beware the big button trap."\n  - Global — the structure of the whole site and movement between screens. Used through hierarchical diagrams (tree-like) and network diagrams (different paths through the system).\n  - Wider still — the relationship with other applications and the operating system. Concerns here include style issues (platform standards, consistency), functional issues (cut and paste), and navigation issues (embedded applications, links to other apps, the web).\nLocal design keeps the user oriented on a page; global design ensures coherent movement across screens; the wider level makes the application a good citizen of the wider environment.',
+          tags: ["Navigation", "Local", "Global", "Wider"],
+          ref: "Lecture 05 — Sections: Think about structure / Local / Global / Wider still",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Compare hierarchical diagrams and network diagrams in global navigation design.",
+          translation:
+            "قارن بين المخططات الهرمية والمخططات الشبكية في تصميم التنقل العالمي.",
+          answer:
+            "Both are used in global navigation design, but they expose different structures:\n  - Hierarchical diagrams — show a tree-like structure of screens. They are useful when the system has a clear parent–child relationship between screens (e.g., a settings tree or content categories).\n  - Network diagrams — show different paths through the system. They are useful when users can reach the same screen through multiple routes (e.g., dashboards, search, and shortcuts that cross the hierarchy).\nIn practice, designers often need both: the hierarchy to ensure a clear primary structure, and the network to recognize and design for the cross-links that real use will create.",
+          tags: ["Navigation", "Hierarchical", "Network"],
+          ref: "Lecture 05 — Section: Global structure / Network diagrams",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "8. Explain the basic principles of screen design and layout, including the available tools mentioned.",
+          translation:
+            "اشرح المبادئ الأساسية لتصيم الشاشة والتنسيق، بما في ذلك الأدوات المتاحة المذكورة.",
+          answer:
+            'Basic principles (the lecture\'s "ask / think / design" framing):\n  - Ask: what is the user doing?\n  - Think: what information, comparisons, and order are needed?\n  - Design: form follows function — the layout should serve the task.\nThe lecture groups the basic principles under: grouping, structure, and order; alignment; and use of white space.\nAvailable tools:\n  - Grouping of items.\n  - Order of items.\n  - Decoration — fonts, boxes, etc.\n  - Alignment of items.\n  - White space between items.\nDecoration should be used sparingly — boxes to group logical items, fonts for emphasis and headings — but not too many, to avoid visual noise.',
+          tags: ["Screen Design", "Layout", "Tools"],
+          ref: "Lecture 05 — Sections: Basic principles / Available tools / Decoration",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Discuss the alignment rules for different content types presented in the lecture (text, names, numbers, multi-column data).",
+          translation:
+            "ناقش قواعد المحاذاة لأنواع المحتوى المختلفة المذكورة في المحاضرة (نصوص، أسماء، أرقام، بيانات متعددة الأعمدة).",
+          answer:
+            'Alignment rules differ by content type:\n  - Text (English/European): align left, because that is the reading direction. Centered or right-aligned text is fine for special effects but hard to scan.\n  - Names: usually users scan for surnames, so put surnames first (e.g., "Dix, Alan") to make scanning easy.\n  - Numbers: think about purpose — for example, when comparing magnitudes, use alignment (often right alignment or decimal alignment) so that the largest value is easy to identify.\n  - Multi-column data: scanning across gaps is hard. The lecture suggests two fixes — leaders (e.g., dotted lines connecting items to values) and greying (alternating row/column shading, possibly vertical too).\nThe underlying principle is purpose-driven alignment: choose the alignment that makes the user\'s task easiest.',
+          tags: ["Alignment", "Text", "Names", "Numbers", "Multiple Columns"],
+          ref: "Lecture 05 — Sections: Alignment - text / names / numbers / multiple columns",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the role of white space in design, using the lecture's counter example.",
+          translation:
+            "اشرح دور المسافة البيضاء في التصميم، مستخدمًا مثال الكونتر من المحاضرة.",
+          answer:
+            'White space is not empty or wasted — it is an active design tool. The lecture identifies three uses:\n  - Space to separate — keeps distinct items visually distinct.\n  - Space to structure — communicates grouping and hierarchy.\n  - Space to highlight — draws attention to the item that has space around it.\nThe counter example makes the point visually: there are two ways to see a counter — "WHAT YOU SEE" (the items on top) and "THE GAPS BETWEEN" (the spaces). Both matter. A designer who only sees the items and ignores the gaps will produce cluttered, hard-to-read layouts, even when every individual item looks fine.',
+          tags: ["White Space", "Counter Example"],
+          ref: "Lecture 05 — Section: White space (the counter)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "11. Compare aesthetics and utility. When can they conflict, and when can they work together?",
+          translation:
+            "قارن بين الجمال والوظيفة. متى يتعارضان، ومتى يعملان معًا؟",
+          answer:
+            "Aesthetics and utility are not opposites — aesthetically pleasing designs can increase user satisfaction and improve productivity.\nHowever, they can conflict:\n  - Mixed-up visual styles can be easy to distinguish visually but confusing overall.\n  - A clean design with little differentiation can be confusing because nothing stands out.\n  - Backgrounds behind text can look good but make the text hard to read.\nThey can also work together — the lecture cites the design of the counter as an example where form and function reinforce each other, and consumer products where aesthetics are a key differentiator (e.g., the iMac).\nIn short, beauty should support the task; when it interferes with reading, scanning, or distinguishing, it has gone wrong.",
+          tags: ["Aesthetics", "Utility"],
+          ref: "Lecture 05 — Section: Aesthetics and utility",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Discuss the bad uses of colour mentioned in the lecture and how to test for them.",
+          translation:
+            "ناقش الاستخدامات السيئة للون المذكورة في المحاضرة وكيفية اختبارها.",
+          answer:
+            'Bad uses of colour mentioned in the lecture:\n  - Overuse — using many colours without a very good reason (children\'s sites are an exception).\n  - Colour blindness — ignoring users who cannot distinguish certain colours.\n  - Poor use of contrast — text and background colours that make content hard to read.\nThe lecture also notes that older monitors had limited palettes, that colour tends to be overused simply because "it is there," and that colour should be used sparingly to reinforce other information (not to carry meaning on its own).\nHow to test:\n  - "Do adjust your set!" — adjust your monitor to greys only and check whether you can still read your screen. If the design depends on colour alone, it will fail this test, and you need to add redundant cues (shape, position, labels).',
+          tags: ["Color", "Bad Use", "Testing"],
+          ref: "Lecture 05 — Sections: Colour and 3D / Bad use of colour",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. Explain localisation, internationalisation, and globalisation as presented in the lecture, with examples.",
+          translation:
+            "اشرح التوطين والدولنة والعولمة كما وردت في المحاضرة، مع أمثلة.",
+          answer:
+            "Three related but distinct ideas:\n  - Localisation & internationalisation — changing interfaces for particular cultures/languages. The practical tip is to use a 'resource' database instead of literal text in the source, because translations change text sizes and left-to-right order.\n  - Globalisation — trying to choose symbols, colours, and conventions that work everywhere, so the same design can serve many cultures without modification.\n  - Deeper issues — cultural assumptions and values, and the meanings of symbols. For example, a tick and a cross mean +ve and -ve in some cultures, but in others both mean the same thing (\"mark this\").\nThe lecture's takeaway: simply translating text is not enough. Designers must consider how the interface is built (resource database), what symbols they choose (globalisation), and the deeper cultural meanings those symbols carry.",
+          tags: [
+            "Localization",
+            "Internationalization",
+            "Globalization",
+            "Cultures",
+          ],
+          ref: "Lecture 05 — Section: Across countries and cultures",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. Why is prototyping and iteration necessary in design? Describe the iteration loop.",
+          translation:
+            "لماذا النمذجة والتكرار ضروريان في التصميم؟ صف حلقة التكرار.",
+          answer:
+            'The lecture states bluntly: "you never get it right first time." Designs rarely survive contact with real users unchanged, so iteration is necessary to find what is really needed.\nThe iteration loop is:\n  - Prototype — build a partial, experimental version of the design.\n  - Evaluate — test it (with users, heuristics, scenarios, etc.).\n  - (Re-)design — revise the design based on what was learned.\n  - Repeat until "OK!" → done!\nIteration lets designers get something concrete in front of users early, learn from the gaps between expectation and behaviour, and improve the design over multiple cycles rather than committing to a single, untested guess.',
+          tags: ["Prototyping", "Iteration"],
+          ref: "Lecture 05 — Section: Prototyping (You never get it right first time / iteration loop)",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });

@@ -2613,5 +2613,1159 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "networks-lecture-08",
+      t: "Lecture 8 — Minimum Spanning Tree (Kruskal) & Single-Source Shortest Path (Dijkstra)",
+      d: "تمثيلات Graph الموزون، Hand-Shaking Lemma، خوارزمية Kruskal لـ MST، خوارزمية Dijkstra لأقصر مسار، وتعقيدهم الزمني.",
+      pdf: "datenew/subjects/algorithms/lectures/CS 311 lec.8 by Majid A. Askar.pdf",
+      pdf2: "datenew/subjects/algorithms/questions/Questions on each lecture/Lecture-08-Questions.pdf",
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لخوارزميات MST (Kruskal) وأقصر مسار (Dijkstra) وبنية Union-Find من قنوات يوتيوب عربية موثوقة.",
+          links: [
+            {
+              t: "شرح خوارزمية كروسكال Kruskal بالعربي — Rasmi Bakkar",
+              d: "شرح عربي واضح لخوارزمية Kruskal لإيجاد Minimum Spanning Tree في رسم بياني موزون، مع خطوات الفكرة الجشعة ودور ترتيب الحافات واستخدام Union-Find لكشف الحلقات. مناسب جدًا لمتابعة المحاضرة الثامنة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=QJ_MJm92XsQ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح وحل مثال خوارزمية Kruskal — Minimum Spanning Tree",
+              d: "فيديو عربي يطبّق خوارزمية Kruskal خطوة بخطوة على مثال عملي، وده بيتطابق مع الـ In-Class Exercise المذكور في شرائح المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=SVqszHPv-I8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Dijkstra's algorithm [Arabic] — شرح خوارزمية دكسترا",
+              d: "شرح عربي لخوارزمية Dijkstra لحل مشكلة Single-Source Shortest Paths، يشمل تهيئة جدول المسافات واستخدام Priority Queue (Min-Heap) وعملية Relaxation وتتبع المسار بالـ predecessor.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=c0EWBzuKSto",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "خوارزمية ديكسترا (Dijkstra): شرح وتصور مرئي — Coddy.tech",
+              d: "صفحة عربية تفاعلية فيها شرح لخوارزمية Dijkstra خطوة بخطوة مع كود في خمس لغات برمجية وتصور مرئي للرسم البياني. تربط بين النظري والتطبيقي.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://coddy.tech/visualize/ar/graphs/dijkstras-algorithm",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات إنجليزية عالية الجودة تشرح Kruskal و Dijkstra و Union-Find من قنوات أكاديمية معروفة عالميًا.",
+          links: [
+            {
+              t: "Kruskal's algorithm in 2 minutes — Michael Sambol",
+              d: "فيديو قصير (دقيقتين) يوضّح خطوات خوارزمية Kruskal بصريًا على مثال صغير، مع تركيز على ترتيب الحافات ومنع الحلقات. مفيد جدًا كمراجعة سريعة قبل الامتحان.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=71UQH7Pr9kU",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Prim's and Kruskal's Algorithms — Abdul Bari",
+              d: "محاضرة كاملة من عبد الباري، أستاذ الخوارزميات الأشهر على يوتيوب، تشرح Greedy Method وتطبّقه على Prim و Kruskal مع مقارنة واضحة بين الاستراتيجيتين. دي القناة اللي بيتابعها أغلب طلاب CS311.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Dijkstra's Shortest Path Algorithm — GeeksforGeeks Videos",
+              d: "شرح مرئي رسمي من GeeksforGeeks لخوارزمية Dijkstra، يشمل تهيئة جدول المسافات واستخدام Min-Heap وعملية Relaxation، مع مثال محلول بالكامل.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.geeksforgeeks.org/videos/dijkstras-shortest-path-algorithm",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Single-Source Shortest Paths Dijkstra — VisuAlgo",
+              d: "صفحة محاكاة تفاعلية على VisuAlgo (موقع جامعة سنغافورة الوطنية) لخوارزمية Dijkstra، تتيح رسم الرسم البياني ومتابعة التحديث خطوة بخطوة. مناسبة للجزء العملي للمحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 فتح المحاكي",
+                  url: "https://visualgo.net/en/sssp",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات ومراجع مكتوبة بالإنجليزية تشرح خوارزميات MST و Dijkstra و Union-Find بصيغ أكاديمية موثوقة.",
+          links: [
+            {
+              t: "Kruskal's Minimum Spanning Tree Algorithm — GeeksforGeeks",
+              d: "مقال مرجعي شامل لخوارزمية Kruskal: الفكرة الجشعة، الـ Pseudocode، استخدام Disjoint Set لكشف الحلقات، تحليل التعقيد الزمني O(E log E)، وتطبيقات بلغات متعددة. يغطي كل ما ورد في شرائح المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Dijkstra's Shortest Path Algorithm — GeeksforGeeks",
+              d: "مقال مرجعي كامل لخوارزمية Dijkstra: تعريف المشكلة، خطوات الخوارزمية، الـ Pseudocode، التعقيد الزمني O((V + E) log V)، تنبيهات حول الأوزان السالبة، وتطبيقات بلغات متعددة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/dijkstras-shortest-path-algorithm-greedy-algo-7",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Difference between Prim's and Kruskal's Algorithms — GeeksforGeeks",
+              d: "مقال مقارنة مفصّل بين Prim و Kruskal من حيث الاستراتيجية، الحل الوسيط (subtree vs spanning forest)، بنى البيانات، التعقيد، وحالات الاستخدام (dense vs sparse graphs). يتطابق مع المقارنة المذكورة في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/difference-between-prims-and-kruskals-algorithm-for-mst",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Handshaking Lemma and Interesting Tree Properties — GeeksforGeeks",
+              d: "مقال يشرح Hand-Shaking Lemma بشقيه (موجه وغير موجّه) ويقدّم البرهان على أن مجموع درجات الرؤوس = 2|E|، مع تطبيقات على الأشجار والرسوم الزوجية (even-degree vertices).",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/dsa/handshaking-lemma-and-interesting-tree-properties",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Minimum Spanning Tree — Kruskal with Disjoint Set Union — CP-Algorithms",
+              d: "مرجع أكاديمي عالي الجودة يشرح تطبيق Kruskal باستخدام بنية Disjoint Set Union (Union-Find) مع path compression و union by rank، وتحليل التعقيد الكامل O(m log n). مناسب للطلاب الراغبين في فهم أعمق.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Handshaking Lemma — Wikipedia",
+              d: "مقال موسوعي عن Hand-Shaking Lemma يشمل التعريف الرسمي، الصيغة الموجّهة، البراهين، وتطبيقات في مسارات أويلر ومسألة Königsberg السبعة جسور. مرجع جيد للقراءة الإضافية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://en.wikipedia.org/wiki/Handshaking_lemma",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية للمحاكاة الخطوة بخطوة لخوارزميات MST و Dijkstra على رسوم بيانية يرسمها المستخدم بنفسه.",
+          links: [
+            {
+              t: "VisuAlgo — Minimum Spanning Tree (Kruskal & Prim)",
+              d: "محاكي تفاعلي رسمي من جامعة سنغافورة الوطنية، يرسم الرسم البياني إدخالًا (Edge List / Adjacency Matrix / Adjacency List) ويتتبع خطوات Kruskal و Prim بصريًا مع عرض وزن MST الكلي. أداة مثالية للتحقق من حلول الـ In-Class Exercise.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://visualgo.net/en/mst",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "VisuAlgo — Single-Source Shortest Paths (Dijkstra)",
+              d: "محاكي تفاعلي لتتبع خطوات خوارزمية Dijkstra على رسم بياني مرسوم يدويًا، مع عرض جدول المسافات والـ predecessor في كل خطوة. مناسب جدًا لمتابعة المثال العملي في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://visualgo.net/en/sssp",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Graphisual — Dijkstra's Algorithm Visualizer",
+              d: "أداة ويب لرسم الرسم البياني وإدخال أوزان الحافات ومشاهدة خطوات Dijkstra بشكل تفاعلي. تشمل شرح الخصائص الأساسية للخوارزمية (greedy، non-negative weights، time complexity).",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://graphisual.app/algorithm/dijkstra",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Minimum Spanning Tree (Kruskal & Prim) — The Coatless Professor",
+              d: "أداة محاكاة بسيطة تعرض خطوات Kruskal (ترتيب الحافات + Union-Find) و Prim (النمو من رأس مصدر) جنبًا إلى جنب على نفس الرسم، مع إبراز الحافات المختارة باللون الأخضر وتحديث وزن MST حيًا.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://web-apps.thecoatlessprofessor.com/graph-algorithms/minimum-spanning-tree.html",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ==================== MCQ (HIGH first) ====================
+        {
+          q: "1. In a weighted adjacency matrix, what value is stored at A[i][j] when there is NO edge between vertex i and vertex j (i != j)?",
+          options: ["0", "w(i, j)", "Infinity", "-1"],
+          correct: 2,
+          translation:
+            "في مصفوفة التجاور الموزونة، ما القيمة المخزنة في A[i][j] عندما لا يوجد حافة بين الرأسين i و j (i != j)؟",
+          explanation:
+            "الصحيح هو Infinity لأن عدم وجود حافة بين i و j (والفرق بينهما غير صفري) يُمثل بـ infinity. أما 0 فهو للقطر A[i][i] فقط، و w(i,j) هو الوزن لو كانت الحافة موجودة.",
+          tags: ["Weighted Adjacency Matrix", "Graph Representation"],
+          ref: "Lecture 8 — Weighted Adjacency Matrix slide",
+          likely: "high",
+        },
+        {
+          q: "2. The Hand-Shaking Lemma for any undirected graph states that:",
+          options: [
+            "sum of degrees = |V|",
+            "sum of degrees = 2|E|",
+            "sum of degrees = |E|",
+            "sum of degrees = |V| + |E|",
+          ],
+          correct: 1,
+          translation: "تنص Hand-Shaking Lemma لأي رسم بياني غير موجّه على أن:",
+          explanation:
+            "الصحيح هو أن مجموع درجات كل الرؤوس = 2 × عدد الحافات، لأن كل حافة تساهم بدرجتين (تلمس رأسين). لو كان |E| بس يبقى نص الحافة، ولو |V| يبقى مفيش علاقة مباشرة.",
+          tags: ["Hand-Shaking Lemma", "Graph Theory"],
+          ref: "Lecture 8 — The Hand-Shaking Lemma slide",
+          likely: "high",
+        },
+        {
+          q: "3. For any directed graph, the sum of in-degrees of all vertices equals:",
+          options: ["|V|", "2|E|", "|E|", "|V| - 1"],
+          correct: 2,
+          translation:
+            "لأي رسم بياني موجّه، مجموع in-degrees لكل الرؤوس يساوي:",
+          explanation:
+            "الصحيح هو |E| لأن كل حافة موجهة لها رأس واحد مصدر وواحد وجهة، فتساهم بـ 1 في الـ out-degree للمصدر و 1 في الـ in-degree للوجهة. وبالتالي مجموع الـ in-degrees = مجموع الـ out-degrees = |E|. الـ 2|E| هي للـ Hand-Shaking للموجه وغير الموجه.",
+          tags: ["Hand-Shaking Lemma", "Directed Graph", "Graph Theory"],
+          ref: "Lecture 8 — Hand-Shaking Lemma (directed form)",
+          likely: "high",
+        },
+        {
+          q: "4. In Kruskal's algorithm, the edges are sorted in:",
+          options: [
+            "non-increasing order of weight",
+            "non-decreasing order of weight",
+            "lexicographic order of vertex labels",
+            "random order",
+          ],
+          correct: 1,
+          translation: "في خوارزمية Kruskal، تُفرز الحافات بترتيب:",
+          explanation:
+            "الصحيح هو non-decreasing (تصاعدي) لأوزان الحافات عشان نختار أخف حافة اولًا في كل خطوة (greedy). non-increasing معناه تنازلي وده غلط، lexico مش بيعتمد على الوزن، random بيبطل ميزة greedy.",
+          tags: ["Kruskal", "MST", "Greedy"],
+          ref: "Lecture 8 — Kruskal's Algorithm High-Level Pseudocode",
+          likely: "high",
+        },
+        {
+          q: "5. Which data structure does Kruskal's algorithm use to efficiently detect cycles?",
+          options: [
+            "Stack",
+            "Queue",
+            "Disjoint Set (Union-Find)",
+            "Hash Table",
+          ],
+          correct: 2,
+          translation:
+            "ما بنية البيانات التي تستخدمها خوارزمية Kruskal لكشف الحلقات بكفاءة؟",
+          explanation:
+            "الصحيح هو Disjoint Set (Union-Find) لأنها بتتيح MakeSet و FindSet و Union بكفاءة عالية، و FindSet لو الأخرجتين في نفس المجموعة يبقى الحافة هتعمل cycle. Stack/Queue مش بنوكشف cycles، Hash Table أبطأ في عمليات الـ Union.",
+          tags: ["Kruskal", "Disjoint Set", "Union-Find"],
+          ref: "Lecture 8 — Kruskal's Algorithm pseudocode (MakeSet/FindSet/Union)",
+          likely: "high",
+        },
+        {
+          q: "6. The overall time complexity of Kruskal's algorithm is:",
+          options: ["O(n^2)", "O(m log n)", "O(m log m)", "O(n log n)"],
+          correct: 2,
+          translation: "التعقيد الزمني الكلي لخوارزمية Kruskal هو:",
+          explanation:
+            "الصحيح هو O(m log m) حيث m = |E|. السبب أن الفرز بياخد O(m log m) وده أكبر حد. لو قلنا O(m log n) ده بعد استبعاد الفرز مش صح ككلي، O(n^2) غلط تمامًا. والـ O(n log n) بيتجاهل عدد الحافات.",
+          tags: ["Kruskal", "Time Complexity"],
+          ref: "Lecture 8 — Kruskal's Algorithm: Running Time",
+          likely: "high",
+        },
+        {
+          q: "7. In Prim's algorithm, the intermediate solution is a:",
+          options: [
+            "spanning forest",
+            "subtree",
+            "single cycle",
+            "disconnected set of edges",
+          ],
+          correct: 1,
+          translation: "في خوارزمية Prim، الحل الوسيط هو:",
+          explanation:
+            "الصحيح هو subtree لأن Prim بيكبر شجرة واحدة فقط بإضافة أخف حافة تربط رأس في الشجرة برأس برّه. أما spanning forest فده وصف Kruskal، والـ cycle مش هدف MST، و disconnected set مش ممكن لإن Prim بيبني connected.",
+          tags: ["Prim", "MST", "Comparison"],
+          ref: "Lecture 8 — Finding a MST (Prim vs Kruskal)",
+          likely: "high",
+        },
+        {
+          q: "8. In Kruskal's algorithm, the intermediate solution is a:",
+          options: [
+            "subtree",
+            "spanning forest",
+            "single cycle",
+            "complete graph",
+          ],
+          correct: 1,
+          translation: "في خوارزمية Kruskal، الحل الوسيط هو:",
+          explanation:
+            "الصحيح هو spanning forest لأن Kruskal بيضيف الحافات الأرخص بغض النظر عن الترابط، فيمكن تكون مكونات منفصلة (forest) لحد ما تتحد. subtree هو وصف Prim، cycle غلط لأننا بنمنع cycles، و complete graph غير منطقي.",
+          tags: ["Kruskal", "MST", "Comparison"],
+          ref: "Lecture 8 — Finding a MST (Prim vs Kruskal)",
+          likely: "high",
+        },
+        {
+          q: "9. What problem does Dijkstra's algorithm solve?",
+          options: [
+            "Minimum Spanning Tree",
+            "Single-Source Shortest Paths",
+            "All-Pairs Shortest Paths",
+            "Maximum Flow",
+          ],
+          correct: 1,
+          translation: "ما المشكلة التي تحلها خوارزمية Dijkstra؟",
+          explanation:
+            "الصحيح هو Single-Source Shortest Paths أي أقصر مسار من مصدر واحد إلى كل باقي الرؤوس. MST بتحله خوارزميات تانية (Prim/Kruskal)، All-Pairs بيستخدم Floyd-Warshall، Maximum Flow بيستخدم Ford-Fulkerson.",
+          tags: ["Dijkstra", "Shortest Path"],
+          ref: "Lecture 8 — Single-Source Shortest-Paths Problem / Dijkstra's Algorithm",
+          likely: "high",
+        },
+        {
+          q: "10. Dijkstra's algorithm requires that all edge weights be:",
+          options: [
+            "positive only",
+            "non-negative",
+            "negative",
+            "any real number",
+          ],
+          correct: 1,
+          translation: "تتطلب خوارزمية Dijkstra أن تكون أوزان الحافات:",
+          explanation:
+            "الصحيح هو non-negative (غير سالبة، يعني تسمح بصفر) لأن Dijkstra بتفترض إن لما رأس يتحدد، المسار الأقصر ليه خلص، وهذا الافتراض بيبطل لو في أوزان سالبة. positive only يرفض الأصفار ومش لازم، negative بيفسد الخوارزمية.",
+          tags: ["Dijkstra", "Constraints"],
+          ref: "Lecture 8 — Single-Source Shortest-Paths Problem statement",
+          likely: "high",
+        },
+        {
+          q: "11. The time complexity of Dijkstra's algorithm using a binary heap is:",
+          options: ["O(V^2)", "O((V + E) log V)", "O(V * E)", "O(E log E)"],
+          correct: 1,
+          translation:
+            "التعقيد الزمني لخوارزمية Dijkstra باستخدام binary heap هو:",
+          explanation:
+            "الصحيح هو O((V + E) log V). V iteration لكل DeleteMin بـ log V، وكل حافة ممكن تعمل UpHeap بـ log V. O(V^2) للنسخة الـ simple بدون heap، O(V*E) لـ Bellman-Ford، O(E log E) مش معتاد لـ Dijkstra.",
+          tags: ["Dijkstra", "Time Complexity"],
+          ref: "Lecture 8 — Dijkstra pseudocode and Big-O note",
+          likely: "high",
+        },
+        {
+          q: "12. In the Dijkstra pseudocode, what is the initial value of dist[s] for the source vertex s?",
+          options: ["infinity", "0", "-1", "the largest edge weight"],
+          correct: 1,
+          translation:
+            "في pseudocode الخاص بـ Dijkstra، ما القيمة الابتدائية لـ dist[s] للرأس المصدر s؟",
+          explanation:
+            "الصحيح هو 0 لأن المسافة من المصدر لنفسه = 0. infinity لباقي الرؤوس، -1 مش قيمة منطقية، أكبر وزن حافة غلط لإنها لازم تبدأ من 0 للمصدر.",
+          tags: ["Dijkstra", "Initialization"],
+          ref: "Lecture 8 — Dijkstra pseudocode lines 1-2",
+          likely: "high",
+        },
+        {
+          q: "13. What is the role of the predecessor pointer p[v] in Dijkstra's algorithm?",
+          options: [
+            "stores the distance",
+            "stores the previous vertex on the shortest path",
+            "stores the edge weight",
+            "stores the priority value",
+          ],
+          correct: 1,
+          translation: "ما دور المؤشر السابق p[v] في خوارزمية Dijkstra؟",
+          explanation:
+            "الصحيح هو storing previous vertex على المسار الأقصر ل reconstruct المسار. dist[] بيخزن المسافة، w(u,v) هو الوزن، priority بيخزنه الـ heap داخليًا.",
+          tags: ["Dijkstra", "Path Reconstruction"],
+          ref: "Lecture 8 — Dijkstra pseudocode line 9",
+          likely: "high",
+        },
+        {
+          q: "14. In a weighted adjacency list, what does Adj[i] contain for each vertex i?",
+          options: [
+            "only the neighbor vertex ids",
+            "pairs (j, w(i, j)) for each neighbor j",
+            "only the edge weights",
+            "the degree of vertex i only",
+          ],
+          correct: 1,
+          translation:
+            "في قائمة التجاور الموزونة، ماذا تحتوي Adj[i] لكل رأس i؟",
+          explanation:
+            "الصحيح هو pairs (j, w(i,j)) أي كل جار مع وزن الحافة ليه. لو ids بس يبقى list عادية مش موزونة، أوزان بس بتفقد معلومات الجيران، و degree بس مفيهاش التفاصيل.",
+          tags: ["Adjacency List", "Graph Representation"],
+          ref: "Lecture 8 — (Weighted) Adjacency List Structure",
+          likely: "high",
+        },
+        {
+          q: "15. For a directed graph, the degree of vertex v equals:",
+          options: [
+            "outdeg(v) only",
+            "indeg(v) only",
+            "outdeg(v) + indeg(v)",
+            "outdeg(v) * indeg(v)",
+          ],
+          correct: 2,
+          translation: "للرسم البياني الموجه، درجة الرأس v تساوي:",
+          explanation:
+            "الصحيح هو outdeg + indeg لأن كل حافة موجهة إما خارجة من v أو داخلة ليه. لو حد فقط يبقى نص المعلومة، وضرب غلط تمامًا.",
+          tags: ["Directed Graph", "Degree", "Hand-Shaking"],
+          ref: "Lecture 8 — Hand-Shaking Lemma slide",
+          likely: "high",
+        },
+        {
+          q: "16. Which of the following is NOT a typical MST application mentioned in the lecture?",
+          options: [
+            "telephone network design",
+            "electrical power network",
+            "sorting an array of numbers",
+            "road network design",
+          ],
+          correct: 2,
+          translation: "أيٌّ مما يلي ليس من تطبيقات MST المذكورة في المحاضرة؟",
+          explanation:
+            "الصحيح هو sorting an array لأن ده مش مرتبط بـ MST. المحاضرة ذكرت telephone, electrical power, hydraulic, TV cable, computer, road networks.",
+          tags: ["MST Applications", "Network Design"],
+          ref: "Lecture 8 — MST Applications slide",
+          likely: "high",
+        },
+        {
+          q: "17. In Dijkstra's algorithm, after a vertex is selected (DeleteMin) and processed, its shortest distance is:",
+          options: [
+            "still subject to update",
+            "finalized and never changes",
+            "set to infinity",
+            "set to -1",
+          ],
+          correct: 1,
+          translation:
+            "في خوارزمية Dijkstra، بعد اختيار رأس (DeleteMin) ومعالجته، مسافته الأقصر:",
+          explanation:
+            "الصحيح هو finalized وده اللي بيخلي الخوارزمية greedy. لو مع weights غير سالبة، أول ما نطلع رأس من الـ Q يبقى مسافته مضايقتش. تحديث infinity أو -1 غلط.",
+          tags: ["Dijkstra", "Greedy Property"],
+          ref: "Lecture 8 — Dijkstra's Algorithm description",
+          likely: "high",
+        },
+        {
+          q: "18. The number of edges in a Minimum Spanning Tree of a connected graph with n vertices is:",
+          options: ["n", "n - 1", "n + 1", "2n - 1"],
+          correct: 1,
+          translation: "عدد الحافات في MST لرسم بياني متصل بـ n رؤوس هو:",
+          explanation:
+            "الصحيح هو n-1 لأن أي spanning tree لرسم متصل بـ n رؤوس لازم يكون فيه n-1 حافة بالظبط (لا دوراير ولا غير متصل).",
+          tags: ["MST", "Spanning Tree Properties"],
+          ref: "Lecture 8 — Kruskal high-level pseudocode (while encounter < |V|-1)",
+          likely: "high",
+        },
+        {
+          q: "19. The MakeSet(v) operation in Kruskal's algorithm is used to:",
+          options: [
+            "sort edges",
+            "create a singleton set containing only v",
+            "merge two sets",
+            "find the minimum edge",
+          ],
+          correct: 1,
+          translation: "عملية MakeSet(v) في خوارزمية Kruskal تُستخدم لـ:",
+          explanation:
+            "الصحيح هو create singleton set for v أي مجموعة فيها v بس. sort بتتم بمعزل، merge هي Union، find minimum بيتم بترتيب الفرز.",
+          tags: ["Kruskal", "Disjoint Set", "MakeSet"],
+          ref: "Lecture 8 — Kruskal pseudocode (for each v MakeSet(v))",
+          likely: "high",
+        },
+        {
+          q: "20. The condition to add an edge (u, v) in Kruskal's algorithm is:",
+          options: [
+            "FindSet(u) == FindSet(v)",
+            "FindSet(u) != FindSet(v)",
+            "w(u,v) is minimum",
+            "u and v are both in tree",
+          ],
+          correct: 1,
+          translation: "شرط إضافة حافة (u, v) في خوارزمية Kruskal هو:",
+          explanation:
+            "الصحيح هو FindSet(u) != FindSet(v) يعني u و v في مجموعتين مختلفتين فالحافة مش هتعمل cycle. لو نفس المجموعة يبقى cycle ونمنعها. الوزن الأقل مش كفاية لو هيعمل cycle.",
+          tags: ["Kruskal", "Cycle Detection", "Union-Find"],
+          ref: "Lecture 8 — Kruskal pseudocode (if FindSet(u) != FindSet(v))",
+          likely: "high",
+        },
+        {
+          q: "21. How many FindSet() calls are made during Kruskal's algorithm?",
+          options: ["O(n)", "O(m)", "O(n log n)", "O(m^2)"],
+          correct: 1,
+          translation: "كم عدد استدعاءات FindSet() أثناء خوارزمية Kruskal؟",
+          explanation:
+            "الصحيح هو O(m) لأن لكل حافة في E بنستدعي FindSet مرتين (مرة لـ u ومرة لـ v)، فالمجموع 2m = O(m). O(n) لـ MakeSet و Union بس.",
+          tags: ["Kruskal", "Complexity Analysis"],
+          ref: "Lecture 8 — Kruskal Running Time slide (O(m) FindSet calls)",
+          likely: "high",
+        },
+        {
+          q: "22. In Dijkstra's algorithm, the priority queue stores vertices ordered by:",
+          options: [
+            "vertex id",
+            "their current dist[] value",
+            "edge count",
+            "alphabetical order",
+          ],
+          correct: 1,
+          translation:
+            "في خوارزمية Dijkstra، طابور الأولويات يخزن الرؤوس مرتبين بـ:",
+          explanation:
+            "الصحيح هو current dist[] value أي أقل مسافة معروفة لكل رأس. ده اللي بيخلّي DeleteMin يرجع أقرب رأس غير معالج. vertex id / alphabet / edge count مش ليها معنى في Dijkstra.",
+          tags: ["Dijkstra", "Priority Queue"],
+          ref: "Lecture 8 — Dijkstra pseudocode (ConstructMinHeap(V, dist))",
+          likely: "high",
+        },
+        {
+          q: "23. The Hand-Shaking Lemma implies that in any undirected graph, the number of vertices with odd degree is:",
+          options: [
+            "always odd",
+            "always even",
+            "always zero",
+            "always equal to |V|",
+          ],
+          correct: 1,
+          translation:
+            "تستلزم Hand-Shaking Lemma أنه في أي رسم غير موجّه، عدد الرؤوس ذات الدرجة الفردية:",
+          explanation:
+            "الصحيح هو always even لأن لو جمع الدرجات = 2|E| (زوجي)، فلازم مجموع الدرجات الفردية يكون زوجي، فعدد الرؤوس ذات الدرجة الفردية لازم يكون زوجي. odd مستحيل، صفر ممكن بس مش دائمًا.",
+          tags: ["Hand-Shaking Lemma", "Graph Theory"],
+          ref: "Lecture 8 — Hand-Shaking Lemma + standard corollary",
+          likely: "high",
+        },
+        {
+          q: "24. The Dijkstra pseudocode uses which heap operation to update a vertex's distance after relaxation?",
+          options: ["DeleteMin", "UpHeap", "Heapify", "BuildHeap"],
+          correct: 1,
+          translation:
+            "pseudocode الخاص بـ Dijkstra يستخدم عملية heap ما لتحديث مسافة رأس بعد relaxation؟",
+          explanation:
+            "الصحيح هو UpHeap لأنها بترفع الرأس لو قلّت dist بتاعته عشان يحافظ على خاصية min-heap. DeleteMin لإخراج أصغر عنصر، Heapify/BuildHeap لإنشاء الـ heap مرة واحدة.",
+          tags: ["Dijkstra", "Heap", "Priority Queue"],
+          ref: "Lecture 8 — Dijkstra pseudocode line 10 (UpHeap(v,Q))",
+          likely: "high",
+        },
+        {
+          q: "25. The greedy strategy common to both Prim and Dijkstra is:",
+          options: [
+            "always sort all edges first",
+            "repeatedly pick the locally best (minimum) option",
+            "use recursion",
+            "use dynamic programming",
+          ],
+          correct: 1,
+          translation: "الاستراتيجية الجشعة المشتركة بين Prim و Dijkstra هي:",
+          explanation:
+            "الصحيح هو repeatedly pick locally best أي في كل خطوة تختار العنصر الأقل حاليًا. الفرز الشامل خاص بـ Kruskal، recursion/DP مش مستخدمة في أي منهم.",
+          tags: ["Greedy", "Prim", "Dijkstra", "Comparison"],
+          ref: "Lecture 8 — Prim and Dijkstra both use priority queue greedy selection",
+          likely: "high",
+        },
+        {
+          q: "26. Which operation is performed inside the inner for-loop of Dijkstra's algorithm?",
+          options: [
+            "BuildHeap",
+            "Relaxation (if dist[v] > dist[u] + w(u,v) then update)",
+            "MakeSet",
+            "Sort edges",
+          ],
+          correct: 1,
+          translation:
+            "ما العملية التي تتم داخل for-loop الداخلية في خوارزمية Dijkstra؟",
+          explanation:
+            "الصحيح هو relaxation (الشرط if dist[v] > dist[u] + w(u,v)) وهي قلب الخوارزمية. BuildHeap يتم مرة واحدة في البداية، MakeSet و Sort خاصة بـ Kruskal.",
+          tags: ["Dijkstra", "Relaxation"],
+          ref: "Lecture 8 — Dijkstra pseudocode lines 7-10",
+          likely: "high",
+        },
+        {
+          q: "27. In Kruskal's algorithm, what is the role of the Union operation?",
+          options: [
+            "sort edges",
+            "merge the sets containing u and v after adding edge (u,v)",
+            "find the smallest edge",
+            "initialize the tree",
+          ],
+          correct: 1,
+          translation: "في خوارزمية Kruskal، ما دور عملية Union؟",
+          explanation:
+            "الصحيح هو merge sets containing u and v لما نضيف الحافة لTree عشان لو في حاجة تانية بعدها حاول تربط u بـ v ب FindSet نلاقيهم نفس المجموعة. sort تم قبل، find minimum بترتيب الفرز، initialize بـ MakeSet.",
+          tags: ["Kruskal", "Union-Find", "Disjoint Set"],
+          ref: "Lecture 8 — Kruskal pseudocode (Union(FindSet(u), FindSet(v)))",
+          likely: "high",
+        },
+        {
+          q: "28. For an undirected graph G, the degree of vertex v equals:",
+          options: [
+            "|Adj[v]|",
+            "2 * |Adj[v]|",
+            "|Adj[v]| / 2",
+            "|V| - |Adj[v]|",
+          ],
+          correct: 0,
+          translation: "للرسم البياني غير الموجه G، درجة الرأس v تساوي:",
+          explanation:
+            "الصحيح هو |Adj[v]| لإن Adj[v] بتحتوي على كل الجيران، وكل جار = حافة واحدة (غير الموجه بتعد مرة). ضرب في 2 غلط لأنها بتضاعف، القسمة على 2 غلط.",
+          tags: ["Graph Theory", "Degree", "Adjacency List"],
+          ref: "Lecture 8 — Hand-Shaking Lemma slide (deg(v) = |Adj[v]|)",
+          likely: "high",
+        },
+        {
+          q: "29. The ConstructMinHeap step in Dijkstra's pseudocode has time complexity:",
+          options: ["O(V)", "O(V log V)", "O(V^2)", "O(E)"],
+          correct: 1,
+          translation:
+            "خطوة ConstructMinHeap في pseudocode الخاص بـ Dijkstra لها تعقيد زمني:",
+          explanation:
+            "الصحيح هو O(V log V) لإدراج عناصر V في min-heap. ممكن يكون O(V) لو BuildHeap لكن الكلاسيكي O(V log V). O(V^2) كبير أوي، O(E) مش صحيح لإن الموضوع رؤوس.",
+          tags: ["Dijkstra", "Heap Construction", "Time Complexity"],
+          ref: "Lecture 8 — Dijkstra pseudocode line 3",
+          likely: "medium",
+        },
+        {
+          q: "30. Which algorithm does NOT use the Disjoint Set (Union-Find) data structure?",
+          options: [
+            "Kruskal's MST algorithm",
+            "Dijkstra's shortest path algorithm",
+            "Both use it",
+            "Neither uses it",
+          ],
+          correct: 1,
+          translation: "أي خوارزمية لا تستخدم بنية Disjoint Set (Union-Find)؟",
+          explanation:
+            "الصحيح هو Dijkstra لإنها بتستخدم priority heap فقط. Kruskal هو اللي بيستخدم Union-Find لكشف cycles.",
+          tags: ["Kruskal", "Dijkstra", "Disjoint Set", "Comparison"],
+          ref: "Lecture 8 — Kruskal pseudocode + Dijkstra pseudocode",
+          likely: "high",
+        },
+        {
+          q: "31. The condition to terminate Kruskal's while-loop is when:",
+          options: [
+            "all edges are processed",
+            "encounter == |V| - 1",
+            "encounter == |V|",
+            "no more edges remain",
+          ],
+          correct: 1,
+          translation: "شرط إنهاء حلقة while في خوارزمية Kruskal هو عندما:",
+          explanation:
+            "الصحيح هو encounter == |V| - 1 لأن MST لـ |V| رؤوس يحتاج |V|-1 حافة بالظبط. |V| غلط لإنه يعمل cycle. all edges processed بطيء وغير ضروري بعد ما نوصل لـ |V|-1.",
+          tags: ["Kruskal", "Termination Condition"],
+          ref: "Lecture 8 — Kruskal high-level pseudocode (while encounter < |V|-1)",
+          likely: "high",
+        },
+        {
+          q: "32. Which statement correctly compares Prim and Kruskal?",
+          options: [
+            "Prim grows a forest; Kruskal grows a single tree",
+            "Prim grows a single tree; Kruskal grows a forest",
+            "Both grow a single tree",
+            "Both grow a forest",
+          ],
+          correct: 1,
+          translation: "أي جملة تقارن بشكل صحيح بين Prim و Kruskal؟",
+          explanation:
+            "الصحيح هو Prim grows single tree, Kruskal grows forest. ده الفرق الأساسي المذكور في المحاضرة. العكس خلط، و both واحد غلط.",
+          tags: ["Prim", "Kruskal", "Comparison", "MST"],
+          ref: "Lecture 8 — Finding a MST slide",
+          likely: "high",
+        },
+
+        // ==================== ESSAY QUESTIONS ====================
+        {
+          type: "essay",
+          q: "1. Define a Minimum Spanning Tree (MST) and list three of its real-world applications mentioned in the lecture.",
+          translation:
+            "عرّف Minimum Spanning Tree (MST) واذكر ثلاثة تطبيقات واقعية له مذكورة في المحاضرة.",
+          answer:
+            "A Minimum Spanning Tree (MST) of a connected, weighted, undirected graph G = (V, E) is a subset of edges that:\n" +
+            "1. Connects all the vertices together (i.e., it is a spanning subgraph),\n" +
+            "2. Contains no cycles (i.e., it is a tree),\n" +
+            "3. Has the minimum possible total edge weight among all such spanning trees.\n" +
+            "A spanning tree of a graph with n vertices always contains exactly (n - 1) edges.\n" +
+            "Applications mentioned in the lecture:\n" +
+            "- Network design: telephone networks, electrical power networks, hydraulic networks, TV cable networks, computer networks, and road networks.\n" +
+            "- MST gives the minimum-cost network connecting all sites.\n" +
+            "- MST is the most economical construction of a network.",
+          tags: ["MST", "Definition", "Applications"],
+          ref: "Lecture 8 — Finding a MST + MST Applications slides",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Compare Prim's and Kruskal's algorithms for finding MST in terms of the intermediate solution, the strategy used, and the data structures required.",
+          translation:
+            "قارن بين خوارزمية Prim و Kruskal لإيجاد MST من حيث: الحل الوسيط، الاستراتيجية، وبنى البيانات المطلوبة.",
+          answer:
+            "Both algorithms are greedy and find an MST, but they differ in strategy and intermediate state:\n" +
+            "1. Intermediate solution:\n" +
+            "   - Prim: the intermediate solution is a single subtree that grows one vertex at a time.\n" +
+            "   - Kruskal: the intermediate solution is a spanning forest (possibly disconnected components) that gradually unifies.\n" +
+            "2. Strategy:\n" +
+            "   - Prim: repeatedly adds the least-cost edge that connects a vertex in the existing tree to a vertex NOT in the existing tree.\n" +
+            "   - Kruskal: repeatedly adds the least-cost edge that does NOT introduce a cycle among the edges included so far.\n" +
+            "3. Data structures:\n" +
+            "   - Prim: a priority queue (min-heap) keyed by edge weights connecting tree to non-tree vertices.\n" +
+            "   - Kruskal: a Disjoint Set (Union-Find) data structure to detect cycles efficiently via MakeSet, FindSet, and Union operations.\n" +
+            "4. Time complexity:\n" +
+            "   - Prim: O((n + m) log n) using a binary heap.\n" +
+            "   - Kruskal: O(m log m) dominated by the sorting step.",
+          tags: ["Prim", "Kruskal", "Comparison", "MST"],
+          ref: "Lecture 8 — Finding a MST + Kruskal pseudocode + Dijkstra note",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Explain Kruskal's algorithm step by step using the pseudocode shown in the lecture.",
+          translation:
+            "اشرح خوارزمية Kruskal خطوة بخطوة باستخدام pseudocode المعروض في المحاضرة.",
+          answer:
+            "Kruskal's algorithm (greedy MST construction):\n" +
+            "Step 1: Initialize T as an empty set of edges (the future MST).\n" +
+            "Step 2: For each vertex v in V, call MakeSet(v) so each vertex becomes its own singleton set in a Disjoint Set (Union-Find) structure.\n" +
+            "Step 3: Sort all edges in E in non-decreasing order of their weight w.\n" +
+            "Step 4: Iterate over edges (u, v) in sorted order. For each edge:\n" +
+            "   - If FindSet(u) != FindSet(v), then u and v are in different components (no cycle will be formed):\n" +
+            "       * Add edge (u, v) to T.\n" +
+            "       * Call Union(FindSet(u), FindSet(v)) to merge the two components.\n" +
+            "   - Otherwise, discard the edge (it would form a cycle).\n" +
+            "Step 5: Stop when T contains exactly |V| - 1 edges. Return T as the MST.\n" +
+            "The algorithm grows a spanning forest that gradually unifies into a single tree.",
+          tags: ["Kruskal", "Algorithm Steps", "Pseudocode"],
+          ref: "Lecture 8 — Kruskal's Algorithm pseudocode",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Derive the time complexity of Kruskal's algorithm in terms of n = |V| and m = |E|.",
+          translation:
+            "اشتق التعقيد الزمني لخوارزمية Kruskal بدلالة n = |V| و m = |E|.",
+          answer:
+            "Let n = |V| and m = |E|.\n" +
+            "1. MakeSet: O(n) calls, each O(1) amortized in disjoint set with path compression => total O(n).\n" +
+            "2. Sort E by weight: O(m log m) using comparison-based sort.\n" +
+            "3. FindSet: O(m) calls (two per edge). With union-by-rank and path compression, each FindSet is nearly O(1) amortized (inverse Ackermann), but a tighter bound yields O(m log n) or essentially O(m alpha(n)).\n" +
+            "4. Union: at most O(n) calls, each O(1) amortized.\n" +
+            "5. Dominant term: O(m log m) for sorting edges.\n" +
+            "Since m <= n(n-1)/2, we have log m <= 2 log n, so O(m log m) is essentially O(m log n) for connected graphs.\n" +
+            "Overall complexity: O(m log m) (equivalently O(m log n) for connected graphs).",
+          tags: ["Kruskal", "Time Complexity", "Analysis"],
+          ref: "Lecture 8 — Kruskal's Algorithm: Running Time slide",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. State the Hand-Shaking Lemma for both undirected and directed graphs, and explain why it holds.",
+          translation:
+            "اذكر Hand-Shaking Lemma للرسوم البيانية الموجهة وغير الموجهة، واشرح لماذا تنطبق.",
+          answer:
+            "Undirected form: For any undirected graph G = (V, E),\n" +
+            "   sum over v in V of deg(v) = 2 * |E|.\n" +
+            "Directed form: For any directed graph G = (V, E),\n" +
+            "   sum over v in V of in-deg(v) = sum over v in V of out-deg(v) = |E|.\n" +
+            "   Also, deg(v) = out-deg(v) + in-deg(v).\n" +
+            "Explanation: Each undirected edge is incident to exactly two vertices, so it contributes 1 to the degree of each of its endpoints, hence 2 to the sum. Each directed edge has exactly one source (contributing 1 to out-deg) and one destination (contributing 1 to in-deg), so the total in-degree equals the total out-degree equals the number of edges.\n" +
+            "Corollary: In any undirected graph, the number of vertices with odd degree is even.",
+          tags: ["Hand-Shaking Lemma", "Graph Theory", "Proof"],
+          ref: "Lecture 8 — The Hand-Shaking Lemma slide",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Explain Dijkstra's algorithm step by step using the pseudocode shown in the lecture.",
+          translation:
+            "اشرح خوارزمية Dijkstra خطوة بخطوة باستخدام pseudocode المعروض في المحاضرة.",
+          answer:
+            "Dijkstra's algorithm (single-source shortest paths with non-negative weights):\n" +
+            "Step 1: For each vertex u in V(G), set dist[u] = infinity.\n" +
+            "Step 2: Set dist[s] = 0 and p[s] = nil (s is the source; it will be the first vertex scanned).\n" +
+            "Step 3: Build a min-heap Q containing all vertices, keyed by their current dist[] value (ConstructMinHeap).\n" +
+            "Step 4: While Q is not empty (|V| iterations):\n" +
+            "   - u = DeleteMin(Q) -> removes the vertex with the smallest dist[] (O(log V) per deletion).\n" +
+            "   - For each neighbor v in Adj[u]:\n" +
+            "       * If dist[v] > dist[u] + w(u, v) then:\n" +
+            "           - Update dist[v] = dist[u] + w(u, v).\n" +
+            "           - Set p[v] = u (record predecessor for path reconstruction).\n" +
+            "           - UpHeap(v, Q) to restore the heap property.\n" +
+            "Step 5: Stop when Q is empty. The dist[] array now holds shortest distances from s.\n" +
+            "Total time: O(E log V) using a standard binary heap.",
+          tags: ["Dijkstra", "Algorithm Steps", "Pseudocode"],
+          ref: "Lecture 8 — Dijkstra pseudocode",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Derive the time complexity of Dijkstra's algorithm using a binary heap.",
+          translation:
+            "اشتق التعقيد الزمني لخوارزمية Dijkstra باستخدام binary heap.",
+          answer:
+            "Let n = |V| and m = |E|.\n" +
+            "1. Initialize dist[]: O(n).\n" +
+            "2. ConstructMinHeap: O(n log n) using repeated insertion (or O(n) with BuildHeap).\n" +
+            "3. The while loop iterates n times (once per vertex). Each iteration:\n" +
+            "   - DeleteMin: O(log n).\n" +
+            "   - Inner for-loop scans all neighbors of u. Across all iterations, each edge is examined at most twice (once from each endpoint), so total O(m) relaxations.\n" +
+            "   - Each successful relaxation calls UpHeap: O(log n).\n" +
+            "4. Therefore:\n" +
+            "   - n DeleteMin operations: O(n log n).\n" +
+            "   - O(m) UpHeap operations (worst case): O(m log n).\n" +
+            "5. Total time = O(n log n) + O(m log n) = O((n + m) log n) = O(E log V) using the lecture's notation.\n" +
+            "Note: A Fibonacci heap can improve the bound to O(m + n log n), but the lecture focuses on the binary heap version.",
+          tags: ["Dijkstra", "Time Complexity", "Analysis"],
+          ref: "Lecture 8 — Dijkstra pseudocode + Big-O note",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Define the Single-Source Shortest-Paths problem and mention one real-world application.",
+          translation:
+            "عرّف مشكلة Single-Source Shortest-Paths واذكر تطبيقًا واقعيًا واحدًا لها.",
+          answer:
+            "Problem statement: Given a connected graph G with non-negative weights on the edges and a source vertex s in G, determine the shortest paths from s to all other vertices in G.\n" +
+            "Formally: compute, for every vertex v in V(G), the minimum total weight of any path from s to v.\n" +
+            "Real-world application: road map applications (e.g., GPS navigation), where the graph models a road network, vertices are intersections, edge weights are travel times or distances, and the user wants the shortest route from their current location to every other destination. Other applications include network routing protocols such as OSPF and game AI pathfinding.",
+          tags: ["Shortest Path", "Problem Definition", "Applications"],
+          ref: "Lecture 8 — Single-Source Shortest-Paths Problem slide",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Explain the role of the Disjoint Set (Union-Find) data structure in Kruskal's algorithm. Mention its three core operations and what each does.",
+          translation:
+            "اشرح دور بنية Disjoint Set (Union-Find) في خوارزمية Kruskal. اذكر العمليات الأساسية الثلاث وماذا تفعل كل واحدة.",
+          answer:
+            "Role: The Disjoint Set (Union-Find) data structure allows Kruskal's algorithm to efficiently test whether adding an edge would create a cycle, and to merge components when an edge is added.\n" +
+            "Three core operations:\n" +
+            "1. MakeSet(v): creates a new singleton set containing only vertex v. Called once for each vertex during initialization (O(n) calls).\n" +
+            "2. FindSet(v): returns the representative (root) of the set that contains vertex v. Two vertices are in the same connected component iff their FindSet results are equal.\n" +
+            "3. Union(u, v): merges the two sets that contain u and v into a single set. Called after adding a safe edge to reflect that the two endpoints are now connected.\n" +
+            "In Kruskal's main loop, an edge (u, v) is added to T only if FindSet(u) != FindSet(v) (different components => no cycle). After adding it, Union(u, v) is called to merge the components.\n" +
+            "Using path compression and union by rank, all three operations are nearly constant (inverse Ackermann) amortized, which keeps Kruskal's overall complexity at O(m log m).",
+          tags: ["Kruskal", "Disjoint Set", "Union-Find", "Data Structures"],
+          ref: "Lecture 8 — Kruskal pseudocode (MakeSet/FindSet/Union)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Compare weighted adjacency matrix and weighted adjacency list representations in terms of space and use cases.",
+          translation:
+            "قارن بين تمثيل مصفوفة التجاور الموزونة وقائمة التجاور الموزونة من حيث المساحة وحالات الاستخدام.",
+          answer:
+            "Weighted adjacency matrix:\n" +
+            "- An n x n matrix A where A[i][j] = w(i, j) if (i, j) is in E, A[i][i] = 0, and A[i][j] = infinity otherwise (no edge).\n" +
+            "- Space: O(n^2), regardless of how many edges the graph has.\n" +
+            "- Best suited for dense graphs where m is close to n^2, or when fast O(1) edge-weight lookup is required.\n" +
+            "- Iterating over neighbors of v requires scanning an entire row of n entries.\n" +
+            "Weighted adjacency list:\n" +
+            "- An array Adj[1..n] where Adj[i] is a list of pairs (j, w(i, j)) for every neighbor j of vertex i.\n" +
+            "- Space: O(n + m), proportional to the actual number of edges.\n" +
+            "- Best suited for sparse graphs where m is much smaller than n^2 (most real-world graphs).\n" +
+            "- Iterating over neighbors of v takes O(deg(v)) time, which is exactly what graph traversal algorithms need.\n" +
+            "Most MST and shortest-path algorithms (Prim, Kruskal, Dijkstra) prefer the adjacency list representation for sparse graphs.",
+          tags: ["Adjacency Matrix", "Adjacency List", "Graph Representation"],
+          ref: "Lecture 8 — Weighted Adjacency Matrix + (Weighted) Adjacency List Structure slides",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Why does Dijkstra's algorithm NOT work with negative edge weights? Give a brief conceptual justification.",
+          translation:
+            "لماذا لا تعمل خوارزمية Dijkstra مع الأوزان السالبة؟ اذكر تبريرًا مفاهيميًا موجزًا.",
+          answer:
+            "Dijkstra's algorithm relies on a greedy invariant: once a vertex u is extracted from the priority queue via DeleteMin, its dist[u] is considered finalized (the shortest possible) and is never updated again.\n" +
+            "This invariant holds only when all edge weights are non-negative. With non-negative weights, any future path that goes through other vertices and arrives at u cannot be shorter than the current dist[u], because adding non-negative numbers can only keep the path length the same or increase it.\n" +
+            "If even one edge has a negative weight, a later path through a vertex not yet processed might reduce dist[u] after u has been finalized, which violates the invariant. The algorithm would therefore return incorrect (too large) distances.\n" +
+            "For graphs with negative weights, the Bellman-Ford algorithm should be used instead.",
+          tags: ["Dijkstra", "Negative Weights", "Limitations"],
+          ref: "Lecture 8 — Single-Source Shortest-Paths Problem statement (non-negative weights)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "12. List the four standard categories of MST applications mentioned in the lecture and give a one-line example for each.",
+          translation:
+            "اذكر الفئات الأربعة لتطبيقات MST المذكورة في المحاضرة وأعطِ مثالًا من سطر واحد لكل منها.",
+          answer:
+            "The lecture lists MST applications under the general umbrella of network design, with the following examples:\n" +
+            "1. Telephone networks: laying cables to connect a set of telephone exchanges at minimum total cost.\n" +
+            "2. Electrical power networks: connecting power stations and substations with the minimum total length of transmission lines.\n" +
+            "3. Hydraulic (water) networks: designing a pipeline system that links water sources to consumers at minimum cost.\n" +
+            "4. Road networks: building the minimum-cost set of roads that connects a set of cities so that every city is reachable.\n" +
+            "In every case, the MST provides the most economical construction of a network connecting all sites (vertices) using the minimum total edge weight.",
+          tags: ["MST", "Applications", "Network Design"],
+          ref: "Lecture 8 — MST Applications slide",
+          likely: "medium",
+        },
+
+        // ==================== CALCULATION / PROBLEM QUESTIONS ====================
+        {
+          type: "essay",
+          q: "1. Verify the Hand-Shaking Lemma on the following undirected graph: V = {A, B, C, D}, E = {(A,B), (A,C), (B,C), (B,D), (C,D)}. Show all degrees and confirm the sum equals 2|E|.",
+          translation:
+            "تحقق من Hand-Shaking Lemma على الرسم البياني غير الموجه التالي: V = {A, B, C, D}، E = {(A,B), (A,C), (B,C), (B,D), (C,D)}. اعرض كل الدرجات وأكد أن المجموع يساوي 2|E|.",
+          answer:
+            "Given: |V| = 4 and |E| = 5 (edges: AB, AC, BC, BD, CD).\n" +
+            "Compute the degree of each vertex:\n" +
+            "  deg(A) = 2 (edges AB, AC)\n" +
+            "  deg(B) = 3 (edges AB, BC, BD)\n" +
+            "  deg(C) = 3 (edges AC, BC, CD)\n" +
+            "  deg(D) = 2 (edges BD, CD)\n" +
+            "Sum of degrees = 2 + 3 + 3 + 2 = 10.\n" +
+            "By the Hand-Shaking Lemma: sum of degrees = 2 * |E| = 2 * 5 = 10.\n" +
+            "Both sides match (10 = 10), so the lemma is verified.\n" +
+            "Bonus observation: the number of vertices with odd degree is 2 (B and C), which is even, consistent with the corollary of the lemma.",
+          tags: ["Hand-Shaking Lemma", "Calculation", "Verification"],
+          ref: "Lecture 8 — Hand-Shaking Lemma slide",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Apply Kruskal's algorithm on the following weighted undirected graph and find the MST. Vertices = {A, B, C, D, E, F}. Edges with weights: (A,B,4), (A,C,3), (B,C,1), (B,D,2), (C,D,4), (C,E,5), (D,E,7), (D,F,6), (E,F,8). Show each step and the total MST weight.",
+          translation:
+            "طبّق خوارزمية Kruskal على الرسم البياني الموزون غير الموجه التالي وأوجد MST. الرؤوس = {A, B, C, D, E, F}. الحافات بأوزانها: (A,B,4), (A,C,3), (B,C,1), (B,D,2), (C,D,4), (C,E,5), (D,E,7), (D,F,6), (E,F,8). اعرض كل خطوة والوزن الكلي لـ MST.",
+          answer:
+            "Step 1 - Sort edges in non-decreasing order of weight:\n" +
+            "  (B,C,1), (B,D,2), (A,C,3), (A,B,4), (C,D,4), (C,E,5), (D,F,6), (D,E,7), (E,F,8).\n" +
+            "Step 2 - Initialize: T = empty, MakeSet for every vertex (each vertex is its own set). |V| - 1 = 5 edges needed.\n" +
+            "Step 3 - Process edges in sorted order:\n" +
+            "  - Edge (B,C,1): FindSet(B) != FindSet(C) => no cycle. Add to T. Union(B,C). T = {(B,C)}. edges = 1.\n" +
+            "  - Edge (B,D,2): FindSet(B) != FindSet(D) => no cycle. Add to T. Union(B,D). T = {(B,C), (B,D)}. edges = 2.\n" +
+            "  - Edge (A,C,3): FindSet(A) != FindSet(C) => no cycle. Add to T. Union(A,C). T = {(B,C), (B,D), (A,C)}. edges = 3.\n" +
+            "  - Edge (A,B,4): FindSet(A) == FindSet(B) (both in same set after unions) => would create a cycle. SKIP.\n" +
+            "  - Edge (C,D,4): FindSet(C) == FindSet(D) => cycle. SKIP.\n" +
+            "  - Edge (C,E,5): FindSet(C) != FindSet(E) => no cycle. Add to T. Union(C,E). T = {(B,C), (B,D), (A,C), (C,E)}. edges = 4.\n" +
+            "  - Edge (D,F,6): FindSet(D) != FindSet(F) => no cycle. Add to T. Union(D,F). T = {(B,C), (B,D), (A,C), (C,E), (D,F)}. edges = 5.\n" +
+            "Step 4 - Stop: T now has |V| - 1 = 5 edges. MST is complete.\n" +
+            "Final MST edges: (B,C), (B,D), (A,C), (C,E), (D,F).\n" +
+            "Total MST weight = 1 + 2 + 3 + 5 + 6 = 17.",
+          tags: ["Kruskal", "MST", "Calculation", "Step-by-step"],
+          ref: "Lecture 8 — Kruskal's Algorithm + worked example",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Apply Dijkstra's algorithm to the following weighted graph and find the shortest distances from source A. Vertices = {A, B, C, D, E}. Edges (undirected, weighted): (A,B,10), (A,C,3), (A,D,20), (B,D,5), (C,B,4), (C,D,11), (D,E,1). Show the dist[] table after each iteration.",
+          translation:
+            "طبّق خوارزمية Dijkstra على الرسم البياني الموزون التالي وأوجد أقصر المسافات من المصدر A. الرؤوس = {A, B, C, D, E}. الحافات (غير موجّهة، موزونة): (A,B,10), (A,C,3), (A,D,20), (B,D,5), (C,B,4), (C,D,11), (D,E,1). اعرض جدول dist[] بعد كل تكرار.",
+          answer:
+            "Initialization: dist[A]=0, dist[B..E]=infinity. Q = {A,B,C,D,E}.\n" +
+            "Iteration 1 - Select A (dist 0):\n" +
+            "  Relax A->B: dist[B] = min(inf, 0+10) = 10\n" +
+            "  Relax A->C: dist[C] = min(inf, 0+3) = 3\n" +
+            "  Relax A->D: dist[D] = min(inf, 0+20) = 20\n" +
+            "  dist = {A:0, B:10, C:3, D:20, E:inf}\n" +
+            "Iteration 2 - Select C (dist 3, smallest in Q):\n" +
+            "  Relax C->B: dist[B] = min(10, 3+4) = 7\n" +
+            "  Relax C->D: dist[D] = min(20, 3+11) = 14\n" +
+            "  dist = {A:0, B:7, C:3, D:14, E:inf}\n" +
+            "Iteration 3 - Select B (dist 7):\n" +
+            "  Relax B->D: dist[D] = min(14, 7+5) = 12\n" +
+            "  dist = {A:0, B:7, C:3, D:12, E:inf}\n" +
+            "Iteration 4 - Select D (dist 12):\n" +
+            "  Relax D->E: dist[E] = min(inf, 12+1) = 13\n" +
+            "  dist = {A:0, B:7, C:3, D:12, E:13}\n" +
+            "Iteration 5 - Select E (dist 13): no further updates.\n" +
+            "Final distances from A:\n" +
+            "  dist[A] = 0 (path: A)\n" +
+            "  dist[B] = 7 (path: A -> C -> B)\n" +
+            "  dist[C] = 3 (path: A -> C)\n" +
+            "  dist[D] = 12 (path: A -> C -> B -> D)\n" +
+            "  dist[E] = 13 (path: A -> C -> B -> D -> E)",
+          tags: ["Dijkstra", "Shortest Path", "Calculation", "Step-by-step"],
+          ref: "Lecture 8 — Dijkstra example slides",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Given a weighted directed graph with n = 6 vertices and m = 12 edges, compute the total running time of (a) Kruskal's algorithm and (b) Dijkstra's algorithm with a binary heap. Show the dominant term.",
+          translation:
+            "بالنظر إلى رسم بياني موجّه موزون بـ n = 6 رؤوس و m = 12 حافة، احسب الزمن الكلي لـ (a) خوارزمية Kruskal و (b) خوارزمية Dijkstra باستخدام binary heap. اعرض الحد المهيمن.",
+          answer:
+            "Given: n = |V| = 6, m = |E| = 12.\n" +
+            "(a) Kruskal's algorithm:\n" +
+            "  - Sort edges: O(m log m) = 12 * log(12) = 12 * 3.585 = 43.02 (approximately, in base-2).\n" +
+            "  - MakeSet: O(n) = 6 operations.\n" +
+            "  - FindSet: O(m) = 12 calls (two per edge).\n" +
+            "  - Union: O(n) = up to 5 calls (n - 1).\n" +
+            "  - Dominant term: O(m log m).\n" +
+            "  - Using log2(12) approx 3.585, total work approx 12 * 3.585 = ~43 edge-comparisons (plus union-find overhead).\n" +
+            "(b) Dijkstra's algorithm with binary heap:\n" +
+            "  - O((n + m) log n) = (6 + 12) * log2(6) = 18 * 2.585 = ~46.53.\n" +
+            "  - Equivalently O(E log V) = 12 * 2.585 = ~31, but the (V + E) form also accounts for the n DeleteMin operations.\n" +
+            "Summary: Kruskal dominant term = O(m log m); Dijkstra dominant term = O((n + m) log n) = O(E log V).",
+          tags: ["Kruskal", "Dijkstra", "Time Complexity", "Calculation"],
+          ref: "Lecture 8 — Running Time slides for both algorithms",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Construct the weighted adjacency matrix AND the weighted adjacency list for the following undirected weighted graph. Vertices = {1, 2, 3, 4}. Edges (undirected, weighted): (1,2,5), (1,4,2), (2,3,8), (3,4,3), (2,4,1). Use infinity for non-existent edges and 0 on the diagonal.",
+          translation:
+            "أنشئ مصفوفة التجاور الموزونة وقائمة التجاور الموزونة للرسم البياني غير الموجه الموزون التالي. الرؤوس = {1, 2, 3, 4}. الحافات: (1,2,5), (1,4,2), (2,3,8), (3,4,3), (2,4,1). استخدم infinity للحافات غير الموجودة و 0 على القطر.",
+          answer:
+            "Vertices: 1, 2, 3, 4. Edges (undirected, so symmetric): (1,2,5), (1,4,2), (2,3,8), (2,4,1), (3,4,3).\n" +
+            "Weighted Adjacency Matrix A (size 4x4):\n" +
+            "         1     2     3     4\n" +
+            "    1 [  0     5   inf     2  ]\n" +
+            "    2 [  5     0     8     1  ]\n" +
+            "    3 [ inf    8     0     3  ]\n" +
+            "    4 [  2     1     3     0  ]\n" +
+            "Explanation:\n" +
+            "  A[1][1] = A[2][2] = A[3][3] = A[4][4] = 0 (diagonal).\n" +
+            "  A[1][2] = A[2][1] = 5 (edge 1-2).\n" +
+            "  A[1][4] = A[4][1] = 2 (edge 1-4).\n" +
+            "  A[2][3] = A[3][2] = 8 (edge 2-3).\n" +
+            "  A[2][4] = A[4][2] = 1 (edge 2-4).\n" +
+            "  A[3][4] = A[4][3] = 3 (edge 3-4).\n" +
+            "  All other off-diagonal entries = infinity (no edge).\n" +
+            "Weighted Adjacency List Adj:\n" +
+            "  Adj[1] = [(2, 5), (4, 2)]\n" +
+            "  Adj[2] = [(1, 5), (3, 8), (4, 1)]\n" +
+            "  Adj[3] = [(2, 8), (4, 3)]\n" +
+            "  Adj[4] = [(1, 2), (2, 1), (3, 3)]\n" +
+            "Each list entry is a (neighbor, weight) pair.",
+          tags: [
+            "Adjacency Matrix",
+            "Adjacency List",
+            "Graph Representation",
+            "Calculation",
+          ],
+          ref: "Lecture 8 — Weighted Adjacency Matrix + (Weighted) Adjacency List Structure slides",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. For a directed graph G with V = {A, B, C, D} and E = {(A->B), (A->C), (B->D), (C->D), (D->A)}, compute indeg(v) and outdeg(v) for every vertex, and verify that sum of in-degrees equals sum of out-degrees equals |E|.",
+          translation:
+            "بالنسبة للرسم البياني الموجه G بالرؤوس V = {A, B, C, D} والحافات E = {(A->B), (A->C), (B->D), (C->D), (D->A)}، احسب indeg(v) و outdeg(v) لكل رأس، وتحقق أن مجموع in-degrees يساوي مجموع out-degrees يساوي |E|.",
+          answer:
+            "Edges (directed): A->B, A->C, B->D, C->D, D->A. So |E| = 5.\n" +
+            "Out-degrees (edges leaving each vertex):\n" +
+            "  outdeg(A) = 2 (A->B, A->C)\n" +
+            "  outdeg(B) = 1 (B->D)\n" +
+            "  outdeg(C) = 1 (C->D)\n" +
+            "  outdeg(D) = 1 (D->A)\n" +
+            "  Sum of out-degrees = 2 + 1 + 1 + 1 = 5.\n" +
+            "In-degrees (edges entering each vertex):\n" +
+            "  indeg(A) = 1 (from D->A)\n" +
+            "  indeg(B) = 1 (from A->B)\n" +
+            "  indeg(C) = 1 (from A->C)\n" +
+            "  indeg(D) = 2 (from B->D and C->D)\n" +
+            "  Sum of in-degrees = 1 + 1 + 1 + 2 = 5.\n" +
+            "Verification:\n" +
+            "  sum of out-degrees = 5 = |E|. (matches)\n" +
+            "  sum of in-degrees = 5 = |E|. (matches)\n" +
+            "The directed form of the Hand-Shaking Lemma is verified.\n" +
+            "Also, deg(v) = outdeg(v) + indeg(v):\n" +
+            "  deg(A) = 3, deg(B) = 2, deg(C) = 2, deg(D) = 3.",
+          tags: [
+            "Hand-Shaking Lemma",
+            "Directed Graph",
+            "Calculation",
+            "Verification",
+          ],
+          ref: "Lecture 8 — Hand-Shaking Lemma (directed form)",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });

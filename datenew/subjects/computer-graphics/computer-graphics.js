@@ -1678,7 +1678,7 @@ subjects.push({
       id: "computer-graphics-lecture-03",
       t: "المحاضرة 3: الجبر الخطي (Inner Product, Linear Maps, Span, Basis)",
       d: "الجزء الثاني من مراجعة الجبر الخطي: الـ inner product وخصائصه، الـ linear maps مقابل الـ affine، والـ span والـ basis والـ orthonormal basis.",
-     notes:"البداية من صفحة 29 لحد 48.",
+      notes: "البداية من صفحة 29 لحد 48.",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 3/Lecture 3.pdf",
       pdf2: "datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-03-Questions.pdf",
       linkCategories: [
@@ -2423,6 +2423,913 @@ subjects.push({
             "f(u) = 3*(1,0,2) + 2*(0,1,1) = (3,0,6) + (0,2,2) = (3,2,8).",
           tags: ["Linear Map", "Calculation"],
           ref: "Lecture 03 — Slide 41",
+        },
+      ],
+    },
+    {
+      id: "graphics-lecture-04",
+      t: "المحاضرة 4: رسم المثلث (Drawing a Triangle) ومقدمة في الـ Sampling",
+      d: "الـ Rasterization، لماذا المثلثات، مشكلة الـ Visibility (Coverage و Occlusion)، الـ Sampling و الـ Reconstruction، وقواعد كسر التعادل (Top/Left edge).",
+      pdf: "datenew/subjects/computer-graphics/lectures/Lecture 4/Lecture 4.pdf",
+      pdf2: "/datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-04-Questions.pdf",
+      // CMU 15-462/662: Drawing a Triangle (and an Intro to Sampling) - Rasterization Pipeline & Sampling Theory
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "مجموعة من الفيديوهات والدروس المصورة باللغة العربية الشارحة لخط أنابيب الرسومات، التظبيط النقطي، وآليات معالجة الشظايا.",
+          links: [
+            {
+              t: "شرح مسار الرسومات وعملية التظبيط النقطي (Vulkan Graphics Pipeline & Rasterization)",
+              d: "فيديو باللغة العربية يوضح مراحل انتقال البيانات الرسومية وتطبيق عمليات التظبيط النقطي وتحويل الأشكال الهندسية إلى شظايا.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 مشاهدة الشرح",
+                  url: "https://www.youtube.com/watch?v=j0S-oDMoPkI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح مسار الرسومات ثنائي الأبعاد والتحويلات الهندسية (2D Graphics Pipeline)",
+              d: "شرح عربي مخصص لمراحل خط أنابيب الرسومات والتحويلات الهندسية ومبادئ الإسقاط وعرض العناصر على شبكة البكسلات.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 مشاهدة الكورس",
+                  url: "https://www.youtube.com/watch?v=dBweQJFczmk",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محاضرات كبرى الجامعات والشروحات العالمية المتقدمة المتخصصة في خوارزميات التظبيط النقطي ونظرية المعاينة.",
+          links: [
+            {
+              t: "CMU 15-462/662: Triangle Rasterization & Barycentric Coordinates",
+              d: "المحاضرة الأكاديمية الرسمية من جامعة كارنيجي ميلون للبروفيسور كينان كراين التي تشرح خوارزميات التظبيط النقطي، الإحداثيات الباريسنترية، ونظرية المعاينة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🚀 Watch Lecture",
+                  url: "https://www.youtube.com/watch?v=aNpBlGbZ6tw",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "3D Graphics Pipeline & Rasterization from Scratch",
+              d: "فيديو عالمي يقدم تطبيقاً عملياً لبناء محرك رسومات برمجي واختبار تغطية البكسلات وحساب الإحداثيات المنظورية.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🚀 Watch Video",
+                  url: "https://www.youtube.com/watch?v=x2bMBwu3hiM",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "توثيقات ومقالات أكاديمية متقدمة توضح الرياضيات خلف الإسقاط المنظوري وخوارزميات اختبار الحواف واختبار العمق.",
+          links: [
+            {
+              t: "Scratchapixel: An Overview of the Rasterization Algorithm",
+              d: "مرجع أكاديمي شامل يشرح تحويل الإحداثيات من الفضاء الثلاثي إلى فضاء الشاشة، واختبار حواف المثلثات، وحل مشكلة التحجب والعمق.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال الأكاديمي",
+                  url: "https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/overview-rasterization-algorithm.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks: OpenGL Rendering Pipeline & Rasterization Overview",
+              d: "مقال تعليمي منظم يغطي خط أنابيب OpenGL ورسم المثلثات، وتحويل الرؤوس إلى شظايا، واختبارات Depth & Stencil Test.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح الدرس",
+                  url: "https://www.geeksforgeeks.org/blogs/opengl-rendering-pipeline-overview/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "LearnOpenGL: The Graphics Pipeline & Rasterization Stage",
+              d: "الدليل المرجعي الأساسي لـ OpenGL الحديث الشارح لخط الأنابيب الرسومي والتجميع البدائي ومراحل التظبيط النقطي.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 قراءة المرجع",
+                  url: "https://learnopengl.com/Getting-started/Hello-Triangle",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "محاكيات تفاعلية وأدوات ويب تسمح باختبار وتتبع خوارزميات التظبيط النقطي وتقسيم البكسلات في الزمن الحقيقي.",
+          links: [
+            {
+              t: "TinyDiffRast: Interactive Triangle Rasterization Simulator",
+              d: "مشروع وأداة تفاعلية تسمح بمحاكاة خوارزميات التظبيط النقطي للمثلثات ودراسة تدرج التغطية ومعالجة حواف العناصر الرسومية.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ فتح المحاكي التفاعلي",
+                  url: "https://jjbannister.github.io/tinydiffrast/",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Interactive 2D/3D Triangle Rasterizer",
+              d: "تطبيق ويب تفاعلي لمحاكاة اختبار التغطية ورسم المثلثات على شبكة بكسلات وتتبع نتائج الترددات والتعريج.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 تجربة الأداة",
+                  url: "https://andrewdcampbell.github.io/rasterizer/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. In rasterization, for each primitive (e.g., a triangle), the question we answer is:",
+          options: [
+            "Which ray hits the object first?",
+            "Which light source illuminates the object?",
+            "Which pixels light up?",
+            "Which texture map is applied to the object?",
+          ],
+          correct: 2,
+          translation:
+            "في الـ Rasterization، لكل primitive (مثل المثلث) السؤال اللي بنجاوب عليه هو:",
+          explanation:
+            "الـ Rasterization بيمشي 'لكل primitive، أنهي pixels هتنور؟'. أما 'أنهي ray بتضرب الجسم أولاً' فده سؤال الـ ray tracing.",
+          tags: ["Rasterization", "Rasterization vs Ray Tracing"],
+          ref: "Lecture 04 — Slide: TODAY: Rasterization",
+          likely: "high",
+        },
+        {
+          q: "2. In ray tracing, the question asked for each pixel is:",
+          options: [
+            "Which primitives are seen?",
+            "Which pixels light up?",
+            "Which triangle has the largest area?",
+            "Which vertex is closest to the camera?",
+          ],
+          correct: 0,
+          translation: "في الـ Ray Tracing، السؤال اللي بنسأله لكل pixel هو:",
+          explanation:
+            "الـ Ray tracing بيمشي 'لكل pixel، أنهي primitives بتظهر؟'. السؤال التاني (أنهي pixels هتنور) ده بتاع الـ rasterization.",
+          tags: ["Ray Tracing", "Rasterization vs Ray Tracing"],
+          ref: "Lecture 04 — Slide: TODAY: Rasterization",
+          likely: "high",
+        },
+        {
+          q: "3. Which statement correctly compares rasterization with ray tracing?",
+          options: [
+            "Rasterization is generally slower, but photorealism is easier to achieve with it",
+            "Both techniques have the same speed and the same ease of photorealism",
+            "Ray tracing is extremely fast, with billions of triangles per second on a GPU",
+            "Rasterization is extremely fast but photorealism is harder; ray tracing gets photorealism more easily but is generally slower",
+          ],
+          correct: 3,
+          translation:
+            "أي عبارة بتقارن صح بين الـ rasterization والـ ray tracing؟",
+          explanation:
+            "الـ rasterization سريع جدًا (مليارات المثلثات في الثانية على الـ GPU) لكن الـ photorealism أصعب، والـ ray tracing أسهل في الـ photorealism لكنه أبطأ عمومًا. باقي الاختيارات بتعكس أو بتساوي الخصائص غلط.",
+          tags: ["Rasterization vs Ray Tracing"],
+          ref: "Lecture 04 — Slide: TODAY: Rasterization",
+          likely: "high",
+        },
+        {
+          q: "4. What is the input of the modern real-time rasterization pipeline?",
+          options: [
+            "Bitmap images",
+            "3D primitives, essentially all triangles",
+            "Only lines and points",
+            "Rays shot from each pixel",
+          ],
+          correct: 1,
+          translation:
+            "إيه هو الـ input بتاع الـ rasterization pipeline الحديثة في الوقت الحقيقي؟",
+          explanation:
+            "الـ input هو 3D primitives وهي في الأساس كلها مثلثات (ممكن تيجي معاها attributes زي اللون). الـ bitmap image هو الـ output مش الـ input.",
+          tags: ["Rasterization Pipeline", "Input/Output"],
+          ref: "Lecture 04 — Slide: Rasterization Pipeline",
+          likely: "high",
+        },
+        {
+          q: "5. What is the output of the rasterization pipeline?",
+          options: [
+            "A list of vertices and edges",
+            "A set of 3D triangles with attributes",
+            "A bitmap image (possibly with depth, alpha, ...)",
+            "A ray-traced scene description",
+          ],
+          correct: 2,
+          translation: "إيه هو الـ output بتاع الـ rasterization pipeline؟",
+          explanation:
+            "الـ output هو bitmap image (ممكن يكون معاها depth و alpha). قائمة الـ vertices والمثلثات هي الـ input.",
+          tags: ["Rasterization Pipeline", "Input/Output"],
+          ref: "Lecture 04 — Slide: Rasterization Pipeline",
+          likely: "high",
+        },
+        {
+          q: "6. Which is a reason given for converting all primitives to triangles?",
+          options: [
+            "Triangles are never planar, so they store more detail",
+            "Triangles are always planar with a well-defined normal",
+            "Triangles are the only shape a GPU can store",
+            "Triangles have four corners, which makes interpolation simple",
+          ],
+          correct: 1,
+          translation:
+            "أي من التالي سبب مذكور لتحويل كل الـ primitives إلى مثلثات؟",
+          explanation:
+            "المثلث دايمًا مستوي (planar) وله normal معرّف بوضوح. المثلث له 3 أركان مش 4، ومش حقيقي إنه غير مستوي.",
+          tags: ["Why triangles?"],
+          ref: "Lecture 04 — Slide: Why triangles?",
+          likely: "high",
+        },
+        {
+          q: "7. Which technique makes it easy to interpolate data at the corners of a triangle?",
+          options: [
+            "Barycentric coordinates",
+            "Piecewise constant sampling",
+            "Pinhole projection",
+            "Nearest-neighbor filtering",
+          ],
+          correct: 0,
+          translation:
+            "أي تقنية بتسهّل عمل interpolation للبيانات عند أركان المثلث؟",
+          explanation:
+            "الـ Barycentric coordinates هي المذكورة في المحاضرة لعمل interpolation للبيانات عند الأركان. الـ nearest neighbor خاص بالـ reconstruction مش بالمثلثات.",
+          tags: ["Why triangles?", "Barycentric coordinates"],
+          ref: "Lecture 04 — Slide: Why triangles?",
+          likely: "high",
+        },
+        {
+          q: "8. The key reason for reducing everything to triangles is that:",
+          options: [
+            "Triangles look more realistic than other shapes",
+            "Triangles remove the need for a projection stage",
+            "We can focus on building an extremely well-optimized pipeline for drawing them",
+            "Triangles make a GPU unnecessary",
+          ],
+          correct: 2,
+          translation: "السبب الأساسي لاختزال كل حاجة في مثلثات هو إن:",
+          explanation:
+            "لما كل حاجة تبقى مثلثات نقدر نركز على عمل pipeline متحسّنة جدًا لرسمها. المثلثات مش بتلغي الـ projection ولا الـ GPU.",
+          tags: ["Why triangles?"],
+          ref: "Lecture 04 — Slide: Why triangles?",
+          likely: "high",
+        },
+        {
+          q: "9. How does the rasterization pipeline treat points and lines?",
+          options: [
+            "It draws them directly without any conversion",
+            "It ignores them",
+            "It converts them to quads only",
+            "It converts them to triangles too",
+          ],
+          correct: 3,
+          translation:
+            "الـ rasterization pipeline بتتعامل مع النقط والخطوط إزاي؟",
+          explanation:
+            "بتحوّل كل الـ primitives لمثلثات حتى النقط والخطوط (النقطة والخط بيتمثلوا بمثلثات صغيرة). مش بتتجاهلهم ولا بتستخدم quads.",
+          tags: ["Why triangles?", "Primitives"],
+          ref: "Lecture 04 — Slide: Why triangles?",
+          likely: "high",
+        },
+        {
+          q: '10. In the rasterization pipeline slide, "coverage" and "occlusion" refer to which two questions?',
+          options: [
+            "Coverage: which triangle is closest to the camera; Occlusion: which pixels does it overlap",
+            "Coverage: what pixels does the triangle overlap; Occlusion: which triangle is closest to the camera in each pixel",
+            "Coverage: what color is the pixel; Occlusion: what is the texture",
+            "Coverage: how many triangles exist; Occlusion: how many pixels exist",
+          ],
+          correct: 1,
+          translation:
+            'في شريحة رسم المثلثات، الـ "coverage" و الـ "occlusion" بيشيروا لأنهي سؤالين؟',
+          explanation:
+            "Coverage = أنهي pixels المثلث بيغطيها. Occlusion = أنهي مثلث هو الأقرب للكاميرا في كل pixel. الاختيار الأول عاكس التعريفين.",
+          tags: ["Coverage", "Occlusion", "Visibility"],
+          ref: "Lecture 04 — Slide: Let's draw some triangles on the screen",
+          likely: "high",
+        },
+        {
+          q: "11. In the ray formulation of the visibility problem, OCCLUSION asks:",
+          options: [
+            "What scene geometry is hit by a ray from a pixel through the pinhole?",
+            "How many rays pass through the pinhole?",
+            "Which object is the first hit along that ray?",
+            "Which pixels are covered by the triangle?",
+          ],
+          correct: 2,
+          translation:
+            "في صياغة مشكلة الـ visibility بالـ rays، الـ OCCLUSION بيسأل:",
+          explanation:
+            "الـ Occlusion = أنهي جسم بيتضرب أولاً على طول الـ ray. أما 'أنهي geometry بتتضرب بالـ ray' فده الـ COVERAGE.",
+          tags: ["Occlusion", "Visibility", "Pinhole camera"],
+          ref: "Lecture 04 — Slide: The visibility problem",
+          likely: "high",
+        },
+        {
+          q: "12. Instead of computing exact coverage, the lecture views coverage as:",
+          options: [
+            "An optimization problem",
+            "A sampling problem",
+            "A texture-mapping problem",
+            "A clipping problem",
+          ],
+          correct: 1,
+          translation:
+            "بدل حساب الـ coverage بشكل دقيق، المحاضرة بتعتبر الـ coverage:",
+          explanation:
+            "حساب الـ coverage بدقة مش عملي، فبنعتبرها sampling problem: بنختبر مجموعة نقط (samples) بدل الحل التحليلي الدقيق.",
+          tags: ["Coverage via sampling"],
+          ref: "Lecture 04 — Slide: Coverage via sampling",
+          likely: "high",
+        },
+        {
+          q: "13. For rasterization, coverage(x, y) equals 1 when:",
+          options: [
+            "The triangle contains the point (x, y)",
+            "The point (x, y) is on the screen border",
+            "The triangle is the closest one to the camera",
+            "The point (x, y) lies exactly on a vertex only",
+          ],
+          correct: 0,
+          translation:
+            "في الـ rasterization، الدالة coverage(x, y) بتساوي 1 لما:",
+          explanation:
+            "coverage(x, y) = 1 لو المثلث يحتوي النقطة (x, y)، وإلا = 0. الأقرب للكاميرا ده occlusion مش coverage.",
+          tags: ["Coverage function", "Sampling"],
+          ref: "Lecture 04 — Slide: For rasterization, what function are we sampling?",
+          likely: "high",
+        },
+        {
+          q: "14. Sampling is best defined as:",
+          options: [
+            "Generating a signal from a discrete set of samples",
+            "Taking measurements of a signal",
+            "Increasing the resolution of an image",
+            "Smoothing a signal with a filter",
+          ],
+          correct: 1,
+          translation: "أفضل تعريف للـ Sampling هو:",
+          explanation:
+            "الـ Sampling = قياس (measurement) للإشارة وتمثيلها كمجموعة منفصلة من العينات. أما توليد الإشارة من العينات فده الـ Reconstruction.",
+          tags: ["Sampling", "Reconstruction"],
+          ref: "Lecture 04 — Slide: Sampling 101: Summary",
+          likely: "high",
+        },
+        {
+          q: "15. Reconstruction is best defined as:",
+          options: [
+            "Generating a signal from a discrete set of samples",
+            "Taking measurements of a signal at specific points",
+            "Encoding a signal as a discrete set of samples",
+            "Deciding which triangle is nearest to the camera",
+          ],
+          correct: 0,
+          translation: "أفضل تعريف للـ Reconstruction هو:",
+          explanation:
+            "الـ Reconstruction = توليد إشارة من مجموعة منفصلة من العينات (بدالة بتعمل interpolate أو approximate). الاختيارين التاني والتالت تعريف الـ Sampling.",
+          tags: ["Reconstruction", "Sampling"],
+          ref: "Lecture 04 — Slide: Sampling 101: Summary",
+          likely: "high",
+        },
+        {
+          q: "16. In piecewise constant (nearest neighbor) reconstruction, the reconstructed value at x is:",
+          options: [
+            "The linear interpolation of the two closest samples",
+            "The average of all samples",
+            "The value of the sample closest to x",
+            "Zero everywhere except at the sample points",
+          ],
+          correct: 2,
+          translation:
+            "في الـ piecewise constant (nearest neighbor) reconstruction، القيمة المعاد بناؤها عند x هي:",
+          explanation:
+            "القيمة = قيمة أقرب sample للنقطة x. الـ linear interpolation بين أقرب عينتين هو الـ piecewise linear.",
+          tags: ["Reconstruction", "Piecewise constant"],
+          ref: "Lecture 04 — Slide: Piecewise constant approximation",
+          likely: "high",
+        },
+        {
+          q: "17. In piecewise linear reconstruction, the reconstructed value at x is:",
+          options: [
+            "The value of the closest sample",
+            "The maximum of the two closest samples",
+            "The average of all samples",
+            "A linear interpolation between the values of the two closest samples",
+          ],
+          correct: 3,
+          translation:
+            "في الـ piecewise linear reconstruction، القيمة المعاد بناؤها عند x هي:",
+          explanation:
+            "بنعمل linear interpolation بين قيمتي أقرب عينتين. أخذ قيمة أقرب عينة فقط هو الـ nearest neighbor.",
+          tags: ["Reconstruction", "Piecewise linear"],
+          ref: "Lecture 04 — Slide: Piecewise linear approximation",
+          likely: "high",
+        },
+        {
+          q: "18. When an edge falls exactly on a sample point, the sample is classified as inside the triangle if the edge is:",
+          options: [
+            "Any edge of the triangle",
+            "A right edge or a bottom edge",
+            "A top edge or a left edge",
+            "Never; such samples are always outside",
+          ],
+          correct: 2,
+          translation:
+            "لما حرف (edge) يقع بالظبط على نقطة sample، الـ sample بتتصنف إنها جوه المثلث لو الحرف ده:",
+          explanation:
+            "القاعدة (المستخدمة في OpenGL/Direct3D): الـ sample جوه المثلث لو الحرف 'top edge' أو 'left edge'. كده نقطة على حرف مشترك بين مثلثين بتتحسب لمثلث واحد بس.",
+          tags: ["Breaking ties", "Top edge", "Left edge"],
+          ref: "Lecture 04 — Slide: Breaking Ties",
+          likely: "high",
+        },
+        {
+          q: '19. Which description matches a "top edge" of a triangle?',
+          options: [
+            "A horizontal edge that is above all other edges",
+            "Any edge that is not exactly horizontal",
+            "The longest edge of the triangle",
+            "A vertical edge on the left side",
+          ],
+          correct: 0,
+          translation: 'أي وصف يطابق الـ "top edge" في المثلث؟',
+          explanation:
+            "الـ top edge = حرف أفقي فوق كل الحروف التانية. الحرف الغير أفقي على الشمال هو left edge.",
+          tags: ["Breaking ties", "Top edge"],
+          ref: "Lecture 04 — Slide: Breaking Ties",
+          likely: "high",
+        },
+        {
+          q: '20. Which statement about a "left edge" is correct?',
+          options: [
+            "It is exactly horizontal",
+            "It must be exactly vertical",
+            "A triangle always has exactly one left edge",
+            "It is not exactly horizontal and is on the left side; a triangle can have one or two left edges",
+          ],
+          correct: 3,
+          translation: 'أي عبارة عن الـ "left edge" صحيحة؟',
+          explanation:
+            "الـ left edge = حرف مش أفقي بالظبط وعلى الجهة الشمال من المثلث، والمثلث ممكن يكون له left edge واحد أو اتنين. مش لازم يكون رأسي.",
+          tags: ["Breaking ties", "Left edge"],
+          ref: "Lecture 04 — Slide: Breaking Ties",
+          likely: "high",
+        },
+        {
+          q: "21. In the simple rasterization example, the coverage sample for pixel (x, y) is taken at:",
+          options: [
+            "(x, y)",
+            "(x + 0.5, y + 0.5)",
+            "(x + 1, y + 1)",
+            "A random point inside the pixel",
+          ],
+          correct: 1,
+          translation:
+            "في مثال الـ simple rasterization، نقطة الـ coverage sample للـ pixel (x, y) بتتاخد عند:",
+          explanation:
+            "اختار المحاضر نقطة العينة عند مركز الـ pixel أي (x+0.5, y+0.5). النقطة (x, y) هي الركن مش المركز.",
+          tags: ["Simple rasterization", "Pixel center"],
+          ref: "Lecture 04 — Slide: Simple rasterization: just sample the coverage function",
+          likely: "high",
+        },
+        {
+          q: "22. Why is exact coverage hard to compute when occlusion is considered?",
+          options: [
+            "Triangles are never planar",
+            "Pixels cannot be square",
+            "The GPU does not store depth values",
+            "A pixel can receive several (even non-convex) regions from different triangles, and triangles can interpenetrate",
+          ],
+          correct: 3,
+          translation:
+            "ليه حساب الـ coverage الدقيق صعب لما ناخد الـ occlusion في الاعتبار؟",
+          explanation:
+            "ممكن أكتر من منطقة (وحتى منطقة غير محدبة) من مثلث تساهم في pixel واحد، والمثلثات ممكن تتقاطع (interpenetration)، فالحساب بيتعقد.",
+          tags: ["Coverage", "Occlusion"],
+          ref: "Lecture 04 — Slide: Coverage gets tricky when considering occlusion",
+          likely: "high",
+        },
+        {
+          q: '23. In the "fraction of pixel area" option, a triangle covering 10% of a pixel should produce:',
+          options: [
+            "A pixel that is 10% red",
+            "A fully red pixel",
+            "A pixel that is not colored at all",
+            "A pixel that is 90% red",
+          ],
+          correct: 0,
+          translation:
+            'في خيار "نسبة مساحة الـ pixel"، لو المثلث بيغطي 10% من الـ pixel فالـ pixel المفروض يكون:',
+          explanation:
+            "الحدس: لو المثلث بيغطي 10% من الـ pixel يبقى الـ pixel 10% أحمر. 90% هي نسبة غير المغطى.",
+          tags: ["Coverage", "Pixel area fraction"],
+          ref: "Lecture 04 — Slide: One option: compute fraction of pixel area covered",
+          likely: "high",
+        },
+        {
+          q: "24. Which is the correct order of the stages in the rough sketch of the rasterization pipeline?",
+          options: [
+            "Project onto the screen, transform objects, sample coverage, combine samples, interpolate attributes",
+            "Sample coverage, transform objects, project onto the screen, sample textures, combine samples",
+            "Transform objects, sample coverage, project onto the screen, interpolate attributes, combine samples",
+            "Transform objects, project onto the screen, sample coverage, interpolate attributes, sample textures/evaluate shaders, combine samples",
+          ],
+          correct: 3,
+          translation:
+            "إيه الترتيب الصحيح لمراحل الـ rasterization pipeline في الرسم التقريبي؟",
+          explanation:
+            "الترتيب: تحويل/وضع الأجسام في العالم، ثم الإسقاط على الشاشة، ثم sample الـ coverage، ثم interpolate الـ attributes، ثم الـ textures/shaders، وأخيرًا دمج العينات في الصورة النهائية.",
+          tags: ["Rasterization Pipeline", "Stages"],
+          ref: "Lecture 04 — Slide: The Rasterization Pipeline",
+          likely: "high",
+        },
+        {
+          q: "25. The top-edge/left-edge tie-breaking rules are the rules used in:",
+          options: [
+            "Ray tracers only",
+            "OpenGL/Direct3D (modern GPUs)",
+            "Audio compression only",
+            "Vector-art editors only",
+          ],
+          correct: 1,
+          translation:
+            "قواعد top-edge/left-edge لكسر التعادل هي القواعد المستخدمة في:",
+          explanation:
+            "المحاضرة بتقول إن دي قواعد OpenGL/Direct3D أي الـ GPUs الحديثة (المصدر: Direct3D Programming Guide).",
+          tags: ["Breaking ties"],
+          ref: "Lecture 04 — Slide: Breaking Ties",
+          likely: "medium",
+        },
+        {
+          q: "26. How can a sampled signal be represented more accurately?",
+          options: [
+            "Sample it more densely (increase the sampling rate)",
+            "Use fewer samples",
+            "Always use piecewise constant reconstruction",
+            "Reduce the amplitude of the signal",
+          ],
+          correct: 0,
+          translation: "إزاي نقدر نمثل الإشارة بدقة أكبر؟",
+          explanation:
+            "بزيادة كثافة العينات (sampling rate). تقليل العينات بيقلل الدقة، وتغيير الـ amplitude مش حل.",
+          tags: ["Sampling rate", "Reconstruction"],
+          ref: "Lecture 04 — Slide: How can we represent the signal more accurately?",
+          likely: "medium",
+        },
+        {
+          q: "27. Which pair names the two 2D reconstructions shown for the Earth image?",
+          options: [
+            "Piecewise linear and piecewise cubic",
+            "Nearest neighbor and Gaussian",
+            "Piecewise constant (nearest neighbor) and piecewise bi-linear",
+            "Piecewise constant and exponential",
+          ],
+          correct: 2,
+          translation:
+            "أي زوج يسمّي الـ reconstructions ثنائية الأبعاد المعروضة لصورة الأرض؟",
+          explanation:
+            "الصورة عُرضت بـ piecewise constant ('nearest neighbor') و piecewise bi-linear. باقي الأنواع مش من المحاضرة.",
+          tags: ["2D sampling", "Reconstruction"],
+          ref: "Lecture 04 — Slide: 2D Sampling & Reconstruction",
+          likely: "medium",
+        },
+        {
+          q: "28. Most consumer audio is sampled at:",
+          options: ["22.05 kHz", "44.1 kHz", "8 kHz", "96 kHz"],
+          correct: 1,
+          translation: "معظم الصوت الاستهلاكي بيتعمل له sampling بمعدل:",
+          explanation:
+            "معظم الصوت الاستهلاكي بيتاخد منه 44,100 عينة في الثانية أي 44.1 kHz. باقي القيم مش المذكورة.",
+          tags: ["Sampling", "Audio"],
+          ref: "Lecture 04 — Slide: Audio file: stores samples of a 1D signal",
+          likely: "medium",
+        },
+        {
+          q: '29. The word "pixel" stands for:',
+          options: [
+            "Pixel element",
+            "Projected element",
+            "Point element",
+            "Picture element",
+          ],
+          correct: 3,
+          translation: 'كلمة "pixel" اختصار لـ:',
+          explanation:
+            "الـ pixel = picture element، وهو مربع صغير من الضوء بلون مناسب على الشاشة.",
+          tags: ["Pixels on a screen"],
+          ref: "Lecture 04 — Slide: Pixels on a screen",
+          likely: "medium",
+        },
+        {
+          q: "30. If each screen pixel emits a perfectly uniform square of light, the displayed sampled coverage looks like:",
+          options: [
+            "A smooth image identical to the true coverage signal",
+            "A blurred image",
+            "A grid of uniformly colored squares that differs from the real coverage signal",
+            "An empty screen",
+          ],
+          correct: 2,
+          translation:
+            "لو كل pixel بيطلّع مربع ضوء منتظم تمامًا، العرض الناتج لل sampled coverage بيبان زي:",
+          explanation:
+            "بنشوف مربعات كل واحد بلون واحد (مدرّجة)، وده مختلف عن الإشارة الحقيقية للـ coverage اللي كانت بحدود ناعمة. باقي الاختيارات مش بتوصف النتيجة.",
+          tags: ["Pixels on a screen", "Display"],
+          ref: "Lecture 04 — Slide: We see this when we look at the screen",
+          likely: "medium",
+        },
+        {
+          q: '31. In the "3D image generation pipeline" view, a pipeline is described in terms of:',
+          options: [
+            "Inputs, stages, and outputs",
+            "Vertices, edges, and faces only",
+            "Rays, lights, and materials",
+            "Samples, filters, and displays only",
+          ],
+          correct: 0,
+          translation:
+            "في مفهوم الـ 3D image generation pipeline، بنوصف الـ pipeline بدلالة:",
+          explanation:
+            "الـ pipeline = INPUTS (إيه الصورة المطلوبة) + STAGES (تسلسل تحويلات من input إلى output) + OUTPUTS (الصورة النهائية).",
+          tags: ["3D Image Generation Pipeline"],
+          ref: "Lecture 04 — Slide: 3D Image Generation Pipeline(s)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. Compare rasterization and ray tracing.",
+          translation: "قارن بين الـ rasterization والـ ray tracing.",
+          answer:
+            "Rasterization: for each primitive (e.g., a triangle), which pixels light up?\n" +
+            "- Extremely fast (billions of triangles per second on a GPU).\n" +
+            "- Harder (but not impossible) to achieve photorealism.\n" +
+            "- A perfect match for 2D vector art, fonts, quick 3D preview.\n" +
+            "Ray tracing: for each pixel, which primitives are seen?\n" +
+            "- Easier to get photorealism.\n" +
+            "- Generally slower.\n" +
+            "- Covered in more detail later in the semester.",
+          tags: ["Rasterization vs Ray Tracing"],
+          ref: "Lecture 04 — Slide: TODAY: Rasterization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Why does the rasterization pipeline convert all primitives to triangles? List the reasons.",
+          translation:
+            "ليه الـ rasterization pipeline بتحوّل كل الـ primitives لمثلثات؟ اذكر الأسباب.",
+          answer:
+            "The pipeline converts all primitives to triangles, even points and lines.\n" +
+            "Reasons:\n" +
+            "1) Triangles can approximate any shape.\n" +
+            "2) A triangle is always planar and has a well-defined normal.\n" +
+            "3) It is easy to interpolate data at the corners (barycentric coordinates).\n" +
+            "Key reason: once everything is reduced to triangles, we can focus on making an extremely well-optimized pipeline for drawing them.",
+          tags: ["Why triangles?"],
+          ref: "Lecture 04 — Slide: Why triangles?",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. List and briefly explain the stages of the rough sketch of the rasterization pipeline.",
+          translation:
+            "اذكر واشرح باختصار مراحل الـ rasterization pipeline في الرسم التقريبي.",
+          answer:
+            "1) Transform/position objects in the world.\n" +
+            "2) Project objects onto the screen.\n" +
+            "3) Sample triangle coverage (which sample points are inside the triangle).\n" +
+            "4) Interpolate triangle attributes at covered samples.\n" +
+            "5) Sample texture maps / evaluate shaders.\n" +
+            "6) Combine samples into the final image (depth, alpha, ...).\n" +
+            "This reflects the standard real-world pipeline (OpenGL/Direct3D).",
+          tags: ["Rasterization Pipeline", "Stages"],
+          ref: "Lecture 04 — Slide: The Rasterization Pipeline",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Explain the visibility problem. What are coverage and occlusion?",
+          translation:
+            "اشرح مشكلة الـ visibility. إيه هو الـ coverage والـ occlusion؟",
+          answer:
+            "Visibility is the problem of deciding what is seen at each pixel. It has two questions:\n" +
+            "COVERAGE: what pixels does the triangle overlap? (in terms of rays: what scene geometry is hit by a ray from a pixel through the pinhole?)\n" +
+            "OCCLUSION: which triangle is closest to the camera in each pixel? (in terms of rays: which object is the first hit along that ray?)\n" +
+            "The pinhole camera can be simplified with a virtual sensor placed in front of the pinhole.",
+          tags: ["Visibility", "Coverage", "Occlusion"],
+          ref: "Lecture 04 — Slide: The visibility problem",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Why is computing exact coverage not practical, and what is the alternative?",
+          translation: "ليه حساب الـ coverage الدقيق مش عملي، وإيه البديل؟",
+          answer:
+            "Real scenes are complicated: occlusion, transparency, and interpenetrating triangles.\n" +
+            "A pixel can receive several regions of a triangle (some not even convex) and parts of different triangles.\n" +
+            "Alternative: view coverage as a sampling problem.\n" +
+            "- Do not compute an exact/analytical answer.\n" +
+            "- Instead, test a collection of sample points.\n" +
+            "- With enough points and a smart choice of sample locations, we get a good estimate.",
+          tags: ["Coverage via sampling"],
+          ref: "Lecture 04 — Slide: Coverage via sampling",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Define the coverage function and explain simple rasterization by sampling.",
+          translation:
+            "عرّف دالة الـ coverage واشرح الـ simple rasterization بالـ sampling.",
+          answer:
+            "The function being sampled is coverage(x, y): it equals 1 if the triangle contains the point (x, y), and 0 otherwise.\n" +
+            "Simple rasterization: take one coverage sample per pixel at the pixel center (x + 0.5, y + 0.5).\n" +
+            "If the triangle covers the sample, the pixel is lit with the triangle color; if not, it is not covered.",
+          tags: ["Coverage function", "Simple rasterization"],
+          ref: "Lecture 04 — Slide: For rasterization, what function are we sampling?",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the tie-breaking rules used when an edge falls exactly on a sample point.",
+          translation:
+            "اشرح قواعد كسر التعادل لما حرف يقع بالظبط على نقطة sample.",
+          answer:
+            "Problem: a sample point lying exactly on an edge could be claimed by both triangles sharing that edge (or by none).\n" +
+            "Rule: the sample is classified as inside the triangle only if the edge is a top edge or a left edge.\n" +
+            "- Top edge: a horizontal edge that is above all other edges.\n" +
+            "- Left edge: an edge that is not exactly horizontal and is on the left side of the triangle (a triangle can have one or two left edges).\n" +
+            "These are the rules used in OpenGL/Direct3D, i.e., in modern GPUs.",
+          tags: ["Breaking ties", "Top edge", "Left edge"],
+          ref: "Lecture 04 — Slide: Breaking Ties",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Define sampling and reconstruction, and give examples of reconstruction methods.",
+          translation:
+            "عرّف الـ sampling والـ reconstruction واذكر أمثلة لطرق الـ reconstruction.",
+          answer:
+            "Sampling = measurement of a signal: encode the signal as a discrete set of samples (values at specific points).\n" +
+            "Reconstruction = generating a signal from a discrete set of samples: construct a function that interpolates or approximates the function values.\n" +
+            "Examples: piecewise constant (nearest neighbor) and piecewise linear; there are many more possibilities, for all kinds of signals (audio, images, geometry).",
+          tags: ["Sampling", "Reconstruction"],
+          ref: "Lecture 04 — Slide: Sampling 101: Summary",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Compare piecewise constant and piecewise linear reconstruction. How can the signal be represented more accurately?",
+          translation:
+            "قارن بين الـ piecewise constant والـ piecewise linear reconstruction. وإزاي نمثل الإشارة بدقة أكبر؟",
+          answer:
+            "Piecewise constant: the reconstructed value at x equals the value of the sample closest to x.\n" +
+            "Piecewise linear: the reconstructed value at x is the linear interpolation between the values of the two closest samples.\n" +
+            "More accurate representation: sample the signal more densely (increase the sampling rate); both reconstructions then get closer to the original signal.",
+          tags: ["Piecewise constant", "Piecewise linear", "Sampling rate"],
+          ref: "Lecture 04 — Slide: Piecewise constant approximation / Piecewise linear approximation",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Calculation: for the pixel at (x, y) = (7, 12), at which point is the coverage sample taken in simple rasterization?",
+          translation:
+            "مسألة: للـ pixel عند (x, y) = (7, 12)، عند أي نقطة بتتاخد عينة الـ coverage في الـ simple rasterization؟",
+          answer:
+            "Given: pixel (x, y) = (7, 12).\n" +
+            "Rule: the coverage sample is taken at the pixel center (x + 0.5, y + 0.5).\n" +
+            "Steps: x + 0.5 = 7 + 0.5 = 7.5, and y + 0.5 = 12 + 0.5 = 12.5.\n" +
+            "Result: the sample point is (7.5, 12.5).",
+          tags: ["Calculation", "Simple rasterization", "Pixel center"],
+          ref: "Lecture 04 — Slide: Simple rasterization: just sample the coverage function",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain 2D sampling and reconstruction for images.",
+          translation:
+            "اشرح الـ sampling والـ reconstruction ثنائي الأبعاد للصور.",
+          answer:
+            "The basic story is the same as in 1D:\n" +
+            "- Sample values measure the image (the signal) at sample points.\n" +
+            "- An interpolation/reconstruction filter is applied to approximate the image.\n" +
+            "Examples shown for the Earth image: piecewise constant (nearest neighbor), which gives visible blocks, and piecewise bi-linear, which gives a smoother result.",
+          tags: ["2D sampling", "Reconstruction"],
+          ref: "Lecture 04 — Slide: 2D Sampling & Reconstruction",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "12. Describe the 3D image generation pipeline in terms of inputs, stages, and outputs, with the example from the first lecture.",
+          translation:
+            "صف الـ 3D image generation pipeline من حيث الـ inputs والـ stages والـ outputs مع مثال المحاضرة الأولى.",
+          answer:
+            "Image generation can be described as a pipeline:\n" +
+            "- INPUTS: what image do we want to draw?\n" +
+            "- STAGES: a sequence of transformations from input to output.\n" +
+            "- OUTPUTS: the final image.\n" +
+            "Example from the first lecture: INPUT (vertices and edges of a cube) -> PERSPECTIVE PROJECTION stage -> LINE DRAWING stage -> OUTPUT (the drawn cube).\n" +
+            "In the rasterization pipeline, the input is triangles and the output is a bitmap image.",
+          tags: ["3D Image Generation Pipeline"],
+          ref: "Lecture 04 — Slide: 3D Image Generation Pipeline(s)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "13. How are pixels shown on a screen, and why does the displayed image differ from the real coverage signal?",
+          translation:
+            "إزاي بتظهر الـ pixels على الشاشة، وليه الصورة المعروضة بتختلف عن إشارة الـ coverage الحقيقية؟",
+          answer:
+            "Each image sample sent to the display is converted into a little square of light of the appropriate color (pixel = picture element).\n" +
+            "Assuming each pixel emits a square of perfectly uniform intensity, we see a grid of uniformly colored squares.\n" +
+            "This is only an approximation of how real LCD displays work.\n" +
+            "The displayed result differs from the real coverage signal, which has a smooth edge rather than a staircase of squares.",
+          tags: ["Pixels on a screen", "Display"],
+          ref: "Lecture 04 — Slide: Pixels on a screen / We see this when we look at the screen",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "14. Calculation: five boundary pixels are covered by a triangle by 10%, 35%, 60%, 85%, and 15%. Using the pixel-area-fraction option, what fraction of red should each pixel show, and which pixel is reddest?",
+          translation:
+            "مسألة: خمس pixels على الحافة المثلث بيغطيها بنسب 10% و35% و60% و85% و15%. باستخدام خيار نسبة مساحة الـ pixel، كام نسبة الأحمر في كل pixel، وأنهي pixel الأكثر احمرارًا؟",
+          answer:
+            "Given: coverage fractions 10%, 35%, 60%, 85%, 15%.\n" +
+            "Rule: if the triangle covers p% of a pixel, the pixel should be p% red.\n" +
+            "Steps: the pixels are colored 10% red, 35% red, 60% red, 85% red, and 15% red respectively.\n" +
+            "Result: the pixel with 85% coverage is the reddest; the pixel with 10% coverage is the lightest.",
+          tags: ["Calculation", "Coverage", "Pixel area fraction"],
+          ref: "Lecture 04 — Slide: One option: compute fraction of pixel area covered",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "15. Calculation: audio is sampled at 44.1 kHz. How many samples are stored for 3 seconds of one audio channel?",
+          translation:
+            "مسألة: الصوت بيتاخد له sampling بمعدل 44.1 kHz. كام عينة بتتخزن لـ 3 ثواني من قناة صوت واحدة؟",
+          answer:
+            "Given: sampling rate = 44.1 kHz = 44,100 samples per second; duration = 3 seconds.\n" +
+            "Law: number of samples = sampling rate x time.\n" +
+            "Steps: 44,100 x 3 = 132,300.\n" +
+            "Result: 132,300 samples.",
+          tags: ["Calculation", "Sampling", "Audio"],
+          ref: "Lecture 04 — Slide: Audio file: stores samples of a 1D signal",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "16. Calculation: a sample point lies exactly on a horizontal edge of a triangle. If the triangle is below that edge, is the sample covered? What if the triangle is above that edge?",
+          translation:
+            "مسألة: نقطة sample واقعة بالظبط على حرف أفقي من المثلث. لو المثلث تحت الحرف ده، هل الـ sample مغطاة؟ ولو المثلث فوق الحرف؟",
+          answer:
+            "Given: the sample lies exactly on a horizontal edge.\n" +
+            "Rule: a sample on an edge is inside only if the edge is a top edge (horizontal and above all other edges) or a left edge (not exactly horizontal, on the left side).\n" +
+            "Case 1: the triangle is below the edge, so the edge is above all other edges -> it is a top edge -> the sample IS covered.\n" +
+            "Case 2: the triangle is above the edge, so the edge is below the other edges -> it is neither a top edge nor a left edge (a horizontal edge cannot be a left edge) -> the sample is NOT covered.",
+          tags: ["Calculation", "Breaking ties", "Top edge"],
+          ref: "Lecture 04 — Slide: Breaking Ties",
+          likely: "medium",
         },
       ],
     },

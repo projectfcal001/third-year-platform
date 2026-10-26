@@ -2319,5 +2319,1031 @@ subjects.push({
         },
       ],
     },
+    // المحاضرة: Lecture 4 - Machine Learning (Ensemble Methods, Bias/Variance, Bagging, Random Forests, Optimization, Feature Mapping)
+
+    {
+      id: "ml-lecture-04",
+      t: "المحاضرة 4 - Ensemble Methods & Optimization",
+      d: "أساليب التجميع (Ensembling)، مفهومي Bias و Variance، تقنية Bagging، الغابات العشوائية Random Forests، الانحدار التدريجي Gradient Descent، وتعيين الميزات Feature Mapping.",
+      pdf: "datenew/subjects/machine-learning/lectures/Lec 4/Lec 4.pdf",
+      pdf2: "datenew/subjects/machine-learning/questions/Questions on each lecture/Lecture-04-Questions.pdf",
+      // المحاضرة: Lecture 4 - Machine Learning (Ensemble Methods, Bias/Variance, Bagging, Random Forests, Optimization, Feature Mapping)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمفاهيم المحاضرة: Gradient Descent و Random Forest مع أمثلة توضيحية.",
+          links: [
+            {
+              t: "Gradient Descent شرح بالعربي",
+              d: "فيديو يشرح خوارزمية Gradient Descent بالعربي مع توضيح آلية عملها واستخدامها في تدريب نماذج تعلم الآلة زي Linear Regression والشبكات العصبية. مرتبط مباشرة بقسم Optimization في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=dboM7Ra3z7M",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح خوارزمية Gradient Descent بالتفصيل",
+              d: "شرح تفصيلي لخوارزمية Gradient Descent وطريقة عملها خطوة بخطوة، يوضح قاعدة التحديث wj → wj − α ∂J/∂wj ودور الـ learning rate. مفيد لفهم قسم Gradient Descent في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=QPCVU5Qbj88",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Random Forest شرح عربي",
+              d: "شرح بالعربي لخوارزمية Random Forest مع الربط بـ Decision Tree وشرح مفاهيم Bagging و Feature Bagging. يغطي نفس محتوى قسم Random Forests في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=BFgw2HhZ5l4",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح Random Forest من الصفر للاحتراف",
+              d: "شرح مفصل لخوارزمية الغابة العشوائية Random Forest وليه بتعتبر من أقوى خوارزميات الـ black-box في تعلم الآلة. يوضح مفهومي wisdom of the crowd و diversification المذكورين في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=LctyPmApQv4",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "شرح بالإنجليزي لمفاهيم المحاضرة من قنوات تعليمية موثوقة (StatQuest وغيرها).",
+          links: [
+            {
+              t: "StatQuest: Gradient Descent, Step-by-Step",
+              d: "فيديو من قناة StatQuest الشهيرة يشرح Gradient Descent خطوة بخطوة، يوضح المشتقات والـ learning rate وكيفية تقليل دالة التكلفة J(w). يغطي نفس محتوى قسم Optimization في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Watch on YouTube",
+                  url: "https://www.youtube.com/watch?v=sDv4f4s2SB8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "StatQuest: Random Forests Playlist",
+              d: "Playlist كامل من StatQuest عن Random Forests يشرح بناء الأشجار واستخدامها وتقييمها، مع شرح Bagging والـ Random Subspace Method. مرتبط مباشرة بقسم Random Forests في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Open Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLblh5JKOoLUIE96dI3U7oxHaCAbZgfhHk",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "StatQuest with Josh Starmer — Channel",
+              d: "قناة StatQuest التعليمية الشهيرة، فيها شروحات لكل مفاهيم المحاضرة: Bias/Variance و Ensemble Methods و Decision Trees و Gradient Descent. غالبًا بيستخدم رسومات بسيطة لتوضيح المفاهيم الصعبة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 Visit Channel",
+                  url: "https://www.youtube.com/c/joshstarmer",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Gradient Descent from Scratch — From Math to Code",
+              d: "فيديو يشرح Gradient Descent من الأساسيات لحد المستوى المتقدم، بيوفر شرح رياضي وتطبيق عملي بالكود. مفيد جدًا لفهم اشتقاق قاعدة التحديث المذكورة في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Watch on YouTube",
+                  url: "https://www.youtube.com/watch?v=yS0nTt1x_CQ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات ومراجع تعليمية بالعربي والإنجليزي تشرح كل مفاهيم المحاضرة بالتفصيل.",
+          links: [
+            {
+              t: "Bias-Variance Trade Off — GeeksforGeeks",
+              d: "مقال شامل عن المقايضة بين Bias و Variance في تعلم الآلة، يشرح Under-fitting و Over-fitting وطرق إدارة المقايضة زي Cross-Validation. مرتبط مباشرة بقسم Bias/Variance في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/ml-bias-variance-trade-off",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Random Forest Algorithm — GeeksforGeeks",
+              d: "مقال تفصيلي عن خوارزمية Random Forest، يشرح كيف بتبني عدة أشجار قرار على subsets عشوائية وبتدمج النتائج بـ voting أو averaging. يوضح أيضًا Random Subspace Method.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/random-forest-algorithm-in-machine-learning",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Gradient Descent Algorithm — GeeksforGeeks",
+              d: "شرح شامل لخوارزمية Gradient Descent وأنواعها (Batch و Stochastic و Mini-batch)، مع شرح قاعدة التحديث ودور الـ learning rate. مرتبط بقسم Optimization في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/gradient-descent-algorithm-and-its-variants",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Bootstrap aggregating — Wikipedia",
+              d: "مقال Wikipedia عن Bagging (Bootstrap Aggregating)، يشرح المفهوم الأساسي وأمثلة عملية. مرتبط بقسم Bagging: The Idea في المحاضرة، وبيوضح كيف bootstrap sampling بقلل الـ variance.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://en.wikipedia.org/wiki/Bootstrap_aggregating",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Polynomial Features Transforms — Machine Learning Mastery",
+              d: "مقال يشرح Polynomial Feature Mapping وكيف بتتحول الميزات لدرجات أعلى عشان تسمح للـ Linear Regression بنمذجة علاقات غير خطية. مرتبط مباشرة بقسم Feature Mapping في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.machinelearningmastery.com/polynomial-features-transforms-for-machine-learning",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "النزول أو الانحدار المتدرج (Gradient Descent) — فِهم",
+              d: "شرح بالعربي لخوارزمية Gradient Descent منصة فِهم (fihm.ai)، يشرح أنواعها وخطواتها وتحدياتها والمصطلحات الأساسية. مرتبط بقسم Optimization في المحاضرة وبيقدم شرح مكمل بالعربي.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة الشرح",
+                  url: "https://fihm.ai/tutorials/gradient-descent",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومحاكاة لتجربة مفاهيم المحاضرة بنفسك: تعديل learning rate و model complexity و feature selection.",
+          links: [
+            {
+              t: "TensorFlow Playground — Neural Network Visualization",
+              d: "أداة تفاعلية من Google بتسمح بتجربة Neural Network في المتصفح، تقدر تتحكم في learning rate وعدد الطبقات والميزات (Feature Mapping) وتشوف التأثير على under-fitting و over-fitting لحظيًا. ممتازة لفهم تأثير الـ learning rate المذكور في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://playground.tensorflow.org",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Bias-Variance Tradeoff — Interactive Visualization (MLU)",
+              d: "محاكاة تفاعلية من Amazon ML University لشرح Bias-Variance Tradeoff، تقدر تتحكم في model complexity (مثل K في KNN) وتشوف كيف بيتغير الـ bias و variance. مرتبط مباشرة بأمثلة KNN في المحاضرة (k كبير = high bias، k=1 = high variance).",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح المحاكاة",
+                  url: "https://mlu-explain.github.io/bias-variance",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "RandomForestClassifier — scikit-learn",
+              d: "التوثيق الرسمي لـ RandomForestClassifier في مكتبة scikit-learn، يشرح المعاملات (parameters) زي n_estimators و max_features (اللي بيتحكم في Random Subspace Method). مفيد للتطبيق العملي لمفاهيم المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "PolynomialFeatures — scikit-learn",
+              d: "التوثيق الرسمي لـ PolynomialFeatures في scikit-learn، الأداة اللي بتنفذ Polynomial Feature Mapping المذكور في المحاضرة (ψ(x) = [1, x, x², ..., x^M]). تقدر تستخدمها لتجربة قيم M مختلفة وشوف تأثيرها على under/over-fitting.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ===================== MCQ Questions =====================
+        {
+          q: "1. What is the primary goal of ensemble methods in machine learning?",
+          options: [
+            "Reduce model complexity",
+            "Combine multiple models to improve prediction accuracy and stability",
+            "Increase training speed",
+            "Reduce the size of the training dataset",
+          ],
+          correct: 1,
+          translation:
+            "ما هو الهدف الأساسي من أساليب التجميع (Ensemble Methods) في تعلم الآلة؟",
+          explanation:
+            "الإجابة الصحيحة هي دمج عدة نماذج لتحسين دقة التنبؤ واستقرار النموذج. أساليب التجميع بتجمع نماذج ضعيفة لتكوين نموذج قوي، والباقي غلط لأن تقليل التعقيد أو زيادة السرعة أو تقليل البيانات مش الهدف الأساسي.",
+          tags: ["Ensemble Methods", "Introduction"],
+          ref: "Lecture 04 — Introduction / Ensemble Methods",
+          likely: "high",
+        },
+        {
+          q: "2. Bias in machine learning corresponds to which problem?",
+          options: [
+            "Over-fitting",
+            "High variance",
+            "Under-fitting",
+            "Data noise",
+          ],
+          correct: 2,
+          translation: "الانحياز (Bias) في تعلم الآلة بيقابل أي مشكلة؟",
+          explanation:
+            "الـ Bias بيقابل مشكلة Under-fitting (نقص التخصيص)، لأن النموذج البسيط جدًا مش قادر يلتقط اتجاه البيانات. الـ Over-fitting بيقابل الـ Variance مش الـ Bias.",
+          tags: ["Bias/Variance", "Under-fitting"],
+          ref: "Lecture 04 — Bias/Variance Section",
+          likely: "high",
+        },
+        {
+          q: "3. Variance in machine learning corresponds to which problem?",
+          options: [
+            "Under-fitting",
+            "Over-fitting",
+            "High bias",
+            "Model simplicity",
+          ],
+          correct: 1,
+          translation: "التباين (Variance) في تعلم الآلة بيقابل أي مشكلة؟",
+          explanation:
+            "الـ Variance بيقابل مشكلة Over-fitting، لأن النموذج بيبقى حساس جدًا للتغييرات في بيانات التدريب وبيتعلم من الـ noise. الـ Under-fitting بيقابل الـ Bias.",
+          tags: ["Bias/Variance", "Over-fitting"],
+          ref: "Lecture 04 — Variance Section",
+          likely: "high",
+        },
+        {
+          q: "4. An overly simple model (e.g., KNN with large k) typically has:",
+          options: [
+            "High bias and high variance",
+            "Low bias and high variance",
+            "High bias and low variance",
+            "Low bias and low variance",
+          ],
+          correct: 2,
+          translation:
+            "النموذج البسيط جدًا (زي KNN بقيمة k كبيرة) عادة بيكون عنده:",
+          explanation:
+            "النموذج البسيط جدًا عنده High bias (مش قادر يلتقط هيكل البيانات) و Low variance (بينتج تقديرات مستقرة). ده عكس النموذج المعقد اللي عنده Low bias و High variance.",
+          tags: ["Bias/Variance", "KNN", "Model Complexity"],
+          ref: "Lecture 04 — Overly Simple Model Slide",
+          likely: "high",
+        },
+        {
+          q: "5. An overly complex model (e.g., KNN with k = 1) typically has:",
+          options: [
+            "High bias and high variance",
+            "High bias and low variance",
+            "Low bias and low variance",
+            "Low bias and high variance",
+          ],
+          correct: 3,
+          translation:
+            "النموذج المعقد جدًا (زي KNN بقيمة k = 1) عادة بيكون عنده:",
+          explanation:
+            "النموذج المعقد جدًا عنده Low bias (بيتعلم كل الهيكل المهم) و High variance (بيناسب غرائب البيانات اللي اتسample منها). ده عكس النموذج البسيط.",
+          tags: ["Bias/Variance", "KNN", "Model Complexity"],
+          ref: "Lecture 04 — Overly Complex Model Slide",
+          likely: "high",
+        },
+        {
+          q: "6. What is a bootstrap sample in bagging?",
+          options: [
+            "A subset sampled without replacement",
+            "The entire training dataset",
+            "A subset of features only",
+            "A random subset of the data sampled with replacement",
+          ],
+          correct: 3,
+          translation: "إيه هو الـ bootstrap sample في الـ Bagging؟",
+          explanation:
+            "الـ bootstrap sample عينة عشوائية من البيانات بتتسample مع الاستبدال (with replacement)، يعني نفس النقطة ممكن تختار أكتر من مرة. ده مش subset بدون استبدال ولا الـ dataset كله.",
+          tags: ["Bagging", "Bootstrap"],
+          ref: "Lecture 04 — Bagging: The Idea",
+          likely: "high",
+        },
+        {
+          q: "7. What does bagging primarily reduce?",
+          options: [
+            "Variance",
+            "Bias",
+            "Both bias and variance equally",
+            "Neither bias nor variance",
+          ],
+          correct: 0,
+          translation: "الـ Bagging بقلل أساسًا إيه؟",
+          explanation:
+            "الـ Bagging بقلل الـ Variance عن طريق المتوسط بين تنبؤات مستقلة. الـ Bias بيفضل زي ما هو (unchanged) لأن المتوسط ليه نفس الـ expectation.",
+          tags: ["Bagging", "Variance"],
+          ref: "Lecture 04 — Bagging Properties",
+          likely: "high",
+        },
+        {
+          q: "8. What is the effect of bagging on bias (for squared error)?",
+          options: [
+            "It increases bias",
+            "It decreases bias significantly",
+            "It makes bias zero",
+            "Bias remains unchanged",
+          ],
+          correct: 3,
+          translation:
+            "إيه تأثير الـ Bagging على الـ Bias (في حالة الخطأ التربيعي)؟",
+          explanation:
+            "الـ Bias بيفضل unchanged لأن المتوسط للتنبؤات ليه نفس الـ expectation. ده من ضمن محدوديات الـ Bagging: مش بقلل الـ Bias في حالة squared error.",
+          tags: ["Bagging", "Bias", "Limitations"],
+          ref: "Lecture 04 — Bagging Summary / Limitations",
+          likely: "high",
+        },
+        {
+          q: "9. How are predictions aggregated in bagging?",
+          options: [
+            "Only by voting",
+            "By voting, averaging, or weighting",
+            "Only by averaging",
+            "By taking the maximum prediction",
+          ],
+          correct: 1,
+          translation: "إزاي بتتجمع التنبؤات في الـ Bagging؟",
+          explanation:
+            "التنبؤات بتتجمع عن طريق voting أو averaging أو weighting. محدش منهم الطريقة الوحيدة، والـ maximum مش طريقة صحيحة للتجميع.",
+          tags: ["Bagging", "Aggregation"],
+          ref: "Lecture 04 — Ensemble Methods Overview",
+          likely: "medium",
+        },
+        {
+          q: "10. How does Random Forest reduce correlation between bagged decision trees?",
+          options: [
+            "By using fewer trees in the forest",
+            "By using smaller training datasets",
+            "By choosing a random subset of features at each node",
+            "By limiting the depth of every tree",
+          ],
+          correct: 2,
+          translation:
+            "إزاي الـ Random Forest بقلل الارتباط بين أشجار القرار المجمعة؟",
+          explanation:
+            "الـ Random Forest بيختار subset عشوائي من الميزات عند كل node وبيقترن الـ splits على الميزات دي بس. ده بيقول الـ correlation بين الأشجار، على عكس تقليل عدد الأشجار أو العمق.",
+          tags: ["Random Forest", "Feature Selection"],
+          ref: "Lecture 04 — Random Forests (Trick Section)",
+          likely: "high",
+        },
+        {
+          q: "11. The 'wisdom of the crowd' concept in Random Forests means:",
+          options: [
+            "A large group of experts is collectively smarter than individual experts",
+            "A single expert is always better than a group",
+            "Crowd voting always produces wrong answers",
+            "Each individual tree must be perfect",
+          ],
+          correct: 0,
+          translation: "مفهوم 'حكمة الجمهور' في الـ Random Forests معناه:",
+          explanation:
+            "مجموعة كبيرة من الخبراء بتكون أذكى جماعيًا من الخبراء الأفراد. ده المبدأ الأساسي وراء الـ Random Forest. الباقي غلط لأن الخبير الفردي مش دايمًا أحسن، ولا لازم كل شجرة تكون مثالية.",
+          tags: ["Random Forest", "Wisdom of Crowd"],
+          ref: "Lecture 04 — Random Forests Concepts",
+          likely: "medium",
+        },
+        {
+          q: "12. In optimization, a direct solution to minimize J(w) is obtained by:",
+          options: [
+            "Iteratively updating the weights",
+            "Randomly searching the weight space",
+            "Setting the gradient to zero and solving in closed form",
+            "Using a small learning rate",
+          ],
+          correct: 2,
+          translation:
+            "في الـ Optimization، الحل المباشر لتقليل J(w) بيتحصل بإيه؟",
+          explanation:
+            "الحل المباشر (Direct Solution) بيساوي الـ gradient للصفر ويحل بشكل مغلق (closed form). الـ Iterative updating ده طريقة Gradient Descent مش الحل المباشر.",
+          tags: ["Optimization", "Direct Solution"],
+          ref: "Lecture 04 — Solving the Minimization Problem",
+          likely: "high",
+        },
+        {
+          q: "13. Gradient descent is what type of algorithm?",
+          options: [
+            "Iterative",
+            "Direct / closed-form",
+            "Random search",
+            "Brute-force enumeration",
+          ],
+          correct: 0,
+          translation: "الـ Gradient Descent هو خوارزمية من أي نوع؟",
+          explanation:
+            "الـ Gradient Descent خوارزمية Iterative (تكرارية) بنطبق فيها update rule بشكل متكرر لحد ما نحقق معيار معين. مش Direct solution ولا Random search.",
+          tags: ["Gradient Descent", "Optimization"],
+          ref: "Lecture 04 — Iterative Solution: Gradient Descent",
+          likely: "high",
+        },
+        {
+          q: "14. The gradient descent update rule is:",
+          options: [
+            "wj → wj + α ∂J/∂wj",
+            "wj → α ∂J/∂wj",
+            "wj → wj − ∂J/∂wj",
+            "wj → wj − α ∂J/∂wj",
+          ],
+          correct: 3,
+          translation: "قاعدة تحديث الـ Gradient Descent هي:",
+          explanation:
+            "القاعدة الصحيحة هي wj → wj − α ∂J/∂wj. بنقص α ضرب المشتقة من الوزن. الخيار الأول غلط لأنه بيزود بدل ما ينقص، والباقي ناقص α أو المشتقة.",
+          tags: ["Gradient Descent", "Update Rule"],
+          ref: "Lecture 04 — Deriving Update Rule",
+          likely: "high",
+        },
+        {
+          q: "15. In the gradient descent update rule, α represents:",
+          options: [
+            "The gradient value",
+            "The learning rate",
+            "The weight parameter",
+            "The cost function",
+          ],
+          correct: 1,
+          translation: "في قاعدة تحديث الـ Gradient Descent، α بتمثل:",
+          explanation:
+            "α هي الـ learning rate أو step size، قيمة موجبة صغيرة بتحدد حجم الخطوة. مش الـ gradient ولا الوزن ولا دالة التكلفة.",
+          tags: ["Gradient Descent", "Learning Rate"],
+          ref: "Lecture 04 — Setting Learning Rate",
+          likely: "high",
+        },
+        {
+          q: "16. If ∂J/∂wj > 0, to decrease J we should:",
+          options: [
+            "Increase wj",
+            "Keep wj unchanged",
+            "Decrease wj",
+            "Set wj to zero",
+          ],
+          correct: 2,
+          translation: "لو ∂J/∂wj > 0، عشان نقلل J لازم:",
+          explanation:
+            "لما المشتقة موجبة، تقليل J بيحتاج تقليل wj (عشان النزول في الاتجاه المعاكس للمشتقة). لو زودنا wj هيزود J، ولو ثابت J مش هيتغير.",
+          tags: ["Gradient Descent", "Update Rule"],
+          ref: "Lecture 04 — Deriving Update Rule",
+          likely: "medium",
+        },
+        {
+          q: "17. Typical values of the learning rate α are:",
+          options: [
+            "1.0 or 10.0",
+            "100 or 1000",
+            "Negative values like −0.5",
+            "0.01 or 0.0001",
+          ],
+          correct: 3,
+          translation: "القيم النموذجية لـ learning rate α هي:",
+          explanation:
+            "القيم النموذجية صغيرة زي 0.01 أو 0.0001. القيم الكبيرة بتسبب divergence، والقيم السالبة غلط لأن α لازم يكون موجب.",
+          tags: ["Gradient Descent", "Learning Rate"],
+          ref: "Lecture 04 — Setting Learning Rate",
+          likely: "medium",
+        },
+        {
+          q: "18. Why is gradient descent preferred over the direct solution for high-dimensional regression?",
+          options: [
+            "Direct solution requires matrix inversion which is O(D^3)",
+            "Gradient descent is always more accurate",
+            "Gradient descent always converges to the global minimum",
+            "Direct solution cannot work for regression",
+          ],
+          correct: 0,
+          translation:
+            "ليه الـ Gradient Descent مفضل على الحل المباشر في الانحدار عالي الأبعاد؟",
+          explanation:
+            "الحل المباشر للانحدار الخطي (X⊤X)⁻¹X⊤t بيحتاج matrix inversion بتكلفة O(D³)، وده مكلف جدًا في الأبعاد العالية. الـ GD update بتكلف O(ND) أو أقل مع SGD.",
+          tags: ["Gradient Descent", "Why Use GD"],
+          ref: "Lecture 04 — Why Use Gradient Descent?",
+          likely: "high",
+        },
+        {
+          q: "19. The cost of a single gradient descent update (or stochastic GD) is approximately:",
+          options: [
+            "O(D^3)",
+            "O(ND) or less with stochastic gradient descent",
+            "O(N^2)",
+            "O(D^2)",
+          ],
+          correct: 1,
+          translation:
+            "تكلفة تحديث واحد في الـ Gradient Descent (أو SGD) تقريبًا:",
+          explanation:
+            "تكلفة تحديث GD هي O(ND) أو أقل مع SGD. O(D³) دي تكلفة الحل المباشر، و O(N²) و O(D²) مش تكاليف صحيحة لتحديث GD.",
+          tags: ["Gradient Descent", "Complexity"],
+          ref: "Lecture 04 — Why Use Gradient Descent?",
+          likely: "high",
+        },
+        {
+          q: "20. Feature mapping ψ(x) transforms the input from:",
+          options: [
+            "A lower-dimensional space to a higher-dimensional space",
+            "A higher-dimensional space to a lower-dimensional space",
+            "The same dimensional space to itself",
+            "Categorical to numerical data only",
+          ],
+          correct: 0,
+          translation: "الـ Feature Mapping ψ(x) بتحول المدخلات من:",
+          explanation:
+            "الـ Feature Mapping بتحول من فضاء أقل أبعاد لفضاء أعلى أبعاد، حيث البيانات تقدر تتحلل أو تتصنف بسهولة أكبر. مش العكس ولا نفس البعد.",
+          tags: ["Feature Mapping"],
+          ref: "Lecture 04 — Feature Mapping",
+          likely: "high",
+        },
+        {
+          q: "21. For polynomial feature mapping of degree M, the feature vector is:",
+          options: [
+            "ψ(x) = [x, x^2, ..., x^M]",
+            "ψ(x) = [1, x, ..., x^(M−1)]",
+            "ψ(x) = [1, x, x^2, ..., x^M]",
+            "ψ(x) = [x, x^2, ..., x^(M+1)]",
+          ],
+          correct: 2,
+          translation:
+            "للـ Polynomial Feature Mapping من الدرجة M، الـ feature vector هو:",
+          explanation:
+            "الـ feature vector الصحيح هو [1, x, x^2, ..., x^M]، بيبدأ بـ 1 (للـ bias term w0) وينتهي بـ x^M. الخيارات التانية ناقصة الـ 1 أو بتعدى M.",
+          tags: ["Feature Mapping", "Polynomial"],
+          ref: "Lecture 04 — Polynomial Feature Mapping",
+          likely: "high",
+        },
+        {
+          q: "22. Which polynomial degree M shows under-fitting according to the lecture?",
+          options: ["M = 0", "M = 3", "M = 9", "M = 12"],
+          correct: 0,
+          translation: "أي درجة كثيرة M بتظهر Under-fitting حسب المحاضرة؟",
+          explanation:
+            "M = 0 (نموذج بسيط جدًا: y = w0) بيتسبب في Under-fitting لأنه مش قادر يلتقط اتجاه البيانات. M = 3 نموذج جيد، و M = 9 بيعمل over-fitting.",
+          tags: ["Polynomial", "Under-fitting", "Model Complexity"],
+          ref: "Lecture 04 — Model Complexity and Generalization",
+          likely: "high",
+        },
+        {
+          q: "23. Which polynomial degree M shows over-fitting according to the lecture?",
+          options: ["M = 0", "M = 1", "M = 3", "M = 9"],
+          correct: 3,
+          translation: "أي درجة كثيرة M بتظهر Over-fitting حسب المحاضرة؟",
+          explanation:
+            "M = 9 (نموذج معقد جدًا) بيتسبب في Over-fitting، بيمثل بيانات التدريب بشكل مثالي لكن بيفشل في بيانات اختبار جديدة. M = 0 under-fitting و M = 3 نموذج جيد.",
+          tags: ["Polynomial", "Over-fitting", "Model Complexity"],
+          ref: "Lecture 04 — Model Complexity and Generalization",
+          likely: "high",
+        },
+        {
+          q: "24. Which polynomial degree M gives a good model that generalizes well?",
+          options: ["M = 0", "M = 3", "M = 9", "M = 12"],
+          correct: 1,
+          translation: "أي درجة كثيرة M بتدّي نموذج جيد بيعمم كويس؟",
+          explanation:
+            "M = 3 بيدي نموذج جيد بـ test error صغير وبيعمم كويس. M = 0 under-fitting و M = 9 over-fitting، و M = 12 برضو هيعمل over-fitting.",
+          tags: ["Polynomial", "Generalization", "Model Complexity"],
+          ref: "Lecture 04 — Model Complexity and Generalization",
+          likely: "high",
+        },
+        {
+          q: "25. The Random Subspace Method is also known as:",
+          options: ["Feature Bagging", "Data Bagging", "Boosting", "Stacking"],
+          correct: 0,
+          translation: "الـ Random Subspace Method معروف كمان بإسم:",
+          explanation:
+            "الـ Random Subspace Method معروف كـ Feature Bagging لأنه بيشتغل على subset عشوائي من الميزات (مش البيانات). Boosting و Stacking أساليب تانية خالص.",
+          tags: ["Random Forest", "Random Subspace Method"],
+          ref: "Lecture 04 — Random Forest (Bagging + Random Subspace)",
+          likely: "medium",
+        },
+        {
+          q: "26. Random Forests can be used for which type of tasks?",
+          options: [
+            "Classification only",
+            "Both classification and regression",
+            "Regression only",
+            "Clustering only",
+          ],
+          correct: 1,
+          translation: "الـ Random Forests ممكن يُستخدم لأي نوع من المهام؟",
+          explanation:
+            "الـ Random Forest خوارزمية supervised بتشتغل لـ Classification (تنبؤ بقيمة منفصلة/فئة) و Regression (تنبؤ بقيمة مستمرة). مش للـ Clustering لأنه supervised.",
+          tags: ["Random Forest", "Tasks"],
+          ref: "Lecture 04 — Random Forests",
+          likely: "medium",
+        },
+        {
+          q: "27. Which of the following is NOT a way to reduce high bias?",
+          options: [
+            "Use a more complex model",
+            "Increase the number of features",
+            "Increase the size of the training data",
+            "Reduce the number of features",
+          ],
+          correct: 3,
+          translation: "أي من الخيارات دي مش طريقة لتقليل الـ Bias العالي؟",
+          explanation:
+            "تقليل عدد الميزات بيقلل التعقيد وبالتالي يزيد الـ Bias، فهو مش طريقة لتقليله. الطرق الصحيحة لتقليل Bias: نموذج أعقد، ميزات أكتر، أو بيانات تدريب أكتر.",
+          tags: ["Bias Reduction", "Ways to Reduce Bias"],
+          ref: "Lecture 04 — Ways to reduce high bias",
+          likely: "high",
+        },
+        {
+          q: "28. Which of the following is a valid way to reduce variance?",
+          options: [
+            "Use a more complex model",
+            "Add more features to the model",
+            "Use cross-validation",
+            "Increase the polynomial degree M",
+          ],
+          correct: 2,
+          translation: "أي من الخيارات دي طريقة صحيحة لتقليل الـ Variance؟",
+          explanation:
+            "الـ Cross-validation طريقة صحيحة لتقليل Variance عن طريق تقسيم البيانات لتدريب واختبار عدة مرات. باقي الخيارات بتزيد التعقيد و بالتالي تزيد الـ Variance.",
+          tags: ["Variance Reduction", "Ways to Reduce Variance"],
+          ref: "Lecture 04 — Ways to Reduce the Variance",
+          likely: "high",
+        },
+        {
+          q: "29. A key limitation of bagging is:",
+          options: [
+            "It increases the variance of the model",
+            "It cannot be used for classification tasks",
+            "It does not reduce bias in case of squared error",
+            "It always overfits the training data",
+          ],
+          correct: 2,
+          translation: "أي من الخيارات دي محدودية أساسية للـ Bagging؟",
+          explanation:
+            "الـ Bagging مش بقلل الـ Bias في حالة squared error، وده من محدودياته المذكورة. هو بقلل الـ Variance مش بيزيده، وبيشتغل للـ classification، ومش بيoperfit.",
+          tags: ["Bagging", "Limitations"],
+          ref: "Lecture 04 — Bagging Summary / Limitations",
+          likely: "high",
+        },
+        {
+          q: "30. If the m datasets in bagging are NOT independent, what happens?",
+          options: [
+            "We get the full 1/m variance reduction",
+            "Variance becomes exactly zero",
+            "Bias increases dramatically",
+            "We do not get the full 1/m variance reduction",
+          ],
+          correct: 3,
+          translation:
+            "لو الـ m datasets في الـ Bagging مش مستقلة، إيه اللي بيحصل؟",
+          explanation:
+            "لو الـ datasets مش مستقلة، مبنحصلش على تخفيض الـ Variance الكامل بمقدار 1/m. عشان كده بنستخدم Random Forest عشان نقلل الـ correlation بين الـ datasets.",
+          tags: ["Bagging", "Independence", "Variance Reduction"],
+          ref: "Lecture 04 — Bagging Properties",
+          likely: "high",
+        },
+
+        // ===================== Essay Questions =====================
+        {
+          type: "essay",
+          q: "1. Define Bias and Variance in machine learning, and explain what each one corresponds to.",
+          translation:
+            "عرّف الـ Bias والـ Variance في تعلم الآلة، ووضّح كل واحد فيهم بيقابل إيه.",
+          answer:
+            "Bias is the error due to wrong assumptions about the data (e.g., assuming the data is linear when it follows a complex function).\n" +
+            "It measures how wrong the expected prediction is, and corresponds to under-fitting (a high-bias model cannot capture the dataset trend).\n" +
+            "Variance is the variability of the model — how sensitive it is to a different subset of the training data.\n" +
+            "It corresponds to over-fitting, where the model fits the training data too closely and performs poorly on new, unseen data.",
+          tags: ["Bias/Variance", "Definitions"],
+          ref: "Lecture 04 — Bias/Variance Section",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the bias-variance tradeoff using KNN with different values of k.",
+          translation:
+            "اشرح المقايضة بين الـ Bias والـ Variance باستخدام KNN بقيم k مختلفة.",
+          answer:
+            "KNN with large k is an overly simple model: it has high bias (cannot capture the structure in the data) and low variance (stable estimates because it averages many neighbors).\n" +
+            "KNN with k = 1 is an overly complex model: it has low bias (learns all the relevant structure) and high variance (fits the quirks of the particular sampled data).\n" +
+            "The tradeoff: as model complexity increases, bias decreases but variance increases. The goal is to find a balance that minimizes total error on unseen data.",
+          tags: ["Bias/Variance", "KNN", "Tradeoff"],
+          ref: "Lecture 04 — Overly Simple/Complex Model Slides",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Compare Bagging and Random Forests. What do they share and how do they differ?",
+          translation:
+            "قارن بين الـ Bagging والـ Random Forests. إيه المشترك وإيه الفرق؟",
+          answer:
+            "Similarities: Both are ensemble methods that train multiple models on random subsets of data (bootstrapped) and aggregate predictions (voting/averaging). Both aim to reduce variance.\n" +
+            "Differences: Bagging uses the same algorithm on different bootstrapped datasets, while Random Forest specifically uses decision trees and adds an extra layer of randomness by selecting a random subset of features at each node (Random Subspace Method / Feature Bagging).\n" +
+            "This extra randomness in Random Forest reduces the correlation between trees, which gives a stronger variance reduction than plain bagging.\n" +
+            "Random Forest is described as the best black-box ML algorithm — it works well with no tuning and is widely used in Kaggle competitions.",
+          tags: ["Bagging", "Random Forest", "Comparison"],
+          ref: "Lecture 04 — Random Forests & Bagging Properties",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Explain how bagging reduces variance. Why does it leave bias unchanged?",
+          translation:
+            "اشرح إزاي الـ Bagging بقلل الـ Variance. وليه بسيب الـ Bias زي ما هو؟",
+          answer:
+            "Bagging trains m models independently on m different bootstrap samples of the data.\n" +
+            "Variance is reduced because we are averaging over (approximately) independent predictions — averaging reduces variability.\n" +
+            "Bias remains unchanged because the averaged prediction has the same expectation as the individual predictions — taking the average does not change what the model is fundamentally able to learn.\n" +
+            "This is why bagging is most useful on high-variance, low-bias models (like deep decision trees).",
+          tags: ["Bagging", "Variance", "Bias"],
+          ref: "Lecture 04 — Bagging (effect on bias and variance)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. List and briefly explain the ways to reduce high bias in machine learning.",
+          translation:
+            "اذكر واشرح بإختصار طرق تقليل الـ Bias العالي في تعلم الآلة.",
+          answer:
+            "1) Use a more complex model — e.g., add hidden layers in a deep neural network, or use polynomial regression for non-linear datasets.\n" +
+            "2) Increase the number of features — adding more features increases model complexity and helps capture underlying patterns in the data.\n" +
+            "3) Increase the size of the training data — providing the model with more examples to learn from can help reduce bias.",
+          tags: ["Bias Reduction", "Ways to Reduce Bias"],
+          ref: "Lecture 04 — Ways to reduce high bias",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. List and briefly explain the ways to reduce variance in machine learning.",
+          translation:
+            "اذكر واشرح بإختصار طرق تقليل الـ Variance في تعلم الآلة.",
+          answer:
+            "1) Cross-validation — split the data into training and testing sets multiple times.\n" +
+            "2) Feature selection — choosing only the relevant features decreases the model's complexity.\n" +
+            "3) Ensemble methods — combine multiple models to improve generalization (e.g., Bagging, Boosting).\n" +
+            "4) Simplifying the model — reduce complexity such as decreasing the number of parameters or layers in a neural network.",
+          tags: ["Variance Reduction", "Ways to Reduce Variance"],
+          ref: "Lecture 04 — Ways to Reduce the Variance",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain gradient descent and derive its update rule. What is the role of the learning rate α?",
+          translation:
+            "اشرح الـ Gradient Descent واشتق قاعدة التحديث. إيه دور الـ learning rate α؟",
+          answer:
+            "Gradient descent is an iterative optimization algorithm used to minimize a cost function J(w).\n" +
+            "Key observation: if ∂J/∂wj > 0, decreasing J requires decreasing wj; if ∂J/∂wj < 0, decreasing J requires increasing wj.\n" +
+            "Update rule: wj → wj − α * (∂J / ∂wj). This update always decreases the cost function for small enough α (unless ∂J/∂wj = 0).\n" +
+            "The learning rate α > 0 controls the step size. Larger α means faster weight changes; typical values are small (e.g., 0.01 or 0.0001). Too large α can cause divergence; too small α makes convergence slow.",
+          tags: ["Gradient Descent", "Update Rule", "Learning Rate"],
+          ref: "Lecture 04 — Iterative Solution: Gradient Descent & Deriving Update Rule",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Compare direct solution and iterative (gradient descent) solution for minimizing the cost function J(w).",
+          translation:
+            "قارن بين الحل المباشر والحل التكراري (Gradient Descent) لتقليل دالة التكلفة J(w).",
+          answer:
+            "Direct solution: set the gradient ∇w J(w) = 0 and solve in closed form to directly find provably optimal parameters.\n" +
+            "Iterative solution (Gradient Descent): repeatedly apply an update rule that gradually moves the weights toward the solution.\n" +
+            "Why use gradient descent over direct solution:\n" +
+            "1) Applicable to a much broader set of models (many problems have no closed-form solution).\n" +
+            "2) Easier to implement than direct solutions.\n" +
+            "3) More efficient for regression in high-dimensional space — direct solution for linear regression (X⊤X)⁻¹X⊤t requires matrix inversion which is O(D^3), while a GD update costs only O(ND) or less with stochastic GD.",
+          tags: ["Optimization", "Direct vs Iterative", "Gradient Descent"],
+          ref: "Lecture 04 — Solving the Minimization Problem & Why Use GD",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Explain feature mapping. Why is it used, and how does it relate to linear regression?",
+          translation:
+            "اشرح الـ Feature Mapping. ليه بتُستخدم، وإزاي بترتبط بالـ Linear Regression؟",
+          answer:
+            "Feature mapping transforms input features from a lower-dimensional space to a higher-dimensional space using a function ψ(x): R^D → R^d, where the data can be more easily analyzed or classified.\n" +
+            "It allows linear regression to model non-linear relationships — by mapping the input features to another space and then treating the mapped features as the input of a linear regression procedure.\n" +
+            "Example (Polynomial feature mapping): for a degree-M polynomial, ψ(x) = [1, x, x^2, ..., x^M]⊤. The model y = ψ(x)⊤w is still linear in w0, w1, ..., so we can use linear regression to find w even though the relationship with x is non-linear.",
+          tags: ["Feature Mapping", "Polynomial", "Linear Regression"],
+          ref: "Lecture 04 — Feature Mapping & Polynomial Feature Mapping",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Discuss model complexity and generalization using polynomial feature mapping with different values of M.",
+          translation:
+            "ناقش تعقيد النموذج والتعميم باستخدام Polynomial Feature Mapping بقيم M مختلفة.",
+          answer:
+            "Using polynomial feature mapping of degree M:\n" +
+            "M = 0 (y = w0): under-fitting — the model is too simple and does not fit the data well.\n" +
+            "M = 1 (y = w0 + w1*x): still a simple linear fit.\n" +
+            "M = 3 (y = w0 + w1*x + w2*x^2 + w3*x^3): good model — small test error, generalizes well.\n" +
+            "M = 9 (y = w0 + ... + w9*x^9): over-fitting — the model is too complex, fits the training data perfectly but fails on new data.\n" +
+            "Conclusion: as M (complexity) increases, training error decreases, but test error first decreases then increases. The goal is to choose M that minimizes test error, not training error.",
+          tags: ["Polynomial", "Model Complexity", "Generalization"],
+          ref: "Lecture 04 — Polynomial Feature Mapping (M=0,1,3,9) & Model Complexity",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain the Random Subspace Method (Feature Bagging) and how it is used in Random Forests.",
+          translation:
+            "اشرح الـ Random Subspace Method (Feature Bagging) وإزاي بيُستخدم في الـ Random Forests.",
+          answer:
+            "The Random Subspace Method (also called Feature Bagging) fits N different decision trees by constraining each one to operate on a random subset of features.\n" +
+            "In Random Forests, both techniques are combined:\n" +
+            "1) Bagging — take random subsets of data points (with replacement) to create N smaller datasets and fit a tree on each subset, giving low variance.\n" +
+            "2) Random Subspace Method — at each node of each tree, choose a random subset of features and consider splits on these features only.\n" +
+            "This extra randomness at the node level reduces correlation between the bagged trees, which gives a stronger variance reduction than plain bagging alone. This is the trick that makes Random Forests work so well.",
+          tags: ["Random Forest", "Random Subspace Method", "Feature Bagging"],
+          ref: "Lecture 04 — Random Forest (Bagging + Random Subspace)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "12. List and briefly explain at least six techniques for feature mapping mentioned in the lecture.",
+          translation:
+            "اذكر واشرح بإختصار ست تقنيات على الأقل للـ Feature Mapping مذكورة في المحاضرة.",
+          answer:
+            "1) Feature extraction — transform input data into a new set of features that capture the most important information (e.g., extracting edges, corners, textures from images).\n" +
+            "2) Feature transformation — apply mathematical functions to transform input into new features (e.g., bag-of-words representation in text classification).\n" +
+            "3) Feature selection — select a subset of the available features that are most relevant to the task.\n" +
+            "4) Feature scaling — scale features so they have similar ranges and are on the same scale (important for distance-based algorithms).\n" +
+            "5) Feature engineering — create new features from existing ones (e.g., ratio of transaction amount to average transaction amount in fraud detection).\n" +
+            "6) Dimensionality reduction — reduce the number of features while retaining the most important information; helps reduce overfitting and improve computational efficiency.\n" +
+            "7) Embeddings — vector representations that capture semantic meaning (e.g., word2vec, GloVe for words in NLP).\n" +
+            "8) Data augmentation — create new examples by applying transformations to existing data (e.g., rotating, flipping, cropping images).\n" +
+            "9) Domain knowledge — use expert knowledge about the domain to guide feature selection/engineering (e.g., medical symptoms and risk factors for diagnosis).",
+          tags: ["Feature Mapping", "Techniques"],
+          ref: "Lecture 04 — Techniques for feature mapping",
+          likely: "medium",
+        },
+
+        // ===================== Numerical / Computational Questions =====================
+        {
+          type: "essay",
+          q: "1. (Numerical) For a polynomial feature mapping of degree M = 3 and an input x = 2, write the full feature vector ψ(x).",
+          translation:
+            "(سؤال حسابي) لـ Polynomial Feature Mapping من الدرجة M = 3 ومدخل x = 2، اكتب الـ feature vector ψ(x) كامل.",
+          answer:
+            "Given: M = 3, x = 2.\n" +
+            "Formula: ψ(x) = [1, x, x^2, x^3]⊤\n" +
+            "Step 1: 1 = 1\n" +
+            "Step 2: x = 2\n" +
+            "Step 3: x^2 = 2^2 = 4\n" +
+            "Step 4: x^3 = 2^3 = 8\n" +
+            "Result: ψ(2) = [1, 2, 4, 8]⊤\n" +
+            "Note: the feature vector has M + 1 = 4 components because it starts from x^0 = 1.",
+          tags: ["Polynomial", "Feature Mapping", "Numerical"],
+          ref: "Lecture 04 — Polynomial Feature Mapping",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. (Numerical) In gradient descent, the current weight is wj = 2.0, the partial derivative ∂J/∂wj = 0.5, and the learning rate α = 0.1. Compute the new value of wj after one update.",
+          translation:
+            "(سؤال حسابي) في الـ Gradient Descent، الوزن الحالي wj = 2.0، المشتقة الجزئية ∂J/∂wj = 0.5، ومعدل التعلم α = 0.1. احسب القيمة الجديدة لـ wj بعد تحديث واحد.",
+          answer:
+            "Given: wj = 2.0, ∂J/∂wj = 0.5, α = 0.1\n" +
+            "Update rule: wj_new = wj − α * (∂J / ∂wj)\n" +
+            "Step 1: α * (∂J / ∂wj) = 0.1 * 0.5 = 0.05\n" +
+            "Step 2: wj_new = 2.0 − 0.05 = 1.95\n" +
+            "Result: wj_new = 1.95\n" +
+            "Interpretation: because ∂J/∂wj > 0, the update correctly decreases wj to reduce J.",
+          tags: ["Gradient Descent", "Numerical", "Update Rule"],
+          ref: "Lecture 04 — Deriving Update Rule & Setting Learning Rate",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. (Numerical) For a polynomial feature mapping of degree M = 9, how many features (components) are in the feature vector ψ(x)? Justify your answer.",
+          translation:
+            "(سؤال حسابي) لـ Polynomial Feature Mapping من الدرجة M = 9، كام ميزة (عنصر) في الـ feature vector ψ(x)؟ برر إجابتك.",
+          answer:
+            "Formula: ψ(x) = [1, x, x^2, ..., x^M]⊤\n" +
+            "The vector contains the powers of x from x^0 (= 1) up to x^M.\n" +
+            "Number of components = M + 1 (because we start counting from 0).\n" +
+            "For M = 9: number of features = 9 + 1 = 10.\n" +
+            "The features are: [1, x, x^2, x^3, x^4, x^5, x^6, x^7, x^8, x^9].\n" +
+            "Conclusion: a degree-9 polynomial fit requires estimating 10 weights (w0 through w9).",
+          tags: ["Polynomial", "Feature Mapping", "Numerical"],
+          ref: "Lecture 04 — Polynomial Feature Mapping (M=9 case)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. (Numerical) Compare the cost of the direct solution versus one gradient descent update for a regression problem with D = 100 features and N = 1000 training examples.",
+          translation:
+            "(سؤال حسابي) قارن تكلفة الحل المباشر مقابل تحديث واحد في الـ Gradient Descent لمشكلة regression فيها D = 100 ميزة و N = 1000 مثال تدريب.",
+          answer:
+            "Direct solution cost (matrix inversion): O(D^3) = O(100^3) = 1,000,000 operations.\n" +
+            "Gradient descent update cost: O(N*D) = O(1000 * 100) = 100,000 operations per update.\n" +
+            "Comparison: GD update is about 10x cheaper than the direct solution per iteration.\n" +
+            "Conclusion: For high-dimensional regression (large D), gradient descent is more efficient than the direct solution, which requires expensive matrix inversion. With stochastic gradient descent (SGD), the per-iteration cost can be even lower (O(D) per example).",
+          tags: ["Gradient Descent", "Complexity", "Numerical"],
+          ref: "Lecture 04 — Why Use Gradient Descent?",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. (Numerical) Write the polynomial equation and the corresponding feature vector for the case M = 1, and explain what kind of model it represents.",
+          translation:
+            "(سؤال حسابي) اكتب معادلة الكثيرة والـ feature vector المقابل لحالة M = 1، واشرح نوع النموذج اللي بتمثله.",
+          answer:
+            "Polynomial equation for M = 1: y = w0 + w1*x\n" +
+            "Feature vector: ψ(x) = [1, x]⊤\n" +
+            "Number of features = M + 1 = 2.\n" +
+            "Interpretation: M = 1 represents simple linear regression — a straight line that fits the data with a single slope (w1) and intercept (w0).\n" +
+            "Note from the lecture: M = 1 is still a simple model. If the true relationship is non-linear, M = 1 (like M = 0) will under-fit the data. M = 3 is needed for a good fit on the lecture's example dataset.",
+          tags: ["Polynomial", "Linear Regression", "Numerical"],
+          ref: "Lecture 04 — Polynomial Feature Mapping with M = 1",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "6. (Numerical) In the bagging example from the lecture, m = 3 datasets are created by sampling with replacement, each containing n = 7 examples. If the original dataset D has 7 examples, what is the total number of model predictions made and how is the final prediction obtained?",
+          translation:
+            "(سؤال حسابي) في مثال الـ Bagging من المحاضرة، m = 3 datasets بتتخلق بأخذ عينات مع استبدال، كل واحد فيهم n = 7 أمثلة. لو الـ dataset الأصلي D فيه 7 أمثلة، إيه العدد الكلي للتنبؤات اللي بتتعمل وإزاي بيتحصل على التنبؤ النهائي؟",
+          answer:
+            "Given: m = 3 datasets, each with n = 7 examples, sampled with replacement from D (which has 7 examples).\n" +
+            "Step 1 — Training: Train one model on each of the m = 3 bootstrap datasets, producing 3 trained models.\n" +
+            "Step 2 — Prediction: For each test sample, each of the 3 models produces a prediction yi (i = 1, 2, 3). Total = 3 predictions per test sample.\n" +
+            "Step 3 — Aggregation: Average the 3 predictions: y_final = (y1 + y2 + y3) / 3.\n" +
+            "Conclusion: 3 model predictions are made per test sample, and the final prediction is the average of these 3 predictions.\n" +
+            "Note: because sampling is with replacement, some original examples may appear multiple times in the same bootstrap dataset, and some may not appear at all.",
+          tags: ["Bagging", "Numerical", "Aggregation"],
+          ref: "Lecture 04 — Bagging Example 1/2 & 2/2",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });

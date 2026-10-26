@@ -1282,12 +1282,965 @@ subjects.push({
         },
       ],
     },
-  ],
-  testBanks: [
     {
-      t: "بنك أسئلة الحوسبة السحابية",
-      d: "أسئلة المحاضرة في اختبار واحد",
-      lectures: [0, 1],
+      id: "cloud-computing-lec-3-4",
+      t: "المحاضرة 3 و4 — Virtualization (المحاكاة الافتراضية)",
+      d: "تعريف الـ Virtualization، أنواع الـ Hypervisor (Type-1 و Type-2)، مفهوم الـ VM، الشبكات الافتراضية (vSwitch وvLAN وBridged/NAT/Host-only)، وأمثلة VMware وXenServer.",
+      pdf: "datenew/subjects/cloud-computing/lectures/lec 3-4/Virtualization1_compressed.pdf",
+      pdf2: "datenew/subjects/cloud-computing/questions/Questions on each lecture/Lecture-3-4-Questions.pdf",
+      // محاضرة: Virtualization – المفاهيم الأساسية في الحوسبة الافتراضية
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "فيديوهات تعليمية عربية تشرح مفهوم الافتراضية (Virtualization) وأنواع Hypervisor، وأمثلة تطبيقية باستخدام VMware وVirtualBox.",
+          links: [
+            {
+              t: "شرح Virtualization والآلة الافتراضية (MrALSHABIB)",
+              d: "يشرح مفهوم الـVirtualization وأنواع Hypervisor (Type1 vs Type2)، وأساسيات إنشاء الأجهزة الافتراضية باستخدام VMware Workstation.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو على يوتيوب",
+                  url: "https://www.youtube.com/watch?v=ZjNb51DWllQ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح VMware Workstation Pro (باتش الوكالة)",
+              d: "فيديو عملي يوضح كيفية إنشاء وإدارة أجهزة افتراضية باستخدام VMware Workstation Pro على بيئة Windows.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو على يوتيوب",
+                  url: "https://www.youtube.com/watch?v=m72eAyn2MW4",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "مقدمة VMware vSphere (ESXi) - Eng. Ayman",
+              d: "يعرض هذا الفيديو مقدمة حول منصة VMware vSphere (ESXi وvCenter)، ويشرح دورها في إدارة الخوادم الافتراضية.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو على يوتيوب",
+                  url: "https://www.youtube.com/watch?v=oJWDH6AyRNw",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات باللغة الإنجليزية تقدم شرحًا لأساسيات الـVirtualization وHypervisor، مع أمثلة وتمارين عملية.",
+          links: [
+            {
+              t: "What Is Virtualization? – Infosec Institute",
+              d: "فيديو تعليمي باللغة الإنجليزية يشرح بشكل مبسّط مفهوم الـVirtualization وكيفية عمل الماكينات الافتراضية وأهميته.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو على يوتيوب",
+                  url: "https://www.youtube.com/watch?v=CsvepOhS2uM",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "What is a Hypervisor? – IBM Cloud (Bradley Knapp)",
+              d: "محاضرة قصيرة تشرح مفهوم المشرف الافتراضي (Hypervisor)، والفروق بين النوعين Type-1 وType-2 في بيئة IBM Cloud.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو على يوتيوب",
+                  url: "https://www.youtube.com/watch?v=LMAEbB2a50M",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Oracle VirtualBox Explanation",
+              d: "فيديو توضيحي (رسوم متحركة) من Oracle يشرح ميزات واستخدامات برنامج VirtualBox لتشغيل أنظمة متعددة على جهاز واحد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو على يوتيوب",
+                  url: "https://www.youtube.com/watch?v=0eS9l6Uj6DA",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مواقع رسمية ودروس تقنية تشرح مفاهيم الافتراضية، Hypervisor، وإعداد الأجهزة الافتراضية (VirtualBox، VMware، Hyper-V).",
+          links: [
+            {
+              t: "موقع Oracle VirtualBox الرسمي",
+              d: "صفحة Oracle الرسمية لـVirtualBox تحتوي على شرح لمميزات البرنامج وكيفية تثبيته على أنظمة Windows وLinux وmacOS.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع الرسمي",
+                  url: "https://www.oracle.com/virtualization/virtualbox/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "دليل Red Hat حول Virtualization",
+              d: "مقال على موقع Red Hat يقدم مقدمة شاملة لتقنية الافتراضية، وكيفية تحقيق أقصى استفادة من موارد الحوسبة عبر توزيعها على عدة آلات افتراضية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.redhat.com/en/topics/virtualization/what-is-virtualization",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "توثيق Hyper-V (مايكروسوفت)",
+              d: "التوثيق الرسمي لمايكروسوفت يشرح Hyper-V كمشرف افتراضي من النوع الأول مدمج في Windows وإعداداته الأساسية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الدليل",
+                  url: "https://learn.microsoft.com/virtualization/hyper-v-on-windows/what-is-hyper-v",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "روابط لتنزيل أدوات محاكاة وتشغيل الأجهزة الافتراضية، أهمها VirtualBox وVMware وHyper-V.",
+          links: [
+            {
+              t: "Oracle VM VirtualBox",
+              d: "أداة مجانية مفتوحة المصدر لإنشاء وإدارة الأجهزة الافتراضية على أنظمة Windows وLinux وmacOS.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل VirtualBox",
+                  url: "https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "VMware Workstation Player",
+              d: "نسخة مجانية من VMware Workstation لتشغيل الآلات الافتراضية على أجهزة Linux وWindows.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل VMware Player",
+                  url: "https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Hyper-V (Windows)",
+              d: "تقنية افتراضية مدمجة في Windows Server وWindows 11 يمكن تمكينها من ميزات النظام، تتيح تشغيل الآلات الافتراضية بدون تثبيت إضافي.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الدليل الرسمي",
+                  url: "https://learn.microsoft.com/virtualization/hyper-v-on-windows/what-is-hyper-v",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      /*
+| الأداة              | التكلفة                       | نظم التشغيل المدعومة      | مستوى التعقيد للمبتدئين |
+|--------------------|------------------------------|----------------------------|-------------------------|
+| VirtualBox         | مجاني مفتوح المصدر           | Windows, Linux, macOS      | سهل                     |
+| VMware Workstation | مدفوع (نسخة تجريبية متاحة)   | Windows, Linux             | متوسط                   |
+| Hyper-V            | مجاني (مضمّن في Windows)     | Windows Server, Windows 11 | متوسط                   |
+*/
+
+      questions: [
+        {
+          q: "1. What is another name for a hypervisor?",
+          options: [
+            "Virtual Machine Manager",
+            "Virtual Machine Monitor (VMM)",
+            "Virtual Memory Manager",
+            "Virtual Management Module",
+          ],
+          correct: 1,
+          translation: "ما هو الاسم الآخر للـ Hypervisor؟",
+          explanation:
+            'الـ Hypervisor هو طبقة برمجية للمحاكاة الافتراضية وتُسمى أيضًا Virtual Machine Monitor (VMM). الاختيار "Virtual Machine Manager" الأقرب في الشكل لكنه غلط لأن الحرف الأخير M معناه Monitor مش Manager.',
+          tags: ["Hypervisor", "Terminology"],
+          ref: "Lectures 3 & 4 — Important Concepts in Compute Virtualization",
+          likely: "high",
+        },
+        {
+          q: "2. Where does a Type-1 (bare-metal) hypervisor run?",
+          options: [
+            "Inside a guest operating system",
+            "Directly on the system hardware",
+            "On top of an application running on the host OS",
+            "On top of a host operating system",
+          ],
+          correct: 1,
+          translation: "أين يعمل الـ Hypervisor من النوع الأول (Bare-Metal)؟",
+          explanation:
+            'الـ Type-1 بيشتغل مباشرة على عتاد الجهاز (hardware) من غير نظام تشغيل وسيط. الاختيار "فوق Host OS" هو وصف الـ Type-2 مش الـ Type-1.',
+          tags: ["Type-1", "Bare-Metal"],
+          ref: "Lectures 3 & 4 — Hypervisor type-1",
+          likely: "high",
+        },
+        {
+          q: "3. In a Type-2 hypervisor, which component provides virtualization services such as I/O device support and memory management?",
+          options: [
+            "The virtual machine files",
+            "The applications running inside the VM",
+            "The guest operating system",
+            "The host operating system",
+          ],
+          correct: 3,
+          translation:
+            "في الـ Hypervisor من النوع الثاني، أي مكوّن بيوفر خدمات المحاكاة مثل دعم أجهزة الإدخال/الإخراج وإدارة الذاكرة؟",
+          explanation:
+            "الـ Type-2 بيشتغل فوق Host OS، والـ Host OS هو اللي بيوفر دعم الـ I/O وإدارة الذاكرة. الـ Guest OS بيشتغل جوه الـ VM ومش هو اللي بيقدّم الخدمات دي للـ hypervisor.",
+          tags: ["Type-2", "Host OS"],
+          ref: "Lectures 3 & 4 — Hypervisor type-2",
+          likely: "high",
+        },
+        {
+          q: "4. Which term is also used for Type-2 virtualization?",
+          options: [
+            "Embedded virtualization",
+            "Hosted virtualization",
+            "Bare-metal virtualization",
+            "Network virtualization",
+          ],
+          correct: 1,
+          translation:
+            "أي مصطلح بيُستخدم كمان للـ Virtualization من النوع الثاني؟",
+          explanation:
+            "النوع الثاني اسمه Hosted Virtualization لأنه بيعتمد على Host OS. أما Bare-Metal فهو اسم النوع الأول.",
+          tags: ["Type-2", "Terminology"],
+          ref: "Lectures 3 & 4 — Types of Compute Virtualization",
+          likely: "high",
+        },
+        {
+          q: "5. Which statement correctly distinguishes Type-1 from Type-2 hypervisors?",
+          options: [
+            "Type-1 runs directly on hardware, while Type-2 runs on a host operating system",
+            "Type-1 runs on a host operating system, while Type-2 runs directly on hardware",
+            "Type-1 is used only for networks, while Type-2 is used only for storage",
+            "Type-1 can host only one VM, while Type-2 can host many VMs",
+          ],
+          correct: 0,
+          translation:
+            "أي عبارة توضح الفرق الصحيح بين الـ Hypervisor من النوع الأول والثاني؟",
+          explanation:
+            "الفرق الأساسي هو مكان التشغيل: Type-1 مباشرة على الـ hardware و Type-2 فوق Host OS. الاختيار الأول معكوس، وباقي الاختيارات معلومات مش موجودة في المحاضرة.",
+          tags: ["Type-1 vs Type-2", "Comparison"],
+          ref: "Lectures 3 & 4 — Types of Compute Virtualization",
+          likely: "high",
+        },
+        {
+          q: "6. What is a Guest OS?",
+          options: [
+            "The physical machine itself",
+            "The operating system running in a physical machine",
+            "The virtualization software layer",
+            "The operating system running in a virtual machine",
+          ],
+          correct: 3,
+          translation: "ما هو الـ Guest OS؟",
+          explanation:
+            "الـ Guest OS هو نظام التشغيل اللي بيشتغل داخل الـ VM. نظام التشغيل اللي على الجهاز الفعلي اسمه Host OS (الاختيار الثاني) والطبقة البرمجية هي الـ Hypervisor.",
+          tags: ["Guest OS", "Terminology"],
+          ref: "Lectures 3 & 4 — Important Concepts in Compute Virtualization",
+          likely: "high",
+        },
+        {
+          q: "7. What is a Guest Machine?",
+          options: [
+            "The operating system installed on the physical machine",
+            "The physical machine that hosts the VMs",
+            "A virtual machine created through virtualization",
+            "The virtual machine monitor software",
+          ],
+          correct: 2,
+          translation: "ما هو الـ Guest Machine؟",
+          explanation:
+            "الـ Guest Machine هو الجهاز الافتراضي (VM) اللي اتعمل عن طريق الـ virtualization. الجهاز الفعلي اسمه Host Machine (الاختيار الأول).",
+          tags: ["Guest Machine", "Terminology"],
+          ref: "Lectures 3 & 4 — Important Concepts in Compute Virtualization",
+          likely: "high",
+        },
+        {
+          q: "8. What is a Host Machine?",
+          options: [
+            "A virtual machine created through virtualization",
+            "The operating system running in a virtual machine",
+            "The hypervisor layer",
+            "The physical machine",
+          ],
+          correct: 3,
+          translation: "ما هو الـ Host Machine؟",
+          explanation:
+            "الـ Host Machine هو الجهاز الفعلي (Physical machine) اللي بيشغّل الـ hypervisor. الجهاز الافتراضي هو Guest Machine.",
+          tags: ["Host Machine", "Terminology"],
+          ref: "Lectures 3 & 4 — Important Concepts in Compute Virtualization",
+          likely: "high",
+        },
+        {
+          q: "9. How is a virtual machine (VM) described in the lecture?",
+          options: [
+            "A set of files",
+            "A hardware chip inside the processor",
+            "A single application installed on the host OS",
+            "A physical server with extra RAM",
+          ],
+          correct: 0,
+          translation: "كيف تم وصف الـ Virtual Machine (VM) في المحاضرة؟",
+          explanation:
+            "الـ VM عبارة عن مجموعة ملفات (a set of files). مش تطبيق عادي ومش قطعة هاردوير.",
+          tags: ["VM", "Definition"],
+          ref: "Lectures 3 & 4 — What is a VM?",
+          likely: "high",
+        },
+        {
+          q: "10. How does virtualization create virtual hardware?",
+          options: [
+            "By installing extra hardware cards in the host",
+            "By cloning physical hardware",
+            "By copying the host operating system into the VM",
+            "By merging several physical machines into one chip",
+          ],
+          correct: 1,
+          translation:
+            "كيف تنشئ الـ Virtualization عتادًا افتراضيًا (Virtual Hardware)؟",
+          explanation:
+            "المحاضرة بتقول إن الـ virtualization بيعمل virtual hardware عن طريق استنساخ (cloning) العتاد الفعلي، وبعدين الـ hypervisor يستخدمه لإنشاء الـ VM.",
+          tags: ["VM", "Virtual Hardware"],
+          ref: "Lectures 3 & 4 — What is a VM?",
+          likely: "high",
+        },
+        {
+          q: "11. What allows one computer to run multiple operating systems simultaneously?",
+          options: [
+            "A hypervisor running VMs",
+            "A vSwitch connecting the ports",
+            "A NAT device translating IP addresses",
+            "A vLAN segmenting the network",
+          ],
+          correct: 0,
+          translation:
+            "ما الذي يسمح لجهاز واحد بتشغيل أكثر من نظام تشغيل في نفس الوقت؟",
+          explanation:
+            "وجود hypervisor بيشغّل VMs هو اللي بيخلي جهاز واحد يشغّل أكتر من OS. الـ vSwitch و vLAN و NAT مفاهيم شبكات مش بتشغّل أنظمة تشغيل.",
+          tags: ["Hypervisor", "VM"],
+          ref: "Lectures 3 & 4 — What is a VM?",
+          likely: "high",
+        },
+        {
+          q: "12. Which of the following is a Type-2 hypervisor?",
+          options: [
+            "Microsoft Hyper-V",
+            "VMware ESXi",
+            "Oracle VM VirtualBox",
+            "Citrix XenServer",
+          ],
+          correct: 2,
+          translation: "أي مما يلي يُعتبر Hypervisor من النوع الثاني؟",
+          explanation:
+            "VirtualBox من أمثلة الـ Type-2 في المحاضرة. باقي الاختيارات (ESXi و XenServer و Hyper-V) أمثلة على الـ Type-1.",
+          tags: ["Type-2", "Examples"],
+          ref: "Lectures 3 & 4 — Hypervisor type-2 examples",
+          likely: "high",
+        },
+        {
+          q: "13. Which of the following is a Type-1 hypervisor?",
+          options: [
+            "Microsoft Virtual PC",
+            "Oracle VM VirtualBox",
+            "VMware Fusion",
+            "Microsoft Hyper-V",
+          ],
+          correct: 3,
+          translation: "أي مما يلي يُعتبر Hypervisor من النوع الأول؟",
+          explanation:
+            "Hyper-V من أمثلة الـ Type-1. اختيار Microsoft Virtual PC هو الأقرب للتلخبط لأنه من نفس الشركة لكنه Type-2.",
+          tags: ["Type-1", "Examples"],
+          ref: "Lectures 3 & 4 — Hypervisor type-1 examples",
+          likely: "high",
+        },
+        {
+          q: "14. In the Type-2 architecture diagram, which layer sits directly above the hardware?",
+          options: [
+            "Host operating system",
+            "Virtual machine",
+            "Hypervisor",
+            "Guest operating system",
+          ],
+          correct: 0,
+          translation:
+            "في رسم معمارية الـ Type-2، أي طبقة تأتي مباشرة فوق الـ Hardware؟",
+          explanation:
+            "ترتيب الـ Type-2 من تحت لفوق: Hardware ثم Host OS ثم Hypervisor ثم الـ VMs (Guest OS و Apps). الـ Hypervisor فوق الـ Host OS مش فوق الـ hardware مباشرة.",
+          tags: ["Type-2", "Architecture"],
+          ref: "Lectures 3 & 4 — Types of Compute Virtualization / Hypervisor type-2",
+          likely: "high",
+        },
+        {
+          q: "15. In the Type-1 architecture diagram, which layer sits directly above the hardware?",
+          options: [
+            "Hypervisor",
+            "Host operating system",
+            "Guest operating system",
+            "Application",
+          ],
+          correct: 0,
+          translation:
+            "في رسم معمارية الـ Type-1، أي طبقة تأتي مباشرة فوق الـ Hardware؟",
+          explanation:
+            "في الـ Type-1 الـ Hypervisor فوق الـ Hardware مباشرة، وفوقه الـ VMs. مفيش Host OS في النوع ده.",
+          tags: ["Type-1", "Architecture"],
+          ref: "Lectures 3 & 4 — Types of Compute Virtualization / Hypervisor type-1",
+          likely: "high",
+        },
+        {
+          q: "16. What is a vSwitch?",
+          options: [
+            "A virtual network segment divided into isolated groups of ports",
+            "A device that translates private IPs to public IPs",
+            "A virtual switch that virtual devices connect to in order to communicate with each other",
+            "A physical switch that connects the host to the router",
+          ],
+          correct: 2,
+          translation: "ما هو الـ vSwitch؟",
+          explanation:
+            "الـ vSwitch هو switch افتراضي بتتوصل بيه الأجهزة الافتراضية عشان تتواصل مع بعض. الاختيار الثالث تعريف مختلف (NAT) والثاني تعريف vLAN.",
+          tags: ["vSwitch", "Network Virtualization"],
+          ref: "Lectures 3 & 4 — Network Virtualization",
+          likely: "high",
+        },
+        {
+          q: "17. What is a vLAN?",
+          options: [
+            "A virtual LAN segmented into groups of ports isolated from one another, creating different network segments",
+            "A network in which the VM shares the host's IP address",
+            "A virtual switch that virtual devices connect to",
+            "A bare-metal hypervisor for servers",
+          ],
+          correct: 0,
+          translation: "ما هو الـ vLAN؟",
+          explanation:
+            "الـ vLAN شبكة محلية افتراضية مقسّمة لمجموعات من البورتات معزولة عن بعضها وبتكوّن network segments مختلفة. الاختيار الأول هو تعريف الـ vSwitch.",
+          tags: ["vLAN", "Network Virtualization"],
+          ref: "Lectures 3 & 4 — Network Virtualization",
+          likely: "high",
+        },
+        {
+          q: "18. What is meant by network virtualization?",
+          options: [
+            "Connecting two physical networks with one cable",
+            "The physical components of the physical network are virtualized to create a virtual network",
+            "Installing an operating system directly on network hardware",
+            "Running a hypervisor on top of a host operating system",
+          ],
+          correct: 1,
+          translation: "ماذا يُقصد بالـ Network Virtualization؟",
+          explanation:
+            "يعني تحويل المكوّنات الفعلية للشبكة إلى مكوّنات افتراضية لإنشاء شبكة افتراضية. الاختيار الثاني تعريف الـ Type-2.",
+          tags: ["Network Virtualization"],
+          ref: "Lectures 3 & 4 — Network Virtualization",
+          likely: "high",
+        },
+        {
+          q: "19. In which virtual network type are the host server and the VM connected to the same network?",
+          options: ["NAT", "vLAN", "Bridged Network", "Host-only Network"],
+          correct: 2,
+          translation:
+            "في أي نوع من الشبكات الافتراضية يكون الـ Host والـ VM متصلين بنفس الشبكة؟",
+          explanation:
+            "الـ Bridged Network بيوصّل الـ Host والـ VM بنفس الشبكة. الـ NAT والـ Host-only بيستخدموا شبكة خاصة (private network).",
+          tags: ["Bridged", "Virtual Networks"],
+          ref: "Lectures 3 & 4 — Types of Virtual Networks",
+          likely: "high",
+        },
+        {
+          q: "20. Which virtual network type gives VMs an IP translated from the host's IP using a NAT device?",
+          options: ["Host-only Network", "vSwitch", "Bridged Network", "NAT"],
+          correct: 3,
+          translation:
+            "أي نوع من الشبكات الافتراضية يعطي الـ VMs عنوان IP مترجم من IP الـ Host باستخدام جهاز NAT؟",
+          explanation:
+            "في الـ NAT الـ VMs بتاخد IP مترجم من IP الـ host عن طريق NAT device وتتواصل على private network. الـ Host-only مفيهوش ترجمة للـ IP.",
+          tags: ["NAT", "Virtual Networks"],
+          ref: "Lectures 3 & 4 — Types of Virtual Networks",
+          likely: "high",
+        },
+        {
+          q: "21. Which virtual network type uses a private network but has no translated IP addresses to connect to an external network?",
+          options: ["Bridged Network", "NAT", "Host-only Network", "vLAN"],
+          correct: 2,
+          translation:
+            "أي نوع شبكة افتراضية يستخدم شبكة خاصة بدون عناوين IP مترجمة للاتصال بشبكة خارجية؟",
+          explanation:
+            "الـ Host-only بيستخدم private network من غير IP مترجم للاتصال بالخارج. الـ NAT قريب منه لكنه بيترجم الـ IP.",
+          tags: ["Host-only", "Virtual Networks"],
+          ref: "Lectures 3 & 4 — Types of Virtual Networks",
+          likely: "high",
+        },
+        {
+          q: "22. Which statement describes VMware ESXi?",
+          options: [
+            "A free desktop hypervisor with limited features",
+            "An open-source platform based on the Xen hypervisor",
+            "A Type-2 hypervisor that runs on top of Windows",
+            "A bare-metal Type-1 hypervisor that installs directly onto physical server hardware without a general-purpose operating system",
+          ],
+          correct: 3,
+          translation: "أي عبارة تصف VMware ESXi؟",
+          explanation:
+            "الـ ESXi هو Type-1 bare-metal بيتثبّت مباشرة على سيرفر فعلي من غير OS عام. الاختيار الأخير بيصف Citrix XenServer.",
+          tags: ["ESXi", "Type-1"],
+          ref: "Lectures 3 & 4 — VMware ESXi",
+          likely: "high",
+        },
+        {
+          q: "23. Which VMware product is described as a free virtualization hypervisor?",
+          options: [
+            "VMware Player",
+            "VMware vCenter",
+            "VMware ESXi",
+            "VMware Workstation",
+          ],
+          correct: 0,
+          translation: "أي منتج من VMware وُصف بأنه Hypervisor مجاني؟",
+          explanation:
+            "الـ VMware Player هو المجاني. الـ Workstation أقوى وفيه ميزات متقدمة زي record-and-replay و snapshot.",
+          tags: ["VMware Player", "VMware Workstation"],
+          ref: "Lectures 3 & 4 — VMware Workstation",
+          likely: "high",
+        },
+        {
+          q: "24. Which advanced features does VMware Workstation provide compared with VMware Player?",
+          options: [
+            "Bare-metal installation and vCenter management",
+            "Free licensing for all users",
+            "NAT and Host-only networking only",
+            "Record-and-replay and VM snapshot support",
+          ],
+          correct: 3,
+          translation:
+            "ما الميزات المتقدمة التي يوفرها VMware Workstation مقارنة بـ VMware Player؟",
+          explanation:
+            "الـ Workstation فيه record-and-replay ودعم الـ VM snapshot. الـ bare-metal و vCenter بتاعة ESXi مش بتاعة Workstation.",
+          tags: ["VMware Workstation", "Features"],
+          ref: "Lectures 3 & 4 — VMware Workstation",
+          likely: "medium",
+        },
+        {
+          q: "25. For which use case is VMware Workstation described as suitable?",
+          options: [
+            "Translating IP addresses for external networks",
+            "Replacing the physical network switches in a data center",
+            "Developers who need sandbox environments and snapshots",
+            "Running directly on bare metal without a host OS",
+          ],
+          correct: 2,
+          translation: "لأي استخدام وُصف VMware Workstation بأنه مناسب؟",
+          explanation:
+            "من الاستخدامات الثلاثة: المطورين اللي محتاجين sandbox و snapshots (والاتنين التانيين: تشغيل أكثر من OS على سطح مكتب واحد، والمعامل والعروض التوضيحية). التشغيل على bare metal من خصائص Type-1.",
+          tags: ["VMware Workstation", "Use Cases"],
+          ref: "Lectures 3 & 4 — VMware Workstation",
+          likely: "medium",
+        },
+        {
+          q: "26. Which characteristic is listed for VMware ESXi?",
+          options: [
+            "It runs only as a desktop application",
+            "Lightweight footprint",
+            "It requires a Windows host operating system",
+            "It supports only one VM at a time",
+          ],
+          correct: 1,
+          translation: "أي خاصية مذكورة للـ VMware ESXi؟",
+          explanation:
+            "ESXi له Lightweight Footprint أي حجم صغير. وهو مش بيحتاج Host OS ومش تطبيق ديسكتوب.",
+          tags: ["ESXi"],
+          ref: "Lectures 3 & 4 — VMware ESXi",
+          likely: "medium",
+        },
+        {
+          q: "27. Citrix XenServer is an open-source server virtualization platform based on which hypervisor?",
+          options: ["KVM", "Xen", "ESXi", "Hyper-V"],
+          correct: 1,
+          translation:
+            "الـ Citrix XenServer منصة مفتوحة المصدر مبنية على أي Hypervisor؟",
+          explanation:
+            "XenServer مبني على الـ Xen hypervisor (من الاسم نفسه). الـ KVM و Hyper-V منتجات مختلفة.",
+          tags: ["XenServer", "Type-1"],
+          ref: "Lectures 3 & 4 — Citrix XenServer",
+          likely: "medium",
+        },
+        {
+          q: "28. Which two options does Citrix offer in its purchasable supported version of XenServer?",
+          options: [
+            "Free and Ultimate",
+            "Basic and Premium",
+            "Standard and Enterprise",
+            "Home and Professional",
+          ],
+          correct: 2,
+          translation:
+            "ما الخياران اللذان تقدمهما Citrix في النسخة المدعومة المدفوعة من XenServer؟",
+          explanation:
+            "النسخة المدعومة المدفوعة ليها خيارين: Standard و Enterprise.",
+          tags: ["XenServer"],
+          ref: "Lectures 3 & 4 — Citrix XenServer",
+          likely: "medium",
+        },
+        {
+          q: "29. Which hardware resources does a Type-1 hypervisor such as ESXi or XenServer distribute to VMs?",
+          options: [
+            "CPU, printers, scanners, and displays",
+            "Networking and storage only",
+            "CPU, memory, networking, and storage",
+            "Memory, host OS licenses, and drivers only",
+          ],
+          correct: 2,
+          translation:
+            "ما موارد العتاد التي يوزعها Hypervisor من النوع الأول مثل ESXi أو XenServer على الـ VMs؟",
+          explanation:
+            "بيوزّع CPU والـ memory والـ networking والـ storage على الـ VMs.",
+          tags: ["ESXi", "XenServer", "Resources"],
+          ref: "Lectures 3 & 4 — VMware ESXi / Citrix XenServer",
+          likely: "medium",
+        },
+        {
+          q: "30. Which set contains only virtual hardware components shown in the VM diagram?",
+          options: [
+            "Guest OS, RAM, Mouse, Keyboard",
+            "Processor, Host OS, NICs, HBAs",
+            "Hypervisor, RAM, NICs, USB controller",
+            "Processor, RAM, NICs, USB controller",
+          ],
+          correct: 3,
+          translation:
+            "أي مجموعة تحتوي فقط على مكوّنات عتاد افتراضي ظاهرة في رسم الـ VM؟",
+          explanation:
+            "Processor و RAM و NICs و USB controller كلها مكوّنات عتاد افتراضي في الرسم. الـ Hypervisor والـ Host OS والـ Guest OS برمجيات مش مكوّنات hardware.",
+          tags: ["VM", "Virtual Hardware"],
+          ref: "Lectures 3 & 4 — What is a VM? (VM components diagram)",
+          likely: "medium",
+        },
+        {
+          q: "31. In which year did IBM begin to explore virtualization on mainframes?",
+          options: ["1964", "1999", "2006", "1972"],
+          correct: 0,
+          translation:
+            "في أي سنة بدأت IBM استكشاف الـ Virtualization على الـ Mainframes؟",
+          explanation:
+            "IBM بدأت الاستكشاف في 1964، وفي 1972 أطلقت VMs تعمل على الـ mainframes (وده الاختيار القريب).",
+          tags: ["History"],
+          ref: "Lectures 3 & 4 — History of Compute Virtualization",
+          likely: "medium",
+        },
+        {
+          q: "32. Which company launched x86-based virtualization products in 1999?",
+          options: ["HP", "VMware", "Qumranet", "Microsoft"],
+          correct: 1,
+          translation:
+            "أي شركة أطلقت منتجات Virtualization مبنية على x86 في عام 1999؟",
+          explanation:
+            "VMware أطلقت منتجات x86 virtualization سنة 1999. مايكروسوفت أضافت Hyper-V في 2008 و Qumranet أعلنت KVM في 2006.",
+          tags: ["History", "VMware"],
+          ref: "Lectures 3 & 4 — History of Compute Virtualization",
+          likely: "medium",
+        },
+        {
+          q: "33. The Open Virtualization Alliance, formed by IBM, Red Hat, HP, and Intel, aimed to accelerate the adoption of which technology?",
+          options: ["Docker", "KVM", "Hyper-V", "Xen"],
+          correct: 1,
+          translation:
+            "التحالف Open Virtualization Alliance الذي شكّلته IBM و Red Hat و HP و Intel كان هدفه تسريع انتشار أي تقنية؟",
+          explanation: "التحالف اتشكل سنة 2011 لتسريع تبني KVM.",
+          tags: ["History", "KVM"],
+          ref: "Lectures 3 & 4 — History of Compute Virtualization",
+          likely: "medium",
+        },
+        {
+          q: "34. Which protocols are used to access VMs remotely in the ESXi lab?",
+          options: ["RDP or SSH", "FTP or SMTP", "HTTP only", "DHCP or DNS"],
+          correct: 0,
+          translation:
+            "ما البروتوكولات المستخدمة للوصول إلى الـ VMs عن بُعد في لاب ESXi؟",
+          explanation:
+            "اللاب بيوصل للـ VMs عن بُعد باستخدام RDP أو SSH. الاختيارات التانية بروتوكولات لأغراض مختلفة.",
+          tags: ["Lab", "ESXi"],
+          ref: "Lectures 3 & 4 — LAB (ESXi and vCenter)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. What is a Virtual Machine (VM)? Explain how a hypervisor creates it.",
+          translation:
+            "ما هي الـ Virtual Machine؟ اشرح كيف يقوم الـ Hypervisor بإنشائها.",
+          answer:
+            'VM stands for "Virtual Machine".\n' +
+            "Virtualization creates virtual hardware by cloning physical hardware.\n" +
+            "The hypervisor uses this virtual hardware to create a virtual machine (VM).\n" +
+            "A VM is a set of files.\n" +
+            "With a hypervisor running VMs, one computer can run multiple operating systems simultaneously.\n" +
+            "A VM can run applications like a physical machine.",
+          tags: ["VM", "Hypervisor"],
+          ref: "Lectures 3 & 4 — What is a VM?",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Define each of the following terms: Hypervisor, Host OS, Guest OS, Host Machine, Guest Machine.",
+          translation:
+            "عرّف كل مصطلح من المصطلحات التالية: Hypervisor و Host OS و Guest OS و Host Machine و Guest Machine.",
+          answer:
+            "Hypervisor: the virtualization software layer, also called Virtual Machine Monitor (VMM).\n" +
+            "Host OS: the operating system running in a physical machine.\n" +
+            "Guest OS: the operating system running in a virtual machine (VM).\n" +
+            "Host Machine: the physical machine.\n" +
+            "Guest Machine: the virtual machine created through virtualization.",
+          tags: ["Terminology"],
+          ref: "Lectures 3 & 4 — Important Concepts in Compute Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Compare Type-1 and Type-2 hypervisors.",
+          translation: "قارن بين الـ Hypervisor من النوع الأول والنوع الثاني.",
+          answer:
+            "Type-1 (Bare-Metal Virtualization):\n" +
+            '- The hypervisor runs directly on the system hardware (a "bare metal" embedded hypervisor).\n' +
+            "- No host operating system is needed; VMs run on top of the hypervisor.\n" +
+            "- Examples: VMware ESX and ESXi, Microsoft Hyper-V, Citrix XenServer, Oracle VM.\n" +
+            "Type-2 (Hosted Virtualization):\n" +
+            "- The hypervisor runs on a host operating system that provides virtualization services such as I/O device support and memory management.\n" +
+            "- Applications can also run directly on the host OS beside the hypervisor.\n" +
+            "- Examples: VMware Workstation/Fusion/Player, Microsoft Virtual PC, Oracle VM VirtualBox, Red Hat Enterprise Virtualization.",
+          tags: ["Type-1 vs Type-2", "Comparison"],
+          ref: "Lectures 3 & 4 — Types of Compute Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Draw and label the architecture of a Type-2 hypervisor.",
+          translation: "ارسم وسمِّ معمارية الـ Hypervisor من النوع الثاني.",
+          answer:
+            "Layers from bottom to top:\n" +
+            "1) Hardware.\n" +
+            "2) Operating system 1 (host OS) on top of the hardware.\n" +
+            "3) On top of the host OS: the Hypervisor, and beside it the host applications (App1, App2, ...).\n" +
+            "4) On top of the hypervisor: the virtual machines, each with a guest operating system (Operating system 2 (guest), ...) and its own applications (App3, App4, ...).",
+          tags: ["Type-2", "Architecture"],
+          ref: "Lectures 3 & 4 — Hypervisor type-2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Draw and label the architecture of a Type-1 hypervisor.",
+          translation: "ارسم وسمِّ معمارية الـ Hypervisor من النوع الأول.",
+          answer:
+            "Layers from bottom to top:\n" +
+            "1) Hardware.\n" +
+            "2) Hypervisor directly on the hardware (no host OS).\n" +
+            "3) Virtual machines (VM1, VM2, ...) on top of the hypervisor, each running a guest OS and applications.",
+          tags: ["Type-1", "Architecture"],
+          ref: "Lectures 3 & 4 — Hypervisor type-1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. List examples of Type-1 and Type-2 hypervisors.",
+          translation:
+            "اذكر أمثلة على الـ Hypervisors من النوع الأول والنوع الثاني.",
+          answer:
+            "Type-1 examples:\n" +
+            "- VMware ESX and ESXi.\n" +
+            "- Microsoft Hyper-V.\n" +
+            "- Citrix XenServer.\n" +
+            "- Oracle VM.\n" +
+            "Type-2 examples:\n" +
+            "- VMware Workstation/Fusion/Player.\n" +
+            "- Microsoft Virtual PC.\n" +
+            "- Oracle VM VirtualBox.\n" +
+            "- Red Hat Enterprise Virtualization.",
+          tags: ["Examples", "Type-1", "Type-2"],
+          ref: "Lectures 3 & 4 — Hypervisor type-1 examples / Hypervisor type-2 examples",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. What is the difference between VMware Player and VMware Workstation?",
+          translation: "ما الفرق بين VMware Player و VMware Workstation؟",
+          answer:
+            "VMware Player is a free virtualization hypervisor.\n" +
+            "VMware Workstation is a more robust hypervisor with some advanced features, such as record-and-replay and VM snapshot support.\n" +
+            "Both are Type-2 hypervisors that run on a host operating system.",
+          tags: ["VMware Player", "VMware Workstation"],
+          ref: "Lectures 3 & 4 — VMware Workstation",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Mention the three major use cases of VMware Workstation.",
+          translation:
+            "اذكر الاستخدامات الرئيسية الثلاثة لـ VMware Workstation.",
+          answer:
+            "1) Running multiple different operating systems, or versions of one OS, on one desktop.\n" +
+            "2) For developers who need sandbox environments and snapshots.\n" +
+            "3) For labs and demonstration purposes.",
+          tags: ["VMware Workstation", "Use Cases"],
+          ref: "Lectures 3 & 4 — VMware Workstation",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. List the virtual hardware components that make up a VM.",
+          translation: "اذكر مكوّنات العتاد الافتراضي التي تتكوّن منها الـ VM.",
+          answer:
+            "A VM is built from virtual hardware, shown in the lecture diagram as:\n" +
+            "- Processor\n" +
+            "- RAM\n" +
+            "- Graphic card\n" +
+            "- Storage drive\n" +
+            "- NICs\n" +
+            "- HBAs\n" +
+            "- SCSI/IDE controllers\n" +
+            "- USB controller\n" +
+            "- Serial/Parallel ports\n" +
+            "- Floppy/Optical drives and controllers\n" +
+            "- Mouse and keyboard",
+          tags: ["VM", "Virtual Hardware"],
+          ref: "Lectures 3 & 4 — What is a VM? (VM components diagram)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. What is network virtualization? Define vSwitch and vLAN.",
+          translation:
+            "ما هو الـ Network Virtualization؟ عرّف الـ vSwitch والـ vLAN.",
+          answer:
+            "Network virtualization: the physical components that make up the physical network are virtualized to create a virtual network.\n" +
+            "vSwitch: a virtual switch that virtual devices can connect to in order to communicate with each other.\n" +
+            "vLAN: a Virtual Local Area Network that is segmented into groups of ports isolated from one another, creating different network segments.",
+          tags: ["Network Virtualization", "vSwitch", "vLAN"],
+          ref: "Lectures 3 & 4 — Network Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain the types of virtual networks (Bridged, NAT, Host-only).",
+          translation:
+            "اشرح أنواع الشبكات الافتراضية (Bridged و NAT و Host-only).",
+          answer:
+            "Bridged Network: the host server and the VM are connected to the same network, and the host shares its IP address with the VM.\n" +
+            "NAT: VMs use an IP translated from the host's IP (using a NAT device) and communicate on a private network.\n" +
+            "Host-only Network: VMs use a private network but do not have translated IP addresses to connect to an external network.",
+          tags: ["Virtual Networks", "Bridged", "NAT", "Host-only"],
+          ref: "Lectures 3 & 4 — Types of Virtual Networks",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain what VMware ESXi is and mention its main features.",
+          translation: "اشرح ما هو VMware ESXi واذكر أهم خصائصه.",
+          answer:
+            "ESXi is a bare-metal Type-1 hypervisor developed by Broadcom (via VMware).\n" +
+            "It installs directly onto physical server hardware without needing a general-purpose operating system.\n" +
+            "It is used to deploy, host, and manage VMs.\n" +
+            "It has a lightweight footprint.\n" +
+            "It distributes hardware resources (CPU, memory, networking, storage) to VMs.",
+          tags: ["ESXi", "Type-1"],
+          ref: "Lectures 3 & 4 — VMware ESXi",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "13. Describe Citrix XenServer.",
+          translation: "تكلم عن Citrix XenServer.",
+          answer:
+            "XenServer is an open-source server virtualization platform based on the Xen hypervisor.\n" +
+            "Citrix also offers a supported version that can be purchased, with two options: Standard and Enterprise.\n" +
+            "It is used by virtualization administrators to deploy, host, and manage VMs.\n" +
+            "It is also used to distribute hardware resources (CPU, memory, networking, storage) to VMs.",
+          tags: ["XenServer", "Type-1"],
+          ref: "Lectures 3 & 4 — Citrix XenServer",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "14. Mention the main milestones in the history of compute virtualization.",
+          translation: "اذكر أهم المحطات في تاريخ الـ Compute Virtualization.",
+          answer:
+            "1964: IBM began to explore virtualization on mainframes.\n" +
+            "1972: IBM launched VMs running on mainframes.\n" +
+            "1999: VMware launched x86-based virtualization products.\n" +
+            "2002: Xen was officially open sourced.\n" +
+            "2006: Qumranet first announced KVM.\n" +
+            "2008: Microsoft added Hyper-V in Windows Server 2008 R2.\n" +
+            "2011: IBM, Red Hat, HP, and Intel formed the Open Virtualization Alliance to accelerate KVM adoption.\n" +
+            "2013: Docker was launched.",
+          tags: ["History"],
+          ref: "Lectures 3 & 4 — History of Compute Virtualization",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "15. What are the lab tasks for VMware Workstation and for ESXi?",
+          translation: "ما مهام اللاب الخاصة بـ VMware Workstation وبـ ESXi؟",
+          answer:
+            "VMware Workstation lab: install VMware Workstation, deploy and manage VMs, and access VMs remotely.\n" +
+            "ESXi lab: install ESXi and vCenter, deploy and manage VMs, and access VMs remotely using RDP or SSH.",
+          tags: ["Lab"],
+          ref: "Lectures 3 & 4 — LAB",
+          likely: "medium",
+        },
+      ],
     },
   ],
+  // testBanks: [
+  //   {
+  //     t: "بنك أسئلة الحوسبة السحابية",
+  //     d: "أسئلة المحاضرة في اختبار واحد",
+  //     lectures: [0, 1],
+  //   },
+  // ],
 });

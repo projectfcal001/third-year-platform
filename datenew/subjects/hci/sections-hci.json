@@ -100,6 +100,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "hci-sec-04",
+      "subject": "hci",
+      "lecture": "المحاضرة 3: الحاسوب (The Computer)",
+      "lectureId": "hci-lecture-03",
+      "instructorId": "INS-Radwa",
+      "instructorName": "م. رضوى صالح",
+      "groupName": "سكشن 4",
+      "status": "available",
+      "sectionTitle": "🌐 لاب 4 - HCI Lab 4",
+      "materials": {
+        "file": {
+          "label": "ملف اللاب",
+          "url": "datenew/subjects/hci/sections/Sec 4/HCI Lab 4_compressed.pdf",
+          "type": "pdf"
+        },
+        "links": [
+          {
+            "t": "تحميل ملف العمل بتاع السكشن",
+            "d": "",
+            "icon": "🇪🇬",
+            "actions": [
+              {
+                "label": "📥 تحميل",
+                "url": "datenew/subjects/hci/sections/Sec 4/HCI Lab 4.zip",
+                "type": "download",
+                "color": "red"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

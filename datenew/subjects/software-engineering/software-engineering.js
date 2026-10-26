@@ -2473,5 +2473,1064 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "se-chapter-04",
+      t: "الفصل الرابع: Requirements Engineering",
+      d: "هندسة المتطلبات: متطلبات المستخدم والنظام، الوظيفية وغير الوظيفية، الاستنباط (Interviews, Ethnography, Stories, Scenarios) وتحليل المتطلبات",
+      pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 4 - Requirements engineering_Part 1.pdf",
+      pdf2: "/datenew/subjects/software-engineering/questions/Questions on each lecture/Lecture-04-Questions.pdf",
+      // الفصل الرابع: هندسة المتطلبات (Requirements Engineering) - كتاب Software Engineering (Ian Sommerville)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "مجموعة من الفيديوهات الشارحة باللغة العربية لمفاهيم هندسة المتطلبات، والمتطلبات الوظيفية وغير الوظيفية، وطرق الاستخراج.",
+          links: [
+            {
+              t: "شرح المتطلبات الوظيفية وغير الوظيفية - جامعة الملك خالد",
+              d: "شرح أكاديمي ميسر يوضح الفرق بين المتطلبات الوظيفية ومتطلبات النظام والقيود التشغيلية وفق المناهج الجامعية.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=mq3MjT0_fKI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "تحليل النظم: Functional and Non-Functional Requirements",
+              d: "فيديو يتناول كيفية تحديد متطلبات النظام والأداء القياسي وتوثيق الخدمة المطلوبة للمستخدمين.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=dfh6DI_y8Tk",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "هندسة المتطلبات واستخراج قصص المستخدم",
+              d: "محاضرة تركز على كيفية استخراج المتطلبات وتحويلها إلى قصص مستخدم ومواصفات تقنية قابلة للتنفيذ.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=lf3V_3WFGzk",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "مقدمة في هندسة المتطلبات البرمجية",
+              d: "استعراض شامل لأهمية تحديد المتطلبات وأصحاب المصلحة (Stakeholders) ودورهم في نجاح المشروع البرمجي.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=XDey5x06ECI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محاضرات ودروس تعليمية عالمية باللغة الإنجليزية تشرح هندسة المتطلبات وتقنيات الاستخراج والنمذجة.",
+          links: [
+            {
+              t: "Functional vs Non-Functional Requirements Explained",
+              d: "شرح مبسط وعملي يعتمد على الأمثلة التطبيقية للتمييز بين سلوك النظام وخصائص الأداء والأمان.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=IGnECjeVVJg",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Requirements Elicitation - University of Virginia (UVA)",
+              d: "درس أكاديمي يوضح المرحلة الأولى من هندسة المتطلبات وكيفية التواصل مع العملاء لاستكشاف احتياجاتهم.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=pSQRetBoaRE",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Mastering Requirements Elicitation Techniques",
+              d: "فيديو متقدم يشرح آليات إجراء المقابلات والملاحظة الإثنوغرافية لاستكشاف المتطلبات الضمنية للأنظمة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=HXdQ3NsaJbg",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Requirement Elicitation Methods - Tutorials Point",
+              d: "استعراض لتقنيات العصف الذهني والاستبيانات وتحليل المستندات لاستخراج المتطلبات البرمجية.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=1UEzc2E71Hk",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات موثوقة ومراجع علمية تفصيلية تغطي مراحل هندسة المتطلبات وكتابة وثيقة SRS من منصة GeeksforGeeks.",
+          links: [
+            {
+              t: "GeeksforGeeks: Requirements Engineering Process",
+              d: "مقال يتناول دراسة الجدوى، واستخراج المتطلبات، والتوثيق، والتحقق، وإدارة التغيير في البرمجيات.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/software-engineering-requirements-engineering-process/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks: Requirements Elicitation Techniques",
+              d: "دليل مرجعي يتناول أساليب جمع المتطلبات مثل المقابلات، ورش العمل، والاستبيانات، والنماذج الأولية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/software-engineering-requirements-elicitation/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks: How to Write a Good SRS Document",
+              d: "شرح لكيفية كتابة مواصفات متطلبات البرمجيات (SRS) المعيارية وخصائصها كالاطراد والصحة والقابلية للاختبار.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/how-to-write-a-good-srs-for-your-project/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks: Non-Functional Requirements in System Design",
+              d: "تحليل مفصل لمتطلبات المنتجات ومتطلبات التنظيمية والخارجية مثل الأداء والاعتمادية والخصوصية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/what-are-non-functional-requirements-in-system-design-examples-definition/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات برمجية ومصادر تفاعلية رسمية لرسم المخططات وتوثيق متطلبات الأساليب الرشيقة وإدارة المشاريع.",
+          links: [
+            {
+              t: "draw.io - Diagramming Software",
+              d: "أداة مجانية ورسمية لرسم مخططات UML ومخططات تدفق البيانات (DFD) ومخططات حالات الاستخدام (Use Cases).",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.drawio.com/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Atlassian Jira - Agile Project & Requirements Management",
+              d: "منصة لإدارة متطلبات المشاريع وتتبع قصص المستخدمين (User Stories) والمهام البرمجية في بيئات Agile.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.atlassian.com/software/jira/free",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Visual Paradigm - Systems & Requirements Modeling Tool",
+              d: "بيئة عمل متكاملة لتوثيق وتصميم متطلبات البرمجيات وإدارة نماذج UML وSysML والمواصفات المعمارية.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.visual-paradigm.com/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. What is requirements engineering (RE)?",
+          options: [
+            "The process of writing and testing the code that implements the system services",
+            "The process of finding out, analyzing, documenting and checking the services and constraints of a system",
+            "The process of estimating the cost, schedule and staffing of a software project",
+            "The process of deploying the system and training its users",
+          ],
+          correct: 1,
+          translation: "ما هي هندسة المتطلبات (RE)؟",
+          explanation:
+            "الصح هو التعريف الأساسي: اكتشاف وتحليل وتوثيق والتحقق من الخدمات والقيود. الاختيار الأقرب (كتابة الكود) غلط لأنه تنفيذ مش متطلبات.",
+          tags: ["RE definition"],
+          ref: "Chapter 4 — Introduction",
+          likely: "high",
+        },
+        {
+          q: "2. Which statement best describes USER requirements?",
+          options: [
+            "Statements, in natural language plus diagrams, of the services the system is expected to provide to its users and the constraints under which it must operate",
+            "Detailed descriptions of the system's functions, services and operational constraints that define exactly what is to be implemented",
+            "Formal mathematical models of the system behavior written for the developers",
+            "Descriptions of the system architecture and software design decisions",
+          ],
+          correct: 0,
+          translation:
+            "أي عبارة تصف متطلبات المستخدم (User requirements) بشكل أفضل؟",
+          explanation:
+            "متطلبات المستخدم بلغة طبيعية ورسومات وعلى مستوى عالٍ. الاختيار الأول وصف لمتطلبات النظام (System requirements) وهو الأقرب للغلط.",
+          tags: ["User requirements", "User vs System"],
+          ref: "Chapter 4 — Introduction",
+          likely: "high",
+        },
+        {
+          q: "3. Which statement best describes SYSTEM requirements?",
+          options: [
+            "High-level abstract statements of services written in natural language for the client managers",
+            "More detailed descriptions of the system's functions, services and operational constraints that should define exactly what is to be implemented",
+            "Statements of the needs of the end-users written without any technical detail",
+            "A short early study of whether the system is technically and financially feasible",
+          ],
+          correct: 1,
+          translation: "أي عبارة تصف متطلبات النظام (System requirements)؟",
+          explanation:
+            "متطلبات النظام أكثر تفصيلًا وتحدد بالظبط إيه اللي هيتنفذ. الاختيار الأول يخص User requirements، والأخير يخص Feasibility study.",
+          tags: ["System requirements", "User vs System"],
+          ref: "Chapter 4 — Introduction",
+          likely: "high",
+        },
+        {
+          q: "4. The system requirements document is sometimes called a:",
+          options: [
+            "Feasibility study",
+            "User requirements definition",
+            "Functional specification",
+            "Software design document",
+          ],
+          correct: 2,
+          translation: "وثيقة متطلبات النظام بتتسمى أحيانًا:",
+          explanation:
+            "الكتاب بيقول إن System requirements document ممكن تتسمى Functional specification. User requirements definition هي المستوى الأعلى وليست نفس الوثيقة.",
+          tags: ["System requirements"],
+          ref: "Chapter 4 — Introduction",
+          likely: "high",
+        },
+        {
+          q: "5. Why should requirements be written at different levels of detail?",
+          options: [
+            "Because natural language cannot express functional requirements",
+            "Because different types of readers use them in different ways",
+            "Because every contract legally requires two separate documents",
+            "Because non-functional requirements cannot appear in the same document as functional ones",
+          ],
+          correct: 1,
+          translation: "ليه لازم نكتب المتطلبات بمستويات تفصيل مختلفة؟",
+          explanation:
+            "السبب إن القراء مختلفين (مديرين، مستخدمين، مهندسين، مطورين) وكل نوع يستخدمها بطريقة. باقي الاختيارات ادعاءات مش مذكورة في المحاضرة.",
+          tags: ["User vs System", "Readers"],
+          ref: "Chapter 4 — Introduction (Figure 4.2)",
+          likely: "high",
+        },
+        {
+          q: "6. Which of the following is a definition of system stakeholders?",
+          options: [
+            "Only the end-users who interact directly with the system",
+            "Anyone who is affected by the system in some way and so has a legitimate interest in it",
+            "Only the customers who pay for the development of the system",
+            "Only the developers and managers of the contractor",
+          ],
+          correct: 1,
+          translation: "أي مما يلي تعريف الـ Stakeholders؟",
+          explanation:
+            "الـ Stakeholders هم أي حد يتأثر بالنظام وله اهتمام مشروع به (مستخدمين، مديرين، جهات تنظيمية...). الاختيارات الباقية بتضيّق التعريف.",
+          tags: ["Stakeholders"],
+          ref: "Chapter 4 — Introduction",
+          likely: "high",
+        },
+        {
+          q: "7. Which statement describes FUNCTIONAL requirements?",
+          options: [
+            "Constraints on timing, the development process and standards imposed on the system",
+            "Requirements that apply only to the system as a whole, such as reliability",
+            "Statements of services the system should provide, how it should react to particular inputs, and how it should behave in particular situations",
+            "Requirements derived only from laws and regulations",
+          ],
+          correct: 2,
+          translation:
+            "أي عبارة تصف المتطلبات الوظيفية (Functional requirements)؟",
+          explanation:
+            "الوظيفية = خدمات النظام وردود أفعاله وسلوكه. الاختيار الأول والثاني تعريف الـ Non-functional.",
+          tags: ["Functional requirements"],
+          ref: "Chapter 4 — Section 4.1",
+          likely: "high",
+        },
+        {
+          q: "8. Non-functional requirements often apply to:",
+          options: [
+            "Only the individual services offered to the users",
+            "Only the user interface of the system",
+            "Only the database and data representation layer",
+            "The system as a whole rather than to individual system features or services",
+          ],
+          correct: 3,
+          translation: "المتطلبات غير الوظيفية غالبًا بتنطبق على:",
+          explanation:
+            "الـ NFR بتخص النظام ككل (زي الأداء والاعتمادية). الاختيار الأول غلط لأنه وصف للمتطلبات الوظيفية.",
+          tags: ["Non-functional requirements"],
+          ref: "Chapter 4 — Section 4.1",
+          likely: "high",
+        },
+        {
+          q: "9. Why are non-functional requirements often more critical than individual functional requirements?",
+          options: [
+            "Failing to meet a non-functional requirement can make the whole system unusable, while users can usually work around a function that does not meet their needs",
+            "Because they are always cheaper to verify than functional requirements",
+            "Because they can always be implemented in a single component",
+            "Because customers find it easier to express them as measurable numbers",
+          ],
+          correct: 0,
+          translation: "ليه الـ NFR غالبًا أهم من المتطلبات الوظيفية الفردية؟",
+          explanation:
+            "لأن فشل NFR (زي الاعتمادية في طيارة) ممكن يخلي النظام كله غير صالح، بينما وظيفة واحدة ممكن نلف حواليها. الباقي عكس اللي في المحاضرة (التحقق منها غالبًا مكلف وصعب).",
+          tags: ["Non-functional requirements", "Importance"],
+          ref: "Chapter 4 — Section 4.1.2",
+          likely: "high",
+        },
+        {
+          q: "10. According to Figure 4.3, non-functional requirements are classified into:",
+          options: [
+            "Product, process and operational requirements",
+            "User, system and domain requirements",
+            "Product, organizational and external requirements",
+            "Functional, organizational and legislative requirements",
+          ],
+          correct: 2,
+          translation: "حسب الشكل 4.3، المتطلبات غير الوظيفية بتتقسم إلى:",
+          explanation:
+            "التصنيف الصحيح: Product و Organizational و External. الاختيار الثاني مخلوط بمفاهيم مش من الشكل.",
+          tags: ["Types of NFR", "Figure 4.3"],
+          ref: "Chapter 4 — Section 4.1.2 (Figure 4.3)",
+          likely: "high",
+        },
+        {
+          q: "11. The Mentcare requirement that the system must be available Mon–Fri, 08:30–17:30 with downtime not exceeding 5 seconds a day is an example of a:",
+          options: [
+            "Organizational requirement",
+            "External requirement",
+            "Functional requirement",
+            "Product requirement",
+          ],
+          correct: 3,
+          translation:
+            "متطلب إتاحة Mentcare (الإتاحة من 8:30 لـ 17:30 وDowntime لا يزيد عن 5 ثواني) هو مثال على:",
+          explanation:
+            "الإتاحة بتحدد سلوك النظام وقت التشغيل فهي Product requirement. ما بتقولش وظيفة معينة فمش Functional.",
+          tags: ["Product requirements", "Figure 4.4"],
+          ref: "Chapter 4 — Section 4.1.2 (Figure 4.4)",
+          likely: "high",
+        },
+        {
+          q: "12. Which type of non-functional requirement is derived from policies and procedures in the customer's and developer's organizations?",
+          options: [
+            "Organizational requirements",
+            "Product requirements",
+            "External requirements",
+            "Domain requirements",
+          ],
+          correct: 0,
+          translation:
+            "أي نوع من الـ NFR بيجي من سياسات وإجراءات منظمة العميل والمطوّر؟",
+          explanation:
+            "الـ Organizational requirements (زي معايير التطوير ولغة البرمجة وطريقة الدخول بالكارت). الـ External بتيجي من عوامل خارج المنظمة.",
+          tags: ["Organizational requirements"],
+          ref: "Chapter 4 — Section 4.1.2",
+          likely: "high",
+        },
+        {
+          q: "13. Regulatory, legislative and ethical requirements belong to which category of non-functional requirements?",
+          options: [
+            "Product requirements",
+            "Organizational requirements",
+            "Dependability requirements only",
+            "External requirements",
+          ],
+          correct: 3,
+          translation:
+            "المتطلبات التنظيمية (Regulatory) والتشريعية والأخلاقية تتبع أي فئة؟",
+          explanation:
+            "هذه كلها مصدرها خارج النظام وعملية تطويره، فهي External requirements.",
+          tags: ["External requirements"],
+          ref: "Chapter 4 — Section 4.1.2 (Figure 4.3)",
+          likely: "high",
+        },
+        {
+          q: "14. Whenever possible, non-functional requirements should be written:",
+          options: [
+            "Quantitatively, so that they can be objectively tested",
+            "As general goals such as ease of use",
+            "Only in natural language without any numbers",
+            "As part of the user interface design",
+          ],
+          correct: 0,
+          translation: "كلما أمكن، المتطلبات غير الوظيفية يجب أن تُكتب:",
+          explanation:
+            "تُكتب بشكل كمّي قابل للقياس والاختبار. الأهداف العامة (Goals) تترك مجال للتفسير والخلاف.",
+          tags: ["Testable NFR", "Goals vs requirements"],
+          ref: "Chapter 4 — Section 4.1.2",
+          likely: "high",
+        },
+        {
+          q: "15. Which metric is used to specify the RELIABILITY of a system?",
+          options: [
+            "Training time",
+            "Mean time to failure",
+            "Processed transactions per second",
+            "Percentage of target dependent statements",
+          ],
+          correct: 1,
+          translation: "أي مقياس يُستخدم لتحديد الاعتمادية (Reliability)؟",
+          explanation:
+            "Mean time to failure من مقاييس الاعتمادية. Training time للـ Ease of use، والـ transactions/second للـ Speed، والنسبة الأخيرة للـ Portability.",
+          tags: ["Metrics", "Figure 4.5"],
+          ref: "Chapter 4 — Section 4.1.2 (Figure 4.5)",
+          likely: "high",
+        },
+        {
+          q: "16. Which pair of metrics is used to specify EASE OF USE?",
+          options: [
+            "Screen refresh time and user/event response time",
+            "Megabytes and number of ROM chips",
+            "Time to restart after failure and probability of data corruption",
+            "Training time and number of help frames",
+          ],
+          correct: 3,
+          translation:
+            "أي زوج من المقاييس يُستخدم لتحديد سهولة الاستخدام (Ease of use)؟",
+          explanation:
+            "Ease of use = Training time + Number of help frames. الاختيار الأول مقاييس Speed، والثاني Size، والثالث Robustness.",
+          tags: ["Metrics", "Figure 4.5"],
+          ref: "Chapter 4 — Section 4.1.2 (Figure 4.5)",
+          likely: "high",
+        },
+        {
+          q: "17. What does CONSISTENCY mean for a functional requirements specification?",
+          options: [
+            "All services and information required by the user should be defined",
+            "Requirements should not be contradictory",
+            "Every requirement should be objectively testable",
+            "Every requirement should be written in natural language",
+          ],
+          correct: 1,
+          translation:
+            "ماذا تعني الـ Consistency في مواصفات المتطلبات الوظيفية؟",
+          explanation:
+            "Consistency = عدم تناقض المتطلبات. الاختيار الأول هو تعريف Completeness (الأقرب للتشويش).",
+          tags: ["Completeness", "Consistency"],
+          ref: "Chapter 4 — Section 4.1.1",
+          likely: "high",
+        },
+        {
+          q: "18. Which of the following is NOT one of the three key questions that a feasibility study should answer?",
+          options: [
+            "Does the system contribute to the overall objectives of the organization?",
+            "Can the system be implemented within schedule and budget using current technology?",
+            "Have all stakeholders agreed on every detailed requirement?",
+            "Can the system be integrated with other systems that are used?",
+          ],
+          correct: 2,
+          translation:
+            "أي مما يلي ليس من الأسئلة الثلاثة الأساسية في دراسة الجدوى (Feasibility study)؟",
+          explanation:
+            "الأسئلة الثلاثة: مساهمة النظام في أهداف المنظمة، إمكانية التنفيذ في الميزانية والجدول بتقنية حالية، والتكامل مع الأنظمة الأخرى. الاتفاق على كل المتطلبات مش منها.",
+          tags: ["Feasibility study"],
+          ref: "Chapter 4 — Introduction (Feasibility studies box)",
+          likely: "high",
+        },
+        {
+          q: "19. Which are the three key activities of the requirements engineering process?",
+          options: [
+            "Elicitation and analysis, specification, and validation",
+            "Elicitation, design, and implementation",
+            "Specification, testing, and maintenance",
+            "Elicitation, validation, and deployment",
+          ],
+          correct: 0,
+          translation: "ما الأنشطة الثلاثة الأساسية في عملية هندسة المتطلبات؟",
+          explanation:
+            "الأنشطة: Elicitation & analysis، Specification، Validation. باقي الاختيارات فيها مراحل من دورة تطوير البرمجيات مش من RE.",
+          tags: ["RE process"],
+          ref: "Chapter 4 — Section 4.2",
+          likely: "high",
+        },
+        {
+          q: "20. How is the requirements engineering process presented in Figure 4.6?",
+          options: [
+            "As a strictly sequential process where each activity finishes before the next starts",
+            "As a one-pass process that ends with system implementation",
+            "As a process where validation is done only once at the very end",
+            "As an iterative spiral in which elicitation, specification and validation are interleaved",
+          ],
+          correct: 3,
+          translation: "كيف تُعرض عملية هندسة المتطلبات في الشكل 4.6؟",
+          explanation:
+            "الشكل Spiral: الأنشطة متداخلة وتتكرر. الاختيارات الأخرى بتصور العملية خطية، والمحاضرة بتؤكد إنها iterative.",
+          tags: ["RE process", "Spiral model", "Figure 4.6"],
+          ref: "Chapter 4 — Section 4.2 (Figure 4.6)",
+          likely: "high",
+        },
+        {
+          q: "21. Which of the following is NOT a reason why eliciting requirements from stakeholders is difficult?",
+          options: [
+            "Stakeholders often do not know what they want except in general terms",
+            "Political factors may influence the requirements of the system",
+            "The economic and business environment changes during the analysis",
+            "Stakeholders always know exactly what they want and express it in precise technical terms",
+          ],
+          correct: 3,
+          translation:
+            "أي مما يلي ليس من أسباب صعوبة استنباط المتطلبات (Elicitation)؟",
+          explanation:
+            "الصعوبة سببها إن المعنيين غالبًا مش عارفين بالظبط عايزين إيه. الاختيار الصحيح عكس ده تمامًا، فهو ليس سببًا.",
+          tags: ["Elicitation", "Difficulties"],
+          ref: "Chapter 4 — Section 4.3",
+          likely: "high",
+        },
+        {
+          q: "22. What is the correct order of the activities in the requirements elicitation and analysis process (Figure 4.7)?",
+          options: [
+            "Classification and organization → discovery and understanding → documentation → prioritization and negotiation",
+            "Discovery and understanding → prioritization and negotiation → classification and organization → documentation",
+            "Discovery and understanding → classification and organization → prioritization and negotiation → documentation",
+            "Documentation → discovery and understanding → classification and organization → prioritization and negotiation",
+          ],
+          correct: 2,
+          translation:
+            "ما الترتيب الصحيح لأنشطة الـ Elicitation and Analysis (الشكل 4.7)؟",
+          explanation:
+            "الترتيب: Discovery → Classification → Prioritization & negotiation → Documentation. الاختيار الثاني بيقدّم الـ prioritization قبل التصنيف وهو الأقرب للغلط.",
+          tags: ["Elicitation and analysis", "Figure 4.7"],
+          ref: "Chapter 4 — Section 4.3 (Figure 4.7)",
+          likely: "high",
+        },
+        {
+          q: "23. Which activity of the elicitation and analysis process is concerned with finding and resolving conflicts between stakeholders' requirements?",
+          options: [
+            "Requirements classification and organization",
+            "Requirements prioritization and negotiation",
+            "Requirements discovery and understanding",
+            "Requirements documentation",
+          ],
+          correct: 1,
+          translation:
+            "أي نشاط مسؤول عن اكتشاف وحل التعارضات بين متطلبات أصحاب المصلحة؟",
+          explanation:
+            "الـ Prioritization and negotiation هو اللي بيحل التعارض عن طريق التفاوض. الـ Classification بيجمّع المتطلبات المرتبطة فقط.",
+          tags: ["Prioritization and negotiation"],
+          ref: "Chapter 4 — Section 4.3",
+          likely: "high",
+        },
+        {
+          q: "24. What is a VIEWPOINT in requirements analysis?",
+          options: [
+            "A working prototype shown to the stakeholders for evaluation",
+            "A way of collecting and organizing a set of requirements from a group of stakeholders who have something in common",
+            "A diagram of the system architecture showing the subsystems",
+            "A meeting where stakeholders negotiate requirement conflicts",
+          ],
+          correct: 1,
+          translation: "ما هو الـ Viewpoint في تحليل المتطلبات؟",
+          explanation:
+            "الـ Viewpoint = تجميع متطلبات مجموعة stakeholders بينهم قاسم مشترك. الاجتماع التفاوضي نشاط مختلف.",
+          tags: ["Viewpoints"],
+          ref: "Chapter 4 — Section 4.3 (Viewpoints box)",
+          likely: "high",
+        },
+        {
+          q: "25. What are the two fundamental approaches to requirements elicitation?",
+          options: [
+            "Prototyping and testing",
+            "Reviews and feasibility studies",
+            "Interviewing and observation (ethnography)",
+            "Scenarios and user stories",
+          ],
+          correct: 2,
+          translation: "ما الأسلوبان الأساسيان لاستنباط المتطلبات؟",
+          explanation:
+            "الأساسيان: المقابلات (Interviewing) والملاحظة (Ethnography). الـ Stories/Scenarios أدوات لالتقاط المعلومات وليست الأسلوبين الأساسيين.",
+          tags: ["Elicitation techniques"],
+          ref: "Chapter 4 — Section 4.3.1",
+          likely: "high",
+        },
+        {
+          q: "26. What is a CLOSED interview?",
+          options: [
+            "An interview with no predefined agenda where a range of issues is explored",
+            "An interview where the analyst watches people doing their job",
+            "An interview held only with external stakeholders",
+            "An interview where the stakeholder answers a predefined set of questions",
+          ],
+          correct: 3,
+          translation: "ما هي المقابلة المغلقة (Closed interview)؟",
+          explanation:
+            "المغلقة = أسئلة محددة مسبقًا. الاختيار الأول وصف للمقابلة المفتوحة (Open).",
+          tags: ["Interviewing", "Closed vs Open"],
+          ref: "Chapter 4 — Section 4.3.1.1",
+          likely: "high",
+        },
+        {
+          q: "27. Interviews are NOT an effective technique for eliciting knowledge about:",
+          options: [
+            "Organizational requirements and constraints",
+            "The overall understanding of what stakeholders do",
+            "How stakeholders might interact with the new system",
+            "The difficulties stakeholders face with current systems",
+          ],
+          correct: 0,
+          translation: "المقابلات ليست فعّالة في استنباط المعرفة عن:",
+          explanation:
+            "لأن في علاقات قوة خفية والناس مترددة تتكلم عن السياسة والتنظيم الحقيقي. الباقي هي نقاط قوة المقابلات.",
+          tags: ["Interviewing", "Limitations"],
+          ref: "Chapter 4 — Section 4.3.1.1",
+          likely: "high",
+        },
+        {
+          q: "28. Which of the following does the chapter recommend to get an interview discussion going?",
+          options: [
+            "A springboard question, a requirements proposal, or working together on a prototype",
+            'Asking the stakeholder to simply "tell me what you want"',
+            "Handing the stakeholder the complete formal specification",
+            "Running a completely open-ended discussion with no questions",
+          ],
+          correct: 0,
+          translation: "ما الذي توصي به المحاضرة لبدء النقاش في المقابلة؟",
+          explanation:
+            'نستخدم springboard question أو requirements proposal أو prototype. قول "قولّي عايز إيه" مش بيدّي معلومات مفيدة.',
+          tags: ["Interviewing", "Effective interviewer"],
+          ref: "Chapter 4 — Section 4.3.1.1",
+          likely: "high",
+        },
+        {
+          q: "29. What is ethnography in requirements elicitation?",
+          options: [
+            "A structured interview with a predefined set of questions",
+            "An observational technique where the analyst immerses himself or herself in the working environment where the system will be used",
+            "A technique for grouping requirements into coherent clusters",
+            "A technique for writing high-level narrative descriptions of system use",
+          ],
+          correct: 1,
+          translation: "ما هي الـ Ethnography في استنباط المتطلبات؟",
+          explanation:
+            "الـ Ethnography ملاحظة المحلل لبيئة العمل الفعلية. الاختيار الأول مقابلة مغلقة، والأخير عن Stories.",
+          tags: ["Ethnography"],
+          ref: "Chapter 4 — Section 4.3.1.2",
+          likely: "high",
+        },
+        {
+          q: "30. Ethnography is particularly effective for discovering which two types of requirements?",
+          options: [
+            "Requirements derived from formal business process definitions and from legislation",
+            "Organizational requirements and domain requirements",
+            "Requirements for innovative new products and for regulatory approval",
+            "Requirements derived from how people actually work, and from cooperation and awareness of other people's activities",
+          ],
+          correct: 3,
+          translation:
+            "الـ Ethnography فعّالة بشكل خاص في اكتشاف أي نوعين من المتطلبات؟",
+          explanation:
+            "تكتشف طريقة العمل الفعلية (مش الرسمية) والتعاون والوعي بأنشطة الآخرين. الاختيارات الأخرى هي أشياء الـ Ethnography ضعيفة فيها.",
+          tags: ["Ethnography"],
+          ref: "Chapter 4 — Section 4.3.1.2",
+          likely: "high",
+        },
+        {
+          q: "31. What is the main difference between STORIES and SCENARIOS?",
+          options: [
+            "Stories are structured with inputs and outputs, whereas scenarios are narrative high-level text",
+            "Stories describe only errors, whereas scenarios describe only the normal flow",
+            "Stories are narrative high-level descriptions of system use, whereas scenarios are structured descriptions with specific information such as inputs and outputs",
+            "Stories are written by developers, whereas scenarios are written by users",
+          ],
+          correct: 2,
+          translation: "ما الفرق الرئيسي بين الـ Stories والـ Scenarios؟",
+          explanation:
+            "Stories سردية وعالية المستوى (الصورة الكبيرة)، وScenarios مهيكلة وأكثر تفصيلًا. الاختيار الأول معكوس.",
+          tags: ["Stories", "Scenarios"],
+          ref: "Chapter 4 — Section 4.3.2",
+          likely: "high",
+        },
+        {
+          q: "32. Which of the following is NOT a part of a general scenario?",
+          options: [
+            "An estimate of the cost of implementing the scenario",
+            "A description of the normal flow of events",
+            "A description of what can go wrong and how problems are handled",
+            "A description of the system state when the scenario ends",
+          ],
+          correct: 0,
+          translation: "أي مما يلي ليس جزءًا من الـ Scenario العام؟",
+          explanation:
+            "عناصر الـ Scenario: الافتراض الأولي، التدفق الطبيعي، ما قد يسوء، الأنشطة المتزامنة، حالة النظام عند النهاية. تقدير التكلفة ليس منها.",
+          tags: ["Scenarios"],
+          ref: "Chapter 4 — Section 4.3.2",
+          likely: "high",
+        },
+        {
+          q: "33. How should USER requirements be written?",
+          options: [
+            "In natural language with simple tables, forms and intuitive diagrams, without software jargon or formal notations",
+            "Using formal mathematical notations to avoid ambiguity",
+            "Using software jargon and structured notations that developers understand",
+            "Using system architecture and design details",
+          ],
+          correct: 0,
+          translation: "كيف تُكتب متطلبات المستخدم؟",
+          explanation:
+            "تُكتب بلغة طبيعية وجداول ورسومات بسيطة لأن قراءها غير تقنيين. الصيغ الرسمية والجارجون خاصة بمتطلبات النظام.",
+          tags: ["Requirements specification", "User requirements"],
+          ref: "Chapter 4 — Section 4.4",
+          likely: "high",
+        },
+        {
+          q: "34. If an organization decides that an off-the-shelf software product can meet its needs, the focus should be on developing:",
+          options: [
+            "A detailed functional specification",
+            "Domain requirements",
+            "Product requirements",
+            "Information requirements",
+          ],
+          correct: 3,
+          translation:
+            "لو قررت المنظمة أن منتجًا جاهزًا يلبي احتياجاتها، يجب التركيز على:",
+          explanation:
+            "في هذه الحالة التفصيل الوظيفي بلا فائدة، والأفضل تحديد Information requirements (المعلومات اللازمة وطريقة تقديمها).",
+          tags: ["Information requirements"],
+          ref: "Chapter 4 — Section 4.1.1",
+          likely: "medium",
+        },
+        {
+          q: "35. Domain requirements are derived from:",
+          options: [
+            "The policies of the developing organization only",
+            "The interviews conducted with end-users only",
+            "The application domain of the system rather than from the specific needs of system users",
+            "The budget constraints of the customer",
+          ],
+          correct: 2,
+          translation: "متطلبات الـ Domain تُشتق من:",
+          explanation:
+            "مصدرها مجال تطبيق النظام نفسه وليس احتياجات المستخدمين المحددة. المشكلة أن المهندسين قد لا يفهمون الـ domain.",
+          tags: ["Domain requirements"],
+          ref: "Chapter 4 — Section 4.1.1 (Domain requirements box)",
+          likely: "medium",
+        },
+        {
+          q: "36. How does combining ethnography with prototyping help (Figure 4.8)?",
+          options: [
+            "It removes the need for any stakeholder meetings",
+            "It guarantees that all organizational requirements are discovered",
+            "Ethnography informs the prototype so fewer refinement cycles are needed, and prototyping focuses the ethnography on specific questions",
+            "It replaces the need for requirements validation",
+          ],
+          correct: 2,
+          translation:
+            "كيف يفيد الجمع بين الـ Ethnography والـ Prototyping (الشكل 4.8)؟",
+          explanation:
+            "الـ Ethnography تقلل دورات تحسين الـ prototype، والـ prototype يوجّه الـ ethnography لأسئلة محددة. باقي الاختيارات مبالغات.",
+          tags: ["Ethnography", "Prototyping", "Figure 4.8"],
+          ref: "Chapter 4 — Section 4.3.1.2 (Figure 4.8)",
+          likely: "medium",
+        },
+        {
+          q: "37. What does the Nokia versus Apple example show about ethnography?",
+          options: [
+            "Ethnography helps in understanding existing systems but does not always help with innovation",
+            "Ethnography is the best technique for discovering innovative product ideas",
+            "Ethnography should never be used for new product development",
+            "Ethnography is effective for discovering broad organizational requirements",
+          ],
+          correct: 0,
+          translation: "ماذا يوضح مثال Nokia مقابل Apple عن الـ Ethnography؟",
+          explanation:
+            "تساعد في فهم النظم الحالية لكن لا تضمن الابتكار (Apple تجاهلت الاستخدام الحالي وابتكرت). الاختيار الأول عكس المثال.",
+          tags: ["Ethnography", "Innovation"],
+          ref: "Chapter 4 — Section 4.3.1.2",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. Define requirements engineering, and distinguish between user requirements and system requirements. Use the Mentcare monthly report example.",
+          translation:
+            "عرّف هندسة المتطلبات، وفرّق بين متطلبات المستخدم ومتطلبات النظام مستخدمًا مثال Mentcare.",
+          answer:
+            "Requirements engineering (RE) is the process of finding out, analyzing, documenting and checking the services that a system should provide and the constraints on its operation.\n" +
+            "User requirements: statements, in natural language plus diagrams, of the services the system is expected to provide to users and the constraints under which it must operate. They are high-level and general.\n" +
+            "System requirements: more detailed descriptions of the system's functions, services and operational constraints. They define exactly what is to be implemented (sometimes called a functional specification) and may be part of the contract.\n" +
+            'Example: the user requirement "The Mentcare system shall generate monthly management reports showing the cost of drugs prescribed by each clinic" is expanded into several system requirements (1.1 to 1.5), e.g. generate the report on the last working day after 17:30, one report per clinic, separate reports per dose unit, and restricted access.\n' +
+            "They are written differently because different readers use them differently (managers and end-users vs. architects and developers).",
+          tags: ["RE definition", "User vs System"],
+          ref: "Chapter 4 — Introduction (Figures 4.1, 4.2)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Compare functional and non-functional requirements. Give an example of each from the Mentcare system.",
+          translation:
+            "قارن بين المتطلبات الوظيفية وغير الوظيفية مع مثال لكل منهما من نظام Mentcare.",
+          answer:
+            'Functional requirements: statements of services the system should provide, how it should react to particular inputs, and how it should behave in particular situations (sometimes also what it should not do). Example: "A user shall be able to search the appointments lists for all clinics."\n' +
+            "Non-functional requirements: constraints on the services or functions offered by the system, such as timing constraints, constraints on the development process, and constraints imposed by standards. They often apply to the system as a whole. Example: the system shall be available Mon-Fri 08:30-17:30 with downtime not exceeding 5 seconds a day.\n" +
+            "Non-functional requirements are often more critical: failing to meet one can make the whole system unusable.\n" +
+            "The distinction is not clear-cut: a security requirement (limit access to authorized users) can generate functional requirements such as user authentication facilities.",
+          tags: ["Functional requirements", "Non-functional requirements"],
+          ref: "Chapter 4 — Section 4.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Draw and label the classification of non-functional requirements (Figure 4.3), and give an example of each type.",
+          translation:
+            "ارسم واكتب أسماء تصنيف المتطلبات غير الوظيفية (الشكل 4.3) مع مثال لكل نوع.",
+          answer:
+            "Non-functional requirements are divided into three branches:\n" +
+            "1) Product requirements (performance, space, usability, efficiency, dependability, security). They specify or constrain runtime behavior. Example: availability and allowed downtime.\n" +
+            "2) Organizational requirements (operational, development, environmental). They come from policies and procedures of the customer's and developer's organizations. Example: users identify themselves using their health authority identity card.\n" +
+            "3) External requirements (regulatory, ethical, legislative; safety/security and accounting sub-types). They come from factors external to the system and its development process. Example: implementing the patient privacy provisions of a national privacy standard.",
+          tags: ["Types of NFR", "Figure 4.3"],
+          ref: "Chapter 4 — Section 4.1.2 (Figures 4.3, 4.4)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '4. Explain why non-functional requirements should be written quantitatively. Rewrite the goal "The system should be easy to use by medical staff" as a testable requirement and list metrics for non-functional properties.',
+          translation:
+            'اشرح لماذا يجب كتابة المتطلبات غير الوظيفية بشكل كمّي. أعد كتابة الهدف "النظام سهل الاستخدام" كمتطلب قابل للاختبار واذكر مقاييس الخصائص غير الوظيفية.',
+          answer:
+            "Stakeholders often propose goals (ease of use, fast response, recovery from failure). Goals leave scope for interpretation and dispute after delivery, and cannot be objectively verified.\n" +
+            "Quantitative requirements can be objectively tested during system testing (e.g. by instrumenting the software to count errors).\n" +
+            'Testable version: "Medical staff shall be able to use all the system functions after two hours of training. After this training, the average number of errors made by experienced users shall not exceed two per hour of system use."\n' +
+            "Metrics (Figure 4.5): Speed = transactions/second, response time, screen refresh time; Size = megabytes, number of ROM chips; Ease of use = training time, number of help frames; Reliability = mean time to failure, probability of unavailability, rate of failure occurrence, availability; Robustness = time to restart after failure, percentage of events causing failure, probability of data corruption on failure; Portability = percentage of target dependent statements, number of target systems.\n" +
+            "Difficulties: customers struggle to translate goals into measurable requirements, some goals (e.g. maintainability) have no simple metrics, and verification can be costly.",
+          tags: ["Testable NFR", "Metrics", "Figure 4.5"],
+          ref: "Chapter 4 — Section 4.1.2 (Figure 4.5)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Explain the stages of the requirements elicitation and analysis process (Figure 4.7).",
+          translation: "اشرح مراحل عملية استنباط وتحليل المتطلبات (الشكل 4.7).",
+          answer:
+            "It is an iterative process with continual feedback between activities; the cycle starts with discovery and ends with documentation, and understanding improves with each round.\n" +
+            "1) Requirements discovery and understanding: interacting with stakeholders to discover their requirements, including domain requirements and documentation.\n" +
+            "2) Requirements classification and organization: grouping related requirements into coherent clusters.\n" +
+            "3) Requirements prioritization and negotiation: prioritizing requirements and resolving conflicts between stakeholders through negotiation and compromise.\n" +
+            "4) Requirements documentation: documenting the requirements (draft document, whiteboards, wikis or shared documents) as input to the next round of the spiral, using simple language and diagrams.",
+          tags: ["Elicitation and analysis", "Figure 4.7"],
+          ref: "Chapter 4 — Section 4.3 (Figure 4.7)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. List and explain the reasons why eliciting and understanding requirements from stakeholders is difficult.",
+          translation:
+            "اذكر واشرح أسباب صعوبة استنباط وفهم المتطلبات من أصحاب المصلحة.",
+          answer:
+            "1) Stakeholders often do not know what they want except in general terms, find it hard to articulate it, and may make unrealistic demands.\n" +
+            "2) Stakeholders express requirements in their own terms with implicit knowledge of their work, which engineers without domain experience may not understand.\n" +
+            "3) Different stakeholders with diverse requirements express them differently; engineers must find all sources and discover commonalities and conflicts.\n" +
+            "4) Political factors may influence requirements, e.g. managers demanding requirements that increase their influence.\n" +
+            "5) The economic and business environment is dynamic; requirements' importance changes and new stakeholders may appear.",
+          tags: ["Elicitation", "Difficulties"],
+          ref: "Chapter 4 — Section 4.3",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Compare interviewing and ethnography as requirements elicitation techniques, mentioning the advantages and disadvantages of each.",
+          translation:
+            "قارن بين المقابلات والـ Ethnography كأساليب لاستنباط المتطلبات مع ذكر المميزات والعيوب.",
+          answer:
+            "Interviewing: talking to people about what they do. Types: closed (predefined questions) and open (no predefined agenda); in practice a mixture.\n" +
+            "Advantages of interviews: good for an overall understanding of what stakeholders do, how they might use the new system and their difficulties with current systems; people like talking about their work.\n" +
+            "Disadvantages of interviews: stakeholders rarely give specific detailed requirements without a prototype; domain jargon and tacit knowledge are hard to elicit; not effective for organizational requirements because of power relationships and reluctance to discuss politics; may miss essential information.\n" +
+            "Ethnography: an analyst immerses himself or herself in the working environment and observes day-to-day work.\n" +
+            "Advantages of ethnography: discovers implicit requirements reflecting how people actually work (not the formal process) and requirements from cooperation and awareness of others' activities; reveals critical process details missed by other techniques.\n" +
+            "Disadvantages of ethnography: focused on the end-user, so not effective for broader organizational or domain requirements or for innovation.\n" +
+            "Conclusion: use a mix of both, with other techniques.",
+          tags: ["Interviewing", "Ethnography", "Comparison"],
+          ref: "Chapter 4 — Section 4.3.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. What is the difference between stories and scenarios? List what a scenario may include.",
+          translation:
+            "ما الفرق بين الـ Stories والـ Scenarios؟ واذكر ما قد يتضمنه الـ Scenario.",
+          answer:
+            "Stories and scenarios are essentially the same: a description of how the system can be used for a particular task. The difference is in structure and level of detail.\n" +
+            'Stories: narrative text, high-level description of system use; good for setting out the "big picture" and reaching a wider community (e.g. the iLearn photo-sharing story).\n' +
+            "Scenarios: structured descriptions of example user interaction sessions with specific information such as inputs and outputs; more detailed and used to propose requirements.\n" +
+            "A scenario may include: (1) what the system and users expect when it starts, (2) the normal flow of events, (3) what can go wrong and how it is handled, (4) other activities going on at the same time, (5) the system state when the scenario ends.",
+          tags: ["Stories", "Scenarios"],
+          ref: "Chapter 4 — Section 4.3.2 (Figures 4.9, 4.10)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. What is a feasibility study? State the three key questions it should answer.",
+          translation:
+            "ما هي دراسة الجدوى؟ اذكر الأسئلة الثلاثة الرئيسية التي يجب أن تجيب عنها.",
+          answer:
+            "A feasibility study is a short, focused study early in the RE process that assesses whether the system is technically and financially feasible, helping management decide whether to go ahead with procurement or development.\n" +
+            "Key questions: (1) Does the system contribute to the overall objectives of the organization? (2) Can the system be implemented within schedule and budget using current technology? (3) Can the system be integrated with other systems that are used?\n" +
+            "If the answer to any of these is no, you should probably not go ahead with the project.",
+          tags: ["Feasibility study"],
+          ref: "Chapter 4 — Introduction (Feasibility studies box)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the spiral view of the requirements engineering process (Figure 4.6).",
+          translation:
+            "اشرح المنظور الحلزوني (Spiral) لعملية هندسة المتطلبات (الشكل 4.6).",
+          answer:
+            "RE involves three key activities: elicitation and analysis, specification, and validation. In practice they are interleaved and organized as an iterative spiral; the output is a system requirements document.\n" +
+            "Effort on each activity depends on the stage of the process, the type of system and the available budget.\n" +
+            "Early iterations focus on high-level business requirements and user requirements; outer rings focus on more detailed system requirements and non-functional requirements.\n" +
+            "The number of iterations can vary, so the spiral can be exited after some or all user requirements are elicited. Agile development can be used instead of prototyping so requirements and implementation are developed together.\n" +
+            "Requirements change in virtually all systems, so changes must be managed (requirements management).",
+          tags: ["RE process", "Spiral model", "Figure 4.6"],
+          ref: "Chapter 4 — Section 4.2 (Figure 4.6)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "11. Who are the system stakeholders? Give examples of Mentcare stakeholders.",
+          translation:
+            "من هم الـ Stakeholders؟ اذكر أمثلة من أصحاب المصلحة في نظام Mentcare.",
+          answer:
+            "System stakeholders include anyone affected by the system in some way and so anyone with a legitimate interest in it: end-users, managers, and external stakeholders such as regulators who certify acceptability.\n" +
+            "Mentcare examples: patients and their relatives; doctors; nurses; medical receptionists; IT staff; a medical ethics manager; health care managers; medical records staff.",
+          tags: ["Stakeholders"],
+          ref: "Chapter 4 — Introduction",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "12. Explain why it is only possible to achieve completeness and consistency for very small systems.",
+          translation:
+            "اشرح لماذا يمكن تحقيق الـ Completeness والـ Consistency فقط للأنظمة الصغيرة جدًا.",
+          answer:
+            "Completeness means all services and information required by the user are defined; consistency means requirements are not contradictory.\n" +
+            "Reason 1: it is easy to make mistakes and omissions when writing specifications for large, complex systems.\n" +
+            "Reason 2: large systems have many stakeholders with different backgrounds and expectations, whose needs are often inconsistent. These inconsistencies may only be discovered after deeper analysis or during development.\n" +
+            "Imprecision can also lead to disputes: developers may interpret an ambiguous requirement in the way that is easiest to implement (e.g. the Mentcare search requirement).",
+          tags: ["Completeness", "Consistency"],
+          ref: "Chapter 4 — Section 4.1.1",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "13. Explain why non-functional requirements are difficult to implement and trace, and how they relate to functional requirements.",
+          translation:
+            "اشرح لماذا يصعب تنفيذ وتتبع المتطلبات غير الوظيفية وكيف ترتبط بالمتطلبات الوظيفية.",
+          answer:
+            "Their implementation may be spread throughout the system, for two reasons:\n" +
+            "1) They may affect the overall architecture rather than individual components (e.g. organizing the system to minimize communication between components to meet performance requirements).\n" +
+            "2) A single non-functional requirement, such as security, may generate several related functional requirements (new services) and may also constrain existing requirements, e.g. by limiting access to information.\n" +
+            "Non-functional requirements also conflict and interact with others (e.g. a card-reader identification requirement conflicts with mobile access from tablets or smartphones).\n" +
+            "Ideally, highlight requirements related to emergent properties such as performance or reliability, e.g. in a separate section.",
+          tags: ["Non-functional requirements", "Emergent properties"],
+          ref: "Chapter 4 — Section 4.1.2",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "14. Describe how ethnography can be combined with prototyping, and discuss its limitation for innovation (Nokia vs Apple).",
+          translation:
+            "صف كيف يمكن دمج الـ Ethnography مع الـ Prototyping، وناقش حدودها في الابتكار (Nokia مقابل Apple).",
+          answer:
+            "Figure 4.8: ethnographic analysis informs generic system development and prototyping, so fewer prototype refinement cycles are needed. Prototype evaluation identifies problems and questions that are discussed in debriefing meetings and then guide focused ethnography in the next phase.\n" +
+            "Limitation: ethnography helps to understand existing systems but not always to innovate. Nokia is said to have used ethnography to see how people used phones, whereas Apple ignored current use and revolutionized the industry with the iPhone.\n" +
+            "Because of its end-user focus it is not effective for broader organizational or domain requirements, so use it with other techniques.",
+          tags: ["Ethnography", "Prototyping", "Figure 4.8"],
+          ref: "Chapter 4 — Section 4.3.1.2 (Figure 4.8)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "15. What makes an effective interviewer? Mention the difficulties of eliciting domain knowledge in interviews.",
+          translation:
+            "ما الذي يجعل المحاور فعّالًا؟ اذكر صعوبات استنباط معرفة المجال (Domain knowledge) في المقابلات.",
+          answer:
+            'An effective interviewer is open-minded, avoids preconceived ideas, and is willing to change his or her mind if surprising requirements appear; and prompts the interviewee with a springboard question, a requirements proposal, or a prototype instead of "tell me what you want".\n' +
+            "Difficulties with domain knowledge: (1) specialists use jargon in a precise and subtle way that engineers may misunderstand; (2) some knowledge is so familiar that stakeholders find it hard to explain or think it is not worth mentioning (e.g. the librarian cataloguing every acquisition).\n" +
+            "Interviewing alone may miss essential information, so combine it with other techniques.",
+          tags: ["Interviewing", "Domain knowledge"],
+          ref: "Chapter 4 — Section 4.3.1.1",
+          likely: "medium",
+        },
+      ],
+    },
   ],
 });
