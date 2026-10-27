@@ -3753,7 +3753,236 @@ subjects.push({
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-02-Questions.pdf",
       // المحاضرة الثانية: طبقة التطبيقات (Application Layer) - كتاب شبكات الحاسوب: نهج من الأعلى إلى الأسفل (Kurose & Ross)
 
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمواضيع المحاضرة: بروتوكول HTTP، والفرق بين TCP و UDP، وطبقة التطبيق في شبكات الحاسوب.",
+          links: [
+            {
+              t: "شرح بروتوكول HTTP بالتفصيل",
+              d: "شرح كامل لبروتوكول HTTP بكل مكوناته: الـ request، الـ response، الـ methods (GET/POST/...)، والـ status codes. مناسب لفهم قسم 2.2.3 من المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=pi4gaFDBtMc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شبكات الحاسوب | الدرس 28 (شرح بالعربي)",
+              d: "درس شامل لطبقة التطبيق يشمل HTTP و FTP و SMTP و POP3 و IMAP و DNS. يغطي القسم 2.1.6 من المحاضرة (الـ network applications).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=x8pLNfJAKwc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "الفرق بين بروتوكول TCP و UDP (شرح مبسط بالعربي)",
+              d: "شرح مبسط للفرق بين TCP و UDP: الـ connection-oriented مقابل connectionless، الـ reliable مقابل unreliable، والـ congestion control. يغطي القسم 2.1.4 (TCP Services و UDP Services).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=qi6yGq0EOJc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Computer Networks — شبكات الحاسوب (قائمة تشغيل)",
+              d: "قائمة تشغيل أكاديمية كاملة لمقرر شبكات الحاسوب، فيها دروس على Transport layer (TCP, UDP) و Application layer. الدرس رقم 9 في القائمة بيشرح Transport layer - part 1.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpHpCzb7rhlV1MbRgGwTIoK1kHW3iWdmh",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
 
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات إنجليزية مرئية (Animated) بتشرح TCP/UDP و HTTP بأسلوب بصري مفهوم، وقنوات تعليمية معروفة.",
+          links: [
+            {
+              t: "PowerCert Animated Videos — Networking (English Version)",
+              d: "قائمة تشغيل فيديوهات مرئية (Animated) بتشرح TCP vs UDP ومواضيع شبكات مكملة للمحاضرة. الأسلوب البصري بيساعد على تثبيت الفروق بين TCP و UDP في الذاكرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpXfHEl2fzl72d5ne2gsxSyFNagcHyCML",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Hussein Nasser — HTTP/2 + HTTP Crash Course",
+              d: "قائمة تشغيل لمهندس باك-إند معروف، فيها شرح HTTP 1.0 / 1.1 / 2 بعمق، ومقارنة بين النسخ. مفهوم لفهم HTTP/2 المذكور في نهاية القسم 2.2.1.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLQnljOFTspQWbBegaU790WhH7gNKcMAl-",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Khan Academy — Internet 101 (Computer Science)",
+              d: "قائمة تشغيل من Khan Academy بتشرح أساسيات الإنترنت، بما فيها TCP/IP، DNS، HTTP، والـ packets والـ routers. مفهوم كمقدمة للمحاضرة وربطها بـ Chapter 1.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLSQl0a2vh4HD8wtmKZh0nKOsOvP1KYaNO",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر مكتوبة رسمية: GeeksforGeeks، Cloudflare Learning، MDN Web Docs، Wikipedia — بشرح TCP/UDP و HTTP و RTT و status codes.",
+          links: [
+            {
+              t: "GeeksforGeeks — Computer Networks",
+              d: "مقالات تعليمية بتغطي بالظبط مفاهيم المحاضرة: الفرق بين TCP و UDP، الاتصالات الـ persistent و non-persistent في HTTP، ودليل شامل على HTTP.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 Differences between TCP and UDP",
+                  url: "https://www.geeksforgeeks.org/computer-networks/differences-between-tcp-and-udp",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "📖 HTTP Non-Persistent & Persistent Connection",
+                  url: "https://www.geeksforgeeks.org/computer-networks/http-non-persistent-persistent-connection",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "📖 HTTP Tutorial (overview)",
+                  url: "https://www.geeksforgeeks.org/computer-networks/http-tutorial",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Cloudflare Learning Center",
+              d: "مصدر رسمي من Cloudflare بشرح مبسط ودقيق: تعريف HTTP كـ application-layer protocol، وتعريف الـ Round-Trip Time (RTT) والعوامل المؤثرة فيه — مهم لمسائل القسم 2.2.2.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 What is HTTP?",
+                  url: "https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 What is Round-Trip Time (RTT)?",
+                  url: "https://www.cloudflare.com/learning/cdn/glossary/round-trip-time-rtt",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "MDN Web Docs (Mozilla) — HTTP",
+              d: "المرجع الرسمي لمطوري الويب: شرح بنية رسائل HTTP (request و response) وأكواد الـ status بالتفصيل. مطابق للقسم 2.2.3 من المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 HTTP Messages (Request & Response)",
+                  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 HTTP Response Status Codes",
+                  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Wikipedia — List of HTTP Status Codes",
+              d: "مقال موسوعي بيحث كل أكواد HTTP status (1xx, 2xx, 3xx, 4xx, 5xx) بالتفصيل. يكمل الأكواد اللي اتذكرت في المحاضرة (200, 301, 400, 404, 505) بأكواد إضافية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لمراقبة وبناء الشبكات، تستخدم في المشاريع والـ labs لمراقبة باكتات HTTP/TCP/UDP فعلًا.",
+          links: [
+            {
+              t: "Wireshark — Network Protocol Analyzer",
+              d: "أداة مفتوحة المصدر لالتقاط وتحليل باكتات الشبكة. ممكن تستخدمها عشان تشوف باكتات TCP handshake و HTTP request/response فعلًا على جهازك. أداة معتمدة في معظم مقررات الشبكات.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Cisco Packet Tracer",
+              d: "أداة محاكاة رسمية من Cisco لمحاكاة الشبكات بما فيها TCP/UDP traffic. مجانية للطلاب ومشهوره في الـ labs. بتنزل بعد التسجيل في Cisco Networking Academy.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ صفحة التحميل الرسمية",
+                  url: "https://www.netacad.com/cisco-packet-tracer",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
       questions: [
         {
           q: "1. The Internet (and TCP/IP networks in general) makes how many transport protocols available to applications?",
