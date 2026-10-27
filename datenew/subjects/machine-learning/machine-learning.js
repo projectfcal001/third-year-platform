@@ -1517,7 +1517,7 @@ subjects.push({
       ],
     },
     {
-      id: "ml-lecture-03",
+      id: "machine-learning-lecture-03",
       t: "المحاضرة 3: الانحدار الخطي (Linear Regression)",
       d: "إعداد التعلم المُشرَف، الانحدار الخطي البسيط وطريقة المربعات الصغرى، النموذج متعدد الخصائص، دالة الخسارة والتكلفة، والـ vectorization ومصفوفة التصميم.",
       pdf: "datenew/subjects/machine-learning/lectures/Lec 3/lec03-2.pptx.pdf",
@@ -2322,7 +2322,7 @@ subjects.push({
     // المحاضرة: Lecture 4 - Machine Learning (Ensemble Methods, Bias/Variance, Bagging, Random Forests, Optimization, Feature Mapping)
 
     {
-      id: "ml-lecture-04",
+      id: "machine-learning-lecture-04",
       t: "المحاضرة 4 - Ensemble Methods & Optimization",
       d: "أساليب التجميع (Ensembling)، مفهومي Bias و Variance، تقنية Bagging، الغابات العشوائية Random Forests، الانحدار التدريجي Gradient Descent، وتعيين الميزات Feature Mapping.",
       pdf: "datenew/subjects/machine-learning/lectures/Lec 4/Lec 4.pdf",

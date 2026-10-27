@@ -458,62 +458,197 @@ function notifVisible(n){
   if(!n.depts || !n.depts.length) return true;       // عام
   return !!CUR_DEPT && n.depts.indexOf(CUR_DEPT) !== -1;
 }
-function visibleNotifications(){ return notifications.filter(notifVisible); }
+function visibleNotifications() { return notifications.filter(notifVisible); }
+// تعديل الاجابة 1000
 var answerEditsLog = [
-  {
-    id: "edit-002",
-    context: "المحاضرة الثاني ",
-    questionNum: 1,
-    questionText: "",
-    oldAnswer: "الإجابة القديمة",
-    newAnswer: "الإجابة الصحيحة الجديدة",
-    depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
-  },
+  // {
+  //   id: "edit-002",
+  //   context: "المحاضرة الثاني ",
+  //   questionNum: 1,
+  //   questionText: "",
+  //   oldAnswer: "الإجابة القديمة",
+  //   newAnswer: "الإجابة الصحيحة الجديدة",
+  //   depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+  // },
 ];
+// var lecturesAddedLog = [
+//   {
+//     id: "lec-001",
+//     subject: "الرسم بالحاسب",
+//     lectureTitle: "المحاضرة 3",
+//     lectureDesc: "",
+//     depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+//     effective_to: "2026-10-13",
+//   },
+//   {
+//     id: "lec-001",
+//     subject: "هندسة البرمجيان",
+//     lectureTitle: "المحاضرة 3",
+//     lectureDesc: "",
+//     depts: "all", // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
+//     effective_to: 2026 - 13 - 10,
+//     effective_to: "2026-10-13",
+//   },
+// ]; 
+/* ============================================================
+   lecturesAddedLog — قالب شامل لكل المواد
+   ============================================================
+   طريقة الاستخدام:
+   1) غيّر رقم المحاضرة (n) في الـ id
+   2) غيّر lectureTitle
+   3) غيّر effective_to (تاريخ الانتهاء "YYYY-MM-DD")
+   - الـ depts متظبط مسبقاً حسب أقسام كل مادة
+   - لو عايز تضيف محاضرة جديدة: انسخ بلوك المادة وغيّر الرقم
+   ============================================================ */
+// اضافة محاضرة1000 
 var lecturesAddedLog = [
+  /* ── الرسم بالحاسب — (ai + cs + is) ─────────────────── */
   {
-    id: "lec-001",
+    id: "lec-cg-4", // ← غيّر الرقم
     subject: "الرسم بالحاسب",
-    lectureTitle: "المحاضرة 3",
+    lectureTitle: "المحاضرة 4", // ← غيّر الاسم
     lectureDesc: "",
-    depts: ["cs", "ai"], // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
-    effective_to: 2026 - 10 - 13,
+    depts: ["cs", "ai", "is"],
+    effective_to: "2026-10-30", // ← غيّر التاريخ
   },
+
+  /* ── تحليل وتصميم الخوارزميات — (ai + se) ───────────── */
   {
-    id: "lec-001",
-    subject: "هندسة البرمجيان",
+    id: "lec-alg-5",
+    subject: "تحليل وتصميم الخوارزميات",
+    lectureTitle: "المحاضرة 5",
+    lectureDesc: "",
+    depts: ["ai", "se"],
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── هندسة البرمجيات — (كل الأقسام) ─────────────────── */
+  {
+    id: "lec-swe-4",
+    subject: "هندسة البرمجيات",
+    lectureTitle: "المحاضرة 4",
+    lectureDesc: "",
+    depts: "all",
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── تعلم الالة — (ai فقط) ──────────────────────────── */
+  {
+    id: "lec-ml-4",
+    subject: "تعلم الالة",
+    lectureTitle: "المحاضرة 4",
+    lectureDesc: "",
+    depts: "ai",
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── الشبكات العصبية — (ai فقط) ─────────────────────── */
+  {
+    id: "lec-nn-1",
+    subject: "الشبكات العصبية",
+    lectureTitle: "المحاضرة 1",
+    lectureDesc: "",
+    depts: "ai",
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── تفاعل الانسان والحاسب — (ai فقط) ───────────────── */
+  {
+    id: "lec-hci-5",
+    subject: "تفاعل الانسان والحاسب",
+    lectureTitle: "المحاضرة 5",
+    lectureDesc: "",
+    depts: "ai",
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── التدريب الميداني — (كل الأقسام) ────────────────── */
+  {
+    id: "lec-cc-4",
+    subject: "التدريب الميداني",
+    lectureTitle: "المحاضرة 4",
+    lectureDesc: "",
+    depts: "all",
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── البرمجة المرئية — (cs + is + se) ───────────────── */
+  {
+    id: "lec-vp-5",
+    subject: "البرمجة المرئية",
+    lectureTitle: "المحاضرة 5",
+    lectureDesc: "",
+    depts: ["cs", "is", "se"],
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── شبكات الحاسب — (cs + is + se) ──────────────────── */
+  {
+    id: "lec-cn-6",
+    subject: "شبكات الحاسب",
+    lectureTitle: "المحاضرة 6",
+    lectureDesc: "",
+    depts: ["cs", "is", "se"],
+    effective_to: "2026-10-30", // ← غيّر التاريخ
+  },
+
+  /* ── نظم التشغيل — (cs + se) ────────────────────────── */
+  {
+    id: "lec-os-3",
+    subject: "نظم التشغيل",
     lectureTitle: "المحاضرة 3",
     lectureDesc: "",
-    depts: "all", // 'all' أو 'cs' أو ['cs','ai'] (لحد 4 أقسام)
-    effective_to: 2026 - 13 - 10,
+    depts: ["cs", "se"],
+    effective_to: "2026-10-30", // ← غيّر التاريخ
   },
-]; // نموذج إضافة إشعار عام (Info Notification)
+
+  /* ── (اختياري) تحليل عددي — IS فقط، وغير مفعّل حالياً ─ */
+  // {
+  //   id: "lec-na-1",
+  //   subject: "تحليل عددي",
+  //   lectureTitle: "المحاضرة 1",
+  //   lectureDesc: "",
+  //   depts: "is",
+  //   effective_to: "2026-10-13",
+  // },
+
+  /* ── (اختياري) إدارة المشروعات — IS فقط، وغير مفعّل ─── */
+  // {
+  //   id: "lec-apm-1",
+  //   subject: "إدارة المشروعات المتقدمة",
+  //   lectureTitle: "المحاضرة 1",
+  //   lectureDesc: "",
+  //   depts: "is",
+  //   effective_to: "2026-10-13",
+  // },
+];
+// نموذج إضافة إشعار عام (Info Notification)
 // addNotification({});
 var announcementsLog = [
-  {
-    id: "ann-001",
-    title: "⏰ تم تأجيل امتحان الميدتيرم",
-    message: "الموعد الجديد الأحد 20/10.",
-    depts: "ai",
-  },
-  {
-    id: "ann-002",
-    title: "📅 تعديل في الجدول",
-    message: "سكشن 3 اتنقل من السبت للأحد الساعة 10.",
-    depts: "cs", // مثال لقسم معين: depts: "cs"
-  },
-  {
-    id: "ann-003",
-    title: "🙋 محتاجين مساعدة",
-    message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
-    depts: ["cs", "ai"], // مثال لأكتر من قسم: depts: ["cs", "ai"]
-  },
-  {
-    id: "ann-004",
-    title: "🙋 محتاجين مساعدة",
-    message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
-    depts: ["cs", "ai", "is"], // مثال لأكتر من قسم: depts: ["cs", "ai"]
-  },
+  // {
+  //   id: "ann-001",
+  //   title: "⏰ تم تأجيل امتحان الميدتيرم",
+  //   message: "الموعد الجديد الأحد 20/10.",
+  //   depts: "ai",
+  // },
+  // {
+  //   id: "ann-002",
+  //   title: "📅 تعديل في الجدول",
+  //   message: "سكشن 3 اتنقل من السبت للأحد الساعة 10.",
+  //   depts: "cs", // مثال لقسم معين: depts: "cs"
+  // },
+  // {
+  //   id: "ann-003",
+  //   title: "🙋 محتاجين مساعدة",
+  //   message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
+  //   depts: ["cs", "ai"], // مثال لأكتر من قسم: depts: ["cs", "ai"]
+  // },
+  // {
+  //   id: "ann-004",
+  //   title: "🙋 محتاجين مساعدة",
+  //   message: "لو عندك ملخص للمحاضرة 4 ابعتهولنا من زر المساعدة.",
+  //   depts: ["cs", "ai", "is"], // مثال لأكتر من قسم: depts: ["cs", "ai"]
+  // },
 ];
 function loadNotifications(){
   try{ var n = localStorage.getItem('notifications_data'); if(n) notifications = JSON.parse(n); }catch(e){ notifications = []; }

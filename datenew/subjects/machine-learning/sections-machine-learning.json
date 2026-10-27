@@ -58,6 +58,45 @@
           ]
         }
       ]
+    },
+    {
+      "id": "machine-learning-sec-03",
+      "subject": "machine-learning",
+      "lecture": "المحاضرة 3: الانحدار الخطي (Linear Regression)",
+      "lectureId": "machine-learning-lecture-03",
+      "instructorId": "INS-Maria",
+      "instructorName": "م. ماريا ايمن",
+      "groupName": "سكشن 3",
+      "status": "available",
+      "sectionTitle": "📊 سكشن 3",
+      "materials": {
+        "file": {
+          "label": "ملف السكشن",
+          "url": "datenew/subjects/machine-learning/sections/sec3/Linear_Regression_Logistic_Regression_compressed.pdf",
+          "type": "pdf"
+        }
+      },
+      "linkCategories": [
+        {
+          "category": " ملف السكشن",
+
+          "links": [
+            {
+              "t": "تحميل ملف العمل بتاع السكشن",
+              "d": "",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📥 تحميل",
+                  "url": "",
+                  "type": "download",
+                  "color": "red"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

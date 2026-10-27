@@ -3753,937 +3753,1152 @@ subjects.push({
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-02-Questions.pdf",
       // المحاضرة الثانية: طبقة التطبيقات (Application Layer) - كتاب شبكات الحاسوب: نهج من الأعلى إلى الأسفل (Kurose & Ross)
 
-      linkCategories: [
-        {
-          category: "فيديوهات عربية",
-          icon: "🇪🇬",
-          description:
-            "مجموعة من الشروحات المرئية باللغة العربية للتعمق في مفاهيم طبقة التطبيقات ومقبس الشبكة وبروتوكولات TCP/UDP و HTTP.",
-          links: [
-            {
-              t: "شرح طبقة الأبليكيشن Application Layer و OSI Model",
-              d: "شرح مفصل ومبسط لطبقة التطبيقات والخدمات التي تقدمها وكيفية ارتباطها بالطبقات الأخرى في نموذج OSI.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=61kRxdZ5p-o",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "الفرق بين TCP و UDP وتطبيقات Socket Programming",
-              d: "مقارنة شاملة بين بروتوكول TCP الموثوق وUDP السريع مع توضيح حالات الاستخدام وبرمجة المقابس.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=JJzZaPuPQW0",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "شرح برمجة المقابس الشبكية Socket Programming بالعربي",
-              d: "تطبيق عملي لبناء اتصال بين العميل والخادم باستخدام TCP و UDP للأنظمة الموزعة.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=g24dsnb1YKI",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "سلسلة شرح الفصل الثاني - Application Layer (Kurose & Ross)",
-              d: "شرح أكاديمي عربي كامل لمفاهيم الفصل الثاني من كتاب الشبكات الأكاديمي الشهير Top-Down Approach.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "📖 الشرح",
-                  url: "https://www.youtube.com/watch?v=Ygax_GQvrW4",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          category: "فيديوهات عالمية",
-          icon: "🌍",
-          description:
-            "دروس ومحاضرات عالمية باللغة الإنجليزية توضح البنية التحتية لطبقة التطبيقات وبروتوكول HTTP والبروفيسور Jim Kurose.",
-          links: [
-            {
-              t: "2.1 Principles of the Application Layer - Prof. Jim Kurose",
-              d: "المحاضرة الرسمية لبروفيسور جيم كوروس يشرح فيها مبادئ طبقة التطبيقات، نماذج Client-Server و P2P، والمقابس.",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "🚀 فتح المقال",
-                  url: "https://www.youtube.com/watch?v=abeupgK5z48",
-                  type: "view",
-                  color: "blue",
-                },
-              ],
-            },
-            {
-              t: "HTTP Protocol & Web Architecture Explained",
-              d: "شرح عميق لكيفية عمل بروتوكول HTTP، الاتصالات المستمرة وغير المستمرة، وهيكل الـ Request و Response.",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "🚀 فتح المقال",
-                  url: "https://www.youtube.com/watch?v=uT-Bc61TwNg",
-                  type: "view",
-                  color: "blue",
-                },
-              ],
-            },
-            {
-              t: "HTTP Crash Course & Messages Structure",
-              d: "دليل مرئي شامل لبروتوكول HTTP وأساليب الطلب (GET, POST, PUT, DELETE) وأكواد الحالة المختلفة.",
-              icon: "🌍",
-              actions: [
-                {
-                  label: "🚀 فتح المقال",
-                  url: "https://www.youtube.com/watch?v=9QwyCp8Lv74",
-                  type: "view",
-                  color: "blue",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          category: "مواقع ومراجع",
-          icon: "📚",
-          description:
-            "مقالات ومراجع أكاديمية وتقنية موثوقة تغطي تفاصيل بروتوكول HTTP، رؤوس البيانات (Headers)، وبرمجة المقابس.",
-          links: [
-            {
-              t: "GeeksforGeeks - HTTP Headers Digest & Request-Response",
-              d: "مرجع شامل يغطي أنواع رؤوس بروتوكول HTTP ومفهوم Caching والتحقق من البيانات وأكواد الاستجابة.",
-              icon: "📚",
-              actions: [
-                {
-                  label: "🌐 فتح الموقع",
-                  url: "https://www.geeksforgeeks.org/web-tech/http-headers/",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "MDN Web Docs - HTTP Overview & Messages Structure",
-              d: "المرجع الرسمي لشبكة مطوري موزيلا الذي يشرح بروتوكول HTTP وهيكلية الرسائل والاتصالات المستمرة Persistent Connections.",
-              icon: "📚",
-              actions: [
-                {
-                  label: "🌐 فتح الموقع",
-                  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              t: "GeeksforGeeks - Socket Programming in C/C++ & Python",
-              d: "دليل متكامل لبرمجة المقابس الشبكية Socket Programming وتوضيح دالتي bind و listen و accept وشرح أرقام المنافذ Port Numbers.",
-              icon: "📚",
-              actions: [
-                {
-                  label: "🌐 فتح الموقع",
-                  url: "https://www.geeksforgeeks.org/c/socket-programming-cc/",
-                  type: "view",
-                  color: "green",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          category: "أدوات ومحاكاة",
-          icon: "🔧",
-          description:
-            "أدوات ومحاكيات شبكية واختبار للبروتوكولات مثل Wireshark و Postman و Packet Tracer لمعاينة حزم البيانات والمقابس.",
-          links: [
-            {
-              t: "Wireshark Network Protocol Analyzer",
-              d: "الأداة الأولى عالمياً لتحليل بروتوكولات الشبكة ومعاينة حزم HTTP ورسائل TCP/UDP Three-Way Handshake بشكل حي ومباشر.",
-              icon: "🔧",
-              actions: [
-                {
-                  label: "⭳ تحميل الأداة",
-                  url: "https://www.wireshark.org/",
-                  type: "download",
-                  color: "orange",
-                },
-              ],
-            },
-            {
-              t: "Postman API Development Environment",
-              d: "أداة احترافية لإرسال واستقبال طلبات HTTP بمختلف أنواعها (GET, POST, PUT, DELETE) واختبار رؤوس الرسائل والأجسام Encapsulation.",
-              icon: "🔧",
-              actions: [
-                {
-                  label: "⭳ تحميل الأداة",
-                  url: "https://www.postman.com/",
-                  type: "download",
-                  color: "orange",
-                },
-              ],
-            },
-            {
-              t: "Cisco Packet Tracer",
-              d: "بيئة محاكاة شبكات متكاملة تتيح إعداد خوادم Web و DNS و Mail وتتبع تبادل الرسائل في طبقة التطبيقات وطبقة النقل.",
-              icon: "🔧",
-              actions: [
-                {
-                  label: "⭳ تحميل الأداة",
-                  url: "https://www.netacad.com/courses/packet-tracer",
-                  type: "download",
-                  color: "orange",
-                },
-              ],
-            },
-          ],
-        },
-      ],
+
       questions: [
         {
-          q: "1. Which statement correctly describes the client-server architecture?",
-          options: [
-            "Clients communicate directly with each other without the server",
-            "The server is always on and has a fixed, well-known IP address",
-            "The server is intermittently connected and changes its address",
-            "The servers are desktops and laptops controlled by users",
-          ],
-          correct: 1,
-          translation:
-            "أي عبارة تصف معمارية العميل-الخادم (client-server) بشكل صحيح؟",
-          explanation:
-            "الخادم في client-server شغال دايمًا وله عنوان IP ثابت ومعروف فالعميل يقدر يوصله في أي وقت. الأولى غلط لأن العملاء مش بيتواصلوا مباشرة. الثالثة والرابعة أوصاف للـ P2P مش للـ client-server.",
-          tags: ["Client-Server", "Application Architecture"],
-          ref: "Lecture 2 — Section 2.1.1",
-          likely: "high",
-        },
-        {
-          q: "2. Which feature is considered one of the most compelling features of P2P architectures?",
-          options: [
-            "Guaranteed security due to centralization",
-            "Dependence on powerful data centers",
-            "A fixed, well-known server address",
-            "Self-scalability",
-          ],
-          correct: 3,
-          translation: "أي ميزة تعتبر من أقوى مميزات معمارية P2P؟",
-          explanation:
-            "الـ self-scalability: كل peer بيطلب شغل لكنه كمان بيضيف قدرة خدمة للنظام لما يوزع ملفات للباقي. الباقي خصائص الـ client-server، وعيوب P2P هي الأمان والأداء والموثوقية.",
-          tags: ["P2P", "Self-scalability"],
-          ref: "Lecture 2 — Section 2.1.1",
-          likely: "high",
-        },
-        {
-          q: "3. In a communication session between a pair of processes, which process is labeled the client?",
-          options: [
-            "The process that initiates the communication",
-            "The process that waits to be contacted",
-            "The process that uploads the file in a P2P system",
-            "The process that runs on a host with a fixed IP address",
-          ],
-          correct: 0,
-          translation:
-            "في جلسة اتصال بين عمليتين (processes)، أي عملية تسمى client؟",
-          explanation:
-            "الـ client هو اللي بيبدأ الاتصال ويتواصل أول مرة مع الطرف التاني. اللي بيستنى يتكلموه هو الـ server، وفي P2P الـ peer اللي بيرفع الملف هو الـ server في الجلسة دي.",
-          tags: ["Client Process", "Server Process"],
-          ref: "Lecture 2 — Section 2.1.2",
-          likely: "high",
-        },
-        {
-          q: "4. A socket is best defined as:",
-          options: [
-            "The interface between the transport layer and the network layer",
-            "The interface between the link layer and the physical layer",
-            "The interface between the application layer and the transport layer within a host",
-            "A router port that forwards packets between networks",
-          ],
-          correct: 2,
-          translation: "أفضل تعريف للـ socket هو:",
-          explanation:
-            "الـ socket هو الواجهة بين طبقة التطبيق وطبقة النقل جوه الـ host، وبيتسمى كمان API لأنه واجهة البرمجة اللي بتتبني بيها تطبيقات الشبكة. الاختيارات التانية بتخلط بين طبقات تانية.",
-          tags: ["Socket", "API"],
-          ref: "Lecture 2 — Section 2.1.2 (Figure 2.3)",
-          likely: "high",
-        },
-        {
-          q: "5. To identify a receiving process on another host, which two pieces of information must be specified?",
-          options: [
-            "The MAC address and the IP address",
-            "The hostname and the HTTP version",
-            "The port number and the URL path name",
-            "The IP address of the host and the destination port number",
-          ],
-          correct: 3,
-          translation:
-            "لتحديد العملية المستقبِلة على host تاني، إيه المعلومتين اللازم تحديدهم؟",
-          explanation:
-            "لازم عنوان الـ host (IP address) ورقم المنفذ (port number) اللي بيحدد العملية المستقبلة. باقي الاختيارات مش هي المطلوبة لتحديد العملية.",
-          tags: ["Addressing Processes", "IP Address", "Port Number"],
-          ref: "Lecture 2 — Section 2.1.2",
-          likely: "high",
-        },
-        {
-          q: "6. Which pair of port numbers is correct?",
-          options: [
-            "Web server: 25, SMTP mail server: 80",
-            "Web server: 80, SMTP mail server: 25",
-            "Web server: 25, SMTP mail server: 25",
-            "Web server: 80, SMTP mail server: 80",
-          ],
-          correct: 1,
-          translation: "أي زوج من أرقام المنافذ (ports) صحيح؟",
-          explanation:
-            "الـ Web server بيستخدم المنفذ 80 والـ mail server (SMTP) بيستخدم المنفذ 25. الاختيارات التانية إما مبدلة الأرقام أو مكررة نفس الرقم.",
-          tags: ["Port Numbers", "SMTP", "HTTP"],
-          ref: "Lecture 2 — Section 2.1.2",
-          likely: "high",
-        },
-        {
-          q: "7. Along which four dimensions can the services of a transport-layer protocol be broadly classified?",
-          options: [
-            "Reliable data transfer, throughput, timing, and security",
-            "Reliable data transfer, throughput, routing, and addressing",
-            "Congestion control, throughput, timing, and security",
-            "Reliable data transfer, bandwidth, framing, and security",
-          ],
-          correct: 0,
-          translation: "خدمات بروتوكول طبقة النقل بتتصنف على أي أربعة أبعاد؟",
-          explanation:
-            "الأبعاد الأربعة هي: reliable data transfer وthroughput وtiming وsecurity. الـ routing والـ addressing والـ framing مش من أبعاد خدمات النقل في المحاضرة، والـ congestion control خدمة خاصة بـ TCP مش بُعد مستقل.",
-          tags: [
-            "Transport Services",
-            "Reliable Data Transfer",
-            "Throughput",
-            "Timing",
-            "Security",
-          ],
-          ref: "Lecture 2 — Section 2.1.3",
-          likely: "high",
-        },
-        {
-          q: "8. Which group of applications is described as elastic applications?",
-          options: [
-            "Internet telephony and video conferencing",
-            "Multiplayer games and virtual environments",
-            "Electronic mail, file transfer, and Web transfers",
-            "Conversational audio and video",
-          ],
+          q: "1. The Internet (and TCP/IP networks in general) makes how many transport protocols available to applications?",
+          options: ["Four", "One", "Two", "Three"],
           correct: 2,
           translation:
-            "أي مجموعة من التطبيقات توصف بأنها elastic applications؟",
+            "الإنترنت (وشبكات TCP/IP عموماً) بيوفّر كام بروتوكول نقل للتطبيقات؟",
           explanation:
-            "الـ elastic applications بتستخدم أي قدر من الـ throughput متاح، قليل أو كتير، ومنها e-mail ونقل الملفات والويب. التطبيقات الباقية حساسة للـ bandwidth أو للتوقيت (multimedia وreal-time).",
-          tags: ["Elastic Applications", "Bandwidth-Sensitive"],
-          ref: "Lecture 2 — Section 2.1.3 (Throughput)",
+            "الإنترنت بيوفّر بروتوكولين للنقل بس: TCP و UDP. مزودش واحد ولا تلاتة، ده تعريف أساسي اتذكر أكتر من مرة.",
+          tags: ["Transport Layer", "TCP", "UDP"],
+          ref: "Lecture 2 — Section 2.1.4",
           likely: "high",
         },
         {
-          q: "9. Which application is the most notable example of a loss-tolerant application?",
+          q: "2. Which two transport protocols does the Internet provide to applications?",
           options: [
-            "Electronic mail",
-            "File transfer",
-            "Financial applications",
-            "Conversational audio/video",
+            "HTTP and FTP",
+            "IP and ICMP",
+            "SMTP and POP3",
+            "TCP and UDP",
           ],
           correct: 3,
-          translation:
-            "أي تطبيق هو أبرز مثال على تطبيق يتحمل فقدان البيانات (loss-tolerant)؟",
+          translation: "إيه البروتوكولين اللي الإنترنت بيوفّرهم للتطبيقات؟",
           explanation:
-            "التطبيقات المتعددة الوسائط زي المحادثات الصوتية والمرئية تقدر تتحمل قدر من فقدان البيانات. البريد ونقل الملفات والتطبيقات المالية خسارة البيانات فيها ممكن تكون مدمرة.",
-          tags: ["Loss-Tolerant", "Reliable Data Transfer"],
-          ref: "Lecture 2 — Section 2.1.3 (Reliable Data Transfer), Figure 2.4",
+            "الإجابة TCP و UDP. HTTP و FTP بروتوكولات تطبيق مش نقل، و IP بروتوكول شبكة مش نقل.",
+          tags: ["Transport Layer", "TCP", "UDP"],
+          ref: "Lecture 2 — Section 2.1.4",
           likely: "high",
         },
         {
-          q: "10. The TCP service model includes which services?",
+          q: "3. The TCP service model includes which two main services?",
           options: [
+            "Connectionless service and unreliable data transfer",
             "Connection-oriented service and reliable data transfer service",
-            "Connectionless service and reliable data transfer service",
-            "Connection-oriented service and timing guarantees",
-            "Guaranteed throughput and security services",
+            "Throughput guarantees and security",
+            "Congestion control and timing guarantees",
           ],
-          correct: 0,
-          translation: "نموذج خدمة TCP بيشمل أي خدمات؟",
+          correct: 1,
+          translation: "نموذج خدمة TCP بيشمل أي خدمتين أساسيتين؟",
           explanation:
-            "TCP بيقدم connection-oriented service (handshaking) وreliable data transfer. الـ connectionless خاصية UDP، والتوقيت والـ throughput المضمونين مش بيقدمهم لا TCP ولا UDP.",
-          tags: ["TCP", "Connection-Oriented", "Reliable Data Transfer"],
+            "TCP بيوفّر خدمة connection-oriented (بـ handshaking) وخدمة reliable data transfer. مفيش throughput/timing guarantees دي خدمات مش متوفرة في إنترنت النقل.",
+          tags: ["TCP Services"],
           ref: "Lecture 2 — Section 2.1.4 (TCP Services)",
           likely: "high",
         },
         {
-          q: "11. Which statement correctly describes UDP?",
+          q: "4. What is the handshaking procedure in TCP?",
           options: [
-            "It performs handshaking before processes communicate",
-            "It guarantees in-order delivery of all messages",
-            "It is a lightweight, connectionless protocol with unreliable data transfer",
-            "It throttles the sender when the network is congested",
+            "Sending application messages without preparation",
+            "Compressing data before sending it",
+            "Exchanging transport-layer control information before application-level messages begin to flow",
+            "Encrypting the connection between client and server",
           ],
           correct: 2,
-          translation: "أي عبارة تصف UDP بشكل صحيح؟",
+          translation: "إيه إجراء الـ handshaking في TCP؟",
           explanation:
-            "UDP بروتوكول خفيف بدون اتصال (connectionless) ونقله غير موثوق وممكن توصل الرسائل بترتيب مختلف. الـ handshaking والترتيب المضمون وخنق المرسل (congestion control) كلهم من خصائص TCP.",
-          tags: ["UDP", "Connectionless", "Unreliable"],
+            "الـ handshaking هو تبادل معلومات تحكم في طبقة النقل قبل ما تبدأ رسائل التطبيق. التشفير والضغط مش وظيفة الـ handshaking.",
+          tags: ["TCP", "Handshaking", "Connection-oriented"],
+          ref: "Lecture 2 — Section 2.1.4 (Connection-oriented service)",
+          likely: "high",
+        },
+        {
+          q: "5. After the handshaking phase, a TCP connection is said to exist between what?",
+          options: [
+            "The applications themselves",
+            "The sockets of the two processes",
+            "The routers along the path",
+            "The IP addresses of the hosts",
+          ],
+          correct: 1,
+          translation:
+            "بعد مرحلة الـ handshaking، بيتقال إن اتصال TCP موجود بين إيه؟",
+          explanation:
+            "الاتصال بين sockets العمليتين (client و server). مش بين الراوترز ولا الـ IP addresses، ده تعريف مهم.",
+          tags: ["TCP", "Sockets", "Connection"],
+          ref: "Lecture 2 — Section 2.1.4 (Connection-oriented service)",
+          likely: "high",
+        },
+        {
+          q: "6. The TCP connection is described as which type of connection?",
+          options: ["Simplex", "Broadcast", "Full-duplex", "Half-duplex"],
+          correct: 2,
+          translation: "اتصال TCP بيتوصف كـ إيه؟",
+          explanation:
+            "TCP اتصال full-duplex: العمليتين يقدروا يبعتوا لبعض في نفس الوقت. مش half-duplex (اتجاه واحد في كل مرة) ولا simplex.",
+          tags: ["TCP", "Full-duplex"],
+          ref: "Lecture 2 — Section 2.1.4 (Connection-oriented service)",
+          likely: "high",
+        },
+        {
+          q: "7. What must an application do when it finishes sending messages over a TCP connection?",
+          options: [
+            "Leave the connection open indefinitely",
+            "Send a UDP packet to confirm",
+            "Restart the server process",
+            "Tear down the connection",
+          ],
+          correct: 3,
+          translation:
+            "إيه اللي لازم التطبيق يعمله لما يخلص بعت الرسائل على اتصال TCP؟",
+          explanation:
+            "لازم يـ tear down (يفك) الاتصال. سيبه مفتوح للأبد مش ممارسة صح، و UDP مالوش علاقة بإنهاء اتصال TCP.",
+          tags: ["TCP", "Connection teardown"],
+          ref: "Lecture 2 — Section 2.1.4 (Connection-oriented service)",
+          likely: "high",
+        },
+        {
+          q: "8. TCP's reliable data transfer service guarantees that the data sent:",
+          options: [
+            "Arrives faster than UDP",
+            "Arrives without error and in the proper order, with no missing or duplicate bytes",
+            "Arrives only in correct order, but may be duplicated",
+            "Arrives encrypted end-to-end",
+          ],
+          correct: 1,
+          translation: "خدمة النقل الموثوق في TCP بتضمن إيه للبيانات المبعوتة؟",
+          explanation:
+            "TCP بيضمن وصول البيانات من غير أخطاء وبالترتيب الصحيح وبدون فقد أو تكرار. التشفير مش شغلانته، والسرعة دي ميزة UDP.",
+          tags: ["TCP", "Reliable data transfer"],
+          ref: "Lecture 2 — Section 2.1.4 (Reliable data transfer service)",
+          likely: "high",
+        },
+        {
+          q: "9. What does the TCP congestion-control mechanism do?",
+          options: [
+            "Speeds up the sender at all times",
+            "Encrypts data at congested routers",
+            "Throttles a sending process when the network is congested between sender and receiver",
+            "Routes packets around congested areas",
+          ],
+          correct: 2,
+          translation: "ميكانيزم التحكم في الازدحام في TCP بيعمل إيه؟",
+          explanation:
+            "TCP بيقلل (throttle) سرعة المرسل لما الشبكة مزدحمة. مش بيسرّع المرسل، ولا بيفرض تشفير، ولا بيعيد التوجيه.",
+          tags: ["TCP", "Congestion Control"],
+          ref: "Lecture 2 — Section 2.1.4 (Reliable data transfer service)",
+          likely: "high",
+        },
+        {
+          q: "10. Whom does the TCP congestion-control mechanism primarily benefit?",
+          options: [
+            "Only the communicating processes",
+            "Only the clients",
+            "Only the Web servers",
+            "The general welfare of the Internet, rather than the direct benefit of the communicating processes",
+          ],
+          correct: 3,
+          translation: "ميكانيزم التحكم في الازدحام في TCP بيفيد مين أساساً؟",
+          explanation:
+            "TCP congestion-control بيخدم مصلحة الإنترنت العامة مش العمليات المتواصلة مباشرة. ده نقطة مهمة الدكتور بيشدد عليها — مش خدمة مباشرة للتطبيق.",
+          tags: ["TCP", "Congestion Control"],
+          ref: "Lecture 2 — Section 2.1.4 (Reliable data transfer service)",
+          likely: "high",
+        },
+        {
+          q: "11. UDP is best described as which kind of transport protocol?",
+          options: [
+            "A secure, encrypted transport protocol",
+            "A no-frills, lightweight transport protocol providing minimal services",
+            "A heavy, reliable, connection-oriented protocol",
+            "A congestion-aware transport protocol with handshaking",
+          ],
+          correct: 1,
+          translation: "UDP بيتوصف إزاي كبروتوكول نقل؟",
+          explanation:
+            "UDP بسيط وخفيف (no-frills, lightweight) بأدنى خدمات. مش موثوق ولا بيفرض handshake ولا بيعمل congestion control.",
+          tags: ["UDP", "Lightweight"],
           ref: "Lecture 2 — Section 2.1.4 (UDP Services)",
           likely: "high",
         },
         {
-          q: "12. Which services are NOT provided by today's Internet transport protocols (TCP and UDP)?",
+          q: "12. UDP is connectionless, which means that:",
           options: [
-            "Reliable data transfer and connection-oriented service",
-            "Timing and throughput guarantees",
-            "Congestion control and handshaking",
-            "Reliable data transfer and congestion control",
+            "UDP requires authentication before sending",
+            "Handshaking is required before communication",
+            "UDP cannot send any data over the network",
+            "No handshaking occurs before the two processes start to communicate",
           ],
-          correct: 1,
-          translation:
-            "أي خدمات لا تقدمها بروتوكولات النقل في الإنترنت اليوم (TCP وUDP)؟",
+          correct: 3,
+          translation: "UDP connectionless يعني إيه؟",
           explanation:
-            "الإنترنت الحالي مش بيضمن توقيت ولا throughput. باقي الاختيارات فيها خدمات بيقدمها TCP فعلًا.",
-          tags: ["Internet Transport Services", "Timing", "Throughput"],
+            "مفيش handshaking قبل ما العمليتين يبدأوا التواصل. ده عكس TCP اللي بيطلب handshake. UDP بيبعت على طول.",
+          tags: ["UDP", "Connectionless"],
+          ref: "Lecture 2 — Section 2.1.4 (UDP Services)",
+          likely: "high",
+        },
+        {
+          q: "13. What does UDP provide regarding data transfer?",
+          options: [
+            "Acknowledgment of every received packet",
+            "Guaranteed delivery of every message in correct order",
+            "An unreliable data transfer service",
+            "A reliable data transfer service",
+          ],
+          correct: 2,
+          translation: "UDP بيوفّر إيه بخصوص نقل البيانات؟",
+          explanation:
+            "UDP نقل غير موثوق (unreliable) — مفيش ضمان وصول الرسالة، ويمكن توصل خارج الترتيب. عكس TCP اللي موثوق.",
+          tags: ["UDP", "Unreliable"],
+          ref: "Lecture 2 — Section 2.1.4 (UDP Services)",
+          likely: "high",
+        },
+        {
+          q: "14. Does UDP include a congestion-control mechanism?",
+          options: [
+            "Yes, UDP throttles senders during congestion just like TCP",
+            "No, but the network layer enforces congestion control for UDP",
+            "No, the sending side of UDP can pump data into the network layer at any rate it pleases",
+            "Yes, but only for packets larger than 1500 bytes",
+          ],
+          correct: 2,
+          translation: "هل UDP فيه ميكانيزم للتحكم في الازدحام؟",
+          explanation:
+            "UDP مفيهوش congestion control — المرسل يقدر يضخ بيانات بأي معدل. ده فرق أساسي بينه وبين TCP اللي فيه throttling.",
+          tags: ["UDP", "Congestion Control"],
+          ref: "Lecture 2 — Section 2.1.4 (UDP Services)",
+          likely: "high",
+        },
+        {
+          q: "15. Which services are NOT provided by today's Internet transport protocols?",
+          options: [
+            "Reliable data transfer and security",
+            "Encryption and decryption",
+            "Handshaking and connection setup",
+            "Throughput and timing guarantees",
+          ],
+          correct: 3,
+          translation: "إيه الخدمات اللي بروتوكولات نقل الإنترنت مش بتوفّرها؟",
+          explanation:
+            "الإنترنت بيوفر reliable data transfer (TCP) و security (عن طريق TLS)، لكن مفيش أي throughput ولا timing guarantees. نقطة أساسية اتذكرت في الـ summary.",
+          tags: ["Transport Services", "Throughput", "Timing"],
           ref: "Lecture 2 — Section 2.1.4 (Services Not Provided)",
           likely: "high",
         },
         {
-          q: "13. Why do developers of Internet telephony applications usually prefer UDP over TCP?",
+          q: "16. Which set of applications typically uses TCP as their transport protocol?",
           options: [
-            "Because UDP guarantees that all data will be delivered",
-            "Because firewalls are usually configured to allow UDP traffic",
-            "Because UDP encrypts voice data automatically",
-            "To circumvent TCP's congestion control and packet overheads",
+            "E-mail, Web, file transfer, and remote terminal access",
+            "Internet telephony applications only",
+            "Live video conferencing applications only",
+            "DNS queries only",
           ],
-          correct: 3,
-          translation:
-            "ليه مطوّرو تطبيقات الاتصال الصوتي عبر الإنترنت بيفضلوا UDP غالبًا؟",
+          correct: 0,
+          translation: "إيه التطبيقات اللي بتستخدم TCP عادة؟",
           explanation:
-            "التطبيقات دي بتتحمل بعض الفقد لكنها محتاجة معدل أدنى، فبتتفادى الـ congestion control والـ overhead بتاع TCP. وبرضه كتير من الـ firewalls بتمنع UDP، عشان كده بتستخدم TCP كبديل لو فشل UDP.",
-          tags: ["Internet Telephony", "UDP", "Congestion Control"],
+            "التطبيقات اللي محتاجة نقل موثوق زي البريد والويب ونقل الملفات والوصول للطرفية. التطبيقات الحساسة للزمن (telephony) بتفضل UDP.",
+          tags: ["TCP", "Applications"],
           ref: "Lecture 2 — Section 2.1.4 (Figure 2.5)",
           likely: "high",
         },
         {
-          q: "14. What is the purpose of the TCP congestion-control mechanism?",
+          q: "17. Why do developers of Internet telephony applications usually prefer to run them over UDP?",
           options: [
-            "A service for the general welfare of the Internet that throttles the sender when the network is congested",
-            "A service that guarantees a minimum throughput to the application",
-            "A service that guarantees data arrives in the proper order",
-            "A service that encrypts data before sending it into the network",
+            "To circumvent TCP's congestion-control mechanism and packet overheads",
+            "Because UDP is more secure than TCP",
+            "Because UDP provides reliable data transfer",
+            "Because UDP requires handshaking before sending",
           ],
           correct: 0,
-          translation:
-            "ما هو الغرض من آلية التحكم في الازدحام (congestion control) في TCP؟",
+          translation: "ليه مطورين تطبيقات الإنترنت تليفوني بيفضلوا UDP؟",
           explanation:
-            "الـ congestion control خدمة لمصلحة الإنترنت كله وليست للعمليتين المتصلتين مباشرة، وبتخنق المرسل لما الشبكة تزدحم. ترتيب البيانات خدمة الـ reliable transfer، والتشفير بيتم بإضافة TLS.",
-          tags: ["TCP", "Congestion Control"],
-          ref: "Lecture 2 — Section 2.1.4 (TCP Services)",
+            "عشان يتجاوزوا ميكانيزم التحكم في الازدحام في TCP وحجم الـ packet overheads. UDP مش موثوق ولا آمن أكتر من TCP.",
+          tags: ["UDP", "Internet Telephony"],
+          ref: "Lecture 2 — Section 2.1.4 (Figure 2.5 commentary)",
           likely: "high",
         },
         {
-          q: "15. Why is HTTP said to be a stateless protocol?",
+          q: "18. Why might Internet telephony applications be designed to use TCP as a backup if UDP communication fails?",
           options: [
-            "Because it does not use TCP as its transport protocol",
-            "Because the client does not keep any information about the server",
-            "Because the server maintains no information about the clients",
-            "Because it closes the connection after every object",
+            "Because UDP is more unreliable than TCP for voice",
+            "Because many firewalls are configured to block most types of UDP traffic",
+            "Because TCP is faster than UDP",
+            "Because TCP has lower latency than UDP",
           ],
-          correct: 2,
-          translation: "ليه يوصف HTTP بأنه stateless protocol؟",
+          correct: 1,
+          translation:
+            "ليه تطبيقات الإنترنت تليفوني ممكن تستخدم TCP كبديل لو UDP فشل؟",
           explanation:
-            "لأن الخادم بيبعت الملفات من غير ما يخزن أي معلومات عن العميل، فلو طلب نفس الكائن مرتين بيبعته تاني كأنه نسي. الأولى غلط لأن HTTP بيستخدم TCP، والرابعة خاصة بالـ non-persistent connections مش بتعريف stateless.",
-          tags: ["HTTP", "Stateless"],
+            "عشان فايروولز كتير بتـ block معظم أنواع UDP traffic. مش لأن TCP أسرع أو أقل latency — العكس صحيح.",
+          tags: ["UDP", "Firewalls", "TCP fallback"],
+          ref: "Lecture 2 — Section 2.1.4 (Figure 2.5 commentary)",
+          likely: "high",
+        },
+        {
+          q: "19. An application-layer protocol defines which of the following?",
+          options: [
+            "Only the transport protocol to use",
+            "The types of messages, syntax, semantics of fields, and rules for sending and responding to messages",
+            "Only the semantics of the fields",
+            "Only the syntax of the messages",
+          ],
+          correct: 1,
+          translation: "بروتوكول طبقة التطبيق بيحدد إيه؟",
+          explanation:
+            "بيحدد 4 حاجات: أنواع الرسائل، الـ syntax، الـ semantics، وقواعد متى وإزاي تبعت وترد. تعريف أساسي متكرر في المحاضرة.",
+          tags: ["Application-Layer Protocols", "Definition"],
+          ref: "Lecture 2 — Section 2.1.5",
+          likely: "high",
+        },
+        {
+          q: "20. The Web's application-layer protocol is:",
+          options: ["DNS", "FTP", "SMTP", "HTTP"],
+          correct: 3,
+          translation: "بروتوكول طبقة التطبيق بتاع الـ Web هو إيه؟",
+          explanation:
+            "HTTP هو بروتوكول الـ Web. FTP للملفات، SMTP للإيميل، DNS للـ directory service.",
+          tags: ["HTTP", "Web"],
+          ref: "Lecture 2 — Section 2.1.5",
+          likely: "high",
+        },
+        {
+          q: "21. Which of the following application-layer protocols is proprietary and NOT in the public domain (RFCs)?",
+          options: [
+            "Skype's application-layer protocol",
+            "SMTP",
+            "HTTP",
+            "FTP",
+          ],
+          correct: 0,
+          translation: "إيه البروتوكول اللي proprietary ومش متاح في RFCs؟",
+          explanation:
+            "Skype بروتوكوله proprietary. HTTP و SMTP و FTP متاحين في RFCs للعموم.",
+          tags: ["Application-Layer Protocols", "Proprietary"],
+          ref: "Lecture 2 — Section 2.1.5",
+          likely: "high",
+        },
+        {
+          q: "22. A Web page (document) consists of which of the following?",
+          options: [
+            "A single HTML file only",
+            "A base HTML file and several referenced objects",
+            "Only the URL of the page",
+            "Only image files",
+          ],
+          correct: 1,
+          translation: "صفحة الويب (document) بتتكون من إيه؟",
+          explanation:
+            "صفحة الويب بتتكون من base HTML file وعدة objects موثقة. مش بس HTML ولا صور.",
+          tags: ["Web Page", "Objects"],
           ref: "Lecture 2 — Section 2.2.1",
           likely: "high",
         },
         {
-          q: "16. Which transport protocol does HTTP use?",
+          q: "23. A URL has which two components?",
           options: [
-            "UDP, because it is faster",
-            "TCP, because it provides reliable data transfer",
-            "UDP first and TCP only as a backup",
-            "Neither; HTTP sends data directly through the network layer",
+            "Browser type and server type",
+            "IP address and port number",
+            "Protocol and method",
+            "The hostname of the server and the object's path name",
           ],
-          correct: 1,
-          translation: "أي بروتوكول نقل يستخدمه HTTP؟",
+          correct: 3,
+          translation: "الـ URL بيتكون من إيه (مكونين)؟",
           explanation:
-            "HTTP بيستخدم TCP، والعميل بيبدأ بفتح TCP connection مع الخادم، وTCP بيوفر reliable data transfer فمش لازم HTTP يقلق من الفقد. استخدام UDP كبديل ده خاص بتطبيقات الاتصال الصوتي.",
+            "hostname بتاع السيرفر + path name بتاع الـ object. مثال: www.someSchool.edu (hostname) و /someDepartment/picture.gif (path).",
+          tags: ["URL", "Web"],
+          ref: "Lecture 2 — Section 2.2.1",
+          likely: "high",
+        },
+        {
+          q: "24. HTTP uses which underlying transport protocol?",
+          options: ["IP", "TCP", "ICMP", "UDP"],
+          correct: 1,
+          translation: "HTTP بيستخدم إيه كبروتوكول نقل تحتية؟",
+          explanation:
+            "HTTP بيشتغل فوق TCP. UDP مش موثوق، IP و ICMP بروتوكولات شبكة مش نقل.",
           tags: ["HTTP", "TCP"],
           ref: "Lecture 2 — Section 2.2.1",
           likely: "high",
         },
         {
-          q: "17. A Web page consists of a base HTML file and 10 JPEG images, all on the same server. With non-persistent connections, how many TCP connections are generated?",
-          options: ["1", "10", "11", "22"],
-          correct: 2,
-          translation:
-            "صفحة ويب فيها ملف HTML أساسي و10 صور JPEG على نفس الخادم. مع الاتصالات غير الدائمة (non-persistent)، كام TCP connection بتتكوّن؟",
+          q: "25. Why does HTTP not need to worry about lost data or how TCP recovers from loss?",
+          options: [
+            "Because HTTP retransmits lost packets itself",
+            "Because TCP provides a reliable data transfer service to HTTP",
+            "Because HTTP encrypts all data",
+            "Because the network never loses HTTP packets",
+          ],
+          correct: 1,
+          translation: "ليه HTTP مش محتاج يقلق على البيانات المفقودة؟",
           explanation:
-            "كل non-persistent connection بتنقل طلب واحد ورد واحد بس، فالـ 11 كائن (1 HTML + 10 صور) بيحتاجوا 11 اتصال. الرقم 1 ده حالة الـ persistent، و22 هو عدد RTTs مش عدد الاتصالات.",
-          tags: ["Non-Persistent Connections", "HTTP"],
+            "TCP بيوفّر reliable data transfer لـ HTTP، فمش شغله يتعامل مع الفقد. ده مثال على فايدة layered architecture.",
+          tags: ["HTTP", "TCP", "Layered architecture"],
+          ref: "Lecture 2 — Section 2.2.1",
+          likely: "high",
+        },
+        {
+          q: "26. HTTP is described as a stateless protocol because:",
+          options: [
+            "HTTP only supports GET requests",
+            "HTTP cannot establish a connection to the server",
+            "HTTP does not use TCP as its transport",
+            "The HTTP server maintains no information about the clients",
+          ],
+          correct: 3,
+          translation: "ليه HTTP بيتوصف بأنه stateless؟",
+          explanation:
+            "السيرفر ما بيبقاش عنده أي معلومات عن الـ clients. لو العميل طلب نفس الـ object مرتين، السيرفر بيبعته تاني لأنه نسي. تعريف مهم.",
+          tags: ["HTTP", "Stateless"],
+          ref: "Lecture 2 — Section 2.2.1",
+          likely: "high",
+        },
+        {
+          q: "27. What is the default port number for HTTP?",
+          options: ["80", "21", "443", "25"],
+          correct: 0,
+          translation: "إيه البورت الافتراضي بتاع HTTP؟",
+          explanation:
+            "80 هو البورت الافتراضي لـ HTTP. 21 لـ FTP، 25 لـ SMTP، 443 لـ HTTPS.",
+          tags: ["HTTP", "Port"],
+          ref: "Lecture 2 — Section 2.2.2 (Non-Persistent step 1)",
+          likely: "high",
+        },
+        {
+          q: "28. As of 2020, the majority of HTTP transactions take place over which version?",
+          options: ["HTTP/1.1", "HTTP/0.9", "HTTP/1.0", "HTTP/2"],
+          correct: 0,
+          translation: "حتى 2020، أغلب معاملات HTTP بتحصل على أي نسخة؟",
+          explanation:
+            "HTTP/1.1 هو الأغلب (RFC 7230). HTTP/2 لسه بيزيد في الـ support.",
+          tags: ["HTTP versions"],
+          ref: "Lecture 2 — Section 2.2.1",
+          likely: "high",
+        },
+        {
+          q: "29. The two types of connections in HTTP are:",
+          options: [
+            "Stateful and stateless connections",
+            "Single and multiple connections",
+            "Local and remote connections",
+            "Non-persistent connections and persistent connections",
+          ],
+          correct: 3,
+          translation: "إيه نوعين الاتصالات في HTTP؟",
+          explanation:
+            "non-persistent (كل request/response في اتصال TCP منفصل) و persistent (اتصال TCP واحد يفضل مفتوح). مقارنة أساسية.",
+          tags: ["HTTP", "Connections"],
           ref: "Lecture 2 — Section 2.2.2",
           likely: "high",
         },
         {
-          q: "18. With non-persistent connections, roughly how long does it take to request and receive one object?",
+          q: "30. RTT (Round-Trip Time) is defined as:",
           options: [
-            "2 RTTs plus the transmission time of the object",
-            "1 RTT plus the transmission time of the object",
-            "3 RTTs plus the transmission time of the object",
-            "Only the transmission time of the object",
+            "The time to send one packet only",
+            "The time it takes for a small packet to travel from client to server and then back to the client",
+            "The time to download a full Web page",
+            "The time for a server to process a request only",
           ],
-          correct: 0,
-          translation:
-            "مع الاتصالات غير الدائمة، تقريبًا كام من الوقت لطلب واستقبال كائن واحد؟",
+          correct: 1,
+          translation: "RTT (Round-Trip Time) بيتعرف إزاي؟",
           explanation:
-            "RTT واحد لإنشاء TCP connection (أول جزئين من three-way handshake) وRTT تاني للطلب واستقبال الكائن، زائد زمن إرسال الملف. بدون الزمنين ده الرقم غلط.",
-          tags: ["RTT", "Response Time", "Non-Persistent Connections"],
+            "وقت باكت صغير يروح من العميل للسيرفر ويرجع. بيشمل propagation، queuing، processing delays. تعريف مهم للمسائل الحسابية.",
+          tags: ["RTT", "Delay"],
+          ref: "Lecture 2 — Section 2.2.2 (RTT definition)",
+          likely: "high",
+        },
+        {
+          q: "31. The first two parts of the three-way handshake take approximately:",
+          options: ["Three RTTs", "Half an RTT", "Two RTTs", "One RTT"],
+          correct: 3,
+          translation:
+            "الجزأين الأولانيين من الـ three-way handshake بياخدوا كام؟",
+          explanation:
+            "واحد RTT (1 RTT). الجزء التالت (acknowledgment من العميل) بيبعت مع الـ HTTP request.",
+          tags: ["RTT", "Three-way handshake"],
           ref: "Lecture 2 — Section 2.2.2 (Figure 2.7)",
           likely: "high",
         },
         {
-          q: "19. What is the round-trip time (RTT)?",
+          q: "32. For non-persistent HTTP, the total response time to fetch the base HTML file is roughly:",
           options: [
-            "The time to transmit all the bits of a file onto the link",
-            "The time it takes a packet to travel from the client to the server only",
-            "The time a server needs to retrieve an object from its disk",
-            "The time it takes a small packet to travel from client to server and then back to the client",
+            "Two RTTs plus the transmission time at the server",
+            "Three RTTs plus the transmission time",
+            "One RTT plus the transmission time",
+            "Half an RTT plus the transmission time",
           ],
-          correct: 3,
-          translation: "ما هو زمن الرحلة الكاملة (RTT)؟",
+          correct: 0,
+          translation:
+            "للـ non-persistent HTTP، إجمالي زمن الـ response لجلب الـ HTML file تقريباً إيه؟",
           explanation:
-            "الـ RTT هو زمن سفر حزمة صغيرة من العميل للخادم ورجوعها للعميل، وبيشمل تأخيرات الانتشار والانتظار في الطوابير والمعالجة. الاختيارات الباقية بتوصف زمن الإرسال أو اتجاه واحد أو زمن الخادم.",
-          tags: ["RTT", "Delay"],
-          ref: "Lecture 2 — Section 2.2.2",
+            "2 RTT (واحد للـ handshake + واحد للـ request/response) + زمن النقل على السيرفر. قانون مهم بييجي في المسائل.",
+          tags: ["HTTP", "RTT", "Non-persistent"],
+          ref: "Lecture 2 — Section 2.2.2 (response time formula)",
           likely: "high",
         },
         {
-          q: "20. What is the default mode of HTTP/1.1?",
-          options: [
-            "Non-persistent connections without pipelining",
-            "Persistent connections with pipelining",
-            "Non-persistent connections with pipelining",
-            "Persistent connections over UDP",
-          ],
-          correct: 1,
-          translation: "ما هو الوضع الافتراضي لـ HTTP/1.1؟",
+          q: "33. If a Web page consists of a base HTML file and 10 JPEG images (11 objects total) and uses non-persistent HTTP, how many TCP connections are generated?",
+          options: ["10", "1", "11", "2"],
+          correct: 2,
+          translation:
+            "لو صفحة ويب فيها 1 HTML + 10 JPEG (11 object) وتستخدم non-persistent HTTP، هيتولد كام TCP connection؟",
           explanation:
-            "الوضع الافتراضي هو persistent connections مع pipelining، يعني الطلبات تتبعت ورا بعض من غير انتظار الردود المعلقة. ممكن ضبط العميل والخادم على non-persistent، لكنه مش الافتراضي.",
-          tags: ["Persistent Connections", "Pipelining"],
+            "11 اتصال، واحد لكل object، لأن في non-persistent كل object بياخد اتصال منفصل. ده عيب أساسي للـ non-persistent.",
+          tags: ["HTTP", "Non-persistent", "TCP connections"],
+          ref: "Lecture 2 — Section 2.2.2 (Non-persistent walk-through)",
+          likely: "high",
+        },
+        {
+          q: "34. The default mode of HTTP uses which type of connections?",
+          options: [
+            "Non-persistent connections",
+            "UDP transport instead of TCP",
+            "Persistent connections with pipelining",
+            "Persistent connections without pipelining",
+          ],
+          correct: 2,
+          translation: "الوضع الافتراضي لـ HTTP بيستخدم إيه؟",
+          explanation:
+            "persistent connections مع pipelining. عشان يقلل الـ RTTs والـ overhead على السيرفر.",
+          tags: ["HTTP", "Persistent", "Pipelining"],
           ref: "Lecture 2 — Section 2.2.2 (Persistent Connections)",
           likely: "high",
         },
         {
-          q: "21. What are the three fields of the request line in an HTTP request message?",
+          q: "35. Pipelining in HTTP means that:",
           options: [
-            "Method, URL, and HTTP version",
-            "Status code, phrase, and HTTP version",
-            "Host, User-agent, and Connection",
-            "Method, header field name, and entity body",
+            "Requests are sent one at a time, waiting for each response",
+            "Requests are sent only after the connection is closed",
+            "Requests for objects can be made back-to-back without waiting for replies to pending requests",
+            "Requests are sent in random order to balance load",
+          ],
+          correct: 2,
+          translation: "Pipelining في HTTP يعني إيه؟",
+          explanation:
+            "الطلبات بتيجي back-to-back من غير استنى الردود. ده بيقلل latency بشكل كبير في persistent connections.",
+          tags: ["HTTP", "Pipelining"],
+          ref: "Lecture 2 — Section 2.2.2 (Persistent Connections)",
+          likely: "high",
+        },
+        {
+          q: "36. The first line of an HTTP request message is called the:",
+          options: [
+            "Status line",
+            "Entity body",
+            "Request line",
+            "Header line",
+          ],
+          correct: 2,
+          translation: "أول سطر في رسالة HTTP request بيتسمى إيه؟",
+          explanation:
+            "request line. الـ status line هو في الـ response، و header lines بتيجي بعد الـ request line.",
+          tags: ["HTTP Request", "Request line"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          q: "37. Which is the most commonly used HTTP request method?",
+          options: ["GET", "PUT", "POST", "DELETE"],
+          correct: 0,
+          translation: "إيه أكتر method شائعة في HTTP request؟",
+          explanation:
+            "GET هي الأكثر استخداماً لما البراوزر بيطلب object في الـ URL. POST للـ forms، PUT لرفع، DELETE للحذف.",
+          tags: ["HTTP Methods", "GET"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          q: "38. The GET method is used when:",
+          options: [
+            "The user uploads a file to a server",
+            "The user fills out a form with sensitive data",
+            "The user deletes an object on the server",
+            "The browser requests an object, with the requested object identified in the URL field",
+          ],
+          correct: 3,
+          translation: "متى بيتستخدم الـ GET method؟",
+          explanation:
+            "لما البراوزر يطلب object بيحدده الـ URL. الـ forms الحساسة بتستخدم POST، رفع الملفات PUT، الحذف DELETE.",
+          tags: ["HTTP Methods", "GET"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          q: "39. The POST method is typically used when:",
+          options: [
+            "The user fills out a form, e.g., provides search words to a search engine",
+            "The browser requests a JPEG image",
+            "The user deletes a server object",
+            "The server requests data from the client",
+          ],
+          correct: 0,
+          translation: "متى بيتستخدم الـ POST method؟",
+          explanation:
+            "لما اليوزر يملا form (زي كلمات البحث في محرك بحث). الـ entity body بيشيل المدخلات.",
+          tags: ["HTTP Methods", "POST"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          q: "40. The Host: header line in an HTTP request specifies:",
+          options: [
+            "The host on which the object resides",
+            "The preferred language of the user",
+            "The connection timeout value",
+            "The browser type making the request",
+          ],
+          correct: 0,
+          translation: "الـ Host: header في HTTP request بيشير لإيه؟",
+          explanation:
+            "الـ host اللي عليه الـ object. مهم لـ Web proxy caches رغم إن اتصال TCP موجود بالفعل.",
+          tags: ["HTTP Headers", "Host"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          q: "41. The Connection: close header line in a request tells the server that:",
+          options: [
+            "The browser wants the server to close the connection after sending the requested object",
+            "The client wants to upgrade to HTTP/2",
+            "The client wants a persistent connection",
+            "The client is about to close the browser",
           ],
           correct: 0,
           translation:
-            "ما هي الحقول الثلاثة لـ request line في رسالة طلب HTTP؟",
+            "الـ Connection: close header في الـ request بيقول للسيرفر إيه؟",
           explanation:
-            "الـ request line فيه method field وURL field وHTTP version field. الاختيار الثاني خاص بالـ status line في رسالة الرد، والثالث أسطر header مش request line.",
-          tags: ["HTTP Request Message", "Request Line"],
-          ref: "Lecture 2 — Section 2.2.3 (Figure 2.8)",
+            "العميل عايز السيرفر يقفل الاتصال بعد ما يبعت الـ object — يعني مش عايز persistent. عكس persistent الافتراضي.",
+          tags: ["HTTP Headers", "Connection"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
           likely: "high",
         },
         {
-          q: "22. In an HTTP request message, which method uses the entity body to carry what the user entered into form fields?",
-          options: ["GET", "HEAD", "POST", "DELETE"],
-          correct: 2,
-          translation:
-            "في رسالة طلب HTTP، أي method بتستخدم الـ entity body لحمل بيانات اللي كتبها المستخدم في حقول الفورم؟",
-          explanation:
-            "الـ POST هي اللي بتحط مدخلات الفورم في الـ entity body. الـ entity body فاضي مع GET، لكن الفورم ممكن كمان يستخدم GET ويحط البيانات في الـ URL. الـ HEAD للـ debugging والـ DELETE لحذف كائن.",
-          tags: ["POST", "GET", "Entity Body"],
-          ref: "Lecture 2 — Section 2.2.3",
-          likely: "high",
-        },
-        {
-          q: "23. Which HTTP status code indicates that the requested document does not exist on the server?",
+          q: "42. An HTTP response message has how many sections?",
           options: [
-            "200 OK",
-            "301 Moved Permanently",
-            "400 Bad Request",
-            "404 Not Found",
+            "Four",
+            "Two",
+            "Three (an initial status line, header lines, and the entity body)",
+            "One",
           ],
-          correct: 3,
-          translation:
-            "أي status code بيدل على إن المستند المطلوب مش موجود على الخادم؟",
+          correct: 2,
+          translation: "رسالة HTTP response فيها كام قسم؟",
           explanation:
-            "404 Not Found معناها الكائن مش موجود على الخادم. 200 نجاح الطلب، 301 انتقل الكائن نهائيًا لـ URL جديد، 400 الطلب غير مفهوم للخادم.",
-          tags: ["Status Codes", "HTTP Response Message"],
+            "3: status line, header lines, entity body. الـ entity body بيشيل الـ object نفسه.",
+          tags: ["HTTP Response", "Structure"],
           ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
           likely: "high",
         },
         {
-          q: "24. Which of the following is NOT defined by an application-layer protocol?",
+          q: "43. The status line of an HTTP response message has how many fields?",
           options: [
-            "The types of messages exchanged, such as request and response",
-            "The physical transmission medium used by the links",
-            "The syntax of the message types and their fields",
-            "The rules for when and how a process sends and responds to messages",
-          ],
-          correct: 1,
-          translation: "أي من التالي لا يُعرَّف بواسطة بروتوكول طبقة التطبيق؟",
-          explanation:
-            "بروتوكول التطبيق بيعرّف أنواع الرسائل وصيغتها (syntax) ومعنى الحقول (semantics) وقواعد الإرسال والرد. الوسط الفيزيائي للإرسال مش من مسؤوليته.",
-          tags: ["Application-Layer Protocol"],
-          ref: "Lecture 2 — Section 2.1.5",
-          likely: "medium",
-        },
-        {
-          q: "25. What is the relationship between HTTP and the Web application?",
-          options: [
-            "HTTP is the entire Web application",
-            "HTTP is only one piece of the Web application, alongside HTML, browsers, and Web servers",
-            "HTTP is a document format standard like HTML",
-            "HTTP is a browser program running on the client host",
-          ],
-          correct: 1,
-          translation: "ما العلاقة بين HTTP وتطبيق الويب؟",
-          explanation:
-            "HTTP بروتوكول طبقة التطبيق وهو جزء مهم فقط من تطبيق الويب اللي فيه كمان معيار HTML والمتصفحات والخوادم. HTML هو معيار تنسيق المستندات مش HTTP.",
-          tags: ["Network Application vs Protocol", "HTTP"],
-          ref: "Lecture 2 — Section 2.1.5",
-          likely: "medium",
-        },
-        {
-          q: "26. Why is the Last-Modified header line critical in HTTP response messages?",
-          options: [
-            "It tells the client how many bytes the object contains",
-            "It indicates the time the response message was sent",
-            "It is critical for object caching in the local client and in proxy servers",
-            "It tells the client to close the TCP connection",
+            "Four",
+            "Two",
+            "Three (protocol version, status code, status message)",
+            "One",
           ],
           correct: 2,
-          translation: "ليه سطر Last-Modified مهم في رسائل رد HTTP؟",
+          translation: "الـ status line في HTTP response فيها كام field؟",
           explanation:
-            "الـ Last-Modified بيحدد وقت إنشاء الكائن أو آخر تعديل له، وهو مهم لعمل caching عند العميل وفي proxy servers. عدد البايتات في Content-Length ووقت الرد في Date وإغلاق الاتصال في Connection: close.",
-          tags: ["HTTP Headers", "Caching"],
+            "3: protocol version, status code, status message. مثال: HTTP/1.1 200 OK.",
+          tags: ["HTTP Response", "Status line"],
           ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "44. What does the HTTP status code 200 OK mean?",
+          options: [
+            "The requested object has been permanently moved",
+            "The requested document does not exist",
+            "The request succeeded and the information is returned in the response",
+            "The request could not be understood by the server",
+          ],
+          correct: 2,
+          translation: "إيه معنى status code 200 OK؟",
+          explanation:
+            "الطلب نجح والمعلومات (الـ object) بترجع في الـ response. أكتر كود شائع.",
+          tags: ["HTTP Status Codes", "200 OK"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "45. What does the HTTP status code 301 Moved Permanently mean?",
+          options: [
+            "The requested object has been permanently moved; the new URL is specified in the Location: header",
+            "The request could not be understood",
+            "The HTTP protocol version is not supported",
+            "The request succeeded, info returned",
+          ],
+          correct: 0,
+          translation: "إيه معنى status code 301 Moved Permanently؟",
+          explanation:
+            "الـ object اتنقل بشكل دائم، والـ URL الجديد في الـ Location: header. العميل بيجيبه أوتوماتيك.",
+          tags: ["HTTP Status Codes", "301"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "46. What does the HTTP status code 400 Bad Request mean?",
+          options: [
+            "The object was permanently moved",
+            "The request succeeded",
+            "The requested document does not exist",
+            "A generic error code indicating that the request could not be understood by the server",
+          ],
+          correct: 3,
+          translation: "إيه معنى status code 400 Bad Request؟",
+          explanation:
+            "خطأ عام إن السيرفر ما فهمش الطلب. مش نجاح ولا نقل ولا Not Found.",
+          tags: ["HTTP Status Codes", "400"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "47. What does the HTTP status code 404 Not Found mean?",
+          options: [
+            "The requested document does not exist on this server",
+            "The request succeeded",
+            "The HTTP version is not supported",
+            "The server is down for maintenance",
+          ],
+          correct: 0,
+          translation: "إيه معنى status code 404 Not Found؟",
+          explanation:
+            "الـ document مش موجود على السيرفر ده. مش النجاح ولا السيرفر down ولا version unsupported.",
+          tags: ["HTTP Status Codes", "404"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "48. What does the HTTP status code 505 HTTP Version Not Supported mean?",
+          options: [
+            "The requested document does not exist",
+            "The requested HTTP protocol version is not supported by the server",
+            "The requested object has been permanently moved",
+            "The request succeeded, info returned",
+          ],
+          correct: 1,
+          translation: "إيه معنى status code 505 HTTP Version Not Supported؟",
+          explanation:
+            "نسخة HTTP اللي العميل بيطلبها مش مدعومة من السيرفر. غالباً عشان عميل بيطلب HTTP/2 على سيرفر قديم.",
+          tags: ["HTTP Status Codes", "505"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "49. The Last-Modified: header line in an HTTP response is critical for:",
+          options: [
+            "Object caching, both in the local client and in network cache servers (proxy servers)",
+            "Encrypting the connection",
+            "Specifying the browser type",
+            "Indicating the request method",
+          ],
+          correct: 0,
+          translation: "الـ Last-Modified: header في الـ response مهم لإيه؟",
+          explanation:
+            "caching محلي و في proxy servers. بيشير لمتى آخر تعديل للـ object — ده اللي بيخلي الـ cache يحدد لو الـ object اتغير.",
+          tags: ["HTTP Headers", "Last-Modified", "Caching"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          q: "50. Transport protocol services are organized along how many dimensions in this section?",
+          options: ["Four", "Three", "Two", "Five"],
+          correct: 0,
+          translation: "خدمات بروتوكولات النقل متقسمة كام بعد في القسم ده؟",
+          explanation:
+            "4 أبعاد: reliable data transfer, throughput, timing, security. نقطة مهمة الدكتور بيذكرها في الـ summary.",
+          tags: ["Transport Services", "Dimensions"],
+          ref: "Lecture 2 — Section 2.1.4 (Services Not Provided)",
           likely: "medium",
         },
         {
-          q: "27. According to the lecture, why is the Host header line required in an HTTP request message?",
-          options: [
-            "Because there is no TCP connection to the host",
-            "Because the server needs it to choose the HTTP version",
-            "Because it specifies the browser type making the request",
-            "Because it is required by Web proxy caches",
-          ],
+          q: "51. How many important network applications does the book focus on in this chapter?",
+          options: ["Six", "Four", "Three", "Five"],
           correct: 3,
-          translation: "حسب المحاضرة، ليه سطر Host مطلوب في رسالة طلب HTTP؟",
+          translation: "الكتاب بيركز على كام تطبيق شبكة مهم في الفصل ده؟",
           explanation:
-            "رغم إن فيه TCP connection للـ host، المعلومة مطلوبة لـ Web proxy caches. نوع المتصفح بيحدده User-agent، والإصدار موجود في request line.",
-          tags: ["HTTP Headers", "Host Header"],
+            "5 تطبيقات: الـ Web، البريد الإلكتروني، DNS، P2P، والبث المرئي. نقطة مرقمة في القسم 2.1.6.",
+          tags: ["Network Applications"],
+          ref: "Lecture 2 — Section 2.1.6",
+          likely: "medium",
+        },
+        {
+          q: "52. The original version of HTTP is called:",
+          options: ["HTTP/0.9", "HTTP/1.1", "HTTP/2", "HTTP/1.0"],
+          correct: 3,
+          translation: "النسخة الأصلية من HTTP بتتسمى إيه؟",
+          explanation:
+            "HTTP/1.0 هو الأصلي (RFC 1945، early 1990s). HTTP/1.1 الأغلب حالياً، HTTP/2 الجديد.",
+          tags: ["HTTP versions"],
+          ref: "Lecture 2 — Section 2.2.1",
+          likely: "medium",
+        },
+        {
+          q: "53. The three-way handshake used to establish a TCP connection involves how many TCP segments?",
+          options: ["Two", "Three", "Four", "One"],
+          correct: 1,
+          translation: "الـ three-way handshake بيشمل كام TCP segment؟",
+          explanation:
+            "3 segments: client يبعت، server يرد بـ acknowledge، client يـ acknowledge تاني. ده عشان كده اسمه three-way.",
+          tags: ["TCP", "Three-way handshake"],
+          ref: "Lecture 2 — Section 2.2.2 (Figure 2.7)",
+          likely: "medium",
+        },
+        {
+          q: "54. The request line of an HTTP request message has how many fields?",
+          options: ["Two", "Four", "One", "Three"],
+          correct: 3,
+          translation: "الـ request line فيها كام field؟",
+          explanation:
+            "3: method field (GET/POST/...)، URL field، HTTP version field. تعريف مهم.",
+          tags: ["HTTP Request", "Request line"],
           ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
           likely: "medium",
         },
         {
-          q: "28. What control does the application developer have on the transport-layer side of the socket?",
+          q: "55. The HEAD method is often used by application developers for:",
           options: [
-            "Full control over how TCP is implemented in the operating system",
-            "The choice of transport protocol and perhaps a few parameters such as maximum buffer and segment sizes",
-            "Control over the routers that carry the packets",
-            "No control at all, even over the choice of transport protocol",
+            "Uploading files",
+            "Deleting objects",
+            "Encrypting the connection",
+            "Debugging",
           ],
-          correct: 1,
-          translation:
-            "ما مقدار تحكم مطوّر التطبيق في جانب طبقة النقل من الـ socket؟",
-          explanation:
-            "المطوّر بيتحكم في كل حاجة في جانب التطبيق، لكن في جانب النقل تحكمه محدود: اختيار بروتوكول النقل وربما ضبط بعض البارامترات زي حجم الـ buffer والـ segment. الباقي بيتحكم فيه نظام التشغيل.",
-          tags: ["Socket", "Application Developer Control"],
-          ref: "Lecture 2 — Section 2.1.2 (Figure 2.3)",
+          correct: 3,
+          translation: "الـ HEAD method بيتستخدم لإيه غالبا؟",
+          explanation: "debugging. مش لرفع أو حذف أو تشفير، ده شغل المطورين.",
+          tags: ["HTTP Methods", "HEAD"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
           likely: "medium",
         },
-
         {
-          type: "essay",
-          q: "1. Compare the client-server architecture with the P2P architecture.",
-          translation: "قارن بين معمارية client-server ومعمارية P2P.",
-          answer:
-            "Client-server:\n" +
-            "- There is an always-on host (the server) that services requests from many clients.\n" +
-            "- Clients do not communicate directly with each other.\n" +
-            "- The server has a fixed, well-known IP address.\n" +
-            "- A data center is often used to create a powerful virtual server.\n" +
-            "- Examples: Web, FTP, Telnet, e-mail.\n" +
-            "P2P:\n" +
-            "- Minimal (or no) reliance on dedicated servers in data centers.\n" +
-            "- Direct communication between pairs of intermittently connected hosts called peers, owned by users.\n" +
-            "- Self-scalability: each peer adds service capacity while generating workload.\n" +
-            "- Cost effective, but faces challenges of security, performance, and reliability.\n" +
-            "- Example: BitTorrent.",
-          tags: ["Client-Server", "P2P", "Application Architecture"],
-          ref: "Lecture 2 — Section 2.1.1 (Figure 2.2)",
-          likely: "high",
+          q: "56. The PUT method allows a user to:",
+          options: [
+            "Request a French version of an object",
+            "Close the TCP connection",
+            "Delete an object on the server",
+            "Upload an object to a specific path (directory) on a specific Web server",
+          ],
+          correct: 3,
+          translation: "الـ PUT method بيتيح للمستخدم يعمل إيه؟",
+          explanation:
+            "رفع object لمسار محدد على السيرفر. DELETE للحذف، Accept-language للغة، Connection: close لقفل الاتصال.",
+          tags: ["HTTP Methods", "PUT"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "medium",
+        },
+        {
+          q: "57. The User-agent: header line specifies:",
+          options: [
+            "The size of the requested object",
+            "The host name of the server",
+            "The state of the connection",
+            "The user agent, i.e., the browser type making the request",
+          ],
+          correct: 3,
+          translation: "الـ User-agent: header بيشير لإيه؟",
+          explanation:
+            "نوع البراوزر (زي Mozilla/5.0). مفيد عشان السيرفر يبعت نسخ مختلفة من نفس الـ object لأنواع مختلفة.",
+          tags: ["HTTP Headers", "User-agent"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "medium",
+        },
+        {
+          q: "58. The Accept-language: header line indicates:",
+          options: [
+            "The user prefers to receive a particular language version of the object, if available",
+            "The request method being used",
+            "The server software version",
+            "The browser type making the request",
+          ],
+          correct: 0,
+          translation: "الـ Accept-language: header بيشير لإيه؟",
+          explanation:
+            "تفضيل لغة اليوزر (زي fr للفرنسية). لو موجودة السيرفر بيبعتها، غير كده بيبعت النسخة الافتراضية. ده content negotiation header.",
+          tags: ["HTTP Headers", "Accept-language"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "medium",
+        },
+        {
+          q: "59. The Content-Length: header line indicates:",
+          options: [
+            "The number of bytes in the object being sent",
+            "The time when the object was created",
+            "The server's name",
+            "The type of the object in the entity body",
+          ],
+          correct: 0,
+          translation: "الـ Content-Length: header بيشير لإيه؟",
+          explanation:
+            "عدد البايتس في الـ object. Last-Modified للوقت، Content-Type للنوع، Server لاسم السيرفر.",
+          tags: ["HTTP Headers", "Content-Length"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "medium",
+        },
+        {
+          q: "60. The Content-Type: header line indicates:",
+          options: [
+            "The number of bytes in the object",
+            "The browser type making the request",
+            "The type of the object in the entity body (e.g., HTML text)",
+            "The server's hostname",
+          ],
+          correct: 2,
+          translation: "الـ Content-Type: header بيشير لإيه؟",
+          explanation:
+            "نوع الـ object (مثلاً text/html). Content-Length للحجم، User-agent للبراوزر، Host للسيرفر.",
+          tags: ["HTTP Headers", "Content-Type"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "medium",
         },
         {
           type: "essay",
-          q: "2. Define the client process and the server process. Can a process be both?",
+          q: "1. Compare and contrast the services provided by TCP and UDP to applications.",
           translation:
-            "عرّف عملية العميل (client process) وعملية الخادم (server process). وهل ممكن عملية واحدة تكون الاتنين؟",
+            "قارن وبيّن الفروق بين الخدمات اللي TCP و UDP بيوفّروهاها للتطبيقات.",
           answer:
-            "In the context of a communication session between a pair of processes:\n" +
-            "- The process that initiates the communication (initially contacts the other process) is the client.\n" +
-            "- The process that waits to be contacted to begin the session is the server.\n" +
-            "Yes, a process can be both: in P2P file sharing a process can both upload and download files.\n" +
-            "However, in any given session one process is labeled the client and the other the server.\n" +
-            "Example: Peer A asks Peer B for a file, so Peer A is the client and Peer B is the server in that session.",
-          tags: ["Client Process", "Server Process"],
-          ref: "Lecture 2 — Section 2.1.2",
+            "TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are the two transport protocols the Internet provides to applications.\nTCP service model includes:\n1. Connection-oriented service: client and server exchange control information via handshaking before application messages flow; the connection is full-duplex and must be torn down after use.\n2. Reliable data transfer: TCP delivers all data without error, in proper order, with no missing or duplicate bytes.\n3. Congestion-control mechanism: throttles sender when network is congested, benefiting the Internet as a whole.\n\nUDP is a no-frills, lightweight protocol:\n1. Connectionless: no handshaking before communication.\n2. Unreliable data transfer: no guarantee messages will reach the receiving process; messages may arrive out of order.\n3. No congestion-control mechanism: the sender can pump data into the network layer at any rate.\n\nKey differences: TCP is reliable and connection-oriented; UDP is fast and connectionless. TCP is used for e-mail, Web, and file transfer; UDP is preferred for Internet telephony and other applications tolerant of some loss.",
+          tags: ["TCP", "UDP", "Comparison"],
+          ref: "Lecture 2 — Section 2.1.4 (TCP Services, UDP Services)",
           likely: "high",
         },
         {
           type: "essay",
-          q: "3. What is a socket? Explain the process-house analogy and what the application developer controls on each side of the socket.",
+          q: "2. Explain TCP's connection-oriented service in detail.",
+          translation: "اشرح خدمة الـ connection-oriented في TCP بالتفصيل.",
+          answer:
+            "TCP's connection-oriented service requires the client and server to exchange transport-layer control information with each other before application-level messages begin to flow.\nThis handshaking procedure alerts the client and server, allowing them to prepare for an incoming onslaught of packets.\nAfter the handshaking phase, a TCP connection is said to exist between the sockets of the two processes.\nThe connection is full-duplex, meaning both processes can send messages to each other over the connection at the same time.\nWhen the application finishes sending messages, it must explicitly tear down the connection. Connection-oriented service is implemented in detail in Chapter 3.",
+          tags: ["TCP", "Connection-oriented", "Handshaking"],
+          ref: "Lecture 2 — Section 2.1.4 (Connection-oriented service)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Explain TCP's reliable data transfer service and what it guarantees to the application.",
           translation:
-            "ما هو الـ socket؟ اشرح تشبيه العملية بالبيت، وما الذي يتحكم فيه مطوّر التطبيق على كل جانب من الـ socket؟",
+            "اشرح خدمة النقل الموثوق في TCP وإيه اللي بتضمنه للتطبيق.",
           answer:
-            "A socket is the software interface through which a process sends messages into, and receives messages from, the network.\n" +
-            "It is the interface between the application layer and the transport layer within a host, also called the API between the application and the network.\n" +
-            "Analogy: a process is like a house and its socket is like its door. The sender pushes the message out of its door and assumes a transportation infrastructure on the other side delivers it to the door of the destination process.\n" +
-            "Control: the developer controls everything on the application-layer side of the socket. On the transport-layer side the developer only controls (1) the choice of transport protocol and (2) perhaps a few parameters such as maximum buffer and segment sizes. The rest is controlled by the operating system.",
-          tags: ["Socket", "API"],
-          ref: "Lecture 2 — Section 2.1.2 (Figure 2.3)",
+            "TCP's reliable data transfer service guarantees that the communicating processes can rely on TCP to deliver all data sent without error and in the proper order.\nWhen one side of the application passes a stream of bytes into a socket, it can count on TCP to deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.\nThis means applications built on TCP do not need to worry about lost packets, reordering, or duplication — TCP handles all of that internally.\nTCP also includes a congestion-control mechanism, but this is a service for the general welfare of the Internet rather than for the direct benefit of the communicating processes.",
+          tags: ["TCP", "Reliable data transfer"],
+          ref: "Lecture 2 — Section 2.1.4 (Reliable data transfer service)",
           likely: "high",
         },
         {
           type: "essay",
-          q: "4. Explain how a process on one host is addressed so that another host can send it messages.",
+          q: "4. What services are NOT provided by today's Internet transport protocols, and how do time-sensitive applications cope with this limitation?",
           translation:
-            "اشرح كيف يتم تحديد عنوان عملية (process) على host لكي يرسل لها host آخر رسائل.",
+            "إيه الخدمات اللي بروتوكولات نقل الإنترنت مش بتوفّرها، وإزاي التطبيقات الحساسة للزمن بتتعامل مع القصر ده؟",
           answer:
-            "Two pieces of information must be specified:\n" +
-            "(1) The address of the host, which in the Internet is its IP address (a 32-bit quantity that uniquely identifies the host).\n" +
-            "(2) An identifier that specifies the receiving process (the receiving socket) in the destination host, which is the destination port number.\n" +
-            "This is needed because a host can run many network applications.\n" +
-            "Examples: a Web server is identified by port 80, and a mail server using SMTP by port 25.",
-          tags: ["Addressing Processes", "IP Address", "Port Number"],
-          ref: "Lecture 2 — Section 2.1.2",
+            "Transport protocol services are organized along four dimensions: reliable data transfer, throughput, timing, and security.\nTCP provides reliable end-to-end data transfer, and TCP can be enhanced at the application layer with TLS to provide security.\nHowever, today's Internet transport protocols conspicuously do NOT provide any throughput or timing guarantees.\nDespite this, time-sensitive applications such as Internet telephony can run on the Internet because they have been designed to cope, to the greatest extent possible, with this lack of guarantee.\nThese applications often work fairly well, but the Internet cannot provide any timing or throughput guarantees to them — the service is best-effort, not guaranteed.",
+          tags: ["Transport Services", "Throughput", "Timing"],
+          ref: "Lecture 2 — Section 2.1.4 (Services Not Provided)",
           likely: "high",
         },
         {
           type: "essay",
-          q: "5. Explain the four dimensions of transport services available to applications, with an example for each.",
-          translation:
-            "اشرح الأبعاد الأربعة لخدمات النقل المتاحة للتطبيقات مع مثال لكل بُعد.",
+          q: "5. Define an application-layer protocol and list what it defines.",
+          translation: "عرّف بروتوكول طبقة التطبيق واكتب اللي بحدده.",
           answer:
-            "1) Reliable data transfer: guarantees data sent by one end is delivered correctly and completely to the other end. Needed by e-mail, file transfer, Web documents, financial applications. Loss-tolerant applications such as conversational audio/video can live without it.\n" +
-            "2) Throughput: the rate at which the sending process can deliver bits to the receiving process. Bandwidth-sensitive applications (e.g., Internet telephony encoding voice at 32 kbps) need a guaranteed rate; elastic applications (e-mail, file transfer, Web) use whatever throughput is available.\n" +
-            "3) Timing: a guarantee such as every bit arriving at the receiver's socket no more than 100 msec later. Needed by real-time applications such as Internet telephony, virtual environments, teleconferencing, and multiplayer games.\n" +
-            "4) Security: for example, encrypting data at the sender and decrypting it at the receiver to provide confidentiality, plus data integrity and end-point authentication.",
-          tags: ["Transport Services", "Elastic", "Bandwidth-Sensitive"],
-          ref: "Lecture 2 — Section 2.1.3",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "6. Compare the services provided by TCP and UDP.",
-          translation: "قارن بين الخدمات التي يقدمها TCP وUDP.",
-          answer:
-            "TCP:\n" +
-            "- Connection-oriented: client and server exchange control information (handshaking) before application messages flow; the connection is full-duplex and must be torn down when finished.\n" +
-            "- Reliable data transfer: delivers all data without error and in the proper order, with no missing or duplicate bytes.\n" +
-            "- Congestion control: throttles the sender when the network is congested.\n" +
-            "UDP:\n" +
-            "- No-frills, lightweight protocol with minimal services.\n" +
-            "- Connectionless: no handshaking.\n" +
-            "- Unreliable data transfer: no guarantee a message reaches the receiver, and messages may arrive out of order.\n" +
-            "- No congestion control: the sender can send at any rate it pleases.\n" +
-            "Neither provides throughput or timing guarantees.",
-          tags: ["TCP", "UDP"],
-          ref: "Lecture 2 — Section 2.1.4",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "7. What does an application-layer protocol define? Distinguish between a network application and an application-layer protocol using the Web as an example.",
-          translation:
-            "ماذا يعرّف بروتوكول طبقة التطبيق؟ وفرّق بين تطبيق الشبكة وبروتوكول طبقة التطبيق مستخدمًا الويب كمثال.",
-          answer:
-            "An application-layer protocol defines how an application's processes, running on different end systems, pass messages to each other. It defines:\n" +
-            "- The types of messages exchanged (e.g., request and response messages).\n" +
-            "- The syntax of the message types (the fields and how they are delineated).\n" +
-            "- The semantics of the fields (the meaning of the information).\n" +
-            "- Rules for determining when and how a process sends messages and responds to messages.\n" +
-            "Difference: an application-layer protocol is only one piece of a network application. The Web application consists of HTML (a document format standard), browsers (Chrome, Internet Explorer), Web servers (Apache, Microsoft), and the application-layer protocol HTTP, which defines the format and sequence of messages exchanged between browser and server.\n" +
-            "Some protocols are public (HTTP is specified in RFCs); others are proprietary (Skype).",
-          tags: ["Application-Layer Protocol", "HTTP", "RFC"],
+            "An application-layer protocol defines how an application's processes, running on different end systems, pass messages to each other.\nIn particular, an application-layer protocol defines:\n1. The types of messages exchanged, for example request messages and response messages.\n2. The syntax of the various message types, such as the fields in the message and how the fields are delineated.\n3. The semantics of the fields, i.e., the meaning of the information in the fields.\n4. Rules for determining when and how a process sends messages and responds to messages.\nSome application-layer protocols (such as HTTP) are specified in RFCs and are therefore in the public domain; others (such as Skype's) are proprietary and not publicly available.",
+          tags: ["Application-Layer Protocols", "Definition"],
           ref: "Lecture 2 — Section 2.1.5",
           likely: "high",
         },
         {
           type: "essay",
-          q: "8. Explain what HTTP is, how it uses TCP, and why it is called a stateless protocol.",
+          q: "6. Distinguish between a network application and an application-layer protocol, with examples.",
           translation:
-            "اشرح ما هو HTTP، وكيف يستخدم TCP، ولماذا يسمى stateless protocol.",
+            "بيّن الفرق بين network application و application-layer protocol، مع أمثلة.",
           answer:
-            "HTTP (Hyper Text Transfer Protocol) is the Web's application-layer protocol. It is implemented in two programs, a client program and a server program, that exchange HTTP messages (request and response). The browser sends HTTP request messages for the objects in a page, and the server responds with HTTP response messages containing the objects.\n" +
-            "HTTP uses TCP as its underlying transport protocol: the client first initiates a TCP connection with the server, then both sides access TCP through their sockets. TCP provides reliable data transfer, so HTTP does not need to worry about lost data or reordering.\n" +
-            "HTTP is stateless because the server sends requested files without storing any state information about the client. If a client asks for the same object twice, the server resends it as if it had forgotten what it did earlier.\n" +
-            "The Web uses the client-server architecture: the server is always on with a fixed IP address.",
-          tags: ["HTTP", "TCP", "Stateless"],
+            "A network application is a complete system that provides a service to users; an application-layer protocol is only one piece (albeit a very important piece) of a network application.\nExample 1 - The Web: The Web is a client-server application that allows users to obtain documents on demand. It includes a standard for document formats (HTML), Web browsers (Chrome, Internet Explorer), Web servers (Apache, Microsoft servers), and the HTTP application-layer protocol. HTTP defines only the format and sequence of messages exchanged between browser and Web server.\nExample 2 - Netflix: Netflix's video service includes servers that store and transmit videos, other servers that manage billing and other client functions, clients (the Netflix app on your smartphone, tablet, or computer), and the DASH application-layer protocol. DASH defines only the format and sequence of messages exchanged between a Netflix server and client.\nThus, an application-layer protocol is one component of the larger network application.",
+          tags: [
+            "Network Applications",
+            "Application-Layer Protocols",
+            "Comparison",
+          ],
+          ref: "Lecture 2 — Section 2.1.5 (Examples paragraph)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the key characteristics of HTTP, including its architecture, transport protocol, default port, and state.",
+          translation:
+            "اشرح الخصائص الأساسية لـ HTTP، بما فيها الـ architecture، البروتوكول التحتي، البورت الافتراضي، والـ state.",
+          answer:
+            "HTTP (Hyper Text Transfer Protocol) is the Web's application-layer protocol, defined in RFCs 1945, 7230, and 7540.\nKey characteristics:\n1. Client-server architecture: client program (browser) and server program execute on different end systems and talk to each other by exchanging HTTP messages. The Web server is always on, with a fixed IP address, and services requests from potentially millions of different browsers.\n2. Uses TCP as its underlying transport protocol (not UDP). The HTTP client first initiates a TCP connection with the server.\n3. Default port number is 80.\n4. Stateless: the server maintains no state information about the client. If a client asks for the same object twice in a few seconds, the server resends the object because it has forgotten the previous request.\n5. Original version is HTTP/1.0 (early 1990s); as of 2020, the majority of HTTP transactions take place over HTTP/1.1; HTTP/2 is increasingly supported.",
+          tags: ["HTTP", "Architecture", "TCP", "Port 80", "Stateless"],
           ref: "Lecture 2 — Section 2.2.1",
           likely: "high",
         },
         {
           type: "essay",
-          q: "9. Compare non-persistent and persistent HTTP connections. Mention the disadvantages of non-persistent connections.",
+          q: "8. Define the terms Web page, object, base HTML file, and URL, and explain how they are related.",
           translation:
-            "قارن بين اتصالات HTTP غير الدائمة (non-persistent) والدائمة (persistent). واذكر عيوب الاتصالات غير الدائمة.",
+            "عرّف المصطلحات: Web page، object، base HTML file، URL، واشرح العلاقة بينهم.",
           answer:
-            "Non-persistent: each request/response pair is sent over a separate TCP connection; each connection is closed after the server sends the object and transports exactly one request and one response.\n" +
-            "Persistent: the server leaves the TCP connection open after sending a response, so subsequent requests and responses between the same client and server (an entire page, or even multiple pages on the same server) use the same connection. Requests can be made back-to-back without waiting for replies (pipelining). The server closes the connection after a configurable timeout of inactivity. This is the default mode of HTTP.\n" +
-            "Disadvantages of non-persistent connections:\n" +
-            "1) A brand-new connection must be established and maintained for each object, with TCP buffers and variables allocated in both client and server, a burden on a busy Web server.\n" +
-            "2) Each object suffers a delivery delay of two RTTs: one to establish the TCP connection and one to request and receive the object.",
-          tags: ["Persistent", "Non-Persistent", "Pipelining"],
-          ref: "Lecture 2 — Section 2.2.2",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "10. Draw and label the general format of an HTTP request message, and explain the header lines of a typical example.",
-          translation:
-            "ارسم وسمِّ الصيغة العامة لرسالة طلب HTTP، واشرح أسطر الـ header في مثال نموذجي.",
-          answer:
-            "General format (Figure 2.8): request line (method, sp, URL, sp, version, cr, lf), then header lines (header field name: sp value, cr, lf, repeated), then a blank line (cr, lf), then the entity body.\n" +
-            "Example:\n" +
-            "GET /somedir/page.html HTTP/1.1\n" +
-            "Host: www.someschool.edu\n" +
-            "Connection: close\n" +
-            "User-agent: Mozilla/5.0\n" +
-            "Accept-language: fr\n" +
-            "Explanation:\n" +
-            "- Request line: method GET, URL /somedir/page.html, version HTTP/1.1. The method can be GET, POST, HEAD, PUT, or DELETE.\n" +
-            "- Host: specifies the host on which the object resides (required by Web proxy caches).\n" +
-            "- Connection: close: the browser does not want persistent connections.\n" +
-            "- User-agent: the browser type making the request, so the server can send different versions of an object.\n" +
-            "- Accept-language: the user prefers a French version if it exists.\n" +
-            "The entity body is empty with GET and is used with POST.",
-          tags: ["HTTP Request Message", "Headers"],
-          ref: "Lecture 2 — Section 2.2.3 (Figure 2.8)",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "11. Draw and label the general format of an HTTP response message, and list the common status codes with their meanings.",
-          translation:
-            "ارسم وسمِّ الصيغة العامة لرسالة رد HTTP، واذكر أشهر الـ status codes ومعانيها.",
-          answer:
-            "General format (Figure 2.9): status line (version, sp, status code, sp, phrase, cr, lf), then header lines, then a blank line, then the entity body, which contains the requested object itself.\n" +
-            "Header lines in the example: Connection (the server will close the TCP connection), Date (when the response was created and sent), Server (e.g., Apache), Last-Modified (when the object was created or last modified, critical for caching), Content-Length (number of bytes in the object), Content-Type (type of the object, e.g., text/html).\n" +
-            "Common status codes:\n" +
-            "- 200 OK: request succeeded and the information is returned.\n" +
-            "- 301 Moved Permanently: the object has moved; the new URL is in the Location header.\n" +
-            "- 400 Bad Request: generic error, the request could not be understood by the server.\n" +
-            "- 404 Not Found: the requested document does not exist on this server.\n" +
-            "- 505 HTTP Version Not Supported: the requested HTTP version is not supported by the server.",
-          tags: ["HTTP Response Message", "Status Codes"],
-          ref: "Lecture 2 — Section 2.2.3 (Figure 2.9)",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "12. (Problem) A Web page consists of a base HTML file and 10 JPEG images on the same server. The browser uses non-persistent connections, one after another (serial). RTT = 50 msec and file transmission times are negligible. How many TCP connections are generated and what is the total time?",
-          translation:
-            "مسألة: صفحة ويب فيها ملف HTML أساسي و10 صور JPEG على نفس الخادم. المتصفح يستخدم اتصالات non-persistent بالتتابع. RTT = 50 ملي ثانية وزمن إرسال الملفات مهمل. كم عدد اتصالات TCP وما الزمن الكلي؟",
-          answer:
-            "Given: 1 base HTML file + 10 JPEG images, non-persistent, serial, RTT = 50 msec, transmission time ~ 0.\n" +
-            "Number of objects = 1 + 10 = 11, and each non-persistent connection carries one object, so 11 TCP connections.\n" +
-            "Each object takes 2 RTTs (1 RTT for the TCP connection + 1 RTT for the request/response).\n" +
-            "Total time = 11 x 2 x RTT = 22 x 50 = 1100 msec.",
-          tags: ["Calculation", "Non-Persistent", "RTT"],
-          ref: "Lecture 2 — Section 2.2.2",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "13. (Problem) A client requests a single HTML file using a non-persistent connection. RTT = 80 msec and the transmission time of the file at the server is 20 msec. Find the response time.",
-          translation:
-            "مسألة: عميل يطلب ملف HTML واحد باستخدام اتصال non-persistent. RTT = 80 ملي ثانية وزمن إرسال الملف عند الخادم 20 ملي ثانية. أوجد زمن الاستجابة.",
-          answer:
-            "Given: RTT = 80 msec, transmission time = 20 msec.\n" +
-            "Law: response time = 2 RTTs + transmission time of the file (1 RTT to establish the TCP connection, 1 RTT for the request and the start of the response).\n" +
-            "Response time = 2 x 80 + 20 = 180 msec.",
-          tags: ["Calculation", "RTT", "Response Time"],
-          ref: "Lecture 2 — Section 2.2.2 (Figure 2.7)",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "14. (Problem) A Web page has a base HTML file and 7 images on one server. How many objects does it have and how many TCP connections are needed with (a) non-persistent connections and (b) persistent connections? If RTT = 40 msec, serial downloads, and negligible transmission time, what is the total time for case (a)?",
-          translation:
-            "مسألة: صفحة ويب فيها ملف HTML أساسي و7 صور على خادم واحد. كم كائن فيها وكم اتصال TCP مطلوب مع (أ) non-persistent و(ب) persistent؟ وإذا كان RTT = 40 ملي ثانية والتحميل بالتتابع وزمن الإرسال مهمل، فما الزمن الكلي في الحالة (أ)؟",
-          answer:
-            "Objects = 1 base HTML + 7 images = 8 objects.\n" +
-            "(a) Non-persistent: each connection carries one request and one response, so 8 TCP connections.\n" +
-            "(b) Persistent: the entire page is sent over a single persistent TCP connection, so 1 connection.\n" +
-            "Time for (a): each object needs 2 RTTs, so total = 8 x 2 x 40 = 640 msec.",
-          tags: ["Calculation", "Persistent", "Non-Persistent"],
-          ref: "Lecture 2 — Section 2.2.2",
-          likely: "high",
-        },
-        {
-          type: "essay",
-          q: "15. (Problem) For the URL cairoUniv.edu/engineering/lab/map.png, identify the hostname and the path name. Also, how many objects are in a page made of a base HTML file and 4 images?",
-          translation:
-            "مسألة: للـ URL المذكور حدد الـ hostname والـ path name. وكم كائن في صفحة مكونة من ملف HTML أساسي و4 صور؟",
-          answer:
-            "Each URL has two components: the hostname of the server that houses the object and the object's path name.\n" +
-            "URL: cairoUniv.edu/engineering/lab/map.png\n" +
-            "Hostname = cairoUniv.edu\n" +
-            "Path name = /engineering/lab/map.png\n" +
-            "Number of objects = base HTML file + 4 images = 5 objects (an object is a file addressable by a single URL).",
-          tags: ["Calculation", "URL", "Web Objects"],
+            "A Web page (also called a document) consists of objects.\nAn object is a file — such as an HTML file, a JPEG image, a JavaScript file, a CSS style sheet file, or a video clip — that is addressable by a single URL.\nMost Web pages consist of a base HTML file and several referenced objects.\nFor example, if a Web page contains HTML text and five JPEG images, then the Web page has six objects: the base HTML file plus the five images.\nThe base HTML file references the other objects in the page with the objects' URLs.\nEach URL has two components: the hostname of the server that houses the object, and the object's path name.\nExample: the URL www.someSchool.edu/someDepartment/picture.gif has www.someSchool.edu as the hostname and /someDepartment/picture.gif as the path name.",
+          tags: ["Web Page", "Objects", "Base HTML", "URL"],
           ref: "Lecture 2 — Section 2.2.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Explain why HTTP is called a stateless protocol and what this means for the server.",
+          translation:
+            "اشرح ليه HTTP بيتوصف بأنه stateless وإيه معنى ده للسيرفر.",
+          answer:
+            "HTTP is called a stateless protocol because the server sends requested files to clients without storing any state information about the client.\nIf a particular client asks for the same object twice in a period of a few seconds, the server does not respond by saying that it just served the object to the client — instead, the server resends the object because it has completely forgotten what it did earlier.\nBecause an HTTP server maintains no information about clients, HTTP is said to be a stateless protocol.\nThis design simplifies server implementation and allows the server to handle many clients simultaneously without per-client state overhead.\nHowever, Web applications that need to track user behavior (e.g., shopping carts, login sessions) must add state on top of HTTP using mechanisms such as cookies — which are not part of the core HTTP protocol discussed here.",
+          tags: ["HTTP", "Stateless"],
+          ref: "Lecture 2 — Section 2.2.1 (stateless paragraph)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Compare non-persistent and persistent HTTP connections, mentioning the advantages of persistent connections.",
+          translation:
+            "قارن بين اتصالات non-persistent و persistent في HTTP، واذكر مزايا الـ persistent.",
+          answer:
+            "Non-persistent connections: each request/response pair is sent over a separate TCP connection. Each TCP connection transports exactly one request message and one response message, and the connection is closed after the server sends the object.\nPersistent connections: the server leaves the TCP connection open after sending a response. Subsequent requests and responses between the same client and server can be sent over the same connection.\n\nAdvantages of persistent connections:\n1. A brand-new connection does not need to be established and maintained for each requested object — this avoids TCP buffer allocation and TCP variable overhead on both client and server, reducing the burden on the Web server.\n2. With pipelining, requests for objects can be made back-to-back without waiting for replies to pending requests, which significantly reduces latency.\n3. An entire Web page (e.g., the base HTML file and 10 images) can be sent over a single persistent TCP connection; even multiple Web pages from the same server can be sent over a single connection.\n\nDisadvantages of non-persistent connections:\n1. Each object suffers a delivery delay of two RTTs (one RTT for connection setup, one for request/response).\n2. They place a significant burden on the Web server, which must allocate buffers and variables for each new connection.\n\nThe default mode of HTTP uses persistent connections with pipelining.",
+          tags: ["HTTP", "Non-persistent", "Persistent", "Pipelining"],
+          ref: "Lecture 2 — Section 2.2.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain the structure of an HTTP request message in detail, listing its main components.",
+          translation:
+            "اشرح بنية رسالة HTTP request بالتفصيل، مع ذكر المكونات الرئيسية.",
+          answer:
+            "An HTTP request message is written in ordinary ASCII text so that it can be read by humans. It consists of:\n1. A request line (the first line), which has three fields: the method field, the URL field, and the HTTP version field. The method field can take on values including GET, POST, HEAD, PUT, and DELETE.\n2. Header lines (subsequent lines), each followed by a carriage return and a line feed. Common header lines include Host, Connection, User-agent, and Accept-language.\n3. An entity body (after the header lines and an additional carriage return/line feed). The entity body is empty with the GET method, but is used with the POST method to carry the user's input from a form.\n\nExample request message:\nGET /somedir/page.html HTTP/1.1\nHost: www.someschool.edu\nConnection: close\nUser-agent: Mozilla/5.0\nAccept-language: fr\n\nThe Host: header specifies the host on which the object resides. Connection: close tells the server the browser wants the connection closed after sending the object. User-agent: identifies the browser type. Accept-language: indicates the user's preferred language.",
+          tags: ["HTTP Request", "Request line", "Headers"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain the structure of an HTTP response message in detail.",
+          translation: "اشرح بنية رسالة HTTP response بالتفصيل.",
+          answer:
+            "An HTTP response message has three sections:\n1. An initial status line (the first line), with three fields: the protocol version field, a status code, and a corresponding status message.\n2. Six (or more) header lines, such as Connection, Date, Server, Last-Modified, Content-Length, and Content-Type.\n3. An entity body, which is the meat of the message — it contains the requested object itself.\n\nExample response message:\nHTTP/1.1 200 OK\nConnection: close\nDate: Tue, 18 Aug 2015 15:44:04 GMT\nServer: Apache/2.2.3 (CentOS)\nLast-Modified: Tue, 18 Aug 2015 15:11:03 GMT\nContent-Length: 6821\nContent-Type: text/html\n(data data data data data ...)\n\nConnection: close means the server will close the TCP connection after sending the message. Date: is when the response was created/sent (not when the object was created). Server: identifies the server software. Last-Modified: indicates when the object was last changed and is critical for caching. Content-Length: is the byte count of the object. Content-Type: indicates the object's media type.",
+          tags: ["HTTP Response", "Status line", "Headers"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. List and explain the common HTTP status codes given in this lecture.",
+          translation:
+            "اكتب واشرح أكواد الـ status الشائعة اللي ذكرت في المحاضرة.",
+          answer:
+            "Common HTTP status codes and their associated phrases:\n1. 200 OK: The request succeeded and the information (the requested object) is returned in the response.\n2. 301 Moved Permanently: The requested object has been permanently moved; the new URL is specified in the Location: header of the response message. The client software will automatically retrieve the new URL.\n3. 400 Bad Request: A generic error code indicating that the request could not be understood by the server.\n4. 404 Not Found: The requested document does not exist on this server.\n5. 505 HTTP Version Not Supported: The requested HTTP protocol version is not supported by the server.",
+          tags: ["HTTP Status Codes"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Response Message)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. Compare the GET and POST HTTP methods, and briefly mention the HEAD, PUT, and DELETE methods.",
+          translation:
+            "قارن بين طريقتي GET و POST في HTTP، واذكر باختصار HEAD و PUT و DELETE.",
+          answer:
+            "GET method: used when the browser requests an object, with the requested object identified in the URL field. The entity body is empty with GET. It is the most common HTTP method.\nPOST method: an HTTP client often uses the POST method when the user fills out a form — for example, when a user provides search words to a search engine. With POST, the user is still requesting a Web page, but the specific content depends on what the user entered into the form fields. The entity body contains what the user entered in the form fields.\nImportant note: HTML forms do not necessarily use POST — they can use GET and include the inputted data in the requested URL (e.g., www.somesite.com/animalsearch?monkeys&bananas).\n\nOther methods:\n1. HEAD: similar to GET; often used by application developers for debugging.\n2. PUT: often used in conjunction with Web publishing tools; allows a user to upload an object to a specific path (directory) on a specific Web server.\n3. DELETE: allows a user or an application to delete an object on a Web server.",
+          tags: ["HTTP Methods", "GET", "POST", "HEAD", "PUT", "DELETE"],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "15. List the five important network applications covered in this chapter and briefly state why each is included.",
+          translation:
+            "اكتب التطبيقات الخمسة المهمة اللي الكتاب بيركز عليها في الفصل وإيه سبب إدراج كل واحد.",
+          answer:
+            "The book covers five important network applications:\n1. The Web — enormously popular; its application-layer protocol, HTTP, is straightforward and easy to understand.\n2. Electronic mail — the Internet's first killer application; more complex than the Web because it uses several application-layer protocols.\n3. DNS (directory service) — provides a directory service for the Internet; users invoke DNS indirectly through other applications; illustrates how core network functionality (name-to-address translation) can be implemented at the application layer.\n4. P2P file sharing applications.\n5. Video streaming on demand, including distributing stored video over content distribution networks.",
+          tags: ["Network Applications"],
+          ref: "Lecture 2 — Section 2.1.6",
           likely: "medium",
         },
         {
           type: "essay",
-          q: "16. (Problem) A form uses the GET method and has two fields. The user enters cats and dogs. If the page is somesite.com/animalsearch, write the resulting URL and state where the form data is placed.",
+          q: "16. Explain the role of the following HTTP request header lines: Host, Connection, User-agent, and Accept-language.",
           translation:
-            "مسألة: فورم يستخدم GET وفيه حقلان. أدخل المستخدم cats وdogs والصفحة somesite.com/animalsearch. اكتب الـ URL الناتج واذكر أين توضع بيانات الفورم.",
+            "اشرح دور الـ header lines دي في HTTP request: Host, Connection, User-agent, Accept-language.",
           answer:
-            "With the GET method the input data from the form fields is included in the requested URL, and the entity body of the request is empty.\n" +
-            "Structure (as in the lecture example with monkeys and bananas): somesite.com/animalsearch?monkeys&bananas\n" +
-            "Applying it with the new inputs: somesite.com/animalsearch?cats&dogs\n" +
-            "If the form used POST instead, the inputs would be placed in the entity body.",
-          tags: ["Calculation", "GET", "POST"],
-          ref: "Lecture 2 — Section 2.2.3",
+            "Host: www.someschool.edu — specifies the host on which the object resides. This may seem unnecessary because a TCP connection is already in place to the host, but the information provided by the host header line is required by Web proxy caches.\nConnection: close — tells the server that the browser does not want to bother with persistent connections; it wants the server to close the connection after sending the requested object.\nUser-agent: Mozilla/5.0 — specifies the user agent, i.e., the browser type making the request. Here the user agent is a Firefox browser. This header is useful because the server can actually send different versions of the same object to different types of user agents.\nAccept-language: fr — indicates that the user prefers to receive a French version of the object, if such an object exists on the server; otherwise, the server should send its default version. Accept-language is one of many content negotiation headers available in HTTP.",
+          tags: [
+            "HTTP Headers",
+            "Host",
+            "Connection",
+            "User-agent",
+            "Accept-language",
+          ],
+          ref: "Lecture 2 — Section 2.2.3 (HTTP Request Message)",
           likely: "medium",
         },
         {
           type: "essay",
-          q: "17. (Problem) An Internet telephony application encodes voice at 32 kbps. If the transport protocol can only provide half of the needed throughput, what is the available rate and what can the application do?",
+          q: "1. (Calculation) Calculate the total response time for fetching a base HTML file using non-persistent HTTP. Given: RTT = 100 ms, transmission time of the HTML file at the server = 50 ms. Ignore all other delays.",
           translation:
-            "مسألة: تطبيق اتصال صوتي عبر الإنترنت يشفّر الصوت بمعدل 32 kbps. إذا كان بروتوكول النقل يوفر نصف الـ throughput المطلوب فقط، فما المعدل المتاح وماذا يستطيع التطبيق أن يفعل؟",
+            "(مسألة) احسب إجمالي زمن الاستجابة لجلب base HTML file باستخدام non-persistent HTTP. المعطيات: RTT = 100 ms، زمن نقل الـ HTML على السيرفر = 50 ms. تجاهل باقي التأخيرات.",
           answer:
-            "Given: required rate = 32 kbps, available = half of it.\n" +
-            "Available throughput = 32 / 2 = 16 kbps.\n" +
-            "Receiving half of the needed throughput is of little or no use to this bandwidth-sensitive application. The application would need to encode at a lower rate (and receive enough throughput to sustain that lower rate), possibly using adaptive coding, or it may have to give up.",
-          tags: ["Calculation", "Throughput", "Bandwidth-Sensitive"],
-          ref: "Lecture 2 — Section 2.1.3 (Throughput)",
+            "Given:\n- RTT (round-trip time) = 100 ms\n- Transmission time of the HTML file at the server = 50 ms\n\nFormula (from lecture): Total response time = 2 RTTs + transmission time at the server.\n\nStep-by-step reasoning:\n1. The first two parts of the three-way handshake take 1 RTT (100 ms).\n2. After completing the first two parts of the handshake, the client sends the HTTP request message combined with the third part of the three-way handshake (the acknowledgment). Once the request arrives at the server, the server sends the HTML file. This HTTP request/response eats up another RTT (100 ms).\n3. The server transmits the HTML file, which takes the transmission time (50 ms).\n\nTotal response time = 2 * 100 ms + 50 ms = 200 ms + 50 ms = 250 ms.\n\nAnswer: 250 ms.",
+          tags: ["Calculation", "RTT", "Non-persistent"],
+          ref: "Lecture 2 — Section 2.2.2 (response time formula)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. (Calculation) How many TCP connections are needed to fetch a Web page consisting of a base HTML file and 10 JPEG images over non-persistent HTTP? All objects reside on the same server.",
+          translation:
+            "(مسألة) كام TCP connection محتاج عشان تجيب صفحة ويب فيها base HTML + 10 صور JPEG باستخدام non-persistent HTTP؟ كل الـ objects على نفس السيرفر.",
+          answer:
+            "Given:\n- Web page consists of 1 base HTML file + 10 JPEG images = 11 objects total.\n- All objects reside on the same server.\n- Connection mode: non-persistent HTTP.\n\nIn non-persistent HTTP, each TCP connection transports exactly one request message and one response message, and the connection is closed after the server sends the object.\n\nTherefore, the number of TCP connections = number of objects = 11.\n\nAnswer: 11 TCP connections are generated when the user requests this Web page.\n\nNote: This is exactly why the lecture introduces persistent connections — to avoid opening a new TCP connection for each object.",
+          tags: ["Calculation", "TCP connections", "Non-persistent"],
+          ref: "Lecture 2 — Section 2.2.2 (Non-persistent walk-through)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. (Calculation) Calculate the total time to fetch a Web page with 1 base HTML file and 9 JPEG images (10 objects total) using non-persistent HTTP, assuming serial TCP connections (one connection at a time). Given: RTT = 200 ms, transmission time per object = 20 ms. Ignore other delays.",
+          translation:
+            "(مسألة) احسب إجمالي الزمن لجلب صفحة ويب فيها 1 HTML + 9 JPEG (10 objects) باستخدام non-persistent HTTP مع اتصالات serial. المعطيات: RTT = 200 ms، زمن النقل لكل object = 20 ms.",
+          answer:
+            "Given:\n- Number of objects = 1 HTML + 9 JPEG = 10 objects.\n- RTT = 200 ms.\n- Transmission time per object = 20 ms.\n- Non-persistent HTTP, serial (one TCP connection at a time).\n\nFormula per object: Time per object = 2 RTTs + transmission time.\n\nTime per object = 2 * 200 + 20 = 400 + 20 = 420 ms.\n\nTotal time = number of objects * time per object = 10 * 420 = 4200 ms = 4.2 seconds.\n\nAnswer: 4200 ms (4.2 seconds).\n\nNote: If the browser opens parallel TCP connections instead of serial, the actual wall-clock time could be shorter — but the total connection work and total bytes transferred remain the same.",
+          tags: ["Calculation", "RTT", "Non-persistent"],
+          ref: "Lecture 2 — Section 2.2.2 (response time formula + non-persistent walk-through)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. (Calculation) Using persistent HTTP with pipelining, calculate the total time to fetch the same Web page (1 base HTML file + 9 JPEG images, 10 objects total). Given: RTT = 200 ms, transmission time per object = 20 ms. Assume requests are pipelined after the base HTML is received.",
+          translation:
+            "(مسألة) باستخدام persistent HTTP مع pipelining، احسب إجمالي الزمن لجلب نفس الصفحة (1 HTML + 9 JPEG = 10 objects). المعطيات: RTT = 200 ms، زمن النقل لكل object = 20 ms. افترض إن الطلبات بتتحط pipelined بعد ما HTML بيوصلك.",
+          answer:
+            "Given:\n- 10 objects (1 base HTML + 9 JPEG).\n- RTT = 200 ms.\n- Transmission time per object = 20 ms.\n- Persistent HTTP with pipelining.\n\nSteps:\n1. TCP three-way handshake: the first two parts take 1 RTT = 200 ms.\n2. After the handshake, the client sends the HTTP request for the base HTML file over the same connection. The server returns the HTML file. This request/response takes 1 RTT + transmission time of the HTML = 200 + 20 = 220 ms.\n3. With pipelining, after the HTML is received, the client sends requests for the 9 JPEG objects back-to-back over the same TCP connection (no new handshakes needed). The server sends them back-to-back.\n   - One additional RTT for the 9-image request/response batch = 200 ms.\n   - Transmission time for 9 images = 9 * 20 = 180 ms.\n\nTotal time = 200 (handshake) + 220 (HTML round) + 200 (images request/response) + 180 (images transmission) = 800 ms.\n\nSimplified rough estimate (treating all 10 objects as one pipelined batch after the handshake):\nTotal ≈ 2 RTTs + sum of all transmission times = 2 * 200 + 10 * 20 = 400 + 200 = 600 ms.\n\nAnswer: between 600 ms and 800 ms, roughly 600 ms (compared to 4200 ms for non-persistent serial — a ~7x speedup).",
+          tags: ["Calculation", "RTT", "Persistent", "Pipelining"],
+          ref: "Lecture 2 — Section 2.2.2 (Persistent connections)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. (Calculation) For a Web page with 1 base HTML file + 4 JPEG images (5 objects total), calculate the total time over non-persistent HTTP (serial, one TCP connection at a time). Given: RTT = 150 ms, transmission time per object = 30 ms.",
+          translation:
+            "(مسألة) لصفحة ويب فيها 1 HTML + 4 JPEG (5 objects)، احسب إجمالي الزمن على non-persistent HTTP (serial). المعطيات: RTT = 150 ms، زمن النقل لكل object = 30 ms.",
+          answer:
+            "Given:\n- 5 objects (1 HTML + 4 JPEG).\n- RTT = 150 ms.\n- Transmission time per object = 30 ms.\n- Non-persistent HTTP, serial.\n\nFormula per object: Time = 2 RTTs + transmission time = 2 * 150 + 30 = 300 + 30 = 330 ms.\n\nTotal time (serial, 5 objects) = 5 * 330 = 1650 ms = 1.65 seconds.\n\nAnswer: 1650 ms (1.65 seconds).\n\nComparison: over persistent HTTP with pipelining, the same page would take roughly 2 RTTs + 5 transmission times = 2 * 150 + 5 * 30 = 300 + 150 = 450 ms — about 3.7x faster than non-persistent serial.",
+          tags: ["Calculation", "RTT", "Non-persistent"],
+          ref: "Lecture 2 — Section 2.2.2 (Non-persistent walk-through)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. (Calculation) An Internet telephony application sends 200 packets per second. Each packet is 200 bytes. Calculate the data rate at which the sender pumps data, and explain why this is acceptable for UDP but problematic for TCP.",
+          translation:
+            "(مسألة) تطبيق إنترنت تليفوني بيبعت 200 باكت في الثانية، كل باكت 200 بايت. احسب معدل ضخ البيانات، واشرح ليه ده مقبول لـ UDP ومشكلة لـ TCP.",
+          answer:
+            "Given:\n- 200 packets/second.\n- Each packet = 200 bytes.\n\nCalculation:\nTotal data rate = 200 packets/s * 200 bytes/packet = 40,000 bytes/s = 40 KB/s = 320 kbps (since 1 byte = 8 bits).\n\nExplanation:\nUDP has no congestion-control mechanism, so the sender can pump data at this rate (320 kbps) regardless of the network state. Internet telephony is designed to tolerate some loss, so it works fine.\nIf TCP were used instead, TCP's congestion-control mechanism would throttle the sender when the network is congested between sender and receiver. This throttling causes additional latency and retransmission that is undesirable for time-sensitive applications like Internet telephony.\nTherefore, developers of Internet telephony applications prefer UDP for lower latency, circumventing TCP's congestion control. They use TCP as a backup only when firewalls block UDP traffic.",
+          tags: ["Calculation", "UDP", "TCP", "Congestion Control"],
+          ref: "Lecture 2 — Section 2.1.4 (UDP Services + Figure 2.5 commentary)",
           likely: "medium",
         },
       ],
