@@ -1,6 +1,5 @@
-// api/sheet.js
-// GET /api/sheet?tab=schedule|announcements|deadlines
-// يقرأ تابات Google Sheet المنشورة كـ CSV، يتحقق من الصفوف، ويرجّع JSON.
+// functions/api/sheet.js
+// Cloudflare Pages / Workers Function - GET /api/sheet?tab=schedule|announcements|deadlines
 
 const TABS = {
   schedule: {
@@ -126,36 +125,53 @@ function build(tab, csv) {
   return { items, warnings };
 }
 
-export default async function handler(req, res) {
-  const send = (code, body, cache) => {
-    res.setHeader("Content-Type", "application/json; charset=utf-8");
-    res.setHeader("Cache-Control", cache || "no-store");
-    res.status(code).send(JSON.stringify(body));
+export async function onRequest(context) {
+  const { request, env } = context;
+  const urlObj = new URL(request.url);
+  const tab = urlObj.searchParams.get("tab") || "";
+
+  const jsonResponse = (data, status = 200, headers = {}) => {
+    return new Response(JSON.stringify(data), {
+      status,
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        ...headers,
+      },
+    });
   };
 
-  const tab = String((req.query && req.query.tab) || "");
-  if (req.method !== "GET") return send(405, { ok: false, code: "METHOD" });
-  if (!Object.prototype.hasOwnProperty.call(TABS, tab))
-    return send(400, { ok: false, code: "BAD_TAB" });
+  if (request.method !== "GET") {
+    return jsonResponse({ ok: false, code: "METHOD" }, 405);
+  }
 
-  const pub = process.env.SHEET_PUB_ID,
-    gid = process.env[TABS[tab].env];
-  if (!pub || !gid) return send(503, { ok: false, code: "CONFIG" });
+  if (!Object.prototype.hasOwnProperty.call(TABS, tab)) {
+    return jsonResponse({ ok: false, code: "BAD_TAB" }, 400);
+  }
+
+  // قراءة المتغيرات من Cloudflare env
+  const pub = env.SHEET_PUB_ID;
+  const gid = env[TABS[tab].env];
+
+  if (!pub || !gid) {
+    return jsonResponse({ ok: false, code: "CONFIG" }, 503);
+  }
 
   try {
-    const url = `https://docs.google.com/spreadsheets/d/e/${encodeURIComponent(pub)}/pub?gid=${encodeURIComponent(gid)}&single=true&output=csv`;
-    const r = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    const sheetUrl = `https://docs.google.com/spreadsheets/d/e/${encodeURIComponent(pub)}/pub?gid=${encodeURIComponent(gid)}&single=true&output=csv`;
+    const r = await fetch(sheetUrl, { signal: AbortSignal.timeout(8000) });
     if (!r.ok) throw new Error("upstream " + r.status);
+
     const { items, warnings } = build(tab, await r.text());
-    send(
-      200,
+    return jsonResponse(
       { ok: true, tab, generatedAt: new Date().toISOString(), items, warnings },
-      "public, s-maxage=60, stale-while-revalidate=600, stale-if-error=86400",
+      200,
+      {
+        "Cache-Control":
+          "public, s-maxage=60, stale-while-revalidate=600, stale-if-error=86400",
+      },
     );
   } catch (e) {
     console.error("Sheet API Error:", e);
-    send(503, { ok: false, code: "UPSTREAM" });
+    return jsonResponse({ ok: false, code: "UPSTREAM" }, 503);
   }
 }
-
-export { build as _build };
