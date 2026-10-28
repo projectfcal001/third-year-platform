@@ -2990,888 +2990,3088 @@ subjects.push({
       d: "شرح هياكل القرار (if, if-else, if-else-if, switch) بلغة C#، المعاملات المنطقية، المتغيرات المنطقية bool، مقارنة النصوص، التحقق من صحة الإدخال، وأدوات RadioButton و CheckBox و ListBox.",
       pdf: "datenew/subjects/visual-programming/lectures/Chapter 3.pdf",
       pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Chapter 3 - Questions - Visual Programming.pdf",
-// المحاضرة الثالثة: اتخاذ القرار وهياكل التحكم في C# وتطبيقات Windows Forms (Decision Structures, if-else, switch, RadioButtons, CheckBoxes, ListBoxes, TryParse)
- linkCategories : [
-  {
-    category: "فيديوهات عربية",
-    icon: "🇪🇬",
-    description: "شروحات باللغة العربية تغطي هياكل اتخاذ القرار في C#، جمل الشرط if و else و switch، والتعامل مع أدوات الواجهة مثل RadioButtons و CheckBoxes و ListBoxes",
-    links: [
-      {
-        t: "كورس C# الشامل - جمل التحكم واتخاذ القرار - حسونة أكاديمي",
-        d: "شرح تفصيلي باللغة العربية لجمل الشرط if, else if, switch والعمليات المنطقية في لغة C#",
-        icon: "🇪🇬",
-        actions: [
-          {
-            label: "🎬 مشاهدة القائمة",
-            url: "https://www.youtube.com/playlist?list=PLHIfW1KZRIfnbNoGB0NdoRdllq9fdo6uM",
-            type: "view",
-            color: "red"
-          }
-        ]
-      },
-      {
-        t: "شرح الأدوات والتحكم في Windows Forms - الأستاذ د. محمد",
-        d: "تطبيق عملي على استخدام RadioButton و CheckBox و ListBox وكتابة الأحداث في C#",
-        icon: "🇪🇬",
-        actions: [
-          {
-            label: "🎬 مشاهدة القائمة",
-            url: "https://www.youtube.com/playlist?list=PLmoWijvitK0Ry_ZHeihcU44SVQqHwpIvn",
-            type: "view",
-            color: "red"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    category: "فيديوهات عالمية",
-    icon: "🌍",
-    description: "محاضرات تقنية عالمية تشرح تفاصيل اتخاذ القرار، التحقق من المدخلات باستخدام TryParse، وبرمجة عناصر التحكم في Windows Forms",
-    links: [
-      {
-        t: "C# Selection Statements (if, else, switch) - Tim Corey",
-        d: "شرح احترافي لعمليات اتخاذ القرار، جمل الشرط، وتجنب الأخطاء البرمجية في C#",
-        icon: "🌍",
-        actions: [
-          {
-            label: "🎬 مشاهدة المحاضرة",
-            url: "https://www.youtube.com/watch?v=0zLZQesgV5o",
-            type: "view",
-            color: "red"
-          }
-        ]
-      },
-      {
-        t: "Windows Forms Controls Deep Dive (RadioButtons, CheckBoxes, ListBoxes) - 3CodeCamp",
-        d: "تطبيق عملي متقدم لربط عناصر تحكم الواجهة الرسومية مع الأكواد البرمجية ومعالجة الأحداث",
-        icon: "🌍",
-        actions: [
-          {
-            label: "🎬 مشاهدة المحاضرة",
-            url: "https://www.youtube.com/watch?v=SD1VbUYUO7U",
-            type: "view",
-            color: "red"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    category: "مواقع ومراجع",
-    icon: "📚",
-    description: "التوثيق الرسمي من Microsoft لفهم هياكل اتخاذ القرار، العمليات المنطقية، دوال TryParse، وأدوات WinForms",
-    links: [
-      {
-        t: "Selection statements (C# Reference) - Microsoft Docs",
-        d: "التوثيق الرسمي لجمل if, else, و switch وكيفية كتابة التعبيرات المنطقية في C#",
-        icon: "📚",
-        actions: [
-          {
-            label: "🚀 فتح المقال",
-            url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements",
-            type: "view",
-            color: "blue"
-          }
-        ]
-      },
-      {
-        t: "Boolean logical operators - Microsoft Reference",
-        d: "شرح تفصيلي للعمليات المنطقية && و || و ! لبناء تعبيرات شرطية معقدة",
-        icon: "📚",
-        actions: [
-          {
-            label: "🚀 فتح المقال",
-            url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators",
-            type: "view",
-            color: "blue"
-          }
-        ]
-      },
-      {
-        t: "How to parse strings to numbers using TryParse - Microsoft Learn",
-        d: "أفضل ممارسات التحقق من المدخلات ومنع استثناءات التحويل باستخدام دوال TryParse في C#",
-        icon: "📚",
-        actions: [
-          {
-            label: "🚀 فتح المقال",
-            url: "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number",
-            type: "view",
-            color: "green"
-          }
-        ]
-      },
-      {
-        t: "Windows Forms ListBox Control Overview - Microsoft Learn",
-        d: "المرجع الرسمي لعناصر ListBox، الخصائص SelectedItem و SelectedIndex، وإدارة العناصر",
-        icon: "📚",
-        actions: [
-          {
-            label: "🚀 فتح المقال",
-            url: "https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/listbox-control-windows-forms",
-            type: "view",
-            color: "orange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    category: "أدوات ومحاكاة",
-    icon: "🔧",
-    description: "البيئات والأدوات البرمجية اللازمة لكتابة وتجربة أكواد اتخاذ القرار وتطبيقات Windows Forms",
-    links: [
-      {
-        t: "Visual Studio Community - Free IDE",
-        d: "بيئة التطوير المتكاملة الرسمية من Microsoft لتصميم واجهات WinForms وكتابة كود C#",
-        icon: "🔧",
-        actions: [
-          {
-            label: "⭳ تحميل الأداة",
-            url: "https://visualstudio.microsoft.com/downloads/",
-            type: "download",
-            color: "blue"
-          }
-        ]
-      },
-      {
-        t: ".NET Fiddle - Online C# Compiler",
-        d: "محرر ومترجم أونلاين لتجربة جمل الشرط والـ switch واختبار الأكواد بدون تثبيت برامج",
-        icon: "🔧",
-        actions: [
-          {
-            label: "🌐 فتح الموقع",
-            url: "https://dotnetfiddle.net/",
-            type: "view",
-            color: "orange"
-          }
-        ]
-      }
-    ]
-  }
-],
+      // المحاضرة الثالثة: اتخاذ القرار وهياكل التحكم في C# وتطبيقات Windows Forms (Decision Structures, if-else, switch, RadioButtons, CheckBoxes, ListBoxes, TryParse)
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شروحات باللغة العربية تغطي هياكل اتخاذ القرار في C#، جمل الشرط if و else و switch، والتعامل مع أدوات الواجهة مثل RadioButtons و CheckBoxes و ListBoxes",
+          links: [
+            {
+              t: "كورس C# الشامل - جمل التحكم واتخاذ القرار - حسونة أكاديمي",
+              d: "شرح تفصيلي باللغة العربية لجمل الشرط if, else if, switch والعمليات المنطقية في لغة C#",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🎬 مشاهدة القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLHIfW1KZRIfnbNoGB0NdoRdllq9fdo6uM",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح الأدوات والتحكم في Windows Forms - الأستاذ د. محمد",
+              d: "تطبيق عملي على استخدام RadioButton و CheckBox و ListBox وكتابة الأحداث في C#",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🎬 مشاهدة القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLmoWijvitK0Ry_ZHeihcU44SVQqHwpIvn",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محاضرات تقنية عالمية تشرح تفاصيل اتخاذ القرار، التحقق من المدخلات باستخدام TryParse، وبرمجة عناصر التحكم في Windows Forms",
+          links: [
+            {
+              t: "C# Selection Statements (if, else, switch) - Tim Corey",
+              d: "شرح احترافي لعمليات اتخاذ القرار، جمل الشرط، وتجنب الأخطاء البرمجية في C#",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 مشاهدة المحاضرة",
+                  url: "https://www.youtube.com/watch?v=0zLZQesgV5o",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Windows Forms Controls Deep Dive (RadioButtons, CheckBoxes, ListBoxes) - 3CodeCamp",
+              d: "تطبيق عملي متقدم لربط عناصر تحكم الواجهة الرسومية مع الأكواد البرمجية ومعالجة الأحداث",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🎬 مشاهدة المحاضرة",
+                  url: "https://www.youtube.com/watch?v=SD1VbUYUO7U",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "التوثيق الرسمي من Microsoft لفهم هياكل اتخاذ القرار، العمليات المنطقية، دوال TryParse، وأدوات WinForms",
+          links: [
+            {
+              t: "Selection statements (C# Reference) - Microsoft Docs",
+              d: "التوثيق الرسمي لجمل if, else, و switch وكيفية كتابة التعبيرات المنطقية في C#",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Boolean logical operators - Microsoft Reference",
+              d: "شرح تفصيلي للعمليات المنطقية && و || و ! لبناء تعبيرات شرطية معقدة",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "How to parse strings to numbers using TryParse - Microsoft Learn",
+              d: "أفضل ممارسات التحقق من المدخلات ومنع استثناءات التحويل باستخدام دوال TryParse في C#",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Windows Forms ListBox Control Overview - Microsoft Learn",
+              d: "المرجع الرسمي لعناصر ListBox، الخصائص SelectedItem و SelectedIndex، وإدارة العناصر",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🚀 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/listbox-control-windows-forms",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "البيئات والأدوات البرمجية اللازمة لكتابة وتجربة أكواد اتخاذ القرار وتطبيقات Windows Forms",
+          links: [
+            {
+              t: "Visual Studio Community - Free IDE",
+              d: "بيئة التطوير المتكاملة الرسمية من Microsoft لتصميم واجهات WinForms وكتابة كود C#",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://visualstudio.microsoft.com/downloads/",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: ".NET Fiddle - Online C# Compiler",
+              d: "محرر ومترجم أونلاين لتجربة جمل الشرط والـ switch واختبار الأكواد بدون تثبيت برامج",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://dotnetfiddle.net/",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
       questions: [
-  {
-    "q": "In C#, what statement is used to write a single-alternative decision structure?",
-    "options": ["switch", "if", "while", "for"],
-    "correct": 1,
-    "translation": "في C#، ما الجملة المستخدمة لكتابة تركيب قرار بديل واحد؟",
-    "explanation": "جملة if تُستخدم لتنفيذ أوامر عند تحقق شرط منطقي فقط. أما switch و while و for فليست مخصصة لتركيب القرار البديل الواحد.",
-    "tags": ["if statement", "decision structure"],
-    "ref": "Chapter 3 — Q1"
-  },
-  {
-    "q": "What appears inside the parentheses of an if statement in C#?",
-    "options": ["A string literal", "A Boolean expression", "An integer value", "A variable declaration"],
-    "correct": 1,
-    "translation": "ماذا يظهر داخل الأقواس في جملة if في C#؟",
-    "explanation": "جملة if تحتاج تعبيرًا منطقيًا Boolean expression ينتج true أو false.",
-    "tags": ["if statement", "Boolean expression"],
-    "ref": "Chapter 3 — Q2"
-  },
-  {
-    "q": "In the general format of the if statement with multiple statements, what encloses the conditionally executed statements?",
-    "options": ["Parentheses", "Square brackets", "Curly braces", "Angle brackets"],
-    "correct": 2,
-    "translation": "في الصيغة العامة لجملة if مع عدة أوامر، ما الذي يحيط بالأوامر المنفذة شرطيًا؟",
-    "explanation": "الأقواس curly braces { } تُستخدم لتجميع عدة أوامر داخل if.",
-    "tags": ["if statement", "syntax"],
-    "ref": "Chapter 3 — Q3"
-  },
-  {
-    "q": "In the Test Score Average application, how many test scores does the user enter?",
-    "options": ["Two", "Three", "Four", "Five"],
-    "correct": 1,
-    "translation": "في تطبيق Test Score Average، كم عدد درجات الاختبار التي يدخلها المستخدم؟",
-    "explanation": "التطبيق يطلب ثلاث درجات ثم يحسب المتوسط.",
-    "tags": ["Test Score Average", "input"],
-    "ref": "Chapter 3 — Q4"
-  },
-  {
-    "q": "In the Test Score Average application, a congratulatory message is displayed if the average is greater than what value?",
-    "options": ["90", "95", "100", "85"],
-    "correct": 1,
-    "translation": "في تطبيق Test Score Average، تظهر رسالة تهنئة إذا كان المتوسط أكبر من أي قيمة؟",
-    "explanation": "الشرط هو أن يكون المتوسط أكبر من 95.0.",
-    "tags": ["Test Score Average", "if statement"],
-    "ref": "Chapter 3 — Q5"
-  },
-  {
-    "q": "In the Test Score Average application, what happens when the Clear button is clicked?",
-    "options": ["Calculates the average", "Clears the TextBoxes and average", "Exits the application", "Displays a message"],
-    "correct": 1,
-    "translation": "في تطبيق Test Score Average، ماذا يحدث عند النقر على زر Clear؟",
-    "explanation": "زر Clear يمسح محتوى TextBoxes وقيمة المتوسط.",
-    "tags": ["Test Score Average", "Clear button"],
-    "ref": "Chapter 3 — Q6"
-  },
-  {
-    "q": "In the code for the Test Score Average application, what constant is used for the high score value?",
-    "options": ["90.0", "95.0", "100.0", "85.0"],
-    "correct": 1,
-    "translation": "في كود تطبيق Test Score Average، ما الثابت المستخدم لقيمة الدرجة العالية؟",
-    "explanation": "الثابت المستخدم هو 95.0.",
-    "tags": ["Test Score Average", "constants"],
-    "ref": "Chapter 3 — Q7"
-  },
-  {
-    "q": "What is the general format of the if-else statement in C#?",
-    "options": ["if (expression) {statements; } else {statements; }", "if (expression) statements; else statements;", "switch (expression) { case: statements; }", "while (expression) { statements; }"],
-    "correct": 0,
-    "translation": "ما الصيغة العامة لجملة if-else في C#؟",
-    "explanation": "الصيغة الصحيحة تضع الأوامر داخل { } بعد if وبعد else.",
-    "tags": ["if-else", "syntax"],
-    "ref": "Chapter 3 — Q8"
-  },
-  {
-    "q": "In the if-else statement, which part executes if the Boolean expression is false?",
-    "options": ["The if clause", "The else clause", "Both clauses", "Neither clause"],
-    "correct": 1,
-    "translation": "في جملة if-else، أي جزء يتم تنفيذه إذا كان التعبير المنطقي false؟",
-    "explanation": "عندما يكون الشرط false ينفذ else clause.",
-    "tags": ["if-else", "Boolean expression"],
-    "ref": "Chapter 3 — Q9"
-  },
-  {
-    "q": "In the Payroll with Overtime application, overtime is calculated for hours worked more than what number?",
-    "options": ["30", "35", "40", "45"],
-    "correct": 2,
-    "translation": "في تطبيق Payroll with Overtime، يتم حساب الوقت الإضافي للعمل أكثر من أي رقم؟",
-    "explanation": "الوقت الإضافي يبدأ بعد 40 ساعة.",
-    "tags": ["Payroll", "overtime"],
-    "ref": "Chapter 3 — Q10"
-  },
-  {
-    "q": "In the Payroll with Overtime application, what multiplier is used for overtime pay?",
-    "options": ["1.0", "1.5", "2.0", "0.5"],
-    "correct": 1,
-    "translation": "في تطبيق Payroll with Overtime، ما معامل الضرب المستخدم لأجر الوقت الإضافي؟",
-    "explanation": "أجر الوقت الإضافي يُحسب بمعامل 1.5.",
-    "tags": ["Payroll", "overtime"],
-    "ref": "Chapter 3 — Q11"
-  },
-  {
-    "q": "In the code for Payroll with Overtime, what is the named constant for base hours?",
-    "options": ["30m", "35m", "40m", "45m"],
-    "correct": 2,
-    "translation": "في كود Payroll with Overtime، ما الثابت المسمى لساعات الأساس؟",
-    "explanation": "الثابت BASE_HOURS يساوي 40m.",
-    "tags": ["Payroll", "constants"],
-    "ref": "Chapter 3 — Q12"
-  },
-  {
-    "q": "In the Loan Qualifier application, what is the minimum salary required to qualify for the loan?",
-    "options": ["$30,000", "$40,000", "$50,000", "$60,000"],
-    "correct": 1,
-    "translation": "في تطبيق Loan Qualifier، ما الحد الأدنى للراتب المطلوب للتأهل للقرض؟",
-    "explanation": "الحد الأدنى للراتب هو 40,000 دولار.",
-    "tags": ["Loan Qualifier", "conditions"],
-    "ref": "Chapter 3 — Q13"
-  },
-  {
-    "q": "In the Loan Qualifier application, what is the minimum years on the job required?",
-    "options": ["1", "2", "3", "4"],
-    "correct": 1,
-    "translation": "في تطبيق Loan Qualifier، ما الحد الأدنى لعدد سنوات العمل المطلوبة؟",
-    "explanation": "الحد الأدنى هو سنتان.",
-    "tags": ["Loan Qualifier", "conditions"],
-    "ref": "Chapter 3 — Q14"
-  },
-  {
-    "q": "In the code for Loan Qualifier, what constant is used for minimum years on job?",
-    "options": ["1", "2", "3", "4"],
-    "correct": 1,
-    "translation": "في كود Loan Qualifier، ما الثابت المستخدم للحد الأدنى لسنوات العمل؟",
-    "explanation": "الثابت MIN_YEARS يساوي 2.",
-    "tags": ["Loan Qualifier", "constants"],
-    "ref": "Chapter 3 — Q15"
-  },
-  {
-    "q": "In the Grader application, what grading scale is used?",
-    "options": ["5-point", "10-point", "15-point", "20-point"],
-    "correct": 1,
-    "translation": "في تطبيق Grader، ما مقياس الدرجات المستخدم؟",
-    "explanation": "يستخدم التطبيق مقياس 10-point.",
-    "tags": ["Grader", "grading scale"],
-    "ref": "Chapter 3 — Q16"
-  },
-  {
-    "q": "In the Grader application, what grade is given for scores 90 and above?",
-    "options": ["A", "B", "C", "F"],
-    "correct": 0,
-    "translation": "في تطبيق Grader، ما الدرجة المعطاة للعلامات 90 وأعلى؟",
-    "explanation": "العلامة 90 وأعلى تأخذ تقدير A.",
-    "tags": ["Grader", "nested if"],
-    "ref": "Chapter 3 — Q17"
-  },
-  {
-    "q": "What makes the logic of nested decision structures simpler in C#?",
-    "options": ["if-else-if statement", "switch statement", "while loop", "for loop"],
-    "correct": 0,
-    "translation": "ما الذي يبسّط منطق تراكيب القرار المتداخلة في C#؟",
-    "explanation": "جملة if-else-if تجعل السلاسل المتداخلة أوضح وأسهل.",
-    "tags": ["nested if", "if-else-if"],
-    "ref": "Chapter 3 — Q18"
-  },
-  {
-    "q": "How many logical operators are provided in C# as shown in the table?",
-    "options": ["2", "3", "4", "5"],
-    "correct": 1,
-    "translation": "كم عدد المعاملات المنطقية في C# كما في الجدول؟",
-    "explanation": "يوجد ثلاثة معاملات منطقية: && و || و !.",
-    "tags": ["logical operators", "C#"],
-    "ref": "Chapter 3 — Q19"
-  },
-  {
-    "q": "In the Range Checker application, what range is considered acceptable?",
-    "options": ["1 through 5", "1 through 10", "1 through 15", "1 through 20"],
-    "correct": 1,
-    "translation": "في تطبيق Range Checker، ما النطاق المقبول؟",
-    "explanation": "النطاق المقبول هو من 1 إلى 10.",
-    "tags": ["Range Checker", "logical AND"],
-    "ref": "Chapter 3 — Q20"
-  },
-  {
-    "q": "What data type in C# holds true or false values?",
-    "options": ["int", "double", "bool", "string"],
-    "correct": 2,
-    "translation": "ما نوع البيانات في C# الذي يحمل القيم true أو false؟",
-    "explanation": "النوع bool مخصص للقيم المنطقية true/false.",
-    "tags": ["bool", "data types"],
-    "ref": "Chapter 3 — Q21"
-  },
-  {
-    "q": "In the example with bool grandMaster, what value is assigned if points > 5000?",
-    "options": ["false", "true", "0", "1"],
-    "correct": 1,
-    "translation": "في مثال bool grandMaster، ما القيمة المعطاة إذا كانت points > 5000؟",
-    "explanation": "عند تحقق الشرط يتم تعيين grandMaster = true.",
-    "tags": ["bool", "if statement"],
-    "ref": "Chapter 3 — Q22"
-  },
-  {
-    "q": "What are bool variables commonly used as in code?",
-    "options": ["Counters", "Flags", "Strings", "Arrays"],
-    "correct": 1,
-    "translation": "كيف تُستخدم متغيرات bool عادةً في الكود؟",
-    "explanation": "تُستخدم غالبًا كـ Flags تشير إلى حالة true/false.",
-    "tags": ["bool", "flags"],
-    "ref": "Chapter 3 — Q23"
-  },
-  {
-    "q": "Which operator is used to compare two strings in C#?",
-    "options": ["=", "==", "!=", "Equals"],
-    "correct": 1,
-    "translation": "أي معامل يُستخدم لمقارنة نصين في C#؟",
-    "explanation": "تُقارن النصوص في C# باستخدام ==.",
-    "tags": ["string comparison", "operators"],
-    "ref": "Chapter 3 — Q24"
-  },
-  {
-    "q": "In the Secret Word application, what is the secret word?",
-    "options": ["Ariel", "Mark", "Mary", "Joe"],
-    "correct": 0,
-    "translation": "في تطبيق Secret Word، ما الكلمة السرية؟",
-    "explanation": "الكلمة السرية هي Ariel.",
-    "tags": ["Secret Word", "string comparison"],
-    "ref": "Chapter 3 — Q25"
-  },
-  {
-    "q": "In string comparison, are \"Joe\" and \"joe\" considered equal by default?",
-    "options": ["Yes", "No", "Only if lowercase", "Only if uppercase"],
-    "correct": 1,
-    "translation": "في مقارنة النصوص، هل \"Joe\" و \"joe\" متساويان افتراضيًا؟",
-    "explanation": "المقارنة الافتراضية حساسة لحالة الأحرف، لذلك ليسا متساويين.",
-    "tags": ["string comparison", "case sensitivity"],
-    "ref": "Chapter 3 — Q26"
-  },
-  {
-    "q": "What method can perform a case-insensitive string comparison?",
-    "options": ["String.Equals", "String.Compare with true", "String.ToLower", "String.Length"],
-    "correct": 1,
-    "translation": "ما الدالة التي يمكنها المقارنة بين النصوص دون مراعاة حالة الأحرف؟",
-    "explanation": "String.Compare مع تمرير true تتجاهل حالة الأحرف.",
-    "tags": ["string comparison", "String.Compare"],
-    "ref": "Chapter 3 — Q27"
-  },
-  {
-    "q": "What do Parse methods throw when converting nonnumeric data?",
-    "options": ["Warning", "Exception", "Error message", "Null value"],
-    "correct": 1,
-    "translation": "ماذا ترمي دوال Parse عند تحويل بيانات غير رقمية؟",
-    "explanation": "ترمي Exception عند فشل التحويل.",
-    "tags": ["Parse", "exceptions"],
-    "ref": "Chapter 3 — Q28"
-  },
-  {
-    "q": "What is a better practice than using try-catch for data conversion exceptions?",
-    "options": ["Using loops", "Preventing exceptions with TryParse", "Ignoring exceptions", "Using switch"],
-    "correct": 1,
-    "translation": "ما الممارسة الأفضل من استخدام try-catch في تحويل البيانات؟",
-    "explanation": "الأفضل منع حدوث الاستثناء باستخدام TryParse.",
-    "tags": ["TryParse", "validation"],
-    "ref": "Chapter 3 — Q29"
-  },
-  {
-    "q": "Which TryParse method converts a string to an int?",
-    "options": ["double.TryParse", "decimal.TryParse", "int.TryParse", "bool.TryParse"],
-    "correct": 2,
-    "translation": "أي دالة TryParse تحول نصًا إلى int؟",
-    "explanation": "int.TryParse مخصصة لتحويل النص إلى عدد صحيح int.",
-    "tags": ["TryParse", "int"],
-    "ref": "Chapter 3 — Q30"
-  },
-  {
-    "q": "What does TryParse return if conversion is successful?",
-    "options": ["false", "true", "0", "null"],
-    "correct": 1,
-    "translation": "ماذا ترجع TryParse إذا نجح التحويل؟",
-    "explanation": "ترجع true عند نجاح التحويل.",
-    "tags": ["TryParse", "return value"],
-    "ref": "Chapter 3 — Q31"
-  },
-  {
-    "q": "In validating multiple TextBoxes, what should the program do when invalid data is found?",
-    "options": ["Ignore it", "Display a general error", "Display specific error for each TextBox", "Exit the program"],
-    "correct": 2,
-    "translation": "عند التحقق من عدة TextBoxes، ماذا يجب أن يفعل البرنامج عند وجود بيانات غير صحيحة؟",
-    "explanation": "الأفضل عرض رسالة خطأ محددة لكل TextBox.",
-    "tags": ["validation", "TextBox"],
-    "ref": "Chapter 3 — Q32"
-  },
-  {
-    "q": "In the Add Two Numbers Application, what happens if non-integer is entered?",
-    "options": ["Adds anyway", "Shows error for specific TextBox", "Crashes", "Clears all"],
-    "correct": 1,
-    "translation": "في تطبيق Add Two Numbers، ماذا يحدث إذا أُدخل رقم غير صحيح؟",
-    "explanation": "يظهر خطأ خاص بالـ TextBox المعني.",
-    "tags": ["validation", "Add Two Numbers"],
-    "ref": "Chapter 3 — Q33"
-  },
-  {
-    "q": "What is the process of inspecting input data for validity?",
-    "options": ["Data conversion", "Input validation", "Exception handling", "String comparison"],
-    "correct": 1,
-    "translation": "ما عملية فحص بيانات الإدخال للتأكد من صحتها؟",
-    "explanation": "هذه العملية تسمى Input validation.",
-    "tags": ["validation", "input"],
-    "ref": "Chapter 3 — Q34"
-  },
-  {
-    "q": "In input validation example for hours worked, what is the maximum valid hours per week?",
-    "options": ["168", "400", "40", "100"],
-    "correct": 0,
-    "translation": "في مثال التحقق من ساعات العمل، ما الحد الأقصى الصحيح للساعات أسبوعيًا؟",
-    "explanation": "الحد الأقصى 168 ساعة في الأسبوع.",
-    "tags": ["validation", "hours"],
-    "ref": "Chapter 3 — Q35"
-  },
-  {
-    "q": "In test score validation, what is the valid range?",
-    "options": ["0 through 50", "0 through 100", "0 through 90", "0 through 200"],
-    "correct": 1,
-    "translation": "في التحقق من درجة الاختبار، ما النطاق الصحيح؟",
-    "explanation": "الدرجات الصحيحة من 0 إلى 100.",
-    "tags": ["validation", "test scores"],
-    "ref": "Chapter 3 — Q36"
-  },
-  {
-    "q": "What controls allow selecting one choice from several?",
-    "options": ["TextBoxes", "Labels", "Radio buttons", "Check boxes"],
-    "correct": 2,
-    "translation": "ما العناصر التي تسمح باختيار واحد من عدة اختيارات؟",
-    "explanation": "Radio buttons تسمح باختيار واحد فقط من المجموعة.",
-    "tags": ["RadioButton", "controls"],
-    "ref": "Chapter 3 — Q37"
-  },
-  {
-    "q": "How many radio buttons in a group can be selected at a time?",
-    "options": ["None", "One", "All", "Multiple"],
-    "correct": 1,
-    "translation": "كم عدد أزرار الراديو التي يمكن اختيارها في المجموعة في وقت واحد؟",
-    "explanation": "يمكن اختيار زر راديو واحد فقط في المجموعة.",
-    "tags": ["RadioButton", "selection"],
-    "ref": "Chapter 3 — Q38"
-  },
-  {
-    "q": "How are radio buttons grouped?",
-    "options": ["Inside GroupBox or Panel", "Inside Label", "Inside Button", "Inside TextBox"],
-    "correct": 0,
-    "translation": "كيف يتم تجميع أزرار الراديو؟",
-    "explanation": "توضع داخل GroupBox أو Panel لتشكيل مجموعة.",
-    "tags": ["RadioButton", "GroupBox"],
-    "ref": "Chapter 3 — Q39"
-  },
-  {
-    "q": "What property of RadioButton determines if it is selected?",
-    "options": ["Text", "Checked", "Visible", "Enabled"],
-    "correct": 1,
-    "translation": "ما خاصية RadioButton التي تحدد ما إذا كان مختارًا؟",
-    "explanation": "الخاصية Checked تحدد حالة الاختيار.",
-    "tags": ["RadioButton", "Checked"],
-    "ref": "Chapter 3 — Q40"
-  },
-  {
-    "q": "In code, how do you check if a RadioButton is selected?",
-    "options": ["if (radio.Checked)", "if (radio.Text == true)", "if (radio.Visible)", "if (radio.Enabled)"],
-    "correct": 0,
-    "translation": "في الكود، كيف تتحقق من أن RadioButton مختار؟",
-    "explanation": "يتم التحقق باستخدام if (radio.Checked).",
-    "tags": ["RadioButton", "Checked"],
-    "ref": "Chapter 3 — Q41"
-  },
-  {
-    "q": "In the Color Mixer application, what secondary color is from red and blue?",
-    "options": ["Orange", "Green", "Purple", "Yellow"],
-    "correct": 2,
-    "translation": "في تطبيق Color Mixer، ما اللون الثانوي الناتج من الأحمر والأزرق؟",
-    "explanation": "الأحمر + الأزرق = البنفسجي Purple.",
-    "tags": ["Color Mixer", "RadioButton"],
-    "ref": "Chapter 3 — Q42"
-  },
-  {
-    "q": "What event occurs when a RadioButton's Checked property changes?",
-    "options": ["Click", "CheckedChanged", "TextChanged", "Focus"],
-    "correct": 1,
-    "translation": "ما الحدث الذي يقع عند تغير خاصية Checked لـ RadioButton؟",
-    "explanation": "الحدث هو CheckedChanged.",
-    "tags": ["RadioButton", "events"],
-    "ref": "Chapter 3 — Q43"
-  },
-  {
-    "q": "In the Color Theme application, what happens when a radio button is selected?",
-    "options": ["Form background changes immediately", "Message box appears", "Application exits", "Nothing"],
-    "correct": 0,
-    "translation": "في تطبيق Color Theme، ماذا يحدث عند اختيار زر راديو؟",
-    "explanation": "يتغير لون خلفية النموذج فورًا.",
-    "tags": ["Color Theme", "RadioButton"],
-    "ref": "Chapter 3 — Q44"
-  },
-  {
-    "q": "What controls allow multiple selections?",
-    "options": ["Radio buttons", "Buttons", "Check boxes", "Labels"],
-    "correct": 2,
-    "translation": "ما العناصر التي تسمح باختيارات متعددة؟",
-    "explanation": "Check boxes تسمح باختيار أكثر من عنصر.",
-    "tags": ["CheckBox", "controls"],
-    "ref": "Chapter 3 — Q45"
-  },
-  {
-    "q": "What property of CheckBox holds the displayed text?",
-    "options": ["Checked", "Text", "Selected", "Value"],
-    "correct": 1,
-    "translation": "ما خاصية CheckBox التي تحمل النص المعروض؟",
-    "explanation": "الخاصية Text تحمل النص الظاهر.",
-    "tags": ["CheckBox", "Text"],
-    "ref": "Chapter 3 — Q46"
-  },
-  {
-    "q": "In CheckBox, what does Checked = True mean?",
-    "options": ["Unchecked", "Selected", "Disabled", "Hidden"],
-    "correct": 1,
-    "translation": "في CheckBox، ماذا تعني Checked = True؟",
-    "explanation": "تعني أن العنصر مختار Selected.",
-    "tags": ["CheckBox", "Checked"],
-    "ref": "Chapter 3 — Q47"
-  },
-  {
-    "q": "In the switch statement, what is it an alternative to?",
-    "options": ["if-else-if", "for loop", "while loop", "try-catch"],
-    "correct": 0,
-    "translation": "جملة switch تعتبر بديلًا عن ماذا؟",
-    "explanation": "switch بديل لسلسلة if-else-if.",
-    "tags": ["switch", "if-else-if"],
-    "ref": "Chapter 3 — Q48"
-  },
-  {
-    "q": "What control displays a list of items?",
-    "options": ["TextBox", "Label", "ListBox", "Button"],
-    "correct": 2,
-    "translation": "ما العنصر الذي يعرض قائمة من العناصر؟",
-    "explanation": "ListBox يعرض قائمة عناصر.",
-    "tags": ["ListBox", "controls"],
-    "ref": "Chapter 3 — Q49"
-  },
-  {
-    "q": "When does a scroll bar appear in a ListBox?",
-    "options": ["Always", "When items exceed display space", "Never", "On click"],
-    "correct": 1,
-    "translation": "متى يظهر شريط التمرير في ListBox؟",
-    "explanation": "يظهر عندما تتجاوز العناصر المساحة المتاحة للعرض.",
-    "tags": ["ListBox", "scroll bar"],
-    "ref": "Chapter 3 — Q50"
-  },
-  {
-    "q": "How do you add items to ListBox at design time?",
-    "options": ["Code only", "Items property collection", "Text property", "Checked property"],
-    "correct": 1,
-    "translation": "كيف تضيف عناصر إلى ListBox في وقت التصميم؟",
-    "explanation": "عبر مجموعة Items property collection.",
-    "tags": ["ListBox", "design time"],
-    "ref": "Chapter 3 — Q51"
-  },
-  {
-    "q": "What property stores the selected item in ListBox?",
-    "options": ["SelectedIndex", "SelectedItem", "Items.Count", "Text"],
-    "correct": 1,
-    "translation": "ما الخاصية التي تخزن العنصر المختار في ListBox؟",
-    "explanation": "الخاصية SelectedItem تحمل العنصر المختار.",
-    "tags": ["ListBox", "SelectedItem"],
-    "ref": "Chapter 3 — Q52"
-  },
-  {
-    "q": "What value is SelectedIndex if no item is selected?",
-    "options": ["0", "1", "-1", "null"],
-    "correct": 2,
-    "translation": "ما قيمة SelectedIndex إذا لم يتم اختيار أي عنصر؟",
-    "explanation": "تكون القيمة -1 عند عدم وجود اختيار.",
-    "tags": ["ListBox", "SelectedIndex"],
-    "ref": "Chapter 3 — Q53"
-  },
-  {
-    "q": "In Time Zone application, what is displayed when a city is selected?",
-    "options": ["Time", "Time zone name", "Weather", "Population"],
-    "correct": 1,
-    "translation": "في تطبيق Time Zone، ماذا يظهر عند اختيار مدينة؟",
-    "explanation": "يظهر اسم المنطقة الزمنية Time zone name.",
-    "tags": ["Time Zone", "ListBox"],
-    "ref": "Chapter 3 — Q54"
-  },
-  {
-    "q": "How do you add an item to ListBox at runtime?",
-    "options": ["Items.Add", "Items.Clear", "Items.RemoveAt", "Items.Count"],
-    "correct": 0,
-    "translation": "كيف تضيف عنصرًا إلى ListBox في وقت التشغيل؟",
-    "explanation": "تستخدم Items.Add.",
-    "tags": ["ListBox", "Items.Add"],
-    "ref": "Chapter 3 — Q55"
-  },
-  {
-    "q": "In Number List application, what numbers are added to the ListBox?",
-    "options": ["1 to 5", "Shown in the image", "Random", "User input"],
-    "correct": 1,
-    "translation": "في تطبيق Number List، ما الأرقام التي تُضاف إلى ListBox؟",
-    "explanation": "الأرقام موضحة في صورة التطبيق.",
-    "tags": ["Number List", "ListBox"],
-    "ref": "Chapter 3 — Q56"
-  },
-  {
-    "q": "What property reports the number of items in ListBox?",
-    "options": ["Items.Add", "Items.Clear", "Items.Count", "Items.RemoveAt"],
-    "correct": 2,
-    "translation": "ما الخاصية التي تخبر بعدد العناصر في ListBox؟",
-    "explanation": "Items.Count ترجع عدد العناصر.",
-    "tags": ["ListBox", "Items.Count"],
-    "ref": "Chapter 3 — Q57"
-  },
-  {
-    "q": "What method erases all items in ListBox?",
-    "options": ["Items.Add", "Items.Clear", "Items.Count", "Items.RemoveAt"],
-    "correct": 1,
-    "translation": "ما الدالة التي تمسح كل العناصر في ListBox؟",
-    "explanation": "Items.Clear تمسح جميع العناصر.",
-    "tags": ["ListBox", "Items.Clear"],
-    "ref": "Chapter 3 — Q58"
-  },
-  {
-    "q": "What method removes an item at a specific index in ListBox?",
-    "options": ["Items.Add", "Items.Clear", "Items.Count", "Items.RemoveAt"],
-    "correct": 3,
-    "translation": "ما الدالة التي تحذف عنصرًا عند فهرس محدد في ListBox؟",
-    "explanation": "Items.RemoveAt تحذف حسب الفهرس.",
-    "tags": ["ListBox", "Items.RemoveAt"],
-    "ref": "Chapter 3 — Q59"
-  },
-  {
-    "q": "In the Adds, removes and clears ListBox items Application, what does the Clear button do?",
-    "options": ["Adds item", "Removes selected", "Deletes all entries", "Exits app"],
-    "correct": 2,
-    "translation": "في تطبيق إضافة وحذف ومسح عناصر ListBox، ماذا يفعل زر Clear؟",
-    "explanation": "يحذف كل المدخلات.",
-    "tags": ["ListBox", "Clear button"],
-    "ref": "Chapter 3 — Q60"
-  },
-  {
-    "q": "In the if statement without braces, how many statements are conditionally executed?",
-    "options": ["All following", "One", "None", "Multiple"],
-    "correct": 1,
-    "translation": "في جملة if بدون أقواس، كم عدد الأوامر التي تُنفذ شرطيًا؟",
-    "explanation": "بدون أقواس يتم تنفيذ أمر واحد فقط.",
-    "tags": ["if statement", "syntax"],
-    "ref": "Chapter 3 — Q61"
-  },
-  {
-    "q": "In Test Score Average, how is the average rounded?",
-    "options": ["1 decimal place", "2 decimal places", "No rounding", "To integer"],
-    "correct": 1,
-    "translation": "في Test Score Average، كيف يتم تقريب المتوسط؟",
-    "explanation": "يتم التقريب إلى منزلتين عشريتين.",
-    "tags": ["Test Score Average", "rounding"],
-    "ref": "Chapter 3 — Q62"
-  },
-  {
-    "type": "essay",
-    "q": "In Payroll with Overtime, if hours <= 40, how is gross pay calculated?",
-    "translation": "في تطبيق Payroll with Overtime، إذا كانت الساعات <= 40، كيف يُحسب الأجر الإجمالي؟",
-    "answer": "grossPay = hours * payRate.\nNo overtime multiplier is applied because hours are within the base limit.",
-    "tags": ["Payroll", "overtime"],
-    "ref": "Chapter 3 — Q63"
-  },
-  {
-    "q": "In Loan Qualifier, what logical operator is used in the condition?",
-    "options": ["OR", "NOT", "AND", "XOR"],
-    "correct": 2,
-    "translation": "في Loan Qualifier، ما المعامل المنطقي المستخدم في الشرط؟",
-    "explanation": "يستخدم AND للتحقق من شرطين معًا.",
-    "tags": ["Loan Qualifier", "logical AND"],
-    "ref": "Chapter 3 — Q64"
-  },
-  {
-    "q": "In Grader, how many nested if statements are used initially?",
-    "options": ["1", "2", "3", "4"],
-    "correct": 3,
-    "translation": "في Grader، كم عدد جمل if المتداخلة المستخدمة مبدئيًا؟",
-    "explanation": "يبدأ الحل بأربع جمل if متداخلة لتغطية التقديرات.",
-    "tags": ["Grader", "nested if"],
-    "ref": "Chapter 3 — Q65"
-  },
-  {
-    "q": "What is the symbol for the AND logical operator in C#?",
-    "options": ["&", "&&", "|", "^"],
-    "correct": 1,
-    "translation": "ما رمز المعامل المنطقي AND في C#؟",
-    "explanation": "رمز AND هو &&.",
-    "tags": ["logical operators", "AND"],
-    "ref": "Chapter 3 — Q66"
-  },
-  {
-    "q": "In Range Checker, what operator checks if number >= 1 and <= 10?",
-    "options": ["OR", "NOT", "AND", "None"],
-    "correct": 2,
-    "translation": "في Range Checker، ما المعامل الذي يتحقق من أن الرقم >= 1 و <= 10؟",
-    "explanation": "يستخدم AND للتحقق من الشرطين معًا.",
-    "tags": ["Range Checker", "logical AND"],
-    "ref": "Chapter 3 — Q67"
-  },
-  {
-    "q": "In bool example, what does !grandMaster mean?",
-    "options": ["grandMaster is true", "grandMaster is false", "Set to true", "Set to false"],
-    "correct": 1,
-    "translation": "في مثال bool، ماذا يعني !grandMaster؟",
-    "explanation": "! تعني النفي، أي أن grandMaster يساوي false.",
-    "tags": ["bool", "NOT operator"],
-    "ref": "Chapter 3 — Q68"
-  },
-  {
-    "q": "In string comparison example, what are name1 and name2?",
-    "options": ["Mary and Mark", "Joe and joe", "Ariel and Mark", "JOE and joe"],
-    "correct": 0,
-    "translation": "في مثال مقارنة النصوص، ما هما name1 و name2؟",
-    "explanation": "القيمتان هما Mary و Mark.",
-    "tags": ["string comparison", "example"],
-    "ref": "Chapter 3 — Q69"
-  },
-  {
-    "q": "In String.Compare with true, what does it return if equal ignoring case?",
-    "options": ["1", "-1", "0", "true"],
-    "correct": 2,
-    "translation": "في String.Compare مع true، ماذا ترجع إذا كان النصان متساويين مع تجاهل حالة الأحرف؟",
-    "explanation": "ترجع 0 عند التساوي.",
-    "tags": ["String.Compare", "string comparison"],
-    "ref": "Chapter 3 — Q70"
-  },
-  {
-    "q": "In TryParse, what is assigned to the target variable if conversion fails?",
-    "options": ["null", "0", "Exception", "Original string"],
-    "correct": 1,
-    "translation": "في TryParse، ماذا يُسند إلى المتغير الهدف إذا فشل التحويل؟",
-    "explanation": "غالبًا يُسند 0 للمتغير الرقمي عند الفشل.",
-    "tags": ["TryParse", "conversion"],
-    "ref": "Chapter 3 — Q71"
-  },
-  {
-    "q": "In Add Two Numbers code, how many if statements check for valid input?",
-    "options": ["1", "2", "3", "4"],
-    "correct": 1,
-    "translation": "في كود Add Two Numbers، كم عدد جمل if التي تتحقق من صحة الإدخال؟",
-    "explanation": "توجد جملتا if، واحدة لكل TextBox.",
-    "tags": ["Add Two Numbers", "validation"],
-    "ref": "Chapter 3 — Q72"
-  },
-  {
-    "q": "In input validation for payroll, what if hours > 168?",
-    "options": ["Accept", "Error message", "Calculate overtime", "Set to 40"],
-    "correct": 1,
-    "translation": "في التحقق من إدخال الرواتب، ماذا يحدث إذا كانت الساعات > 168؟",
-    "explanation": "تظهر رسالة خطأ لأن القيمة غير صحيحة.",
-    "tags": ["validation", "payroll"],
-    "ref": "Chapter 3 — Q73"
-  },
-  {
-    "q": "Default value of RadioButton Checked property?",
-    "options": ["True", "False", "Null", "0"],
-    "correct": 1,
-    "translation": "ما القيمة الافتراضية لخاصية Checked في RadioButton؟",
-    "explanation": "القيمة الافتراضية هي False.",
-    "tags": ["RadioButton", "Checked"],
-    "ref": "Chapter 3 — Q74"
-  },
-  {
-    "q": "In Color Mixer, if same color selected in both groups?",
-    "options": ["Mix to secondary", "Set form to that color", "Error", "No change"],
-    "correct": 1,
-    "translation": "في Color Mixer، إذا تم اختيار نفس اللون في المجموعتين؟",
-    "explanation": "يتم تعيين لون النموذج إلى ذلك اللون.",
-    "tags": ["Color Mixer", "RadioButton"],
-    "ref": "Chapter 3 — Q75"
-  },
-  {
-    "q": "How to create CheckedChanged event handler?",
-    "options": ["Click the control", "Double-click the control", "Right-click", "Properties"],
-    "correct": 1,
-    "translation": "كيف تنشئ معالج حدث CheckedChanged؟",
-    "explanation": "بالنقر المزدوج على العنصر.",
-    "tags": ["events", "CheckedChanged"],
-    "ref": "Chapter 3 — Q76"
-  },
-  {
-    "q": "In Check Boxes, how many can be selected?",
-    "options": ["One", "None", "Any number", "All"],
-    "correct": 2,
-    "translation": "في Check Boxes، كم عدد العناصر التي يمكن اختيارها؟",
-    "explanation": "يمكن اختيار أي عدد من العناصر.",
-    "tags": ["CheckBox", "selection"],
-    "ref": "Chapter 3 — Q77"
-  },
-  {
-    "q": "In ListBox, first item index?",
-    "options": ["-1", "0", "1", "null"],
-    "correct": 1,
-    "translation": "في ListBox، ما فهرس العنصر الأول؟",
-    "explanation": "الفهرسة تبدأ من 0.",
-    "tags": ["ListBox", "index"],
-    "ref": "Chapter 3 — Q78"
-  },
-  {
-    "q": "In SelectedIndex property, last index is?",
-    "options": ["n", "n-1", "0", "-1"],
-    "correct": 1,
-    "translation": "في خاصية SelectedIndex، ما الفهرس الأخير؟",
-    "explanation": "إذا كان عدد العناصر n، فالفهرس الأخير هو n-1.",
-    "tags": ["ListBox", "SelectedIndex"],
-    "ref": "Chapter 3 — Q79"
-  },
-  {
-    "q": "In Example 11, what button removes the selected item?",
-    "options": ["Add", "Remove", "Clear", "Exit"],
-    "correct": 1,
-    "translation": "في المثال 11، ما الزر الذي يحذف العنصر المختار؟",
-    "explanation": "زر Remove يحذف العنصر المحدد.",
-    "tags": ["ListBox", "Remove button"],
-    "ref": "Chapter 3 — Q80"
-  }
-],
+        {
+          q: "In C#, what statement is used to write a single-alternative decision structure?",
+          options: ["switch", "if", "while", "for"],
+          correct: 1,
+          translation:
+            "في C#، ما الجملة المستخدمة لكتابة تركيب قرار بديل واحد؟",
+          explanation:
+            "جملة if تُستخدم لتنفيذ أوامر عند تحقق شرط منطقي فقط. أما switch و while و for فليست مخصصة لتركيب القرار البديل الواحد.",
+          tags: ["if statement", "decision structure"],
+          ref: "Chapter 3 — Q1",
+        },
+        {
+          q: "What appears inside the parentheses of an if statement in C#?",
+          options: [
+            "A string literal",
+            "A Boolean expression",
+            "An integer value",
+            "A variable declaration",
+          ],
+          correct: 1,
+          translation: "ماذا يظهر داخل الأقواس في جملة if في C#؟",
+          explanation:
+            "جملة if تحتاج تعبيرًا منطقيًا Boolean expression ينتج true أو false.",
+          tags: ["if statement", "Boolean expression"],
+          ref: "Chapter 3 — Q2",
+        },
+        {
+          q: "In the general format of the if statement with multiple statements, what encloses the conditionally executed statements?",
+          options: [
+            "Parentheses",
+            "Square brackets",
+            "Curly braces",
+            "Angle brackets",
+          ],
+          correct: 2,
+          translation:
+            "في الصيغة العامة لجملة if مع عدة أوامر، ما الذي يحيط بالأوامر المنفذة شرطيًا؟",
+          explanation:
+            "الأقواس curly braces { } تُستخدم لتجميع عدة أوامر داخل if.",
+          tags: ["if statement", "syntax"],
+          ref: "Chapter 3 — Q3",
+        },
+        {
+          q: "In the Test Score Average application, how many test scores does the user enter?",
+          options: ["Two", "Three", "Four", "Five"],
+          correct: 1,
+          translation:
+            "في تطبيق Test Score Average، كم عدد درجات الاختبار التي يدخلها المستخدم؟",
+          explanation: "التطبيق يطلب ثلاث درجات ثم يحسب المتوسط.",
+          tags: ["Test Score Average", "input"],
+          ref: "Chapter 3 — Q4",
+        },
+        {
+          q: "In the Test Score Average application, a congratulatory message is displayed if the average is greater than what value?",
+          options: ["90", "95", "100", "85"],
+          correct: 1,
+          translation:
+            "في تطبيق Test Score Average، تظهر رسالة تهنئة إذا كان المتوسط أكبر من أي قيمة؟",
+          explanation: "الشرط هو أن يكون المتوسط أكبر من 95.0.",
+          tags: ["Test Score Average", "if statement"],
+          ref: "Chapter 3 — Q5",
+        },
+        {
+          q: "In the Test Score Average application, what happens when the Clear button is clicked?",
+          options: [
+            "Calculates the average",
+            "Clears the TextBoxes and average",
+            "Exits the application",
+            "Displays a message",
+          ],
+          correct: 1,
+          translation:
+            "في تطبيق Test Score Average، ماذا يحدث عند النقر على زر Clear؟",
+          explanation: "زر Clear يمسح محتوى TextBoxes وقيمة المتوسط.",
+          tags: ["Test Score Average", "Clear button"],
+          ref: "Chapter 3 — Q6",
+        },
+        {
+          q: "In the code for the Test Score Average application, what constant is used for the high score value?",
+          options: ["90.0", "95.0", "100.0", "85.0"],
+          correct: 1,
+          translation:
+            "في كود تطبيق Test Score Average، ما الثابت المستخدم لقيمة الدرجة العالية؟",
+          explanation: "الثابت المستخدم هو 95.0.",
+          tags: ["Test Score Average", "constants"],
+          ref: "Chapter 3 — Q7",
+        },
+        {
+          q: "What is the general format of the if-else statement in C#?",
+          options: [
+            "if (expression) {statements; } else {statements; }",
+            "if (expression) statements; else statements;",
+            "switch (expression) { case: statements; }",
+            "while (expression) { statements; }",
+          ],
+          correct: 0,
+          translation: "ما الصيغة العامة لجملة if-else في C#؟",
+          explanation: "الصيغة الصحيحة تضع الأوامر داخل { } بعد if وبعد else.",
+          tags: ["if-else", "syntax"],
+          ref: "Chapter 3 — Q8",
+        },
+        {
+          q: "In the if-else statement, which part executes if the Boolean expression is false?",
+          options: [
+            "The if clause",
+            "The else clause",
+            "Both clauses",
+            "Neither clause",
+          ],
+          correct: 1,
+          translation:
+            "في جملة if-else، أي جزء يتم تنفيذه إذا كان التعبير المنطقي false؟",
+          explanation: "عندما يكون الشرط false ينفذ else clause.",
+          tags: ["if-else", "Boolean expression"],
+          ref: "Chapter 3 — Q9",
+        },
+        {
+          q: "In the Payroll with Overtime application, overtime is calculated for hours worked more than what number?",
+          options: ["30", "35", "40", "45"],
+          correct: 2,
+          translation:
+            "في تطبيق Payroll with Overtime، يتم حساب الوقت الإضافي للعمل أكثر من أي رقم؟",
+          explanation: "الوقت الإضافي يبدأ بعد 40 ساعة.",
+          tags: ["Payroll", "overtime"],
+          ref: "Chapter 3 — Q10",
+        },
+        {
+          q: "In the Payroll with Overtime application, what multiplier is used for overtime pay?",
+          options: ["1.0", "1.5", "2.0", "0.5"],
+          correct: 1,
+          translation:
+            "في تطبيق Payroll with Overtime، ما معامل الضرب المستخدم لأجر الوقت الإضافي؟",
+          explanation: "أجر الوقت الإضافي يُحسب بمعامل 1.5.",
+          tags: ["Payroll", "overtime"],
+          ref: "Chapter 3 — Q11",
+        },
+        {
+          q: "In the code for Payroll with Overtime, what is the named constant for base hours?",
+          options: ["30m", "35m", "40m", "45m"],
+          correct: 2,
+          translation:
+            "في كود Payroll with Overtime، ما الثابت المسمى لساعات الأساس؟",
+          explanation: "الثابت BASE_HOURS يساوي 40m.",
+          tags: ["Payroll", "constants"],
+          ref: "Chapter 3 — Q12",
+        },
+        {
+          q: "In the Loan Qualifier application, what is the minimum salary required to qualify for the loan?",
+          options: ["$30,000", "$40,000", "$50,000", "$60,000"],
+          correct: 1,
+          translation:
+            "في تطبيق Loan Qualifier، ما الحد الأدنى للراتب المطلوب للتأهل للقرض؟",
+          explanation: "الحد الأدنى للراتب هو 40,000 دولار.",
+          tags: ["Loan Qualifier", "conditions"],
+          ref: "Chapter 3 — Q13",
+        },
+        {
+          q: "In the Loan Qualifier application, what is the minimum years on the job required?",
+          options: ["1", "2", "3", "4"],
+          correct: 1,
+          translation:
+            "في تطبيق Loan Qualifier، ما الحد الأدنى لعدد سنوات العمل المطلوبة؟",
+          explanation: "الحد الأدنى هو سنتان.",
+          tags: ["Loan Qualifier", "conditions"],
+          ref: "Chapter 3 — Q14",
+        },
+        {
+          q: "In the code for Loan Qualifier, what constant is used for minimum years on job?",
+          options: ["1", "2", "3", "4"],
+          correct: 1,
+          translation:
+            "في كود Loan Qualifier، ما الثابت المستخدم للحد الأدنى لسنوات العمل؟",
+          explanation: "الثابت MIN_YEARS يساوي 2.",
+          tags: ["Loan Qualifier", "constants"],
+          ref: "Chapter 3 — Q15",
+        },
+        {
+          q: "In the Grader application, what grading scale is used?",
+          options: ["5-point", "10-point", "15-point", "20-point"],
+          correct: 1,
+          translation: "في تطبيق Grader، ما مقياس الدرجات المستخدم؟",
+          explanation: "يستخدم التطبيق مقياس 10-point.",
+          tags: ["Grader", "grading scale"],
+          ref: "Chapter 3 — Q16",
+        },
+        {
+          q: "In the Grader application, what grade is given for scores 90 and above?",
+          options: ["A", "B", "C", "F"],
+          correct: 0,
+          translation: "في تطبيق Grader، ما الدرجة المعطاة للعلامات 90 وأعلى؟",
+          explanation: "العلامة 90 وأعلى تأخذ تقدير A.",
+          tags: ["Grader", "nested if"],
+          ref: "Chapter 3 — Q17",
+        },
+        {
+          q: "What makes the logic of nested decision structures simpler in C#?",
+          options: [
+            "if-else-if statement",
+            "switch statement",
+            "while loop",
+            "for loop",
+          ],
+          correct: 0,
+          translation: "ما الذي يبسّط منطق تراكيب القرار المتداخلة في C#؟",
+          explanation: "جملة if-else-if تجعل السلاسل المتداخلة أوضح وأسهل.",
+          tags: ["nested if", "if-else-if"],
+          ref: "Chapter 3 — Q18",
+        },
+        {
+          q: "How many logical operators are provided in C# as shown in the table?",
+          options: ["2", "3", "4", "5"],
+          correct: 1,
+          translation: "كم عدد المعاملات المنطقية في C# كما في الجدول؟",
+          explanation: "يوجد ثلاثة معاملات منطقية: && و || و !.",
+          tags: ["logical operators", "C#"],
+          ref: "Chapter 3 — Q19",
+        },
+        {
+          q: "In the Range Checker application, what range is considered acceptable?",
+          options: [
+            "1 through 5",
+            "1 through 10",
+            "1 through 15",
+            "1 through 20",
+          ],
+          correct: 1,
+          translation: "في تطبيق Range Checker، ما النطاق المقبول؟",
+          explanation: "النطاق المقبول هو من 1 إلى 10.",
+          tags: ["Range Checker", "logical AND"],
+          ref: "Chapter 3 — Q20",
+        },
+        {
+          q: "What data type in C# holds true or false values?",
+          options: ["int", "double", "bool", "string"],
+          correct: 2,
+          translation: "ما نوع البيانات في C# الذي يحمل القيم true أو false؟",
+          explanation: "النوع bool مخصص للقيم المنطقية true/false.",
+          tags: ["bool", "data types"],
+          ref: "Chapter 3 — Q21",
+        },
+        {
+          q: "In the example with bool grandMaster, what value is assigned if points > 5000?",
+          options: ["false", "true", "0", "1"],
+          correct: 1,
+          translation:
+            "في مثال bool grandMaster، ما القيمة المعطاة إذا كانت points > 5000؟",
+          explanation: "عند تحقق الشرط يتم تعيين grandMaster = true.",
+          tags: ["bool", "if statement"],
+          ref: "Chapter 3 — Q22",
+        },
+        {
+          q: "What are bool variables commonly used as in code?",
+          options: ["Counters", "Flags", "Strings", "Arrays"],
+          correct: 1,
+          translation: "كيف تُستخدم متغيرات bool عادةً في الكود؟",
+          explanation: "تُستخدم غالبًا كـ Flags تشير إلى حالة true/false.",
+          tags: ["bool", "flags"],
+          ref: "Chapter 3 — Q23",
+        },
+        {
+          q: "Which operator is used to compare two strings in C#?",
+          options: ["=", "==", "!=", "Equals"],
+          correct: 1,
+          translation: "أي معامل يُستخدم لمقارنة نصين في C#؟",
+          explanation: "تُقارن النصوص في C# باستخدام ==.",
+          tags: ["string comparison", "operators"],
+          ref: "Chapter 3 — Q24",
+        },
+        {
+          q: "In the Secret Word application, what is the secret word?",
+          options: ["Ariel", "Mark", "Mary", "Joe"],
+          correct: 0,
+          translation: "في تطبيق Secret Word، ما الكلمة السرية؟",
+          explanation: "الكلمة السرية هي Ariel.",
+          tags: ["Secret Word", "string comparison"],
+          ref: "Chapter 3 — Q25",
+        },
+        {
+          q: 'In string comparison, are "Joe" and "joe" considered equal by default?',
+          options: ["Yes", "No", "Only if lowercase", "Only if uppercase"],
+          correct: 1,
+          translation: 'في مقارنة النصوص، هل "Joe" و "joe" متساويان افتراضيًا؟',
+          explanation:
+            "المقارنة الافتراضية حساسة لحالة الأحرف، لذلك ليسا متساويين.",
+          tags: ["string comparison", "case sensitivity"],
+          ref: "Chapter 3 — Q26",
+        },
+        {
+          q: "What method can perform a case-insensitive string comparison?",
+          options: [
+            "String.Equals",
+            "String.Compare with true",
+            "String.ToLower",
+            "String.Length",
+          ],
+          correct: 1,
+          translation:
+            "ما الدالة التي يمكنها المقارنة بين النصوص دون مراعاة حالة الأحرف؟",
+          explanation: "String.Compare مع تمرير true تتجاهل حالة الأحرف.",
+          tags: ["string comparison", "String.Compare"],
+          ref: "Chapter 3 — Q27",
+        },
+        {
+          q: "What do Parse methods throw when converting nonnumeric data?",
+          options: ["Warning", "Exception", "Error message", "Null value"],
+          correct: 1,
+          translation: "ماذا ترمي دوال Parse عند تحويل بيانات غير رقمية؟",
+          explanation: "ترمي Exception عند فشل التحويل.",
+          tags: ["Parse", "exceptions"],
+          ref: "Chapter 3 — Q28",
+        },
+        {
+          q: "What is a better practice than using try-catch for data conversion exceptions?",
+          options: [
+            "Using loops",
+            "Preventing exceptions with TryParse",
+            "Ignoring exceptions",
+            "Using switch",
+          ],
+          correct: 1,
+          translation:
+            "ما الممارسة الأفضل من استخدام try-catch في تحويل البيانات؟",
+          explanation: "الأفضل منع حدوث الاستثناء باستخدام TryParse.",
+          tags: ["TryParse", "validation"],
+          ref: "Chapter 3 — Q29",
+        },
+        {
+          q: "Which TryParse method converts a string to an int?",
+          options: [
+            "double.TryParse",
+            "decimal.TryParse",
+            "int.TryParse",
+            "bool.TryParse",
+          ],
+          correct: 2,
+          translation: "أي دالة TryParse تحول نصًا إلى int؟",
+          explanation: "int.TryParse مخصصة لتحويل النص إلى عدد صحيح int.",
+          tags: ["TryParse", "int"],
+          ref: "Chapter 3 — Q30",
+        },
+        {
+          q: "What does TryParse return if conversion is successful?",
+          options: ["false", "true", "0", "null"],
+          correct: 1,
+          translation: "ماذا ترجع TryParse إذا نجح التحويل؟",
+          explanation: "ترجع true عند نجاح التحويل.",
+          tags: ["TryParse", "return value"],
+          ref: "Chapter 3 — Q31",
+        },
+        {
+          q: "In validating multiple TextBoxes, what should the program do when invalid data is found?",
+          options: [
+            "Ignore it",
+            "Display a general error",
+            "Display specific error for each TextBox",
+            "Exit the program",
+          ],
+          correct: 2,
+          translation:
+            "عند التحقق من عدة TextBoxes، ماذا يجب أن يفعل البرنامج عند وجود بيانات غير صحيحة؟",
+          explanation: "الأفضل عرض رسالة خطأ محددة لكل TextBox.",
+          tags: ["validation", "TextBox"],
+          ref: "Chapter 3 — Q32",
+        },
+        {
+          q: "In the Add Two Numbers Application, what happens if non-integer is entered?",
+          options: [
+            "Adds anyway",
+            "Shows error for specific TextBox",
+            "Crashes",
+            "Clears all",
+          ],
+          correct: 1,
+          translation:
+            "في تطبيق Add Two Numbers، ماذا يحدث إذا أُدخل رقم غير صحيح؟",
+          explanation: "يظهر خطأ خاص بالـ TextBox المعني.",
+          tags: ["validation", "Add Two Numbers"],
+          ref: "Chapter 3 — Q33",
+        },
+        {
+          q: "What is the process of inspecting input data for validity?",
+          options: [
+            "Data conversion",
+            "Input validation",
+            "Exception handling",
+            "String comparison",
+          ],
+          correct: 1,
+          translation: "ما عملية فحص بيانات الإدخال للتأكد من صحتها؟",
+          explanation: "هذه العملية تسمى Input validation.",
+          tags: ["validation", "input"],
+          ref: "Chapter 3 — Q34",
+        },
+        {
+          q: "In input validation example for hours worked, what is the maximum valid hours per week?",
+          options: ["168", "400", "40", "100"],
+          correct: 0,
+          translation:
+            "في مثال التحقق من ساعات العمل، ما الحد الأقصى الصحيح للساعات أسبوعيًا؟",
+          explanation: "الحد الأقصى 168 ساعة في الأسبوع.",
+          tags: ["validation", "hours"],
+          ref: "Chapter 3 — Q35",
+        },
+        {
+          q: "In test score validation, what is the valid range?",
+          options: [
+            "0 through 50",
+            "0 through 100",
+            "0 through 90",
+            "0 through 200",
+          ],
+          correct: 1,
+          translation: "في التحقق من درجة الاختبار، ما النطاق الصحيح؟",
+          explanation: "الدرجات الصحيحة من 0 إلى 100.",
+          tags: ["validation", "test scores"],
+          ref: "Chapter 3 — Q36",
+        },
+        {
+          q: "What controls allow selecting one choice from several?",
+          options: ["TextBoxes", "Labels", "Radio buttons", "Check boxes"],
+          correct: 2,
+          translation: "ما العناصر التي تسمح باختيار واحد من عدة اختيارات؟",
+          explanation: "Radio buttons تسمح باختيار واحد فقط من المجموعة.",
+          tags: ["RadioButton", "controls"],
+          ref: "Chapter 3 — Q37",
+        },
+        {
+          q: "How many radio buttons in a group can be selected at a time?",
+          options: ["None", "One", "All", "Multiple"],
+          correct: 1,
+          translation:
+            "كم عدد أزرار الراديو التي يمكن اختيارها في المجموعة في وقت واحد؟",
+          explanation: "يمكن اختيار زر راديو واحد فقط في المجموعة.",
+          tags: ["RadioButton", "selection"],
+          ref: "Chapter 3 — Q38",
+        },
+        {
+          q: "How are radio buttons grouped?",
+          options: [
+            "Inside GroupBox or Panel",
+            "Inside Label",
+            "Inside Button",
+            "Inside TextBox",
+          ],
+          correct: 0,
+          translation: "كيف يتم تجميع أزرار الراديو؟",
+          explanation: "توضع داخل GroupBox أو Panel لتشكيل مجموعة.",
+          tags: ["RadioButton", "GroupBox"],
+          ref: "Chapter 3 — Q39",
+        },
+        {
+          q: "What property of RadioButton determines if it is selected?",
+          options: ["Text", "Checked", "Visible", "Enabled"],
+          correct: 1,
+          translation: "ما خاصية RadioButton التي تحدد ما إذا كان مختارًا؟",
+          explanation: "الخاصية Checked تحدد حالة الاختيار.",
+          tags: ["RadioButton", "Checked"],
+          ref: "Chapter 3 — Q40",
+        },
+        {
+          q: "In code, how do you check if a RadioButton is selected?",
+          options: [
+            "if (radio.Checked)",
+            "if (radio.Text == true)",
+            "if (radio.Visible)",
+            "if (radio.Enabled)",
+          ],
+          correct: 0,
+          translation: "في الكود، كيف تتحقق من أن RadioButton مختار؟",
+          explanation: "يتم التحقق باستخدام if (radio.Checked).",
+          tags: ["RadioButton", "Checked"],
+          ref: "Chapter 3 — Q41",
+        },
+        {
+          q: "In the Color Mixer application, what secondary color is from red and blue?",
+          options: ["Orange", "Green", "Purple", "Yellow"],
+          correct: 2,
+          translation:
+            "في تطبيق Color Mixer، ما اللون الثانوي الناتج من الأحمر والأزرق؟",
+          explanation: "الأحمر + الأزرق = البنفسجي Purple.",
+          tags: ["Color Mixer", "RadioButton"],
+          ref: "Chapter 3 — Q42",
+        },
+        {
+          q: "What event occurs when a RadioButton's Checked property changes?",
+          options: ["Click", "CheckedChanged", "TextChanged", "Focus"],
+          correct: 1,
+          translation:
+            "ما الحدث الذي يقع عند تغير خاصية Checked لـ RadioButton؟",
+          explanation: "الحدث هو CheckedChanged.",
+          tags: ["RadioButton", "events"],
+          ref: "Chapter 3 — Q43",
+        },
+        {
+          q: "In the Color Theme application, what happens when a radio button is selected?",
+          options: [
+            "Form background changes immediately",
+            "Message box appears",
+            "Application exits",
+            "Nothing",
+          ],
+          correct: 0,
+          translation: "في تطبيق Color Theme، ماذا يحدث عند اختيار زر راديو؟",
+          explanation: "يتغير لون خلفية النموذج فورًا.",
+          tags: ["Color Theme", "RadioButton"],
+          ref: "Chapter 3 — Q44",
+        },
+        {
+          q: "What controls allow multiple selections?",
+          options: ["Radio buttons", "Buttons", "Check boxes", "Labels"],
+          correct: 2,
+          translation: "ما العناصر التي تسمح باختيارات متعددة؟",
+          explanation: "Check boxes تسمح باختيار أكثر من عنصر.",
+          tags: ["CheckBox", "controls"],
+          ref: "Chapter 3 — Q45",
+        },
+        {
+          q: "What property of CheckBox holds the displayed text?",
+          options: ["Checked", "Text", "Selected", "Value"],
+          correct: 1,
+          translation: "ما خاصية CheckBox التي تحمل النص المعروض؟",
+          explanation: "الخاصية Text تحمل النص الظاهر.",
+          tags: ["CheckBox", "Text"],
+          ref: "Chapter 3 — Q46",
+        },
+        {
+          q: "In CheckBox, what does Checked = True mean?",
+          options: ["Unchecked", "Selected", "Disabled", "Hidden"],
+          correct: 1,
+          translation: "في CheckBox، ماذا تعني Checked = True؟",
+          explanation: "تعني أن العنصر مختار Selected.",
+          tags: ["CheckBox", "Checked"],
+          ref: "Chapter 3 — Q47",
+        },
+        {
+          q: "In the switch statement, what is it an alternative to?",
+          options: ["if-else-if", "for loop", "while loop", "try-catch"],
+          correct: 0,
+          translation: "جملة switch تعتبر بديلًا عن ماذا؟",
+          explanation: "switch بديل لسلسلة if-else-if.",
+          tags: ["switch", "if-else-if"],
+          ref: "Chapter 3 — Q48",
+        },
+        {
+          q: "What control displays a list of items?",
+          options: ["TextBox", "Label", "ListBox", "Button"],
+          correct: 2,
+          translation: "ما العنصر الذي يعرض قائمة من العناصر؟",
+          explanation: "ListBox يعرض قائمة عناصر.",
+          tags: ["ListBox", "controls"],
+          ref: "Chapter 3 — Q49",
+        },
+        {
+          q: "When does a scroll bar appear in a ListBox?",
+          options: [
+            "Always",
+            "When items exceed display space",
+            "Never",
+            "On click",
+          ],
+          correct: 1,
+          translation: "متى يظهر شريط التمرير في ListBox؟",
+          explanation: "يظهر عندما تتجاوز العناصر المساحة المتاحة للعرض.",
+          tags: ["ListBox", "scroll bar"],
+          ref: "Chapter 3 — Q50",
+        },
+        {
+          q: "How do you add items to ListBox at design time?",
+          options: [
+            "Code only",
+            "Items property collection",
+            "Text property",
+            "Checked property",
+          ],
+          correct: 1,
+          translation: "كيف تضيف عناصر إلى ListBox في وقت التصميم؟",
+          explanation: "عبر مجموعة Items property collection.",
+          tags: ["ListBox", "design time"],
+          ref: "Chapter 3 — Q51",
+        },
+        {
+          q: "What property stores the selected item in ListBox?",
+          options: ["SelectedIndex", "SelectedItem", "Items.Count", "Text"],
+          correct: 1,
+          translation: "ما الخاصية التي تخزن العنصر المختار في ListBox؟",
+          explanation: "الخاصية SelectedItem تحمل العنصر المختار.",
+          tags: ["ListBox", "SelectedItem"],
+          ref: "Chapter 3 — Q52",
+        },
+        {
+          q: "What value is SelectedIndex if no item is selected?",
+          options: ["0", "1", "-1", "null"],
+          correct: 2,
+          translation: "ما قيمة SelectedIndex إذا لم يتم اختيار أي عنصر؟",
+          explanation: "تكون القيمة -1 عند عدم وجود اختيار.",
+          tags: ["ListBox", "SelectedIndex"],
+          ref: "Chapter 3 — Q53",
+        },
+        {
+          q: "In Time Zone application, what is displayed when a city is selected?",
+          options: ["Time", "Time zone name", "Weather", "Population"],
+          correct: 1,
+          translation: "في تطبيق Time Zone، ماذا يظهر عند اختيار مدينة؟",
+          explanation: "يظهر اسم المنطقة الزمنية Time zone name.",
+          tags: ["Time Zone", "ListBox"],
+          ref: "Chapter 3 — Q54",
+        },
+        {
+          q: "How do you add an item to ListBox at runtime?",
+          options: [
+            "Items.Add",
+            "Items.Clear",
+            "Items.RemoveAt",
+            "Items.Count",
+          ],
+          correct: 0,
+          translation: "كيف تضيف عنصرًا إلى ListBox في وقت التشغيل؟",
+          explanation: "تستخدم Items.Add.",
+          tags: ["ListBox", "Items.Add"],
+          ref: "Chapter 3 — Q55",
+        },
+        {
+          q: "In Number List application, what numbers are added to the ListBox?",
+          options: ["1 to 5", "Shown in the image", "Random", "User input"],
+          correct: 1,
+          translation:
+            "في تطبيق Number List، ما الأرقام التي تُضاف إلى ListBox؟",
+          explanation: "الأرقام موضحة في صورة التطبيق.",
+          tags: ["Number List", "ListBox"],
+          ref: "Chapter 3 — Q56",
+        },
+        {
+          q: "What property reports the number of items in ListBox?",
+          options: [
+            "Items.Add",
+            "Items.Clear",
+            "Items.Count",
+            "Items.RemoveAt",
+          ],
+          correct: 2,
+          translation: "ما الخاصية التي تخبر بعدد العناصر في ListBox؟",
+          explanation: "Items.Count ترجع عدد العناصر.",
+          tags: ["ListBox", "Items.Count"],
+          ref: "Chapter 3 — Q57",
+        },
+        {
+          q: "What method erases all items in ListBox?",
+          options: [
+            "Items.Add",
+            "Items.Clear",
+            "Items.Count",
+            "Items.RemoveAt",
+          ],
+          correct: 1,
+          translation: "ما الدالة التي تمسح كل العناصر في ListBox؟",
+          explanation: "Items.Clear تمسح جميع العناصر.",
+          tags: ["ListBox", "Items.Clear"],
+          ref: "Chapter 3 — Q58",
+        },
+        {
+          q: "What method removes an item at a specific index in ListBox?",
+          options: [
+            "Items.Add",
+            "Items.Clear",
+            "Items.Count",
+            "Items.RemoveAt",
+          ],
+          correct: 3,
+          translation: "ما الدالة التي تحذف عنصرًا عند فهرس محدد في ListBox؟",
+          explanation: "Items.RemoveAt تحذف حسب الفهرس.",
+          tags: ["ListBox", "Items.RemoveAt"],
+          ref: "Chapter 3 — Q59",
+        },
+        {
+          q: "In the Adds, removes and clears ListBox items Application, what does the Clear button do?",
+          options: [
+            "Adds item",
+            "Removes selected",
+            "Deletes all entries",
+            "Exits app",
+          ],
+          correct: 2,
+          translation:
+            "في تطبيق إضافة وحذف ومسح عناصر ListBox، ماذا يفعل زر Clear؟",
+          explanation: "يحذف كل المدخلات.",
+          tags: ["ListBox", "Clear button"],
+          ref: "Chapter 3 — Q60",
+        },
+        {
+          q: "In the if statement without braces, how many statements are conditionally executed?",
+          options: ["All following", "One", "None", "Multiple"],
+          correct: 1,
+          translation:
+            "في جملة if بدون أقواس، كم عدد الأوامر التي تُنفذ شرطيًا؟",
+          explanation: "بدون أقواس يتم تنفيذ أمر واحد فقط.",
+          tags: ["if statement", "syntax"],
+          ref: "Chapter 3 — Q61",
+        },
+        {
+          q: "In Test Score Average, how is the average rounded?",
+          options: [
+            "1 decimal place",
+            "2 decimal places",
+            "No rounding",
+            "To integer",
+          ],
+          correct: 1,
+          translation: "في Test Score Average، كيف يتم تقريب المتوسط؟",
+          explanation: "يتم التقريب إلى منزلتين عشريتين.",
+          tags: ["Test Score Average", "rounding"],
+          ref: "Chapter 3 — Q62",
+        },
+        {
+          type: "essay",
+          q: "In Payroll with Overtime, if hours <= 40, how is gross pay calculated?",
+          translation:
+            "في تطبيق Payroll with Overtime، إذا كانت الساعات <= 40، كيف يُحسب الأجر الإجمالي؟",
+          answer:
+            "grossPay = hours * payRate.\nNo overtime multiplier is applied because hours are within the base limit.",
+          tags: ["Payroll", "overtime"],
+          ref: "Chapter 3 — Q63",
+        },
+        {
+          q: "In Loan Qualifier, what logical operator is used in the condition?",
+          options: ["OR", "NOT", "AND", "XOR"],
+          correct: 2,
+          translation:
+            "في Loan Qualifier، ما المعامل المنطقي المستخدم في الشرط؟",
+          explanation: "يستخدم AND للتحقق من شرطين معًا.",
+          tags: ["Loan Qualifier", "logical AND"],
+          ref: "Chapter 3 — Q64",
+        },
+        {
+          q: "In Grader, how many nested if statements are used initially?",
+          options: ["1", "2", "3", "4"],
+          correct: 3,
+          translation: "في Grader، كم عدد جمل if المتداخلة المستخدمة مبدئيًا؟",
+          explanation: "يبدأ الحل بأربع جمل if متداخلة لتغطية التقديرات.",
+          tags: ["Grader", "nested if"],
+          ref: "Chapter 3 — Q65",
+        },
+        {
+          q: "What is the symbol for the AND logical operator in C#?",
+          options: ["&", "&&", "|", "^"],
+          correct: 1,
+          translation: "ما رمز المعامل المنطقي AND في C#؟",
+          explanation: "رمز AND هو &&.",
+          tags: ["logical operators", "AND"],
+          ref: "Chapter 3 — Q66",
+        },
+        {
+          q: "In Range Checker, what operator checks if number >= 1 and <= 10?",
+          options: ["OR", "NOT", "AND", "None"],
+          correct: 2,
+          translation:
+            "في Range Checker، ما المعامل الذي يتحقق من أن الرقم >= 1 و <= 10؟",
+          explanation: "يستخدم AND للتحقق من الشرطين معًا.",
+          tags: ["Range Checker", "logical AND"],
+          ref: "Chapter 3 — Q67",
+        },
+        {
+          q: "In bool example, what does !grandMaster mean?",
+          options: [
+            "grandMaster is true",
+            "grandMaster is false",
+            "Set to true",
+            "Set to false",
+          ],
+          correct: 1,
+          translation: "في مثال bool، ماذا يعني !grandMaster؟",
+          explanation: "! تعني النفي، أي أن grandMaster يساوي false.",
+          tags: ["bool", "NOT operator"],
+          ref: "Chapter 3 — Q68",
+        },
+        {
+          q: "In string comparison example, what are name1 and name2?",
+          options: [
+            "Mary and Mark",
+            "Joe and joe",
+            "Ariel and Mark",
+            "JOE and joe",
+          ],
+          correct: 0,
+          translation: "في مثال مقارنة النصوص، ما هما name1 و name2؟",
+          explanation: "القيمتان هما Mary و Mark.",
+          tags: ["string comparison", "example"],
+          ref: "Chapter 3 — Q69",
+        },
+        {
+          q: "In String.Compare with true, what does it return if equal ignoring case?",
+          options: ["1", "-1", "0", "true"],
+          correct: 2,
+          translation:
+            "في String.Compare مع true، ماذا ترجع إذا كان النصان متساويين مع تجاهل حالة الأحرف؟",
+          explanation: "ترجع 0 عند التساوي.",
+          tags: ["String.Compare", "string comparison"],
+          ref: "Chapter 3 — Q70",
+        },
+        {
+          q: "In TryParse, what is assigned to the target variable if conversion fails?",
+          options: ["null", "0", "Exception", "Original string"],
+          correct: 1,
+          translation:
+            "في TryParse، ماذا يُسند إلى المتغير الهدف إذا فشل التحويل؟",
+          explanation: "غالبًا يُسند 0 للمتغير الرقمي عند الفشل.",
+          tags: ["TryParse", "conversion"],
+          ref: "Chapter 3 — Q71",
+        },
+        {
+          q: "In Add Two Numbers code, how many if statements check for valid input?",
+          options: ["1", "2", "3", "4"],
+          correct: 1,
+          translation:
+            "في كود Add Two Numbers، كم عدد جمل if التي تتحقق من صحة الإدخال؟",
+          explanation: "توجد جملتا if، واحدة لكل TextBox.",
+          tags: ["Add Two Numbers", "validation"],
+          ref: "Chapter 3 — Q72",
+        },
+        {
+          q: "In input validation for payroll, what if hours > 168?",
+          options: [
+            "Accept",
+            "Error message",
+            "Calculate overtime",
+            "Set to 40",
+          ],
+          correct: 1,
+          translation:
+            "في التحقق من إدخال الرواتب، ماذا يحدث إذا كانت الساعات > 168؟",
+          explanation: "تظهر رسالة خطأ لأن القيمة غير صحيحة.",
+          tags: ["validation", "payroll"],
+          ref: "Chapter 3 — Q73",
+        },
+        {
+          q: "Default value of RadioButton Checked property?",
+          options: ["True", "False", "Null", "0"],
+          correct: 1,
+          translation: "ما القيمة الافتراضية لخاصية Checked في RadioButton؟",
+          explanation: "القيمة الافتراضية هي False.",
+          tags: ["RadioButton", "Checked"],
+          ref: "Chapter 3 — Q74",
+        },
+        {
+          q: "In Color Mixer, if same color selected in both groups?",
+          options: [
+            "Mix to secondary",
+            "Set form to that color",
+            "Error",
+            "No change",
+          ],
+          correct: 1,
+          translation: "في Color Mixer، إذا تم اختيار نفس اللون في المجموعتين؟",
+          explanation: "يتم تعيين لون النموذج إلى ذلك اللون.",
+          tags: ["Color Mixer", "RadioButton"],
+          ref: "Chapter 3 — Q75",
+        },
+        {
+          q: "How to create CheckedChanged event handler?",
+          options: [
+            "Click the control",
+            "Double-click the control",
+            "Right-click",
+            "Properties",
+          ],
+          correct: 1,
+          translation: "كيف تنشئ معالج حدث CheckedChanged؟",
+          explanation: "بالنقر المزدوج على العنصر.",
+          tags: ["events", "CheckedChanged"],
+          ref: "Chapter 3 — Q76",
+        },
+        {
+          q: "In Check Boxes, how many can be selected?",
+          options: ["One", "None", "Any number", "All"],
+          correct: 2,
+          translation: "في Check Boxes، كم عدد العناصر التي يمكن اختيارها؟",
+          explanation: "يمكن اختيار أي عدد من العناصر.",
+          tags: ["CheckBox", "selection"],
+          ref: "Chapter 3 — Q77",
+        },
+        {
+          q: "In ListBox, first item index?",
+          options: ["-1", "0", "1", "null"],
+          correct: 1,
+          translation: "في ListBox، ما فهرس العنصر الأول؟",
+          explanation: "الفهرسة تبدأ من 0.",
+          tags: ["ListBox", "index"],
+          ref: "Chapter 3 — Q78",
+        },
+        {
+          q: "In SelectedIndex property, last index is?",
+          options: ["n", "n-1", "0", "-1"],
+          correct: 1,
+          translation: "في خاصية SelectedIndex، ما الفهرس الأخير؟",
+          explanation: "إذا كان عدد العناصر n، فالفهرس الأخير هو n-1.",
+          tags: ["ListBox", "SelectedIndex"],
+          ref: "Chapter 3 — Q79",
+        },
+        {
+          q: "In Example 11, what button removes the selected item?",
+          options: ["Add", "Remove", "Clear", "Exit"],
+          correct: 1,
+          translation: "في المثال 11، ما الزر الذي يحذف العنصر المختار؟",
+          explanation: "زر Remove يحذف العنصر المحدد.",
+          tags: ["ListBox", "Remove button"],
+          ref: "Chapter 3 — Q80",
+        },
+      ],
+    },
+    {
+      id: "visual-programming-lecture-04",
+      t: "المحاضرة 4 — Loops, Files & ListBox",
+      d: "أسئلة شاملة عن ListBox والحلقات (while / for / do-while) والملفات (StreamWriter / StreamReader) و Open/SaveFileDialog بلغة C#.",
+      pdf: "datenew/subjects/visual-programming/lectures/lec 4/lec 4-2مضغوط_text.pdf",
+      pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Visual Programming - Lecture 4 - Questions.pdf",
+      // المحاضرة: Lecture 4 — Loops, Files & ListBox (Visual Programming / C#)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لأدوات ListBox والحلقات التكرارية والتعامل مع الملفات في C# Windows Forms.",
+          links: [
+            {
+              t: "كل ما تحتاج معرفته عن أداة ListBox في C# خطوة بخطوة",
+              d: "شرح عربي كامل لأداة ListBox وخصائصها Items و SelectedItem و SelectedIndex والطرق Items.Add و Items.Clear و Items.RemoveAt — يغطي نفس مفاهيم المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=uufkShAt8Q4",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Learn C# in Arabic | المحاضرة 7 – الحلقات التكرارية (while, for)",
+              d: "محاضرة عربية للأستاذ محمد البحراوي تشرح الحلقات while و for مع أمثلة عملية — تطابق مباشر الجزء الخاص بالحلقات في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=IzJXzUrlwA0",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح شامل لأنواع Loops في C# | for, foreach, while, do while",
+              d: "فيديو عربي يشرح الفرق بين while و do-while و for مع أمثلة، ويركز على نقطة pretest vs posttest المهمة في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=fHog0ufMuSI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "C# Windows Form Application Tutorial (in Arabic) — Playlist",
+              d: "قائمة تشغيل عربية شاملة لتعليم C# Windows Forms، تشمل الأدوات والـ dialogs زي OpenFileDialog و SaveFileDialog — مفيدة لمراجعة المحاضرة كلها.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLJID2v0IuzGzrMg5l9fNK1HpLagtrieYM",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات بالإنجليزي تشرح StreamWriter و StreamReader و file handling في C#.",
+          links: [
+            {
+              t: "StreamWriter and StreamReader in C# | File Handling in C#",
+              d: "شرح عملي بالإنجليزي لكلاسي StreamWriter و StreamReader مع أمثلة كتابة وقراءة من ملفات نصّية — يطابق محتوى Chapter 4 في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=hS868qVjGbE",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "File, FileStream, StreamWriter, and StreamReader | Coding in C#",
+              d: "فيديو عالمي يشرح القراءة والكتابة من ملفات نصّية باستخدام File و StreamWriter و StreamReader — مفيد لفهم الفرق بين WriteLine و Write.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=6fKPAVyt8KM",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "C# Beginners Tutorial - 36 - StreamReader pt 1",
+              d: "درس من سلسلة C# للمبتدئين يشرح StreamReader وطرق ReadLine و EndOfStream — يطابق قسم قراءة الملفات في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=--YPtMsg_6E",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر رسمية وتوثيق Microsoft Learn و GeeksforGeeks و C# Corner تغطي ListBox و File IO و OpenFileDialog و SaveFileDialog.",
+          links: [
+            {
+              t: "ListBox Class — Microsoft Learn (System.Windows.Forms)",
+              d: "التوثيق الرسمي لـ Microsoft لـ ListBox Class مع شرح الخصائص Items و SelectedItem و SelectedIndex والأحداث — مرجع أساسي لجزء ListBox في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.listbox",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "StreamReader and StreamWriter in C# — GeeksforGeeks",
+              d: "شرح كامل بالأمثلة لكلاسي StreamWriter و StreamReader وأهم الطرق WriteLine و Write و ReadLine و EndOfStream — يطابق قسم File IO في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/c-sharp/streamreader-and-streamwriter-in-c-sharp",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Loops in C# — GeeksforGeeks (while / for / do-while)",
+              d: "مرجع شامل لأنواع الحلقات في C# مع الفرق بين pretest و posttest loops — مفيد لمراجعة while و for و do-while من المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/c-sharp/loops-in-csharp",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "OpenFileDialog Class — Microsoft Learn (Microsoft.Win32)",
+              d: "توثيق رسمي لـ OpenFileDialog مع خصائصه Filename و InitialDirectory و Title و ShowDialog و DialogResult — مرجع دقيق لجزء OpenFileDialog في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://learn.microsoft.com/en-us/dotnet/api/microsoft.win32.openfiledialog",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "SaveFileDialog In C# — C# Corner",
+              d: "شرح عملي لـ SaveFileDialog مع أمثلة كود للخصائص Filename و InitialDirectory و Title و Filter — يطابق مباشرة قسم SaveFileDialog في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.c-sharpcorner.com/article/savefiledialog-in-C-Sharp",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "File.AppendText() Method in C# — GeeksforGeeks",
+              d: "شرح مفصل لطريقة File.AppendText مع أمثلة — يوضّح الفرق بين CreateText (تمسح المحتوى) و AppendText (تضيف في الآخر) المذكور في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/c-sharp/file-appendtext-method-in-csharp-with-examples",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات للتجربة العملية: محرر C# أونلاين، بيئة Visual Studio، ومرجع Microsoft لقراءة/كتابة الملفات.",
+          links: [
+            {
+              t: ".NET Fiddle — Online C# Compiler",
+              d: "محرر C# أونلاين يدعم Console و Script و MVC مع إصدارات .NET متعددة — جرب عليه أكواد while و for و StreamWriter بدون تثبيت أي حاجة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح المحرر",
+                  url: "https://dotnetfiddle.net",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Visual Studio 2022 — Community Edition (Free)",
+              d: "صفحة تحميل Visual Studio الرسمية من Microsoft — الإصدار Community مجاني للطلاب والمشاريع المفتوحة، وفيه Windows Forms Designer اللي هتحتاجه لتطبيقات المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://visualstudio.microsoft.com/downloads/",
+                  type: "download",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Read from and write to a text file by Visual C# — Microsoft Learn",
+              d: "دليل رسمي من Microsoft فيه snippets جاهزة للكتابة والقراءة من ملفات نصّية باستخدام StreamWriter و StreamReader — مرجع مباشر لـ Examples 6-12 في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/read-write-text-file",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. The switch statement in C# works in a way that is similar to which of the following?",
+          options: [
+            "An if-else-if statement",
+            "A single if statement",
+            "A for loop",
+            "A while loop",
+          ],
+          correct: 0,
+          translation: "جملة switch في C# تعمل بطريقة مشابهة لأيٍّ مما يلي؟",
+          explanation:
+            "switch بتشتغل زي if-else-if: بتختبر قيمة المتغير وتنفذ الكتلة المطابقة. أما if البسيطة فبتختبر شرط واحد، و for و while للحلقات التكرارية مش للاختيار.",
+          tags: ["Switch Statement"],
+          ref: "Lecture 4 — Slide 52",
+          likely: "medium",
+        },
+        {
+          q: "2. Which property of a ListBox stores the items displayed in the list?",
+          options: ["SelectedItem", "SelectedIndex", "Count", "Items"],
+          correct: 3,
+          translation:
+            "أي خاصية في ListBox بتخزّن العناصر المعروضة في القائمة؟",
+          explanation:
+            "الخاصية Items هي اللي بتحتفظ بكل عناصر ListBox. SelectedItem بترجع العنصر المختار بس، و SelectedIndex بترجع رقمه، و Count اسم طريقة جوّه Items.",
+          tags: ["ListBox", "Items Property"],
+          ref: "Lecture 4 — Slide 55",
+          likely: "high",
+        },
+        {
+          q: "3. What is the index of the first item in a ListBox?",
+          options: ["0", "1", "-1", "n"],
+          correct: 0,
+          translation: "ما هو رقم index لأول عنصر في ListBox؟",
+          explanation:
+            "الترقيم بيبدأ من 0 زي كل الـ collections في C#. العنصر الأول index=0، واللي بعده 1، وهكذا لحد n-1.",
+          tags: ["ListBox", "SelectedIndex"],
+          ref: "Lecture 4 — Slide 58",
+          likely: "high",
+        },
+        {
+          q: "4. What value does the SelectedIndex property hold when no item is selected in a ListBox?",
+          options: ["0", "1", "-1", "null"],
+          correct: 2,
+          translation:
+            "ما هي قيمة SelectedIndex لما مفيش أي عنصر مختار في ListBox؟",
+          explanation:
+            "لما مفيش اختيار، SelectedIndex بيساوي -1. ده مهم عشان تتأكد إن فيه عنصر مختار قبل ما تقرأ SelectedItem وتتجنب الـ exception.",
+          tags: ["ListBox", "SelectedIndex"],
+          ref: "Lecture 4 — Slide 58",
+          likely: "high",
+        },
+        {
+          q: "5. Which statement correctly reads the selected item from fruitListBox into a string variable selectedFruit?",
+          options: [
+            "selectedFruit = fruitListBox.SelectedItem.ToString();",
+            "selectedFruit = fruitListBox.Items.ToString();",
+            "selectedFruit = fruitListBox.SelectedIndex.ToString();",
+            "selectedFruit = fruitListBox.Text.Value;",
+          ],
+          correct: 0,
+          translation:
+            "أي جملة بتقرأ العنصر المختار من fruitListBox وتخزّنه في متغير نصّي اسمه selectedFruit؟",
+          explanation:
+            "SelectedItem بترجع object فلازم ToString() عشان نحوّله لنص. Items مفهاش عنصر واحد، و SelectedIndex رقم مش قيمة. لازم كمان تتأكد إن SelectedIndex != -1 الأول.",
+          tags: ["ListBox", "SelectedItem"],
+          ref: "Lecture 4 — Slide 56",
+          likely: "high",
+        },
+        {
+          q: "6. Which method adds a new item to a ListBox at run time?",
+          options: [
+            "ListBoxName.Items.Add(Item);",
+            "ListBoxName.AddItem(Item);",
+            "ListBoxName.Add(Item);",
+            "ListBoxName.Items.Insert(Item);",
+          ],
+          correct: 0,
+          translation: "أي طريقة بتضيف عنصر جديد إلى ListBox وقت التشغيل؟",
+          explanation:
+            "الصيغة الصحيحة Items.Add(Item). مفيش AddItem لوحدها، و Add مش موجودة على ListBox مباشرة، و Insert بتاخد index كمان قبل العنصر.",
+          tags: ["ListBox", "Items.Add"],
+          ref: "Lecture 4 — Slide 63",
+          likely: "high",
+        },
+        {
+          q: "7. If a ListBox is empty, what is the value of its Items.Count property?",
+          options: ["-1", "null", "1", "0"],
+          correct: 3,
+          translation: "لو ListBox فاضية، ما هي قيمة Items.Count؟",
+          explanation:
+            "Items.Count بيرجع عدد العناصر، فلو القائمة فاضية بيرجع 0. بنستخدمه عشان نتأكد إن القائمة مش فاضية قبل أي عملية.",
+          tags: ["ListBox", "Items.Count"],
+          ref: "Lecture 4 — Slide 66",
+          likely: "high",
+        },
+        {
+          q: "8. Which method erases all items stored in a ListBox's Items property?",
+          options: [
+            "ListBoxName.Items.Clear();",
+            "ListBoxName.Items.RemoveAll();",
+            "ListBoxName.Clear();",
+            "ListBoxName.Items.Delete();",
+          ],
+          correct: 0,
+          translation:
+            "أي طريقة بتمسح كل العناصر المخزّنة في Items تبع ListBox؟",
+          explanation:
+            "Items.Clear() هي الطريقة الصحيحة لمسح كل العناصر. RemoveAll و Delete مش موجودة، و Clear لوحدها مش على ListBox مباشرة.",
+          tags: ["ListBox", "Items.Clear"],
+          ref: "Lecture 4 — Slide 67",
+          likely: "high",
+        },
+        {
+          q: "9. Which method removes an item from a ListBox using its index?",
+          options: [
+            "ListBox.Items.RemoveAt(Index);",
+            "ListBox.Items.Remove(Index);",
+            "ListBox.Items.Delete(Index);",
+            "ListBox.Items.Drop(Index);",
+          ],
+          correct: 0,
+          translation: "أي طريقة بتمسح عنصر من ListBox باستخدام رقم الـ index؟",
+          explanation:
+            "RemoveAt(Index) هي الصيغة الصحيحة. Remove بتاخد object مش index، و Delete و Drop مش موجودة في ListBox.",
+          tags: ["ListBox", "Items.RemoveAt"],
+          ref: "Lecture 4 — Slide 68",
+          likely: "high",
+        },
+        {
+          q: "10. The while loop is classified as which type of loop?",
+          options: [
+            "Posttest loop",
+            "Pretest loop",
+            "Counter loop",
+            "Infinite loop",
+          ],
+          correct: 1,
+          translation: "while loop بتُصنّف كأي نوع من الحلقات؟",
+          explanation:
+            "while حلقة pretest: بتختبر الشرط الأول قبل ما تنفّذ أي تكرار. عشان كده لازم تهيّئ المتغيرات قبلها عشان تضمن تنفيذها مرة على الأقل. do-while هي اللي posttest.",
+          tags: ["While Loop", "Loops"],
+          ref: "Lecture 4 — Slide 5",
+          likely: "high",
+        },
+        {
+          q: "11. How many actions must you specify when writing a for loop?",
+          options: ["One", "Two", "Three", "Four"],
+          correct: 2,
+          translation: "كام عملية لازم تحددها لما تكتب for loop؟",
+          explanation:
+            "ثلاث: Initialization (مرة واحدة في الأول)، Test (الشرط المنطقي)، و Update (في نهاية كل تكرار). ده اللي بيتحط جوّه القوسين.",
+          tags: ["For Loop", "Loops"],
+          ref: "Lecture 4 — Slide 10",
+          likely: "high",
+        },
+        {
+          q: "12. The for loop is considered which type of loop?",
+          options: [
+            "Pretest loop",
+            "Posttest loop",
+            "Unconditional loop",
+            "Infinite loop",
+          ],
+          correct: 0,
+          translation: "for loop بتُعتبر أي نوع من الحلقات؟",
+          explanation:
+            "for حلقة pretest زي while بالظبط: بتختبر Boolean expression قبل أي تكرار. ممكن تتكتب بحيث ما تتكرّرش خالص لو الشرط false من البداية.",
+          tags: ["For Loop", "Loops"],
+          ref: "Lecture 4 — Slide 13",
+          likely: "high",
+        },
+        {
+          q: "13. When a variable is declared in the initialization expression of a for loop, what is its scope?",
+          options: [
+            "The whole method",
+            "The whole class",
+            "Limited to the loop only",
+            "The whole namespace",
+          ],
+          correct: 2,
+          translation:
+            "لما تتعمل declare لمتغير في initialization expression تبع for loop، ما هو scope بتاعه؟",
+          explanation:
+            "scope بيبقى محدود جوّه الحلقة بس. يعني ما تقدرش تستخدم المتغير برّه، ولو حاولت هتاخد compiler error. ده بيسمى block scope.",
+          tags: ["For Loop", "Variable Scope"],
+          ref: "Lecture 4 — Slide 14",
+          likely: "high",
+        },
+        {
+          q: "14. The do-while loop is classified as which type of loop?",
+          options: [
+            "Pretest loop",
+            "Posttest loop",
+            "Counter loop",
+            "Nested loop",
+          ],
+          correct: 1,
+          translation: "do-while loop بتُصنّف كأي نوع؟",
+          explanation:
+            "do-while حلقة posttest: بتنفّذ التكرار الأول قبل ما تختبر الشرط. عشان كده جسمها بيتنفّذ مرة على الأقل حتى لو الشرط false من البداية، وده الفرق الأساسي بينها وبين while.",
+          tags: ["Do-While Loop", "Loops"],
+          ref: "Lecture 4 — Slide 18",
+          likely: "high",
+        },
+        {
+          q: "15. What is the minimum number of times a do-while loop body executes?",
+          options: ["Zero", "One", "Two", "Depends on the condition"],
+          correct: 1,
+          translation: "ما هو الحد الأدنى لعدد مرات تنفيذ جسم do-while؟",
+          explanation:
+            "مرة واحدة على الأقل، لأنها posttest: بتنفّذ الجسم الأول وبعدين تختبر الشرط. حتى لو الشرط false من البداية، التكرار الأول بيحصل. ده عكس while اللي ممكن ما تتنفّزش خالص.",
+          tags: ["Do-While Loop", "Loops"],
+          ref: "Lecture 4 — Slide 18",
+          likely: "high",
+        },
+        {
+          q: "16. Why do programs need to save data in files?",
+          options: [
+            "Because variables are too slow",
+            "Because data in RAM disappears when the program stops",
+            "Because files are smaller than variables",
+            "Because the compiler requires it",
+          ],
+          correct: 1,
+          translation: "ليه البرامج محتاجة تحفظ البيانات في ملفات؟",
+          explanation:
+            "البيانات في RAM (المتغيرات والخصائص) بتختفي لما البرنامج يقفل. الملفات على القرص بتفضل بعد ما البرنامج يوقف، فبنقدر نقراها تاني بعدين.",
+          tags: ["Files", "Data Storage"],
+          ref: "Lecture 4 — Slide 19",
+          likely: "high",
+        },
+        {
+          q: "17. The term used to describe a file from which a program reads data is:",
+          options: ["Input file", "Output file", "Binary file", "Temp file"],
+          correct: 0,
+          translation:
+            "المصطلح اللي بيوصف الملف اللي البرنامج بياخد منه مدخلات:",
+          explanation:
+            "input file هو الملف اللي البرنامج بيقرأ منه data. output file هو اللي البرنامج بيكتب فيه. Binary و Temp أنواع أو حالات تانية.",
+          tags: ["Files", "Input File"],
+          ref: "Lecture 4 — Slide 20",
+          likely: "medium",
+        },
+        {
+          q: "18. Which of the following is the correct order of the three steps when using a file in a program?",
+          options: [
+            "Process, Open, Close",
+            "Close, Open, Process",
+            "Open, Process, Close",
+            "Open, Close, Process",
+          ],
+          correct: 2,
+          translation:
+            "أي ترتيب صحيح للخطوات التلاتة لما تستخدم ملف في برنامج؟",
+          explanation:
+            "التسلسل الصحيح: Open (إنشاء اتصال)، Process (قراءة/كتابة)، Close (قطع الاتصال). لو قرأت قبل ما تفتح هيحصل خطأ، ولو قفلت قبل ما تعالج مفيش فايدة.",
+          tags: ["Files", "File Operations"],
+          ref: "Lecture 4 — Slide 21",
+          likely: "high",
+        },
+        {
+          q: "19. A file whose contents can be opened and viewed in a text editor such as Notepad is a:",
+          options: [
+            "Binary file",
+            "Random access file",
+            "Sequential file",
+            "Text file",
+          ],
+          correct: 3,
+          translation:
+            "الملف اللي محتواه يقدر يتفتح ويتشوف في محرر نصوص زي Notepad هو:",
+          explanation:
+            "text file بيخزّن البيانات كنصوص، حتى لو أرقام. binary file بيخزّنها بشكل خام وما تنفعش تتفتح في Notepad. Sequential و random أنواع وصول مش أنواع ملفات.",
+          tags: ["Files", "Text File"],
+          ref: "Lecture 4 — Slide 22",
+          likely: "high",
+        },
+        {
+          q: "20. Which file access method requires reading all data before the desired item if it is at the end?",
+          options: [
+            "Direct access",
+            "Random access",
+            "Sequential access",
+            "Indexed access",
+          ],
+          correct: 2,
+          translation:
+            "أي طريقة وصول للملفات بتفرض إنك تقرأ كل اللي قبل العنصر المطلوب لو هو في الآخر؟",
+          explanation:
+            "sequential access: بتقرأ من البداية للنهاية بالترتيب، ما تقدرش تقفز. direct/random access بيسمح لك تقفز لأي مكان مباشرة. ده الفصل بيركّز على sequential.",
+          tags: ["Files", "File Access"],
+          ref: "Lecture 4 — Slide 23",
+          likely: "high",
+        },
+        {
+          q: "21. Which .NET class is used to write data to a text file?",
+          options: [
+            "StreamReader",
+            "BinaryWriter",
+            "FileStream",
+            "StreamWriter",
+          ],
+          correct: 3,
+          translation: "أي class في .NET بتستخدم عشان تكتب بيانات في ملف نصّي؟",
+          explanation:
+            "StreamWriter للكتابة في ملفات نصّية. StreamReader للقراءة. FileStream أعمّ (bytes) و BinaryWriter للملفات الثنائية. StreamWriter هي اللي اتذكرت في المحاضرة.",
+          tags: ["StreamWriter", "File IO"],
+          ref: "Lecture 4 — Slide 25",
+          likely: "high",
+        },
+        {
+          q: "22. Which namespace must be imported at the top of a program to use StreamWriter and StreamReader?",
+          options: ["System.Text", "System.File", "System.IO", "System.Stream"],
+          correct: 2,
+          translation:
+            "أي namespace لازم تستورده في أول البرنامج عشان تستخدم StreamWriter و StreamReader؟",
+          explanation:
+            "using System.IO; هي المطلوبة. الـ classes دي جوّه System.IO. مفيش System.File أو System.Stream ك namespaces مستقلة.",
+          tags: ["System.IO", "File IO"],
+          ref: "Lecture 4 — Slide 25",
+          likely: "high",
+        },
+        {
+          q: "23. What does the File.CreateText method do when the specified file already exists?",
+          options: [
+            "Throws an exception",
+            "Appends data to the file",
+            "Renames the existing file",
+            "Erases the file's contents and creates a new empty file",
+          ],
+          correct: 3,
+          translation:
+            "إيه اللي بيعمله File.CreateText لما الملف المحدد يكون موجود أصلًا؟",
+          explanation:
+            "CreateText بيمسح المحتوى القديم ويعمل ملف جديد فاضي بنفس الاسم. لو عايز تحافظ على المحتوى استخدم File.AppendText بدل منه.",
+          tags: ["StreamWriter", "File.CreateText"],
+          ref: "Lecture 4 — Slide 27",
+          likely: "high",
+        },
+        {
+          q: "24. Which method opens an existing file without erasing its current contents, so that new data is added at the end?",
+          options: [
+            "File.CreateText",
+            "File.OpenText",
+            "File.AppendAll",
+            "File.AppendText",
+          ],
+          correct: 3,
+          translation:
+            "أي طريقة بتفتح ملف موجود من غير ما تمسح محتواه، بحيث البيانات الجديدة تتضاف في الآخر؟",
+          explanation:
+            "File.AppendText بتفح المحتوى القديم وتزوّد عليه في النهاية. CreateText بتمسح الأول. OpenText للقراءة. AppendAll مش موجودة كاسم.",
+          tags: ["StreamWriter", "File.AppendText"],
+          ref: "Lecture 4 — Slide 39",
+          likely: "high",
+        },
+        {
+          q: "25. What is the difference between the StreamWriter WriteLine method and the Write method?",
+          options: [
+            "WriteLine is faster than Write",
+            "WriteLine writes a newline character after the data, Write does not",
+            "Write can only write strings, WriteLine can write any type",
+            "There is no difference",
+          ],
+          correct: 1,
+          translation: "إيه الفرق بين WriteLine و Write تبع StreamWriter؟",
+          explanation:
+            "WriteLine بتكتب البيانات وبعدها newline character (نهاية السطر). Write بتكتب البيانات بس من غير newline، فالبيانات الجاية بعدها بتفضل على نفس السطر.",
+          tags: ["StreamWriter", "WriteLine vs Write"],
+          ref: "Lecture 4 — Slide 30",
+          likely: "high",
+        },
+        {
+          q: "26. Which StreamReader method reads a single line of text from a file?",
+          options: ["Read()", "ReadLine()", "ReadAll()", "ReadText()"],
+          correct: 1,
+          translation: "أي طريقة تبع StreamReader بتقرأ سطر نصّي واحد من ملف؟",
+          explanation:
+            "ReadLine() بتقرأ سطر لحد ما يوصل newline وترجعه كـ string. Read() بتقرا حرف واحد. ReadAll و ReadText مش موجودة كطرق قياسية.",
+          tags: ["StreamReader", "ReadLine"],
+          ref: "Lecture 4 — Slide 45",
+          likely: "high",
+        },
+        {
+          q: "27. What is the value of the StreamReader EndOfStream property when the read position is at the end of the file?",
+          options: ["false", "-1", "null", "true"],
+          correct: 3,
+          translation:
+            "إيه قيمة EndOfStream تبع StreamReader لما read position يكون في نهاية الملف؟",
+          explanation:
+            "EndOfStream بيرجع true لما نوصل لنهاية الملف ومافيش بيانات تاني. بنستخدمه في while loop عشان نقرا كل الملف من غير ما نتجاوز الآخر.",
+          tags: ["StreamReader", "EndOfStream"],
+          ref: "Lecture 4 — Slide 51",
+          likely: "high",
+        },
+        {
+          q: "28. What value does the ShowDialog method of OpenFileDialog return when the user clicks the Open button?",
+          options: [
+            "DialogResult.Yes",
+            "DialogResult.Open",
+            "DialogResult.Cancel",
+            "DialogResult.OK",
+          ],
+          correct: 3,
+          translation:
+            "إيه القيمة اللي ShowDialog تبع OpenFileDialog بترجعها لما المستخدم يضغط زر Open؟",
+          explanation:
+            "OpenDialog بترجع DialogResult.OK لو المستخدم ضغط Open، و DialogResult.Cancel لو ضغط Cancel. مفيش Yes ولا Open كـ values.",
+          tags: ["OpenFileDialog", "ShowDialog"],
+          ref: "Lecture 4 — Slide 60",
+          likely: "high",
+        },
+        {
+          q: "29. Where does an OpenFileDialog control appear after it is added to a form in the Designer?",
+          options: [
+            "On the form itself",
+            "In the component tray at the bottom of the Designer",
+            "In the Toolbox",
+            "In the Properties window only",
+          ],
+          correct: 1,
+          translation:
+            "فين OpenFileDialog بيبان بعد ما يتعمل add على الفورم في الـ Designer؟",
+          explanation:
+            "مش بيبان على الفورم نفسه، بيظهر في component tray تحت الـ Designer زي باقي الـ dialogs و timers. كده مش بياخد مساحة على الواجهة وقت التصميم.",
+          tags: ["OpenFileDialog", "Component Tray"],
+          ref: "Lecture 4 — Slide 59",
+          likely: "medium",
+        },
+        {
+          q: "30. Which property of the OpenFileDialog stores the path and filename of the file selected by the user?",
+          options: ["Filename", "Path", "FilePath", "SelectedFile"],
+          correct: 0,
+          translation:
+            "أي خاصية في OpenFileDialog بتخزّن المسار واسم الملف اللي اختاره المستخدم؟",
+          explanation:
+            "Filename property بتحتفظ بالمسار واسم الملف سوا بعد ما المستخدم يختار. Path و FilePath و SelectedFile مش موجودة كخصائص قياسية.",
+          tags: ["OpenFileDialog", "Filename"],
+          ref: "Lecture 4 — Slide 62",
+          likely: "high",
+        },
+        {
+          q: "31. By default, which directory does the Open dialog box display initially?",
+          options: [
+            "The application folder",
+            "The user's Documents directory",
+            "The C:\\ drive",
+            "The Desktop",
+          ],
+          correct: 1,
+          translation:
+            "افتراضيًا، أي فولدر بيتعرض أول ما يفتح الـ Open dialog؟",
+          explanation:
+            "افتراضيًا بيبين محتوى Documents directory. لو عايز تغيّره استخدم InitialDirectory property قبل ما تستدعي ShowDialog.",
+          tags: ["OpenFileDialog", "InitialDirectory"],
+          ref: "Lecture 4 — Slide 63",
+          likely: "medium",
+        },
+        {
+          q: "32. Which property of the OpenFileDialog changes the text displayed in the dialog's title bar?",
+          options: ["Text", "Caption", "Title", "Header"],
+          correct: 2,
+          translation:
+            "أي خاصية تبع OpenFileDialog بتغيّر النص اللي ظاهر في title bar بتاع الـ dialog؟",
+          explanation:
+            "Title property هي اللي بتتحكم في نص الـ title bar. افتراضيًا بيكون كلمة Open. Text و Caption و Header مش خصائص هنا.",
+          tags: ["OpenFileDialog", "Title"],
+          ref: "Lecture 4 — Slide 64",
+          likely: "medium",
+        },
+        {
+          q: "33. What is the default text shown in the title bar of the Save As dialog box?",
+          options: ["Open", "Save", "Save As", "Save File"],
+          correct: 2,
+          translation:
+            "إيه النص الافتراضي اللي بيظهر في title bar بتاع Save As dialog؟",
+          explanation:
+            'افتراضيًا بيبان نص "Save As". تقدر تغيّره بـ Title property. Open لـ OpenFileDialog، و Save / Save File مش الافتراضي.',
+          tags: ["SaveFileDialog", "Title"],
+          ref: "Lecture 4 — Slide 69",
+          likely: "medium",
+        },
+        {
+          q: "34. What should you use to handle unexpected errors that may occur when working with files (e.g. disk full, no permission)?",
+          options: [
+            "An if-else statement",
+            "A for loop",
+            "A try-catch statement",
+            "A switch statement",
+          ],
+          correct: 2,
+          translation:
+            "إيه اللي تستخدمه عشان تتعامل مع الأخطاء غير المتوقعة اللي ممكن تحصل مع الملفات (قرص ممتلئ، مفيش صلاحية...)؟",
+          explanation:
+            "try-catch بيمسك الـ exceptions اللي بتطلع من File.CreateText أو WriteLine. if و switch ما بيمسكوش exceptions، و for للحلقات.",
+          tags: ["Exception Handling", "try-catch"],
+          ref: "Lecture 4 — Slide 31",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "1. Define the ListBox control and explain its purpose in a Windows Forms application.",
+          translation:
+            "عرّف أداة ListBox ووضّح الغرض منها في تطبيق Windows Forms.",
+          answer:
+            "A ListBox is a Windows Forms control that displays a list of items and allows the user to select one or more items from the list.\nKey points:\n1) It stores its entries in the Items property.\n2) At run time, the user clicks an item to select it, and the selected item appears highlighted.\n3) A scroll bar automatically appears when the ListBox contains more items than can be displayed in the available space.\n4) It is commonly used to display a list of options (e.g. cities, fruits, countries) and to let the program read the user's selection through the SelectedItem property.",
+          tags: ["ListBox", "Definition"],
+          ref: "Lecture 4 — Slide 54",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the difference between the SelectedItem and SelectedIndex properties of a ListBox.",
+          translation:
+            "اشرح الفرق بين SelectedItem و SelectedIndex تبع ListBox.",
+          answer:
+            "SelectedItem returns the actual item (as an object) that the user has selected in the ListBox, while SelectedIndex returns the integer position of that item in the list.\nImportant details:\n1) Indexing starts at 0, so the first item has index 0 and the last has index n-1.\n2) If no item is selected, SelectedIndex equals -1 (this is the recommended way to check whether an item is selected before reading SelectedItem).\n3) Reading SelectedItem when nothing is selected throws an exception.\n4) Typical safe usage:\n   if (fruitListBox.SelectedIndex != -1)\n       selectedFruit = fruitListBox.SelectedItem.ToString();",
+          tags: ["ListBox", "SelectedItem", "SelectedIndex"],
+          ref: "Lecture 4 — Slides 56–59",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Compare the while loop and the do-while loop. Mention when each is preferred.",
+          translation:
+            "قارن بين while loop و do-while loop. اذكر متى يُفضَّل استخدام كل منهما.",
+          answer:
+            "Both are repetition structures, but they differ in when the condition is tested.\n1) while is a pretest loop: it tests the Boolean expression BEFORE executing the body. The body may execute zero or more times.\n2) do-while is a posttest loop: it executes the body FIRST, then tests the condition. The body is guaranteed to execute at least once.\n3) When to use while: when the number of iterations is unknown and you may not need to execute the body at all.\n4) When to use do-while: when the body must run at least once (e.g. displaying a menu and reading the user's choice before testing whether to continue).",
+          tags: ["While Loop", "Do-While Loop", "Comparison"],
+          ref: "Lecture 4 — Slides 5, 18",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. List the three steps that must be taken when a program uses a file, and explain each step.",
+          translation:
+            "اذكر الخطوات الثلاث اللازمة لما البرنامج يستخدم ملف، واشرح كل خطوة.",
+          answer:
+            "1) Open the file: creates a connection between the file and the program. For an output file, this usually creates the file on disk and lets the program write to it. For an input file, it lets the program read from it.\n2) Process the file: data is either written to the file (if it is an output file) or read from the file (if it is an input file).\n3) Close the file: when the program is finished, the file must be closed. Closing disconnects the file from the program and flushes any buffered data.",
+          tags: ["Files", "File Operations"],
+          ref: "Lecture 4 — Slide 21",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Compare text files and binary files. Which type is used in this chapter?",
+          translation:
+            "قارن بين text files و binary files. أي نوع بيُستخدم في هذا الفصل؟",
+          answer:
+            "1) A text file contains data that has been encoded as text. Even numbers are stored as a series of characters, so the file can be opened and viewed in a text editor such as Notepad.\n2) A binary file contains data that has NOT been converted to text. It cannot be viewed with a text editor.\n3) In this chapter, we work only with text files, using the StreamWriter class to write and the StreamReader class to read them.",
+          tags: ["Files", "Text File", "Binary File"],
+          ref: "Lecture 4 — Slide 22",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Compare sequential access files with direct (random) access files.",
+          translation:
+            "قارن بين sequential access files و direct (random) access files.",
+          answer:
+            "1) Sequential access: data is accessed from the beginning of the file to the end. If you want to read a piece of data stored at the very end, you must read all the data that comes before it; you cannot jump directly to it.\n2) Direct access (random access): you can jump directly to any piece of data in the file without reading the data that comes before it.\n3) This chapter focuses on sequential access files.",
+          tags: ["Files", "File Access"],
+          ref: "Lecture 4 — Slide 23",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the StreamWriter class. Include a code example that creates a text file and writes three lines to it.",
+          translation:
+            "اشرح StreamWriter class. اكتب مثال كود ينشئ ملف نصّي ويكتب فيه 3 سطور.",
+          answer:
+            'StreamWriter is a .NET class (in the System.IO namespace) used to write text data to a file.\nSteps:\n1) Declare a StreamWriter variable.\n2) Call File.CreateText(filename) to create the file and assign the returned StreamWriter to the variable.\n3) Use the WriteLine method to write each line of text.\n4) Call Close() to close the file.\nExample:\n   StreamWriter outputFile;\n   outputFile = File.CreateText("courses.txt");\n   outputFile.WriteLine("Intro to Computer Science");\n   outputFile.WriteLine("English Composition");\n   outputFile.WriteLine("Calculus I");\n   outputFile.Close();',
+          tags: ["StreamWriter", "File.CreateText"],
+          ref: "Lecture 4 — Slides 26–29",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Explain the StreamReader class and show how to read lines from a text file until the end is reached.",
+          translation:
+            "اشرح StreamReader class وبيّن كيف تقرأ سطور من ملف نصّي لحد ما توصل للنهاية.",
+          answer:
+            'StreamReader is a .NET class (in System.IO) used to read text data from a file.\nKey members:\n1) ReadLine() reads one line of text and returns it as a string.\n2) EndOfStream is a Boolean property that becomes true when the read position has reached the end of the file.\nExample loop:\n   StreamReader inputFile;\n   inputFile = File.OpenText("Names.txt");\n   while (!inputFile.EndOfStream)\n   {\n       string name = inputFile.ReadLine();\n       MessageBox.Show(name);\n   }\n   inputFile.Close();',
+          tags: ["StreamReader", "ReadLine", "EndOfStream"],
+          ref: "Lecture 4 — Slides 45, 51–52",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. What is the difference between File.CreateText and File.AppendText? When would you use each?",
+          translation:
+            "إيه الفرق بين File.CreateText و File.AppendText؟ ومتى تستخدم كل واحدة؟",
+          answer:
+            "1) File.CreateText creates a brand new text file. If the file already exists, its previous contents are ERASED and a new empty file with the same name is created.\n2) File.AppendText opens an existing file (or creates a new one if it does not exist) and positions the write pointer at the end, so any new data is APPENDED to the file's existing contents without erasing them.\n3) Use File.CreateText when you want to start a fresh file (overwrite).\n4) Use File.AppendText when you want to keep the existing data and add new entries to it (e.g. a log file or a friends list).",
+          tags: ["File.CreateText", "File.AppendText", "Comparison"],
+          ref: "Lecture 4 — Slides 27, 39",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the OpenFileDialog control. Mention at least three of its important properties and what each does.",
+          translation:
+            "اشرح OpenFileDialog control. اذكر 3 من أهم خصائصه ووظيفة كل واحدة.",
+          answer:
+            "OpenFileDialog is a Windows Forms control that displays the standard Windows Open dialog box, allowing the user to browse the system and select a file.\nImportant properties:\n1) ShowDialog() method: displays the dialog and returns DialogResult.OK if the user clicks Open, or DialogResult.Cancel if they click Cancel.\n2) Filename: stores the path and filename of the file selected by the user.\n3) InitialDirectory: specifies the directory that the dialog displays initially (default is the user's Documents directory).\n4) Title: changes the text shown in the dialog's title bar (default is \"Open\").\n5) The control appears in the component tray at the bottom of the Designer, not on the form itself.",
+          tags: ["OpenFileDialog", "Properties"],
+          ref: "Lecture 4 — Slides 58–64",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain the SaveFileDialog control and list three of its key properties.",
+          translation: "اشرح SaveFileDialog control واذكر 3 من أهم خصائصه.",
+          answer:
+            "SaveFileDialog is a Windows Forms control that displays the standard Windows Save As dialog box, allowing the user to choose a location and a filename to save a file.\nKey properties:\n1) ShowDialog() method: displays the dialog and returns DialogResult.OK if the user clicks Save, or DialogResult.Cancel if they click Cancel.\n2) Filename: stores the path and filename entered by the user.\n3) InitialDirectory: specifies the directory initially displayed (default is the user's Documents directory).\n4) Title: changes the text shown in the dialog's title bar (default is \"Save As\").\nLike OpenFileDialog, it appears in the component tray, not on the form.",
+          tags: ["SaveFileDialog", "Properties"],
+          ref: "Lecture 4 — Slides 65–69",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. List the methods used to add, remove, and clear items in a ListBox, with the correct syntax for each.",
+          translation:
+            "اذكر الطرق المستخدمة لإضافة وحذف ومسح العناصر في ListBox مع الصيغة الصحيحة لكل واحدة.",
+          answer:
+            "1) Add an item at run time:\n   ListBoxName.Items.Add(Item);\n2) Remove an item by its index:\n   ListBoxName.Items.RemoveAt(Index);\n3) Clear all items:\n   ListBoxName.Items.Clear();\n4) Get the number of items stored:\n   int count = ListBoxName.Items.Count;\n5) Read the currently selected item (after checking SelectedIndex != -1):\n   string value = ListBoxName.SelectedItem.ToString();",
+          tags: ["ListBox", "Items Methods"],
+          ref: "Lecture 4 — Slides 56, 63, 66, 67, 68",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. Explain the for loop. Mention its three actions and what happens if the Boolean expression is false from the beginning.",
+          translation:
+            "اشرح for loop. اذكر أعمالها الثلاثة وماذا يحدث لو Boolean expression كان false من البداية.",
+          answer:
+            "The for loop is a pretest loop that repeats a block of code a known number of times. It takes three actions inside its header:\n1) Initialization: executes once when the loop begins. Usually initializes the counter variable.\n2) Test: a Boolean expression is evaluated. If it is true, the loop iterates; otherwise, the loop stops.\n3) Update: executes at the end of each iteration, usually incrementing or decrementing the counter.\nIf the Boolean expression is false from the beginning (e.g. count starts at 11 while the condition is count < 10), the loop body never executes and the loop terminates immediately.\nA counter variable declared in the initialization expression has scope limited to the loop only.",
+          tags: ["For Loop", "Initialization", "Test", "Update"],
+          ref: "Lecture 4 — Slides 10, 13, 14",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "1. A while loop initializes int count = 0 and repeats while count < 5, displaying a message box each iteration and incrementing count by 1. How many times will the message box be displayed, and what are the values of count during the test?",
+          translation:
+            "حلقة while بتهيّئ int count = 0 وتتكرر طالما count < 5، بتعرض message box في كل تكرار وتزوّد count بمقدار 1. كم مرة سيتم عرض الـ message box؟ وما قيم count وقت الاختبار؟",
+          answer:
+            "The message box will be displayed 5 times.\nTrace:\nIteration 1: count = 0, test 0 < 5 = true, display message, count becomes 1.\nIteration 2: count = 1, test 1 < 5 = true, display message, count becomes 2.\nIteration 3: count = 2, test 2 < 5 = true, display message, count becomes 3.\nIteration 4: count = 3, test 3 < 5 = true, display message, count becomes 4.\nIteration 5: count = 4, test 4 < 5 = true, display message, count becomes 5.\nNext test: count = 5, test 5 < 5 = false, loop terminates.\nTotal messages displayed = 5.",
+          tags: ["While Loop", "Tracing"],
+          ref: "Lecture 4 — Slide 3 (While Loop Application)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Account Balance Application: a user enters a starting balance of 1000 and a period of 3 months. The monthly interest rate is 0.005 and interest is compounded monthly. Calculate the final balance after 3 months.",
+          translation:
+            "تطبيق Account Balance: المستخدم بيدخل رصيد مبدئي 1000 ومدة 3 شهور. معدل الفائدة الشهري 0.005 والفائدة مركّبة شهريًا. احسب الرصيد النهائي بعد 3 شهور.",
+          answer:
+            "Formula applied each month:\n  balance = balance + (balance * monthlyInterestRate)\n  which is equivalent to: balance = balance * (1 + 0.005) = balance * 1.005\nGiven: startingBalance = 1000, months = 3, monthlyInterestRate = 0.005.\nMonth 1: balance = 1000 + (1000 * 0.005) = 1000 + 5 = 1005\nMonth 2: balance = 1005 + (1005 * 0.005) = 1005 + 5.025 = 1010.025\nMonth 3: balance = 1010.025 + (1010.025 * 0.005) = 1010.025 + 5.050125 = 1015.075125\nFinal balance after 3 months ≈ 1015.08",
+          tags: ["While Loop", "Calculation", "Account Balance"],
+          ref: "Lecture 4 — Slide 6 (Account Balance Application)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Speed Converter Application: convert 60 kph and 130 kph to miles per hour using the formula MPH = KPH * 0.6214. Round the result to 2 decimal places.",
+          translation:
+            "تطبيق Speed Converter: حوّل 60 و 130 kph إلى mph باستخدام القانون MPH = KPH * 0.6214.",
+          answer:
+            "Formula: MPH = KPH * 0.6214\nFor KPH = 60:\n  MPH = 60 * 0.6214 = 37.284 ≈ 37.28 mph\nFor KPH = 130:\n  MPH = 130 * 0.6214 = 80.782 ≈ 80.78 mph\nThe for loop in the Speed Converter runs KPH from 60 through 130 in increments of 10, producing a table of 8 rows: 60, 70, 80, 90, 100, 110, 120, 130 kph and their corresponding mph values.",
+          tags: ["For Loop", "Calculation", "Speed Converter"],
+          ref: "Lecture 4 — Slide 15 (Speed Converter Application)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Squares Application: write a for loop that displays the numbers 1 through 10 and their squares, each pair on one line. Show the expected output for the first 3 iterations.",
+          translation:
+            "تطبيق Squares: اكتب for loop تعرض الأرقام من 1 إلى 10 ومربعاتها، كل زوج على سطر واحد. اعرض المخرجات المتوقعة لأول 3 تكرارات.",
+          answer:
+            'Code:\n   for (int i = 1; i <= 10; i++)\n   {\n       outputListBox.Items.Add(i + " squared is " + (i * i));\n   }\nTrace for the first 3 iterations:\n  i = 1: 1 squared is 1\n  i = 2: 2 squared is 4\n  i = 3: 3 squared is 9\nThe loop initializes i = 1, tests i <= 10, and updates i++ at the end of each iteration. It runs exactly 10 times.',
+          tags: ["For Loop", "Tracing"],
+          ref: "Lecture 4 — Slide 11 (Squares Application)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Consider the following for loop: for (int count = 11; count < 10; count++) { ... }. Will the body execute? Why or why not? How many iterations will run?",
+          translation:
+            "بفرض for loop دي: for (int count = 11; count < 10; count++). هل جسم الحلقة هيتنفّذ؟ ليه؟ كام تكرار هيحصل؟",
+          answer:
+            "The loop body will NOT execute at all. Zero iterations will run.\nReason: the for loop is a pretest loop, so it tests the Boolean expression BEFORE the first iteration. Here, count is initialized to 11, and the condition count < 10 is false from the very beginning. As soon as the loop begins, it terminates immediately because the test fails.\nNumber of iterations = 0.\nThis example (mentioned in the lecture) shows that a for loop can be written in a way that it never iterates.",
+          tags: ["For Loop", "Tracing", "Pretest"],
+          ref: "Lecture 4 — Slide 13 (for Loop — Pretest)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. The Sales.txt file contains the values 1000, 2500.50, 3000, and 4500.75 on separate lines. Write the code to read all values, sum them, and display the total. Then compute the total manually.",
+          translation:
+            "ملف Sales.txt فيه القيم 1000 و 2500.50 و 3000 و 4500.75 كل واحدة على سطر. اكتب الكود لقراءة كل القيم وجمعها وعرض المجموع. ثم احسب المجموع يدويًا.",
+          answer:
+            'Code:\n   StreamReader inputFile;\n   inputFile = File.OpenText("Sales.txt");\n   decimal total = 0;\n   while (!inputFile.EndOfStream)\n   {\n       string line = inputFile.ReadLine();\n       decimal sale = decimal.Parse(line);\n       total += sale;\n   }\n   inputFile.Close();\n   totalLabel.Text = total.ToString();\nManual calculation:\n  1000 + 2500.50 = 3500.50\n  3500.50 + 3000 = 6500.50\n  6500.50 + 4500.75 = 11001.25\nTotal = 11001.25\nNote: because ReadLine returns strings, each value must be converted to a numeric type (decimal.Parse, int.Parse, etc.) before any arithmetic.',
+          tags: ["StreamReader", "ReadLine", "Calculation", "Total Sales"],
+          ref: "Lecture 4 — Slides 48, 55 (Total Sales Application)",
+          likely: "high",
+        },
+      ],
+    }, // ============================================================
+    // Lecture 05 — Modularizing Your Code with Methods (C# .NET)
+    // Subject: Visual Programming (البرمجة المرئية)
+    // ============================================================
+
+    {
+      id: "visual-programming-lecture-05",
+      t: "المحاضرة 5 — Modularizing Your Code with Methods",
+      d: "شرح Methods في C# (.NET): void, value-returning, parameters, ref/out, Named/Default arguments, Random class, Load event",
+      pdf: "datenew/subjects/visual-programming/lectures/lec 5/Chapter 5_text.pdf",
+      pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Lecture-05-Questions.pdf",
+      // المحاضرة: Modularizing Your Code with Methods (Lecture 05) — Methods in C#, Random class, ref/out, value-returning methods, Load event
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "فيديوهات وoplaylists عربية تشرح Methods و Random و ref/out في C# بشكل مبسط.",
+          links: [
+            {
+              t: "Methods in C# [ شرح بالعربي ] — Metigator",
+              d: "شرح Methods في C# بالعربي بيغطي by value و by reference، مرتبط مباشرة بأجزاء الـ parameters والـ ref/out في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🎬 مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=GkmlPDc_5Dc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح Methods كامل بالغة ال C# في 20 دقيقة (الكبسولة)",
+              d: "مراجعة سريعة وشاملة لـ Methods في C# بالعربي، تنفع كمراجعة قبل الامتحان لتثبيت مفاهيم void و value-returning.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🎬 مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=FEZGRSB8XnU",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "C# Programming Course Level 1 Basics بالعربي — Playlist",
+              d: "Playlist عربي كامل لتعلم أساسيات C#، فيه فيديوهات عن Methods و parameters و events زي Load event.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📺 فتح الـ Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLnzqK5HvcpwQLsXXXxx_mX3WvUEgGM0iA",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات بالإنجليزي تشرح Methods و ref/out في C# بتفصيل أكبر مع أمثلة كود.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: C# Methods tutorial for beginners",
+              d: "رابط بحث في يوتيوب (مش فيديو محدد) لتلاقي دروس عالمية عن Methods في C#، تقدر تختار الفيديو اللي يناسبك.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+methods+tutorial+for+beginners",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: C# ref vs out parameters explained",
+              d: "رابط بحث في يوتيوب (مش فيديو محدد) عن الفرق بين ref و out parameters في C# مع أمثلة عملية.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+ref+vs+out+parameters+explained",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر رسمية وموثوقة (Microsoft Learn, Tutlane, C# Corner) فيها شرح مفصل لكل مفاهيم المحاضرة.",
+          links: [
+            {
+              t: "Microsoft Learn — Methods in C#",
+              d: "المرجع الرسمي من مايكروسوفت عن Methods في C#: تعريف، parameters، return values، pass by value vs by reference. مرتبط بأغلب شرائح المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Microsoft Learn — Random Class (System)",
+              d: "المرجع الرسمي للـ Random class في .NET، بيشرح Next, NextDouble, NextBytes. مهم لأجزاء الـ Random Numbers في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-10.0",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Tutlane — C# Difference between Ref and Out Keywords",
+              d: "مقال واضح بيشرح الفرق بين ref و out keywords في C# مع أمثلة كود وجدول مقارنة، يثبت نقطة الـ comparison في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.tutlane.com/article/csharp/ref-vs-out-in-csharp",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "C# Corner — Mastering C# Methods",
+              d: "مقال شامل عن Methods في C# بيغطي method signature، access modifiers، parameters، و return values. مكمل لشرائح الـ method header.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.c-sharpcorner.com/article/C-Sharp-methods",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات أونلاين لكتابة وتجربة كود C# اللي في المحاضرة (Methods, Random, ref/out) من غير ما تنزل حاجة.",
+          links: [
+            {
+              t: ".NET Fiddle — Online C# Compiler",
+              d: "مترجم C# أونلاين تقدر تكتب فيه كود Methods و Random class و ref/out parameters وتشوف النتيجة فورًا. ينفع لتجربة أمثلة المحاضرة زي ShowTax و Sum.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://dotnetfiddle.net/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Visual Studio — Official Download",
+              d: "الصفحة الرسمية لتحميل Visual Studio (Community مجاني) لتطبيق أمثلة المحاضرة محليًا على Windows Form Applications.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://visualstudio.microsoft.com/",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. What is a method in C#?",
+          options: [
+            "A collection of statements that performs a specific task",
+            "A variable that stores random numbers",
+            "A class that generates random integers",
+            "An event that fires when the form loads",
+          ],
+          correct: 0,
+          translation: "ما هو الـ method في C#؟",
+          explanation:
+            "الـ method عبارة عن مجموعة عبارات بتؤدي مهمة محددة. الخيارات التانية غلط: المتغير بيخزن قيم مش بيجمع عبارات، والـ Random class بيوفر أرقام عشوائية لكنه مش تعريف للـ method، والـ Load event حدث مش method.",
+          tags: ["Methods", "Definitions"],
+          ref: "Lecture 5 — Slide 2",
+          likely: "high",
+        },
+        {
+          q: "2. A void method is one that:",
+          options: [
+            "Returns an integer value to the caller",
+            "Performs a task and terminates without returning a value",
+            "Always accepts one argument",
+            "Can only be called inside the Form1_Load event",
+          ],
+          correct: 1,
+          translation: "الـ void method هو اللي:",
+          explanation:
+            "الـ void method بيؤدي مهمة وينتهي من غير ما يرجع قيمة. الاختيار الأول غلط لأنه بيرجع قيمة (ده value-returning)، والتالت والرابع مش شرط على الـ void.",
+          tags: ["Void Methods", "Definitions"],
+          ref: "Lecture 5 — Slide 5",
+          likely: "high",
+        },
+        {
+          q: "3. A value-returning method is one that:",
+          options: [
+            "Cannot be called from another method",
+            "Always returns the value 0",
+            "Returns a value to the statement that called it",
+            "Does not accept any arguments",
+          ],
+          correct: 2,
+          translation: "الـ value-returning method هو اللي:",
+          explanation:
+            "بيرجع قيمة للعبارة اللي نادته. الاختيارات التانية غلط: ممكن يتندى من أي method تاني، ومش لازم يرجع 0، وممكن يقبل arguments.",
+          tags: ["Value-Returning Methods", "Definitions"],
+          ref: "Lecture 5 — Slide 41",
+          likely: "high",
+        },
+        {
+          q: "4. The .NET Framework provides which class to generate random numbers in C#?",
+          options: ["Number", "Math", "Generate", "Random"],
+          correct: 3,
+          translation:
+            "أي class بيوفره .NET Framework لتوليد أرقام عشوائية في C#؟",
+          explanation:
+            "الـ Random class هو اللي بيوفر توليد الأرقام العشوائية. Math class فيه دوال رياضية لكن مش بيوفر random، و Number و Generate مش أسماء classes في .NET.",
+          tags: ["Random Class"],
+          ref: "Lecture 5 — Slide 70",
+          likely: "high",
+        },
+        {
+          q: "5. Which statement correctly creates a Random object named rand?",
+          options: [
+            "Random rand = new Random();",
+            "Random rand = new Random;",
+            "rand = new Random();",
+            "Random rand = Random();",
+          ],
+          correct: 0,
+          translation: "أي عبارة بتنشئ كائن Random باسم rand بشكل صحيح؟",
+          explanation:
+            "الصيغة الصحيحة هي: Random rand = new Random();  لازم كلمة new والأقواس (). الاختيارات التانية ناقصة كلمة new أو الأقواس أو نوع الكائن.",
+          tags: ["Random Class", "Object Creation"],
+          ref: "Lecture 5 — Slide 70",
+          likely: "high",
+        },
+        {
+          q: "6. When calling Next() with no arguments, the returned integer is between:",
+          options: [
+            "0 and 100",
+            "0 and 2,147,483,647",
+            "1 and 100",
+            "0.0 and 1.0",
+          ],
+          correct: 1,
+          translation:
+            "لنداء Next() بدون arguments، الرقم العشوائي الراجع يكون بين:",
+          explanation:
+            "الـ Next() من غير arguments بترجع عدد صحيح بين 0 و 2,147,483,647 (الحد الأقصى لـ int). الخيارات التانية حدود غلط: 0-100 دي لـ Next(100)، و 0.0-1.0 دي لـ NextDouble().",
+          tags: ["Random Class", "Next Method", "Calculation"],
+          ref: "Lecture 5 — Slide 71",
+          likely: "high",
+        },
+        {
+          q: "7. What value does rand.Next(100) return?",
+          options: [
+            "A random integer between 1 and 100",
+            "A random integer between 0 and 100",
+            "A random integer between 0 and 99",
+            "A random integer between 1 and 99",
+          ],
+          correct: 2,
+          translation: "rand.Next(100) بترجع أي قيمة؟",
+          explanation:
+            "Next(100) بترجع رقم عشوائي بين 0 و 99 (الحد العلوي 100 مش ضمن). الاختيار 0-100 غلط لأن 100 مش ضمن النطاق، و 1-100 و 1-99 غلط لأن الحد الأدني 0 مش 1.",
+          tags: ["Random Class", "Next Method", "Calculation"],
+          ref: "Lecture 5 — Slide 72",
+          likely: "high",
+        },
+        {
+          q: "8. If we call rand.Next(10) + 1, the resulting value is in the range:",
+          options: [
+            "0 through 9",
+            "0 through 10",
+            "1 through 9",
+            "1 through 10",
+          ],
+          correct: 3,
+          translation:
+            "لو نادينا rand.Next(10) + 1، القيمة الناتجة تكون في النطاق:",
+          explanation:
+            "Next(10) بترجع 0 إلى 9، ولما نضيف 1 يبقى الناتج 1 إلى 10. الاختيار 0-9 ده الناتج قبل الجمع، و 0-10 و 1-9 حدود غلط.",
+          tags: ["Random Class", "Next Method", "Calculation"],
+          ref: "Lecture 5 — Slide 72",
+          likely: "high",
+        },
+        {
+          q: "9. The NextDouble() method of a Random object returns:",
+          options: [
+            "A random floating-point number between 0.0 and 1.0 (not including 1.0)",
+            "A random integer between 0 and 99",
+            "A random integer between 0 and 2,147,483,647",
+            "A random floating-point number between 0.0 and 10.0",
+          ],
+          correct: 0,
+          translation: "NextDouble() في كائن Random بترجع:",
+          explanation:
+            "NextDouble() بترجع عدد عشري بين 0.0 و 1.0 (1.0 مش ضمن). الخيارات التانية بتوصف Next(100) و Next() و نطاق غلط 0-10.",
+          tags: ["Random Class", "NextDouble"],
+          ref: "Lecture 5 — Slide 73",
+          likely: "high",
+        },
+        {
+          q: "10. A method definition has two parts:",
+          options: [
+            "A header and a body",
+            "A name and a value",
+            "An argument and a parameter",
+            "A class and an object",
+          ],
+          correct: 0,
+          translation: "تعريف الـ method بيتكون من جزئين:",
+          explanation:
+            "الـ header (فيه access modifier و return type واسم الـ method) و الـ body (العبارات جوه curly braces). الخيارات التانية مفاهيم تانية.",
+          tags: ["Methods", "Structure"],
+          ref: "Lecture 5 — Slide 5",
+          likely: "high",
+        },
+        {
+          q: "11. What does the access modifier 'private' mean when applied to a method?",
+          options: [
+            "It can be called by code outside the class",
+            "It can be called only by code inside the same class",
+            "It cannot accept arguments",
+            "It must return a value",
+          ],
+          correct: 1,
+          translation:
+            "ايه معنى access modifier المسمى 'private' لما يتطبق على method؟",
+          explanation:
+            "private معناها إن الـ method يتندى فقط من كود جوه نفس الـ class. public هي اللي تتندى من بره الـ class. الخيارات التانية مش ليها علاقة بالـ access modifier.",
+          tags: ["Access Modifiers", "Method Header"],
+          ref: "Lecture 5 — Slide 6",
+          likely: "high",
+        },
+        {
+          q: "12. What naming convention is used for method names in C# according to the lecture?",
+          options: ["camelCase", "snake_case", "Pascal case", "UPPER_CASE"],
+          correct: 2,
+          translation: "ايه طريقة تسمية الـ method names في C# حسب المحاضرة؟",
+          explanation:
+            "Pascal case: أول حرف من كل كلمة capital (زي DisplayMessage). camelCase بيستخدم للمتغيرات، و snake_case و UPPER_CASE مش C# conventions.",
+          tags: ["Method Header", "Naming Conventions"],
+          ref: "Lecture 5 — Slide 7",
+          likely: "high",
+        },
+        {
+          q: "13. Is the method header terminated with a semicolon?",
+          options: [
+            "Yes, always",
+            "Only if it is a void method",
+            "Only if it returns a value",
+            "No, never",
+          ],
+          correct: 3,
+          translation: "هل method header بيتنهى بفاصلة منقوطة (semicolon)؟",
+          explanation:
+            "الـ method header لازم لا يكون آخره semicolon. الـ body بيتفتح بـ { ويتقفل بـ }. لو حطيت semicolon دي compiler error.",
+          tags: ["Method Header", "Syntax"],
+          ref: "Lecture 5 — Slide 7",
+          likely: "high",
+        },
+        {
+          q: "14. How do you call a void method named DisplayMessage that takes no arguments?",
+          options: [
+            "DisplayMessage;",
+            "DisplayMessage[];",
+            "DisplayMessage();",
+            "call DisplayMessage();",
+          ],
+          correct: 2,
+          translation:
+            "إزاي تنادي void method اسمه DisplayMessage ومش بياخد arguments؟",
+          explanation:
+            "النداء الصحيح: اسم الـ method متبوع بأقواس دائرية فاضية و semicolon: DisplayMessage();. مفيش keyword اسمها call في C#.",
+          tags: ["Calling Methods"],
+          ref: "Lecture 5 — Slide 10",
+          likely: "high",
+        },
+        {
+          q: "15. An argument is:",
+          options: [
+            "A variable that receives a value in the method header",
+            "The return value of a method",
+            "The access modifier of a method",
+            "Any piece of data passed into a method when it is called",
+          ],
+          correct: 3,
+          translation: "الـ argument هو:",
+          explanation:
+            "الـ argument هو أي بيانات بتمرر للـ method لما تتندى. الاختيار الأول ده تعريف الـ parameter، والتاني ده return value.",
+          tags: ["Arguments", "Parameters", "Definitions"],
+          ref: "Lecture 5 — Slide 14",
+          likely: "high",
+        },
+        {
+          q: "16. A parameter is:",
+          options: [
+            "A variable that receives an argument passed into a method",
+            "The value returned by a method",
+            "A type of access modifier",
+            "A keyword used to declare methods",
+          ],
+          correct: 0,
+          translation: "الـ parameter هو:",
+          explanation:
+            "الـ parameter هو متغير بياخد الـ argument اللي بيتعدى للـ method. بيُعرف جوه أقواس الـ method header.",
+          tags: ["Arguments", "Parameters", "Definitions"],
+          ref: "Lecture 5 — Slide 15",
+          likely: "high",
+        },
+        {
+          q: "17. When passing multiple arguments to a method, how are they matched to parameters?",
+          options: [
+            "Randomly",
+            "By position: first argument to first parameter, second to second, etc.",
+            "By name only",
+            "By data type only",
+          ],
+          correct: 1,
+          translation:
+            "لما بتمرر arguments كتير للـ method، إزاي بيتعمل match بينهم وبين parameters؟",
+          explanation:
+            "الـ positional argument passing: أول argument يروح لأول parameter، التاني للتاني، وهكذا. دي الطريقة الافتراضية. الـ named arguments طريقة مختلفة.",
+          tags: ["Multiple Arguments", "Passing Arguments"],
+          ref: "Lecture 5 — Slide 21",
+          likely: "high",
+        },
+        {
+          q: "18. What is wrong with this method header: private void ShowMax(int num1, num2)?",
+          options: [
+            "The method should not be private",
+            "It should not have parentheses",
+            "The data type must be listed for each parameter variable, e.g. (int num1, int num2)",
+            "The method name should be lowercase",
+          ],
+          correct: 2,
+          translation:
+            "ايه الغلط في الـ method header ده: private void ShowMax(int num1, num2)؟",
+          explanation:
+            "كل parameter variable لازم يكون ليه data type. num2 ناقص نوعه. الصحيح: (int num1, int num2). الخيارات التانية مش السبب.",
+          tags: ["Multiple Arguments", "Syntax"],
+          ref: "Lecture 5 — Slide 22",
+          likely: "high",
+        },
+        {
+          q: "19. A named argument in C# is specified using the syntax:",
+          options: [
+            "parameterName = value",
+            "value -> parameterName",
+            "value : parameterName",
+            "parameterName : value",
+          ],
+          correct: 3,
+          translation: "الـ named argument في C# بيتحدد بالصيغة:",
+          explanation:
+            'الصيغة: parameterName : value  (نقطتين رأسيتين). مثال: ShowName(lastName: "Smith", firstName: "Suzanne").',
+          tags: ["Named Arguments"],
+          ref: "Lecture 5 — Slide 23-24",
+          likely: "high",
+        },
+        {
+          q: "20. What is a default argument?",
+          options: [
+            "An argument that is always passed by reference",
+            "A value assigned to a parameter that is used if no argument is passed for it",
+            "An argument that the method ignores",
+            "An argument passed without a name",
+          ],
+          correct: 1,
+          translation: "ايه هو الـ default argument؟",
+          explanation:
+            "default argument قيمة بيتحدد للـ parameter، لو متمتعش argument صريح يتعدى للـ parameter ده وقت النداء، بتستخدم القيمة الافتراضية. مثال: taxRate = 0.07m.",
+          tags: ["Default Arguments"],
+          ref: "Lecture 5 — Slide 25",
+          likely: "high",
+        },
+        {
+          q: "21. When an argument is passed by value:",
+          options: [
+            "The method can change the original variable",
+            "Only a copy of the argument's value is passed; changes inside the method do not affect the original",
+            "The argument must be initialized before passing",
+            "The argument is passed by reference",
+          ],
+          correct: 1,
+          translation: "لما argument بيتعدى by value:",
+          explanation:
+            "بيتعدى نسخة من القيمة فقط، فلو الـ method غير القيمة جواه، الأصلي مش بيتأثر. ده عكس by reference.",
+          tags: ["Pass by Value"],
+          ref: "Lecture 5 — Slide 26",
+          likely: "high",
+        },
+        {
+          q: "22. Which keyword is used to declare a reference parameter in C#?",
+          options: ["out", "val", "ref", "byref"],
+          correct: 2,
+          translation: "أي keyword بيستخدم لتعريف reference parameter في C#؟",
+          explanation:
+            "ref keyword. بيخلي الـ parameter مرجع للـ argument الأصلي، فالتغييرات بتظهر في الـ caller. out و val كلمات تانية.",
+          tags: ["Pass by Reference", "ref"],
+          ref: "Lecture 5 — Slide 30",
+          likely: "high",
+        },
+        {
+          q: "23. Which keyword is used to declare an output parameter in C#?",
+          options: ["ref", "return", "void", "out"],
+          correct: 3,
+          translation: "أي keyword بيستخدم لتعريف output parameter في C#؟",
+          explanation:
+            "out keyword. شبه ref بس الفرق إن الـ argument مش لازم يكون initialized قبل النداء، والـ method لازم ي_assign قيمة للـ parameter قبل ما يخلص.",
+          tags: ["Output Parameters", "out"],
+          ref: "Lecture 5 — Slide 35",
+          likely: "high",
+        },
+        {
+          q: "24. What is a key difference between ref and out parameters?",
+          options: [
+            "ref parameters must be initialized before being passed; out parameters do not need to be",
+            "out parameters must be initialized before being passed; ref parameters do not",
+            "ref can only be used with integers; out can be used with any type",
+            "out can only be used with integers; ref can be used with any type",
+          ],
+          correct: 0,
+          translation: "ايه الفرق الأساسي بين ref و out parameters؟",
+          explanation:
+            "ref لازم الـ argument يكون initialized قبل النداء، out مش لازم. الاتنين بيمرر reference. والاتنين بيشتغل مع أي data type.",
+          tags: ["ref vs out", "Comparison"],
+          ref: "Lecture 5 — Slide 31 & 35",
+          likely: "high",
+        },
+        {
+          q: "25. A method that has an output (out) parameter must:",
+          options: [
+            "Initialize it before the call",
+            "Set the output parameter to some value before it finishes executing",
+            "Return a value with a return statement",
+            "Be declared as private",
+          ],
+          correct: 1,
+          translation: "الـ method اللي عنده output (out) parameter لازم:",
+          explanation:
+            "الـ method لازم يعين قيمة للـ out parameter قبل ما يخلص تنفيذ. لو ماعملش كده compiler error. الـ argument مش لازم initialize قبل النداء.",
+          tags: ["Output Parameters", "out"],
+          ref: "Lecture 5 — Slide 35",
+          likely: "high",
+        },
+        {
+          q: "26. A value-returning method must have:",
+          options: [
+            "The void keyword",
+            "No parameters",
+            "A return type specified and a return statement",
+            "An out parameter",
+          ],
+          correct: 2,
+          translation: "الـ value-returning method لازم يكون عنده:",
+          explanation:
+            "لازم return type (زي int, double, bool) في الـ header، و return statement في الـ body. void معناها مفيش قيمة راجعة.",
+          tags: ["Value-Returning Methods"],
+          ref: "Lecture 5 — Slide 42",
+          likely: "high",
+        },
+        {
+          q: "27. A Boolean method returns a value of type:",
+          options: ["int", "string", "double", "bool (true or false)"],
+          correct: 3,
+          translation: "الـ Boolean method بيرجع قيمة من نوع:",
+          explanation:
+            "bool: true أو false. بتستخدم لاختبار شرط، زي التحقق من رقم زوجي/فردي.",
+          tags: ["Boolean Methods"],
+          ref: "Lecture 5 — Slide 47",
+          likely: "high",
+        },
+        {
+          q: "28. The benefit of writing a method once and reusing it whenever the task is needed is called:",
+          options: [
+            "Code reuse",
+            "Modularization",
+            "Encapsulation",
+            "Inheritance",
+          ],
+          correct: 0,
+          translation:
+            "فائدة كتابة الـ method مرة واحدة و إعادة استخدامه كل ما المحتاج اسمها:",
+          explanation:
+            "Code reuse: كتابة الكود مرة واحدة وإعادة استخدامه. Modularization هي تقسيم البرنامج، والـ encapsulation و inheritance مفاهيم OOP تانية.",
+          tags: ["Code Reuse", "Modularization"],
+          ref: "Lecture 5 — Slide 4",
+          likely: "high",
+        },
+        {
+          q: "29. A program broken into smaller units of code, such as methods, is called:",
+          options: [
+            "A compiled program",
+            "A modularized program",
+            "An object-oriented program",
+            "A procedural program",
+          ],
+          correct: 1,
+          translation: "البرنامج اللي بيتقسم لوحدات أصغر زي methods اسمه:",
+          explanation:
+            "modularized program. التقسيم لـ methods بيسهل الكود وبيخليه قابل للقراءة وإعادة الاستخدام.",
+          tags: ["Modularization", "Definitions"],
+          ref: "Lecture 5 — Slide 4",
+          likely: "high",
+        },
+        {
+          q: "30. When does the Load event of a form take place?",
+          options: [
+            "When the form is closed by the user",
+            "When the form loads into memory, just before it is displayed",
+            "When the user clicks a button on the form",
+            "When the form is minimized",
+          ],
+          correct: 1,
+          translation: "متى يحدث Load event للـ form؟",
+          explanation:
+            "الـ Load event بيحصل لما الـ form يت loaded في الذاكرة، قبل ما يظهر على الشاشة. الإغلاق والـ Click والـ minimize أحداث تانية مختلفة.",
+          tags: ["Load Event"],
+          ref: "Lecture 5 — Slide 77",
+          likely: "medium",
+        },
+        {
+          q: "31. If the form is named Form1, what is the default name of the Load event handler?",
+          options: ["Form1_Click", "Load_Form1", "Form1_Load", "Form_Load"],
+          correct: 2,
+          translation:
+            "لو اسم الـ form هو Form1، ايه الاسم الافتراضي للـ Load event handler؟",
+          explanation:
+            "الاسم الافتراضي هو Form1_Load (اسم الفورم + _ + اسم الحدث). الأسماء التانية مش Standards الـ .NET.",
+          tags: ["Load Event"],
+          ref: "Lecture 5 — Slide 77",
+          likely: "medium",
+        },
+        {
+          q: "32. How do you create a Load event handler for a form in the Designer?",
+          options: [
+            "Right-click the form and select Load",
+            "Press F5",
+            "Drag a Load icon from the Toolbox",
+            "Double-click any empty area of the form where there is no other control",
+          ],
+          correct: 3,
+          translation: "إزاي تعمل Load event handler للـ form في الـ Designer؟",
+          explanation:
+            "تعمل double-click على أي مساحة فاضية في الفورم. الـ VS بيفتح code editor مع handler فاضي اسمه Form1_Load. الطرق التانية مش الصح.",
+          tags: ["Load Event"],
+          ref: "Lecture 5 — Slide 77",
+          likely: "medium",
+        },
+        {
+          q: "33. What delimits the method body in C#?",
+          options: [
+            "Curly braces { }",
+            "Parentheses ( )",
+            "Square brackets [ ]",
+            "Angle brackets < >",
+          ],
+          correct: 0,
+          translation: "ايه اللي بيلف الـ method body في C#؟",
+          explanation:
+            "الـ body بيتحط جوه curly braces { }. الأقواس الدائرية للـ parameters، والمربعة للـ arrays، والمثلثة للـ generics.",
+          tags: ["Method Body", "Syntax"],
+          ref: "Lecture 5 — Slide 8",
+          likely: "medium",
+        },
+        {
+          q: "34. Where must a method's definition be written?",
+          options: [
+            "Outside all classes",
+            "Inside the class to which it belongs",
+            "In a separate file from the class",
+            "Inside the Main method",
+          ],
+          correct: 1,
+          translation: "أين يجب كتابة تعريف الـ method؟",
+          explanation:
+            "الـ method بينتمي لـ class، فلازم تعريفه يكون جوه الـ class ده. في الشابتر ده كل methods هتنتمي لـ Form1 class.",
+          tags: ["Methods", "Class Structure"],
+          ref: "Lecture 5 — Slide 9",
+          likely: "medium",
+        },
+        {
+          q: "35. When calling a method with an out parameter, what keyword must precede the argument?",
+          options: ["ref", "val", "out", "void"],
+          correct: 2,
+          translation:
+            "لما تنادي method عنده out parameter، أي keyword لازم يسبق الـ argument؟",
+          explanation:
+            "لازم تكتب out قبل الـ argument في النداء: SetToZero(out myVar);. ref بيستخدم مع ref parameters.",
+          tags: ["Output Parameters", "out", "Calling"],
+          ref: "Lecture 5 — Slide 36",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. Define a method in C# and explain its purpose.",
+          translation: "عرّف الـ method في C# واشرح هدفه.",
+          answer:
+            "A method is a collection of statements that performs a specific task.\n" +
+            "Purpose:\n" +
+            "1. Break a complex program into small, manageable pieces (modularization).\n" +
+            "2. Allow code reuse: write a task once and call it whenever needed.\n" +
+            "3. Simplify code by grouping related statements under one name.\n" +
+            "Example: an event handler is a special type of method that responds to events, and MessageBox.Show is a predefined method from the .NET Framework.\n",
+          tags: ["Methods", "Definitions"],
+          ref: "Lecture 5 — Slide 2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Compare void methods and value-returning methods. Mention when each is used.",
+          translation:
+            "قارن بين void methods و value-returning methods، واذكر متى يستخدم كل منهما.",
+          answer:
+            "Void method:\n" +
+            "- Performs a task and terminates.\n" +
+            "- Does NOT return a value to the caller.\n" +
+            "- Declared with the 'void' keyword as the return type.\n" +
+            "- Used when the method only performs an action (e.g. displaying a message).\n" +
+            "Value-returning method:\n" +
+            "- Performs a task and returns a value to the statement that called it.\n" +
+            "- The return value can be assigned to a variable, used in an expression, or displayed.\n" +
+            "- Declared with a data type (e.g. int, double, bool) as the return type.\n" +
+            "- Must contain a 'return' statement.\n" +
+            "- Used when the method needs to give a result back (e.g. int.Parse returns an int).\n",
+          tags: ["Void vs Value-Returning", "Comparison"],
+          ref: "Lecture 5 — Slide 5 & 41",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Explain the parts of a method header in C#.",
+          translation: "اشرح أجزاء الـ method header في C#.",
+          answer:
+            "The method header appears at the beginning of a method definition and lists:\n" +
+            "1. Access modifier (e.g. private or public): controls who can call the method. 'private' = only code inside the same class; 'public' = code outside the class can also call it.\n" +
+            "2. Return type: 'void' if no value is returned, or a data type (int, double, bool, decimal, etc.) if the method returns a value.\n" +
+            "3. Method name: a descriptive name written in Pascal case (first letter of each word capitalized).\n" +
+            "4. Parentheses: the method name is always followed by parentheses, which may contain an optional parameter list.\n" +
+            "Note: the method header is NEVER terminated with a semicolon.\n",
+          tags: ["Method Header", "Structure"],
+          ref: "Lecture 5 — Slide 6-7",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. What is the difference between an argument and a parameter?",
+          translation: "ما الفرق بين argument و parameter؟",
+          answer:
+            "Argument:\n" +
+            "- Any piece of data passed into a method when the method is called.\n" +
+            "- Appears at the calling side.\n" +
+            "- Example: DisplayValue(5);  here 5 is the argument.\n" +
+            "Parameter:\n" +
+            "- A variable declared in the method header that receives the argument.\n" +
+            "- Appears inside the parentheses of the method definition.\n" +
+            "- Example: private void DisplayValue(int value)  here 'value' is the parameter.\n" +
+            "Relationship: when the method is called, the argument's value is passed into the matching parameter variable, by position.\n",
+          tags: ["Arguments", "Parameters", "Comparison"],
+          ref: "Lecture 5 — Slide 14-15",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Explain pass by value with an example. What happens to the original variable?",
+          translation: "اشرح pass by value بمثال. ماذا يحدث للمتغير الأصلي؟",
+          answer:
+            "Pass by value:\n" +
+            "- When an argument is passed by value, only a COPY of the argument's value is passed into the parameter variable.\n" +
+            "- If the parameter variable is changed inside the method, the change has NO effect on the original variable in the calling code.\n" +
+            "Example: private void DisplayValue(int value) { value = 0; }\n" +
+            "If you call: int x = 5; DisplayValue(x);  the variable x in the caller is still 5 after the call.\n" +
+            "Use pass by value when you want to protect the original variable from being modified by the method.\n",
+          tags: ["Pass by Value"],
+          ref: "Lecture 5 — Slide 26",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Explain pass by reference using the ref keyword. When is it used?",
+          translation:
+            "اشرح pass by reference باستخدام ref keyword. متى يُستخدم؟",
+          answer:
+            "Pass by reference with 'ref':\n" +
+            "- When an argument is passed to a ref parameter, the parameter becomes a reference to the original variable (not a copy).\n" +
+            "- Changes made to the parameter inside the method DO affect the original variable in the calling code.\n" +
+            "- Declared by writing 'ref' before the parameter's data type.\n" +
+            "- The argument passed to a ref parameter MUST already be initialized (set to a value) before the call; otherwise a compiler error occurs.\n" +
+            "Example:\n" +
+            "  private void SetToZero(ref int number) { number = 0; }\n" +
+            "  int myVar = 99; SetToZero(ref myVar);  // myVar becomes 0\n" +
+            "Use it when the method must change the value of the caller's variable.\n",
+          tags: ["Pass by Reference", "ref"],
+          ref: "Lecture 5 — Slide 30-31",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Compare ref and out parameters. Mention at least two differences.",
+          translation: "قارن بين ref و out parameters. اذكر فرقين على الأقل.",
+          answer:
+            "Both ref and out pass arguments by reference (the method can change the caller's variable), but they differ:\n" +
+            "1. Initialization before the call:\n" +
+            "   - ref: the argument MUST be initialized before being passed.\n" +
+            "   - out: the argument does NOT need to be initialized before being passed (an uninitialized variable is allowed).\n" +
+            "2. Assignment inside the method:\n" +
+            "   - ref: the method is not forced to assign a value to the parameter.\n" +
+            "   - out: the method MUST assign a value to the out parameter before it finishes executing; otherwise a compiler error occurs.\n" +
+            "3. Use case:\n" +
+            "   - ref: when the method needs to read and possibly modify an existing value.\n" +
+            "   - out: when the method is used to produce/return an output value, e.g. the TryParse methods use an out parameter.\n",
+          tags: ["ref vs out", "Comparison"],
+          ref: "Lecture 5 — Slide 29-36",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Explain named arguments with an example.",
+          translation: "اشرح named arguments بمثال.",
+          answer:
+            "Named arguments:\n" +
+            "- C# allows you to specify which parameter an argument should be passed into using the syntax: parameterName : value\n" +
+            "- This lets you pass arguments in any order, not only by position.\n" +
+            "Example method:\n" +
+            "  private void ShowName(string firstName, string lastName) { ... }\n" +
+            "Calling with named arguments:\n" +
+            '  ShowName(lastName : "Smith", firstName : "Suzanne");\n' +
+            'This produces the same result as the positional call: ShowName("Suzanne", "Smith");\n' +
+            "Named arguments make code more readable when the parameter names are meaningful.\n",
+          tags: ["Named Arguments"],
+          ref: "Lecture 5 — Slide 23-24",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Explain default arguments with an example.",
+          translation: "اشرح default arguments بمثال.",
+          answer:
+            "Default arguments:\n" +
+            "- C# allows you to provide a default value for a method parameter.\n" +
+            "- When a default is provided, you can call the method WITHOUT explicitly passing an argument for that parameter; the default value is used.\n" +
+            "- Syntax: parameter is followed by '=' and the default value.\n" +
+            "Example:\n" +
+            "  private void ShowTax(decimal amount, decimal taxRate = 0.07m) { ... }\n" +
+            "Call without the second argument: ShowTax(100.0m);  // taxRate uses the default 0.07m\n" +
+            "You can still override the default: ShowTax(100.0m, 0.10m);  // taxRate = 0.10m\n",
+          tags: ["Default Arguments"],
+          ref: "Lecture 5 — Slide 25",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain what a value-returning method is, and write the general format of its header.",
+          translation:
+            "اشرح الـ value-returning method، واكتب الصيغة العامة لـ header بتاعه.",
+          answer:
+            "A value-returning method is a method that returns a value to the part of the program that called it.\n" +
+            "The returned value can be used like any other value: assigned to a variable, displayed, or used in a mathematical expression.\n" +
+            "General format of the header:\n" +
+            "  AccessModifier DataType MethodName(ParameterList)\n" +
+            "Where:\n" +
+            "- AccessModifier: e.g. private or public.\n" +
+            "- DataType: the data type of the value the method returns (e.g. int, double, decimal, bool). This is called the return type.\n" +
+            "- MethodName: the name of the method (Pascal case).\n" +
+            "- ParameterList: optional list of parameters; if no parameters, empty parentheses.\n" +
+            "Two requirements compared to a void method:\n" +
+            "1. Specify a return type instead of 'void'.\n" +
+            "2. The body MUST contain a 'return' statement that sends a value of the matching type back to the caller.\n" +
+            "Example: private int Sum(int num1, int num2) { return num1 + num2; }\n",
+          tags: ["Value-Returning Methods"],
+          ref: "Lecture 5 — Slide 42-44",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain what a Boolean method is and give an example use case.",
+          translation: "اشرح الـ Boolean method واذكر مثال لاستخدامه.",
+          answer:
+            "A Boolean method is a value-returning method whose return type is 'bool'.\n" +
+            "It returns either true or false, and is used to test a condition.\n" +
+            "Use case example: testing whether a number is even.\n" +
+            "  private bool IsEven(int number) { if (number % 2 == 0) return true; else return false; }\n" +
+            "The caller can use the returned bool in an if statement:\n" +
+            "  if (IsEven(userNumber)) { ... }  // do something if the number is even\n",
+          tags: ["Boolean Methods"],
+          ref: "Lecture 5 — Slide 47-48",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. List the benefits of using methods (modularization, code reuse, etc.).",
+          translation:
+            "اذكر فوائد استخدام methods (modularization, code reuse, ...).",
+          answer:
+            "1. Modularization: breaks a complex program into small, manageable pieces (a modularized program is simpler to read and debug).\n" +
+            "2. Code reuse: a method can be written once to perform a specific task and then executed any time it is needed, instead of duplicating code.\n" +
+            "3. Simplification: complex problems are divided into smaller problems, each handled by a separate method.\n" +
+            "4. Easier debugging: smaller methods are easier to test and debug than long, complex event handlers.\n" +
+            "5. Better organization: related statements are grouped under one descriptive name, making the program structure clearer.\n",
+          tags: ["Modularization", "Code Reuse"],
+          ref: "Lecture 5 — Slide 2-4",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. Explain how to create and use a Random object in C# to generate random numbers.",
+          translation:
+            "اشرح إزاي تنشئ وتستخدم Random object في C# لتوليد أرقام عشوائية.",
+          answer:
+            "Step 1 — Create a Random object:\n" +
+            "  Random rand = new Random();\n" +
+            "  - The left side declares a variable 'rand' that references a Random object.\n" +
+            "  - The right side creates a Random object in memory.\n" +
+            "  - The '=' operator makes 'rand' reference that object.\n" +
+            "Step 2 — Call one of its methods:\n" +
+            "  - rand.Next()           // returns an int between 0 and 2,147,483,647\n" +
+            "  - rand.Next(100)        // returns an int between 0 and 99\n" +
+            "  - rand.Next(10) + 1     // returns an int between 1 and 10 (range shifted up by 1)\n" +
+            "  - rand.NextDouble()     // returns a double between 0.0 and 1.0 (1.0 not included)\n" +
+            "Step 3 — Store or use the result:\n" +
+            "  int number = rand.Next(100);  // 'number' now holds a random integer 0..99\n",
+          tags: ["Random Class", "Next Method", "NextDouble"],
+          ref: "Lecture 5 — Slide 70-73",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. A Random object named rand is created. Calculate the range of values returned by each call: (a) rand.Next()  (b) rand.Next(100)  (c) rand.Next(10) + 1  (d) rand.NextDouble(). Show the formula and the final range.",
+          translation:
+            "تم إنشاء كائن Random باسم rand. احسب نطاق القيم الراجعة من كل نداء: (a) rand.Next()  (b) rand.Next(100)  (c) rand.Next(10) + 1  (d) rand.NextDouble(). اكتب القانون والنطاق النهائي.",
+          answer:
+            "Given: Random rand = new Random();\n" +
+            "(a) rand.Next()\n" +
+            "    Rule: Next() with no arguments returns an integer between 0 and 2,147,483,647.\n" +
+            "    Range: 0 .. 2,147,483,647 (inclusive of 0, exclusive of the upper bound 2,147,483,648).\n" +
+            "(b) rand.Next(100)\n" +
+            "    Rule: Next(maxValue) returns an integer in [0, maxValue).\n" +
+            "    Range: 0 .. 99 (100 is the upper bound and is NOT included).\n" +
+            "(c) rand.Next(10) + 1\n" +
+            "    Step 1: Next(10) returns an integer in [0, 9].\n" +
+            "    Step 2: add 1 to shift the range up by 1.\n" +
+            "    Final range: 1 .. 10 (both inclusive).\n" +
+            "(d) rand.NextDouble()\n" +
+            "    Rule: returns a floating-point number between 0.0 and 1.0 (1.0 NOT included).\n" +
+            "    Range: [0.0, 1.0).\n",
+          tags: ["Random Class", "Calculation"],
+          ref: "Lecture 5 — Slide 71-73",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "15. The ShowTax method has a default argument of 0.07m for the taxRate parameter: private void ShowTax(decimal amount, decimal taxRate = 0.07m). Show what happens when ShowTax(100.0m) is called, and calculate the displayed tax value.",
+          translation:
+            "الـ ShowTax method عنده default argument بقيمة 0.07m للـ taxRate parameter: private void ShowTax(decimal amount, decimal taxRate = 0.07m). اظهر ما يحدث عند نداء ShowTax(100.0m)، واحسب قيمة الضريضة المعروضة.",
+          answer:
+            "Given method signature:\n" +
+            "  private void ShowTax(decimal amount, decimal taxRate = 0.07m)\n" +
+            "Call: ShowTax(100.0m);\n" +
+            "Step 1 — Argument matching:\n" +
+            "  amount = 100.0m  (passed explicitly)\n" +
+            "  taxRate = 0.07m  (NOT passed, so the default value 0.07m is used)\n" +
+            "Step 2 — Calculation (assuming the method computes tax = amount * taxRate):\n" +
+            "  tax = amount * taxRate = 100.0 * 0.07 = 7.0\n" +
+            "Step 3 — Result:\n" +
+            "  The displayed tax value is 7.0 (currency units).\n" +
+            "Note: if the call had been ShowTax(100.0m, 0.10m), the default would be overridden and tax would be 100.0 * 0.10 = 10.0.\n",
+          tags: ["Default Arguments", "Calculation"],
+          ref: "Lecture 5 — Slide 25",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "16. A company contributes 5 percent of an employee's total compensation (gross pay + bonus) to a retirement account. If gross pay = 1000 and bonus = 200, calculate the retirement contribution. Show the formula and steps.",
+          translation:
+            "شركة بتساهم بـ 5 بالمية من إجمالي تعويض الموظف (gross pay + bonus) في حساب التقاعد. لو gross pay = 1000 و bonus = 200، احسب مساهمة التقاعد. اكتب القانون والخطوات.",
+          answer:
+            "Given:\n" +
+            "  grossPay = 1000\n" +
+            "  bonus = 200\n" +
+            "  contributionRate = 5% = 0.05\n" +
+            "Formula (from the lecture's Pay and Bonus application):\n" +
+            "  totalCompensation = grossPay + bonus\n" +
+            "  retirementContribution = totalCompensation * contributionRate\n" +
+            "Step 1 — Compute total compensation:\n" +
+            "  totalCompensation = 1000 + 200 = 1200\n" +
+            "Step 2 — Compute retirement contribution:\n" +
+            "  retirementContribution = 1200 * 0.05 = 60\n" +
+            "Final answer: the retirement contribution is 60 currency units.\n" +
+            "Note: the method that computes this is typically a value-returning method that takes grossPay and bonus as arguments and returns the contribution.\n",
+          tags: ["Value-Returning Methods", "Calculation"],
+          ref: "Lecture 5 — Slide 49-51",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "17. Explain the Load event and how to create a handler for it.",
+          translation: "اشرح الـ Load event و إزاي تعمل handler له.",
+          answer:
+            "Load event:\n" +
+            "- When an application's form loads into memory, an event known as the Load event takes place.\n" +
+            "- It occurs just BEFORE the form is displayed on the screen.\n" +
+            "- Any code written inside the Load event handler executes when this event takes place.\n" +
+            "How to create the handler:\n" +
+            "1. Open the form in the Designer window.\n" +
+            "2. Double-click any empty area of the form where there is no other control.\n" +
+            "3. The code editor opens with an empty Load event handler.\n" +
+            "4. If the form is named Form1, the handler is automatically named Form1_Load.\n" +
+            "5. Write the code you want to execute at load time inside this handler.\n",
+          tags: ["Load Event"],
+          ref: "Lecture 5 — Slide 77",
+          likely: "medium",
+        },
+      ],
     },
   ],
 
