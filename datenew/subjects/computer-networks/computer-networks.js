@@ -3746,11 +3746,11 @@ subjects.push({
       ],
     },
     {
-      id: "networks-ch2-lecture-02",
-      t: "المحاضرة 2 (Chapter 2) — Application Layer: Principles of Network Applications & HTTP",
+      id: "networks-lecture-05",
+      t: "المحاضرة 5 (Chapter 2 ,lec 2) — Application Layer: Principles of Network Applications & HTTP",
       d: "مبادئ تطبيقات الشبكات (المعماريات، العمليات، الـ Socket، خدمات النقل TCP/UDP) وبروتوكول HTTP.",
       pdf: "datenew/subjects/computer-networks/lectures/lec 5/Chapter 2 lec 2.pdf",
-      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-02-Questions.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-5-Questions.pdf",
       // المحاضرة الثانية: طبقة التطبيقات (Application Layer) - كتاب شبكات الحاسوب: نهج من الأعلى إلى الأسفل (Kurose & Ross)
 
       linkCategories: [
@@ -5129,6 +5129,1435 @@ subjects.push({
           tags: ["Calculation", "UDP", "TCP", "Congestion Control"],
           ref: "Lecture 2 — Section 2.1.4 (UDP Services + Figure 2.5 commentary)",
           likely: "medium",
+        },
+      ],
+    },
+    {
+      id: "networks-lecture-6",
+      t: "Computer Networks - Lecture 6 (Ch 2, Lec 3): Cookies, Web Caching, HTTP/2 & HTTP/3",
+      d: "Cookies, Web caching (proxy server), conditional GET, HTTP/2 framing and server push, HTTP/3 over QUIC.",
+      pdf: "datenew/subjects/computer-networks/lectures/lec 6/Lecture-6.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-6-Questions.pdf",
+      // المحاضرة: Computer Networks — Lecture 6 (Ch 2, Lec 3) — Cookies, Web Caching (Proxy Server), Conditional GET, HTTP/2 (Framing, Prioritization, Server Push), HTTP/3 over QUIC
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمواضيع المحاضرة 6 (المحاضرة 3 داخل الفصل 2): cookies، web caching، HTTP/2 و HTTP/3.",
+          links: [
+            {
+              t: "شرح مفهوم Cookies وكيفية عملها داخل المواقع الإلكترونية",
+              d: "شرح بالعربي لآلية عمل cookies: Set-cookie في الـ response، Cookie في الـ request، تخزين الـ cookie file على جهاز اليوزر، والـ back-end database. مناسب لفهم القسم 2.2.4.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=uO1WQcX5W8o",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "قائمة شرح Cookies بالعربي (Cookies playlist)",
+              d: "قائمة تشغيل بالعربي بتشرح كل ما تحتاج معرفته عن cookies: التعريف، أنواعها، آلية عملها، وأهميتها لأصحاب المواقع. تكمل القسم 2.2.4.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLOXBaGn5vGihwbPijry3Vp14OqY21D2ae",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "ما تحتاج معرفته عن الكوكيز (Cookies) — مقال بالعربي",
+              d: "مقال بالعربي عن cookies: أنواعها، طريقة عملها، وأهميتها لأصحاب المواقع. مفيد لفهم الـ privacy concern المذكورة في المحاضرة 6 (Ch 2, Lec 3).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://nakibvps.com/blog/%D8%A7%D9%84%D9%83%D9%88%D9%83%D9%8A%D8%B2-cookies",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات إنجليزية مرئية وقنوات معروفة بشرح HTTP/2، HTTP/3، و QUIC.",
+          links: [
+            {
+              t: "Hussein Nasser — HTTP/2 Crash Course",
+              d: "قائمة تشغيل لمهندس باك-إند معروف، فيها شرح HTTP 1.0 / 1.1 / 2 بعمق، ومقارنة بين النسخ. مفيد جداً لفهم القسم 2.2.6 (HTTP/2 framing و server push).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLQnljOFTspQWbBegaU790WhH7gNKcMAl-",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "PowerCert Animated Videos — Networking (English Version)",
+              d: "قائمة فيديوهات Animated بتشرح HTTP/2، HTTP/3، TLS، و QUIC بأسلوب بصري مفهوم. الأسلوب البصري بيساعد على تثبيت الفروق بين النسخ في الذاكرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpXfHEl2fzl72d5ne2gsxSyFNagcHyCML",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Khan Academy — Internet 101 (Computer Science)",
+              d: "قائمة تشغيل من Khan Academy بتشرح أساسيات الإنترنت بما فيها TCP/UDP و DNS و HTTP. مفهوم كمقدمة للمحاضرة 6 وربطها بـ Chapter 1.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLSQl0a2vh4HD8wtmKZh0nKOsOvP1KYaNO",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر مكتوبة رسمية: Cloudflare Learning، MDN Web Docs، Wikipedia، GeeksforGeeks — بشرح cookies و HTTP/2 و HTTP/3 و conditional GET و caching.",
+          links: [
+            {
+              t: "MDN Web Docs (Mozilla) — HTTP Cookies",
+              d: "المرجع الرسمي لمطوري الويب لشرح cookies: Set-Cookie header، Cookie header، السمات (attributes)، والـ security flags. مطابق للقسم 2.2.4.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 Using HTTP cookies",
+                  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 Set-Cookie header reference",
+                  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 Cookie header reference",
+                  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cookie",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Cloudflare Learning Center",
+              d: "مصدر رسمي من Cloudflare بشرح HTTP/2، HTTP/3، و QUIC بأسلوب مبسط ودقيق. مهم لفهم القسم 2.2.6 (HTTP/2 و HTTP/3).",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 HTTP/2 vs. HTTP/1.1",
+                  url: "https://www.cloudflare.com/learning/performance/http2-vs-http1.1",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 What is HTTP/3?",
+                  url: "https://www.cloudflare.com/learning/performance/what-is-http3",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 What is caching? (CDN)",
+                  url: "https://www.cloudflare.com/learning/cdn/what-is-caching",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Wikipedia — HTTP/2 and HTTP/3",
+              d: "مقال موسوعي عن HTTP/2 (تاريخه، framing، multiplexing، server push، HPACK) وعن HTTP/3 و QUIC. يكمل المحاضرة 6 (Ch 2, Lec 3) بتفاصيل إضافية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 HTTP/2 — Wikipedia",
+                  url: "https://en.wikipedia.org/wiki/HTTP/2",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 HTTP cookie — Wikipedia",
+                  url: "https://en.wikipedia.org/wiki/HTTP_cookie",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks — HTTP State Management (Cookies)",
+              d: "مقال تعليمي عن cookies في الشبكات: تعريفها، أنواعها، آلية عملها، و أمثلة. مفهوم لمراجعة القسم 2.2.4.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 HTTP State Management (Cookies)",
+                  url: "https://www.geeksforgeeks.org/computer-networks/http-state-management-cookies",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لاختبار cookies و HTTP/2 / HTTP/3 — تستخدم في الـ labs لمراقبة الـ headers والـ protocol versions.",
+          links: [
+            {
+              t: "Wireshark — Network Protocol Analyzer",
+              d: "أداة لالتقاط وتحليل باكتات الشبكة. ممكن تستخدمها عشان تشوف Set-cookie و Cookie headers فعلًا، وكمان الـ frames بتاعت HTTP/2. أداة معتمدة في معظم مقررات الشبكات.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Squid — Optimising Web Delivery (Caching Proxy)",
+              d: "أداة open-source شهيرة لـ Web caching / proxy server — عملياً تطبيق لمفهوم الـ Web cache (proxy server) المذكور في القسم 2.2.5. بتستخدمها مؤسسات كتير لتقليل الـ traffic على الـ access link.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.squid-cache.org",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "nghttp2 — HTTP/2 Command-Line Client",
+              d: "أداة سطر أوامر لاختبار HTTP/2 (و HTTP/3 في نسخ حديثة). ممكن تشوف بيها framing و prioritization و server push فعلًا على جهازك. مفهوم لـ labs متقدمة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://nghttp2.org",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        {
+          q: "1. HTTP uses cookies because the HTTP server is:",
+          options: [
+            "Reliable",
+            "Persistent",
+            "Connection-oriented",
+            "Stateless",
+          ],
+          correct: 3,
+          translation: "HTTP بيستخدم cookies لأن السيرفر بيتوصف بـ إيه؟",
+          explanation:
+            "HTTP server stateless — ما بيبقاش عنده معلومات عن الـ clients. cookies بتحل المشكلة دي عشان تـ track المستخدمين.",
+          tags: ["Cookies", "Stateless"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          q: "2. Cookie technology has how many components?",
+          options: ["Two", "Three", "Four", "Five"],
+          correct: 2,
+          translation: "تقنية cookies فيها كام مكوّن؟",
+          explanation:
+            "4 مكونات: cookie header في الـ response، cookie header في الـ request، cookie file على جهاز اليوزر، back-end database على السيرفر. نقطة مرقمة مهمة.",
+          tags: ["Cookies", "Components"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (Figure 2.10)",
+          likely: "high",
+        },
+        {
+          q: "3. Which of the following is NOT a component of cookie technology?",
+          options: [
+            "A back-end database at the Web site",
+            "A cookie header line in the HTTP request message",
+            "A cookie header line in the TCP handshake",
+            "A cookie header line in the HTTP response message",
+          ],
+          correct: 2,
+          translation: "إيه اللي مش مكون من مكونات الـ cookies؟",
+          explanation:
+            "الـ 4 مكونات هي: header في الـ response، header في الـ request، file على اليوزر، database على السيرفر. مفيش cookie header في الـ TCP handshake.",
+          tags: ["Cookies", "Components"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (Figure 2.10)",
+          likely: "high",
+        },
+        {
+          q: "4. Which HTTP response header is used by the server to send a cookie to the browser?",
+          options: [
+            "If-Modified-Since:",
+            "Last-Modified:",
+            "Set-cookie:",
+            "Cookie:",
+          ],
+          correct: 2,
+          translation:
+            "إيه الـ HTTP response header اللي السيرفر بيبعته للـ browser عشان يبعت cookie؟",
+          explanation:
+            "Set-cookie: في الـ response من السيرفر. Cookie: في الـ request من الـ browser. Last-Modified و If-Modified-Since للـ conditional GET.",
+          tags: ["Cookies", "Set-cookie", "Headers"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          q: "5. Which HTTP request header does the browser use to send a stored cookie back to the server?",
+          options: ["Set-cookie:", "Host:", "User-agent:", "Cookie:"],
+          correct: 3,
+          translation:
+            "إيه الـ HTTP request header اللي الـ browser بيستخدمه عشان يبعت cookie للسيرفر؟",
+          explanation:
+            "Cookie: في الـ request. مثال: Cookie: 1678. Set-cookie: بيتحط في الـ response، مش الـ request.",
+          tags: ["Cookies", "Cookie header"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          q: "6. Where is the cookie file kept?",
+          options: [
+            "On the user's end system, managed by the user's browser",
+            "On the origin server only",
+            "On the Web cache",
+            "Inside the HTTP response message",
+          ],
+          correct: 0,
+          translation: "فين الـ cookie file بيتخزّن؟",
+          explanation:
+            "على جهاز اليوزر (end system) وبيديره الـ browser. مش على السيرفر ولا على الـ cache ولا جوه رسالة HTTP.",
+          tags: ["Cookies", "Cookie file"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          q: "7. When Susan visits Amazon for the first time, what does the Amazon Web server do?",
+          options: [
+            "Stores the cookie directly inside the HTTP request",
+            "Creates a unique identification number and an entry in its back-end database indexed by that number",
+            "Rejects the request because Susan has no cookie yet",
+            "Asks Susan to register with full name and address",
+          ],
+          correct: 1,
+          translation: "لما Susan تزور Amazon أول مرة، السيرفر بيعمل إيه؟",
+          explanation:
+            "السيرفر بيعمل unique ID وentry في الـ back-end database، ويبعتها في Set-cookie header. مش بطلب تسجيل فوراً ولا برفض.",
+          tags: ["Cookies", "Back-end database"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (Susan/Amazon example)",
+          likely: "high",
+        },
+        {
+          q: "8. What does the browser do when it receives a Set-cookie: header in an HTTP response?",
+          options: [
+            "Sends the cookie to all servers it knows",
+            "Discards the cookie after the session",
+            "Stores the cookie in the origin server's database",
+            "Appends a line to the special cookie file it manages, including the hostname and the identification number",
+          ],
+          correct: 3,
+          translation:
+            "إيه اللي الـ browser بيعمله لما يستقبل Set-cookie header في الـ response؟",
+          explanation:
+            "بيـ append سطر للـ cookie file فيه hostname + ID. مش بيـ discard ولا بيـ broadcast على كل السيرفرز.",
+          tags: ["Cookies", "Browser behavior"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          q: "9. What is the primary reason cookies are considered controversial?",
+          options: [
+            "They are slow and increase latency",
+            "They require upgrading the access link",
+            "They can be considered an invasion of privacy",
+            "They are unreliable and cause data loss",
+          ],
+          correct: 2,
+          translation: "ليه cookies بيتعتبر عليها جدل؟",
+          explanation:
+            "لأنها ممكن تعتبر انتهاك privacy — السيرفر يقدر يتعلم كتير عن اليوزر ويبيع معلوماته لطرف تالت. مش لأنها بطيئة ولا غير موثوقة.",
+          tags: ["Cookies", "Privacy"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (privacy paragraph)",
+          likely: "high",
+        },
+        {
+          q: "10. Amazon uses cookies to provide which service?",
+          options: [
+            "Shopping cart service",
+            "File transfer",
+            "DNS resolution",
+            "E-mail routing",
+          ],
+          correct: 0,
+          translation: "Amazon بيستخدم cookies عشان يوفّر إيه؟",
+          explanation:
+            "shopping cart: بيحتفظ بقائمة مشتريات Susan عشان تدفع collectively في الآخر. DNS و الإيميل و FTP مالهم علاقة بـ Amazon cookies.",
+          tags: ["Cookies", "Shopping cart"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          q: "11. A Web site can learn a lot about a user by combining:",
+          options: [
+            "Cookies and TCP sequence numbers",
+            "Cookies and ARP tables",
+            "Cookies and user-supplied account information",
+            "Cookies and DNS records",
+          ],
+          correct: 2,
+          translation:
+            "الموقع يقدر يتعلم كتير عن اليوزر عن طريق دمج إيه مع إيه؟",
+          explanation:
+            "cookies + معلومات الحساب اللي اليوزر بيدخلها (الاسم، الإيميل، البطاقة). DNS و ARP و TCP sequence مالهم علاقة.",
+          tags: ["Cookies", "Privacy"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (privacy paragraph)",
+          likely: "high",
+        },
+        {
+          q: "12. A Web cache is also called a:",
+          options: [
+            "Origin server",
+            "Proxy server",
+            "Mail server",
+            "DNS server",
+          ],
+          correct: 1,
+          translation: "الـ Web cache بيتسمى كمان؟",
+          explanation:
+            "proxy server. بيـ satisfy طلبات HTTP نيابة عن الـ origin server. origin server هو السيرفر الأصلي، mail و DNS ملهمش علاقة.",
+          tags: ["Web Caching", "Proxy server"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5",
+          likely: "high",
+        },
+        {
+          q: "13. A Web cache satisfies HTTP requests on the behalf of what?",
+          options: [
+            "A mail server",
+            "A DNS server",
+            "A router",
+            "An origin Web server",
+          ],
+          correct: 3,
+          translation: "الـ Web cache بيـ satisfy طلبات HTTP نيابة عن إيه؟",
+          explanation:
+            "نيابة عن الـ origin Web server. لو عنده نسخة من الـ object بيبعته للـ client من غير ما يروح للـ origin.",
+          tags: ["Web Caching", "Origin server"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5",
+          likely: "high",
+        },
+        {
+          q: "14. Where does the Web cache keep copies of recently requested objects?",
+          options: [
+            "In the DNS",
+            "In the origin server",
+            "In its own disk storage",
+            "In the user's browser only",
+          ],
+          correct: 2,
+          translation:
+            "فين الـ Web cache بيخزّن نسخ الـ objects اللي اتطلبت قريب؟",
+          explanation:
+            "في disk storage بتاعه. مش في browser ولا في origin server ولا DNS — الـ cache عنده storage خاص بيه.",
+          tags: ["Web Caching", "Storage"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5",
+          likely: "high",
+        },
+        {
+          q: "15. What is the first step when a browser requests an object through a Web cache?",
+          options: [
+            "The browser sends a UDP packet to the origin server",
+            "The browser queries DNS for the cache's IP",
+            "The browser establishes a TCP connection to the Web cache and sends an HTTP request for the object to the Web cache",
+            "The browser establishes a TCP connection directly to the origin server",
+          ],
+          correct: 2,
+          translation:
+            "إيه أول خطوة لما الـ browser يطلب object عبر Web cache؟",
+          explanation:
+            "الـ browser بيفتح TCP للـ cache ويبعت HTTP request له. مش لـ origin مباشرة ولا UDP ولا DNS query.",
+          tags: ["Web Caching", "Steps"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (4 steps)",
+          likely: "high",
+        },
+        {
+          q: "16. If the Web cache does NOT have a copy of the requested object, what does it do?",
+          options: [
+            "Returns an error to the browser",
+            "Opens a TCP connection to the origin server, sends an HTTP request, and stores a copy when it receives the object",
+            "Sends the request to another browser",
+            "Forwards the request via UDP multicast",
+          ],
+          correct: 1,
+          translation: "لو الـ Web cache معندوش نسخة من الـ object، بيعمل إيه؟",
+          explanation:
+            "يفتح TCP للـ origin server، يبعت HTTP request، يستقبل الـ object، يخزّن نسخة محلياً، ويبعت نسخة للـ browser. مش error ولا broadcast.",
+          tags: ["Web Caching", "Steps"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (4 steps)",
+          likely: "high",
+        },
+        {
+          q: "17. A Web cache acts as:",
+          options: [
+            "Both a server and a client at the same time",
+            "Only a client",
+            "Only a router",
+            "Only a server",
+          ],
+          correct: 0,
+          translation: "الـ Web cache بيشتغل كـ إيه؟",
+          explanation:
+            "server (لما يبعت response للـ browser) و client (لما يبعت request للـ origin server) في نفس الوقت. نقطة مهمة.",
+          tags: ["Web Caching", "Server/Client"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5",
+          likely: "high",
+        },
+        {
+          q: "18. Web caching has been deployed for which two main reasons?",
+          options: [
+            "To replace TCP with UDP for faster transport",
+            "To reduce response time for client requests and to reduce traffic on an institution's access link",
+            "To eliminate the need for DNS",
+            "To encrypt HTTP messages and provide security",
+          ],
+          correct: 1,
+          translation:
+            "Web caching اتعمل deployment عشان إيه السببين الأساسيين؟",
+          explanation:
+            "تقليل response time و تقليل traffic على access link. التشفير والـ UDP و إلغاء DNS مالهمش علاقة بـ caching.",
+          tags: ["Web Caching", "Benefits"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (two reasons)",
+          likely: "high",
+        },
+        {
+          q: "19. In the institutional network example, the access link between the institutional router and the Internet router has a rate of:",
+          options: ["1 Mbps", "100 Mbps", "15 Mbps", "1 Gbps"],
+          correct: 2,
+          translation:
+            "في المثال، الـ access link بين راوتر المؤسسة وراوتر الإنترنت سرعته كام؟",
+          explanation:
+            "15 Mbps. الـ LAN أسرع (100 Mbps). 15 Mbps هي الـ bottleneck اللي بيدخل الـ traffic intensity = 1.",
+          tags: ["Web Caching", "Example"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "20. In the institutional example, the Internet delay is approximately:",
+          options: ["2 seconds", "2 ms", "200 ms", "20 seconds"],
+          correct: 0,
+          translation: "في المثال، الـ Internet delay تقريباً كام؟",
+          explanation:
+            "ثانيتين (2 seconds). بتستخدم في حساب الـ average response time مع الـ hit rate.",
+          tags: ["Web Caching", "Example"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "21. What is the traffic intensity on the access link in the original (no-cache) example?",
+          options: ["1.0", "0.4", "0.15", "0.6"],
+          correct: 0,
+          translation:
+            "إيه الـ traffic intensity على الـ access link في المثال من غير cache؟",
+          explanation:
+            "15 req/s * 1 Mbits / 15 Mbps = 1.0. الـ LAN بتطلع 0.15 (مهملة)، بس 1.0 على access link معناها delay كبير بيكبر من غير bound.",
+          tags: ["Web Caching", "Traffic intensity"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "22. When the traffic intensity on a link approaches 1, the delay on that link:",
+          options: [
+            "Decreases linearly",
+            "Becomes very large and grows without bound",
+            "Stays constant at a few milliseconds",
+            "Becomes zero",
+          ],
+          correct: 1,
+          translation:
+            "لما الـ traffic intensity تقرب من 1 على link، الـ delay بيعمل إيه؟",
+          explanation:
+            "بيكبر بشكل كبير وبدون bound. ده عكس intensity 0.15 اللي بتعني delay صغير (tens of ms).",
+          tags: ["Web Caching", "Traffic intensity"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "23. The first solution in the example was to upgrade the access link to 100 Mbps. What does this give?",
+          options: [
+            "No change in response time",
+            "Traffic intensity 0.4, total response time 1.2 seconds",
+            "Traffic intensity 0.15, total response time roughly 2 seconds (the Internet delay)",
+            "Traffic intensity 1.0, total response time on the order of minutes",
+          ],
+          correct: 2,
+          translation: "الحل الأول (ترقية الـ link لـ 100 Mbps) بيدّي إيه؟",
+          explanation:
+            "intensity 0.15 (مهملة) + Internet delay 2 seconds = إجمالي ~2 seconds. بس مكلف جداً (upgrade link).",
+          tags: ["Web Caching", "Upgrade solution"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "24. The second solution installs a Web cache with a hit rate of 0.4. What is the resulting average delay?",
+          options: [
+            "Roughly 2 seconds",
+            "Roughly 0.01 seconds",
+            "On the order of minutes",
+            "Slightly greater than 1.2 seconds",
+          ],
+          correct: 3,
+          translation:
+            "الحل التاني (Web cache hit rate 0.4) بيدّي إيه average delay؟",
+          explanation:
+            "0.4*0.01 + 0.6*2.01 = 0.004 + 1.206 ≈ 1.21 seconds. أقل من الحل الأول ومش محتاج upgrade.",
+          tags: ["Web Caching", "Cache solution"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "25. With a cache hit rate of 0.4, the traffic intensity on the access link is reduced from 1.0 to:",
+          options: ["0.01", "0.4", "0.15", "0.6"],
+          correct: 3,
+          translation:
+            "مع hit rate 0.4، الـ traffic intensity على الـ access link بتقل من 1.0 لـ كام؟",
+          explanation:
+            "0.6 — لأن 60% من الـ requests (اللي miss) بتمر على الـ access link. 40% بـ hit على الـ cache وما بتمرش.",
+          tags: ["Web Caching", "Traffic intensity"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "high",
+        },
+        {
+          q: "26. CDN companies install what to localize much of the Internet traffic?",
+          options: [
+            "Many routers only",
+            "A single central cache",
+            "Many DNS servers",
+            "Many geographically distributed caches",
+          ],
+          correct: 3,
+          translation: "شركات CDN بـ install إيه عشان تـ localize الـ traffic؟",
+          explanation:
+            "caches موزعة جغرافياً. ده بيخلي الـ traffic قريب من اليوزر. مش cache مركزي ولا DNS.",
+          tags: ["CDN", "Caching"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (CDN paragraph)",
+          likely: "high",
+        },
+        {
+          q: "27. What problem does the conditional GET solve?",
+          options: [
+            "DNS resolution may fail",
+            "The cached copy of an object may be stale",
+            "Cookies may be lost",
+            "TCP connections may be dropped",
+          ],
+          correct: 1,
+          translation: "الـ conditional GET بيحل إيه مشكلة؟",
+          explanation:
+            "النسخة المخزنة في الـ cache ممكن تبقى stale (الـ object اتغير على الـ origin server). cookies و TCP و DNS مالهمش علاقة.",
+          tags: ["Conditional GET", "Staleness"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET)",
+          likely: "high",
+        },
+        {
+          q: "28. An HTTP request message is a conditional GET if it uses the GET method AND:",
+          options: [
+            "Includes a Cookie: header line",
+            "Includes a User-agent: header line",
+            "Includes a Set-cookie: header line",
+            "Includes an If-Modified-Since: header line",
+          ],
+          correct: 3,
+          translation:
+            "رسالة HTTP request بتبقى conditional GET لو بتستخدم GET وبتشمل إيه؟",
+          explanation:
+            "شرطين: (1) GET method + (2) If-Modified-Since: header. Set-cookie و Cookie و User-agent شروط تانية مختلفة.",
+          tags: ["Conditional GET", "If-Modified-Since"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET definition)",
+          likely: "high",
+        },
+        {
+          q: "29. The If-Modified-Since: header line value is taken from which previous server response header?",
+          options: [
+            "Last-Modified:",
+            "Content-Length:",
+            "Set-cookie:",
+            "Date:",
+          ],
+          correct: 0,
+          translation:
+            "قيمة If-Modified-Since بتيجي من إيه header في الـ response القديم؟",
+          explanation:
+            "من Last-Modified: header اللي السيرفر بعت في الـ response الأصلي. ده اللي بيخلي الـ cache يحدد لو الـ object اتغير.",
+          tags: ["Conditional GET", "Last-Modified"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET example)",
+          likely: "high",
+        },
+        {
+          q: "30. If the object has NOT been modified since the specified date, the Web server responds with which status code?",
+          options: [
+            "200 OK",
+            "301 Moved Permanently",
+            "404 Not Found",
+            "304 Not Modified",
+          ],
+          correct: 3,
+          translation:
+            "لو الـ object ما اتغيرش، السيرفر بيرد بـ أيه status code؟",
+          explanation:
+            "304 Not Modified. 200 OK معناها السيرفر بيبعت الـ object، 404 معناها مش موجود، 301 معناها اتنقل.",
+          tags: ["Conditional GET", "304 Not Modified"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET example)",
+          likely: "high",
+        },
+        {
+          q: "31. When a 304 Not Modified response is sent, what is the entity body?",
+          options: [
+            "The full requested object",
+            "The cookies for the user",
+            "Empty — the requested object is NOT included",
+            "A small error message",
+          ],
+          correct: 2,
+          translation:
+            "لما السيرفر يبعت 304 Not Modified، الـ entity body فيها إيه؟",
+          explanation:
+            "فاضية — مفيش object. لو السيرفر بعت الـ object هيضيع bandwidth ويزود الـ response time بدون داعي.",
+          tags: ["Conditional GET", "Empty body"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET example)",
+          likely: "high",
+        },
+        {
+          q: "32. Why is the conditional GET important?",
+          options: [
+            "It removes the need for TCP",
+            "It speeds up DNS resolution",
+            "It confirms that a cache has up-to-date objects without re-sending the full object when nothing has changed",
+            "It encrypts the HTTP request",
+          ],
+          correct: 2,
+          translation: "ليه الـ conditional GET مهم؟",
+          explanation:
+            "بيـ verify الـ cache up-to-date من غير إعادة إرسال الـ object لو ما اتغيرش — بيوفّر bandwidth و delay.",
+          tags: ["Conditional GET", "Benefits"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET)",
+          likely: "high",
+        },
+        {
+          q: "33. When was HTTP/2 standardized?",
+          options: ["2020", "2015", "2005", "1997"],
+          correct: 1,
+          translation: "متى HTTP/2 اتعمل standardization؟",
+          explanation:
+            "2015 (RFC 7540). HTTP/1.1 اتـ standard في 1997. نقطة مهمة في بداية القسم 2.2.6.",
+          tags: ["HTTP/2", "History"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6",
+          likely: "high",
+        },
+        {
+          q: "34. What was the first new version of HTTP since HTTP/1.1?",
+          options: ["HTTPS", "HTTP/3", "HTTP/2", "QUIC"],
+          correct: 2,
+          translation: "إيه أول نسخة جديدة من HTTP بعد HTTP/1.1؟",
+          explanation:
+            "HTTP/2 (2015). HTTP/3 لسه بعده. HTTPS مش نسخة، ده HTTP مع TLS. QUIC بروتوكول نقل مش HTTP.",
+          tags: ["HTTP/2", "Versions"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6",
+          likely: "high",
+        },
+        {
+          q: "35. As of 2020, what percentage of the top 10 million websites supported HTTP/2?",
+          options: ["Over 40%", "Exactly 100%", "Over 90%", "Under 10%"],
+          correct: 0,
+          translation:
+            "حتى 2020، كام نسبة من أكبر 10 مليون موقع بتـ support HTTP/2؟",
+          explanation: "أكتر من 40%. نقطة مهمة في المحاضرة.",
+          tags: ["HTTP/2", "Adoption"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6",
+          likely: "high",
+        },
+        {
+          q: "36. Which is NOT a primary goal of HTTP/2?",
+          options: [
+            "Provide request prioritization and server push",
+            "Reduce perceived latency via request/response multiplexing over a single TCP connection",
+            "Provide efficient compression of HTTP header fields",
+            "Replace HTTP/1.1 status codes and URLs",
+          ],
+          correct: 3,
+          translation: "إيه اللي مش هدف أساسي من HTTP/2؟",
+          explanation:
+            "HTTP/2 ما بياخدش status codes ولا URLs — دي بتفل كما هي. الأهداف: multiplexing + prioritization + server push + header compression.",
+          tags: ["HTTP/2", "Goals"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (primary goals paragraph)",
+          likely: "high",
+        },
+        {
+          q: "37. What does HTTP/2 NOT change?",
+          options: [
+            "HTTP methods, status codes, URLs, or header fields",
+            "The default port number",
+            "The transport protocol used",
+            "How data is formatted and transported between client and server",
+          ],
+          correct: 0,
+          translation: "HTTP/2 ما بياخدش إيه؟",
+          explanation:
+            "methods و status codes و URLs و headers بتفل كما هي. بس HTTP/2 بياخد إزاي الـ data متformat ومتنقلة.",
+          tags: ["HTTP/2", "Compatibility"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6",
+          likely: "high",
+        },
+        {
+          q: "38. HTTP/2 changes which aspect of HTTP/1.1?",
+          options: [
+            "URL structure",
+            "Status codes (200, 404, etc.)",
+            "HTTP methods (GET, POST, etc.)",
+            "How the data is formatted and transported between the client and server",
+          ],
+          correct: 3,
+          translation: "HTTP/2 بياخد إيه في HTTP/1.1؟",
+          explanation:
+            "إزاي الـ data متـ format ومتنقل (framing + interleaving + binary). methods و codes و URLs بتفل كما هي.",
+          tags: ["HTTP/2", "Changes"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6",
+          likely: "high",
+        },
+        {
+          q: "39. What problem arises when sending all objects of a Web page over a single HTTP/1.1 TCP connection?",
+          options: [
+            "DNS resolution failure",
+            "Head of Line (HOL) blocking",
+            "Cookie overflow",
+            "TLS handshake error",
+          ],
+          correct: 1,
+          translation:
+            "إيه المشكلة لما نبعت كل objects صفحة ويب على TCP connection واحد في HTTP/1.1؟",
+          explanation:
+            "HOL blocking — فيديو كبير على رأس الصف بيـ block الـ small objects وراه. cookies و DNS و TLS مالهمش علاقة.",
+          tags: ["HTTP/2", "HOL blocking"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HOL blocking paragraph)",
+          likely: "high",
+        },
+        {
+          q: "40. In HOL blocking, which object blocks the small objects behind it?",
+          options: [
+            "A DNS query",
+            "A small image file",
+            "A cookie file",
+            "A large video clip at the head of the line on a low-to-medium speed bottleneck link",
+          ],
+          correct: 3,
+          translation:
+            "في HOL blocking، إيه اللي بـ block الـ small objects وراه؟",
+          explanation:
+            "فيديو كبير على رأس الصف على bottleneck link. small objects بتستنى وراه.",
+          tags: ["HTTP/2", "HOL blocking"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HOL blocking example)",
+          likely: "high",
+        },
+        {
+          q: "41. How do HTTP/1.1 browsers typically work around the HOL blocking problem?",
+          options: [
+            "By disabling cookies",
+            "By opening multiple parallel TCP connections",
+            "By sending all requests over UDP",
+            "By switching to HTTP/3",
+          ],
+          correct: 1,
+          translation: "إزاي HTTP/1.1 browsers بيتعاملوا مع HOL blocking؟",
+          explanation:
+            "بفتح TCP connections متوازية. ده بيخلي small objects تيجي بسرعة. UDP و HTTP/3 و cookies مالهمش علاقة.",
+          tags: ["HTTP/2", "HTTP/1.1", "Parallel connections"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/1.1 workaround)",
+          likely: "high",
+        },
+        {
+          q: "42. Why does TCP congestion control give browsers an unintended incentive to use multiple parallel TCP connections?",
+          options: [
+            "TCP congestion control disables itself for parallel connections",
+            "UDP is faster than TCP for small objects",
+            "TCP requires authentication before opening parallel connections",
+            "Each TCP connection sharing a bottleneck link gets approximately 1/n of the bandwidth, so opening n connections lets the browser grab a larger portion",
+          ],
+          correct: 3,
+          translation:
+            "ليه TCP congestion control بيدي browsers حافز لفتح parallel TCP connections؟",
+          explanation:
+            "n TCP connections على bottleneck بياخدوا 1/n لكل واحد — فلو فتحت كذا connection تقدر تـ grab أكتر bandwidth (cheat). مش عشان UDP ولا authentication.",
+          tags: ["HTTP/2", "TCP congestion control"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (TCP congestion control incentive)",
+          likely: "high",
+        },
+        {
+          q: "43. What is the HTTP/2 solution to HOL blocking?",
+          options: [
+            "Open more TCP connections per Web page",
+            "Send all objects sequentially without interleaving",
+            "Use UDP instead of TCP",
+            "Break each message into small frames and interleave the request and response messages on the same TCP connection",
+          ],
+          correct: 3,
+          translation: "إيه حل HTTP/2 لمشكلة HOL blocking؟",
+          explanation:
+            "break message لـ frames صغيرة و interleave على نفس TCP connection. مش parallel connections ولا UDP ولا sequential.",
+          tags: ["HTTP/2", "Framing", "Interleaving"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/2 Framing)",
+          likely: "high",
+        },
+        {
+          q: "44. In the framing example (1 large video of 1000 frames + 8 small objects of 2 frames each), how many frames are sent before all small objects are sent with interleaving?",
+          options: ["1000 frames", "18 frames", "8 frames", "1016 frames"],
+          correct: 1,
+          translation:
+            "في مثال framing (فيديو 1000 frame + 8 objects كل واحد 2 frames)، مع interleaving بتبعت كام frame قبل ما كل small objects تتبعت؟",
+          explanation:
+            "18 frame: بعد frame 1 من الفيديو، أول frames لكل object (8)؛ بعد frame 2 من الفيديو، آخر frames لكل object (8) → 1+8+1+8=18. من غير interleaving 1016 frame.",
+          tags: ["HTTP/2", "Framing", "Interleaving"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (framing example)",
+          likely: "high",
+        },
+        {
+          q: "45. In the framing example, without interleaving, how many frames would be sent before all small objects are sent?",
+          options: ["1016 frames", "18 frames", "1000 frames", "2000 frames"],
+          correct: 0,
+          translation:
+            "في نفس المثال، من غير interleaving، كام frame هتتبعت قبل كل small objects؟",
+          explanation:
+            "1016 frame: الفيديو 1000 frame + كل small object 2 frame = 1000 + 16 = 1016. مع interleaving: 18 frame بس.",
+          tags: ["HTTP/2", "Framing"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (framing example)",
+          likely: "high",
+        },
+        {
+          q: "46. What is described as the single most important enhancement of HTTP/2?",
+          options: [
+            "The Last-Modified: header",
+            "The ability to break down an HTTP message into independent frames, interleave them, and reassemble them on the other end",
+            "Conditional GET",
+            "Cookies",
+          ],
+          correct: 1,
+          translation: "إيه أهم enhancement في HTTP/2؟",
+          explanation:
+            "framing + interleaving + reassembly. ده اللي بيخلي multiplexing ممكن ويقلل user-perceived delay بشكل كبير.",
+          tags: ["HTTP/2", "Framing"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/2 Framing)",
+          likely: "high",
+        },
+        {
+          q: "47. Why does the framing sublayer also binary-encode the frames?",
+          options: [
+            "Binary protocols are more efficient to parse, lead to slightly smaller frames, and are less error-prone",
+            "Binary encoding is more secure than text",
+            "Binary encoding is required by TCP",
+            "Binary encoding removes the need for TLS",
+          ],
+          correct: 0,
+          translation: "ليه framing sublayer بـ binary encode الـ frames؟",
+          explanation:
+            "binary أكفأ في الـ parsing، أصغر، وأقل خطأ. مش شرط من TCP ولا أأمن ولا بيستبدل TLS.",
+          tags: ["HTTP/2", "Binary encoding"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (framing sublayer)",
+          likely: "high",
+        },
+        {
+          q: "48. In HTTP/2 response prioritization, what weight range can a client assign to each message?",
+          options: [
+            "Between 1 and 1024",
+            "Between 1 and 10",
+            "Between 1 and 256",
+            "Between 0 and 100",
+          ],
+          correct: 2,
+          translation: "في HTTP/2 prioritization، نطاق الـ weight كام؟",
+          explanation:
+            "1 لـ 256. رقم أكبر = أولوية أعلى. السيرفر بيبعت frames الأولى للـ responses ذات الأولوية الأعلى.",
+          tags: ["HTTP/2", "Prioritization"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Response Message Prioritization)",
+          likely: "high",
+        },
+        {
+          q: "49. In HTTP/2 prioritization, a higher weight number indicates:",
+          options: [
+            "Slower response time",
+            "Lower priority",
+            "Larger object size",
+            "Higher priority",
+          ],
+          correct: 3,
+          translation: "في HTTP/2 prioritization، رقم weight أكبر معناه إيه؟",
+          explanation:
+            "أولوية أعلى. السيرفر بيبعت frames الأولى للـ responses ذات الأولوية الأعلى.",
+          tags: ["HTTP/2", "Prioritization"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Response Message Prioritization)",
+          likely: "high",
+        },
+        {
+          q: "50. Which HTTP/2 feature allows a server to send multiple responses for a single client request?",
+          options: [
+            "Server push",
+            "Cookies",
+            "Last-Modified",
+            "Conditional GET",
+          ],
+          correct: 0,
+          translation:
+            "إيه ميزة HTTP/2 اللي بتسمح للسيرفر يبعت كذا response لطلب واحد؟",
+          explanation:
+            "Server push. السيرفر بيشوف الـ HTML وبيـ push الـ objects اللي اليوزر محتاجها قبل ما يطلبها. conditional GET و cookies مالهمش علاقة.",
+          tags: ["HTTP/2", "Server push"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Server Push)",
+          likely: "high",
+        },
+        {
+          q: "51. How does the server know which objects to push in HTTP/2?",
+          options: [
+            "The cookies tell the server what to push",
+            "The DNS provides the list of objects",
+            "The HTML base page indicates the objects that will be needed to fully render the Web page",
+            "The client explicitly requests each pushed object",
+          ],
+          correct: 2,
+          translation: "إزاي السيرفر بيعرف إيه objects اللي هـ push في HTTP/2؟",
+          explanation:
+            "الـ HTML base page بيقول إيه objects اللي محتاجة. السيرفر بيشوفها ويـ push قبل ما اليوزر يطلب. مش الـ client ولا DNS ولا cookies.",
+          tags: ["HTTP/2", "Server push"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Server Push)",
+          likely: "high",
+        },
+        {
+          q: "52. What does server push eliminate?",
+          options: [
+            "The need for cookies",
+            "The need for TCP connections",
+            "The extra latency due to waiting for the requests",
+            "The need for DNS",
+          ],
+          correct: 2,
+          translation: "Server push بيـ eliminate إيه؟",
+          explanation:
+            "latency اللي بيتسبب عن استنى الطلبات. السيرفر بيبعت objects قبل ما اليوزر يطلبها. مش cookies ولا TCP ولا DNS.",
+          tags: ["HTTP/2", "Server push"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Server Push)",
+          likely: "high",
+        },
+        {
+          q: "53. HTTP/3 is designed to operate over which transport protocol?",
+          options: ["QUIC", "UDP directly", "SCTP", "TCP"],
+          correct: 0,
+          translation: "HTTP/3 متصمم عشان يشتغل فوق إيه؟",
+          explanation: "QUIC. مش TCP ولا UDP مباشرة. QUIC بروتوكول نقل جديد.",
+          tags: ["HTTP/3", "QUIC"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "high",
+        },
+        {
+          q: '54. QUIC is a new "transport" protocol implemented in which layer over the bare-bones UDP protocol?',
+          options: [
+            "The application layer",
+            "The network layer",
+            "The physical layer",
+            "The transport layer",
+          ],
+          correct: 0,
+          translation:
+            "QUIC بروتوكول نقل جديد متـ implement في أي طبقة فوق UDP؟",
+          explanation:
+            "application layer فوق UDP. ده ملاحظة مهمة — QUIC مش في transport layer بتاع OS، ده application-level.",
+          tags: ["HTTP/3", "QUIC", "Application layer"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "high",
+        },
+        {
+          q: "55. QUIC is implemented over which underlying protocol?",
+          options: ["IP", "UDP", "TLS", "TCP"],
+          correct: 1,
+          translation: "QUIC متـ implement فوق إيه؟",
+          explanation:
+            "UDP bare-bones. ده اللي بيخليه أسرع وأقدر يـ multiplex من غير head-of-line blocking بتاع TCP.",
+          tags: ["HTTP/3", "QUIC", "UDP"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "high",
+        },
+        {
+          q: "56. Which desirable features does QUIC have for HTTP?",
+          options: [
+            "Encryption, authentication, and routing only",
+            "File transfer, e-mail, and DNS",
+            "Cookies, conditional GET, and DNS",
+            "Message multiplexing (interleaving), per-stream flow control, and low-latency connection establishment",
+          ],
+          correct: 3,
+          translation: "QUIC فيه إيه مميزات مرغوبة لـ HTTP؟",
+          explanation:
+            "message multiplexing، per-stream flow control، low-latency connection establishment. النقاط دي بتسمح لـ HTTP/3 بـ design أبسط.",
+          tags: ["HTTP/3", "QUIC", "Features"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "high",
+        },
+        {
+          q: "57. Because QUIC subsumes many HTTP/2 features, what does HTTP/3's design become?",
+          options: [
+            "More complex and slower",
+            "Simpler and more streamlined",
+            "Identical to HTTP/1.1",
+            "Backward-compatible with HTTP/0.9",
+          ],
+          correct: 1,
+          translation:
+            "بما إن QUIC بـ subsume مميزات HTTP/2، HTTP/3 بيبقى إزاي؟",
+          explanation:
+            "أبسط وأكتر streamlined. مش أكتر تعقيد، ولا متوافق مع HTTP/0.9، ولا زي HTTP/1.1.",
+          tags: ["HTTP/3", "QUIC", "Design"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "high",
+        },
+        {
+          q: "58. Cookies are defined in which RFC?",
+          options: ["RFC 6265", "RFC 7230", "RFC 7540", "RFC 7232"],
+          correct: 0,
+          translation: "Cookies متعرفة في RFC كام؟",
+          explanation:
+            "RFC 6265. RFC 7230 لـ HTTP/1.1، RFC 7540 لـ HTTP/2، RFC 7232 لـ conditional GET.",
+          tags: ["Cookies", "RFC"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "medium",
+        },
+        {
+          q: "59. Typically, who purchases and installs a Web cache?",
+          options: [
+            "The origin Web server",
+            "An ISP (for example, a university on its campus network)",
+            "The DNS registry",
+            "The end user on a personal computer",
+          ],
+          correct: 1,
+          translation: "مين بيـ install الـ Web cache عادة؟",
+          explanation:
+            "ISP (مثل جامعة على campus network). اليوزر مش بيـ install الـ cache بنفسه، ولا الـ origin server.",
+          tags: ["Web Caching", "ISP"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5",
+          likely: "medium",
+        },
+        {
+          q: "60. In the institutional example, what is the average object size?",
+          options: ["10 Mbits", "1 Mbits", "100 Kbits", "1 Kbits"],
+          correct: 1,
+          translation: "في المثال، إيه حجم الـ object المتوسط؟",
+          explanation:
+            "1 Mbits. الـ request rate 15 req/s، فالـ traffic intensity = 15*1/15 = 1 على الـ access link.",
+          tags: ["Web Caching", "Example"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12 example)",
+          likely: "medium",
+        },
+        {
+          q: "61. In practice, hit rates for Web caches typically range from:",
+          options: ["0.5 to 0.9", "0.9 to 1.0", "0.2 to 0.7", "0.01 to 0.1"],
+          correct: 2,
+          translation:
+            "في الواقع، الـ hit rates للـ Web caches بتتراوح بين كام؟",
+          explanation: "0.2 لـ 0.7. القيم دي معقولة للـ caches في المؤسسات.",
+          tags: ["Web Caching", "Hit rate"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (hit rate paragraph)",
+          likely: "medium",
+        },
+        {
+          q: "62. The conditional GET is defined in which RFC?",
+          options: ["RFC 7232", "RFC 1945", "RFC 6265", "RFC 7540"],
+          correct: 0,
+          translation: "الـ conditional GET متعرف في RFC كام؟",
+          explanation:
+            "RFC 7232. RFC 6265 لـ cookies، RFC 7540 لـ HTTP/2، RFC 1945 لـ HTTP/1.0.",
+          tags: ["Conditional GET", "RFC"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET)",
+          likely: "medium",
+        },
+        {
+          q: "63. How many parallel TCP connections do many HTTP/1.1 browsers typically open?",
+          options: ["Up to two", "Up to ten", "Up to one hundred", "Up to six"],
+          correct: 3,
+          translation: "كم TCP connection متوازي بيفتح HTTP/1.1 browser؟",
+          explanation:
+            "لـ 6 parallel TCP connections. عشان يتجاوزوا HOL ويـ grab أكتر bandwidth.",
+          tags: ["HTTP/2", "HTTP/1.1", "Parallel connections"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6",
+          likely: "medium",
+        },
+        {
+          q: "64. As of 2020, HTTP/3 was described in what status?",
+          options: [
+            "Internet drafts, not yet fully standardized",
+            "Proprietary to Google only",
+            "Already obsolete",
+            "Fully standardized RFC",
+          ],
+          correct: 0,
+          translation: "حتى 2020، HTTP/3 كان في أيه status؟",
+          explanation:
+            "Internet drafts — لسه مش متـ standardize بالكامل. مش RFC نهائي، ولا obsolete، ولا proprietary.",
+          tags: ["HTTP/3", "Status"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. Define cookies and explain why HTTP uses them despite the server being stateless.",
+          translation:
+            "عرّف cookies واشرح ليه HTTP بيستخدمها رغم إن السيرفر stateless.",
+          answer:
+            "HTTP is a stateless protocol: the HTTP server maintains no information about clients, which simplifies server design and allows high-performance Web servers to handle thousands of simultaneous TCP connections.\nHowever, it is often desirable for a Web site to identify users, either to restrict user access or to serve content as a function of the user identity.\nFor these purposes, HTTP uses cookies (defined in RFC 6265).\nCookies allow sites to keep track of users — most major commercial Web sites use cookies today.\nSo cookies add per-user state on top of the otherwise-stateless HTTP protocol, while keeping the core protocol simple.",
+          tags: ["Cookies", "Stateless", "Definition"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. List the four components of cookie technology and briefly explain the role of each.",
+          translation:
+            "اكتب المكونات الأربعة لتقنية cookies واشرح دور كل واحد باختصار.",
+          answer:
+            "Cookie technology has four components (Figure 2.10):\n1. A cookie header line in the HTTP response message — the server sends this to give the browser a unique identification number (e.g., Set-cookie: 1678).\n2. A cookie header line in the HTTP request message — the browser sends this back to the server on subsequent requests so the server can identify the user (e.g., Cookie: 1678).\n3. A cookie file kept on the user's end system and managed by the user's browser — stores the hostname and the identification number for each site the user has visited.\n4. A back-end database at the Web site — indexed by the identification number, it stores per-user information (visited pages, shopping cart, registration data, etc.).",
+          tags: ["Cookies", "Components"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (Figure 2.10)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Walk through the Susan/Amazon example to illustrate how cookies work.",
+          translation: "اتمم مثال Susan/Amazon عشان توضح إزاي cookies بتشتغل.",
+          answer:
+            "1. Susan contacts Amazon.com for the first time from her home PC using Internet Explorer; suppose she has previously visited eBay.\n2. When the request reaches the Amazon Web server, the server creates a unique identification number (e.g., 1678) and creates an entry in its back-end database indexed by that number.\n3. The Amazon server responds with an HTTP response containing a Set-cookie: 1678 header.\n4. Susan's browser receives the response, sees the Set-cookie: header, and appends a line to its cookie file including the Amazon hostname and the number 1678 (the file already has an eBay entry from her past visit).\n5. As Susan continues browsing Amazon, each subsequent request includes the header line Cookie: 1678, allowing Amazon to track which pages user 1678 visited, in which order, and at what times.\n6. Amazon uses this for its shopping cart service (collecting purchases for later combined checkout) and for product recommendations.\n7. If Susan registers (name, e-mail, address, credit card), Amazon associates that information with the number 1678 in its database — enabling 'one-click shopping'.\n8. When Susan returns a week later, her browser still sends Cookie: 1678, so Amazon can identify her again.",
+          tags: ["Cookies", "Example"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (Susan/Amazon example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Discuss the privacy concerns associated with cookies.",
+          translation: "ناقش المخاوف الـ privacy المرتبطة بـ cookies.",
+          answer:
+            "Although cookies often simplify the Internet shopping experience for the user, they are controversial because they can also be considered as an invasion of privacy.\nUsing a combination of cookies and user-supplied account information, a Web site can learn a lot about a user — including which pages were visited, in what order, at what times, plus full name, e-mail address, postal address, and credit card information if the user registered.\nThe site can then potentially sell this information to a third party.\nEven without explicit registration, a site that combines cookies across visits can build a detailed profile of user behavior and interests.\nThis is the core of the privacy debate: cookies are technically just an identification mechanism, but the data they enable to be collected is what raises the privacy concern.",
+          tags: ["Cookies", "Privacy"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.4 (privacy paragraph)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Define a Web cache (proxy server) and describe the four steps of how it handles a browser request.",
+          translation:
+            "عرّف الـ Web cache (proxy server) ووصّف الخطوات الأربعة لإزاي بيتعامل مع طلب browser.",
+          answer:
+            "A Web cache — also called a proxy server — is a network entity that satisfies HTTP requests on the behalf of an origin Web server. The Web cache has its own disk storage and keeps copies of recently requested objects.\nSteps when a browser requests an object (e.g., www.someschool.edu/campus.gif):\n1. The browser establishes a TCP connection to the Web cache and sends an HTTP request for the object to the Web cache.\n2. The Web cache checks if it has a copy of the object stored locally. If it does, the Web cache returns the object within an HTTP response message to the client browser.\n3. If the Web cache does NOT have the object, the Web cache opens a TCP connection to the origin server, sends an HTTP request for the object, and the origin server sends the object back to the cache in an HTTP response.\n4. When the Web cache receives the object, it stores a copy in its local storage and sends a copy, within an HTTP response message, to the client browser (over the existing TCP connection between the client and the cache).",
+          tags: ["Web Caching", "Steps"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (4 steps)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Explain why a Web cache can act as both a server and a client at the same time.",
+          translation:
+            "اشرح ليه الـ Web cache يقدر يشتغل كـ server و client في نفس الوقت.",
+          answer:
+            "A Web cache plays two roles depending on which side it is talking to:\n- When it receives requests from a browser and sends responses back to the browser, it acts as a server.\n- When it sends requests to the origin server and receives responses from the origin server, it acts as a client.\nThese two roles are interleaved within a single user request: first the cache is a server toward the browser, then (on a cache miss) it becomes a client toward the origin server, and finally it is again a server toward the browser when delivering the object.\nThis dual role is exactly what allows the cache to satisfy the browser's request without the browser having to talk to the origin server directly.",
+          tags: ["Web Caching", "Server/Client"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. State the two main reasons Web caching has been deployed in the Internet.",
+          translation:
+            "اكتب السببين الأساسيين لـ deployment الـ Web caching في الإنترنت.",
+          answer:
+            "Web caching has been deployed for two main reasons:\n1. Reduced response time for client requests — particularly when the bottleneck bandwidth between the client and the origin server is much less than the bottleneck bandwidth between the client and the cache. If there is a high-speed connection between the client and the cache and the cache has the requested object, the cache can deliver the object rapidly.\n2. Reduced traffic on an institution's access link to the Internet — by reducing traffic, the institution does not have to upgrade bandwidth as quickly, reducing costs. Furthermore, Web caches can substantially reduce Web traffic in the Internet as a whole, improving performance for all applications.",
+          tags: ["Web Caching", "Benefits"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (two reasons)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Define a conditional GET and list the two conditions that make an HTTP request a conditional GET.",
+          translation:
+            "عرّف الـ conditional GET واكتب الشرطين اللي بيخلوها conditional GET.",
+          answer:
+            "A conditional GET is an HTTP mechanism that allows a cache to verify that its cached objects are up to date without re-downloading the full object if it has not changed.\nAn HTTP request message is a conditional GET if BOTH:\n1. The request message uses the GET method.\n2. The request message includes an If-Modified-Since: header line.\nIf the object has not been modified since the specified date, the server returns a 304 Not Modified response with an empty entity body, telling the cache that its local copy is still valid. This saves bandwidth and reduces user-perceived response time, especially for large objects.",
+          tags: ["Conditional GET", "Definition"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Walk through the conditional GET example with the kiwi.gif object.",
+          translation: "اتمم مثال الـ conditional GET مع object الـ kiwi.gif.",
+          answer:
+            "First, on behalf of a requesting browser, the proxy cache sends a request to the Web server:\n  GET /fruit/kiwi.gif HTTP/1.1\n  Host: www.exotiquecuisine.com\n\nSecond, the Web server responds with the object plus a Last-Modified: header:\n  HTTP/1.1 200 OK\n  Last-Modified: Wed, 9 Sep 2015 09:23:24\n  Content-Type: image/gif\n  (data ...)\nThe cache forwards the object to the browser but also stores it locally along with the Last-Modified date.\n\nThird, one week later, another browser requests the same object via the cache and the object is still in the cache. The cache issues a conditional GET:\n  GET /fruit/kiwi.gif HTTP/1.1\n  Host: www.exotiquecuisine.com\n  If-modified-since: Wed, 9 Sep 2015 09:23:24\nThe value of If-Modified-Since is exactly the Last-Modified value the server sent one week ago.\n\nFourth, if the object has NOT been modified since 9 Sep 2015 09:23:24, the server responds:\n  HTTP/1.1 304 Not Modified\n  (empty entity body)\nThe 304 status tells the cache it can go ahead and forward its cached copy to the requesting browser. The object itself is not re-sent, saving bandwidth.",
+          tags: ["Conditional GET", "Example"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Conditional GET example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the Head of Line (HOL) blocking problem in HTTP/1.1 and how HTTP/1.1 browsers work around it.",
+          translation:
+            "اشرح مشكلة الـ Head of Line blocking في HTTP/1.1 وإزاي browsers بيتعاملوا معاها.",
+          answer:
+            "HOL blocking arises because HTTP/1.1 uses persistent TCP connections, sending all objects of a Web page over a single TCP connection.\nConsider a Web page with an HTML base page, a large video clip near the top, and many small objects below the video. With a low-to-medium speed bottleneck link on the path between server and client, the video clip takes a long time to pass through the bottleneck link, while the small objects behind it must wait — the video clip at the head of the line blocks the small objects behind it.\n\nHTTP/1.1 browsers typically work around this by opening multiple parallel TCP connections, sending objects in parallel. This way the small objects can arrive and render faster, reducing user-perceived delay.\nTCP congestion control gives browsers an unintended incentive for this: roughly, n TCP connections sharing a bottleneck each get 1/n of the bandwidth, so opening more connections lets a browser grab a larger portion. Many HTTP/1.1 browsers open up to six parallel TCP connections — both to circumvent HOL blocking and to obtain more bandwidth.",
+          tags: ["HTTP/2", "HTTP/1.1", "HOL blocking"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HOL blocking)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain the primary goals of HTTP/2 and what HTTP/2 does NOT change.",
+          translation: "اشرح أهداف HTTP/2 الأساسية وإيه اللي ما بياخدش.",
+          answer:
+            "The primary goals of HTTP/2 are:\n1. Reduce perceived latency by enabling request and response multiplexing over a single TCP connection.\n2. Provide request prioritization.\n3. Provide server push.\n4. Provide efficient compression of HTTP header fields.\n\nWhat HTTP/2 does NOT change:\n- HTTP methods (GET, POST, HEAD, PUT, DELETE, etc.) — same as before.\n- Status codes (200, 301, 404, 505, etc.) — same as before.\n- URLs — same as before.\n- Header fields — same as before.\nInstead, HTTP/2 changes how the data is formatted and transported between the client and server (framing + interleaving + binary encoding). This keeps existing HTTP applications compatible while improving performance.",
+          tags: ["HTTP/2", "Goals", "Compatibility"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (primary goals paragraph)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain HTTP/2 framing and how interleaving solves HOL blocking.",
+          translation:
+            "اشرح HTTP/2 framing وإزاي interleaving بيحل مشكلة HOL blocking.",
+          answer:
+            "HTTP/2's solution for HOL blocking is to break each HTTP message into small frames and interleave the request and response messages on the same TCP connection.\nExample: a Web page with one large video clip (1000 frames) and 8 smaller objects (2 frames each). The server receives 9 concurrent requests and needs to send 9 competing responses.\nWith frame interleaving: after sending one frame of the video clip, the first frame of each of the 8 small objects is sent; then the second frame of the video clip, then the second (last) frame of each small object. So all 8 small objects are fully sent after only 18 frames total.\nWithout interleaving, the smaller objects would only be sent after sending 1016 frames (1000 video + 16 small-objects), so the user would wait much longer to see any of the small objects render.\nThe framing sublayer also binary-encodes the frames — binary protocols are more efficient to parse, lead to slightly smaller frames, and are less error-prone.\nThis ability to break down an HTTP message into independent frames, interleave them, and reassemble them on the other end is the single most important enhancement of HTTP/2.",
+          tags: ["HTTP/2", "Framing", "Interleaving"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/2 Framing)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. Explain HTTP/2 response prioritization.",
+          translation: "اشرح HTTP/2 response prioritization.",
+          answer:
+            "Message prioritization allows developers to customize the relative priority of requests to better optimize application performance.\nThe framing sub-layer organizes messages into parallel streams of data destined to the same requestor.\nWhen a client sends concurrent requests to a server, it can prioritize the responses it is requesting by assigning a weight between 1 and 256 to each message. A higher number indicates higher priority.\nUsing these weights, the server can send first the frames for the responses with the highest priority, so that the most important content reaches the user as early as possible.",
+          tags: ["HTTP/2", "Prioritization"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Response Message Prioritization)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. Explain HTTP/2 server push and how it reduces latency.",
+          translation: "اشرح HTTP/2 server push وإزاي بيقلل latency.",
+          answer:
+            "Server push is an HTTP/2 feature that allows a server to send multiple responses for a single client request. In addition to the response to the original request, the server can push additional objects to the client without the client having to request each one.\nThis is possible because the HTML base page indicates the objects that will be needed to fully render the Web page. Instead of waiting for HTTP requests for these objects, the server analyzes the HTML page, identifies the objects that are needed, and sends them to the client before receiving explicit requests for them.\nServer push eliminates the extra latency that would be caused by waiting for the requests to arrive — the user's browser can start rendering the additional objects as soon as they are pushed, without first having to issue and wait for separate requests.",
+          tags: ["HTTP/2", "Server push"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (Server Push)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "15. Explain HTTP/3 and QUIC, and how HTTP/3 differs from HTTP/2.",
+          translation: "اشرح HTTP/3 و QUIC، وإزاي HTTP/3 بيختلف عن HTTP/2.",
+          answer:
+            "HTTP/3 is a new HTTP protocol designed to operate over QUIC. As of 2020, HTTP/3 was described in Internet drafts and had not yet been fully standardized.\nQUIC is a new 'transport' protocol that is implemented in the application layer over the bare-bones UDP protocol (i.e., not in the OS transport layer like TCP).\nQUIC has several features that are desirable for HTTP:\n- Message multiplexing (interleaving) — like HTTP/2's interleaving but at the transport level.\n- Per-stream flow control.\n- Low-latency connection establishment.\nBecause QUIC subsumes many of the HTTP/2 features (such as message interleaving), HTTP/3 can have a simpler, streamlined design — much of what HTTP/2 had to do at the application layer is handled by QUIC at the transport layer. HTTP/3 over QUIC also avoids TCP's head-of-line blocking problem.",
+          tags: ["HTTP/3", "QUIC"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (HTTP/3)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "16. Compare HTTP/1.1, HTTP/2, and HTTP/3 in terms of transport protocol and key features.",
+          translation:
+            "قارن HTTP/1.1 و HTTP/2 و HTTP/3 من حيث بروتوكول النقل والميزات الأساسية.",
+          answer:
+            "HTTP/1.1 (RFC 7230, standardized 1997):\n- Transport: TCP.\n- Persistent connections by default.\n- Pipelining allowed but rarely used because of HOL blocking.\n- Browsers typically open multiple parallel TCP connections (up to ~6) to circumvent HOL blocking and to grab more bandwidth.\n\nHTTP/2 (RFC 7540, standardized 2015):\n- Transport: TCP.\n- Same methods, status codes, URLs, and headers as HTTP/1.1.\n- Framing + interleaving on a single TCP connection to solve HOL blocking.\n- Binary-encoded frames (more efficient parsing, smaller frames, less error-prone).\n- Response prioritization (weight 1–256).\n- Server push.\n- Header compression (HPACK).\n\nHTTP/3 (over QUIC, drafts as of 2020):\n- Transport: QUIC over UDP (application-layer transport).\n- Solves TCP-level HOL blocking by using QUIC streams.\n- Per-stream flow control and low-latency connection establishment.\n- Encryption built into QUIC by default.\n- Simpler design than HTTP/2 because many HTTP/2 features (e.g., interleaving) are subsumed by QUIC.",
+          tags: ["HTTP/1.1", "HTTP/2", "HTTP/3", "Comparison"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (whole)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "1. Compare the two solutions to the institutional network bottleneck problem: upgrading the access link vs installing a Web cache.",
+          translation:
+            "قارن بين حلّين لمشكلة الـ bottleneck في الشبكة المؤسسية: ترقية الـ access link مقابل install Web cache.",
+          answer:
+            "Setup: institutional LAN (high-speed), 15 Mbps access link to the Internet, average object size 1 Mbits, request rate 15 req/s, Internet delay 2 seconds.\nWithout any change, traffic intensity on access link = 15*1/15 = 1.0, so delay on the link grows without bound and average response time is on the order of minutes.\n\nSolution 1 — Upgrade access link to 100 Mbps:\n- Traffic intensity drops to 0.15 (negligible delay).\n- Total response time ≈ Internet delay ≈ 2 seconds.\n- Cost: institution must pay to upgrade the access link (expensive).\n\nSolution 2 — Install a Web cache (no link upgrade):\n- Cache hit rate 0.4: 40% of requests satisfied in ~10 ms by the cache (over the high-speed LAN).\n- The remaining 60% go to origin servers, so traffic intensity on access link drops from 1.0 to 0.6 (small delay, tens of milliseconds).\n- Average delay = 0.4 * 0.01 + 0.6 * 2.01 ≈ 1.21 seconds.\n- Cost: only the cost of purchasing and installing a Web cache (low).\n\nConclusion: Solution 2 gives an even lower response time (1.21 s vs ~2 s) at a much lower cost — caching wins on both metrics.",
+          tags: ["Web Caching", "Comparison", "Calculation reasoning"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12/2.13 example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. (Calculation) Compute the average response time for the institutional network example with a Web cache hit rate of 0.4. Given: cache hit delay ≈ 0.01 s (10 ms) for 40% of requests, miss delay ≈ 2.01 s (2 s Internet delay + small access-link delay) for 60% of requests.",
+          translation:
+            "(مسألة) احسب إجمالي average response time في مثال المؤسسة مع hit rate 0.4. المعطيات: cache hit delay ≈ 0.01 s لـ 40% من الطلبات، miss delay ≈ 2.01 s لـ 60% من الطلبات.",
+          answer:
+            "Given:\n- Cache hit rate = 0.4 (40% of requests).\n- Cache hit delay ≈ 0.01 s (objects served locally over the high-speed LAN).\n- Cache miss rate = 0.6 (60% of requests still go to the origin server).\n- Cache miss delay ≈ 2.01 s (small access-link delay + 2 s Internet delay).\n\nFormula: Average response time = (hit rate * hit delay) + (miss rate * miss delay).\n\nCalculation:\nAverage response time = 0.4 * 0.01 + 0.6 * 2.01\n                     = 0.004 + 1.206\n                     = 1.21 seconds.\n\nAnswer: about 1.21 seconds (slightly greater than 1.2 s).\n\nComparison: with the no-cache solution the access link intensity is 1.0 → delay grows without bound → on the order of minutes; with the upgrade-to-100 Mbps solution the total is ~2 s. So the cache solution is faster AND cheaper.",
+          tags: ["Calculation", "Web Caching", "Hit rate"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12/2.13 example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. (Calculation) Compute the traffic intensity on the access link in the institutional example if the cache hit rate is 0.4. Given: 15 requests/s, 1 Mbits per object, 15 Mbps access link.",
+          translation:
+            "(مسألة) احسب الـ traffic intensity على الـ access link لو hit rate = 0.4. المعطيات: 15 req/s، 1 Mbits/object، 15 Mbps access link.",
+          answer:
+            "Given:\n- Request rate = 15 requests/s.\n- Average object size = 1 Mbits.\n- Access link rate = 15 Mbps.\n- Cache hit rate = 0.4 → 40% served by cache (do not use access link), 60% go to origin (use access link).\n\nWithout cache:\nTraffic intensity = (15 req/s * 1 Mbits/req) / 15 Mbps = 15 / 15 = 1.0.\n\nWith cache hit rate 0.4, only 60% of requests traverse the access link:\nEffective request rate on access link = 0.6 * 15 = 9 req/s.\nTraffic intensity = (9 req/s * 1 Mbits/req) / 15 Mbps = 9 / 15 = 0.6.\n\nAnswer: 0.6 — a traffic intensity less than 0.8 corresponds to a small delay (tens of milliseconds), which is negligible compared with the 2-second Internet delay.",
+          tags: ["Calculation", "Web Caching", "Traffic intensity"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12/2.13 example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. (Calculation) In the HTTP/2 framing example, compare the number of frames needed to send all 8 small objects (2 frames each) before sending the large video (1000 frames): (a) with interleaving, (b) without interleaving.",
+          translation:
+            "(مسألة) في مثال framing: 8 small objects (كل واحد 2 frames) + فيديو 1000 frames. قارن كام frames لازم عشان كل small objects تتبعت: (a) مع interleaving، (b) من غير interleaving.",
+          answer:
+            "Given:\n- 1 large video clip = 1000 frames.\n- 8 small objects, each = 2 frames (total 16 frames for the small objects).\n- All frames are of fixed length.\n\n(a) With interleaving:\nStep 1: send 1 frame of the video.\nStep 2: send the FIRST frame of each of the 8 small objects (8 frames).\nStep 3: send the SECOND frame of the video.\nStep 4: send the LAST frame of each of the 8 small objects (8 frames).\nTotal frames sent before ALL small objects are completely sent = 1 + 8 + 1 + 8 = 18 frames.\n\n(b) Without interleaving (sequential):\nAll 1000 video frames must be sent first, then the 8 small objects' frames are sent.\nTotal frames before all small objects are sent = 1000 (video) + 16 (small objects) = 1016 frames.\n\nAnswer: 18 frames with interleaving vs 1016 frames without interleaving. HTTP/2 framing decreases user-perceived delay by roughly 1016 / 18 ≈ 56× for the small objects in this example.",
+          tags: ["Calculation", "HTTP/2", "Framing", "Interleaving"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.6 (framing example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. (Calculation) An institution has a 15 Mbps access link, request rate 15 req/s, object size 1 Mbits, Internet delay 2 s. Estimate the average response time if the cache hit rate is 0.6 (instead of 0.4) and the cache hit delay is 0.01 s.",
+          translation:
+            "(مسألة) مؤسسة معها 15 Mbps access link، 15 req/s، 1 Mbits/object، Internet delay 2 s. احسب average response time لو hit rate = 0.6 (بدل 0.4) و cache hit delay = 0.01 s.",
+          answer:
+            "Given:\n- Access link rate = 15 Mbps.\n- Request rate = 15 req/s.\n- Object size = 1 Mbits.\n- Internet delay = 2 s.\n- Cache hit rate = 0.6.\n- Cache hit delay = 0.01 s.\n- Cache miss rate = 0.4.\n\nStep 1 — Traffic intensity on access link with cache:\nOnly 40% of requests traverse the access link:\nEffective request rate on access link = 0.4 * 15 = 6 req/s.\nTraffic intensity = (6 * 1) / 15 = 0.4 (well below 0.8 → small delay, tens of ms).\n\nStep 2 — Miss delay ≈ access-link delay (small, say 0.01 s) + Internet delay (2 s) ≈ 2.01 s.\n\nStep 3 — Average response time = hit rate * hit delay + miss rate * miss delay\n= 0.6 * 0.01 + 0.4 * 2.01\n= 0.006 + 0.804\n= 0.81 seconds.\n\nAnswer: about 0.81 seconds.\n\nComparison: with hit rate 0.4 the average was ~1.21 s; raising the hit rate to 0.6 brings the average down to ~0.81 s — a 33% improvement. This shows why improving cache hit rate directly improves user-perceived response time.",
+          tags: ["Calculation", "Web Caching", "Hit rate"],
+          ref: "Lecture 6 (Ch 2, Lec 3) — Section 2.2.5 (Figure 2.12/2.13 example, variant)",
+          likely: "high",
         },
       ],
     },
