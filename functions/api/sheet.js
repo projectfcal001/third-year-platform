@@ -158,7 +158,14 @@ export async function onRequest(context) {
 
   try {
     const sheetUrl = `https://docs.google.com/spreadsheets/d/e/${encodeURIComponent(pub)}/pub?gid=${encodeURIComponent(gid)}&single=true&output=csv`;
-    const r = await fetch(sheetUrl, { signal: AbortSignal.timeout(8000) });
+   
+const r = await fetch(sheetUrl, {
+  headers: {
+    "User-Agent":
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  },
+  signal: AbortSignal.timeout(10000),
+});   
     if (!r.ok) throw new Error("upstream " + r.status);
 
     const { items, warnings } = build(tab, await r.text());
