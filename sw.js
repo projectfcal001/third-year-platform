@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1793229831603";
+const VERSION = "v1793233790353";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -79,7 +79,7 @@ async function networkFirst(request, isPage) {
       if (page) return page;
     }
     return new Response(
-      "📴 لا يوجد اتصال بالإنترنت — والصفحة دي مش متخزنة بعد",
+      "📴 مفيش اتصال بالإنترنت، والصفحة دي لسه ماتفتحتش على جهازك — ممكن تفتحها تاني لما النت يرجع",
       {
         status: 503,
         headers: { "Content-Type": "text/plain; charset=utf-8" },

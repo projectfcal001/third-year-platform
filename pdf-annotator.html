@@ -695,12 +695,12 @@
     }
     if(maxImportedPage > numPages){
       var ok = window.confirm(
-        "⚠️ الملف المحلي فيه تعديلات على " + maxImportedPage + " صفحة،\n" +
+        "⚠️ الملف اللي اخترته فيه تعديلات على " + maxImportedPage + " صفحة،\n" +
         "بينما الملف المفتوح فيه " + numPages + " صفحة بس.\n\n" +
         "التعديلات على الصفحات الزيادة هتتجاهل.\n\n" +
-        "عايز تكمّل؟"
+        "هتكمّل؟"
       );
-      if(!ok) return { success: false, error: "اتلغى بواسطة المستخدم" };
+      if(!ok) return { success: false, error: "اتلغى النقل" };
     }
     strokesByPage = {};
     redoByPage = {};
@@ -951,7 +951,7 @@
     const blob = new Blob([pdfBytes],{type:"application/pdf"});
     const url = URL.createObjectURL(blob);
     const w = window.open(url,"_blank");
-    if(!w) toast("المتصفح حجب النافذة");
+    if(!w) toast("المتصفح منع فتح النافذة — ممكن تسمح بالنوافذ المنبثقة وتجرّب تاني");
     setTimeout(()=>{ try{URL.revokeObjectURL(url);}catch(e){} },60000);
   });
   function fsActive(){ return !!(document.fullscreenElement||document.webkitFullscreenElement); }
@@ -1984,8 +1984,8 @@
         window.open(urls[act], "_blank", "noopener,noreferrer");
         const direct = (act === "ai-claude" || act === "ai-chatgpt");
         if(direct) toast("تم إرسال النص للشات ✓");
-        else if(copied) toast("تم نسخ النص ✓ — الصقيه في الشات (Ctrl+V)");
-        else toast("تعذّر النسخ التلقائي — حدّدي النص وانسخيه بـ Ctrl+C");
+        else if(copied) toast("تم نسخ النص ✓ — تقدر تلصقه في الشات (Ctrl+V)");
+        else toast("تعذّر النسخ التلقائي — ممكن تحدد النص وتنسخه بـ Ctrl+C");
         hideContextMenu(); break;
       }
       case "highlight": {
@@ -3226,7 +3226,7 @@
     "حذف كل التعديلات (مع حفظ نسخة احتياطية أولاً)":"Delete all edits (a backup is saved first)",
     /* رسائل */
     "تم":"Done","تم الحفظ ✓":"Saved ✓","تم التظليل ✓":"Highlighted ✓","تم التسطير ✓":"Underlined ✓","تم الشطب ✓":"Struck through ✓","تم النسخ ✓":"Copied ✓","تم نسخ النص ✓":"Text copied ✓",
-    "تعذّر النسخ":"Copy failed","تم إرسال النص للشات ✓ (ومنسوخ احتياطياً)":"Text sent to chat ✓ (also copied as backup)","تم نسخ النص ✓ — الصقيه في الشات (Ctrl+V)":"Text copied ✓ — paste it in the chat (Ctrl+V)",
+    "تعذّر النسخ":"Copy failed","تم إرسال النص للشات ✓ (ومنسوخ احتياطياً)":"Text sent to chat ✓ (also copied as backup)","تم نسخ النص ✓ — تقدر تلصقه في الشات (Ctrl+V)":"Text copied ✓ — paste it in the chat (Ctrl+V)",
     "جاري التحميل...":"Loading...","جاري الحفظ...":"Saving...","جاري فتح الملف...":"Opening file...","جاري تحميل الملف...":"Loading file...","جاري إنشاء ملف PDF...":"Creating PDF...",
     "جاري حفظ نسخة احتياطية...":"Saving a backup...","جاهز":"Ready","جاهز — التعديلات مسترجعة":"Ready — edits restored","تم حذف العنصر ✓":"Item deleted ✓","تم حذف النص":"Text deleted",
     "تم تحديث النص ✓":"Text updated ✓","تمت إضافة النص — يمكنك سحبه الآن":"Text added — you can drag it now","تم تحميل تعليقاتك السابقة":"Your previous annotations were loaded",
