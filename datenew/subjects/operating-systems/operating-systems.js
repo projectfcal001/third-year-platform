@@ -2789,5 +2789,1395 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "os-lecture-04",
+      t: "المحاضرة 4 (Chapter 3, Lec 2): Processes - Interprocess Communication (IPC)",
+      d: "بنك أسئلة شامل لمحاضرة IPC (Lecture 4 - Chapter 3, Lec 2) في مادة نظم التشغيل: مشكلة المنتج-المستهلك، الاتصال المباشر وغير المباشر، التزامن، التخزين المؤقت، Sockets، RPC، RMI، وتسلسل المعاملات (Marshalling).",
+      pdf: "datenew/subjects/operating-systems/lectures/lec 4/ch3 Processes-lec 4 .pdf",
+      pdf2: "/datenew/subjects/operating-systems/questions/Questions on each lecture/Lecture-04-Questions.pdf",
+      // المحاضرة 4 (Chapter 3, Lec 2): Processes — Interprocess Communication (IPC)
+      // مادة نظم التشغيل (Operating Systems) — الموضوع الرئيسي: IPC, Message Passing, Sockets, RPC, RMI
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمفاهيم IPC و RPC و Sockets اللي بتغطيها المحاضرة.",
+          links: [
+            {
+              t: "شرح Remote Procedure Call (RPC) للشبكات وأنظمة التشغيل الموزعة",
+              d: "فيديو بالعربي بيشرح مفهوم استدعاء الإجراءات عن بعد (RPC) ومرتبط مباشرة بموضوع RPC و Marshalling في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=uftFUtVCQqI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: شرح Interprocess Communication IPC",
+              d: "بحث في يوتيوب بيطلع فيديوهات عربية بشرح IPC ومشكلة المنتج-المستهلك والـ message passing. ده رابط بحث مش فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=شرح+Interprocess+Communication+IPC+أنظمة+تشغيل",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: شرح Socket برمجة شبكات",
+              d: "بحث في يوتيوب بيطلع فيديوهات عربية بشرح الـ socket و الـ IP:Port اللي بتغطيه شريحة Sockets. ده رابط بحث مش فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=شرح+Socket+برمجة+شبكات+IP+Port",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات بالإنجليزي بشرح عميق لمفاهيم IPC و Sockets و RPC و RMI.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: Interprocess Communication IPC tutorial",
+              d: "بحث في يوتيوب بيطلع فيديوهات عالمية (GeeksforGeeks, Neso Academy, وغيرهم) بشرح IPC، Message Passing، Direct/Indirect communication، و Buffering. ده رابط بحث مش فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=Interprocess+Communication+IPC+tutorial+operating+system",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Socket programming networking tutorial",
+              d: "بحث في يوتيوب بيطلع فيديوهات عالمية بشرح الـ Socket كـ endpoint للاتصال (IP + Port) وكيفية إنشاء pair of sockets للتواصل. ده رابط بحث مش فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=socket+programming+networking+tutorial+IP+port",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Remote Procedure Call RPC explained",
+              d: "بحث في يوتيوب بيطلع فيديوهات عالمية بشرح RPC والـ stubs و Marshalling و كيفية عمل client-side و server-side stub. ده رابط بحث مش فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=Remote+Procedure+Call+RPC+explained+stub+marshalling",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Java RMI Remote Method Invocation tutorial",
+              d: "بحث في يوتيوب بيطلع فيديوهات عالمية بشرح RMI كآلية Java شبه RPC، وكيفية استدعاء method على remote object. ده رابط بحث مش فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=Java+RMI+Remote+Method+Invocation+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر تعليمية موثوقة بشرح مفصل لمفاهيم المحاضرة: IPC، Stub Generation، Sockets، RMI.",
+          links: [
+            {
+              t: "Inter Process Communication (IPC) - GeeksforGeeks",
+              d: "مقال شامل بيشرح IPC كآلية للتواصل والتزامن بين العمليات، مرورًا بـ Message Passing ومشكلة المنتج-المستهلك والأنواع الكلاسيكية للمشاكل المتعلقة بـ IPC.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Methods in Inter Process Communication - GeeksforGeeks",
+              d: "مقال بيشرح طرق IPC المختلفة: Shared Memory، Message Passing، Pipes، Sockets، Semaphores، Message Queues، مع شرح كل طريقة وعلاقتها بمحتوى المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.geeksforgeeks.org/operating-systems/methods-in-interprocess-communication/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Stub Generation in Distributed System - GeeksforGeeks",
+              d: "مقال بيركز على الـ stubs في أنظمة RPC: شرح الـ client-side stub والـ server-side stub، عملية Marshalling و Unmarshalling للمعاملات، و دور Interface Definition Language (IDL). مرتبط مباشرة بشريحة RPC.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.geeksforgeeks.org/computer-networks/stub-generation-in-distributed-system/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Network socket - Wikipedia",
+              d: "مقال موسوعي بشرح الـ Network socket كـ endpoint للاتصال، وتكوينه من IP address + port number، وأنواع الـ sockets (Datagram, Stream, Raw). مرتبط مباشرة بشريحة Sockets والمثال 161.25.19.8:1625.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://en.wikipedia.org/wiki/Network_socket",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات وبرامج محاكاة بتساعدك تفهم وترى عمليًا كيفية تواصل العمليات وتبادل الرسائل عبر الشبكة.",
+          links: [
+            {
+              t: "Cisco Packet Tracer - Networking Simulation Tool",
+              d: "أداة محاكاة شبكات مجانية من Cisco، بتسمح ببناء شبكات افتراضية ومتابعة تبادل الرسائل والـ sockets بين الأجهزة. مرتبط بمفاهيم Client-Server Communication و Sockets.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.netacad.com/courses/getting-started-cisco-packet-tracer",
+                  type: "download",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Wireshark - Network Protocol Analyzer",
+              d: "أداة مفتوحة المصدر لتحليل حركة الشبكة، بتقدر تتابع بيها الـ packets المتبادلة بين الـ sockets وتشوف عمليًا كيفية التواصل بين client و server.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org/download.html",
+                  type: "download",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Java RMI Official Documentation - Oracle",
+              d: "الوثائق الرسمية لـ Java RMI من Oracle، فيها شرح وخطوات تنفيذ لاستدعاء method على remote object. مفيد جدًا لفهم شريحة RMI وتطبيق المفاهيم عمليًا.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://docs.oracle.com/en/java/javase/17/rmi/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ============== MCQ - High Priority ==============
+        {
+          q: "1. The Producer-Consumer problem is a paradigm for which of the following?",
+          options: [
+            "Competing processes that fight over CPU time",
+            "Cooperating processes where a producer produces information consumed by a consumer",
+            "Processes that share the same source code file",
+            "Processes running on different operating systems without any interaction",
+          ],
+          correct: 1,
+          translation: "مشكلة المنتج-المستهلك هي نموذج لأي مما يلي؟",
+          explanation:
+            "الصحيح هو الخيار الثاني لأن المشكلة بتعبر عن عمليتين بتتعاونوا: واحدة بتنتج بيانات والتانية بتستهلكها عبر buffer مشترك. الخيارات التانية غلط لأن المشكلة مش عن تنافس على CPU ولا مشاركة كود ولا عمليات معزولة.",
+          tags: ["Producer-Consumer", "Cooperating Processes"],
+          ref: "Lecture 4 — Slide 26 (Producer-Consumer Problem)",
+          likely: "high",
+        },
+        {
+          q: "2. In a bounded-buffer solution, when must the producer wait?",
+          options: [
+            "When the buffer is empty",
+            "When the buffer is full",
+            "When the consumer is slower than the producer",
+            "When the buffer size is unlimited",
+          ],
+          correct: 1,
+          translation: "في حل الـ bounded-buffer، متى يجب على المنتج أن ينتظر؟",
+          explanation:
+            "المنتج لازم ينتظر لما الـ buffer يكون ممتلئ لأن مفيش مساحة فاضية يكتب فيها. أما الـ buffer الفاضي فمش سبب للمنتج (ده سبب للمستهلك ينتظر). وكون الـ consumer أبطأ مش شرط وحده للانتظار، والـ bounded buffer حجمه محدود مش غير محدود.",
+          tags: ["Bounded Buffer", "Producer-Consumer"],
+          ref: "Lecture 4 — Slide 26 (Producer-Consumer Problem)",
+          likely: "high",
+        },
+        {
+          q: "3. In a bounded-buffer solution, when must the consumer wait?",
+          options: [
+            "When the buffer is full",
+            "When the producer has finished",
+            "When the buffer is empty",
+            "When the buffer is unbounded",
+          ],
+          correct: 2,
+          translation:
+            "في حل الـ bounded-buffer، متى يجب على المستهلك أن ينتظر؟",
+          explanation:
+            "المستهلك لازم ينتظر لما الـ buffer يكون فاضي لأن مفيش حاجة يستهلكها. الـ buffer الممتلئ مش مشكلة للمستهلك (دي مشكلة المنتج). والـ producer خلص مش معناه إن الـ buffer فاضي، والـ unbounded buffer مش شرط يخلي المستهلك ينتظر.",
+          tags: ["Bounded Buffer", "Producer-Consumer"],
+          ref: "Lecture 4 — Slide 26 (Producer-Consumer Problem)",
+          likely: "high",
+        },
+        {
+          q: "4. Interprocess Communication (IPC) is defined as:",
+          options: [
+            "A mechanism for processes to communicate and synchronize their actions",
+            "A technique to share CPU time between processes",
+            "A method to allocate memory to processes",
+            "A way to schedule processes in a round-robin fashion",
+          ],
+          correct: 0,
+          translation: "الاتصال بين العمليات (IPC) يُعرّف بأنه:",
+          explanation:
+            "الصحيح هو الخيار الأول لأن IPC بيوفر آلية للعمليات تتواصل وتزامن أفعالها. الخيارات التانية غلط لأن IPC مش بيعمل scheduling للـ CPU ولا بيوفر ذاكرة ولا round-robin، دي مهام تانية لنظام التشغيل.",
+          tags: ["IPC", "Definitions"],
+          ref: "Lecture 4 — Slide 27 (Interprocess Communication)",
+          likely: "high",
+        },
+        {
+          q: "5. In message-passing IPC, the two basic operations provided are:",
+          options: [
+            "read() and write()",
+            "send(message) and receive(message)",
+            "open() and close()",
+            "lock() and unlock()",
+          ],
+          correct: 1,
+          translation: "في تمرير الرسائل IPC، العمليتان الأساسيتان هما:",
+          explanation:
+            "IPC facility بيوفر send(message) و receive(message) كعمليتين أساسيتين. read/write دي عمليات ملفات، open/close برضه ملفات، وlock/unlock أدوات تزامن مش عمليات IPC.",
+          tags: ["IPC", "Message Passing"],
+          ref: "Lecture 4 — Slide 27 (Interprocess Communication)",
+          likely: "high",
+        },
+        {
+          q: "6. In direct communication, the link is associated with how many processes?",
+          options: [
+            "Exactly one pair of communicating processes",
+            "Any number of processes",
+            "At least three processes",
+            "Only the sender process",
+          ],
+          correct: 0,
+          translation: "في الاتصال المباشر، يرتبط الـ link بكم عملية؟",
+          explanation:
+            "في الـ direct communication الـ link بيرتبط بزوج واحد فقط من العمليات المتصلة (sender و receiver). أما في الـ indirect فالـ link ممكن يرتبط بعمليات كتير عبر mailbox مشترك.",
+          tags: ["Direct Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          q: "7. In indirect communication, messages are sent to and received from:",
+          options: [
+            "A shared memory segment",
+            "A CPU register",
+            "Mailboxes (also referred to as ports)",
+            "A direct network connection",
+          ],
+          correct: 2,
+          translation: "في الاتصال غير المباشر، يتم إرسال واستقبال الرسائل من:",
+          explanation:
+            "في الـ indirect communication الرسائل بتتبعت وتستقبل من mailboxes (بتسمى كمان ports). كل mailbox ليه ID مميز، والعمليات تتواصل لو بس بتشارك نفس الـ mailbox. الـ shared memory دي آلية تانية (مش رسائل)، والـ CPU register صغير جدًا، والـ direct network connection دي خاصية الـ sockets.",
+          tags: ["Indirect Communication", "Mailbox"],
+          ref: "Lecture 4 — Slide 31 (Indirect Communication)",
+          likely: "high",
+        },
+        {
+          q: "8. In indirect communication, a link may be associated with how many processes?",
+          options: [
+            "Exactly one pair",
+            "At most two processes",
+            "Many processes",
+            "Only the kernel",
+          ],
+          correct: 2,
+          translation:
+            "في الاتصال غير المباشر، يمكن أن يرتبط الـ link بكم عملية؟",
+          explanation:
+            "في الـ indirect communication الـ link ممكن يرتبط بعمليات كتير لأن كل العمليات اللي بتشارك نفس الـ mailbox بتتوصّل عبر نفس الـ link. ده الفرق الأساسي بينه وبين الـ direct communication اللي الـ link فيه مرتبط بزوج واحد فقط.",
+          tags: ["Indirect Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 31 (Indirect Communication)",
+          likely: "high",
+        },
+        {
+          q: "9. Symmetric addressing in direct communication means:",
+          options: [
+            "Only the sender names the recipient",
+            "Both sender and receiver name each other",
+            "Neither process names the other",
+            "Only the kernel handles naming",
+          ],
+          correct: 1,
+          translation:
+            "العنونة المتناظرة (Symmetric addressing) في الاتصال المباشر تعني:",
+          explanation:
+            "في الـ symmetric addressing الاتنين (المرسل والمستقبل) لازم يسمّوا بعض. ده غالبًا بيستخدم في bidirectional communication. أما الـ asymmetric فالمرسل بس هو اللي يسمّي المستلم، وبيستخدم في unidirectional communication.",
+          tags: ["Direct Communication", "Symmetric vs Asymmetric"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          q: "10. Asymmetric addressing in direct communication means:",
+          options: [
+            "Only the sender names the recipient",
+            "Both processes name each other",
+            "Messages are sent to a mailbox",
+            "The link is bi-directional only",
+          ],
+          correct: 0,
+          translation:
+            "العنونة غير المتناظرة (Asymmetric addressing) في الاتصال المباشر تعني:",
+          explanation:
+            "في الـ asymmetric addressing المرسل بس هو اللي يسمّي المستلم. ده بيستخدم غالبًا في unidirectional (اتجاه واحد) communication. الـ symmetric هو اللي الاتنين يسمّوا بعض، والـ mailbox فكرة indirect مش direct.",
+          tags: ["Direct Communication", "Symmetric vs Asymmetric"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          q: "11. Blocking send is considered:",
+          options: ["Asynchronous", "Indirect", "Unbounded", "Synchronous"],
+          correct: 3,
+          translation: "إرسال الحظر (Blocking send) يعتبر:",
+          explanation:
+            "الـ blocking send متزامن (synchronous) لأن المرسل بيتحظر (block) لحد ما الرسالة تتستقبل. الـ non-blocking send هو اللي asynchronous لأن المرسل بيبعت الرسالة ويكمل شغله من غير استجابة.",
+          tags: ["Synchronization", "Blocking vs Non-blocking"],
+          ref: "Lecture 4 — Slide 35 (Synchronization)",
+          likely: "high",
+        },
+        {
+          q: "12. Non-blocking receive returns:",
+          options: [
+            "A valid message or null",
+            "Only a valid message, blocking if none available",
+            "An error code always",
+            "The kernel address",
+          ],
+          correct: 0,
+          translation: "الاستقبال غير الحظر (Non-blocking receive) يرجّع:",
+          explanation:
+            "الـ non-blocking receive بيرجّع رسالة صحيحة لو موجودة، أو null لو مفيش. الـ blocking receive هو اللي بيستنى لحد ما رسالة تظهر. ده اللي بيخلي الـ non-blocking يعتبر asynchronous.",
+          tags: ["Synchronization", "Blocking vs Non-blocking"],
+          ref: "Lecture 4 — Slide 35 (Synchronization)",
+          likely: "high",
+        },
+        {
+          q: "13. In a zero-capacity buffer, the sender must:",
+          options: [
+            "Continue immediately after sending",
+            "Send the message to a mailbox",
+            "Store the message in a queue of infinite length",
+            "Wait for the receiver (rendezvous)",
+          ],
+          correct: 3,
+          translation:
+            "في الـ buffer بسعة صفر (zero capacity)، يجب على المرسل أن:",
+          explanation:
+            "في الـ zero capacity (0 messages)، مفيش طابور للرسائل، فالمرسل لازم يستنى المستلم يستقبل الرسالة فعلًا (وده اسمه rendezvous). يعني blocking send و blocking receive سوا. الاختيارات التانية غلط: continue هو الـ non-blocking، طابور لا نهائي هو الـ unbounded، والـ mailbox فكرة indirect communication.",
+          tags: ["Buffering", "Zero Capacity", "Rendezvous"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "high",
+        },
+        {
+          q: "14. In a bounded-capacity buffer of length n, the sender must wait when:",
+          options: [
+            "The link is empty",
+            "The receiver is busy",
+            "The link is full",
+            "n equals zero",
+          ],
+          correct: 2,
+          translation:
+            "في الـ buffer ذو السعة المحدودة بطول n، ينتظر المرسل عندما:",
+          explanation:
+            "في الـ bounded capacity بطول n، المرسل بيستنى بس لما الـ link يكون ممتلئ (full). طالما الـ link مش ممتلئ، الـ send بيكون non-blocking. لو الـ link فاضي ده مش مشكلة للمرسل، ولو n=0 ده يبقى zero capacity.",
+          tags: ["Buffering", "Bounded Capacity"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "high",
+        },
+        {
+          q: "15. In an unbounded-capacity buffer, the sender:",
+          options: [
+            "Never waits",
+            "Always waits for the receiver",
+            "Waits only when the buffer is full",
+            "Waits only if the receiver is null",
+          ],
+          correct: 0,
+          translation:
+            "في الـ buffer ذو السعة غير المحدودة (unbounded capacity)، المرسل:",
+          explanation:
+            "في الـ unbounded capacity المرسل مبيستنيش أبدًا لأن الطابور بيطول لأي حد (infinite length). ده عكس الـ zero (بيستنى دايمًا) والـ bounded (بيستنى لو ممتلئ).",
+          tags: ["Buffering", "Unbounded Capacity"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "high",
+        },
+        {
+          q: "16. A socket is defined as:",
+          options: [
+            "A type of memory buffer",
+            "A kernel data structure for scheduling",
+            "An endpoint for communication",
+            "A network protocol for file transfer",
+          ],
+          correct: 2,
+          translation: "الـ socket يُعرّف بأنه:",
+          explanation:
+            "الـ socket هو endpoint (نقطة نهاية) للاتصال. بيتكون من IP address + port number. مش نوع ذاكرة ولا بنية scheduling ولا بروتوكول FTP.",
+          tags: ["Sockets", "Client-Server Communication"],
+          ref: "Lecture 4 — Slide 38 (Sockets)",
+          likely: "high",
+        },
+        {
+          q: "17. A socket consists of the concatenation of:",
+          options: [
+            "MAC address and port number",
+            "Process ID and memory address",
+            "Hostname and protocol",
+            "IP address and port",
+          ],
+          correct: 3,
+          translation: "يتكون الـ socket من دمج:",
+          explanation:
+            "الـ socket هو دمج (concatenation) الـ IP address مع الـ port. مثال: 161.25.19.8:1625. الـ MAC address مع الـ port غلط لأن الـ socket بيشتغل على مستوى الـ IP، والـ hostname مش جزء من الـ socket، والـ process ID مفهوم تاني.",
+          tags: ["Sockets", "IP Address", "Port"],
+          ref: "Lecture 4 — Slide 38 (Sockets)",
+          likely: "high",
+        },
+        {
+          q: "18. The socket 161.25.19.8:1625 refers to:",
+          options: [
+            "Port 1615 on host 25.19.8",
+            "A mailbox with ID 1625",
+            "IP address 1625 with port 161.25.19.8",
+            "Port 1625 on host 161.25.19.8",
+          ],
+          correct: 3,
+          translation: "الـ socket 161.25.19.8:1625 يشير إلى:",
+          explanation:
+            "الصيغة IP:Port يعني 161.25.19.8 هو الـ IP، و1625 هو الـ port. الاختيارات التانية بتعكس الترتيب أو بتفسر الـ port كـ mailbox ID، وده غلط.",
+          tags: ["Sockets", "IP Address", "Port"],
+          ref: "Lecture 4 — Slide 38 (Sockets)",
+          likely: "high",
+        },
+        {
+          q: "19. Communication using sockets consists between:",
+          options: [
+            "A single socket and the kernel",
+            "A socket and a mailbox",
+            "Three sockets minimum",
+            "A pair of sockets",
+          ],
+          correct: 3,
+          translation: "الاتصال باستخدام sockets يتم بين:",
+          explanation:
+            "الاتصال بـ sockets بيحصل بين زوج من الـ sockets (one on each side). مفيش socket واحد لوحده، ولا ثلاثة، ولا socket مع mailbox (دي أنواع مختلفة).",
+          tags: ["Sockets", "Client-Server Communication"],
+          ref: "Lecture 4 — Slide 38 (Sockets)",
+          likely: "high",
+        },
+        {
+          q: "20. Remote Procedure Call (RPC) is similar to IPC but differs in that:",
+          options: [
+            "In RPC the processes are on the same machine",
+            "RPC uses shared memory only",
+            "In RPC the processes are not at the same machine (networked systems)",
+            "RPC does not use messages",
+          ],
+          correct: 2,
+          translation: "نداء الإجراء البعيد (RPC) يشبه IPC لكن يختلف في أن:",
+          explanation:
+            "RPC شبه IPC لكن الفرق إن في RPC العمليات على آلات مختلفة (networked)، بينما في IPC العمليات على نفس الآلة. الاختيارات التانية غلط لأن RPC مش بيستخدم shared memory وبيعتمد على messages فعليًا.",
+          tags: ["RPC", "IPC vs RPC"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "high",
+        },
+        {
+          q: "21. A stub in an RPC system is:",
+          options: [
+            "The server-side actual procedure",
+            "A type of network socket",
+            "A client-side proxy for the actual procedure on the server",
+            "A kernel-level buffer",
+          ],
+          correct: 2,
+          translation: "الـ stub في نظام RPC هو:",
+          explanation:
+            "الـ stub هو proxy على جانب العميل (client-side) للإجراء الفعلي على السيرفر. بيخفي تفاصيل الاتصال. مش الإجراء الفعلي نفسه (ده على السيرفر)، ومش socket ولا buffer.",
+          tags: ["RPC", "Stub"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "high",
+        },
+        {
+          q: "22. Marshalling in RPC refers to:",
+          options: [
+            "Receiving a message from the network",
+            "Locating the port on the server",
+            "Packaging the parameters into a form that can be transmitted over a network",
+            "Destroying a mailbox after use",
+          ],
+          correct: 2,
+          translation: "Marshalling في RPC يشير إلى:",
+          explanation:
+            "Marshalling هو تغليف (packaging) المعاملات في صورة تنقل عبر الشبكة. الـ client-side stub بيعمل marshalling للمعاملات قبل الإرسال، والـ server-side stub بيرجعها (unmarshalling). استقبال الرسالة و تحديد الـ port وظايف تانية.",
+          tags: ["RPC", "Marshalling", "Stub"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "high",
+        },
+        {
+          q: "23. Which side receives the marshalled message, unpacks the parameters, and performs the procedure on the server?",
+          options: [
+            "The client-side stub",
+            "The mailbox",
+            "The server-side stub",
+            "The operating system kernel only",
+          ],
+          correct: 2,
+          translation:
+            "أي جانب يستقبل الرسالة المُغلّفة (marshalled)، يفك المعاملات، وينفذ الإجراء على السيرفر؟",
+          explanation:
+            "الـ server-side stub هو اللي بيستقبل الرسالة، يعمل unmarshalling للمعاملات، وينفذ الإجراء على السيرفر. الـ client-side stub بيبعت و يستلم الرد، أما الـ mailbox و الـ kernel فمش بيينفذوا الإجراء.",
+          tags: ["RPC", "Server Stub", "Marshalling"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "high",
+        },
+        {
+          q: "24. Remote Method Invocation (RMI) is a mechanism provided by which language?",
+          options: ["C++", "Java", "Python", "C"],
+          correct: 1,
+          translation: "Remote Method Invocation (RMI) هو آلية توفرها لغة:",
+          explanation:
+            "RMI هي آلية Java شبه RPC. الـ RPC غالبًا مت implement في C++، لكن RMI خاص بـ Java وبيسمح لبرنامج Java على آلة يستدعي method على remote object. Python و C ليهم آليات تانية.",
+          tags: ["RMI", "Java", "RPC vs RMI"],
+          ref: "Lecture 4 — Slide 42 (Remote Method Invocation)",
+          likely: "high",
+        },
+        {
+          q: "25. RPCs are usually implemented in which language?",
+          options: ["Java", "C++", "Python", "JavaScript"],
+          correct: 1,
+          translation: "RPCs تُنفّذ عادةً بأي لغة؟",
+          explanation:
+            "حسب الشريحة: RPCs usually implemented in C++، بينما RMI بـ Java. الفرق ده مهم لأن RMI بيدعم object-oriented features بشكل أعمق.",
+          tags: ["RPC", "C++", "RPC vs RMI"],
+          ref: "Lecture 4 — Slide 42 (Remote Method Invocation)",
+          likely: "high",
+        },
+        {
+          q: "26. In Java terminology, the stub for the remote object is called:",
+          options: ["Proxy", "Port", "Mailbox", "Skeleton"],
+          correct: 3,
+          translation:
+            "في مصطلحات Java، الـ stub للكائن البعيد (remote object) يسمى:",
+          explanation:
+            "في Java، الـ stub للـ remote object بيتسمى skeleton. ده المصطلح الخاص بـ Java للـ server-side stub. الـ proxy مصطلح عام، والـ mailbox و الـ port مفاهيم تانية خالص.",
+          tags: ["RMI", "Skeleton", "Java"],
+          ref: "Lecture 4 — Slide 43 (Marshalling Parameters)",
+          likely: "high",
+        },
+        {
+          q: "27. RMI allows a Java program to:",
+          options: [
+            "Schedule threads remotely",
+            "Compile code on a remote machine",
+            "Share memory between two JVMs",
+            "Invoke a method on a remote object",
+          ],
+          correct: 3,
+          translation: "RMI يسمح لبرنامج Java بأن:",
+          explanation:
+            "RMI بيسمح لـ Java program على آلة يستدعي (invoke) method على remote object. الـ compilation مش وظيفة RMI، والـ shared memory مش مدعوم، والـ thread scheduling وظيفة OS مش RMI.",
+          tags: ["RMI", "Java", "Remote Object"],
+          ref: "Lecture 4 — Slide 42 (Remote Method Invocation)",
+          likely: "high",
+        },
+        {
+          q: "28. Which of the following is NOT among the three client-server communication mechanisms mentioned in the lecture?",
+          options: [
+            "Shared Memory",
+            "Remote Procedure Calls",
+            "Remote Method Invocation",
+            "Sockets",
+          ],
+          correct: 0,
+          translation:
+            "أي مما يلي ليس من آليات اتصال العميل-الخادم الثلاث المذكورة في المحاضرة؟",
+          explanation:
+            "المحاضرة ذكرت 3 بس: Sockets، RPC، RMI. الـ Shared Memory مش ضمن آليات الـ client-server communication في المحاضرة دي (دي آلية IPC على نفس الآلة).",
+          tags: ["Client-Server Communication", "Sockets", "RPC", "RMI"],
+          ref: "Lecture 4 — Slide 37 (Client-Server Communication)",
+          likely: "high",
+        },
+        {
+          q: "29. In direct communication, between each pair of processes there exists:",
+          options: [
+            "Multiple links",
+            "Exactly one link",
+            "Zero links",
+            "A shared mailbox",
+          ],
+          correct: 1,
+          translation: "في الاتصال المباشر، بين كل زوج عمليات يوجد:",
+          explanation:
+            "في الـ direct communication بين كل زوج فيهم بالظبط link واحد (exactly one). ده عكس الـ indirect اللي ممكن يكون في عدة links بين الزوج الواحد لو بيتشاركوا في عدة mailboxes.",
+          tags: ["Direct Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          q: "30. The link in direct communication is usually:",
+          options: [
+            "Unidirectional only",
+            "Bi-directional",
+            "Broadcast-based",
+            "Multicast-only",
+          ],
+          correct: 1,
+          translation: "الـ link في الاتصال المباشر يكون عادةً:",
+          explanation:
+            "الـ link في الـ direct communication ممكن يكون unidirectional، لكن عادةً bi-directional. الـ broadcast و الـ multicast مش خصائص الـ direct communication.",
+          tags: ["Direct Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          q: "31. Which of the following is a property of communication links in indirect communication?",
+          options: [
+            "Only one link can exist between any two processes",
+            "A link is associated with exactly one pair of processes",
+            "Links are never bi-directional",
+            "A link may be associated with many processes",
+          ],
+          correct: 3,
+          translation:
+            "أي مما يلي خاصية من خصائص communication links في الاتصال غير المباشر؟",
+          explanation:
+            "في الـ indirect communication الـ link ممكن يرتبط بعمليات كتير (لو بيتشاركوا نفس الـ mailbox). ده عكس الـ direct اللي بيرتبط بزوج واحد فقط. كمان الـ link ممكن يكون uni أو bi-directional، وممكن يكون في عدة links بين زوج واحد.",
+          tags: ["Indirect Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 31 (Indirect Communication)",
+          likely: "high",
+        },
+        {
+          q: "32. Blocking receive means the receiver:",
+          options: [
+            "Continues if no message is available",
+            "Blocks until a message is available",
+            "Returns null immediately",
+            "Sends an acknowledgment first",
+          ],
+          correct: 1,
+          translation: "الاستقبال الحظر (Blocking receive) يعني أن المستقبل:",
+          explanation:
+            "الـ blocking receive بيخلي المستقبل يحظر (block) لحد ما رسالة تكون متاحة. ده synchronous. الـ non-blocking receive هو اللي بيرجّع null أو valid message و يكمّل شغله.",
+          tags: ["Synchronization", "Blocking Receive"],
+          ref: "Lecture 4 — Slide 35 (Synchronization)",
+          likely: "high",
+        },
+        {
+          q: "33. The rendezvous situation (sender waits for receiver) occurs in which buffering scheme?",
+          options: [
+            "Bounded capacity when the link is not full",
+            "Bounded capacity when the link is empty",
+            "Unbounded capacity when the link is full",
+            "Zero capacity",
+          ],
+          correct: 3,
+          translation:
+            "موقف الـ rendezvous (المرسل ينتظر المستلم) بيحصل في أي نظام تخزين مؤقت؟",
+          explanation:
+            "الـ rendezvous بيحصل في الـ zero capacity لأن مفيش طابور نهائيًا، فالمرسل لازم يستنى المستلم يستقبل فعليًا (blocking send و blocking receive معًا). في الـ bounded capacity المرسل بيستنى بس لما الـ link ممتلئ (مش فاضي)، و في الـ unbounded المرسل مبيستنيش أبدًا.",
+          tags: ["Buffering", "Zero Capacity", "Rendezvous"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "medium",
+        },
+
+        // ============== MCQ - Medium Priority ==============
+        {
+          q: "34. The two main types of buffer in the Producer-Consumer problem are:",
+          options: [
+            "Synchronous and Asynchronous buffer",
+            "Direct and Indirect buffer",
+            "Blocking and Non-blocking buffer",
+            "Bounded and Unbounded buffer",
+          ],
+          correct: 3,
+          translation:
+            "النوعان الرئيسيان للـ buffer في مشكلة المنتج-المستهلك هما:",
+          explanation:
+            "الأنواع هي bounded-buffer (حجم ثابت) و unbounded-buffer (بدون حد عملي). الـ direct/indirect دي أنواع communication، و الـ blocking/non-blocking دي أنواع synchronization، و الـ sync/async مفهوم مش نوع buffer.",
+          tags: ["Producer-Consumer", "Buffer Types"],
+          ref: "Lecture 4 — Slide 26 (Producer-Consumer Problem)",
+          likely: "medium",
+        },
+        {
+          q: "35. The unbounded-buffer solution assumes that:",
+          options: [
+            "There is no practical limit on the size of the shared buffer",
+            "There is a fixed buffer size",
+            "The consumer must wait if the buffer is empty",
+            "The producer must wait if the buffer is full",
+          ],
+          correct: 0,
+          translation: "حل الـ unbounded-buffer يفترض أن:",
+          explanation:
+            "الـ unbounded-buffer بيفترض إن مفيش حد عملي لحجم الـ buffer. الاختيارات التانية غلط: الـ fixed size دي characteristic للـ bounded، والانتظار للمستهلك/المنتج بيحصل في الـ bounded مش الـ unbounded.",
+          tags: ["Producer-Consumer", "Unbounded Buffer"],
+          ref: "Lecture 4 — Slide 26 (Producer-Consumer Problem)",
+          likely: "medium",
+        },
+        {
+          q: "36. The basic primitives for indirect communication are:",
+          options: [
+            "send(P, message) and receive(Q, message)",
+            "read() and write()",
+            "send(A, message) and receive(A, message) where A is a mailbox",
+            "lock() and unlock()",
+          ],
+          correct: 2,
+          translation: "الـ primitives الأساسية للاتصال غير المباشر هي:",
+          explanation:
+            "في الـ indirect communication: send(A, message) و receive(A, message) حيث A هو الـ mailbox. أما send(P, message) و receive(Q, message) فدي direct communication (P و Q أسماء عمليات).",
+          tags: ["Indirect Communication", "Primitives"],
+          ref: "Lecture 4 — Slide 32 (Indirect Communication)",
+          likely: "medium",
+        },
+        {
+          q: "37. The operations on a mailbox in indirect communication include all EXCEPT:",
+          options: [
+            "Allocate CPU time to the mailbox",
+            "Send and receive messages through mailbox",
+            "Destroy a mailbox",
+            "Create a new mailbox",
+          ],
+          correct: 0,
+          translation:
+            "عمليات الـ mailbox في الاتصال غير المباشر تشمل الكل ما عدا:",
+          explanation:
+            "الـ mailbox ليه 3 عمليات: create، send/receive، و destroy. تخصيص CPU time مش وظيفة الـ mailbox (دي وظيفة الـ OS scheduler).",
+          tags: ["Indirect Communication", "Mailbox Operations"],
+          ref: "Lecture 4 — Slide 32 (Indirect Communication)",
+          likely: "medium",
+        },
+        {
+          q: "38. When P1, P2, and P3 share mailbox A and P1 sends a message, who gets it?",
+          options: [
+            "All three processes get a copy",
+            "Only P2 receives it",
+            "The system must determine which one receives (a problem to solve)",
+            "Only P3 receives it",
+          ],
+          correct: 2,
+          translation:
+            "لما P1 و P2 و P3 يتشاركوا mailbox A و P1 يبعت رسالة، مين بياخدها؟",
+          explanation:
+            "ده مشكلة: مين بياخد الرسالة؟ المحاضرة بتذكر 3 حلول: (1) الـ link يرتبط بعمليتين فقط، (2) عملية واحدة بس تعمل receive في المرة، (3) النظام يختار المستلم عشوائيًا ويعرف المرسل. مفيش حل افتراضي.",
+          tags: ["Indirect Communication", "Mailbox Sharing"],
+          ref: "Lecture 4 — Slide 33-34 (Indirect Communication)",
+          likely: "medium",
+        },
+        {
+          q: "39. The three solutions to the mailbox sharing problem include all EXCEPT:",
+          options: [
+            "Allow a link to be associated with at most two processes",
+            "Allow only one process at a time to execute a receive operation",
+            "Allow the system to select arbitrarily the receiver and notify the sender",
+            "Allow all processes to receive the same message simultaneously",
+          ],
+          correct: 3,
+          explanation:
+            "الحلول التلاتة المذكورة في المحاضرة هي: (1) الـ link يرتبط بعمليتين على الأكثر، (2) عملية واحدة بس تعمل receive في المرة، (3) النظام يختار المستلم عشوائيًا ويعرف المرسل. الخيار الرابع (كل العمليات تستقبل نفس الرسالة) مش من الحلول، ده سيناريو broadcast مش حل لمشكلة مين ياخد الرسالة.",
+          translation:
+            "الحلول الثلاث لمشكلة مشاركة الـ mailbox تشمل الكل ما عدا:",
+          tags: ["Indirect Communication", "Mailbox Sharing"],
+          ref: "Lecture 4 — Slide 34 (Indirect Communication)",
+          likely: "medium",
+        },
+        {
+          q: "40. How many ways can a message queue attached to a link be implemented?",
+          options: ["Three ways", "Two ways", "Four ways", "One way only"],
+          correct: 0,
+          translation:
+            "بكم طريقة يمكن تنفيذ طابور الرسائل (message queue) المرتبط بالـ link؟",
+          explanation:
+            "الـ message queue بينفذ بـ 3 طرق: zero capacity، bounded capacity، و unbounded capacity. ده اللي بتذكره شريحة Buffering.",
+          tags: ["Buffering", "Message Queue"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "medium",
+        },
+        {
+          q: "41. The client-side stub in RPC is responsible for:",
+          options: [
+            "Locating the server and marshalling the parameters",
+            "Performing the actual procedure on the server",
+            "Destroying the mailbox",
+            "Allocating memory on the client",
+          ],
+          correct: 0,
+          translation: "الـ client-side stub في RPC مسؤول عن:",
+          explanation:
+            "الـ client-side stub بيحدد مكان السيرفر (locates the server) وبيعمل marshalling للمعاملات. تنفيذ الإجراء الفعلي بيحصل على السيرفر بواسطة الـ server-side stub. الـ mailbox و تخصيص الذاكرة وظايف تانية.",
+          tags: ["RPC", "Client Stub"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "medium",
+        },
+        {
+          q: "42. The stub in an RPC system is used to:",
+          options: [
+            "Speed up CPU execution",
+            "Hide the details that allow communication to take place",
+            "Encrypt messages",
+            "Schedule network traffic",
+          ],
+          correct: 1,
+          translation: "الـ stub في نظام RPC يُستخدم لـ:",
+          explanation:
+            "الـ stub بيخفي (hide) التفاصيل اللي بتخلي الاتصال يحصل، عشان المبرمج يتعامل مع الإجراء كأنه محلي. التسريع و التشفير و الـ scheduling مش وظائف الـ stub.",
+          tags: ["RPC", "Stub"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "medium",
+        },
+        {
+          q: "43. Usually, how many stubs does each RPC have?",
+          options: [
+            "One shared stub",
+            "A separate stub",
+            "No stubs needed",
+            "Exactly four stubs",
+          ],
+          correct: 1,
+          translation: "عادةً، كم stub لكل RPC؟",
+          explanation:
+            "المحاضرة بتقول: Usually each RPC has a separate stub. ده معناه إن كل إجراء بعيد ليه stub خاص بيه، مش shared ولا بدون stub ولا أربعة.",
+          tags: ["RPC", "Stub"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "medium",
+        },
+        {
+          q: "44. Which of the following best describes the relationship between RPC and RMI?",
+          options: [
+            "RMI is the C++ version of RPC",
+            "RMI is a Java mechanism similar to RPCs",
+            "RPC is a Java-specific feature",
+            "They are completely unrelated technologies",
+          ],
+          correct: 1,
+          translation: "أي مما يلي يصف بشكل أفضل العلاقة بين RPC و RMI؟",
+          explanation:
+            "RMI هي آلية Java شبه RPCs. RPC عادةً بـ C++، و RMI بـ Java، لكن المفهوم متشابه (استدعاء إجراء/method عن بعد). مش RMI إصدار C++ من RPC، ولا RPC خاص بـ Java.",
+          tags: ["RPC", "RMI", "RPC vs RMI"],
+          ref: "Lecture 4 — Slide 42 (Remote Method Invocation)",
+          likely: "medium",
+        },
+        {
+          q: "45. The communication link in direct communication is established:",
+          options: [
+            "Automatically",
+            "Manually by the programmer",
+            "Through a mailbox",
+            "Only after a handshake protocol",
+          ],
+          correct: 0,
+          translation: "الـ link في الاتصال المباشر يتم إنشاؤه:",
+          explanation:
+            "في الـ direct communication الـ links بتتأنشئ تلقائيًا (automatically) لما العمليات تسمّي بعض. مفيش إنشاء يدوي ولا mailbox (دي indirect) ولا handshake protocol مذكور.",
+          tags: ["Direct Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "medium",
+        },
+        {
+          q: "46. In indirect communication, a link is established only when:",
+          options: [
+            "Processes share a common mailbox",
+            "The operating system boots",
+            "A socket is created",
+            "The kernel allocates memory",
+          ],
+          correct: 0,
+          translation: "في الاتصال غير المباشر، يتم إنشاء الـ link فقط عندما:",
+          explanation:
+            "الـ link بيتأنشأ بس لو العمليات بيتشاركوا في mailbox مشترك. ده الشرط الوحيد. boot الـ OS، إنشاء socket، و تخصيص الذاكرة مفاهيم تانية.",
+          tags: ["Indirect Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 31 (Indirect Communication)",
+          likely: "medium",
+        },
+        {
+          q: "47. The size of a message in IPC send() operation is:",
+          options: [
+            "Always fixed",
+            "Always variable",
+            "Always 64 bytes",
+            "Fixed or variable",
+          ],
+          correct: 3,
+          translation: "حجم الرسالة في عملية send() في IPC هو:",
+          explanation:
+            "حسب المحاضرة: send(message) — message size fixed or variable. يعني ممكن يكون ثابت أو متغير حسب التطبيق.",
+          tags: ["IPC", "Message Passing"],
+          ref: "Lecture 4 — Slide 27 (Interprocess Communication)",
+          likely: "medium",
+        },
+
+        // ============== ESSAY QUESTIONS (high priority first) ==============
+        {
+          type: "essay",
+          q: "1. Define the Producer-Consumer problem and explain the role of the shared buffer.",
+          translation:
+            "عرّف مشكلة المنتج-المستهلك واشرح دور الـ shared buffer.",
+          answer:
+            "The Producer-Consumer problem is a paradigm for cooperating processes in which a producer process produces information that is consumed by a consumer process.\n" +
+            "A solution is implemented using a shared buffer that can be:\n" +
+            "1. Unbounded-buffer: places no practical limit on the size of the shared buffer.\n" +
+            "2. Bounded-buffer: assumes a fixed buffer size.\n" +
+            "Key waiting rules:\n" +
+            "- If the buffer is empty, the consumer must wait.\n" +
+            "- If the buffer is full, the producer must wait.\n" +
+            "We must also prevent the consumer from reading the buffer value unless the producer has finished producing the output.",
+          tags: ["Producer-Consumer", "Buffer"],
+          ref: "Lecture 4 — Slide 26 (Producer-Consumer Problem)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Define Interprocess Communication (IPC) and state its two basic operations.",
+          translation:
+            "عرّف الاتصال بين العمليات (IPC) واذكر عمليتيه الأساسيتين.",
+          answer:
+            "Interprocess Communication (IPC) is a mechanism for processes to communicate and to synchronize their actions.\n" +
+            "It uses a message system (message passing) in which processes communicate with each other without resorting to shared variables.\n" +
+            "The IPC facility provides two operations:\n" +
+            "1. send(message) — message size is fixed or variable.\n" +
+            "2. receive(message)\n" +
+            "If two processes P and Q wish to communicate, they need to:\n" +
+            "- Establish a communication link between them.\n" +
+            "- Exchange messages via send/receive.",
+          tags: ["IPC", "Message Passing"],
+          ref: "Lecture 4 — Slide 27 (Interprocess Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Compare Direct Communication and Indirect Communication in IPC.",
+          translation: "قارن بين الاتصال المباشر والاتصال غير المباشر في IPC.",
+          answer:
+            "Direct Communication:\n" +
+            "- Processes must name each other explicitly: send(P, message), receive(Q, message).\n" +
+            "- Links are established automatically.\n" +
+            "- A link is associated with exactly one pair of communicating processes.\n" +
+            "- Between each pair there exists exactly one link.\n" +
+            "- The link may be unidirectional but is usually bi-directional.\n" +
+            "- Divided into: Symmetric addressing (both name each other) and Asymmetric addressing (only sender names the recipient).\n" +
+            "Indirect Communication:\n" +
+            "- Messages are sent to and received from mailboxes (also called ports).\n" +
+            "- Each mailbox has a unique ID.\n" +
+            "- Processes can communicate only if they share a mailbox.\n" +
+            "- A link is established only if processes share a common mailbox.\n" +
+            "- A link may be associated with many processes.\n" +
+            "- Each pair of processes may share several communication links.\n" +
+            "- Link may be unidirectional or bi-directional.",
+          tags: ["Direct vs Indirect", "Communication"],
+          ref: "Lecture 4 — Slides 30-31 (Naming)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Explain the difference between Symmetric and Asymmetric addressing in direct communication, and state when each is typically used.",
+          translation:
+            "اشرح الفرق بين العنونة المتناظرة وغير المتناظرة في الاتصال المباشر، ومتى تُستخدم كل منهما عادةً.",
+          answer:
+            "Symmetric addressing:\n" +
+            "- Both processes (sender and receiver) should name each other.\n" +
+            "- Usually needed for bidirectional communications.\n" +
+            "Asymmetric addressing:\n" +
+            "- Only the sender names the recipient.\n" +
+            "- Usually needed for unidirectional (one direction) communications.\n" +
+            "Key difference: in symmetric, both sides know each other's identity; in asymmetric, only the sender needs to know the receiver.",
+          tags: ["Symmetric vs Asymmetric", "Direct Communication"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Explain the difference between Blocking (Synchronous) and Non-blocking (Asynchronous) message passing.",
+          translation:
+            "اشرح الفرق بين تمرير الرسائل الحظر (المتزامن) وغير الحظر (غير المتزامن).",
+          answer:
+            "Blocking (Synchronous):\n" +
+            "- Blocking send: the sender blocks until the message is received.\n" +
+            "- Blocking receive: the receiver blocks until a message is available.\n" +
+            "Non-blocking (Asynchronous):\n" +
+            "- Non-blocking send: the sender sends the message and continues (does not wait).\n" +
+            "- Non-blocking receive: the receiver receives a valid message or null.\n" +
+            "Key difference: blocking operations wait for completion before proceeding; non-blocking operations allow the process to continue immediately and either retrieve a result later or handle a null result.",
+          tags: ["Synchronization", "Blocking vs Non-blocking"],
+          ref: "Lecture 4 — Slide 35 (Synchronization)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. List and explain the three methods of buffering in IPC.",
+          translation:
+            "اذكر واشرح طرق التخزين المؤقت (Buffering) الثلاث في IPC.",
+          answer:
+            "Whether communication is direct or indirect, messages exchanged by communicating processes reside in a temporary queue attached to the link. The queue can be implemented in three ways:\n" +
+            "1. Zero capacity (0 messages):\n" +
+            "   - Sender must wait for receiver (this is called rendezvous).\n" +
+            "   - Both blocking send and blocking receive.\n" +
+            "2. Bounded capacity (finite length of n messages):\n" +
+            "   - Sender must wait if the link is full (blocking send).\n" +
+            "   - If the link is not full, then non-blocking send.\n" +
+            "3. Unbounded capacity (infinite length):\n" +
+            "   - Sender never waits.",
+          tags: [
+            "Buffering",
+            "Zero Capacity",
+            "Bounded Capacity",
+            "Unbounded Capacity",
+          ],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Define a Socket and give an example showing how IP and port are combined.",
+          translation:
+            "عرّف الـ Socket واذكر مثال يوضح كيف يُدمج الـ IP مع الـ port.",
+          answer:
+            "A socket is defined as an endpoint for communication.\n" +
+            "A socket is the concatenation of an IP address and a port number.\n" +
+            "Example:\n" +
+            "  The socket 161.25.19.8:1625 refers to port 1625 on host 161.25.19.8.\n" +
+            "Communication using sockets consists between a pair of sockets (one socket on each communicating side).",
+          tags: ["Sockets", "Client-Server Communication"],
+          ref: "Lecture 4 — Slide 38 (Sockets)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Define Remote Procedure Call (RPC) and explain the role of stubs.",
+          translation: "عرّف نداء الإجراء البعيد (RPC) واشرح دور الـ stubs.",
+          answer:
+            "Remote Procedure Call (RPC) abstracts procedure calls between processes on networked systems. It is similar to IPC, but in RPC the processes are not at the same machine (while in IPC they are on the same machine).\n" +
+            "Stubs:\n" +
+            "- A stub is a client-side proxy for the actual procedure on the server.\n" +
+            "- Stubs are used to hide the details that allow communication to take place.\n" +
+            "- Usually each RPC has a separate stub.\n" +
+            "Two main functions of the stub:\n" +
+            "1. Locates the port on the server for the remote procedure.\n" +
+            "2. Marshals the parameters for the remote procedure.\n" +
+            "Workflow:\n" +
+            "- The client-side stub locates the server and marshals (packages) the parameters into a form that can be transmitted over a network.\n" +
+            "- The server-side stub receives this message, unpacks the marshalled parameters, and performs the procedure on the server.",
+          tags: ["RPC", "Stub", "Marshalling"],
+          ref: "Lecture 4 — Slide 40 (Remote Procedure Calls)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Define Marshalling and explain its purpose in RPC.",
+          translation: "عرّف Marshalling واشرح هدفه في RPC.",
+          answer:
+            "Marshalling is the process of packaging the parameters into a form that can be transmitted over a network.\n" +
+            "Purpose:\n" +
+            "- Allows the client-side stub to convert local procedure parameters into a network-transmittable format.\n" +
+            "- The server-side stub then unpacks (unmarshals) the marshalled parameters and performs the actual procedure.\n" +
+            "In Java terminology, the stub for the remote object is called a skeleton.",
+          tags: ["Marshalling", "RPC", "Stub", "Skeleton"],
+          ref: "Lecture 4 — Slides 40 & 43 (RPC and Marshalling Parameters)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Compare RPC and RMI in terms of language, mechanism, and what they invoke.",
+          translation: "قارن بين RPC و RMI من حيث اللغة والآلية وماذا يستدعون.",
+          answer:
+            "Remote Procedure Call (RPC):\n" +
+            "- Usually implemented in C++.\n" +
+            "- Abstracts procedure calls between processes on networked systems.\n" +
+            "- Processes are not on the same machine.\n" +
+            "- Invokes a procedure (function/subroutine) on a remote machine.\n" +
+            "Remote Method Invocation (RMI):\n" +
+            "- A Java mechanism similar to RPCs.\n" +
+            "- Allows a Java program on one machine to invoke a method on a remote object.\n" +
+            "- Object-oriented: works on objects and methods, not just procedures.\n" +
+            "Key similarity: both hide network details from the programmer using stubs.\n" +
+            "Key difference: RPC is procedural (C++) and invokes procedures; RMI is object-oriented (Java) and invokes methods on remote objects.",
+          tags: ["RPC", "RMI", "RPC vs RMI"],
+          ref: "Lecture 4 — Slides 40 & 42 (RPC and RMI)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. List the implementation questions that must be considered when designing an IPC facility.",
+          translation:
+            "اذكر أسئلة التنفيذ اللي لازم تتعتبر عند تصميم منشأة IPC.",
+          answer:
+            "The implementation questions for IPC are:\n" +
+            "1. How are links established?\n" +
+            "2. Can a link be associated with more than two processes?\n" +
+            "3. How many links can there be between every pair of communicating processes?\n" +
+            "4. What is the capacity of a link?\n" +
+            "5. Is the size of a message that the link can accommodate fixed or variable?\n" +
+            "6. Is a link unidirectional or bi-directional?",
+          tags: ["IPC", "Implementation Questions"],
+          ref: "Lecture 4 — Slide 28 (Implementation Questions)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. List the properties of the communication link in Direct Communication.",
+          translation: "اذكر خصائص الـ communication link في الاتصال المباشر.",
+          answer:
+            "Properties of the communication link in Direct Communication:\n" +
+            "1. Links are established automatically.\n" +
+            "2. A link is associated with exactly one pair of communicating processes.\n" +
+            "3. Between each pair there exists exactly one link.\n" +
+            "4. The link may be unidirectional, but is usually bi-directional.\n" +
+            "Direct communication is divided into:\n" +
+            "- Symmetry in addressing: both processes (sender and receiver) should name each other (usually needed for bidirectional communications).\n" +
+            "- Asymmetry in addressing: only the sender names the recipient (usually needed for unidirectional communications).",
+          tags: ["Direct Communication", "Communication Link"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. List the properties of the communication link in Indirect Communication, and state the operations on a mailbox.",
+          translation:
+            "اذكر خصائص الـ communication link في الاتصال غير المباشر، واذكر عمليات الـ mailbox.",
+          answer:
+            "Properties of the communication link in Indirect Communication:\n" +
+            "1. A link is established only if processes share a common mailbox.\n" +
+            "2. A link may be associated with many processes.\n" +
+            "3. Each pair of processes may share several communication links.\n" +
+            "4. A link may be unidirectional or bi-directional.\n" +
+            "Operations on a mailbox:\n" +
+            "1. Create a new mailbox.\n" +
+            "2. Send and receive messages through the mailbox.\n" +
+            "3. Destroy a mailbox.\n" +
+            "Primitives:\n" +
+            "- send(A, message) — send a message to mailbox A.\n" +
+            "- receive(A, message) — receive a message from mailbox A.",
+          tags: ["Indirect Communication", "Mailbox"],
+          ref: "Lecture 4 — Slides 31-32 (Indirect Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. List the three mechanisms for client-server communication mentioned in the lecture.",
+          translation:
+            "اذكر آليات اتصال العميل-الخادم الثلاث المذكورة في المحاضرة.",
+          answer:
+            "The three mechanisms for client-server communication are:\n" +
+            "1. Sockets — defined as an endpoint for communication; concatenation of IP address and port.\n" +
+            "2. Remote Procedure Calls (RPC) — abstracts procedure calls between processes on networked systems; uses stubs and marshalling.\n" +
+            "3. Remote Method Invocation (RMI) — a Java mechanism similar to RPCs; allows a Java program to invoke a method on a remote object.",
+          tags: ["Client-Server Communication", "Sockets", "RPC", "RMI"],
+          ref: "Lecture 4 — Slide 37 (Client-Server Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "15. Explain the mailbox sharing problem and list its solutions.",
+          translation: "اشرح مشكلة مشاركة الـ mailbox واذكر حلولها.",
+          answer:
+            "Mailbox sharing problem:\n" +
+            "- Suppose P1, P2, and P3 share mailbox A.\n" +
+            "- P1 sends a message; P2 and P3 receive.\n" +
+            "- Question: who gets the message?\n" +
+            "Solutions:\n" +
+            "1. Allow a link to be associated with at most two processes.\n" +
+            "2. Allow only one process at a time to execute a receive operation (this raises a blocking question).\n" +
+            "3. Allow the system to select arbitrarily the receiver. The sender is then notified who the receiver was.",
+          tags: ["Indirect Communication", "Mailbox Sharing"],
+          ref: "Lecture 4 — Slide 34 (Indirect Communication)",
+          likely: "medium",
+        },
+
+        // ============== CALCULATION / PROBLEM-SOLVING QUESTIONS ==============
+        {
+          type: "essay",
+          q: "1. Given the socket 161.25.19.8:1625, identify the IP address and the port number. Explain the format.",
+          translation:
+            "بالاعتماد على الـ socket 161.25.19.8:1625، حدّد الـ IP address والـ port number، واشرح الصيغة.",
+          answer:
+            "Given: socket = 161.25.19.8:1625\n" +
+            "Rule: A socket is the concatenation of an IP address and a port, in the form IP:Port.\n" +
+            "Step 1: The part before the colon is the IP address.\n" +
+            "  IP address = 161.25.19.8\n" +
+            "Step 2: The part after the colon is the port number.\n" +
+            "  Port number = 1625\n" +
+            "Conclusion:\n" +
+            "  The socket 161.25.19.8:1625 refers to port 1625 on host 161.25.19.8.\n" +
+            "Explanation of the format: the colon ':' separates the IP address from the port number, allowing a unique endpoint identification across the network.",
+          tags: ["Sockets", "IP Address", "Port", "Calculation"],
+          ref: "Lecture 4 — Slide 38 (Sockets)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. A bounded-capacity buffer has a maximum length of n = 10 messages and currently contains 4 messages. How many more messages can the producer add without waiting, and what happens when the buffer becomes full?",
+          translation:
+            "لدينا bounded-capacity buffer بطول أقصى n = 10 رسائل ويحتوي حاليًا على 4 رسائل. كم رسالة إضافية يمكن للمنتج إضافتها دون انتظار، وماذا يحدث عندما يمتلئ الـ buffer؟",
+          answer:
+            "Given:\n" +
+            "  Buffer capacity (n) = 10 messages\n" +
+            "  Current messages in buffer = 4\n" +
+            "Rule (from lecture): In bounded capacity, the sender must wait only if the link is full. If the link is not full, the send is non-blocking.\n" +
+            "Step 1: Calculate the available slots.\n" +
+            "  Available slots = capacity - current = 10 - 4 = 6 messages\n" +
+            "Step 2: Conclusion for the producer.\n" +
+            "  The producer can add 6 more messages without waiting.\n" +
+            "Step 3: Behavior when the buffer becomes full.\n" +
+            "  Once the buffer reaches its capacity of 10 messages, the producer must wait (blocking send) until the consumer removes at least one message and frees a slot.\n" +
+            "Final answer: 6 messages can be added without waiting; when the buffer is full, the producer blocks.",
+          tags: ["Buffering", "Bounded Capacity", "Calculation"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. In a direct communication system, how many communication links exist among 5 processes (P1, P2, P3, P4, P5), assuming each pair has exactly one link?",
+          translation:
+            "في نظام اتصال مباشر، كم communication link موجود بين 5 عمليات (P1, P2, P3, P4, P5)، بافتراض أن كل زوج له link واحد فقط؟",
+          answer:
+            "Given:\n" +
+            "  Number of processes (n) = 5\n" +
+            "Rule (from lecture): In direct communication, between each pair of processes there exists exactly one link.\n" +
+            "Formula: The number of unique pairs among n processes is n × (n − 1) / 2.\n" +
+            "Step 1: Apply the formula.\n" +
+            "  Number of links = n × (n − 1) / 2 = 5 × (5 − 1) / 2 = 5 × 4 / 2 = 20 / 2 = 10\n" +
+            "Step 2: List the pairs to verify.\n" +
+            "  (P1,P2), (P1,P3), (P1,P4), (P1,P5),\n" +
+            "  (P2,P3), (P2,P4), (P2,P5),\n" +
+            "  (P3,P4), (P3,P5),\n" +
+            "  (P4,P5)\n" +
+            "  Total = 4 + 3 + 2 + 1 = 10\n" +
+            "Final answer: There are exactly 10 communication links among the 5 processes.",
+          tags: ["Direct Communication", "Communication Link", "Calculation"],
+          ref: "Lecture 4 — Slide 30 (Direct Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Three processes P1, P2, and P3 share a single mailbox A. P1 sends a message to A, while P2 and P3 both attempt to receive from A. Based on the lecture, list the three solutions to determine who receives the message, and explain what each solution does.",
+          translation:
+            "ثلاث عمليات P1, P2, P3 تتشارك mailbox واحد A. P1 يرسل رسالة إلى A، بينما P2 و P3 يحاولان الاستقبال من A. بناءً على المحاضرة، اذكر الحلول الثلاثة لتحديد من يستقبل الرسالة، واشرح ماذا يفعل كل حل.",
+          answer:
+            "Given:\n" +
+            "  Mailbox A is shared by P1, P2, P3.\n" +
+            "  P1 sends a message; P2 and P3 attempt to receive.\n" +
+            "  Problem: who gets the message?\n" +
+            "Rule (from lecture): The three solutions are:\n" +
+            "Solution 1: Allow a link to be associated with at most two processes.\n" +
+            "  Effect: Only one of P2 or P3 can be associated with the link along with P1, so only one of them receives.\n" +
+            "Solution 2: Allow only one process at a time to execute a receive operation.\n" +
+            "  Effect: P2 or P3 is allowed to receive first (mutual exclusion on receive); the other must wait or get nothing.\n" +
+            "Solution 3: Allow the system to select arbitrarily the receiver.\n" +
+            "  Effect: The system picks either P2 or P3 arbitrarily, and the sender (P1) is then notified who the receiver was.\n" +
+            "Final answer: The three solutions are (1) two-process-only links, (2) one-receive-at-a-time, and (3) arbitrary system selection with sender notification.",
+          tags: ["Indirect Communication", "Mailbox Sharing", "Calculation"],
+          ref: "Lecture 4 — Slide 34 (Indirect Communication)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Consider a zero-capacity communication link between a sender S and a receiver R. If S issues 3 send operations in quick succession, how many of these sends can complete immediately, and what is the state of S after each send? Explain using the concept of rendezvous.",
+          translation:
+            "اعتبر communication link بسعة صفر (zero capacity) بين مرسل S ومستقبل R. إذا أصدر S 3 عمليات send متتالية وسريعة، كم من هذه العمليات يمكن أن تكتمل فورًا، وما هي حالة S بعد كل send؟ اشرح باستخدام مفهوم rendezvous.",
+          answer:
+            "Given:\n" +
+            "  Link capacity = 0 messages (zero capacity)\n" +
+            "  Sender S performs 3 send operations in succession.\n" +
+            "Rule (from lecture): In zero capacity, the sender must wait for the receiver (rendezvous). This means blocking send and blocking receive.\n" +
+            "Step 1: Analyze the first send.\n" +
+            "  S issues send #1.\n" +
+            "  Because the link has zero capacity, the message cannot be queued.\n" +
+            "  S must block (wait) until R physically receives the message.\n" +
+            "  State of S after send #1: blocked (waiting for R to receive).\n" +
+            "Step 2: Analyze the second send.\n" +
+            "  S cannot proceed to send #2 until R has received send #1 and S has been unblocked.\n" +
+            "  Therefore send #2 cannot even start until send #1 completes.\n" +
+            "Step 3: Analyze the third send.\n" +
+            "  Same logic: send #3 cannot start until send #2 completes.\n" +
+            "Step 4: Total sends completed immediately.\n" +
+            "  Number of sends that complete immediately = 0.\n" +
+            "  All sends require rendezvous with R before completion.\n" +
+            "Concept of rendezvous: rendezvous means the sender and receiver must meet at the same instant for the message to be transferred, because there is no buffer to hold the message in the meantime.\n" +
+            "Final answer: 0 sends complete immediately; S blocks on the first send and waits for R; subsequent sends can only proceed after the previous rendezvous completes.",
+          tags: ["Buffering", "Zero Capacity", "Rendezvous", "Calculation"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Suppose a bounded-capacity link has a maximum of n = 8 messages. The producer adds 8 messages (link is now full), then the consumer removes 3 messages. How many messages are now in the link, and how many more can the producer add without waiting?",
+          translation:
+            "افترض bounded-capacity link بحد أقصى n = 8 رسائل. المنتج يضيف 8 رسائل (الـ link الآن ممتلئ)، ثم المستهلك يزيل 3 رسائل. كم رسالة الآن في الـ link، وكم رسالة إضافية يمكن للمنتج إضافتها دون انتظار؟",
+          answer:
+            "Given:\n" +
+            "  Link capacity (n) = 8 messages\n" +
+            "  Initial messages added by producer = 8 (link is full)\n" +
+            "  Messages removed by consumer = 3\n" +
+            "Rule: In bounded capacity, the producer waits only when the link is full. As soon as a slot is freed, the producer can send again (non-blocking while space is available).\n" +
+            "Step 1: Calculate current number of messages in the link.\n" +
+            "  Current = added - removed = 8 - 3 = 5 messages\n" +
+            "Step 2: Calculate available slots.\n" +
+            "  Available = capacity - current = 8 - 5 = 3 slots\n" +
+            "Step 3: Conclusion.\n" +
+            "  The producer can add 3 more messages without waiting.\n" +
+            "  After adding those 3 messages, the link will be full again (8 messages) and the producer must then block.\n" +
+            "Final answer: There are currently 5 messages in the link, and the producer can add 3 more messages without waiting.",
+          tags: ["Buffering", "Bounded Capacity", "Calculation"],
+          ref: "Lecture 4 — Slide 36 (Buffering)",
+          likely: "medium",
+        },
+      ],
+    },
   ],
 });

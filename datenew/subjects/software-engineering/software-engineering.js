@@ -3532,5 +3532,1044 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "se-lecture-05",
+      t: "Lecture 5 (Chapter 4, Lec : 2) — Requirements Engineering (Spec, Validation, Change)",
+      d: "هندسة المتطلبات — الفصول 4.4 حتى 4.6 من كتاب Sommerville: مواصفة المتطلبات، التحقق، وإدارة التغيير.",
+      pdf: "datenew/subjects/software-engineering/lectures/lec 5/Software Engineering, 10th GLOBAL Edition - Chapter 4 - Requirements engineering-lec 5.pdf",
+      pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/Lecture-05-Questions.pdf",
+      // المحاضرة: Lecture 5 (Chapter 4, Lec : 2) — Requirements Engineering (Sommerville Ch.4 — Sections 4.4-4.6) — موضوعها: مواصفة المتطلبات، التحقق، وإدارة تغيير المتطلبات، use cases، SRS، traceability.
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمواضيع هندسة المتطلبات: مواصفة المتطلبات، SRS، use cases، و traceability — مناسب لمراجعة المحاضرة كاملة.",
+          links: [
+            {
+              t: "كورس هندسة متطلبات البرمجيات (Playlist)",
+              d: "سلسلة محاضرات بالعربي تغطي أساسيات هندسة المتطلبات: تعريفها، أنواعها، عملية elicitation و specification و validation. مناسب لمراجعة القسم 4.4 و 4.5 من المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLquXYvvn8Qk-vWE-6e8w8YKz-qv7gRFxG",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "هندسة البرمجيات — شرح كتاب Sommerville (Playlist)",
+              d: "كورس شامل بالعربي لكتاب Sommerville العالمي (نفس كتاب المحاضرة). يشمل محاضرات عن Requirements Engineering وتطبيقاتها. مناسب لفهم السياق العام للمحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLSdxbt9aypHLpUEjVa96utjc_lcDndJ8K",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Requirements Engineering - Lecture 1 (بالعربي)",
+              d: "محاضرة مقدمة في هندسة المتطلبات بالعربي تشرح المفاهيم الأساسية: functional vs non-functional requirements، وعملية requirements engineering. مناسب لمراجعة تعريفات القسم 4.4.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة",
+                  url: "https://www.youtube.com/watch?v=lrIe_mI4asE",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "UML Use Case Diagram — شرح بالعربي",
+              d: "شرح عربي لمخطط حالات الاستخدام (Use Case Diagram): الممثلون (actors)، التفاعلات، والعلاقات. مناسب لفهم القسم 4.4.3 من المحاضرة عن use cases و UML.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة",
+                  url: "https://www.youtube.com/watch?v=nF18GZmTiYQ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "مصادر فيديو بالإنجليزي لتعميق الفهم: SRS document، use case diagrams، و requirements validation. ملاحظة: الزراي نوع search لأنه يفتح صفحة بحث يوتيوب لا فيديو محدد.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: Requirements Engineering Tutorial",
+              d: "صفحة بحث يوتيوب تعرض عشرات الفيديوهات العالمية عن هندسة المتطلبات. اختر فيديو مشاهدة عالية ومدته مناسبة. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=requirements+engineering+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Use Case Diagram UML",
+              d: "صفحة بحث يوتيوب لفيديوهات UML Use Case Diagram. اختر فيديو يشرح الممثلين والتفاعلات و system boundary. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=use+case+diagram+UML+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Software Requirements Specification SRS",
+              d: "صفحة بحث يوتيوب لفيديوهات تشرح SRS document وهيكل IEEE الخاص به. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=software+requirements+specification+SRS+document",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات مرجعية مفصّلة تشرح مفاهيم المحاضرة: SRS format، Use Case Diagram، و Requirements Traceability Matrix.",
+          links: [
+            {
+              t: "Software Requirement Specification (SRS) Format — GeeksforGeeks",
+              d: "مقال مفصّل يشرح هيكل مستند SRS: المقدمة، الوصف العام، Functional Requirements، Interface Requirements، Performance Requirements، Non-Functional Attributes. مناسب لفهم القسم 4.4.4 من المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/software-requirement-specification-srs-format",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Software Requirements Specification — Wikipedia",
+              d: "مقال موسوعي عن SRS: تعريفها، تاريخ معايير IEEE (830-1984 و 29148:2018)، خصائص الجودة للمتطلبات (necessary, unambiguous, complete, consistent, feasible). مناسب لمراجعة تعريف SRS والمعايير.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://en.wikipedia.org/wiki/Software_requirements_specification",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What is Use Case Diagram? — Visual Paradigm Guide",
+              d: "دليل شامل عن Use Case Diagrams: المكونات (actors, use cases, communication links, system boundaries)، أنواع العلاقات (extends, include, generalization)، ونصائح للرسم. مناسب لفهم القسم 4.4.3.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-use-case-diagram",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Requirements Traceability Matrix (RTM) — GeeksforGeeks",
+              d: "شرح كامل لـ RTM: تعريفها، أنواعها (Forward, Backward, Bidirectional)، مكوناتها، وأهميتها في تغطية الاختبارات. مناسب لفهم traceability المذكور في القسم 4.6.1.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-testing/requirement-traceability-matrix",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Implementing Requirements Traceability — SodiusWillert",
+              d: "دليل تطبيقي عن traceability: الفرق بين forward و backward traceability، الفوائد، تحديات التنفيذ، وأفضل الممارسات. مناسب لتعميق فهم إدارة تغيير المتطلبات في القسم 4.6.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.sodiuswillert.com/en/blog/implementing-requirements-traceability-in-systems-software-engineering",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لرسم Use Case Diagrams وإدارة المتطلبات بشكل احترافي — مناسبة للتطبيق العملي والتدريب على مفاهيم المحاضرة.",
+          links: [
+            {
+              t: "Visual Paradigm Online — أداة Use Case Diagram مجانية",
+              d: "أداة أونلاين مجانية لرسم UML Use Case Diagrams بمحرر drag-and-drop وقوالب جاهزة. تدعم التصدير بصيغ PNG, JPG, SVG, PDF. مناسب للتدريب العملي على رسم المخططات المذكورة في القسم 4.4.3.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://online.visual-paradigm.com/diagrams/features/use-case-diagram-software",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Lucidchart — Use Case Diagram Tool",
+              d: "أداة شائعة لرسم المخططات من ضمنها Use Case Diagrams، مع شرح للرموز (actors as stick figures, use cases as ovals, system boundaries). مناسب للتدريب على use cases.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://lucid.co/diagram/uml/use-case-diagram-tutorial",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "IBM Engineering Requirements Management DOORS",
+              d: "أداة DOORS من IBM لإدارة المتطلبات على المستوى المؤسسي — نفس الأداة المذكورة في المحاضرة (القسم 4.6.1) كأداة متخصصة للأنظمة الأكبر. تنفّذ traceability و change management.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.ibm.com/products/requirements-management",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        // ============ MCQ — likely: high ============
+        {
+          q: "1. What is requirements specification?",
+          options: [
+            "The process of writing down the user and system requirements in a requirements document.",
+            "The process of gathering requirements from stakeholders using interviews.",
+            "The process of checking that requirements define the system the customer wants.",
+            "The process of managing changes to requirements after the document is approved.",
+          ],
+          correct: 0,
+          translation: "ما هي مواصفة المتطلبات (Requirements specification)؟",
+          explanation:
+            'الإجابة الصحيحة هي الأولى لأن التعريف المذكور في المحاضرة هو "the process of writing down the user and system requirements in a requirements document". الخيارات الأخرى تصف عمليات أخرى: الثاني يصف الـ elicitation، الثالث يصف الـ validation، والرابع يصف الـ change management.',
+          tags: ["Requirements specification", "Definitions"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4",
+          likely: "high",
+        },
+        {
+          q: "2. User requirements are almost always written in:",
+          options: [
+            "Mathematical specifications based on finite-state machines.",
+            "Natural language supplemented by appropriate diagrams and tables.",
+            "Programming language constructs with iteration and alternatives.",
+            "Formal set-theory notations only.",
+          ],
+          correct: 1,
+          translation: "متطلبات المستخدم تُكتب دائمًا تقريبًا باستخدام:",
+          explanation:
+            "المحاضرة تنص صراحة على أن user requirements تُكتب بلغة طبيعية معززة بمخططات وجداول. الرياضية والبرمجية تستخدم للـ system requirements وليست للـ user requirements لأنها تتطلب خبرة تقنية.",
+          tags: ["User requirements", "Natural language"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4",
+          likely: "high",
+        },
+        {
+          q: "3. Ideally, user requirements should specify:",
+          options: [
+            "The internal architecture and design of the system.",
+            "The database schema and implementation details.",
+            "Only the external behavior of the system.",
+            "The programming language and frameworks to be used.",
+          ],
+          correct: 2,
+          translation: "من المفترض مثاليًا أن متطلبات المستخدم تحدد:",
+          explanation:
+            "المحاضرة تؤكد أن user requirements should specify only the external behavior of the system، ولا يجب أن تتضمن تفاصيل التصميم أو البنية المعمارية لأنها موجهة لمستخدمين غير تقنيين.",
+          tags: ["User requirements", "External behavior"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4",
+          likely: "high",
+        },
+        {
+          q: "4. According to the lecture, which notation is the most widely used way of specifying system and software requirements?",
+          options: [
+            "Mathematical specifications.",
+            "Graphical notations such as UML diagrams.",
+            "Natural language.",
+            "Structured programming constructs.",
+          ],
+          correct: 2,
+          translation:
+            "وفقًا للمحاضرة، ما هي الطريقة الأكثر استخدامًا لكتابة متطلبات النظام والبرمجيات؟",
+          explanation:
+            "رغم وجود بدائل كثيرة، المحاضرة تنص على أن natural language will continue to be the most widely used way. السبب أنها معبّرة وبديهية وعالمية، رغم مشاكل الغموض فيها.",
+          tags: ["Natural language", "Notations"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.1",
+          likely: "high",
+        },
+        {
+          q: '5. In natural language requirements, the word "shall" is used to indicate:',
+          options: [
+            "Desirable requirements that are not essential.",
+            "Mandatory requirements that the system must support.",
+            "Optional requirements for future versions.",
+            "Requirements that have been cancelled.",
+          ],
+          correct: 1,
+          translation:
+            'في متطلبات اللغة الطبيعية، كلمة "shall" تستخدم للإشارة إلى:',
+          explanation:
+            'المحاضرة تفرّق: mandatory requirements تُكتب بـ "shall"، أما desirable requirements فتُكتب بـ "should". هذا التمييز يساعد على فهم أولوية المتطلب.',
+          tags: ["Natural language", "Guidelines", "shall vs should"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.1 (Guideline 2)",
+          likely: "high",
+        },
+        {
+          q: '6. In natural language requirements, the word "should" is used to indicate:',
+          options: [
+            "Mandatory requirements that must be supported.",
+            "Desirable requirements that are not essential.",
+            "Critical safety requirements only.",
+            "Requirements that have already been implemented.",
+          ],
+          correct: 1,
+          translation:
+            'في متطلبات اللغة الطبيعية، كلمة "should" تستخدم للإشارة إلى:',
+          explanation:
+            'حسب التوجيه الثاني: "Desirable requirements are not essential and are written using should". هذا يفصل بين الإلزامي (shall) والمستحسن (should).',
+          tags: ["Natural language", "Guidelines", "shall vs should"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.1 (Guideline 2)",
+          likely: "high",
+        },
+        {
+          q: "7. Which of the following is NOT one of the recommended guidelines for writing natural language requirements?",
+          options: [
+            "Invent a standard format and ensure all requirements adhere to it.",
+            "Use text highlighting (bold, italic, or color) to pick out key parts.",
+            'Use software jargon such as "architecture" and "module" to be precise.',
+            "Associate a rationale with each user requirement.",
+          ],
+          correct: 2,
+          translation:
+            "أيٌّ مما يلي ليس من التوجيهات الموصى بها لكتابة متطلبات اللغة الطبيعية؟",
+          explanation:
+            "التوجيه الرابع يوصي بتجنب الـ jargon والاختصارات لأنها تُساء فهمها. الخيارات الأخرى كلها من التوجيهات الخمسة المذكورة في المحاضرة.",
+          tags: ["Natural language", "Guidelines"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.1 (Guidelines)",
+          likely: "high",
+        },
+        {
+          q: "8. The fifth guideline for natural language requirements recommends associating each user requirement with a:",
+          options: [
+            "Source code reference.",
+            "Rationale explaining why the requirement was included.",
+            "Database schema diagram.",
+            "Test case specification.",
+          ],
+          correct: 1,
+          translation:
+            "التوجيه الخامس لكتابة متطلبات اللغة الطبيعية يوصي بربط كل متطلب بـ:",
+          explanation:
+            "التوجيه الخامس يقول: try to associate a rationale with each user requirement يشرح سبب وجود المتطلب ومَن اقترحه، وهذا مفيد عند تغيير المتطلبات لمعرفة مَن تستشيره.",
+          tags: ["Natural language", "Guidelines", "Rationale"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.1 (Guideline 5)",
+          likely: "high",
+        },
+        {
+          q: "9. Structured natural language specifications use:",
+          options: [
+            "Mathematical concepts such as finite-state machines.",
+            "Standard templates or forms to specify requirements.",
+            "Only graphical models without any text.",
+            "Free-form text written by each developer independently.",
+          ],
+          correct: 1,
+          translation: "المواصفات المنظّمة (Structured specifications) تستخدم:",
+          explanation:
+            "Structured language notations use templates to specify system requirements. هذا يحافظ على معظم مرونة اللغة الطبيعية لكنه يفرض توحيدًا على المواصفة.",
+          tags: ["Structured specifications", "Templates"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.2",
+          likely: "high",
+        },
+        {
+          q: '10. In a structured specification form, the "precondition" field specifies:',
+          options: [
+            "What must be true after the function is called.",
+            "What must be true before the function is called.",
+            "The side effects of the operation.",
+            "The destination of the outputs.",
+          ],
+          correct: 1,
+          translation: 'في نموذج المواصفة المنظّمة، حقل "precondition" يحدد:',
+          explanation:
+            "precondition = what must be true before the function is called. أما postcondition فيحدد what is true after the function is called. هذا تمييز أساسي في النهج الوظيفي (functional approach).",
+          tags: ["Structured specifications", "Precondition", "Postcondition"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.2 (Figure 4.13)",
+          likely: "high",
+        },
+        {
+          q: "11. Use cases were first introduced in:",
+          options: [
+            "The VOLERE method by Robertson and Robertson.",
+            "The Objectory method by Jacobsen et al.",
+            "The Waterfall model by Royce.",
+            "The Agile Manifesto in 2001.",
+          ],
+          correct: 1,
+          translation: "حالات الاستخدام (Use cases) ظهرت لأول مرة في:",
+          explanation:
+            "المحاضرة تقول: They were first introduced in the Objectory method (Jacobsen et al. 1993). ثم أصبحت جزءًا أساسيًا من UML.",
+          tags: ["Use cases", "Objectory", "Jacobsen"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.3",
+          likely: "high",
+        },
+        {
+          q: "12. In a use case diagram, actors are represented as:",
+          options: [
+            "Named ellipses.",
+            "Stick figures.",
+            "Rectangles with rounded corners.",
+            "Diamonds.",
+          ],
+          correct: 1,
+          translation:
+            "في مخطط حالات الاستخدام، يُمثَّل الممثلون (actors) على شكل:",
+          explanation:
+            "Actors may be human or other systems, and are represented as stick figures. أما الـ interactions فيتم تمثيلها كـ named ellipses.",
+          tags: ["Use cases", "Actors", "UML"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.3",
+          likely: "high",
+        },
+        {
+          q: "13. In a use case diagram, each class of interaction is represented as:",
+          options: [
+            "A stick figure.",
+            "A named ellipse.",
+            "A rectangle.",
+            "An arrow with a diamond head.",
+          ],
+          correct: 1,
+          translation:
+            "في مخطط حالات الاستخدام، يتم تمثيل كل صنف من التفاعلات على شكل:",
+          explanation:
+            "Each class of interaction is represented as a named ellipse. الـ stick figures للممثلين، والخطوط تربط الممثلين بالتفاعلات، والأسهم اختيارية لبيان direction of initiation.",
+          tags: ["Use cases", "Interaction", "UML"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.3",
+          likely: "high",
+        },
+        {
+          q: "14. Use cases have now become a fundamental feature of:",
+          options: [
+            "The Unified Modeling Language (UML).",
+            "The IEEE 830 standard for SRS.",
+            "The DOORS requirements management tool.",
+            "The VOLERE requirements method.",
+          ],
+          correct: 0,
+          translation: "حالات الاستخدام أصبحت ميزة أساسية في:",
+          explanation:
+            "Use cases have now become a fundamental feature of the Unified Modeling Language (UML). الـ UML هو معيار قياسي للنمذجة object-oriented.",
+          tags: ["Use cases", "UML"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.3",
+          likely: "high",
+        },
+        {
+          q: "15. The software requirements document is also called the:",
+          options: [
+            "Software Design Document (SDD).",
+            "Software Requirements Specification (SRS).",
+            "System Architecture Document (SAD).",
+            "User Acceptance Document (UAD).",
+          ],
+          correct: 1,
+          translation: "يُسمى مستند متطلبات البرمجيات أيضًا:",
+          explanation:
+            "The software requirements document (sometimes called the software requirements specification or SRS). هو البيان الرسمي لما يجب على مطوري النظام تنفيذه.",
+          tags: ["SRS", "Definitions"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.4",
+          likely: "high",
+        },
+        {
+          q: "16. According to the IEEE standard structure of a requirements document, which chapter defines the technical terms used in the document?",
+          options: ["Preface.", "Glossary.", "Introduction.", "Index."],
+          correct: 1,
+          translation:
+            "وفقًا لمعيار IEEE لهيكل مستند المتطلبات، أي فصل يعرّف المصطلحات التقنية المستخدمة؟",
+          explanation:
+            "Glossary يعرّف المصطلحات التقنية، ويجب ألا تفترض خبرة القارئ. أما Preface فيتحدث عن readership و version history، و Introduction يشرح حاجة النظام، و Index فهو فهرس.",
+          tags: ["SRS", "IEEE standard", "Glossary"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.4 (Figure 4.17)",
+          likely: "high",
+        },
+        {
+          q: "17. Which chapter of the IEEE-standard requirements document describes anticipated future changes to the system?",
+          options: [
+            "System architecture.",
+            "System models.",
+            "System evolution.",
+            "Appendices.",
+          ],
+          correct: 2,
+          translation:
+            "أي فصل في مستند المتطلبات (معيار IEEE) يصف التغييرات المستقبلية المتوقعة على النظام؟",
+          explanation:
+            "System evolution يصف الافتراضات الأساسية والتغييرات المتوقعة بسبب تطور الـ hardware أو تغير احتياجات المستخدمين. هذا يساعد المصممين على تجنب قرارات تصميم مقيدة.",
+          tags: ["SRS", "IEEE standard", "System evolution"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.4 (Figure 4.17)",
+          likely: "high",
+        },
+        {
+          q: "18. According to agile methods, requirements documents are often replaced with:",
+          options: [
+            "Detailed mathematical specifications.",
+            "User stories written on cards or whiteboards.",
+            "Formal contracts signed by all stakeholders.",
+            "IEEE-standard requirements documents.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للأساليب Agile، تُستبدل مستندات المتطلبات غالبًا بـ:",
+          explanation:
+            "Agile argues that requirements change so rapidly that a requirements document is out of date as soon as it is written. لذلك يستخدمون user stories مكتوبة على cards أو whiteboards، والمستخدم يعطيها أولوية.",
+          tags: ["Agile", "User stories", "SRS"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.4",
+          likely: "high",
+        },
+        {
+          q: "19. Requirements validation is the process of checking that requirements define:",
+          options: [
+            "The system that developers prefer to build.",
+            "The system that the customer really wants.",
+            "The cheapest possible system within budget.",
+            "The system architecture in detail.",
+          ],
+          correct: 1,
+          translation:
+            "التحقق من المتطلبات (Requirements validation) هو عملية التأكد من أن المتطلبات تحدد:",
+          explanation:
+            "Requirements validation is the process of checking that requirements define the system that the customer really wants. تختلف عن الـ specification (الكتابة) وعن الـ change management (إدارة التغيير).",
+          tags: ["Requirements validation", "Definitions"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+        {
+          q: "20. Which type of validation check ensures that requirements in the document do not conflict with each other?",
+          options: [
+            "Validity checks.",
+            "Consistency checks.",
+            "Completeness checks.",
+            "Realism checks.",
+          ],
+          correct: 1,
+          translation:
+            "أي نوع من فحوص التحقق يضمن عدم تعارض المتطلبات مع بعضها؟",
+          explanation:
+            "Consistency checks: requirements should not conflict، أي لا توجد قيود متناقضة أو أوصاف مختلفة لنفس الوظيفة. الـ validity يفحص عكس احتياجات المستخدم، والـ completeness يفحص اكتمال الوظائف، والـ realism يفحص قابلية التنفيذ بالميزانية.",
+          tags: ["Requirements validation", "Consistency checks"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+        {
+          q: "21. Which type of validation check ensures that the requirements document includes all functions and constraints intended by the user?",
+          options: [
+            "Validity checks.",
+            "Consistency checks.",
+            "Completeness checks.",
+            "Verifiability.",
+          ],
+          correct: 2,
+          translation:
+            "أي نوع من فحوص التحقق يضمن أن المستند يتضمن كل الوظائف والقيود التي قصدها المستخدم؟",
+          explanation:
+            "Completeness checks تتأكد من أن المستند يشمل كل functions و constraints المقصودة. الـ validity يقارن بالاحتياج الحقيقي للمستخدم، والـ verifiability تتعلق بإمكانية كتابة tests للمتطلبات.",
+          tags: ["Requirements validation", "Completeness checks"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+        {
+          q: "22. Which validation technique involves developing an executable model of the system and using it with end-users?",
+          options: [
+            "Requirements reviews.",
+            "Prototyping.",
+            "Test-case generation.",
+            "Traceability analysis.",
+          ],
+          correct: 1,
+          translation:
+            "أي تقنية تحقق تشمل تطوير نموذج قابل للتنفيذ واستخدامه مع المستخدمين النهائيين؟",
+          explanation:
+            "Prototyping: developing an executable model of a system and using this with end-users and customers to see if it meets their needs. الـ reviews تعتمد على قراءة المستند، والـ test-case generation يكتب tests للمتطلبات.",
+          tags: ["Requirements validation", "Prototyping"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+        {
+          q: "23. According to the lecture, the cost of fixing a requirements problem by making a system change is usually:",
+          options: [
+            "Much less than repairing design or coding errors.",
+            "About the same as fixing a coding error.",
+            "Much greater than repairing design or coding errors.",
+            "Negligible if discovered before implementation.",
+          ],
+          correct: 2,
+          translation:
+            "وفقًا للمحاضرة، تكلفة إصلاح مشكلة في المتطلبات عادةً تكون:",
+          explanation:
+            "The cost of fixing a requirements problem by making a system change is usually much greater than repairing design or coding errors. لأن تغيير المتطلب يعني تغيير التصميم والتنفيذ وإعادة الاختبار.",
+          tags: ["Requirements validation", "Cost"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+        {
+          q: "24. Requirements that are associated with the core, slow-to-change activities of an organization are called:",
+          options: [
+            "Volatile requirements.",
+            "Enduring requirements.",
+            "Functional requirements.",
+            "Domain requirements.",
+          ],
+          correct: 1,
+          translation:
+            "المتطلبات المرتبطة بالأنشطة الأساسية بطيئة التغير في المنظمة تسمى:",
+          explanation:
+            "Enduring requirements ترتبط بالأنشطة الأساسية fundamental work activities. أما Volatile requirements فأكثر عرضة للتغير وترتبط بالأنشطة الداعمة supporting activities.",
+          tags: ["Requirements change", "Enduring", "Volatile"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6 (sidebar)",
+          likely: "high",
+        },
+        {
+          q: "25. Requirements that are more likely to change and are usually associated with supporting activities are called:",
+          options: [
+            "Enduring requirements.",
+            "Volatile requirements.",
+            "Product requirements.",
+            "Organizational requirements.",
+          ],
+          correct: 1,
+          translation:
+            "المتطلبات الأكثر عرضة للتغير والمرتبطة بالأنشطة الداعمة تسمى:",
+          explanation:
+            "Volatile requirements reflect how the organization does its work rather than the work itself. هذا التمييز بين enduring و volatile يساعد في إدارة المتطلبات المتغيرة.",
+          tags: ["Requirements change", "Enduring", "Volatile"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6 (sidebar)",
+          likely: "high",
+        },
+        {
+          q: "26. Which of the following is NOT one of the issues that must be decided during requirements management planning?",
+          options: [
+            "Requirements identification.",
+            "A change management process.",
+            "Traceability policies.",
+            "Selecting the programming language for implementation.",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي ليس من المسائل التي تُقرر خلال تخطيط إدارة المتطلبات؟",
+          explanation:
+            "المحاضرة تذكر 4 مسائل: requirements identification، change management process، traceability policies، tool support. اختيار لغة البرمجة ليس من اختصاص إدارة المتطلبات بل من اختصاص التصميم.",
+          tags: ["Requirements management", "Planning"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.1",
+          likely: "high",
+        },
+        {
+          q: "27. The requirements management tool mentioned in the lecture as suitable for larger systems is:",
+          options: [
+            "Microsoft Word with track changes.",
+            "Shared spreadsheets only.",
+            "DOORS (by IBM).",
+            "GitHub Issues.",
+          ],
+          correct: 2,
+          translation:
+            "أداة إدارة المتطلبات المذكورة في المحاضرة كمناسبة للأنظمة الأكبر هي:",
+          explanation:
+            "للأنظمة الصغيرة يمكن استخدام spreadsheets و databases، أما للأنظمة الأكبر فالمحاضرة تذكر DOORS (IBM 2013) كأداة متخصصة تسهل متابعة عدد كبير من المتطلبات المتغيرة.",
+          tags: ["Requirements management", "DOORS", "Tools"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.1",
+          likely: "high",
+        },
+        {
+          q: "28. The first stage of the requirements change management process is:",
+          options: [
+            "Problem analysis and change specification.",
+            "Change analysis and costing.",
+            "Change implementation.",
+            "System testing and validation.",
+          ],
+          correct: 0,
+          translation: "المرحلة الأولى من عملية إدارة تغيير المتطلبات هي:",
+          explanation:
+            "Problem analysis and change specification: تبدأ بمشكلة متطلب محددة أو اقتراح تغيير، يتم تحليلها للتحقق من صحتها. تليها change analysis and costing ثم change implementation.",
+          tags: ["Requirements change", "Change management"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.2 (Figure 4.19)",
+          likely: "high",
+        },
+        {
+          q: "29. The second stage of the requirements change management process, where the cost of the change is estimated, is:",
+          options: [
+            "Problem analysis and change specification.",
+            "Change analysis and costing.",
+            "Change implementation.",
+            "Requirements review.",
+          ],
+          correct: 1,
+          translation:
+            "المرحلة الثانية من إدارة تغيير المتطلبات، حيث تُقدَّر تكلفة التغيير، هي:",
+          explanation:
+            "Change analysis and costing: تقييم أثر التغيير المقترح باستخدام traceability information ومعرفة عامة بالمتطلبات، وتقدير التكلفة من حيث تعديل المستند والتصميم والتنفيذ، ثم اتخاذ قرار المضي قدمًا.",
+          tags: ["Requirements change", "Change management", "Costing"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.2 (Figure 4.19)",
+          likely: "high",
+        },
+        {
+          q: "30. Requirements traceability means:",
+          options: [
+            "Tracking the project budget and schedule.",
+            "Keeping track of relationships between requirements, their sources, and the system design.",
+            "Tracking the development team's working hours.",
+            "Tracking the number of bugs found in testing.",
+          ],
+          correct: 1,
+          translation: "متطلبات الـ traceability تعني:",
+          explanation:
+            "Traceability: keeping track of relationships between requirements, their sources, and the system design. هذا يسمح بتحليل أسباب التغييرات المقترحة وأثرها على أجزاء النظام الأخرى عند حدوث تغيير.",
+          tags: ["Traceability", "Requirements management"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6 (sidebar)",
+          likely: "high",
+        },
+
+        // ============ MCQ — likely: medium ============
+        {
+          q: "31. The VOLERE requirements engineering method was developed by:",
+          options: [
+            "Jacobsen et al. in 1993.",
+            "Robertson and Robertson in 2013.",
+            "Rittel and Webber in 1973.",
+            "IEEE in 1998.",
+          ],
+          correct: 1,
+          translation: "طريقة VOLERE لهندسة المتطلبات طوّرها:",
+          explanation:
+            "المحاضرة تنص صراحة أن Robertsons (Robertson and Robertson 2013) في كتابهم عن VOLERE اقترحوا كتابة متطلبات المستخدم على بطاقات. Jacobsen طوّر الـ Objectory والـ use cases، و Rittel and Webber طوّرا مفهوم wicked problems.",
+          tags: ["Structured specifications", "VOLERE", "Robertson"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.2",
+          likely: "medium",
+        },
+        {
+          q: "32. According to the author's experience, use cases are:",
+          options: [
+            "More helpful in requirements engineering than in system design.",
+            "More helpful in systems design than in requirements engineering.",
+            "Useless in both requirements engineering and design.",
+            "Only useful for embedded systems.",
+          ],
+          correct: 1,
+          translation: "وفقًا لتجربة المؤلف، حالات الاستخدام:",
+          explanation:
+            "المحاضرة تقول: I find use cases to be more helpful in systems design than in requirements engineering. السبب أن الـ stakeholders لا يفهمون مصطلح use case ولا يجدون النموذج الرسومي مفيدًا.",
+          tags: ["Use cases", "Design", "Requirements engineering"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.3",
+          likely: "medium",
+        },
+        {
+          q: '33. The concept of "wicked problems" — problems that cannot be completely defined — was introduced by:',
+          options: [
+            "Robertson and Robertson (2013).",
+            "Jacobsen et al. (1993).",
+            "Rittel and Webber (1973).",
+            "IEEE (1998).",
+          ],
+          correct: 2,
+          translation: 'مفهوم "المشكلات الشريرة" (wicked problems) قدّمه:',
+          explanation:
+            "Rittel and Webber (1973) قدّما مفهوم wicked problems. ولأن هذه المشكلات لا يمكن تعريفها بالكامل، فمتطلبات البرمجيات تكون incomplete وتتغير مع تطور الفهم.",
+          tags: ["Requirements change", "Wicked problems"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6",
+          likely: "medium",
+        },
+        {
+          q: "34. Which of the following is a reason why system requirements may include some design information?",
+          options: [
+            "An initial architecture may be needed to help structure the requirements specification.",
+            "IEEE standards always require design details in the SRS.",
+            "Customers prefer to review design details rather than requirements.",
+            "Agile methods prohibit separating requirements from design.",
+          ],
+          correct: 0,
+          translation:
+            "أيٌّ مما يلي سبب لاحتواء متطلبات النظام على بعض معلومات التصميم؟",
+          explanation:
+            "المحاضرة تذكر 3 أسباب: (1) قد تضطر لتصميم architecture مبدئي لتنظيم المواصفة، (2) التشغيل البيني مع أنظمة موجودة يفرض قيود تصميم، (3) استخدام architecture محددة لتحقيق non-functional requirements أو لتلبية متطلبات regulator خارجي.",
+          tags: ["System requirements", "Design information"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4",
+          likely: "medium",
+        },
+        {
+          q: "35. According to the lecture, the principal users of a requirements document include all of the following EXCEPT:",
+          options: [
+            "System customers.",
+            "System test engineers.",
+            "Marketing interns with no technical role.",
+            "System maintenance engineers.",
+          ],
+          correct: 2,
+          translation:
+            "وفقًا للمحاضرة، المستخدمون الرئيسيون لمستند المتطلبات يشملون كل ما يلي ما عدا:",
+          explanation:
+            "المستخدمون المذكورون هم: system customers، managers، system engineers، system test engineers، system maintenance engineers. الـ marketing interns دون دور تقني ليسوا من مستخدمي المستند.",
+          tags: ["SRS", "Document users"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.4 (Figure 4.16)",
+          likely: "medium",
+        },
+
+        // ============ ESSAY — likely: high ============
+        {
+          type: "essay",
+          q: "1. Define requirements specification and explain the difference between user requirements and system requirements.",
+          translation:
+            "عرّف مواصفة المتطلبات واشرح الفرق بين متطلبات المستخدم ومتطلبات النظام.",
+          answer:
+            "Requirements specification is the process of writing down the user and system requirements in a requirements document.\n" +
+            "User requirements are written for system users who do not have detailed technical knowledge.\n" +
+            "They are almost always written in natural language supplemented by diagrams and tables, and they should specify only the external behavior of the system without including design or implementation details.\n" +
+            "System requirements are expanded versions of the user requirements that software engineers use as the starting point for system design.\n" +
+            "They add detail and explain how the system should provide the user requirements.\n" +
+            "They may be used as part of the contract for the implementation of the system and should therefore be a complete and detailed specification of the whole system.",
+          tags: ["Requirements specification", "User vs System requirements"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. List and explain the five guidelines recommended for writing natural language requirements.",
+          translation:
+            "اذكر واشرح التوجيهات الخمسة الموصى بها لكتابة متطلبات اللغة الطبيعية.",
+          answer:
+            "1. Invent a standard format and ensure that all requirement definitions adhere to that format. Standardizing the format makes omissions less likely and requirements easier to check.\n" +
+            '2. Use language consistently to distinguish between mandatory and desirable requirements. Use "shall" for mandatory requirements that the system must support, and "should" for desirable requirements that are not essential.\n' +
+            "3. Use text highlighting (bold, italic, or color) to pick out key parts of the requirement.\n" +
+            "4. Do not assume that readers understand technical, software engineering language. Avoid the use of jargon, abbreviations, and acronyms.\n" +
+            "5. Whenever possible, associate a rationale with each user requirement explaining why the requirement has been included and who proposed it, so that you know whom to consult if the requirement has to be changed.",
+          tags: ["Natural language", "Guidelines"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Compare natural language specification with structured specification. Mention the advantages and disadvantages of each.",
+          translation:
+            "قارن بين المواصفة باللغة الطبيعية والمواصفة المنظّمة. اذكر مميزات وعيوب كل منهما.",
+          answer:
+            "Natural language specification:\n" +
+            "Advantages: It is expressive, intuitive, and universal. It has been used since the 1950s and is the most widely used way of specifying requirements.\n" +
+            "Disadvantages: It is potentially vague and ambiguous, its interpretation depends on the background of the reader, it is easy to amalgamate several requirements into a single sentence, and structuring natural language requirements can be difficult.\n" +
+            "Structured specification:\n" +
+            "Advantages: It maintains most of the expressiveness and understandability of natural language but imposes some uniformity on the specification. Variability is reduced, and requirements are organized more effectively.\n" +
+            "Disadvantages: It is still sometimes difficult to write requirements in a clear and unambiguous way, particularly when complex computations are to be specified.",
+          tags: ["Natural language", "Structured specifications", "Comparison"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Sections 4.4.1 and 4.4.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. What is a use case? Describe the components of a use case diagram and how actors and interactions are represented.",
+          translation:
+            "ما هي حالة الاستخدام؟ صف مكونات مخطط حالات الاستخدام وكيف يتم تمثيل الممثلين والتفاعلات.",
+          answer:
+            "A use case is a way of describing interactions between users and a system using a graphical model and structured text.\n" +
+            "Use cases were first introduced in the Objectory method (Jacobsen et al. 1993) and have become a fundamental feature of the Unified Modeling Language (UML).\n" +
+            "A high-level use case diagram has the following components:\n" +
+            "- Actors: entities (human or other systems) that interact with the system. They are represented as stick figures.\n" +
+            "- Use cases (interactions): each class of interaction is represented as a named ellipse.\n" +
+            "- Lines: they link the actors with the interactions.\n" +
+            "- Optional arrowheads: may be added to lines to show how the interaction is initiated.\n" +
+            "Each use case should be documented with a textual description that can be linked to other UML models such as sequence or state charts.",
+          tags: ["Use cases", "UML", "Actors"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.3",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Describe the structure of a software requirements document based on the IEEE standard. List its main chapters.",
+          translation:
+            "صف هيكل مستند متطلبات البرمجيات بناءً على معيار IEEE. اذكر الفصول الرئيسية.",
+          answer:
+            "The software requirements document (also called SRS) is an official statement of what the system developers should implement.\n" +
+            "Its structure is based on an IEEE standard for requirements documents (IEEE 1998). The main chapters are:\n" +
+            "1. Preface — defines the expected readership and version history.\n" +
+            "2. Introduction — describes the need for the system and how it fits into business objectives.\n" +
+            "3. Glossary — defines the technical terms used.\n" +
+            "4. User requirements definition — describes the services provided for the user, including non-functional requirements.\n" +
+            "5. System architecture — a high-level overview of the anticipated architecture.\n" +
+            "6. System requirements specification — describes functional and non-functional requirements in detail.\n" +
+            "7. System models — graphical models showing relationships between components.\n" +
+            "8. System evolution — describes anticipated changes due to hardware evolution and changing user needs.\n" +
+            "9. Appendices — detailed specific information such as hardware and database descriptions.\n" +
+            "10. Index — alphabetic index and indexes of diagrams and functions.",
+          tags: ["SRS", "IEEE standard", "Document structure"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4.4 (Figure 4.17)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. List and explain the five types of checks performed during requirements validation.",
+          translation:
+            "اذكر واشرح أنواع الفحوص الخمسة التي تُجرى أثناء التحقق من المتطلبات.",
+          answer:
+            "Requirements validation is the process of checking that requirements define the system that the customer really wants.\n" +
+            "The five types of checks are:\n" +
+            "1. Validity checks — check that the requirements reflect the real needs of system users, since circumstances may have changed since the requirements were originally elicited.\n" +
+            "2. Consistency checks — requirements in the document should not conflict; there should not be contradictory constraints or different descriptions of the same system function.\n" +
+            "3. Completeness checks — the requirements document should include requirements that define all functions and constraints intended by the system user.\n" +
+            "4. Realism checks — the requirements should be checked to ensure that they can be implemented within the proposed budget and schedule for the system.\n" +
+            "5. Verifiability — system requirements should be written so that they are verifiable, meaning that a set of tests can be written to demonstrate that the delivered system meets each specified requirement.",
+          tags: ["Requirements validation", "Validation checks"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the three principal stages of the requirements change management process.",
+          translation:
+            "اشرح المراحل الثلاث الرئيسية لعملية إدارة تغيير المتطلبات.",
+          answer:
+            "Requirements change management should be applied to all proposed changes after the requirements document has been approved.\n" +
+            "The three principal stages are:\n" +
+            "1. Problem analysis and change specification: The process starts with an identified requirements problem or a specific change proposal. The problem or proposal is analyzed to check that it is valid. The analysis is fed back to the change requestor who may respond with a more specific proposal or withdraw the request.\n" +
+            "2. Change analysis and costing: The effect of the proposed change is assessed using traceability information and general knowledge of the system requirements. The cost of making the change is estimated in terms of modifications to the requirements document and, if appropriate, to the system design and implementation. A decision is then made on whether or not to proceed.\n" +
+            "3. Change implementation: The requirements document and, where necessary, the system design and implementation are modified. The document should be organized so that changes can be made without extensive rewriting, by minimizing external references and making sections as modular as possible.",
+          tags: ["Requirements change", "Change management"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.2 (Figure 4.19)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Discuss the reasons why requirements for large software systems are always changing.",
+          translation:
+            "ناقش الأسباب التي تجعل متطلبات أنظمة البرمجيات الكبيرة دائمًا في حالة تغيير.",
+          answer:
+            'Large software systems are often developed to address "wicked problems" — problems that cannot be completely defined. As the stakeholders\' understanding of the problem changes, the requirements must evolve.\n' +
+            "After a system is installed, new requirements emerge for several reasons:\n" +
+            "1. The business and technical environment always changes after installation. New hardware may be introduced, the system may need to interface with other systems, business priorities may change, and new legislation and regulations may require compliance.\n" +
+            "2. The people who pay for a system and the users of that system are rarely the same people. Customers impose requirements because of organizational and budgetary constraints that may conflict with end-user requirements. After delivery, new features may have to be added for user support.\n" +
+            "3. Large systems usually have a diverse stakeholder community with conflicting or contradictory priorities. The final requirements are a compromise. With experience, the balance of support given to different stakeholders often has to be changed and requirements re-prioritized.",
+          tags: ["Requirements change", "Wicked problems"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. What is the difference between enduring and volatile requirements? Give an example of each.",
+          translation:
+            "ما الفرق بين المتطلبات الدائمة (enduring) والمتطلبات المتقلبة (volatile)؟ أعطِ مثالاً لكل منهما.",
+          answer:
+            "Enduring requirements are the requirements that are associated with the core, slow-to-change activities of an organization. They are associated with fundamental work activities and tend to remain stable over the lifetime of the system.\n" +
+            "Volatile requirements are more likely to change. They are usually associated with supporting activities that reflect how the organization does its work rather than the work itself.\n" +
+            "Example of enduring requirements: In a hospital system, the requirement that patient records must be kept confidential and accurate is enduring because patient care is a fundamental activity.\n" +
+            "Example of volatile requirements: In the same hospital system, the requirement that reports must be printed on a specific type of form, or that data must be exchanged with a particular external system, is volatile because the supporting procedures and external systems change over time.",
+          tags: ["Requirements change", "Enduring", "Volatile"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6 (sidebar)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain what is meant by requirements management planning and list the issues that must be decided during this stage.",
+          translation:
+            "اشرح ما يقصد بتخطيط إدارة المتطلبات واذكر المسائل التي تُقرر خلال هذه المرحلة.",
+          answer:
+            "Requirements management planning is concerned with establishing how a set of evolving requirements will be managed.\n" +
+            "During the planning stage, the following issues must be decided:\n" +
+            "1. Requirements identification — each requirement must be uniquely identified so that it can be cross-referenced with other requirements and used in traceability assessments.\n" +
+            "2. A change management process — the set of activities that assess the impact and cost of changes.\n" +
+            "3. Traceability policies — these policies define the relationships between each requirement and between the requirements and the system design that should be recorded, and how these records should be maintained.\n" +
+            "4. Tool support — requirements management involves processing large amounts of information. Tools may range from specialist requirements management systems to shared spreadsheets and simple database systems.\n" +
+            "Tool support is needed for: requirements storage, change management, and traceability management. For larger systems, specialized tools such as DOORS make it easier to keep track of a large number of changing requirements.",
+          tags: ["Requirements management", "Planning", "Traceability"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. What is requirements traceability and why is it important in requirements management?",
+          translation:
+            "ما هي الـ traceability في المتطلبات ولماذا هي مهمة في إدارة المتطلبات؟",
+          answer:
+            "Requirements traceability is the ability to keep track of the relationships between requirements, their sources, and the system design.\n" +
+            "It allows you to trace how a change ripples its way through the system.\n" +
+            "It is important for two main reasons:\n" +
+            "1. To analyze the reasons for proposed changes — knowing the source and rationale of a requirement helps decide whether a change is necessary and whether it is desirable.\n" +
+            "2. To assess the impact that changes are likely to have on other parts of the system — when a requirement changes, traceability links reveal which other requirements, design components, and tests are affected, so that the cost and risk of the change can be evaluated.\n" +
+            "Traceability policies should define which relationships must be recorded (between requirements, between requirements and design, and between requirements and sources) and how these records should be maintained.",
+          tags: ["Traceability", "Requirements management"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.6.1 (sidebar)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. List the notations that can be used for writing system requirements and briefly describe each.",
+          translation:
+            "اذكر الطرق المستخدمة لكتابة متطلبات النظام وصف كلًا منها باختصار.",
+          answer:
+            "According to Figure 4.11, the possible notations for writing system requirements are:\n" +
+            "1. Natural language sentences — the requirements are written using numbered sentences in natural language. Each sentence should express one requirement.\n" +
+            "2. Structured natural language — the requirements are written in natural language on a standard form or template. Each field provides information about an aspect of the requirement.\n" +
+            "3. Graphical notations — graphical models, supplemented by text annotations, are used to define the functional requirements for the system. UML use case and sequence diagrams are commonly used.\n" +
+            "4. Mathematical specifications — these notations are based on mathematical concepts such as finite-state machines or sets. Although they are unambiguous, most customers do not understand a formal specification and cannot check that it represents what they want, so they are reluctant to accept it as a system contract.\n" +
+            "Despite these alternatives, natural language remains the most widely used way of specifying system and software requirements.",
+          tags: ["Notations", "System requirements"],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.4 (Figure 4.11)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. List and briefly describe the three requirements validation techniques mentioned in the lecture.",
+          translation:
+            "اذكر واشرح باختصار تقنيات التحقق الثلاث المذكورة في المحاضرة.",
+          answer:
+            "A number of requirements validation techniques can be used individually or in conjunction with one another:\n" +
+            "1. Requirements reviews — the requirements are analyzed systematically by a team of reviewers who check for errors and inconsistencies.\n" +
+            "2. Prototyping — this involves developing an executable model of a system and using this with end-users and customers to see if it meets their needs and expectations. Stakeholders experiment with the system and feed back requirements changes to the development team.\n" +
+            "3. Test-case generation — requirements should be testable. If the tests for the requirements are devised as part of the validation process, this often reveals requirements problems. If a test is difficult or impossible to design, this usually means that the requirements will be difficult to implement and should be reconsidered. Developing tests from the user requirements before any code is written is an integral part of test-driven development.",
+          tags: [
+            "Requirements validation",
+            "Reviews",
+            "Prototyping",
+            "Test-case generation",
+          ],
+          ref: "Lecture 5 (Chapter 4, Lec : 2) — Section 4.5",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });

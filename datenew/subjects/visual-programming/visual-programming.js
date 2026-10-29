@@ -4068,7 +4068,7 @@ subjects.push({
       id: "visual-programming-lecture-04",
       t: "المحاضرة 4 — Loops, Files & ListBox",
       d: "أسئلة شاملة عن ListBox والحلقات (while / for / do-while) والملفات (StreamWriter / StreamReader) و Open/SaveFileDialog بلغة C#.",
-      pdf: "datenew/subjects/visual-programming/lectures/lec 4/lec 4-2مضغوط_text.pdf",
+      pdf: "/datenew/subjects/visual-programming/lectures/lec 4/lec 4.pdf",
       pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Visual Programming - Lecture 4 - Questions.pdf",
       // المحاضرة: Lecture 4 — Loops, Files & ListBox (Visual Programming / C#)
 
@@ -5035,7 +5035,7 @@ subjects.push({
       id: "visual-programming-lecture-05",
       t: "المحاضرة 5 — Modularizing Your Code with Methods",
       d: "شرح Methods في C# (.NET): void, value-returning, parameters, ref/out, Named/Default arguments, Random class, Load event",
-      pdf: "datenew/subjects/visual-programming/lectures/lec 5/Chapter 5_text.pdf",
+      pdf: "datenew/subjects/visual-programming/lectures/lec 5/lec 5.pdf",
       pdf2: "datenew/subjects/visual-programming/questions/Questions on each lecture/Lecture-05-Questions.pdf",
       // المحاضرة: Modularizing Your Code with Methods (Lecture 05) — Methods in C#, Random class, ref/out, value-returning methods, Load event
 

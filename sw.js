@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1793295316119";
+const VERSION = "v1793315406179";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -64,6 +64,19 @@ self.addEventListener("message", (event) => {
 
 const ANNOTATOR_KEY = "./pdf-annotator.html";
 
+// Cloudflare Pages بيعمل redirect (index.html → / و pdf-annotator.html → /pdf-annotator).
+// الرد المتخزن بعد redirect بيبقى redirected=true، والمتصفح بيرفض يرد بيه على navigation (صفحة أو iframe)،
+// فبنرجّعه كنسخة نضيفة قبل ما نرد بيها.
+async function cleanResponse(res) {
+  if (!res || !res.redirected) return res;
+  const body = await res.blob();
+  return new Response(body, {
+    status: res.status,
+    statusText: res.statusText,
+    headers: res.headers,
+  });
+}
+
 // صفحة بديلة تظهر جوه الـ iframe لو مفيش نت (بدل ما المنصة كلها تتفتح جواه)
 function offlineFramePage() {
   return new Response(
@@ -91,14 +104,14 @@ async function networkFirst(request, isPage) {
     return response;
   } catch (err) {
     const hit = await cache.match(key);
-    if (hit) return hit;
+    if (hit) return cleanResponse(hit);
     // iframe: ما نرجّعش index.html (ده اللي كان بيفتح المنصة جوه المنصة)
     if (request.destination === "iframe") return offlineFramePage();
     if (isPage) {
       const page =
         (await cache.match("./index.html")) ||
         (await cache.match("./"));
-      if (page) return page;
+      if (page) return cleanResponse(page);
     }
     return new Response(
       "📴 مفيش اتصال بالإنترنت، والصفحة دي لسه ماتفتحتش على جهازك — ممكن تفتحها تاني لما النت يرجع",
