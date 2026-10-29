@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1793233790353";
+const VERSION = "v1793248224503";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -62,16 +62,38 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
 });
 
+const ANNOTATOR_KEY = "./pdf-annotator.html";
+
+// صفحة بديلة تظهر جوه الـ iframe لو مفيش نت (بدل ما المنصة كلها تتفتح جواه)
+function offlineFramePage() {
+  return new Response(
+    '<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>' +
+      '<body style="font-family:system-ui,sans-serif;text-align:center;padding:32px 16px;color:#64748b">' +
+      "<p>📴 مفيش اتصال بالإنترنت، والصفحة دي لسه ماتفتحتش على جهازك.</p></body></html>",
+    {
+      status: 503,
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+    },
+  );
+}
+
 async function networkFirst(request, isPage) {
   const cache = await caches.open(CACHE);
+  // قلم PDF بيتفتح بـ query مختلفة لكل ملف → نخزنه تحت مفتاح واحد بدل ما الكاش يتملي نسخ منه
+  const isAnnotator = new URL(request.url).pathname.endsWith(
+    "/pdf-annotator.html",
+  );
+  const key = isAnnotator ? ANNOTATOR_KEY : request;
   try {
     const response = await fetch(request);
     if (response && response.status === 200)
-      cache.put(request, response.clone());
+      cache.put(key, response.clone());
     return response;
   } catch (err) {
-    const hit = await cache.match(request);
+    const hit = await cache.match(key);
     if (hit) return hit;
+    // iframe: ما نرجّعش index.html (ده اللي كان بيفتح المنصة جوه المنصة)
+    if (request.destination === "iframe") return offlineFramePage();
     if (isPage) {
       const page =
         (await cache.match("./index.html")) ||

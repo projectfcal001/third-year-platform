@@ -510,6 +510,7 @@
 <div id="waitingForParent">
   <div class="spinner"></div>
   <h3>⏳ بانتظار الملف...</h3>
+  <p id="waitingHint" style="display:none;margin:8px 16px 0;font-size:14px;opacity:.8;text-align:center">الملف كبير أو النت بطيء — لسه بيتحمّل...</p>
 </div>
 
 <div id="helpOverlay">
@@ -722,7 +723,15 @@
   window.addEventListener("message", function(e){
     if (e.origin !== location.origin) return;
     var d = e.data; if(!d || typeof d !== "object") return;
+    if(d.type === "load-progress" && typeof d.pct === "number"){
+      var wt = waitingForParent.querySelector("h3");
+      if(wt && !pdfDoc) wt.textContent = (window.trEn || function(x){ return x; })("⏳ جاري تحميل الملف...") + " " + d.pct + "%";
+      return;
+    }
     if(d.type === "load-pdf" && d.bytes){
+      if(e.source && e.source.postMessage){ try{ e.source.postMessage({type:"load-pdf-received"},"*"); }catch(x){} }
+      if(window.__pdfRecv) return;
+      window.__pdfRecv = true;
       try{
         waitingForParent.classList.remove("show");
         var blob = new Blob([d.bytes], {type:"application/pdf"});
@@ -730,6 +739,7 @@
         loadFile(file, null).then(function(){
           if(e.source && e.source.postMessage) e.source.postMessage({type:"load-pdf-ack",success:true},"*");
         }).catch(function(err){
+          window.__pdfRecv = false;
           if(e.source && e.source.postMessage) e.source.postMessage({type:"load-pdf-ack",success:false,error:String(err)},"*");
         });
       }catch(err){}
@@ -3186,9 +3196,18 @@
       waitingForParent.classList.add("show");
       setTimeout(announceReady, 100);
       setTimeout(announceReady, 500);
-      setTimeout(announceReady, 1200);
-      setTimeout(announceReady, 2500);
-      setTimeout(() => { if(!pdfDoc) waitingForParent.classList.remove("show"); }, 8000);
+      // ★ نكرر الإعلان لحد ما الملف يوصل (الملف الكبير / النت البطيء) بدل ما نسيب الشاشة الفاضية
+      let announceTries = 0;
+      const announceTimer = setInterval(() => {
+        if(pdfDoc || ++announceTries > 120){ clearInterval(announceTimer); return; }
+        announceReady();
+      }, 1000);
+      setTimeout(() => {
+        if(pdfDoc) return;
+        const hint = document.getElementById("waitingHint");
+        if(hint) hint.style.display = "block";
+      }, 8000);
+      setTimeout(() => { if(!pdfDoc) waitingForParent.classList.remove("show"); }, 240000);
     } else {
       await tryAutoResume();
     }
@@ -3216,7 +3235,7 @@
     "يفتح فقط (النص منسوخ)":"Opens only (text copied)","ينسخ ويلصق":"Copies & pastes",
     ": استخدم السلايدر في نافذة الإدخال للتحكم يدويًا":": use the slider in the input window to adjust manually",
     ": اضغط على رسمة لتغيير لونها/سُمكها أو تحريكها":": click a drawing to change its color/thickness or move it",
-    "↩️ تراجع / ↪️ إعادة":"↩️ Undo / ↪️ Redo","⌨️ اختصارات":"⌨️ Shortcuts","⏳ بانتظار الملف...":"⏳ Waiting for a file...","▁ تسطير / ╳ شطب":"▁ Underline / ╳ Strike",
+    "↩️ تراجع / ↪️ إعادة":"↩️ Undo / ↪️ Redo","⌨️ اختصارات":"⌨️ Shortcuts","⏳ بانتظار الملف...":"⏳ Waiting for a file...","⏳ جاري تحميل الملف...":"⏳ Loading the file...","الملف كبير أو النت بطيء — لسه بيتحمّل...":"The file is large or the connection is slow — still loading...","▁ تسطير / ╳ شطب":"▁ Underline / ╳ Strike",
     "▭ مستطيل / ◯ دائرة":"▭ Rectangle / ◯ Circle","✏️ قلم":"✏️ Pen","➡️ سهم":"➡️ Arrow","⬡ مضلع / ☁️ سحابة / 💬 فقاعة":"⬡ Polygon / ☁️ Cloud / 💬 Bubble","🅰️ نص جديد":"🅰️ New text",
     "🌐 الترجمة":"🌐 Translation","🌐 ترجمة":"🌐 Translate","📄 إدراج في الملف":"📄 Insert into file","📄 تنقل":"📄 Navigation","📋 نسخ":"📋 Copy","📏 خط":"📏 Line","🔍 زوم":"🔍 Zoom",
     "🔲 تحديد / سحب / تعديل":"🔲 Select / Drag / Edit","🖍️ تظليل حر":"🖍️ Free highlight","🖥️ ملء الشاشة":"🖥️ Fullscreen","🖱️ بالماوس:":"🖱️ With mouse:","🗑️ حذف":"🗑️ Delete",
