@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1793345914749";
+const VERSION = "v1793347045873";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -30,7 +30,7 @@ const CDN_HOSTS = [
 ];
 
 self.addEventListener("install", (event) => {
-  self.skipWaiting();
+  
   event.waitUntil(
     caches
       .open(CACHE)

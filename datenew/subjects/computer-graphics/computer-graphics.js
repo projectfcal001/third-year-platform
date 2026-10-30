@@ -3339,6 +3339,7 @@ subjects.push({
       d: "محاضرة من كورس CMU 15-462/662 عن التعرّج (Aliasing) في الصور والصوت، عملية أخذ العينات (Sampling) وإعادة البناء (Reconstruction)، تحليل الترددات (Frequencies) في الإشارات والصور، الفلاتر (Low/High/Band-pass) والأمثلة الكلاسيكية زي wagon wheel effect و sin(x^2 + y^2).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 5/drawingatriangle_slides-lec 5.pdf",
       pdf2: "datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-05-Questions.pdf",
+
       // المحاضرة: Computer Graphics — Lecture 5: Aliasing, Sampling & Reconstruction
       // المفاهيم الأساسية المغطّاة: Sampling/Reconstruction pipeline, Aliasing (spatial & temporal),
       // 1D signal as superposition of frequencies, Audio spectrum analyzer, Image frequency decomposition,
