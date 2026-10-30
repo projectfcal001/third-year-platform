@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1793347045873";
+const VERSION = "v1793348807969";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -30,7 +30,6 @@ const CDN_HOSTS = [
 ];
 
 self.addEventListener("install", (event) => {
-  
   event.waitUntil(
     caches
       .open(CACHE)
@@ -55,7 +54,7 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// الصفحة بتبعت "SKIP_WAITING" لما تدوسي "تحديث" في التوست (أو تلقائي في نافذة الفتح)
+// الصفحة بتبعت "SKIP_WAITING" لما تدوسي "تحديث" في التوست
 self.addEventListener("message", (event) => {
   const d = event.data;
   if (d === "SKIP_WAITING" || (d && d.type === "SKIP_WAITING"))
@@ -99,8 +98,7 @@ async function networkFirst(request, isPage) {
   const key = isAnnotator ? ANNOTATOR_KEY : request;
   try {
     const response = await fetch(request);
-    if (response && response.status === 200)
-      cache.put(key, response.clone());
+    if (response && response.status === 200) cache.put(key, response.clone());
     return response;
   } catch (err) {
     const hit = await cache.match(key);
@@ -109,8 +107,7 @@ async function networkFirst(request, isPage) {
     if (request.destination === "iframe") return offlineFramePage();
     if (isPage) {
       const page =
-        (await cache.match("./index.html")) ||
-        (await cache.match("./"));
+        (await cache.match("./index.html")) || (await cache.match("./"));
       if (page) return cleanResponse(page);
     }
     return new Response(
@@ -120,6 +117,46 @@ async function networkFirst(request, isPage) {
         headers: { "Content-Type": "text/plain; charset=utf-8" },
       },
     );
+  }
+}
+
+/* ==========================================================
+   ★ شبكة خاصة بـ pwa.js:
+   - بتتخطى الـ HTTP cache بالكامل (cache: 'no-store' + query عشوائي).
+   - بتحل مشكلة "الموقع مش بيعرض التحديث": Vercel كان بيخدم
+     pwa.js من HTTP cache (max-age=3600)، فالـ SW كان بيعيد
+     تخزين النسخة القديمة. دلوقتي بنجيب نسخة نضيفة كل مرة.
+   - بنخزن تحت cleanUrl (بدون query) عشان الأوفلاين يشتغل.
+   ========================================================== */
+async function networkFirstPwa(request) {
+  const cache = await caches.open(CACHE);
+  const urlObj = new URL(request.url);
+  const cleanUrl = urlObj.origin + urlObj.pathname;
+
+  try {
+    const freshUrl = cleanUrl + "?_t=" + Date.now();
+    const raw = await fetch(freshUrl, {
+      cache: "no-store",
+      credentials: "same-origin",
+    });
+
+    if (raw && raw.status === 200) {
+      const clean = await cleanResponse(raw);
+      try {
+        await cache.put(cleanUrl, clean.clone());
+      } catch (e) {
+        // لو فشل التخزين (نادر) — منمنعش الرد
+      }
+      return clean;
+    }
+    return raw;
+  } catch (err) {
+    const hit = await cache.match(cleanUrl);
+    if (hit) return cleanResponse(hit);
+    return new Response("📴 pwa.js مش متاح — تأكد من الاتصال", {
+      status: 503,
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    });
   }
 }
 
@@ -147,14 +184,14 @@ self.addEventListener("fetch", (event) => {
   if (url.origin === self.location.origin) {
     // insights بتتجاوز الكاش
     if (url.pathname.startsWith("/_vercel/")) return;
+
     if (request.mode === "navigate") {
       event.respondWith(networkFirst(request, true));
-    } else if (
-      url.pathname.endsWith("/app.js") ||
-      url.pathname.endsWith("/pwa.js") ||
-      url.pathname.startsWith("/api/")
-    ) {
-      // app.js و pwa.js لازم يطابقوا نسخة الـ HTML، والـ API لازم يبقى طازج (الكاش fallback أوفلاين بس)
+    } else if (url.pathname.endsWith("/pwa.js")) {
+      // ★ pwa.js: نجيب نسخة نضيفة كل مرة (بدون HTTP cache)
+      event.respondWith(networkFirstPwa(request));
+    } else if (url.pathname.endsWith("/app.js") || url.pathname.startsWith("/api/")) {
+      // app.js و api — networkFirst عادي (app.js عنده max-age=0, must-revalidate)
       event.respondWith(networkFirst(request, false));
     } else {
       event.respondWith(staleWhileRevalidate(request));

@@ -50,154 +50,193 @@
     return el;
   }
 
-if ("serviceWorker" in navigator) {
-  var userAskedUpdate = false;
-  var controllerChanged = false;
-  var hadController = !!navigator.serviceWorker.controller;
+  /* ==========================================================
+     Service Worker + إشعار التحديث
+     التعديلات الأساسية عن النسخة القديمة:
+     1) reg بيتحفظ في متغير خارجي (registration) عشان نقدر نعمل
+        forceUpdateCheck من صفحات bfcache / visibilitychange.
+     2) على الموبايل: COLD_START_MS = 0 → الزرار بيظهر دايمًا
+        (بدل ما التحديث يتطبق صامت والمستخدم ما يشوفش حاجة).
+     3) pageshow مع persisted=true (رجوع من bfcache) بيعمل
+        force update check فورًا — ده اللي بيحل مشكلة
+        "قفلت التطبيق ورجعت له".
+     4) visibilitychange على مستوى المستند كله.
+     ========================================================== */
+  if ("serviceWorker" in navigator) {
+    var userAskedUpdate = false;
+    var controllerChanged = false;
+    var hadController = !!navigator.serviceWorker.controller;
+    var registration = null;
 
-  var COLD_START_MS = 10000;
-  var coldStartUntil = Date.now() + COLD_START_MS;
-  var autoApplied = false;
-  var userInteracted = false;
-  var offeredWorkers = new WeakSet(); // منع عرض نفس الـ worker مرتين
-  var updateToastEl = null;
+    // كشف الموبايل (بما فيهم iPadOS 13+ اللي بيقول MacIntel)
+    var isMobile =
+      /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
-  function markInteracted(e) {
-    if (e && e.isTrusted) userInteracted = true;
-  }
-  ["click", "keydown", "touchstart"].forEach(function (ev) {
-    document.addEventListener(ev, markInteracted, { passive: true });
-  });
+    var COLD_START_MS = isMobile ? 0 : 10000;
+    var coldStartUntil = Date.now() + COLD_START_MS;
+    var autoApplied = false;
+    var userInteracted = false;
+    var offeredWorkers = new WeakSet();
+    var updateToastEl = null;
 
-  function shouldAutoApply() {
-    return !autoApplied && !userInteracted && Date.now() < coldStartUntil;
-  }
-
-  function reloadPage() {
-    try {
-      window.location.reload();
-    } catch (e) {}
-  }
-
-  function applyUpdate(worker, isAuto) {
-    if (isAuto) autoApplied = true;
-    userAskedUpdate = true;
-
-    if (!worker) {
-      reloadPage();
-      return;
+    function markInteracted(e) {
+      if (e && e.isTrusted) userInteracted = true;
     }
-
-    // لو الـ controller اتغيّر خلاص أو الـ worker متفاعل أصلًا → reload مباشر
-    if (
-      controllerChanged ||
-      worker.state === "activated" ||
-      worker.state === "redundant"
-    ) {
-      reloadPage();
-      return;
-    }
-
-    try {
-      worker.postMessage({ type: "SKIP_WAITING" });
-    } catch (e) {}
-
-    // شبكة أمان: لو الـ activation اتأخر أكتر من 4 ثواني → reload قسري
-    setTimeout(function () {
-      if (userAskedUpdate) reloadPage();
-    }, 4000);
-  }
-
-  function offerUpdate(worker) {
-    if (!worker) return;
-    if (offeredWorkers.has(worker)) return;
-    offeredWorkers.add(worker);
-
-    if (shouldAutoApply()) {
-      applyUpdate(worker, true);
-      return;
-    }
-
-    // ما نعرضش أكتر من توست تحديث واحد في نفس الوقت
-    if (updateToastEl && updateToastEl.parentNode) return;
-
-    updateToastEl = toast("🔄 فيه تحديث جديد للموقع", "تحديث", function () {
-      updateToastEl = null;
-      applyUpdate(worker, false);
+    ["click", "keydown", "touchstart"].forEach(function (ev) {
+      document.addEventListener(ev, markInteracted, { passive: true });
     });
-  }
 
-  function watchWorker(worker) {
-    if (!worker) return;
-
-    // الـ worker ممكن يكون في حالة "installed" (waiting) جاهزة دلوقتي
-    if (worker.state === "installed" && navigator.serviceWorker.controller) {
-      offerUpdate(worker);
-      return;
+    function shouldAutoApply() {
+      return !autoApplied && !userInteracted && Date.now() < coldStartUntil;
     }
 
-    worker.addEventListener("statechange", function () {
+    function reloadPage() {
+      try {
+        window.location.reload();
+      } catch (e) {}
+    }
+
+    function applyUpdate(worker, isAuto) {
+      if (isAuto) autoApplied = true;
+      userAskedUpdate = true;
+
+      if (!worker) {
+        reloadPage();
+        return;
+      }
+
+      if (
+        controllerChanged ||
+        worker.state === "activated" ||
+        worker.state === "redundant"
+      ) {
+        reloadPage();
+        return;
+      }
+
+      try {
+        worker.postMessage({ type: "SKIP_WAITING" });
+      } catch (e) {}
+
+      setTimeout(function () {
+        if (userAskedUpdate) reloadPage();
+      }, 4000);
+    }
+
+    function offerUpdate(worker) {
+      if (!worker) return;
+      if (offeredWorkers.has(worker)) return;
+      offeredWorkers.add(worker);
+
+      if (shouldAutoApply()) {
+        applyUpdate(worker, true);
+        return;
+      }
+
+      if (updateToastEl && updateToastEl.parentNode) return;
+
+      updateToastEl = toast("🔄 فيه تحديث جديد للموقع", "تحديث", function () {
+        updateToastEl = null;
+        applyUpdate(worker, false);
+      });
+    }
+
+    function watchWorker(worker) {
+      if (!worker) return;
+
       if (worker.state === "installed" && navigator.serviceWorker.controller) {
         offerUpdate(worker);
+        return;
       }
+
+      worker.addEventListener("statechange", function () {
+        if (
+          worker.state === "installed" &&
+          navigator.serviceWorker.controller
+        ) {
+          offerUpdate(worker);
+        }
+      });
+    }
+
+    // ★ فحص reg.waiting + reg.installing (بتنفذ عند registerSW وعند أي forceCheck)
+    function checkWaiting(reg) {
+      if (!reg) return;
+      if (!navigator.serviceWorker.controller) return;
+      if (reg.waiting) watchWorker(reg.waiting);
+      if (reg.installing) watchWorker(reg.installing);
+    }
+
+    // ★ مهم: بنعمل update() ونفحص waiting تاني عشان لو الـ SW الجديد
+    //   اتثبت خلال الـ update، نلقطه فورًا
+    function forceUpdateCheck() {
+      if (!registration) return;
+      try {
+        var p = registration.update();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      } catch (e) {}
+      checkWaiting(registration);
+    }
+
+    function registerSW() {
+      navigator.serviceWorker
+        .register("./sw.js", { updateViaCache: "none" })
+        .then(function (reg) {
+          registration = reg;
+
+          // ★ الحالة اللي كانت بتفوت: تحديث اتنزّل قبل ما pwa.js يشتغل
+          checkWaiting(reg);
+
+          // تحديثات مستقبلية
+          reg.addEventListener("updatefound", function () {
+            if (reg.installing) watchWorker(reg.installing);
+          });
+
+          if (navigator.serviceWorker.controller) forceUpdateCheck();
+
+          setInterval(function () {
+            if (!document.hidden) forceUpdateCheck();
+          }, 60 * 1000);
+
+          window.addEventListener("online", forceUpdateCheck);
+        })
+        .catch(function (err) {
+          console.error("SW registration failed:", err);
+        });
+    }
+
+    if (document.readyState === "complete") registerSW();
+    else window.addEventListener("load", registerSW);
+
+    // ★ رجوع من bfcache (المستخدم قفل التطبيق/التاب ورجع)
+    window.addEventListener("pageshow", function (e) {
+      if (!registration) {
+        if (document.readyState === "complete") registerSW();
+        else window.addEventListener("load", registerSW, { once: true });
+        return;
+      }
+      if (e.persisted) {
+        forceUpdateCheck();
+      }
+    });
+
+    // ★ التاب/التطبيق رجع visible
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) forceUpdateCheck();
+    });
+
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (!hadController) {
+        hadController = true;
+        return;
+      }
+      controllerChanged = true;
+      if (userAskedUpdate) reloadPage();
     });
   }
 
-  function registerSW() {
-    navigator.serviceWorker
-      .register("./sw.js", { updateViaCache: "none" })
-      .then(function (reg) {
-        // ★ الحالة اللي كانت بتفوت: تحديث اتنزّل قبل ما pwa.js يشتغل
-        //   (بسبب navigation أو فحص الـ SW التلقائي). reg.waiting هتكون موجودة.
-        if (reg.waiting && navigator.serviceWorker.controller) {
-          watchWorker(reg.waiting);
-        }
-        // ★ تحديث لسه بيتنزّل دلوقتي
-        if (reg.installing) {
-          watchWorker(reg.installing);
-        }
-        // ★ تحديثات مستقبلية
-        reg.addEventListener("updatefound", function () {
-          if (reg.installing) watchWorker(reg.installing);
-        });
-
-        function safeUpdate() {
-          try {
-            var p = reg.update();
-            if (p && typeof p.catch === "function") p.catch(function () {});
-          } catch (e) {}
-        }
-
-        if (navigator.serviceWorker.controller) safeUpdate();
-
-        setInterval(function () {
-          if (!document.hidden) safeUpdate();
-        }, 60 * 1000);
-
-        document.addEventListener("visibilitychange", function () {
-          if (!document.hidden) safeUpdate();
-        });
-
-        window.addEventListener("online", safeUpdate);
-      })
-      .catch(function (err) {
-        console.error("SW registration failed:", err);
-      });
-  }
-
-  if (document.readyState === "complete") registerSW();
-  else window.addEventListener("load", registerSW);
-
-  navigator.serviceWorker.addEventListener("controllerchange", function () {
-    if (!hadController) {
-      hadController = true; // أول تثبيت للـ SW: مش محتاجين reload
-      return;
-    }
-    controllerChanged = true;
-    if (userAskedUpdate) reloadPage();
-  });
-}
-  /* ---------- زرار "ثبّت التطبيق" (في الـ header فقط — اتشال الزرار العايم) ---------- */
+  /* ---------- زرار "ثبّت التطبيق" (في الـ header فقط) ---------- */
   var INSTALLED_KEY = "pwa_installed_v1";
   var IOS_KEY = "ios_install_hint_dismissed";
 
@@ -214,7 +253,6 @@ if ("serviceWorker" in navigator) {
     } catch (e) {}
   }
 
-  // نستخدم showToast بتاع الموقع لو موجود، وإلا توست pwa.js
   function say(msg) {
     if (typeof window.showToast === "function") window.showToast(msg);
     else {
@@ -260,9 +298,8 @@ if ("serviceWorker" in navigator) {
 
   function doInstall() {
     if (!deferredPrompt) {
-      // المتصفح (زي Brave) ما أطلقش حدث التثبيت → نشرح الخطوات اليدوية
       var t = toast(
-        '📲 من قائمة المتصفح ⋮ هتلاقي «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»',
+        "📲 من قائمة المتصفح ⋮ هتلاقي «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»",
         null,
         null,
       );
@@ -300,7 +337,7 @@ if ("serviceWorker" in navigator) {
     box.className = "pwa-ios";
     box.setAttribute("role", "status");
     box.innerHTML =
-      '📲 لتثبيت التطبيق على الآيفون:<br>من زر المشاركة <b>⬆️</b> هتلاقي <b>«إضافة إلى الشاشة الرئيسية»</b><br>';
+      "📲 لتثبيت التطبيق على الآيفون:<br>من زر المشاركة <b>⬆️</b> هتلاقي <b>«إضافة إلى الشاشة الرئيسية»</b><br>";
     var ok = document.createElement("button");
     ok.type = "button";
     ok.textContent = "فهمت ✓";
@@ -314,11 +351,8 @@ if ("serviceWorker" in navigator) {
 
   if (!isStandalone && lsGet(INSTALLED_KEY) !== "1") {
     window.addEventListener("beforeinstallprompt", onBIP);
-    // الحدث ممكن يكون اتطلق قبل تحميل pwa.js (اتلقط في index)
     if (window.__bip) onBIP(window.__bip);
     if (isIOS) setTimeout(showIOSHint, 1000);
-    // أندرويد: لو المتصفح ما أطلقش الحدث خلال 3 ثواني، نعرض الزرار برضه
-    // (بيشرح الخطوات اليدوية بدل ما يختفي)
     else if (/android/i.test(navigator.userAgent)) {
       setTimeout(function () {
         if (!deferredPrompt) showBtn();
