@@ -97,6 +97,44 @@
           ]
         }
       ]
+    },
+    {
+      "id": "machine-learning-sec-04",
+      "subject": "machine-learning",
+      "lecture": "المحاضرة 4: أشجار القرار (Decision Trees)",
+      "lectureId": "machine-learning-lecture-04",
+      "instructorId": "INS-Maria",
+      "instructorName": "م. ماريا ايمن",
+      "groupName": "سكشن 4",
+      "status": "available",
+      "sectionTitle": "🌳 لاب 4 - Decision Trees",
+      "materials": {
+        "file": {
+          "label": "ملف السكشن",
+          "url": "datenew/subjects/machine-learning/sections/Sec 4/Decision Tree.pdf",
+          "type": "pdf"
+        }
+      },
+      "linkCategories": [
+        {
+          "category": " ملف السكشن",
+          "links": [
+            {
+              "t": "تحميل ملف العمل بتاع السكشن",
+              "d": "",
+              "icon": "🇪🇬",
+              "actions": [
+                {
+                  "label": "📥 تحميل",
+                  "url": "https://drive.google.com/uc?export=download&id=1YI_z5Qmc3IOWLGBO_uyn6TnjbTq97pLE",
+                  "type": "download",
+                  "color": "red"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

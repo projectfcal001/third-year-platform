@@ -11,9 +11,10 @@ subjects.push({
     {
       t: "المحاضرة 1 — مقدمة في تحليل الخوارزميات ومفاهيم التعقيد",
       d: "مفهوم الخوارزميات، حساب التعقيد الزمني والمكاني (Time & Space Complexity)، وتحليل الأداء الأساسي.",
-      id: "lec-01",
+      id: "algorithms-lecture-01",
       pdf: "datenew/subjects/algorithms/lectures/Lecture 1.pdf",
       pdf2: "datenew/subjects/algorithms/questions/Questions on each lecture/CS311_Lecture1_Intro_Questions.pdf",
+
       linkCategories: [
         {
           category: "فيديوهات عربية",
@@ -1125,7 +1126,7 @@ subjects.push({
     {
       t: "المحاضرة 3 — استراتيجية Divide and Conquer ومبرهنة الماستر",
       d: "تطبيق استراتيجية فرق تسد، خوارزمية Merge Sort، وحل العلاقات التكرارية باستخدام Master Theorem.",
-      id: "lec-03",
+      id: "algorithms-lecture-03",
       //lecture 01 -cloud-computing Questions
       pdf: "datenew/subjects/algorithms/lectures/Lecture 3.pdf",
       pdf2: "datenew/subjects/algorithms/questions/Questions on each lecture/CS311_Lecture3_Sorting_DivideConquer_Questions.pdf",
@@ -2614,9 +2615,9 @@ subjects.push({
       ],
     },
     {
-      id: "networks-lecture-08",
-      t: "Lecture 8 — Minimum Spanning Tree (Kruskal) & Single-Source Shortest Path (Dijkstra)",
-      d: "تمثيلات Graph الموزون، Hand-Shaking Lemma، خوارزمية Kruskal لـ MST، خوارزمية Dijkstra لأقصر مسار، وتعقيدهم الزمني.",
+      t: "المحاضرة 5 — شجرة الامتداد الأدنى (Kruskal) وأقصر مسار من مصدر واحد (Dijkstra)",
+      d: "تمثيلات Graph الموزون، Hand-Shaking Lemma، خوارزمية Kruskal لـ MST، خوارزمية Dijkstra لأقصر مسار، وتحليل التعقيد الزمني لكل منهما.",
+      id: "algorithms-lecture-05",
       pdf: "datenew/subjects/algorithms/lectures/CS 311 lec.8 by Majid A. Askar.pdf",
       pdf2: "datenew/subjects/algorithms/questions/Questions on each lecture/Lecture-08-Questions.pdf",
       linkCategories: [

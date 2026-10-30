@@ -3345,5 +3345,1123 @@ subjects.push({
         },
       ],
     },
+    // المحاضرة: Lecture 5 - Linear Models II (Convexity, Learning Rate, Binary Linear Classification, Logistic Regression)
+
+    {
+      id: "ml-lecture-05",
+      t: "المحاضرة 5 - Linear Models II",
+      d: "التحدب Convexity، ضبط معدل التعلم، التصنيف الخطي الثنائي Binary Linear Classification، والانحدار اللوجستي Logistic Regression مع دالة Sigmoid والـ Cross-Entropy Loss.",
+      pdf: "datenew/subjects/machine-learning/lectures/Lec 5/Lec 5.pdf",
+      pdf2: "datenew/subjects/machine-learning/questions/Questions on each lecture/Lecture-05-Questions.pdf",
+      // المحاضرة: Lecture 5 - Linear Models II (Convexity, Learning Rate, Binary Linear Classification, Logistic Regression, Cross-Entropy Loss)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمفاهيم المحاضرة: الانحدار اللوجستي، التصنيف الخطي، ودالة الـ Sigmoid.",
+          links: [
+            {
+              t: "Logistic Regression شرح عربي",
+              d: "فيديو عربي يشرح الانحدار اللوجستي (Logistic Regression) ودالة الـ Sigmoid وكيف بيتعمل التصنيف الثنائي. مرتبط مباشرة بقسم Logistic Regression في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=O2il_DIrDm0",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Logistic Regression (Classification) — Python Arabic",
+              d: "شرح بالعربي لتطبيق Logistic Regression في Python مع شرح التابع Sigmoid والـ Cross-Entropy Loss. مكمل لقسم Logistic Regression والـ Gradient of Logistic Loss.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=s5SVsMR8yDk",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح خوارزمية التصنيف في تعلم الآلة (Logistic Regression)",
+              d: "شرح عربي لخوارزمية الانحدار اللوجستي وتطبيقاتها في التصنيف (Classification) مع أمثلة في Python. مفيد لفهم why logistic regression رغم اسمه regression بيُستخدم للتصنيف.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=logistic+regression+%D8%B4%D8%B1%D8%AD+%D8%B9%D8%B1%D8%A8%D9%8A",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "شرح بالإنجليزي لمفاهيم المحاضرة من قناة StatQuest التعليمية الشهيرة في تعلم الآلة.",
+          links: [
+            {
+              t: "StatQuest: Logistic Regression — Playlist",
+              d: "Playlist كامل من StatQuest عن Logistic Regression، بيشرح الـ Sigmoid Function والـ Maximum Likelihood وطريقة تدريب النموذج. مرتبط مباشرة بقسم Logistic Regression في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Open Playlist",
+                  url: "https://www.youtube.com/playlist?list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "StatQuest: Logistic Regression (main video)",
+              d: "الفيديو الأساسي لـ StatQuest عن Logistic Regression، بيوضح لي بنستخدم Sigmoid بدل Linear Regression وليه اسمه regression رغم إنه للتصنيف. مرتبط بقسم Logistic Regression.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ Watch on YouTube",
+                  url: "https://www.youtube.com/watch?v=yIYKR4sgzI8",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "StatQuest — Video Index (All Topics)",
+              d: "الفهرس الكامل لفيديوهات StatQuest، فيه شروحات لـ Logistic Regression و Cross Entropy و Gradient Descent و Linear Classification. مفيد كمرجع شامل لمحاضرة Linear Models II.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 Visit Video Index",
+                  url: "https://statquest.org/video_index.html",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "StatQuest with Josh Starmer — Channel",
+              d: "قناة StatQuest التعليمية الشهيرة، فيها شروحات لكل مفاهيم المحاضرة: Logistic Regression و Cross Entropy و Gradient Descent. الأسلوب بسيط وبيستخدم رسومات توضيحية.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 Visit Channel",
+                  url: "https://www.youtube.com/c/joshstarmer",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات ومراجع تعليمية تشرح كل مفاهيم المحاضرة بالتفصيل: التحدب، الـ Learning Rate، التصنيف الخطي، والـ Cross-Entropy Loss.",
+          links: [
+            {
+              t: "Convexity Optimization — GeeksforGeeks",
+              d: "مقال شامل عن دور التحدب (Convexity) في تحسين نماذج تعلم الآلة، بيوضح إن أي local minimum هو global minimum. مرتبط مباشرة بقسم Convexity في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/convexity-optimization",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Learning Rate in Neural Network — GeeksforGeeks",
+              d: "شرح الـ Learning Rate وتأثيره على النموذج، بيوضح ليه α صغير بيبطئ التقارب و α كبير بيعمل oscillations. مرتبط بقسم Setting the Learning Rate في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/impact-of-learning-rate-on-a-model",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What is Learning Rate? — IBM",
+              d: "مقال من IBM يشرح الـ Learning Rate ودوره في Gradient Descent وكيف بيحدد حجم الخطوة عند كل iteration. مرتبط بقسم Setting the Learning Rate في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.ibm.com/think/topics/learning-rate",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What Is Cross-Entropy Loss Function? — GeeksforGeeks",
+              d: "شرح تفصيلي لدالة خسارة الـ Cross-Entropy في مسائل التصنيف، مع الصيغة الرياضية واشتقاق الـ Gradient. مرتبط بقسم Gradient of Logistic Loss في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/what-is-cross-entropy-loss-function",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Cost Function in Logistic Regression — GeeksforGeeks",
+              d: "شرح دالة التكلفة في Logistic Regression (Log Loss / Binary Cross-Entropy) ولية بنستخدمها بدل Mean Squared Error. مرتبط بقسم Logistic Regression في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/ml-cost-function-in-logistic-regression",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Logistic classification with cross-entropy — Peter's Notes",
+              d: "مقال تقني بيشرح الـ Logistic Function والـ Cross-Entropy Loss مع اشتقاق الـ Gradients المستخدمة في تحسين المعاملات. مرتبط بقسم Gradient of Logistic Loss.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://peterroelants.github.io/posts/cross-entropy-logistic",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Understanding Decision Boundaries in Machine Learning — Medium",
+              d: "مقال يشرح الـ Decision Boundary (حد القرار) في التصنيف، بيوضح إنه خط في 2-D أو hyperplane في الأبعاد العالية. مرتبط بقسم Binary Linear Classification في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://medium.com/@okeshakarunarathne/understanding-decision-boundaries-in-machine-learning-d00c5d81ed1d",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Why Convex Optimization Matters in Machine Learning — Medium",
+              d: "مقال يشرح أهمية التحسين المحدب (Convex Optimization) في تعلم الآلة، بيوضح إن قيمة الدالة عند المركب لا بتعدى التركيب الخطي لقيمها. مرتبط بقسم Convexity في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 قراءة المقال",
+                  url: "https://yilmazbe7.medium.com/why-convex-optimization-matters-in-machine-learning-the-geometry-of-learning-f178b6843ec9",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية ومحاكاة لتجربة مفاهيم المحاضرة: Logistic Regression و Decision Boundary و تأثير الـ Learning Rate.",
+          links: [
+            {
+              t: "LogisticRegression — scikit-learn Documentation",
+              d: "التوثيق الرسمي لـ LogisticRegression في scikit-learn، بيشرح المعاملات زي penalty و C و solver. مفيد للتطبيق العملي للـ Logistic Regression المذكور في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "TensorFlow Playground — Neural Network Visualization",
+              d: "أداة تفاعلية من Google بتسمح بتجربة Neural Networks (اللي بتستخدم Logistic/Sigmoid) في المتصفح، تقدر تتحكم في الـ Learning Rate وعدد الطبقات وتشوف تأثيرها على التقارب والـ Decision Boundary لحظيًا.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://playground.tensorflow.org",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Decision Boundary Visualizer — Wolfram Cloud",
+              d: "أداة تفاعلية لتصور حدود القرار (Decision Boundaries) لتصنيف بيانات 2D، تقدر تشوف كيف الـ linear classifier بيفصل بين الفئات. مرتبط بقسم Binary Linear Classification.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://resources.wolframcloud.com/ExampleRepository/resources/8dd50680-698a-4759-ab67-233d016ed4dd",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Interactive Decision Tree / Classifier Visualizer — PythonAlchemist",
+              d: "أداة تفاعلية لتصور الـ classifiers وحدود القرار. مفيد لفهم كيف الـ linear classifier بيفصل البيانات وكيف الـ Decision Boundary بيتشكل. مرتبط بقسم Binary Linear Classification.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://www.pythonalchemist.com",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        // ===================== MCQ Questions =====================
+        {
+          q: "1. If a function is convex, what can we say about its critical points?",
+          options: [
+            "Every critical point is a global optimum",
+            "Every critical point is a local optimum only",
+            "Critical points do not exist",
+            "Only saddle points exist",
+          ],
+          correct: 0,
+          translation:
+            "لو الدالة محدبة (convex)، إيه اللي نقدر نقوله عن نقاطها الحرجة (critical points)؟",
+          explanation:
+            "الإجابة الصحيحة إن كل نقطة حرجة في الدالة المحدبة هي نقطة مثلى عالمية (global optimum). ده الخاصية الأساسية للتحدب اللي بتخلي Gradient Descent يلاقي الحل الأمثل.",
+          tags: ["Convexity", "Critical Points"],
+          ref: "Lecture 05 — When are Critical Points Optimal?",
+          likely: "high",
+        },
+        {
+          q: "2. A set S is convex if for any x1, x2 in S, the line segment connecting them:",
+          options: [
+            "Lies entirely outside S",
+            "Passes through the origin",
+            "Lies entirely within S",
+            "Has zero length",
+          ],
+          correct: 2,
+          translation:
+            "المجموعة S محدبة لو لأي نقطتين x1, x2 فيها، القطعة المستقيمة اللي بتوصّلهم:",
+          explanation:
+            "الخاصية الأساسية للمجموعة المحدبة: أي قطعة مستقيمة بتوصّل نقطتين فيها لازم تكون موجودة بالكامل داخل S. ده تعريف الـ convex set.",
+          tags: ["Convexity", "Convex Sets"],
+          ref: "Lecture 05 — Convex Sets",
+          likely: "high",
+        },
+        {
+          q: "3. A function f is convex if the line segment between any two points on f's graph:",
+          options: [
+            "Lies below the graph",
+            "Intersects the graph exactly once",
+            "Is parallel to the x-axis",
+            "Lies above the graph",
+          ],
+          correct: 3,
+          translation:
+            "الدالة f محدبة لو القطعة المستقيمة بين أي نقطتين على رسمها:",
+          explanation:
+            "في الدالة المحدبة، القطعة المستقيمة بين أي نقطتين على الرسم بتفوق الرسم (lie above). ده بيعطي شكل الـ bowl-shape. لو بتفوق تحت (lie below) تبقى concave.",
+          tags: ["Convexity", "Convex Functions"],
+          ref: "Lecture 05 — Convex Functions",
+          likely: "high",
+        },
+        {
+          q: "4. The convexity condition for a function f is mathematically written as:",
+          options: [
+            "f((1−λ)x0 + λx1) ≥ (1−λ)f(x0) + λf(x1)",
+            "f((1−λ)x0 + λx1) ≤ (1−λ)f(x0) + λf(x1)",
+            "f((1−λ)x0 + λx1) = (1−λ)f(x0) + λf(x1)",
+            "f((1−λ)x0 + λx1) < 0",
+          ],
+          correct: 1,
+          translation: "شرط التحدب للدالة f بيتكتب رياضيًا كده:",
+          explanation:
+            "الشرط الصحيح: f((1−λ)x0 + λx1) ≤ (1−λ)f(x0) + λf(x1) لـ 0 ≤ λ ≤ 1. ده معناه إن قيمة الدالة عند المركب ≤ التركيب الخطي لقيمها.",
+          tags: ["Convexity", "Convex Functions"],
+          ref: "Lecture 05 — Convex Functions",
+          likely: "high",
+        },
+        {
+          q: "5. For linear models, z = w⊤x + b is a linear function of w and b. If the loss function is a convex function of z, then:",
+          options: [
+            "It is convex only in w",
+            "It is convex only in b",
+            "It is also a convex function of w and b",
+            "It is non-convex in w and b",
+          ],
+          correct: 2,
+          translation:
+            "للنماذج الخطية، z = w⊤x + b دالة خطية في w و b. لو دالة الخسارة محدبة في z، يبقى:",
+          explanation:
+            "لو الخسارة محدبة في z و z خطية في w و b، يبقى الخسارة محدبة في w و b كمان. ده بيسهل تحسين النموذج بالـ GD ويضمن إيجاد الحل الأمثل.",
+          tags: ["Convexity", "Linear Models", "Loss Functions"],
+          ref: "Lecture 05 — Convex Loss Functions",
+          likely: "high",
+        },
+        {
+          q: "6. What happens when the learning rate α is too small in gradient descent?",
+          options: [
+            "Oscillations around the minimum",
+            "Instability and divergence",
+            "Slow progress and slow convergence",
+            "Immediate convergence to the optimum",
+          ],
+          correct: 2,
+          translation:
+            "إيه اللي بيحصل لما الـ learning rate α صغير جدًا في الـ Gradient Descent؟",
+          explanation:
+            "لو α صغير جدًا، التقدّم بيكون بطيء والتقارب (convergence) بياخد وقت طويل وعدد iterations كبير. التذبذب والعدم استقرار بيحصلوا لما α كبير جدًا.",
+          tags: ["Learning Rate", "Gradient Descent"],
+          ref: "Lecture 05 — Impact of Learning Rate",
+          likely: "high",
+        },
+        {
+          q: "7. What happens when the learning rate α is too large in gradient descent?",
+          options: [
+            "Slow convergence",
+            "Oscillations and possibly instability",
+            "Immediate convergence",
+            "No effect on convergence",
+          ],
+          correct: 1,
+          translation: "إيه اللي بيحصل لما الـ learning rate α كبير جدًا؟",
+          explanation:
+            "لو α كبير جدًا، الخوارزمية بتعمل oscillations (تذبذب) حوالين الـ minimum ويمكن تستقر (instability) وتعمل divergence. التقارب البطيء بيحصل لما α صغير.",
+          tags: ["Learning Rate", "Gradient Descent"],
+          ref: "Lecture 05 — Impact of Learning Rate",
+          likely: "high",
+        },
+        {
+          q: "8. What are typical good values for the learning rate α?",
+          options: [
+            "Between 0.001 and 0.1",
+            "Between 1 and 10",
+            "Between 100 and 1000",
+            "Negative values like −0.5",
+          ],
+          correct: 0,
+          translation: "إيه القيم النموذجية الجيدة لـ learning rate α؟",
+          explanation:
+            "القيم الجيدة عادة بين 0.001 و 0.1. القيم الكبيرة بتسبب oscillations/divergence، والقيم السالبة غلط لأن α لازم يكون موجب.",
+          tags: ["Learning Rate", "Hyperparameter Tuning"],
+          ref: "Lecture 05 — Finding a Good Learning Rate",
+          likely: "high",
+        },
+        {
+          q: "9. How can we determine the best value for the learning rate?",
+          options: [
+            "Grid search and training curves",
+            "Always use 0.5",
+            "Random guessing only",
+            "Use the largest possible value",
+          ],
+          correct: 0,
+          translation: "إزاي نحدد أفضل قيمة لـ learning rate؟",
+          explanation:
+            "بنستخدم Grid search (نجرب قيم زي 0.1, 0.03, 0.01, ...) ونشوف الـ training curves عشان نشخّص مشاكل التحسين. ده اللي المحاضرة نصحت بيه.",
+          tags: ["Learning Rate", "Grid Search", "Training Curves"],
+          ref: "Lecture 05 — Finding a Good Learning Rate",
+          likely: "high",
+        },
+        {
+          q: "10. In binary linear classification, what does the model predict?",
+          options: [
+            "A binary target t ∈ {0, 1}",
+            "A continuous-valued target",
+            "A multi-class target with 10 classes",
+            "An unordered categorical variable",
+          ],
+          correct: 0,
+          translation:
+            "في التصنيف الخطي الثنائي (Binary Linear Classification)، النموذج بيتوقع إيه؟",
+          explanation:
+            "الـ BLC بيتوقع target ثنائي t ∈ {0, 1} (أو t ∈ {−1, +1} للسهولة الحسابية). t=1 هو positive example و t=0 هو negative example.",
+          tags: ["Binary Linear Classification", "Targets"],
+          ref: "Lecture 05 — Introducing Binary Linear Classification",
+          likely: "high",
+        },
+        {
+          q: "11. In the simplified binary linear classification model, the prediction y is defined as:",
+          options: [
+            "y = 1 if z ≥ 0, y = 0 otherwise",
+            "y = 1 if z ≥ r, y = 0 otherwise (with r != 0)",
+            "y = z always",
+            "y = 0 always",
+          ],
+          correct: 0,
+          translation:
+            "في النموذج المبسّط للتصنيف الخطي الثنائي، التوقع y بيتعرف كده:",
+          explanation:
+            "بعد تبسيط النموذج (eliminating threshold r = 0 و eliminating bias b بـ dummy feature x0 = 1)، التوقع بقى: y = 1 لو z ≥ 0، y = 0 لو z < 0، حيث z = w⊤x.",
+          tags: ["Binary Linear Classification", "Simplified Model"],
+          ref: "Lecture 05 — Simplified Model",
+          likely: "high",
+        },
+        {
+          q: "12. How is the bias b eliminated in the simplified binary linear classification model?",
+          options: [
+            "By removing it completely",
+            "By setting b = 0 always",
+            "By adding a dummy feature x0 = 1, with w0 = b",
+            "By multiplying it by the learning rate",
+          ],
+          correct: 2,
+          translation:
+            "إزاي بيتشال الـ bias b من النموذج المبسّط للتصنيف الخطي الثنائي؟",
+          explanation:
+            "بنضيف dummy feature x0 = 1، فالوزن w0 بيبقى مكافئ للـ bias b (نفس الفكرة المستخدمة في Linear Regression). كده z = w⊤x شامل الـ bias.",
+          tags: ["Binary Linear Classification", "Bias", "Dummy Feature"],
+          ref: "Lecture 05 — Simplified Model",
+          likely: "high",
+        },
+        {
+          q: "13. The decision boundary in binary linear classification is defined by:",
+          options: [
+            "{x : w⊤x = 1}",
+            "{x : w⊤x = r}",
+            "{x : w⊤x = 0}",
+            "{x : w⊤x = max(w)}",
+          ],
+          correct: 2,
+          translation:
+            "حد القرار (decision boundary) في التصنيف الخطي الثنائي بيتعرف بـ:",
+          explanation:
+            "حد القرار هو {x : w⊤x = 0}. ده خط في 2-D أو hyperplane في الأبعاد العالية، وبيعدّي عبر نقطة الأصل لأننا شلنا الـ bias.",
+          tags: ["Binary Linear Classification", "Decision Boundary"],
+          ref: "Lecture 05 — Visualizing NOT in Data Space",
+          likely: "high",
+        },
+        {
+          q: "14. Data is said to be linearly separable if:",
+          options: [
+            "No linear decision rule can separate the examples",
+            "The data has more than 2 features",
+            "The data is normally distributed",
+            "A linear decision rule can perfectly separate the training examples",
+          ],
+          correct: 3,
+          translation: "البيانات بتتوصف بـ linearly separable لو:",
+          explanation:
+            "البيانات linearly separable لو فيه قاعدة قرار خطية (linear decision rule) تقدر تفصل أمثلة التدريب بشكل مثالي. زي ما اتعرض في NOT و AND.",
+          tags: ["Linear Separability", "Decision Boundary"],
+          ref: "Lecture 05 — Visualizing NOT in Data Space",
+          likely: "high",
+        },
+        {
+          q: "15. In the weight space visualization, what does each training example x specify?",
+          options: [
+            "A half-space that w must lie in to guarantee correct classification",
+            "A single point that w must equal",
+            "A line through the origin",
+            "A circular region around w",
+          ],
+          correct: 0,
+          translation: "في تصوّر الـ weight space، كل مثال تدريب x بيمثل إيه؟",
+          explanation:
+            "كل مثال تدريب x بيمثل half-space (نصف فضاء) لازم w يكون جواه عشان يضمن التصنيف الصحيح. المنطقة الممكنة (feasible region) بتحقق كل القيود.",
+          tags: ["Weight Space", "Half-Space", "Visualization"],
+          ref: "Lecture 05 — Visualizing NOT in Weight Space",
+          likely: "high",
+        },
+        {
+          q: "16. The feasible region in weight space is:",
+          options: [
+            "The region where all constraints are satisfied",
+            "The region where w = 0",
+            "The region with no constraints",
+            "The region outside all half-spaces",
+          ],
+          correct: 0,
+          translation:
+            "المنطقة الممكنة (feasible region) في الـ weight space هي:",
+          explanation:
+            "الـ feasible region هي المنطقة اللي بتحقق كل القيود (constraints) المفروضة من أمثلة التدريب. المشكلة feasible لو الـ feasible region مش فاضية (nonempty).",
+          tags: ["Weight Space", "Feasible Region"],
+          ref: "Lecture 05 — Visualizing NOT in Weight Space",
+          likely: "high",
+        },
+        {
+          q: "17. For the AND function, an example solution is w0 = −1.5, w1 = 1, w2 = 1. The decision boundary equation is:",
+          options: [
+            "−1.5 + x1 + x2 = 0",
+            "x1 + x2 = 1.5",
+            "w0 + w1 + w2 = 0",
+            "x0 + x1 + x2 = 0",
+          ],
+          correct: 0,
+          translation:
+            "للدالة AND، حل مثالي هو w0 = −1.5, w1 = 1, w2 = 1. معادلة حد القرار هي:",
+          explanation:
+            "حد القرار w0x0 + w1x1 + w2x2 = 0، وبما إن x0 = 1: −1.5 + x1 + x2 = 0. ده اللي ظهر في المحاضرة كـ Example Solution.",
+          tags: ["AND Function", "Decision Boundary"],
+          ref: "Lecture 05 — Visualizing AND in Data and Weight Spaces",
+          likely: "high",
+        },
+        {
+          q: "18. Which algorithms can be used to learn weights for a linearly separable data-set?",
+          options: [
+            "Linear programming and perceptron algorithm",
+            "K-means clustering and PCA",
+            "Decision trees and random forests",
+            "KNN and Naive Bayes",
+          ],
+          correct: 0,
+          translation:
+            "أي الخوارزميات ممكن تُستخدم لتعلّم الأوزان لبيانات linearly separable؟",
+          explanation:
+            "محاضرة بتذكر خيارين: Linear programming و Perceptron algorithm. الخيارات التانية خوارزميات تانية (clustering, trees) مش مخصصة لتعلم حدود خطية.",
+          tags: ["Linear Programming", "Perceptron"],
+          ref: "Lecture 05 — Main Takeaways on Binary Linear Classification 2/2",
+          likely: "high",
+        },
+        {
+          q: "19. The sigmoid function σ(z) maps any real value to a value in the range:",
+          options: ["[−1, 1]", "[0, ∞)", "[0, 1]", "(−∞, ∞)"],
+          correct: 2,
+          translation:
+            "دالة الـ sigmoid σ(z) بتحوّل أي قيمة حقيقية لقيمة في المدى:",
+          explanation:
+            "الـ sigmoid بترجع قيمة بين 0 و 1، عشان كده بتنفع لتمثيل الاحتمالات في Logistic Regression. الصيغة: σ(z) = 1 / (1 + e^(−z)).",
+          tags: ["Logistic Regression", "Sigmoid", "Probability"],
+          ref: "Lecture 05 — Logistic Function / Sigmoid Function",
+          likely: "high",
+        },
+        {
+          q: "20. Despite its name, logistic regression is mainly used for:",
+          options: [
+            "Regression problems only",
+            "Clustering tasks",
+            "Classification problems",
+            "Dimensionality reduction",
+          ],
+          correct: 2,
+          translation:
+            "رغم اسمها، الانحدار اللوجستي (Logistic Regression) بيُستخدم أساسًا لـ:",
+          explanation:
+            "رغم اسمه regression، اللوجستي بيُستخدم للتصنيف (classification). بيعمل تقدير للاحتمال، ولو الاحتمال > 0.5 بيتوقع الفئة 1، غير كده الفئة 0.",
+          tags: ["Logistic Regression", "Classification"],
+          ref: "Lecture 05 — Logistic regression",
+          likely: "high",
+        },
+        {
+          q: "21. In logistic regression, the default threshold for classifying an instance as class 1 is:",
+          options: ["0.0", "0.25", "0.5", "1.0"],
+          correct: 2,
+          translation:
+            "في الانحدار اللوجستي، الحد الافتراضي لتصنيف المثال كـ class 1 هو:",
+          explanation:
+            "الحد الافتراضي هو 0.5. لو الاحتمال المقدّر ≥ 0.5، النموذج بيتوقع class 1؛ غير كده class 0. ده اللي المحاضرة ذكرته.",
+          tags: ["Logistic Regression", "Threshold"],
+          ref: "Lecture 05 — Logistic regression",
+          likely: "high",
+        },
+        {
+          q: '22. Which type of logistic regression handles 3 or more unordered categories like "cat", "dog", "sheep"?',
+          options: ["Binomial", "Ordinal", "Linear", "Multinomial"],
+          correct: 3,
+          translation:
+            'أي نوع من الانحدار اللوجستي بيتعامل مع 3 فئات أو أكتر غير مرتبة زي "cat", "dog", "sheep"؟',
+          explanation:
+            "Multinomial logistic regression بيتعامل مع 3+ فئات غير مرتبة (unordered). Binomial لفئتين بس، و Ordinal لفئات مرتبة (low, medium, high).",
+          tags: ["Logistic Regression", "Multinomial"],
+          ref: "Lecture 05 — Types of Logistic Regression",
+          likely: "high",
+        },
+        {
+          q: "23. Ordinal logistic regression is used when the dependent variable has:",
+          options: [
+            "Exactly 2 categories",
+            "3 or more unordered categories",
+            '3 or more ordered categories like "low", "medium", "high"',
+            "Continuous values",
+          ],
+          correct: 2,
+          translation:
+            "الانحدار اللوجستي الترتيبي (Ordinal) بيُستخدم لما المتغير التابع فيه:",
+          explanation:
+            "Ordinal logistic regression بيُستخدم لما الفئات مرتبة (ordered) زي low, medium, high. Binomial لفئتين، و Multinomial لفئات غير مرتبة.",
+          tags: ["Logistic Regression", "Ordinal"],
+          ref: "Lecture 05 — Types of Logistic Regression",
+          likely: "medium",
+        },
+        {
+          q: "24. The cross-entropy loss for logistic regression is given by:",
+          options: [
+            "LCE(y, t) = t·log(y) + (1−t)·log(1−y)",
+            "LCE(y, t) = (y − t)²",
+            "LCE(y, t) = |y − t|",
+            "LCE(y, t) = −t·log(y) − (1−t)·log(1−y)",
+          ],
+          correct: 3,
+          translation: "خسارة الـ cross-entropy للانحدار اللوجستي بتعطى بـ:",
+          explanation:
+            "الصيغة الصحيحة: LCE(y, t) = −t·log(y) − (1−t)·log(1−y). الإجابة الأولى بدون الإشارة السالبة غلط، والباقي دوال خسارة تانية (MSE, MAE).",
+          tags: ["Logistic Regression", "Cross-Entropy Loss"],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+        {
+          q: "25. The gradient of the cross-entropy loss with respect to wj in logistic regression simplifies to:",
+          options: ["(y − t)·xj", "(t − y)·xj", "(y − t)²·xj", "y·t·xj"],
+          correct: 0,
+          translation:
+            "تدرج خسارة الـ cross-entropy بالنسبة لـ wj في الانحدار اللوجستي بتبسّط لـ:",
+          explanation:
+            "بعد الاشتقاق بالـ chain rule: ∂LCE/∂wj = (y − t)·xj. ده نفس شكل تدرج Linear Regression تقريبًا، بس y هنا مخرج الـ sigmoid.",
+          tags: ["Logistic Regression", "Gradient", "Cross-Entropy"],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+        {
+          q: "26. The gradient descent update rule for logistic regression is:",
+          options: [
+            "wj → wj + α · (1/N) · Σ(y(i) − t(i))·xj(i)",
+            "wj → wj − α · (1/N) · Σ(t(i) − y(i))·xj(i)",
+            "wj → α · (1/N) · Σ(y(i) − t(i))·xj(i)",
+            "wj → wj − α · (1/N) · Σ(y(i) − t(i))·xj(i)",
+          ],
+          correct: 3,
+          translation: "قاعدة تحديث الـ Gradient Descent للانحدار اللوجستي هي:",
+          explanation:
+            "الصيغة الصحيحة: wj → wj − α · (1/N) · Σ(y(i) − t(i))·xj(i). بنقص α ضرب المشتقة من الوزن. الخيار التالت إشارته معكوسة (ده بيعمل زيادة في الخسارة مش نقصان).",
+          tags: ["Logistic Regression", "Gradient Descent", "Update Rule"],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+        {
+          q: "27. The sigmoid function is described as having what shape?",
+          options: [
+            "A straight line",
+            "A parabola",
+            "A circle",
+            'An "S" shape',
+          ],
+          correct: 3,
+          translation: "دالة الـ sigmoid بيتوصف شكلها بـ:",
+          explanation:
+            "الـ sigmoid ليها شكل حرف S (S-shaped curve). عشان كده بتتحول القيم المتطرفة (سالبة جدًا أو موجبة جدًا) لقيم قريبة من 0 أو 1 على الترتيب.",
+          tags: ["Logistic Regression", "Sigmoid", "Shape"],
+          ref: "Lecture 05 — Logistic Function – Sigmoid Function",
+          likely: "medium",
+        },
+        {
+          q: "28. In a typical logistic regression training procedure, weights are initialized to:",
+          options: [
+            "Large values like 1000",
+            "Small random values",
+            "Exactly zero",
+            "Negative values only",
+          ],
+          correct: 1,
+          translation:
+            "في إجراء التدريب النموذجي للانحدار اللوجستي، الأوزان بتبدأ بـ:",
+          explanation:
+            "الأوزان بتُهيّأ عادة لـ small random values. ده بيساعد على كسر التماثل (symmetry breaking) وبيسمح للـ GD يكتشف حلول مختلفة.",
+          tags: ["Logistic Regression", "Initialization"],
+          ref: "Lecture 05 — Example (Initialization step)",
+          likely: "medium",
+        },
+        {
+          q: "29. What does the term z = w⊤x + b represent in logistic regression?",
+          options: [
+            "The probability of class 1",
+            "The linear combination (input to the sigmoid function)",
+            "The loss value",
+            "The gradient of the loss",
+          ],
+          correct: 1,
+          translation: "المصطلح z = w⊤x + b بيمثل إيه في الانحدار اللوجستي؟",
+          explanation:
+            "z هو التركيب الخطي اللي بيدخل لدالة الـ sigmoid. الاحتمال y = σ(z) = 1/(1+e^(−z)). فـ z مش الاحتمال نفسه، لكن مدخل الـ sigmoid.",
+          tags: ["Logistic Regression", "Linear Combination"],
+          ref: "Lecture 05 — Logistic regression (How does it work?)",
+          likely: "high",
+        },
+        {
+          q: "30. If the sigmoid output for an input is exactly 0.5, what does the model typically predict?",
+          options: [
+            "Always class 1",
+            "Always class 0",
+            "Class 1 (since threshold is ≥ 0.5)",
+            "Reject the input",
+          ],
+          correct: 2,
+          translation:
+            "لو مخرج الـ sigmoid لمُدخل هو 0.5 بالظبط، النموذج بيتوقع إيه عادة؟",
+          explanation:
+            "بما إن الحد هو p ≥ 0.5 يبقى class 1، فلو المخرج = 0.5 بالظبط، النموذج بيتوقع class 1. (ملاحظة: بعض التطبيقات بتختار 0.5 = class 0، لكن المحاضرة استخدمت ≥).",
+          tags: ["Logistic Regression", "Threshold", "Prediction"],
+          ref: "Lecture 05 — Logistic regression",
+          likely: "medium",
+        },
+
+        // ===================== Essay Questions =====================
+        {
+          type: "essay",
+          q: "1. Define a convex set and a convex function. Why is convexity important for optimization in machine learning?",
+          translation:
+            "عرّف المجموعة المحدبة (convex set) والدالة المحدبة (convex function). ليه التحدب مهم في تحسين نماذج تعلم الآلة؟",
+          answer:
+            "Convex set: A set S is convex if any line segment connecting two points in S lies entirely within S. Formally, for x1, x2 ∈ S, λ·x1 + (1−λ)·x2 ∈ S for 0 ≤ λ ≤ 1.\n" +
+            "Convex function: A function f is convex if the line segment between any two points on f's graph lies above f's graph. Formally, f((1−λ)x0 + λx1) ≤ (1−λ)f(x0) + λf(x1).\n" +
+            "Importance: If a function is convex, then every critical point is a global optimum. This means gradient descent is guaranteed to find the global minimum (no local optima traps). For linear models, if the loss is convex in z = w⊤x + b, it is also convex in w and b, making optimization tractable.",
+          tags: [
+            "Convexity",
+            "Convex Sets",
+            "Convex Functions",
+            "Optimization",
+          ],
+          ref: "Lecture 05 — Convex Sets & Convex Functions",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the impact of the learning rate α on gradient descent. What happens when α is too small or too large?",
+          translation:
+            "اشرح تأثير الـ learning rate α على الـ Gradient Descent. إيه اللي بيحصل لما α صغير جدًا أو كبير جدًا؟",
+          answer:
+            "The learning rate α controls the step size at each iteration of gradient descent.\n" +
+            "α too small: slow progress and slow convergence — the algorithm may need a very large number of iterations to reach the minimum.\n" +
+            "α too large: oscillations around the minimum, possibly overshooting it.\n" +
+            "α much too large: instability and divergence — the cost function may grow instead of shrink.\n" +
+            "How to find a good value: typical good values are between 0.001 and 0.1. Use grid search (try 0.1, 0.03, 0.01, ...) and diagnose optimization problems using training curves. Alternatively, change the algorithm (e.g., line search).",
+          tags: ["Learning Rate", "Gradient Descent", "Hyperparameter Tuning"],
+          ref: "Lecture 05 — Impact of Learning Rate & Finding a Good Learning Rate",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Describe the simplified model for Binary Linear Classification. How are the threshold r and the bias b eliminated?",
+          translation:
+            "وصف النموذج المبسّط للتصنيف الخطي الثنائي. إزاي بيتشال الـ threshold r و الـ bias b؟",
+          answer:
+            "Binary Linear Classification predicts a binary target t ∈ {0, 1} using a linear function of inputs followed by thresholding.\n" +
+            "General model: z = w⊤x + b, y = 1 if z ≥ r, y = 0 if z < r.\n" +
+            "Eliminating the threshold r: assume r = 0, so w⊤x + b ≥ r becomes w⊤x + b' ≥ 0 where b' = b − r.\n" +
+            "Eliminating the bias b: add a dummy feature x0 = 1. The weight w0 = b acts as the bias (same trick as in linear regression).\n" +
+            "Simplified model: z = w⊤x, y = 1 if z ≥ 0, y = 0 if z < 0.",
+          tags: [
+            "Binary Linear Classification",
+            "Simplified Model",
+            "Bias",
+            "Threshold",
+          ],
+          ref: "Lecture 05 — Simplified Model",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Compare data space and weight space visualizations in Binary Linear Classification. What do points, lines, and half-spaces represent in each?",
+          translation:
+            "قارن بين تصوّر الـ data space و الـ weight space في التصنيف الخطي الثنائي. النقاط والخطوط وأنصاف الفضاءات بتمثل إيه في كل واحد؟",
+          answer:
+            "Data space:\n" +
+            "- Points represent training examples.\n" +
+            "- A line (or hyperplane in high dimensions) represents a set of weights — the decision boundary {x : w⊤x = 0}.\n" +
+            "- The boundary separates the data into two regions (positive vs. negative predictions).\n" +
+            "Weight space:\n" +
+            "- Points represent sets of values for the weights w.\n" +
+            "- Each training example specifies a half-space that w must lie in to guarantee correct classification.\n" +
+            "- The feasible region (where all constraints are satisfied) is the intersection of all half-spaces. The problem is feasible if this region is nonempty.",
+          tags: ["Data Space", "Weight Space", "Visualization", "Half-Space"],
+          ref: "Lecture 05 — Visualizing NOT/AND in Data and Weight Spaces",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Model the AND logical function using Binary Linear Classification. Give an example set of weights and derive the decision boundary.",
+          translation:
+            "مثّل دالة AND المنطقية باستخدام التصنيف الخطي الثنائي. اذكر مجموعة أوزان مثالية واشتق حد القرار.",
+          answer:
+            "AND truth table (with dummy x0 = 1):\n" +
+            "  x0 x1 x2 | t\n" +
+            "  1  0  0  | 0\n" +
+            "  1  0  1  | 0\n" +
+            "  1  1  0  | 0\n" +
+            "  1  1  1  | 1\n" +
+            "Model: z = w0·x0 + w1·x1 + w2·x2, y = 1 if z ≥ 0, else 0.\n" +
+            "Constraints from training examples (need to be satisfied for correct classification):\n" +
+            "  w0 < 0            (for x = (1,0,0), t = 0)\n" +
+            "  w0 + w2 < 0       (for x = (1,0,1), t = 0)\n" +
+            "  w0 + w1 < 0       (for x = (1,1,0), t = 0)\n" +
+            "  w0 + w1 + w2 ≥ 0  (for x = (1,1,1), t = 1)\n" +
+            "Example solution: w0 = −1.5, w1 = 1, w2 = 1.\n" +
+            "Decision boundary: w0·x0 + w1·x1 + w2·x2 = 0  →  −1.5 + x1 + x2 = 0  →  x1 + x2 = 1.5.",
+          tags: [
+            "AND Function",
+            "Binary Linear Classification",
+            "Decision Boundary",
+          ],
+          ref: "Lecture 05 — Modeling AND & Visualizing AND",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. What is logistic regression? Explain why it is used for classification despite its name, and describe the role of the sigmoid function.",
+          translation:
+            "إيه هو الانحدار اللوجستي؟ اشرح ليه بيُستخدم للتصنيف رغم اسمه، ووضّح دور دالة الـ sigmoid.",
+          answer:
+            'Logistic regression is a supervised learning algorithm used for binary classification. Despite its name containing "regression", it is mainly used for classification (it estimates the probability that an instance belongs to a particular class).\n' +
+            "The model computes z = w⊤x + b, then applies the sigmoid function σ(z) = 1 / (1 + e^(−z)) to map z to a probability value between 0 and 1.\n" +
+            'Role of sigmoid: it maps any real-valued input to a value in (0, 1), forming an "S"-shaped curve. This lets us interpret the output as a probability.\n' +
+            "Classification rule: if the estimated probability ≥ 0.5, predict class 1; otherwise predict class 0.\n" +
+            'It\'s called "regression" because it is the extension of linear regression, but the sigmoid turns the continuous output into a categorical one.',
+          tags: ["Logistic Regression", "Sigmoid", "Classification"],
+          ref: "Lecture 05 — Logistic regression & Logistic Function",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. List and briefly explain the three types of logistic regression.",
+          translation:
+            "اذكر واشرح بإختصار الأنواع الثلاثة من الانحدار اللوجستي.",
+          answer:
+            "1) Binomial: the dependent variable has exactly 2 possible types, such as 0 or 1, Pass or Fail.\n" +
+            '2) Multinomial: the dependent variable has 3 or more possible unordered types, such as "cat", "dog", or "sheep".\n' +
+            '3) Ordinal: the dependent variable has 3 or more possible ordered types, such as "low", "medium", or "high".',
+          tags: [
+            "Logistic Regression",
+            "Types",
+            "Binomial",
+            "Multinomial",
+            "Ordinal",
+          ],
+          ref: "Lecture 05 — Types of Logistic Regression",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Derive the gradient of the cross-entropy loss for logistic regression. Show that ∂LCE/∂wj simplifies to (y − t)·xj.",
+          translation:
+            "اشتق تدرج خسارة الـ cross-entropy للانحدار اللوجستي. وضّح إن ∂LCE/∂wj بتبسّط لـ (y − t)·xj.",
+          answer:
+            "Given:\n" +
+            "  LCE(y, t) = −t·log(y) − (1−t)·log(1−y)\n" +
+            "  y = σ(z) = 1 / (1 + e^(−z))\n" +
+            "  z = w⊤x\n" +
+            "Apply the chain rule: ∂LCE/∂wj = (∂LCE/∂y) · (∂y/∂z) · (∂z/∂wj).\n" +
+            "Step 1 — ∂LCE/∂y = −t/y + (1−t)/(1−y).\n" +
+            "Step 2 — ∂y/∂z = y·(1−y)  (the derivative of the sigmoid).\n" +
+            "Step 3 — ∂z/∂wj = xj  (since z = w⊤x is linear in wj).\n" +
+            "Combine:\n" +
+            "  ∂LCE/∂wj = [−t/y + (1−t)/(1−y)] · y·(1−y) · xj\n" +
+            "           = [−t·(1−y) + (1−t)·y] · xj\n" +
+            "           = (−t + t·y + y − t·y) · xj\n" +
+            "           = (y − t) · xj.\n" +
+            "So ∂LCE/∂wj = (y − t)·xj — the same form as linear regression's gradient, but with y = σ(z).",
+          tags: [
+            "Logistic Regression",
+            "Gradient",
+            "Cross-Entropy",
+            "Derivation",
+          ],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Write the gradient descent update rule for logistic regression and explain each term.",
+          translation:
+            "اكتب قاعدة تحديث الـ Gradient Descent للانحدار اللوجستي واشرح كل مصطلح.",
+          answer:
+            "Update rule:\n" +
+            "  wj → wj − α · (1/N) · Σ_{i=1..N} (y(i) − t(i)) · xj(i)\n" +
+            "Where:\n" +
+            "  wj is the j-th weight being updated.\n" +
+            "  α > 0 is the learning rate (controls step size).\n" +
+            "  N is the number of training examples.\n" +
+            "  y(i) = σ(w⊤x(i)) is the predicted probability for the i-th example.\n" +
+            "  t(i) is the true label (0 or 1) for the i-th example.\n" +
+            "  xj(i) is the j-th feature of the i-th example.\n" +
+            "  (1/N)·Σ(...) is the average gradient of the cross-entropy loss over all training examples.\n" +
+            "Intuition: we move wj in the direction opposite to the average gradient (i.e., the direction that decreases the loss).",
+          tags: ["Logistic Regression", "Gradient Descent", "Update Rule"],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the typical training procedure for logistic regression, step by step.",
+          translation:
+            "اشرح إجراء التدريب النموذجي للانحدار اللوجستي خطوة بخطوة.",
+          answer:
+            "1) Initialize the weights (often to small random values).\n" +
+            "2) For each training example:\n" +
+            "   a. Calculate the predicted probability using the current weights: y = σ(w⊤x).\n" +
+            "   b. Compare this probability to the actual class label by calculating its log loss (cross-entropy loss).\n" +
+            "3) Update the weights to minimize the loss (using gradient descent or another optimization algorithm). This means repeatedly doing Step 2 until the log loss cannot get any smaller (convergence).\n" +
+            "4) Classification of new instances (after training): compute p = σ(w⊤x_new). If p ≥ 0.5, predict class 1; otherwise predict class 0.",
+          tags: [
+            "Logistic Regression",
+            "Training Procedure",
+            "Gradient Descent",
+          ],
+          ref: "Lecture 05 — Example (training & classification steps)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Give two real-world examples where logistic regression can be applied, as mentioned in the lecture.",
+          translation:
+            "اذكر مثالين من العالم الحقيقي ممكن نطبّق فيهم الانحدار اللوجستي، زي ما المحاضرة ذكرت.",
+          answer:
+            "1) Business example: For an online retailer, predict which product a particular customer is most likely to buy. The data set contains past visitors and their purchases from the online retailer.\n" +
+            "2) Medical example: Investigate whether a person is susceptible to a certain disease. The data set contains diseased and non-diseased persons as well as other medical parameters.\n" +
+            "(Additional example from the lecture: a weather dataset with columns 'Outlook', 'Temperature', 'Humidity', 'Wind', and 'Play' (target). Categorical columns like Outlook & Windy are encoded using one-hot encoding, while numerical columns are scaled using standard scaling / z-normalization.)",
+          tags: ["Logistic Regression", "Applications", "Examples"],
+          ref: "Lecture 05 — Examples",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "12. Explain what happens when the data-set is not linearly separable, and how logistic regression addresses this.",
+          translation:
+            "اشرح إيه اللي بيحصل لما البيانات مش linearly separable، وإزاي الانحدار اللوجستي بيتعامل مع المشكلة دي.",
+          answer:
+            "When the data is not linearly separable, no set of weights can perfectly classify all training examples using a linear decision rule.\n" +
+            "Logistic regression addresses this by:\n" +
+            "1) Defining a loss function (the cross-entropy loss LCE(y, t) = −t·log(y) − (1−t)·log(1−y)).\n" +
+            "2) Finding weights that minimize the average loss over the training examples (using gradient descent), instead of trying to perfectly separate the data.\n" +
+            "The result is a soft probabilistic prediction (between 0 and 1) rather than a hard 0/1 classification, which gracefully handles overlap between classes. The threshold 0.5 is then applied to convert probabilities into class labels.",
+          tags: ["Logistic Regression", "Linear Separability", "Loss Function"],
+          ref: "Lecture 05 — Data Isn't Linearly Separable & Logistic regression",
+          likely: "high",
+        },
+
+        // ===================== Numerical / Computational Questions =====================
+        {
+          type: "essay",
+          q: "1. (Numerical) Compute the sigmoid σ(z) for z = 0. What does the result mean?",
+          translation:
+            "(سؤال حسابي) احسب الـ sigmoid σ(z) لـ z = 0. إيه معنى النتيجة؟",
+          answer:
+            "Given: z = 0.\n" +
+            "Formula: σ(z) = 1 / (1 + e^(−z)).\n" +
+            "Step 1: e^(−0) = e^0 = 1.\n" +
+            "Step 2: σ(0) = 1 / (1 + 1) = 1 / 2 = 0.5.\n" +
+            "Result: σ(0) = 0.5.\n" +
+            "Interpretation: when z = 0 (i.e., w⊤x + b = 0), the model is exactly on the decision boundary and assigns probability 0.5 to class 1 — maximum uncertainty. This is consistent with the threshold of 0.5.",
+          tags: ["Sigmoid", "Numerical", "Decision Boundary"],
+          ref: "Lecture 05 — Logistic Function / Sigmoid Function",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. (Numerical) For the AND function with w0 = −1.5, w1 = 1, w2 = 1, compute z and the predicted class y for the input x = (x0=1, x1=1, x2=0).",
+          translation:
+            "(سؤال حسابي) لدالة AND مع w0 = −1.5, w1 = 1, w2 = 1، احسب z والفئة المتوقعة y للمُدخل x = (1, 1, 0).",
+          answer:
+            "Given: w = (−1.5, 1, 1), x = (1, 1, 0).\n" +
+            "Step 1 — Compute z = w⊤x = w0·x0 + w1·x1 + w2·x2.\n" +
+            "  z = (−1.5)(1) + (1)(1) + (1)(0) = −1.5 + 1 + 0 = −0.5.\n" +
+            "Step 2 — Apply threshold: y = 1 if z ≥ 0, else y = 0.\n" +
+            "  Since z = −0.5 < 0, y = 0.\n" +
+            "Result: z = −0.5, y = 0 (predicted class 0).\n" +
+            "Verification: this matches the AND truth table (input (1,1,0) → output 0).",
+          tags: ["AND Function", "Binary Linear Classification", "Numerical"],
+          ref: "Lecture 05 — Modeling AND & Visualizing AND",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. (Numerical) For the AND function with w0 = −1.5, w1 = 1, w2 = 1, verify that the input x = (1, 1, 1) is classified correctly as class 1.",
+          translation:
+            "(سؤال حسابي) لدالة AND مع w0 = −1.5, w1 = 1, w2 = 1، تحقّق إن المُدخل x = (1, 1, 1) بيُصنّف صح كـ class 1.",
+          answer:
+            "Given: w = (−1.5, 1, 1), x = (1, 1, 1).\n" +
+            "Step 1 — Compute z = w⊤x = w0·x0 + w1·x1 + w2·x2.\n" +
+            "  z = (−1.5)(1) + (1)(1) + (1)(1) = −1.5 + 1 + 1 = 0.5.\n" +
+            "Step 2 — Apply threshold: y = 1 if z ≥ 0, else y = 0.\n" +
+            "  Since z = 0.5 ≥ 0, y = 1.\n" +
+            "Result: z = 0.5, y = 1 (predicted class 1).\n" +
+            "Verification: this matches the AND truth table (input (1,1,1) → output 1). The chosen weights correctly classify this example.",
+          tags: ["AND Function", "Binary Linear Classification", "Numerical"],
+          ref: "Lecture 05 — Modeling AND & Visualizing AND",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. (Numerical) Given a logistic regression model with weights w = (0.5, 2.0) (so w0 = 0.5, w1 = 2.0), and an input x = (1, 0.3), compute the predicted probability y = σ(w⊤x).",
+          translation:
+            "(سؤال حسابي) لنموذج انحدار لوجستي بأوزان w = (0.5, 2.0) (يعني w0 = 0.5, w1 = 2.0) ومُدخل x = (1, 0.3)، احسب الاحتمال المتوقع y = σ(w⊤x).",
+          answer:
+            "Given: w0 = 0.5, w1 = 2.0, x0 = 1, x1 = 0.3.\n" +
+            "Step 1 — Compute z = w⊤x = w0·x0 + w1·x1 = (0.5)(1) + (2.0)(0.3) = 0.5 + 0.6 = 1.1.\n" +
+            "Step 2 — Compute σ(z) = 1 / (1 + e^(−z)) = 1 / (1 + e^(−1.1)).\n" +
+            "Step 3 — e^(−1.1) ≈ 0.3329.\n" +
+            "Step 4 — σ(1.1) = 1 / (1 + 0.3329) = 1 / 1.3329 ≈ 0.7503.\n" +
+            "Result: y ≈ 0.75.\n" +
+            "Interpretation: the model assigns probability ~0.75 to class 1. Since 0.75 ≥ 0.5, the predicted class is 1.",
+          tags: ["Logistic Regression", "Sigmoid", "Numerical"],
+          ref: "Lecture 05 — Logistic regression (How does it work?)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. (Numerical) For a logistic regression model, the predicted probability is y = 0.8 and the true label is t = 1. Compute the cross-entropy loss LCE(y, t).",
+          translation:
+            "(سؤال حسابي) لنموذج انحدار لوجستي، الاحتمال المتوقع y = 0.8 والفئة الحقيقية t = 1. احسب خسارة الـ cross-entropy LCE(y, t).",
+          answer:
+            "Given: y = 0.8, t = 1.\n" +
+            "Formula: LCE(y, t) = −t·log(y) − (1−t)·log(1−y).\n" +
+            "Step 1 — Substitute: LCE = −(1)·log(0.8) − (1−1)·log(1−0.8).\n" +
+            "Step 2 — Simplify: LCE = −log(0.8) − 0·log(0.2) = −log(0.8).\n" +
+            "Step 3 — Compute log(0.8) ≈ −0.2231 (natural log).\n" +
+            "Step 4 — LCE ≈ −(−0.2231) = 0.2231.\n" +
+            "Result: LCE(0.8, 1) ≈ 0.2231.\n" +
+            "Interpretation: the loss is small because the prediction (0.8) is close to the true label (1). If y had been 0.99, the loss would be even smaller; if y had been 0.1, the loss would be large (~2.3).",
+          tags: ["Logistic Regression", "Cross-Entropy Loss", "Numerical"],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. (Numerical) In a logistic regression training step, the current weight is wj = 0.4, the predicted probability is y = 0.7, the true label is t = 1, the feature value is xj = 2.0, and the learning rate is α = 0.1. Compute the new value of wj after one gradient descent update.",
+          translation:
+            "(سؤال حسابي) في خطوة تدريب للانحدار اللوجستي، الوزن الحالي wj = 0.4، الاحتمال المتوقع y = 0.7، الفئة الحقيقية t = 1، قيمة الميزة xj = 2.0، ومعدل التعلم α = 0.1. احسب القيمة الجديدة لـ wj بعد تحديث واحد.",
+          answer:
+            "Given: wj = 0.4, y = 0.7, t = 1, xj = 2.0, α = 0.1.\n" +
+            "Update rule (for a single example): wj_new = wj − α · (y − t) · xj.\n" +
+            "Step 1 — Compute the gradient term: (y − t) · xj = (0.7 − 1) · 2.0 = (−0.3) · 2.0 = −0.6.\n" +
+            "Step 2 — Multiply by α: α · (−0.6) = 0.1 · (−0.6) = −0.06.\n" +
+            "Step 3 — Update: wj_new = 0.4 − (−0.06) = 0.4 + 0.06 = 0.46.\n" +
+            "Result: wj_new = 0.46.\n" +
+            "Interpretation: because y < t (model under-predicted), the gradient (y − t) is negative, so subtracting a negative value increases wj. This moves the prediction closer to the true label (t = 1).",
+          tags: [
+            "Logistic Regression",
+            "Gradient Descent",
+            "Numerical",
+            "Update Rule",
+          ],
+          ref: "Lecture 05 — Gradient of Logistic Loss",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });

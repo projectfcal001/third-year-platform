@@ -13,9 +13,10 @@ subjects.push({
   slug: "hci",
   lectures: [
     {
-      id: "hci-lecture-01",
       t: "المحاضرة 1: مقدمة في التفاعل بين الإنسان والحاسوب (HCI)",
       d: "تعريف HCI، أمثلة من الحياة اليومية، أهميته، علاقته بالمجالات الأخرى (UX / UI / Interaction Design)، مبادئ التصميم، والمكونات الرئيسية.",
+      id: "hci-lecture-01",
+
       pdf: "datenew/subjects/hci/lectures/Lec 1/Lec 1.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-01-Questions.pdf",
       // فئات روابط منظمة - المحاضرة الأولى: مقدمة في تفاعل الإنسان والحاسوب (HCI)
@@ -656,9 +657,9 @@ subjects.push({
       ],
     },
     {
-      id: "hci-lecture-02",
       t: "المحاضرة 2: الإنسان (The Human)",
-      d: "تعريف HCI، أمثلة من الحياة اليومية، أهميته، علاقته بالمجالات الأخرى (UX / UI / Interaction Design)، مبادئ التصميم، والمكونات الرئيسية.",
+      d: "القنوات الحسية والحركية، الذاكرة (الحسية، قصيرة المدى، طويلة المدى)، التفكير وحل المشكلات، العاطفة، والفروق الفردية.",
+      id: "hci-lecture-02",
       pdf: "datenew/subjects/hci/lectures/Lec 2/Lec 2.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-02-Questions.pdf",
       // فئات روابط منظمة - المحاضرة الثانية: الإنسان (The Human) والإدراك البشري في تفاعل الإنسان والحاسوب (HCI)
@@ -1315,9 +1316,9 @@ subjects.push({
       ],
     },
     {
-      id: "hci-lecture-03",
       t: "المحاضرة 3: الحاسوب (The Computer)",
-      d: "تعريف HCI، أمثلة من الحياة اليومية، أهميته، علاقته بالمجالات الأخرى (UX / UI / Interaction Design)، مبادئ التصميم، والمكونات الرئيسية.",
+      d: "أجهزة الإدخال والإخراج، الذاكرة، المعالجة، وأجهزة التفاعل (النص، الرسوميات، الفيديو، الصوت).",
+      id: "hci-lecture-03",
       pdf: "datenew/subjects/hci/lectures/Lec 3/Lec 3.pdf",
       pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-03-Questions.pdf",
       // فئات محاضرات تفاعل الإنسان والحاسوب (HCI)
@@ -2004,9 +2005,9 @@ subjects.push({
     },
     // المحاضرة: Interaction Design Basics — أساسيات تصميم التفاعل (الأهداف، القيود، المستخدم، السيناريوهات، التنقل، تصميم الشاشة، النمذجة والتكرار)
     {
-      id: "hci-lecture-05",
-      t: "Interaction Design Basics",
+      t: "المحاضرة 5: أساسيات تصميم التفاعل (Interaction Design Basics)",
       d: "أساسيات تصميم التفاعل: الأهداف والقيود، عملية التصميم، المستخدم والـ Persona، السيناريوهات، تصميم التنقل، تصميم الشاشة، والنماذج الأولية والتكرار.",
+      id: "hci-lecture-05",
       pdf: "datenew/subjects/hci/lectures/Lec 5/Ch 5_HCI_compressed.pdf",
       pdf2: "datenew/subjects/hci/questions/Questions on each lecture/Lecture-05-Questions.pdf",
       // المحاضرة: Interaction Design Basics — أساسيات تصميم التفاعل (الأهداف والقيود، المستخدم والـ Persona، السيناريوهات، التنقل، تصميم الشاشة، النمذجة والتكرار، التوطين)
@@ -2937,6 +2938,1925 @@ subjects.push({
             'The lecture states bluntly: "you never get it right first time." Designs rarely survive contact with real users unchanged, so iteration is necessary to find what is really needed.\nThe iteration loop is:\n  - Prototype — build a partial, experimental version of the design.\n  - Evaluate — test it (with users, heuristics, scenarios, etc.).\n  - (Re-)design — revise the design based on what was learned.\n  - Repeat until "OK!" → done!\nIteration lets designers get something concrete in front of users early, learn from the gaps between expectation and behaviour, and improve the design over multiple cycles rather than committing to a single, untested guess.',
           tags: ["Prototyping", "Iteration"],
           ref: "Lecture 05 — Section: Prototyping (You never get it right first time / iteration loop)",
+          likely: "high",
+        },
+      ],
+    },
+    {
+      id: "hci-lecture-06",
+      t: "المحاضرة 6 — HCI in the Software Process",
+      d: "بنك أسئلة شامل لمحاضرة تفاعل الإنسان مع الحاسوب: دورة حياة البرمجيات، هندسة الاستخدام، النماذج الأولية، ومرجعيات التصميم.",
+      pdf: "datenew/subjects/hci/lectures/Lec 6/e3-chap-06_compressed.pdf",
+      pdf2: "/datenew/subjects/hci/questions/Questions on each lecture/Lecture-06-Questions.pdf",
+      // المحاضرة: HCI in the Software Process (Chapter 6) — دورة حياة البرمجيات، هندسة الاستخدام، النماذج الأولية، مرجعيات التصميم
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "قنوات عربية بتشرح أساسيات هندسة البرمجيات ودورة الحياة وتصميم التفاعل.",
+          links: [
+            {
+              t: "دورة هندسة البرمجيات بالعربي",
+              d: "قائمة تشغيل بتغطّي دورة حياة البرمجيات ونماذج التطوير زي الشلال، مرتبطة بموضوع دورة الحياة في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶️ مشاهدة القائمة",
+                  url: "https://www.youtube.com/playlist?list=PL4mqzqquSRgaJ9XMQMUvMQjPyllD1xY5f",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: HCI في دورة حياة البرمجيات",
+              d: "رابط بحث يوتيوب (مش فيديو محدّد) لفيديوهات عربية عن تفاعل الإنسان مع الحاسوب ودورة الحياة وتصميم الاستخدامية.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=تفاعل+الإنسان+مع+الحاسوب+دورة+حياة+البرمجيات",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "محتوى عالمي لشرح النماذج الأولية وتقنية Wizard of Oz ودورة حياة البرمجيات.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: Waterfall Model SDLC",
+              d: "رابط بحث يوتيوب لفيديوهات تشرح نموذج الشلال ومراحله، المرتبط مباشرة بقسم The waterfall model.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=waterfall+model+SDLC+phases",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Wizard of Oz prototyping HCI",
+              d: "رابط بحث يوتيوب لشرح تقنية Wizard of Oz في الـ HCI والـ prototyping.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=wizard+of+oz+prototyping+HCI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: ISO 9241 usability",
+              d: "رابط بحث يوتيوب لشرح معيار ISO 9241 وثلاثي effectiveness / efficiency / satisfaction.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=ISO+9241+usability+effectiveness+efficiency+satisfaction",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description: "مراجع رسمية وموثوقة لتعميق فهم مفاهيم المحاضرة.",
+          links: [
+            {
+              t: "Waterfall Model — GeeksforGeeks",
+              d: "شرح مفصّل لمراحل نموذج الشلال في هندسة البرمجيات، مرتبط بقسم The waterfall model في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.geeksforgeeks.org/software-engineering/waterfall-model",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Waterfall model — Wikipedia",
+              d: "مقال ويكيبيديا الشامل لنموذج الشلال وتاريخه واستخداماته في دورة حياة البرمجيات.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://en.wikipedia.org/wiki/Waterfall_model",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "The Wizard of Oz Method — Nielsen Norman Group",
+              d: "مقال NN/g الرسمي يشرح تقنية Wizard of Oz في أبحاث المستخدم، يغطّي نفس المفهوم المذكور في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.nngroup.com/articles/wizard-of-oz/",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "What Is ISO 9241? Guide to HCI & Usability",
+              d: "دليل شامل لمعيار ISO 9241 والأبعاد الثلاثة (effectiveness / efficiency / satisfaction) المطابقة لما ورد في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.alekvs.com/what-is-iso-9241-a-complete-guide-to-hci-and-usability-standards",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Storyboards in UX Design — IxDF",
+              d: "شرح Interaction Design Foundation لمفهوم الـ Storyboard ودوره في تصميم رحلة المستخدم، مرتبط بقسم Techniques for prototyping.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://ixdf.org/literature/topics/storyboards",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "هندسة سهولة الاستخدام — ويكيبيديا العربية",
+              d: "مقال عربي عن usability engineering يربط بمحور هندسة الاستخدامية ومواصفاتها في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://ar.wikipedia.org/wiki/%D9%87%D9%86%D8%AF%D8%B3%D8%A9_%D8%B3%D9%87%D9%88%D9%84%D8%A9_%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تصميم تفاعلي وprototyping لتطبيق مفاهيم المحاضرة عمليًا.",
+          links: [
+            {
+              t: "Figma — أداة تصميم وprototyping",
+              d: "أداة تصميم تفاعلي رئيسية لعمل storyboards ونماذج أولية محدودة الوظائف، تطبّق مفاهيم النماذج الأولية من المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.figma.com/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Wizard of Oz Prototypes — IxDF",
+              d: "صفحة IxDF بتشرح أداة وتقنية Wizard of Oz prototyping من منظور تطبيقي.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://ixdf.org/literature/topics/wizard-of-oz-prototypes",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        {
+          q: "1. What is software engineering primarily concerned with, according to the lecture?",
+          options: [
+            "The discipline for understanding the software design process, or life cycle",
+            "The marketing and commercialization of software products",
+            "Designing the physical hardware that runs software",
+            "Writing source code without following any structured process",
+          ],
+          correct: 0,
+          translation:
+            "ما الذي تهتم به هندسة البرمجيات بشكل أساسي حسب المحاضرة؟",
+          explanation:
+            "المحاضرة بتعرّف هندسة البرمجيات على إنها التخصص اللي بيفهم عملية تصميم البرمجيات أو دورة الحياة. الباقي غلط لأنه بيتكلم عن تسويق أو هاردوير أو كتابة كود من غير منهجية.",
+          tags: ["Software Engineering", "Life Cycle"],
+          ref: "Lecture 6 — Software engineering & the design process",
+          likely: "high",
+        },
+        {
+          q: "2. According to the lecture, when does designing for usability occur in the software life cycle?",
+          options: [
+            "Only during the requirements specification phase",
+            "As a single isolated activity performed after deployment",
+            "At all stages of the life cycle, not as a single isolated activity",
+            "Only during the integration and testing phase",
+          ],
+          correct: 2,
+          translation:
+            "متى يحدث تصميم الاستخدامية في دورة حياة البرمجيات حسب المحاضرة؟",
+          explanation:
+            "المحاضرة بتأكد إن تصميم الاستخدامية بيحصل في كل مراحل دورة الحياة، مش نشاط معزول. الخيارات التانية بتقصره على مرحلة واحدة فقط.",
+          tags: ["Usability", "Life Cycle"],
+          ref: "Lecture 6 — HCI in the software process",
+          likely: "high",
+        },
+        {
+          q: "3. What is the main characteristic of the waterfall model?",
+          options: [
+            "A non-linear iterative process with continuous feedback",
+            "A linear sequential flow of activities from one phase to the next",
+            "A random exploratory approach with no phases",
+            "A prototype-only model without documentation",
+          ],
+          correct: 1,
+          translation: "ما هي الخاصية الرئيسية لنموذج الشلال؟",
+          explanation:
+            "نموذج الشلال بيفترض تسلسل خطي للأنشطة. خيار الـ feedback هو خاصية الأنظمة التفاعلية مش الشلال، والباقي وصف خاطئ للنموذج.",
+          tags: ["Waterfall Model", "Life Cycle"],
+          ref: "Lecture 6 — The waterfall model",
+          likely: "high",
+        },
+        {
+          q: "4. What distinguishes the life cycle for interactive systems from the waterfall model?",
+          options: [
+            "It assumes a strict linear sequence with no feedback",
+            "It cannot assume a linear sequence of activities and involves lots of feedback",
+            "It consists of only one phase: coding",
+            "It uses the same phases as the waterfall but in reverse order",
+          ],
+          correct: 1,
+          translation:
+            "ما الذي يميز دورة حياة الأنظمة التفاعلية عن نموذج الشلال؟",
+          explanation:
+            "المحاضرة بتوضّح إن دورة حياة الأنظمة التفاعلية ما تقدرش تفترض تسلسل خطي زي الشلال، وإن فيها feedback كتير بين المراحل.",
+          tags: ["Interactive Systems", "Waterfall Model"],
+          ref: "Lecture 6 — The life cycle for interactive systems",
+          likely: "high",
+        },
+        {
+          q: "5. Which activity in the software life cycle involves capturing what the system is expected to provide?",
+          options: [
+            "Architectural design",
+            "Detailed design",
+            "Requirements specification",
+            "Coding and unit testing",
+          ],
+          correct: 2,
+          translation:
+            "أي نشاط في دورة حياة البرمجيات بيشمل التقاط ما يُتوقّع من النظام أن يقدّمه؟",
+          explanation:
+            "مواصفات المتطلبات (Requirements specification) هي اللي بتلتقط توقعات النظام. التصميم المعماري بيعمل وصف عالي المستوى، والتصميم التفصيلي بيعمل refinement، والـ coding بكتابة الكود.",
+          tags: ["Requirements", "Life Cycle"],
+          ref: "Lecture 6 — Activities in the life cycle",
+          likely: "high",
+        },
+        {
+          q: "6. What does architectural design produce?",
+          options: [
+            "A high-level description that factors the system into major components and how they are interrelated",
+            "The final code modules ready for compilation",
+            "User manuals and deployment documentation",
+            "Maintenance reports produced after release",
+          ],
+          correct: 0,
+          translation: "ماذا ينتج التصميم المعماري؟",
+          explanation:
+            "التصميم المعماري بيعمل وصف عالي المستوى بيحوّل النظام لمكونات رئيسية وعلاقاتها. الخيارات التانية بتنتمي لمراحل تانية (coding، توثيق، صيانة).",
+          tags: ["Architectural Design"],
+          ref: "Lecture 6 — Activities in the life cycle",
+          likely: "high",
+        },
+        {
+          q: "7. What does detailed design involve?",
+          options: [
+            "Capturing system expectations in natural language",
+            "Refinement of architectural components to identify modules implemented separately",
+            "Performing final operation and maintenance",
+            "Integrating all components and testing them as a whole",
+          ],
+          correct: 1,
+          translation: "ماذا يتضمن التصميم التفصيلي؟",
+          explanation:
+            "التصميم التفصيلي بيعمل refinement للمكونات المعمارية لتحديد modules منفصلة، محكوم بالمتطلبات غير الوظيفية. الباقي أنشطة مراحل تانية.",
+          tags: ["Detailed Design"],
+          ref: "Lecture 6 — Activities in the life cycle",
+          likely: "high",
+        },
+        {
+          q: "8. What does usability specification define?",
+          options: [
+            "Only the visual appearance and colors of the interface",
+            "Clear and measurable requirements for how easy and effective a system should be to use",
+            "The marketing strategy and pricing of the product",
+            "The hardware and network requirements of the system",
+          ],
+          correct: 1,
+          translation:
+            "ماذا تعرّف مواصفات الاستخدامية (usability specification)؟",
+          explanation:
+            "مواصفات الاستخدامية بتعمل متطلبات واضحة وقابلة للقياس لسهولة وفعالية استخدام النظام. الباقي يتعلق بمظاهر بصرية أو تسويق أو هاردوير.",
+          tags: ["Usability Engineering", "Usability Specification"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "high",
+        },
+        {
+          q: "9. Which of the following is NOT one of the main components of usability specification?",
+          options: [
+            "Usability attribute",
+            "Measuring concept",
+            "Measuring method",
+            "Marketing budget",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي ليس من المكوّنات الرئيسية لمواصفات الاستخدامية؟",
+          explanation:
+            "المحاضرة بتعدّ ثلاثة مكوّنات: usability attribute، measuring concept، measuring method، بالإضافة لمستويات. الميزانية التسويقية مش مكوّن.",
+          tags: ["Usability Specification"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "high",
+        },
+        {
+          q: "10. According to ISO usability standard 9241, what does 'effectiveness' mean?",
+          options: [
+            "Can you do it without wasting effort?",
+            "Do you enjoy the process?",
+            "Can you achieve what you want to?",
+            "Is the system free of programming bugs?",
+          ],
+          correct: 2,
+          translation:
+            "حسب معيار ISO 9241، ماذا تعني الفعالية (effectiveness)؟",
+          explanation:
+            "المحاضرة بتعرّف effectiveness بـ 'can you achieve what you want to?'. efficiency = without wasting effort، وsatisfaction = enjoy the process.",
+          tags: ["ISO 9241", "Usability"],
+          ref: "Lecture 6 — ISO usability standard 9241",
+          likely: "high",
+        },
+        {
+          q: "11. According to ISO 9241, what does 'efficiency' mean?",
+          options: [
+            "Can you achieve what you want to?",
+            "Can you do it without wasting effort?",
+            "Do you enjoy the process?",
+            "Is the system aesthetically pleasing?",
+          ],
+          correct: 1,
+          translation: "حسب معيار ISO 9241، ماذا تعني الكفاءة (efficiency)؟",
+          explanation:
+            "efficiency بتتركّز على إنك تعمل المطلوب من غير إهدار مجهود. effectiveness = تحقيق الهدف، satisfaction = الاستمتاع بالعملية.",
+          tags: ["ISO 9241", "Usability"],
+          ref: "Lecture 6 — ISO usability standard 9241",
+          likely: "high",
+        },
+        {
+          q: "12. According to ISO 9241, what does 'satisfaction' mean?",
+          options: [
+            "Can you achieve what you want to?",
+            "Can you do it without wasting effort?",
+            "Do you enjoy the process?",
+            "Does the system produce zero errors?",
+          ],
+          correct: 2,
+          translation: "حسب معيار ISO 9241، ماذا تعني الرضا (satisfaction)؟",
+          explanation:
+            "satisfaction بتتعلّق بالاستمتاع بالعملية. effectiveness = تحقيق الهدف، efficiency = بدون إهدار مجهود.",
+          tags: ["ISO 9241", "Usability"],
+          ref: "Lecture 6 — ISO usability standard 9241",
+          likely: "high",
+        },
+        {
+          q: "13. What does iterative design overcome?",
+          options: [
+            "Excessive documentation overhead",
+            "Inherent problems of incomplete requirements",
+            "Hardware limitations of the system",
+            "Programming language complexity",
+          ],
+          correct: 1,
+          translation:
+            "ما الذي يتغلّب عليه التصميم التكراري (iterative design)؟",
+          explanation:
+            "المحاضرة بتوضّح إن التصميم التكراري بيتغلّب على المشاكل المتأصّلة للمتطلبات غير المكتملة. الباقي مش أسباب للتصميم التكراري حسب المحاضرة.",
+          tags: ["Iterative Design", "Prototyping"],
+          ref: "Lecture 6 — Iterative design and prototyping",
+          likely: "high",
+        },
+        {
+          q: "14. Which type of prototype is described as 'throw-away' (paper, sketch, etc.)?",
+          options: ["Incremental", "Evolutionary", "Throw-away", "Operational"],
+          correct: 2,
+          translation:
+            "أي نوع من النماذج الأولية يُوصف بأنه يُرمى بعد الاستخدام (ورق، رسم تخطيطي)؟",
+          explanation:
+            "المحاضرة بتذكر throw-away ضمن الأنواع الثلاثة (throw-away, incremental, evolutionary). incremental = step by step، evolutionary = تحسين وتوسيع.",
+          tags: ["Prototyping", "Prototype Types"],
+          ref: "Lecture 6 — Iterative design and prototyping",
+          likely: "high",
+        },
+        {
+          q: "15. Which prototype type is described as 'step by step'?",
+          options: [
+            "Throw-away",
+            "Incremental",
+            "Evolutionary",
+            "Wizard of Oz",
+          ],
+          correct: 1,
+          translation: "أي نوع من النماذج الأولية يُوصف بأنه خطوة بخطوة؟",
+          explanation:
+            "incremental = step by step. throw-away = ورق/رسم ويُرمى، evolutionary = تحسين وزيادة features. Wizard of Oz تقنية مش نوع.",
+          tags: ["Prototyping", "Prototype Types"],
+          ref: "Lecture 6 — Iterative design and prototyping",
+          likely: "high",
+        },
+        {
+          q: "16. Which prototype type improves and increases features over time?",
+          options: ["Throw-away", "Incremental", "Evolutionary", "Storyboards"],
+          correct: 2,
+          translation:
+            "أي نوع من النماذج الأولية بيحسّن ويزيد المزايا بمرور الوقت؟",
+          explanation:
+            "evolutionary = improve, increase features. Storyboard تقنية مش نوع نموذج.",
+          tags: ["Prototyping", "Prototype Types"],
+          ref: "Lecture 6 — Iterative design and prototyping",
+          likely: "high",
+        },
+        {
+          q: "17. What is a storyboard?",
+          options: [
+            "A sequence of drawings that shows how a user interacts with a system",
+            "A type of compiled source code",
+            "A final production system ready for deployment",
+            "A type of database schema diagram",
+          ],
+          correct: 0,
+          translation: "ما هو الـ storyboard؟",
+          explanation:
+            "المحاضرة بتعرف الـ storyboard على إنه تسلسل رسومات بيوضّح كيفية تفاعل المستخدم مع النظام، ومش ضروري يكون computer-based.",
+          tags: ["Prototyping Techniques", "Storyboard"],
+          ref: "Lecture 6 — Techniques for prototyping",
+          likely: "high",
+        },
+        {
+          q: "18. What is a limited functionality simulation?",
+          options: [
+            "A prototype that looks or behaves like the real system, but only some functions are implemented",
+            "The final released product with all features",
+            "A non-functional sketch drawn on paper",
+            "A user manual containing only screenshots",
+          ],
+          correct: 0,
+          translation:
+            "ما هي المحاكاة محدودة الوظائف (limited functionality simulation)؟",
+          explanation:
+            "محاكاة شكلها وسلوكها زي النظام الحقيقي لكن جزء فقط من الوظائف متاحة. الخيارات التانية غلط لأنها بتخلط بين النموذج والمنتج النهائي أو الورقي.",
+          tags: ["Prototyping Techniques"],
+          ref: "Lecture 6 — Techniques for prototyping",
+          likely: "high",
+        },
+        {
+          q: "19. In the Wizard of Oz technique, who performs some of the system's functions?",
+          options: [
+            "Another backup computer system",
+            "A human secretly",
+            "An automated AI agent",
+            "The end user themselves",
+          ],
+          correct: 1,
+          translation:
+            "في تقنية Wizard of Oz، مَن الذي ينفّذ بعض وظائف النظام؟",
+          explanation:
+            "المحاضرة بتقول إن المستخدم بيتفاعل مع النموذج كأنه حقيقي، لكن إنسان (سرًا) بينفّذ بعض وظائف النظام. خيار الـ AI غلط لأنه مش مذكور.",
+          tags: ["Prototyping Techniques", "Wizard of Oz"],
+          ref: "Lecture 6 — Techniques for prototyping",
+          likely: "high",
+        },
+        {
+          q: "20. What is design rationale?",
+          options: [
+            "An explanation of why a system was designed in a particular way",
+            "A list of all features the final system contains",
+            "The marketing plan for the product",
+            "The maintenance schedule of the system",
+          ],
+          correct: 0,
+          translation: "ما هو الـ design rationale؟",
+          explanation:
+            "design rationale بيوضّح ليه النظام اتتصمّم بطريقة معيّنة. الباقي مش تعريف له.",
+          tags: ["Design Rationale"],
+          ref: "Lecture 6 — Design rationale",
+          likely: "high",
+        },
+        {
+          q: "21. Which is NOT a benefit of design rationale mentioned in the lecture?",
+          options: [
+            "It helps team members understand design decisions",
+            "Designers learn from previous projects",
+            "It records the reasons for choosing one solution over another",
+            "It provides the final source code of the system",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي ليس من فوائد design rationale المذكورة في المحاضرة؟",
+          explanation:
+            "الفوائد المذكورة: فهم قرارات التصميم، التعلّم من المشاريع السابقة، تسجيل أسباب اختيار حلّ، ومساعدة المطورين المستقبليين. توفير الكود المصدري مش من الفوائد.",
+          tags: ["Design Rationale"],
+          ref: "Lecture 6 — Benefits of design rationale",
+          likely: "high",
+        },
+        {
+          q: "22. Which type of design rationale records the discussion step by step, from the first question to the final decision?",
+          options: [
+            "Structure-oriented",
+            "Process-oriented",
+            "Hybrid-oriented",
+            "User-oriented",
+          ],
+          correct: 1,
+          translation:
+            "أي نوع من design rationale يسجّل النقاش خطوة بخطوة من أول سؤال للقرار النهائي؟",
+          explanation:
+            "process-oriented بيسجّل النقاش خطوة بخطوة. structure-oriented بيركّز على تنظيم البدائل وأسبابها للمقارنة.",
+          tags: ["Design Rationale", "Process vs Structure"],
+          ref: "Lecture 6 — Design rationale (cont'd)",
+          likely: "high",
+        },
+        {
+          q: "23. Which type of design rationale organises design alternatives and their reasons, focusing on comparing options?",
+          options: [
+            "Process-oriented",
+            "Structure-oriented",
+            "Sequential-oriented",
+            "Linear-oriented",
+          ],
+          correct: 1,
+          translation:
+            "أي نوع من design rationale ينظّم البدائل وأسبابها ويركّز على مقارنة الخيارات؟",
+          explanation:
+            "structure-oriented بيرتّب البدائل وأسبابها ويركّز على المقارنة وتفسير الاختيار النهائي. process-oriented بيسجّل النقاش تسلسليًا.",
+          tags: ["Design Rationale", "Process vs Structure"],
+          ref: "Lecture 6 — Design rationale (cont'd)",
+          likely: "high",
+        },
+        {
+          q: "24. What are the main elements of IBIS?",
+          options: [
+            "Issues, positions, arguments",
+            "Questions, options, criteria",
+            "Goals, plans, actions",
+            "Tasks, methods, results",
+          ],
+          correct: 0,
+          translation: "ما هي العناصر الرئيسية لـ IBIS؟",
+          explanation:
+            "IBIS عناصرها: issues (هيكل هرمي root)، positions (حلول محتملة)، arguments (بتعدّل العلاقة بين positions وissues). QOC = questions, options, criteria.",
+          tags: ["IBIS", "Design Rationale"],
+          ref: "Lecture 6 — Issue-based information system (IBIS)",
+          likely: "high",
+        },
+        {
+          q: "25. In IBIS, what is the hierarchical structure with one 'root' issue?",
+          options: ["Positions", "Arguments", "Issues", "Criteria"],
+          correct: 2,
+          translation:
+            "في IBIS، ما هو ال structure الهرمي الذي له root issue واحد؟",
+          explanation:
+            "issues بتشكّل هيكل هرمي فيه root issue واحد. positions = حلول محتملة، arguments = بتعدّل العلاقة، criteria تخص QOC مش IBIS.",
+          tags: ["IBIS"],
+          ref: "Lecture 6 — Issue-based information system (IBIS)",
+          likely: "high",
+        },
+        {
+          q: "26. Which design rationale approach is the basis for much of design rationale research?",
+          options: [
+            "Issue-based information system (IBIS)",
+            "Design space analysis",
+            "Waterfall model",
+            "Storyboard technique",
+          ],
+          correct: 0,
+          translation:
+            "أي أسلوب من design rationale هو أساس معظم أبحاث design rationale؟",
+          explanation:
+            "المحاضرة بتصف IBIS على إنه basis لمعظم أبحاث design rationale. design space analysis أسلوب تاني (structure-oriented).",
+          tags: ["IBIS", "Design Rationale"],
+          ref: "Lecture 6 — Issue-based information system (IBIS)",
+          likely: "high",
+        },
+        {
+          q: "27. What does QOC stand for in design space analysis?",
+          options: [
+            "Questions, Options, Criteria",
+            "Quality, Operation, Cost",
+            "Queries, Outputs, Commands",
+            "Quotas, Objects, Classes",
+          ],
+          correct: 0,
+          translation: "ماذا يعني QOC في design space analysis؟",
+          explanation:
+            "QOC = Questions, Options, Criteria. الباقي اختصارات من عائلات تانية (جودة، استعلامات، كائنات).",
+          tags: ["QOC", "Design Space Analysis"],
+          ref: "Lecture 6 — Design space analysis",
+          likely: "high",
+        },
+        {
+          q: "28. Which design space analysis structure is hierarchical with questions, options, and criteria?",
+          options: ["QOC", "IBIS", "Waterfall", "Storyboard"],
+          correct: 0,
+          translation:
+            "أي بنية في design space analysis تكون هرمية بأسئلة وخيارات ومعايير؟",
+          explanation:
+            "QOC = Questions/Options/Criteria وهيكل هرمي. IBIS بيستخدم issues/positions/arguments.",
+          tags: ["QOC", "Design Space Analysis"],
+          ref: "Lecture 6 — Design space analysis",
+          likely: "high",
+        },
+        {
+          q: "29. In the usability specification, what does the 'measuring concept' refer to?",
+          options: [
+            "What will be measured (e.g. task completion time or number of errors)",
+            "How the measurement will be collected (e.g. observing users)",
+            "The existing performance of the current system",
+            "The target performance level only",
+          ],
+          correct: 0,
+          translation:
+            "في مواصفات الاستخدامية، ماذا يشير الـ measuring concept؟",
+          explanation:
+            "measuring concept = اللي هيتقاس (مثل زمن إنجاز المهمة أو عدد الأخطاء). measuring method = كيفية جمع القياس. Current و Planned هي مستويات.",
+          tags: ["Usability Specification"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "medium",
+        },
+        {
+          q: "30. Which usability level represents the existing performance of the system?",
+          options: [
+            "Worst-case level",
+            "Planned level",
+            "Best-case level",
+            "Current level",
+          ],
+          correct: 3,
+          translation: "أي مستوى استخدامية يمثّل الأداء الحالي للنظام؟",
+          explanation:
+            "Current level = الأداء الحالي. Worst-case = أقل أداء مقبول، Planned = المستهدف، Best-case = الأفضل المتوقّع.",
+          tags: ["Usability Levels"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "medium",
+        },
+        {
+          q: "31. Which usability level represents the least acceptable performance?",
+          options: [
+            "Current level",
+            "Planned level",
+            "Worst-case level",
+            "Best-case level",
+          ],
+          correct: 2,
+          translation: "أي مستوى استخدامية يمثّل أقل أداء مقبول؟",
+          explanation:
+            "Worst-case level = أقل أداء مقبول. Planned = الهدف، Best-case = الأفضل المتوقّع، Current = الحالي.",
+          tags: ["Usability Levels"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "medium",
+        },
+        {
+          q: "32. Which usability level represents the target performance?",
+          options: [
+            "Current level",
+            "Worst-case level",
+            "Planned level",
+            "Best-case level",
+          ],
+          correct: 2,
+          translation: "أي مستوى استخدامية يمثّل الأداء المستهدف؟",
+          explanation:
+            "Planned level = الأداء الهدف. Best-case = الأفضل المتوقّع، Worst-case = أقل مقبول، Current = الحالي.",
+          tags: ["Usability Levels"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "medium",
+        },
+        {
+          q: "33. Does a storyboard need to be computer-based?",
+          options: [
+            "Yes, it must always be computer-based",
+            "Only if it is for a web application",
+            "No, it does not need to be computer-based",
+            "Yes, but only on mobile devices",
+          ],
+          correct: 2,
+          translation: "هل يجب أن يكون الـ storyboard مبنياً على الحاسوب؟",
+          explanation:
+            "المحاضرة بتقول صراحةً 'It does not need to be computer-based'. باقي الخيارات بتفترض عكس ذلك.",
+          tags: ["Storyboard"],
+          ref: "Lecture 6 — Techniques for prototyping",
+          likely: "medium",
+        },
+        {
+          q: "34. Which tool is mentioned in the lecture as common for limited functionality simulations?",
+          options: [
+            "AutoCAD",
+            "Microsoft Word",
+            "Adobe Photoshop",
+            "HyperCard",
+          ],
+          correct: 3,
+          translation:
+            "أي أداة تذكرها المحاضرة كأداة شائعة للمحاكاة محدودة الوظائف؟",
+          explanation:
+            "المحاضرة بتذكر HyperCard تحديدًا. الباقي أدوات مكتبية/تصميمية مش مذكورة.",
+          tags: ["Prototyping Tools"],
+          ref: "Lecture 6 — Techniques for prototyping",
+          likely: "medium",
+        },
+        {
+          q: "35. In QOC, what do 'questions' represent?",
+          options: [
+            "Alternative solutions to a question",
+            "The final chosen decision only",
+            "The means to assess options",
+            "Major issues of a design (and sub-questions)",
+          ],
+          correct: 3,
+          translation: "في QOC، ماذا تمثّل الأسئلة (questions)؟",
+          explanation:
+            "questions بتمثّل القضايا الرئيسية للتصميم (وممكن sub-questions). options = حلول بديلة، criteria = وسائل تقييم الخيارات.",
+          tags: ["QOC"],
+          ref: "Lecture 6 — Design space analysis",
+          likely: "medium",
+        },
+        {
+          q: "36. In QOC, what do 'options' provide?",
+          options: [
+            "Major issues of a design",
+            "The means to assess options",
+            "The final chosen decision only",
+            "Alternative solutions to the question",
+          ],
+          correct: 3,
+          translation: "في QOC، ماذا تقدّم الـ options؟",
+          explanation:
+            "options بتوفّر حلولًا بديلة للسؤال. questions = قضايا رئيسية، criteria = وسائل التقييم لاختيار الحل.",
+          tags: ["QOC"],
+          ref: "Lecture 6 — Design space analysis",
+          likely: "medium",
+        },
+        {
+          q: "37. In QOC, what is the role of 'criteria'?",
+          options: [
+            "To represent major design issues",
+            "To provide alternative solutions",
+            "To record the discussion step by step",
+            "To be the means to assess the options in order to make a choice",
+          ],
+          correct: 3,
+          translation: "في QOC، ما دور الـ criteria؟",
+          explanation:
+            "criteria هي وسائل تقييم الخيارات لاتخاذ قرار. تسجيل النقاش خطوة بخطوة دة خاص بـ process-oriented زي IBIS.",
+          tags: ["QOC"],
+          ref: "Lecture 6 — Design space analysis",
+          likely: "medium",
+        },
+        {
+          q: "38. In IBIS, what are 'positions'?",
+          options: [
+            "The means to assess the options",
+            "The final decision only",
+            "The major issues of a design",
+            "Potential resolutions of an issue",
+          ],
+          correct: 3,
+          translation: "في IBIS، ما هي الـ positions؟",
+          explanation:
+            "positions = حلول محتملة لـ issue. issues = هيكل هرمي، arguments = بتعدّل العلاقة بين positions وissues. criteria خاصّة بـ QOC.",
+          tags: ["IBIS"],
+          ref: "Lecture 6 — Issue-based information system (IBIS)",
+          likely: "medium",
+        },
+        {
+          q: "39. Which is NOT a management issue mentioned for prototypes?",
+          options: [
+            "Time",
+            "Non-functional features",
+            "These are the only two management issues listed in the lecture",
+            "Budget for marketing campaigns",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي ليس من قضايا الإدارة المذكورة للنماذج الأولية؟",
+          explanation:
+            "المحاضرة ذكرت management issues بس: time وnon-functional features. ميزانية التسويق مش مذكورة.",
+          tags: ["Prototyping", "Management"],
+          ref: "Lecture 6 — Iterative design and prototyping",
+          likely: "medium",
+        },
+        {
+          q: "40. Which is the process-oriented example mentioned in the lecture for design rationale?",
+          options: [
+            "Design space analysis",
+            "Storyboard technique",
+            "Waterfall model",
+            "Issue-based information system (IBIS)",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي هو المثال process-oriented المذكور في المحاضرة؟",
+          explanation:
+            "المحاضرة بتعطي مثالين: IBIS (process-oriented) وDesign space analysis (structure-oriented).",
+          tags: ["Design Rationale", "IBIS"],
+          ref: "Lecture 6 — Design rationale (cont'd)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. List and briefly explain the main activities in the software life cycle according to the waterfall model.",
+          translation:
+            "اذكر واشرح باختصار الأنشطة الرئيسية في دورة حياة البرمجيات حسب نموذج الشلال.",
+          answer:
+            "The waterfall model defines the following sequential activities:\n" +
+            "1) Requirements specification: designer and customer capture what the system is expected to provide (natural language or precise languages such as task analysis).\n" +
+            "2) Architectural design: a high-level description of how the system will provide the required services; factors the system into major components and how they are interrelated; satisfies functional and nonfunctional requirements.\n" +
+            "3) Detailed design: refinement of architectural components and interrelations to identify modules to be implemented separately; governed by nonfunctional requirements.\n" +
+            "4) Coding and unit testing: implementation of the modules and testing each one individually.\n" +
+            "5) Integration and testing: combining modules and testing the system as a whole.\n" +
+            "6) Operation and maintenance: deploying the system and maintaining it over time.\n",
+          tags: ["Waterfall Model", "Life Cycle"],
+          ref: "Lecture 6 — Activities in the life cycle",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain why the life cycle for interactive systems cannot assume a linear sequence of activities.",
+          translation:
+            "اشرح لماذا لا تستطيع دورة حياة الأنظمة التفاعلية افتراض تسلسل خطي للأنشطة.",
+          answer:
+            "The life cycle for interactive systems cannot assume a linear sequence of activities as in the waterfall model because interactive systems involve lots of feedback between activities.\n" +
+            "Designing for usability occurs at all stages of the life cycle, not as a single isolated activity.\n" +
+            "User requirements change as users interact with prototypes, so earlier phases (requirements, architectural design) must be revisited based on findings from later phases such as testing or evaluation.\n" +
+            "This iterative, feedback-driven nature is the main distinction from the strict waterfall model.\n",
+          tags: ["Interactive Systems", "Life Cycle", "Waterfall Model"],
+          ref: "Lecture 6 — The life cycle for interactive systems",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Define usability specification and list its main components.",
+          translation: "عرّف مواصفات الاستخدامية واذكر مكوّناتها الرئيسية.",
+          answer:
+            "Usability specification defines clear and measurable requirements for how easy and effective a system should be to use.\n" +
+            "Main components:\n" +
+            "1) Usability attribute: such as efficiency or learnability.\n" +
+            "2) Measuring concept: what will be measured, such as task completion time or number of errors.\n" +
+            "3) Measuring method: how the measurement will be collected, such as observing users performing a task.\n" +
+            "4) Usability levels: current level, worst-case level, planned level, and best-case level.\n",
+          tags: ["Usability Specification", "Usability Engineering"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. List and explain the four usability levels in the usability specification.",
+          translation:
+            "اذكر واشرح المستويات الأربعة للاستخدامية في مواصفات الاستخدامية.",
+          answer:
+            "The usability specification defines four usability levels:\n" +
+            "1) Current level: the existing performance of the system before changes.\n" +
+            "2) Worst-case level: the least acceptable performance; below this the system is considered unacceptable.\n" +
+            "3) Planned level: the target performance the design aims to achieve.\n" +
+            "4) Best-case level: the best expected performance, often beyond the planned target.\n",
+          tags: ["Usability Levels", "Usability Engineering"],
+          ref: "Lecture 6 — Usability engineering",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. State the three usability categories adopted by ISO 9241 and explain each.",
+          translation:
+            "اذكر الفئات الثلاث للاستخدامية المعتمدة في ISO 9241 واشرح كلًّا منها.",
+          answer:
+            "ISO usability standard 9241 adopts the traditional usability categories:\n" +
+            "1) Effectiveness: can you achieve what you want to? It measures whether the user can complete the intended task and reach the correct goal.\n" +
+            "2) Efficiency: can you do it without wasting effort? It measures the resources (time, mental effort) expended to achieve the goal.\n" +
+            "3) Satisfaction: do you enjoy the process? It measures the user's subjective attitude toward the system and the interaction experience.\n",
+          tags: ["ISO 9241", "Usability"],
+          ref: "Lecture 6 — ISO usability standard 9241",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Compare throw-away, incremental, and evolutionary prototypes.",
+          translation:
+            "قارن بين النماذج الأولية: throw-away وincremental وevolutionary.",
+          answer:
+            "1) Throw-away prototype: built from cheap materials (paper, sketch, etc.) to explore ideas quickly, then discarded; not part of the final product.\n" +
+            "2) Incremental prototype: built step by step; each increment adds new functionality until the full system is delivered.\n" +
+            "3) Evolutionary prototype: starts as a basic version and is continuously improved, increasing features over time; the prototype may evolve into the final delivered system.\n",
+          tags: ["Prototyping", "Prototype Types"],
+          ref: "Lecture 6 — Iterative design and prototyping",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the three techniques for prototyping discussed in the lecture.",
+          translation:
+            "اشرح تقنيات النماذج الأولية الثلاث المذكورة في المحاضرة.",
+          answer:
+            "1) Storyboards: a sequence of drawings that shows how a user interacts with a system; it does not need to be computer-based.\n" +
+            "2) Limited functionality simulations: a prototype that looks or behaves like the real system, but only some functions are implemented (e.g. using tools such as HyperCard).\n" +
+            "3) Wizard of Oz technique: users interact with a prototype as if it were a real system, but a human secretly performs some of the system's functions.\n",
+          tags: ["Prototyping Techniques", "Storyboard", "Wizard of Oz"],
+          ref: "Lecture 6 — Techniques for prototyping",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Define design rationale and mention its benefits.",
+          translation: "عرّف design rationale واذكر فوائده.",
+          answer:
+            "Design rationale explains why a system was designed in a particular way.\n" +
+            "Benefits:\n" +
+            "1) It helps team members understand design decisions.\n" +
+            "2) Designers learn from previous projects.\n" +
+            "3) It records the reasons for choosing one solution over another.\n" +
+            "4) It helps future developers understand the system and improve it.\n",
+          tags: ["Design Rationale"],
+          ref: "Lecture 6 — Design rationale & Benefits",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. What is the difference between process-oriented and structure-oriented design rationale?",
+          translation:
+            "ما الفرق بين design rationale من نوع process-oriented ومن نوع structure-oriented؟",
+          answer:
+            "Process-oriented design rationale records the discussion step by step, from the first question to the final decision. Its main example in the lecture is IBIS (Issue-Based Information System).\n" +
+            "Structure-oriented design rationale organises design alternatives and their reasons; it focuses on comparing options and explaining the final choice. Its main example is Design space analysis using the QOC (Questions, Options, Criteria) hierarchy.\n" +
+            "In short: process-oriented captures the chronological reasoning; structure-oriented captures the comparison space of design alternatives.\n",
+          tags: ["Design Rationale", "Process vs Structure"],
+          ref: "Lecture 6 — Design rationale (cont'd)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain IBIS and its main elements.",
+          translation: "اشرح IBIS وعناصره الرئيسية.",
+          answer:
+            "IBIS (Issue-Based Information System) is the basis for much of design rationale research; it is a process-oriented approach.\n" +
+            "Main elements:\n" +
+            "1) Issues: form a hierarchical structure with one 'root' issue at the top.\n" +
+            "2) Positions: potential resolutions of an issue.\n" +
+            "3) Arguments: modify the relationship between positions and issues (they support or rebut positions).\n",
+          tags: ["IBIS", "Design Rationale"],
+          ref: "Lecture 6 — Issue-based information system (IBIS)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Explain the QOC structure used in design space analysis.",
+          translation: "اشرح بنية QOC المستخدمة في design space analysis.",
+          answer:
+            "Design space analysis is a structure-oriented approach to design rationale. It uses the QOC hierarchical structure:\n" +
+            "1) Questions (and sub-questions): represent the major issues of a design.\n" +
+            "2) Options: provide alternative solutions to the question.\n" +
+            "3) Criteria: the means to assess the options in order to make a choice.\n" +
+            "By comparing options against criteria, designers can justify why a particular design choice was selected.\n",
+          tags: ["QOC", "Design Space Analysis"],
+          ref: "Lecture 6 — Design space analysis",
+          likely: "high",
+        },
+      ],
+    },
+    {
+      id: "hci-lecture-07",
+      t: "Design Rules — Chapter 7",
+      d: "قواعد التصميم في تفاعل الإنسان والآلة: المبادئ والمعايير والإرشادات وقواعد شنايدرمان ونورمان",
+      pdf: "datenew/subjects/hci/lectures/Lec 7/e3-chap-07_compressed.pdf",
+      pdf2: "datenew/subjects/hci/questions/Questions on each lecture/Lecture-07-Questions.pdf",
+      // المحاضرة: Design Rules — Chapter 7 — قواعد التصميم ومبادئ الاستخدامية وقواعد شنايدرمان ونورمان ومعايير ISO 9241
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح عربي لمبادئ تصميم التفاعل وقواعد التصميم وقواعد شنايدرمان الذهبية الثمانية ومبادئ نورمان السبعة.",
+          links: [
+            {
+              t: "تفاعل الإنسان مع الحاسوب - قواعد ومبادئ تصميم الواجهات",
+              d: "شرح عربي لقواعد تصميم الواجهات والمبادئ الأساسية في تفاعل الإنسان والآلة (HCI) ومبادئ الاستخدامية Learnability وFlexibility وRobustness.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=تفاعل+الإنسان+مع+الحاسوب+قواعد+تصميم+الواجهات",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "قواعد شنايدرمان الذهبية الثمانية في تصميم الواجهات",
+              d: "بحث يوتيوب عربي عن شرح قواعد Shneiderman الثمانية الذهبية وهي من أهم نقاط المحاضرة المتكررة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=قواعد+شنايدرمان+الذهبية+الثمانية+تصميم+الواجهات",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "مبادئ نورمان السبعة في تصميم التفاعل",
+              d: "بحث يوتيوب عربي عن شرح مبادئ Norman السبعة (Use both knowledge in the world and the head، Simplify tasks، Make things visible...).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=مبادئ+نورمان+السبعة+تصميم+التفاعل+HCI",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "شرح عالمي لمبادئ تصميم التفاعل وقواعد شنايدرمان ونورمان وهيورستيك نيلسن ومعيار ISO 9241.",
+          links: [
+            {
+              t: "Shneiderman's 8 Golden Rules of Interface Design (GeeksforGeeks)",
+              d: "شرح فيديو لقواعد Shneiderman الثمانية الذهبية وهي محور أساسي في المحاضرة (consistency, shortcuts, feedback, dialog closure...).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.geeksforgeeks.org/software-engineering/ben-shneiderman-eight-golden-rules-of-interface-design-human-computer-interaction",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Don Norman's Principles of Design",
+              d: "شرح مبادئ Norman الستة الأساسية من كتاب The Design of Everyday Things (Visibility, Feedback, Constraints, Mapping, Consistency, Affordance) ومرتبط بمبادئ نورمان السبعة في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://principles.design/examples/don-norman-s-principles-of-design",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Nielsen's 10 Usability Heuristics",
+              d: "شرح هيورستيك نيلسن العشرة لتحليل الاستخدامية، والمحاضرة بتربطها بـ Shneiderman وNorman كأمثلة على Golden Rules and Heuristics (broad brush design rules).",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.nngroup.com/articles/ten-usability-heuristics",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Shneiderman 8 Golden Rules - original source",
+              d: "الصفحة الرسمية لـ Ben Shneiderman بقواعده الثمانية الذهبية من قسم علوم الحاسوب في University of Maryland، المصدر الأصلي للقواعد المذكورة في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.cs.umd.edu/users/ben/goldenrules.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مراجع ومقالات شاملة لمبادئ الاستخدامية ومعايير ISO وأنواع قواعد التصميم في HCI.",
+          links: [
+            {
+              t: "Principles of Usability in HCI (GeeksforGeeks)",
+              d: "شرح مفصل لمبادئ الاستخدامية الثلاثة (Learnability, Flexibility, Robustness) ومبادئها الفرعية مثل Predictability وObservability وRecoverability وCustomizability، وهي قلب المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.geeksforgeeks.org/system-design/principles-of-usability",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Guidelines in Human Computer Interface (GeeksforGeeks)",
+              d: "شرح قواعد Shneiderman الذهبية ومبادئ Norman السبعة وهيورستيك نيلسن العشرة وإرشادات تصميم الواجهات، ومطابق لترتيب المحاضرة في قسم Golden Rules and Heuristics.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.geeksforgeeks.org/system-design/guidelines-in-human-computer-interfacehci",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "ISO 9241 usability definition (Usability Partners)",
+              d: "تعريف ISO 9241-11 للاستخدامية (effectiveness, efficiency, satisfaction) ومطابق لنص المحاضرة في قسم Standards. يشرح كمان العلاقة بين المعايير والسياق.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.usabilitypartners.se/about-usability/iso-standards",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "How to Conduct a Heuristic Evaluation (NN/g)",
+              d: "شرح طريقة التقييم الهيورستيكي بناءً على Heuristics، وده مرتبط بقسم Golden Rules and Heuristics في المحاضرة اللي بيوصفها بأنها broad brush design rules useful as a checklist.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات لتصميم ومحاكاة الواجهات وتطبيق مبادئ الاستخدامية وقواعد التصميم عمليًا.",
+          links: [
+            {
+              t: "Figma - Collaborative Interface Design Tool",
+              d: "أداة تصميم واجهات احترافية فيها prototyping وتتيح تطبيق مبادئ Consistency وFeedback وVisibility وMapping اللي بنتكلم عنها في قواعد Shneiderman وNorman. تستخدم لعمل النماذج وتقييمها.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.figma.com",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Adobe XD - UI/UX Design and Prototyping",
+              d: "أداة تصميم ومحاكاة واجهات بتمكنك من تجربة flow والـ dialog closure والـ feedback. مناسبة لتطبيق قواعد التصميم عمليًا في مشاريع HCI.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.adobe.com/products/xd.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Axure RP - Interactive Prototypes",
+              d: "أداة لعمل نماذج تفاعلية متقدمة تدعم الـ multithreading والـ task migratability والـ recoverability وتمكنك من اختبار مبادئ Robustness وFlexibility على واجهات حقيقية.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.axure.com",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. What is the main goal of interaction design according to the lecture?",
+          options: [
+            "Maximizing system performance",
+            "Reducing development cost",
+            "Designing for maximum usability",
+            "Increasing visual appeal",
+          ],
+          correct: 2,
+          translation: "إيه هو الهدف الأساسي لتصميم التفاعل حسب المحاضرة؟",
+          explanation:
+            "الصح هو Designing for maximum usability لأن المحاضرة فتحت بـ Designing for maximum usability – the goal of interaction design. الباقي غلط لأن الأداء والتكلفة والشكل مش هدف تصميم التفاعل الأساسي.",
+          tags: ["Design Rules", "Usability"],
+          ref: "Lecture 7 — Introduction",
+          likely: "high",
+        },
+        {
+          q: "2. Which type of design rule is described as abstract, with low authority and high generality?",
+          options: ["Principles", "Guidelines", "Heuristics", "Standards"],
+          correct: 0,
+          translation:
+            "نوع قواعد التصميم اللي بيتم وصفه بأنه مجرد، بسلطة منخفضة وعمومية عالية؟",
+          explanation:
+            "الصح Principles لأن المحاضرة بتقول principles – abstract design rules, low authority, high generality. Guidelines سلطتها أقل بس أعم. Standards سلطتها عالية وتطبيقها محدود. Heuristics مش نوع أساسي في التصنيف.",
+          tags: ["Types of Design Rules", "Principles"],
+          ref: "Lecture 7 — Types of Design Rules",
+          likely: "high",
+        },
+        {
+          q: "3. Standards are best characterized by which of the following?",
+          options: [
+            "Low authority and high generality",
+            "High authority and limited application",
+            "Low authority and limited application",
+            "High authority and high generality",
+          ],
+          correct: 1,
+          translation: "المعايير (Standards) بيتم وصفها بأيه من الخيارات دي؟",
+          explanation:
+            "الصح High authority and limited application لأن المحاضرة بتقول standards – specific design rules, high authority, limited application. بقية الخيارات بتخلط السلطة والعمومية.",
+          tags: ["Types of Design Rules", "Standards"],
+          ref: "Lecture 7 — Types of Design Rules",
+          likely: "high",
+        },
+        {
+          q: "4. Which statement correctly describes guidelines?",
+          options: [
+            "Higher authority than standards",
+            "The same authority as standards",
+            "No authority at all",
+            "Lower authority and more general application",
+          ],
+          correct: 3,
+          translation: "إيه الوصف الصح للإرشادات (Guidelines)؟",
+          explanation:
+            "الصح Lower authority and more general application لأن المحاضرة بتقول guidelines – lower authority, more general application. Guidelines مش أعلى من Standards في السلطة، وأكيد ليها سلطة.",
+          tags: ["Types of Design Rules", "Guidelines"],
+          ref: "Lecture 7 — Types of Design Rules",
+          likely: "high",
+        },
+        {
+          q: "5. The three principles that support usability in the lecture are:",
+          options: [
+            "Speed, Accuracy, Satisfaction",
+            "Consistency, Feedback, Error prevention",
+            "Learnability, Flexibility, Robustness",
+            "Visibility, Mapping, Control",
+          ],
+          correct: 2,
+          translation:
+            "المبادئ التلاتة اللي بتدعم الاستخدامية (usability) في المحاضرة هي؟",
+          explanation:
+            "الصح Learnability, Flexibility, Robustness لأن المحاضرة قسمت مبادئ الاستخدامية لثلاثة: Learnability وFlexibility وRobustness. الخيارات التانية مفاهيم تانية زي معايير ISO أو قواعد Shneiderman.",
+          tags: ["Usability Principles"],
+          ref: "Lecture 7 — Principles to support usability",
+          likely: "high",
+        },
+        {
+          q: "6. Learnability is defined as:",
+          options: [
+            "The ease with which new users can begin effective interaction and achieve maximal performance",
+            "The level of support provided to the user",
+            "The multiplicity of ways the user and system exchange information",
+            "The ability to evaluate the internal state of the system",
+          ],
+          correct: 0,
+          translation: "إيه تعريف Learnability؟",
+          explanation:
+            "الصح التعريف اللي يتكلم عن سهولة بداية المستخدم الجديد وتحقيق أقصى أداء، وده نص المحاضرة حرفيًا. خيارات Robustness وFlexibility وObservability تعريفات لمبادئ تانية.",
+          tags: ["Learnability"],
+          ref: "Lecture 7 — Principles to support usability",
+          likely: "high",
+        },
+        {
+          q: "7. Flexibility refers to:",
+          options: [
+            "The ease of learning the system",
+            "The level of error recovery support",
+            "The speed of system response",
+            "The multiplicity of ways the user and system exchange information",
+          ],
+          correct: 3,
+          translation: "إيه تعريف Flexibility؟",
+          explanation:
+            "الصح The multiplicity of ways the user and system exchange information وده نص المحاضرة. Learnability بيعرف السهولة، Recoverability وResponsiveness مبادئ تانية.",
+          tags: ["Flexibility"],
+          ref: "Lecture 7 — Principles to support usability",
+          likely: "high",
+        },
+        {
+          q: "8. Robustness is defined as:",
+          options: [
+            "The ease of learning",
+            "The multiplicity of interaction ways",
+            "The level of support provided to the user in determining successful achievement and assessment of goal-directed behaviour",
+            "The visual design quality",
+          ],
+          correct: 2,
+          translation: "إيه تعريف Robustness؟",
+          explanation:
+            "الصح التعريف اللي بيتكلم عن مستوى الدعم للمستخدم في تحقيق وتقييم السلوك الموجه نحو الهدف. ده نص المحاضرة. Learnability وFlexibility مبادئ تانية والشكل مش جزء من Robustness.",
+          tags: ["Robustness"],
+          ref: "Lecture 7 — Principles to support usability",
+          likely: "high",
+        },
+        {
+          q: "9. Predictability, as a principle of learnability, means:",
+          options: [
+            "How prior knowledge applies to a new system",
+            "Extending interaction knowledge to new situations",
+            "Determining the effect of future actions based on past interaction history",
+            "Likeness in input/output behaviour",
+          ],
+          correct: 2,
+          translation: "إيه معنى Predictability ضمن مبادئ Learnability؟",
+          explanation:
+            "الصح تحديد تأثير الأفعال المستقبلية بناءً على تاريخ التفاعل السابق (operation visibility). Familiar = المعرفة السابقة، Generalizability = التعميم، Consistency = التشابه في السلوك.",
+          tags: ["Learnability", "Predictability"],
+          ref: "Lecture 7 — Principles of learnability",
+          likely: "high",
+        },
+        {
+          q: "10. The 'Familiar' principle of learnability refers to:",
+          options: [
+            "Determining future actions from past interaction",
+            "Extending knowledge to new situations",
+            "Consistency across situations",
+            "How prior knowledge applies to a new system",
+          ],
+          correct: 3,
+          translation: "مبدأ Familiar ضمن Learnability بيشير لإيه؟",
+          explanation:
+            "الصح كيف تنطبق المعرفة السابقة على نظام جديد (guessability, affordance). Predictability = توقع المستقبل، Generalizability = التعميم، Consistency = التشابه.",
+          tags: ["Learnability", "Familiar"],
+          ref: "Lecture 7 — Principles of learnability",
+          likely: "medium",
+        },
+        {
+          q: "11. Generalizability means:",
+          options: [
+            "Extending specific interaction knowledge to new situations",
+            "Determining future effects from past history",
+            "Likeness in input/output behaviour",
+            "Prior knowledge application",
+          ],
+          correct: 0,
+          translation: "إيه معنى Generalizability؟",
+          explanation:
+            "الصح توسيع معرفة تفاعل معينة لمواقف جديدة. Predictability = التوقع من التاريخ، Consistency = التشابه، Familiar = تطبيق المعرفة السابقة على نظام جديد.",
+          tags: ["Learnability", "Generalizability"],
+          ref: "Lecture 7 — Principles of learnability",
+          likely: "medium",
+        },
+        {
+          q: "12. Consistency in learnability is defined as:",
+          options: [
+            "Extending interaction knowledge",
+            "Determining future actions",
+            "Likeness in input/output behaviour arising from similar situations or task objectives",
+            "Prior knowledge application",
+          ],
+          correct: 2,
+          translation: "إيه تعريف Consistency ضمن Learnability؟",
+          explanation:
+            "الصح التشابه في سلوك الإدخال/الإخراج الناتج عن مواقف أو أهداف مهام متشابهة. الباقي تعريفات لمبادئ تانية.",
+          tags: ["Learnability", "Consistency"],
+          ref: "Lecture 7 — Principles of learnability",
+          likely: "high",
+        },
+        {
+          q: "13. Multithreading, as a principle of flexibility, means:",
+          options: [
+            "Ability of the system to support user interaction for more than one task at a time",
+            "Freedom from system imposed constraints",
+            "Passing responsibility between user and system",
+            "Allowing equivalent values of input/output",
+          ],
+          correct: 0,
+          translation: "إيه معنى Multithreading ضمن مبادئ Flexibility؟",
+          explanation:
+            "الصح قدرة النظام على دعم تفاعل المستخدم لأكثر من مهمة في نفس الوقت. Dialogue initiative = الحرية من قيود النظام، Task migratability = نقل المسؤولية، Substitutability = استبدال القيم.",
+          tags: ["Flexibility", "Multithreading"],
+          ref: "Lecture 7 — Principles of flexibility",
+          likely: "medium",
+        },
+        {
+          q: "14. Task migratability refers to:",
+          options: [
+            "Ability to support more than one task",
+            "Modifiability of the user interface",
+            "Ability to evaluate internal state",
+            "Passing responsibility for task execution between user and system",
+          ],
+          correct: 3,
+          translation: "Task migratability بيشير لإيه؟",
+          explanation:
+            "الصح نقل مسؤولية تنفيذ المهمة بين المستخدم والنظام. Multithreading = تعدد المهام، Customizability = التعديل، Observability = تقييم الحالة الداخلية.",
+          tags: ["Flexibility", "Task migratability"],
+          ref: "Lecture 7 — Principles of flexibility",
+          likely: "medium",
+        },
+        {
+          q: "15. Customizability can be achieved by:",
+          options: [
+            "User only (adaptability)",
+            "System only (adaptivity)",
+            "User (adaptability) or system (adaptivity)",
+            "Neither user nor system",
+          ],
+          correct: 2,
+          translation: "Customizability ممكن يتحقق عن طريق مين؟",
+          explanation:
+            "الصح المستخدم (adaptability) أو النظام (adaptivity)، حسب نص المحاضرة. التفرقة بين adaptability وadaptivity نقطة مهمة. الخيارات التانية ناقصة.",
+          tags: ["Flexibility", "Customizability"],
+          ref: "Lecture 7 — Principles of flexibility",
+          likely: "high",
+        },
+        {
+          q: "16. Observability in robustness means:",
+          options: [
+            "Ability to take corrective action after an error",
+            "Ability of the user to evaluate the internal state of the system from its perceivable representation",
+            "How the user perceives the communication rate",
+            "Degree to which services support all tasks",
+          ],
+          correct: 1,
+          translation: "إيه معنى Observability ضمن مبادئ Robustness؟",
+          explanation:
+            "الصح قدرة المستخدم على تقييم الحالة الداخلية للنظام من تمثيله المدرك (browsability, defaults, reachability, persistence). Recoverability = التصحيح، Responsiveness = سرعة الاستجابة، Task conformance = دعم المهام.",
+          tags: ["Robustness", "Observability"],
+          ref: "Lecture 7 — Principles of robustness",
+          likely: "high",
+        },
+        {
+          q: "17. Recoverability refers to:",
+          options: [
+            "Ability to evaluate the internal state",
+            "Ability of the user to take corrective action once an error has been recognized",
+            "The rate of communication",
+            "Task completeness",
+          ],
+          correct: 1,
+          translation: "Recoverability بيشير لإيه؟",
+          explanation:
+            "الصح قدرة المستخدم على اتخاذ إجراء تصحيحي بمجرد التعرف على خطأ (forward/backward recovery). Observability = تقييم الحالة، Responsiveness = سرعة الاستجابة، Task conformance = اكتمال المهام.",
+          tags: ["Robustness", "Recoverability"],
+          ref: "Lecture 7 — Principles of robustness",
+          likely: "high",
+        },
+        {
+          q: "18. Responsiveness is defined as:",
+          options: [
+            "The level of support for goal achievement",
+            "The ability to recover from errors",
+            "The degree of task support",
+            "How the user perceives the rate of communication with the system",
+          ],
+          correct: 3,
+          translation: "إيه تعريف Responsiveness؟",
+          explanation:
+            "الصح كيف يدرك المستخدم معدل التواصل مع النظام. Robustness نفسه = الدعم، Recoverability = التصحيح، Task conformance = دعم المهام.",
+          tags: ["Robustness", "Responsiveness"],
+          ref: "Lecture 7 — Principles of robustness",
+          likely: "medium",
+        },
+        {
+          q: "19. Task conformance refers to:",
+          options: [
+            "The rate of communication",
+            "The degree to which system services support all of the user's tasks",
+            "The ability to evaluate internal state",
+            "The ease of learning",
+          ],
+          correct: 1,
+          translation: "Task conformance بيشير لإيه؟",
+          explanation:
+            "الصح الدرجة اللي خدمات النظام بتدعم بيها كل مهام المستخدم (task completeness). Responsiveness = معدل التواصل، Observability = تقييم الحالة، Learnability = السهولة.",
+          tags: ["Robustness", "Task conformance"],
+          ref: "Lecture 7 — Principles of robustness",
+          likely: "medium",
+        },
+        {
+          q: "20. According to ISO 9241, usability is defined by which three attributes?",
+          options: [
+            "Speed, accuracy, and satisfaction",
+            "Learnability, flexibility, robustness",
+            "Effectiveness, efficiency and satisfaction",
+            "Consistency, feedback, error prevention",
+          ],
+          correct: 2,
+          translation: "حسب ISO 9241، الاستخدامية بتتحدد بثلاث سمات إيه؟",
+          explanation:
+            "الصح effectiveness, efficiency, satisfaction وده نص المحاضرة (ISO 9241 defines usability as effectiveness, efficiency and satisfaction). Learnability/Flexibility/Robustness مبادئ Dix، والباقي مفاهيم تانية.",
+          tags: ["Standards", "ISO 9241", "Usability"],
+          ref: "Lecture 7 — Standards",
+          likely: "high",
+        },
+        {
+          q: "21. According to the lecture, hardware standards are:",
+          options: [
+            "Less common than software standards",
+            "More common than software standards",
+            "Same as software standards",
+            "Not mentioned in the lecture",
+          ],
+          correct: 1,
+          translation: "حسب المحاضرة، معايير الهاردوير مقارنة بالسوفتوير؟",
+          explanation:
+            "الصح More common than software لأن المحاضرة بتقول hardware standards more common than software. السبب إن السوفتوير بيتغير بسرعة وصعب توحيد معاييره.",
+          tags: ["Standards"],
+          ref: "Lecture 7 — Standards",
+          likely: "medium",
+        },
+        {
+          q: "22. Standards require which of the following to be effective?",
+          options: [
+            "Fast changing technology",
+            "No underlying theory",
+            "Rapid development cycles",
+            "Sound underlying theory and slowly changing technology",
+          ],
+          correct: 3,
+          translation: "المعايير (Standards) بتتطلب إيه عشان تبقى فعّالة؟",
+          explanation:
+            "الصح Sound underlying theory and slowly changing technology وده نص المحاضرة. لو التكنولوجيا بتتغير بسرعة صعب تثبيت معيار، ونظرية سليمة ضرورية.",
+          tags: ["Standards"],
+          ref: "Lecture 7 — Standards",
+          likely: "medium",
+        },
+        {
+          q: "23. How many golden rules did Shneiderman propose?",
+          options: ["8", "7", "10", "12"],
+          correct: 0,
+          translation: "شنايدرمان اقترح كام قاعدة ذهبية؟",
+          explanation:
+            "الصح 8 (Shneiderman's 8 Golden Rules). نورمان ليه 7 مبادئ وNielsen ليه 10 هيورستيك.",
+          tags: ["Golden Rules", "Shneiderman"],
+          ref: "Lecture 7 — Shneiderman's 8 Golden Rules",
+          likely: "high",
+        },
+        {
+          q: "24. How many principles did Norman propose?",
+          options: ["8", "7", "10", "5"],
+          correct: 1,
+          translation: "نورمان اقترح كام مبدأ؟",
+          explanation:
+            "الصح 7 (Norman's 7 Principles). شنايدرمان 8 قواعد وNielsen 10 هيورستيك.",
+          tags: ["Golden Rules", "Norman"],
+          ref: "Lecture 7 — Norman's 7 Principles",
+          likely: "high",
+        },
+        {
+          q: "25. Golden rules and heuristics are described in the lecture as:",
+          options: [
+            "Specific design rules with high authority",
+            "International standards",
+            "Detailed style guides",
+            "Broad brush design rules",
+          ],
+          correct: 3,
+          translation: "القواعد الذهبية والهيورستيك بتتوصف في المحاضرة بإيه؟",
+          explanation:
+            "الصح Broad brush design rules وده نص المحاضرة (they are broad brush design rules, useful checklist). مش معايير ولا إرشادات تفصيلية، بل قواعد عامة مفيدة كـ checklist.",
+          tags: ["Golden Rules", "Heuristics"],
+          ref: "Lecture 7 — Golden rules and heuristics",
+          likely: "high",
+        },
+        {
+          q: "26. Which of the following is NOT one of Shneiderman's 8 Golden Rules?",
+          options: [
+            "Strive for consistency",
+            "Enable frequent users to use shortcuts",
+            "Maximize system performance",
+            "Offer informative feedback",
+          ],
+          correct: 2,
+          translation: "إيه من الخيارات دي مش من قواعد شنايدرمان الثمانية؟",
+          explanation:
+            "الصح Maximize system performance لأنها مش في القائمة. الباقي قواعد فعلية: consistency, shortcuts, informative feedback. الشكل والأداء مش قواعد شنايدرمان.",
+          tags: ["Golden Rules", "Shneiderman"],
+          ref: "Lecture 7 — Shneiderman's 8 Golden Rules",
+          likely: "high",
+        },
+        {
+          q: "27. Substitutability, as a principle of flexibility, means:",
+          options: [
+            "Passing responsibility between user and system",
+            "Supporting more than one task at a time",
+            "Modifying the interface by the user",
+            "Allowing equivalent values of input and output to be replaced for each other",
+          ],
+          correct: 3,
+          translation: "Substitutability ضمن Flexibility بتعني إيه؟",
+          explanation:
+            "الصح السماح باستبدال القيم المكافئة للإدخال والإخراج ببعضها (representation multiplicity). Task migratability = نقل المسؤولية، Multithreading = تعدد المهام، Customizability = التعديل.",
+          tags: ["Flexibility", "Substitutability"],
+          ref: "Lecture 7 — Principles of flexibility",
+          likely: "medium",
+        },
+        {
+          q: "28. Dialogue initiative refers to:",
+          options: [
+            "Freedom from system imposed constraints on input dialogue",
+            "Ability to support multiple tasks",
+            "Passing responsibility for tasks",
+            "Allowing equivalent values",
+          ],
+          correct: 0,
+          translation: "Dialogue initiative بيشير لإيه؟",
+          explanation:
+            "الصح الحرية من القيود اللي النظام بيفرضها على حوار الإدخال (system vs. user pre-emptiveness). Multithreading = تعدد المهام، Task migratability = نقل المسؤولية، Substitutability = الاستبدال.",
+          tags: ["Flexibility", "Dialogue initiative"],
+          ref: "Lecture 7 — Principles of flexibility",
+          likely: "medium",
+        },
+        {
+          q: "29. Detailed guidelines (style guides) are applicable during which phase?",
+          options: [
+            "Early life cycle activities",
+            "Later life cycle activities",
+            "Testing phase only",
+            "Maintenance phase only",
+          ],
+          correct: 1,
+          translation:
+            "الإرشادات التفصيلية (style guides) بتُستخدم في أنهي مرحلة؟",
+          explanation:
+            "الصح Later life cycle activities لأن المحاضرة بتقول detailed guidelines (style guides) applicable during later life cycle activities. المبادئ (abstract guidelines) بتيجي في المراحل المبكرة.",
+          tags: ["Guidelines", "Life cycle"],
+          ref: "Lecture 7 — Guidelines",
+          likely: "medium",
+        },
+        {
+          q: "30. Abstract guidelines (principles) are applicable during which phase?",
+          options: [
+            "Maintenance only",
+            "Later life cycle activities",
+            "Early life cycle activities",
+            "Testing only",
+          ],
+          correct: 2,
+          translation: "الإرشادات المجردة (المبادئ) بتُستخدم في أنهي مرحلة؟",
+          explanation:
+            "الصح Early life cycle activities لأن المحاضرة بتقول abstract guidelines (principles) applicable during early life cycle activities. Style guides بتيجي بعدين في المراحل المتأخرة.",
+          tags: ["Guidelines", "Life cycle"],
+          ref: "Lecture 7 — Guidelines",
+          likely: "medium",
+        },
+
+        {
+          type: "essay",
+          q: "1. Define the three types of design rules and explain their authority and generality.",
+          translation:
+            "عرّف الأنواع الثلاثة لقواعد التصميم واشرح سلطتها وعموميتها.",
+          answer:
+            "There are three types of design rules:\n" +
+            "1) Principles: abstract design rules with low authority and high generality.\n" +
+            "2) Standards: specific design rules with high authority and limited application.\n" +
+            "3) Guidelines: lower authority than standards but more general application.\n" +
+            "As authority increases, generality decreases, so principles are the most general and standards the most specific.",
+          tags: [
+            "Types of Design Rules",
+            "Principles",
+            "Standards",
+            "Guidelines",
+          ],
+          ref: "Lecture 7 — Types of Design Rules",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the three principles that support usability.",
+          translation: "اشرح المبادئ الثلاثة اللي بتدعم الاستخدامية.",
+          answer:
+            "The three principles to support usability are:\n" +
+            "1) Learnability: the ease with which new users can begin effective interaction and achieve maximal performance.\n" +
+            "2) Flexibility: the multiplicity of ways the user and system exchange information.\n" +
+            "3) Robustness: the level of support provided to the user in determining successful achievement and assessment of goal-directed behaviour.",
+          tags: [
+            "Usability Principles",
+            "Learnability",
+            "Flexibility",
+            "Robustness",
+          ],
+          ref: "Lecture 7 — Principles to support usability",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. List and briefly explain the principles of learnability.",
+          translation: "اذكر واشرح بإيجاز مبادئ Learnability.",
+          answer:
+            "The principles of learnability are:\n" +
+            "1) Predictability: determining the effect of future actions based on past interaction history (operation visibility).\n" +
+            "2) Familiar: how prior knowledge applies to a new system (guessability, affordance).\n" +
+            "3) Generalizability: extending specific interaction knowledge to new situations.\n" +
+            "4) Consistency: likeness in input/output behaviour arising from similar situations or task objectives.",
+          tags: [
+            "Learnability",
+            "Predictability",
+            "Familiar",
+            "Generalizability",
+            "Consistency",
+          ],
+          ref: "Lecture 7 — Principles of learnability",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. List and briefly explain the principles of flexibility.",
+          translation: "اذكر واشرح بإيجاز مبادئ Flexibility.",
+          answer:
+            "The principles of flexibility are:\n" +
+            "1) Dialogue initiative: freedom from system imposed constraints on input dialogue (system vs. user pre-emptiveness).\n" +
+            "2) Multithreading: ability of the system to support user interaction for more than one task at a time.\n" +
+            "3) Task migratability: passing responsibility for task execution between user and system.\n" +
+            "4) Substitutability: allowing equivalent values of input and output to be replaced for each other (representation multiplicity).\n" +
+            "5) Customizability: modifiability of the user interface by the user (adaptability) or by the system (adaptivity).",
+          tags: [
+            "Flexibility",
+            "Dialogue initiative",
+            "Multithreading",
+            "Task migratability",
+            "Substitutability",
+            "Customizability",
+          ],
+          ref: "Lecture 7 — Principles of flexibility",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. List and briefly explain the principles of robustness.",
+          translation: "اذكر واشرح بإيجاز مبادئ Robustness.",
+          answer:
+            "The principles of robustness are:\n" +
+            "1) Observability: ability of the user to evaluate the internal state of the system from its perceivable representation (browsability, defaults, reachability, persistence).\n" +
+            "2) Recoverability: ability of the user to take corrective action once an error has been recognized (forward/backward recovery, commensurate effort).\n" +
+            "3) Responsiveness: how the user perceives the rate of communication with the system.\n" +
+            "4) Task conformance: the degree to which system services support all of the user's tasks (task completeness).",
+          tags: [
+            "Robustness",
+            "Observability",
+            "Recoverability",
+            "Responsiveness",
+            "Task conformance",
+          ],
+          ref: "Lecture 7 — Principles of robustness",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Compare standards and guidelines.",
+          translation: "قارن بين المعايير (Standards) والإرشادات (Guidelines).",
+          answer:
+            "Standards:\n" +
+            "- Set by national or international bodies to ensure compliance by a large community of designers.\n" +
+            "- Have high authority and a low level of detail.\n" +
+            "- Require sound underlying theory and slowly changing technology.\n" +
+            "- Hardware standards are more common than software standards.\n" +
+            "Guidelines:\n" +
+            "- More suggestive and general; found in many textbooks and reports.\n" +
+            "- Lower authority than standards but more general application.\n" +
+            "- Two types: abstract guidelines (principles) for early life cycle activities, and detailed guidelines (style guides) for later life cycle activities.\n" +
+            "- Understanding the justification for guidelines helps in resolving conflicts.",
+          tags: ["Standards", "Guidelines", "Comparison"],
+          ref: "Lecture 7 — Standards and Guidelines",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. List Shneiderman's 8 Golden Rules.",
+          translation: "اذكر قواعد شنايدرمان الثمانية الذهبية.",
+          answer:
+            "Shneiderman's 8 Golden Rules:\n" +
+            "1) Strive for consistency.\n" +
+            "2) Enable frequent users to use shortcuts.\n" +
+            "3) Offer informative feedback.\n" +
+            "4) Design dialogs to yield closure.\n" +
+            "5) Offer error prevention and simple error handling.\n" +
+            "6) Permit easy reversal of actions.\n" +
+            "7) Support internal locus of control.\n" +
+            "8) Reduce short-term memory load.",
+          tags: ["Golden Rules", "Shneiderman"],
+          ref: "Lecture 7 — Shneiderman's 8 Golden Rules",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. List Norman's 7 Principles.",
+          translation: "اذكر مبادئ نورمان السبعة.",
+          answer:
+            "Norman's 7 Principles:\n" +
+            "1) Use both knowledge in the world and knowledge in the head.\n" +
+            "2) Simplify the structure of tasks.\n" +
+            "3) Make things visible: bridge the gulfs of Execution and Evaluation.\n" +
+            "4) Get the mappings right.\n" +
+            "5) Exploit the power of constraints, both natural and artificial.\n" +
+            "6) Design for error.\n" +
+            "7) When all else fails, standardize.",
+          tags: ["Golden Rules", "Norman"],
+          ref: "Lecture 7 — Norman's 7 Principles",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. What are golden rules and heuristics? Mention three different collections.",
+          translation:
+            "إيه هي القواعد الذهبية والهيورستيك؟ اذكر ثلاث مجموعات مختلفة.",
+          answer:
+            "Golden rules and heuristics are broad brush design rules that act as a useful checklist for good design. They are better than using nothing, and there are different collections such as:\n" +
+            "1) Nielsen's 10 Heuristics.\n" +
+            "2) Shneiderman's 8 Golden Rules.\n" +
+            "3) Norman's 7 Principles.",
+          tags: [
+            "Golden Rules",
+            "Heuristics",
+            "Nielsen",
+            "Shneiderman",
+            "Norman",
+          ],
+          ref: "Lecture 7 — Golden rules and heuristics",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the ISO 9241 definition of usability.",
+          translation: "اشرح تعريف ISO 9241 للاستخدامية.",
+          answer:
+            "ISO 9241 is an international standard that defines usability as the effectiveness, efficiency and satisfaction with which users accomplish tasks.\n" +
+            "- Effectiveness: accuracy and completeness with which users achieve goals.\n" +
+            "- Efficiency: resources used in relation to the accuracy and completeness achieved.\n" +
+            "- Satisfaction: comfort and acceptability of use.\n" +
+            "Standards like ISO 9241 require sound underlying theory and slowly changing technology, and hardware standards are more common than software standards.",
+          tags: ["Standards", "ISO 9241", "Usability"],
+          ref: "Lecture 7 — Standards",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. What is the difference between adaptability and adaptivity in customizability?",
+          translation:
+            "إيه الفرق بين adaptability و adaptivity في Customizability؟",
+          answer:
+            "Customizability is the modifiability of the user interface, and it can be done in two ways:\n" +
+            "- Adaptability: the user modifies the interface themselves (e.g., changing the font).\n" +
+            "- Adaptivity: the system modifies the interface automatically according to the user's behaviour or context.\n" +
+            "So adaptability is user-driven, while adaptivity is system-driven.",
+          tags: [
+            "Flexibility",
+            "Customizability",
+            "Adaptability",
+            "Adaptivity",
+          ],
+          ref: "Lecture 7 — Principles of flexibility",
           likely: "high",
         },
       ],

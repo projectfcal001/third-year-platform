@@ -13,9 +13,9 @@ subjects.push({
   // ]
   lectures: [
     {
-      t: "المحاضرة الأولى",
-      id: "software-engineering-lec-01",
+      t: "المحاضرة الأولى — الفصل الأول: مقدمة في هندسة البرمجيات",
       d: "مقدمة في هندسة البرمجيات ونماذج دورة الحياة SDLC.",
+      id: "software-engineering-lec-01",
       pdf: "datenew/subjects/software-engineering/lectures/Software Engineering Chapter 1 Lecture 1.pdf",
       pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE_Chapter1_Section1.1_Questions.pdf",
       // فئات روابط منظمة مخصصة للفصل الأول (Chapter 1: Introduction) من كتاب Software Engineering - Ian Sommerville (10th Edition)
@@ -753,10 +753,9 @@ subjects.push({
       ],
     },
     {
+      t: "المحاضرة الثانية — الفصل الثاني: عمليات البرمجيات (Software Processes)",
+      d: "مفاهيم الفصل الثاني: نماذج SDLC (Waterfall, Incremental, Reuse-oriented)، الأنشطة الأساسية الأربعة، التعامل مع التغيير (Prototyping & Incremental Delivery)، ونموذج CMMI.",
       id: "software-engineering-lec-02",
-
-      t: "المحاضرة الثانية - عمليات البرمجيات (Software Processes)",
-      d: "تغطية شاملة لمفاهيم الفصل الثاني: نماذج SDLC العامة (Waterfall, Incremental, Reuse-oriented)، الأنشطة الأساسية الأربعة (Specification, Development, Validation, Evolution)، التعامل مع التغيير (Prototyping & Incremental Delivery)، ونموذج CMMI.",
       pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 2 - Software processes.pdf",
       pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/SE_Chapter2_Sections2.1-2.2_Questions.pdf",
       // فئات روابط منظمة مخصصة للفصل الثاني (Chapter 1: Introduction) من كتاب Software Engineering - Ian Sommerville (10th Edition)
@@ -1748,9 +1747,10 @@ subjects.push({
       ],
     },
     {
-      id: "se-lecture-03",
-      t: "المحاضرة 3: التطوير الرشيق للبرمجيات (Agile Software Development)",
+      t: "المحاضرة الثالثة — الفصل الثالث: التطوير الرشيق للبرمجيات (Agile Software Development)",
       d: "مبررات طرق Agile وبيان Agile ومبادئها، ممارسات XP (user stories، refactoring، test-first، pair programming)، إدارة المشاريع بـ Scrum، وتوسيع Agile.",
+      id: "software-engineering-lec-03",
+
       notes:
         "3.4 Scaling agile   للقراء فقط  ,   الأسئلة المطلوبة من الكتاب:  من 1 لحد 7",
 
@@ -2474,11 +2474,13 @@ subjects.push({
       ],
     },
     {
-      id: "se-chapter-04",
-      t: "الفصل الرابع: Requirements Engineering",
-      d: "هندسة المتطلبات: متطلبات المستخدم والنظام، الوظيفية وغير الوظيفية، الاستنباط (Interviews, Ethnography, Stories, Scenarios) وتحليل المتطلبات",
+      t: "المحاضرة الرابعة — الفصل الرابع (جزء 1): Requirements Engineering",
+      d: "هندسة المتطلبات: متطلبات المستخدم والنظام، الوظيفية وغير الوظيفية، الاستنباط (Interviews, Ethnography, Stories, Scenarios) وتحليل المتطلبات.",
+      id: "software-engineering-lec-04",
+
       pdf: "datenew/subjects/software-engineering/lectures/Software Engineering, 10th GLOBAL Edition - Chapter 4 - Requirements engineering_Part 1.pdf",
       pdf2: "/datenew/subjects/software-engineering/questions/Questions on each lecture/Lecture-04-Questions.pdf",
+
       // الفصل الرابع: هندسة المتطلبات (Requirements Engineering) - كتاب Software Engineering (Ian Sommerville)
 
       linkCategories: [
@@ -3533,9 +3535,9 @@ subjects.push({
       ],
     },
     {
-      id: "se-lecture-05",
-      t: "Lecture 5 (Chapter 4, Lec : 2) — Requirements Engineering (Spec, Validation, Change)",
+      t: "المحاضرة الخامسة — الفصل الرابع (جزء 2): Requirements Engineering (Spec, Validation, Change)",
       d: "هندسة المتطلبات — الفصول 4.4 حتى 4.6 من كتاب Sommerville: مواصفة المتطلبات، التحقق، وإدارة التغيير.",
+      id: "software-engineering-lec-05",
       pdf: "datenew/subjects/software-engineering/lectures/lec 5/Software Engineering, 10th GLOBAL Edition - Chapter 4 - Requirements engineering-lec 5.pdf",
       pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/Lecture-05-Questions.pdf",
       // المحاضرة: Lecture 5 (Chapter 4, Lec : 2) — Requirements Engineering (Sommerville Ch.4 — Sections 4.4-4.6) — موضوعها: مواصفة المتطلبات، التحقق، وإدارة تغيير المتطلبات، use cases، SRS، traceability.

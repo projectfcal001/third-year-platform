@@ -704,5 +704,1069 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "neural-networks-lecture-02",
+      t: "المحاضرة 2: مقدمة في الشبكات العصبية",
+      d: "بنك أسئلة شامل لمحاضرة Introduction to Neural Networks يغطي: تعريف الشبكة العصبية، العصبون الاصطناعي، طبقات الشبكة، دوال التفعيل (Binary Threshold, Linear Threshold, Sigmoid, Gaussian, ReLU, Tanh)، المكونات الثمانية للشبكة، أنواع الشبكات (FNN, CNN, RNN, DNN)، والمعمارية Feedforward vs Feedback، والمخططات Heteroassociator vs Autoassociator.",
+      pdf: "datenew/subjects/neural-networks/lectures/Lec 2/Lec 2.pdf",
+      pdf2: "datenew/subjects/neural-networks/questions/Questions on each lecture/Lecture-02-Questions.pdf",
+      // المحاضرة: Introduction to Neural Networks — مقدمة في الشبكات العصبية، العصبون الاصطناعي، دوال التفعيل (Binary Threshold, Linear Threshold, Sigmoid, Gaussian, ReLU, Tanh)، المكونات الثمانية، أنواع الشبكات (FNN, CNN, RNN, DNN)، والمعمارية (Feedforward vs Feedback)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "روابط بحث في يوتيوب بالعربي لتأسيس فهم الشبكات العصبية ودوال التفعيل، لأن مفيش قناة عربية واحدة مؤكدة تغطي كل مفاهيم المحاضرة، فالأفضل تبحث بنفسك وتختار اللي يناسبك.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: شرح الشبكات العصبية بالعربي",
+              d: "رابط بحث مش فيديو محدد. بيطلع قائمة فيديوهات عربية كتير عن Neural Networks وأنواعها وكيفية عمل العصبون الاصطناعي، اللي هو الموضوع الأساسي للمحاضرة. اختار فيديو بشرح واضح للـ Input/Hidden/Output Layers.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=شرح+الشبكات+العصبية+neural+networks+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: دوال التفعيل activation functions",
+              d: "رابط بحث مش فيديو محدد. بيطلع فيديوهات عربية عن دوال التفعيل زي Sigmoid و ReLU و Tanh والـ Binary Threshold، وهي الجزء اللي الدكتور ركّز عليه في شرائح كتير. ميزة البحث إنك تلاقي شرح من قنوات مختلفة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=شرح+دوال+التفعيل+activation+functions+sigmoid+relu+tanh",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات عالمية ممتازة بتفسّر الشبكات العصبية بصرياً وبأمثلة تفاعلية، أهمها سلسلة 3Blue1Brown الشهيرة اللي بتربط بين الدماغ البشري والشبكة الاصطناعية.",
+          links: [
+            {
+              t: "3Blue1Brown — But what is a Neural Network? (Playlist)",
+              d: "سلسلة فيديوهات شهيرة من Grant Sanderson بتفسر الشبكات العصبية بصرياً عبر مثال التعرف على الأرقام المكتوبة بخط اليد. بتربط مباشرة بمفاهيم المحاضرة: العصبونات، الطبقات (Input/Hidden/Output)، ودالة التفعيل Sigmoid.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة السلسلة",
+                  url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "3Blue1Brown — Lesson Page: But what is a Neural Network?",
+              d: "الصفحة الرسمية للدرس على موقع 3Blue1Brown فيها الشرح المكتوب للفيديو مع تطبيق تفاعلي للتعرف على الأرقام. بتفيد في فهم بنية الشبكة والـ Sigmoid Squishification المذكور في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "📖 فتح الدرس",
+                  url: "https://www.3blue1brown.com/lessons/neural-networks",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مواقع مرجعية موثوقة بتشرح مفاهيم المحاضرة بالتفصيل: تعريف الشبكة العصبية، الأوزان والـ Bias، دوال التفعيل، وأنواع الشبكات (FNN, CNN, RNN, DNN).",
+          links: [
+            {
+              t: "GeeksforGeeks — Introduction to Neural Networks (Beginner Guide)",
+              d: "مقال تعليمي شامل يبدأ من تعريف الشبكة العصبية كمقلّد للدماغ البشري، ثم يشرح الطبقات (Input/Hidden/Output) وعملية التعلم (Forward propagation, Loss, Backpropagation). بيطابق ترتيب محتوى المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/deep-learning/neural-networks-a-beginners-guide",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks — Activation Functions in Neural Networks",
+              d: "مقال تفصيلي عن دوال التفعيل (Activation Functions) زي Sigmoid و ReLU و Tanh ودورها في إدخال الـ Non-linearity. بيمسك نفس موضوع شرائح 13-15 و 24-28 في المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "GeeksforGeeks — Types of Neural Networks",
+              d: "مقال يفصّل أنواع الشبكات العصبية الأربعة المذكورة في المحاضرة: FNN, CNN, RNN, DNN، مع شرح كل نوع واستخداماته. مفيد جداً لسؤال المقارنة المتوقع في الامتحان.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/deep-learning/types-of-neural-networks",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "IBM — What is a Neural Network?",
+              d: "شرح رسمي من IBM للشبكات العصبية بيغطي الطبقات، الأوزان والـ Bias، دوال التفعيل (ReLU, Sigmoid, Tanh)، وأنواع الشبكات (CNN, RNN). مصدر موثوق بيكمّل المحاضرة بصناعي.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.ibm.com/think/topics/neural-networks",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات تفاعلية تقدر تجرب عليها الشبكات العصبية بنفسك وتشوف تأثير دوال التفعيل وعدد الطبقات على التعلم بشكل مرئي.",
+          links: [
+            {
+              t: "TensorFlow Playground — Neural Network Visualization",
+              d: "أداة تفاعلية من Google تقدر تبني شبكة عصبية في المتصفح، تغيّر عدد الطبقات والعصبونات، تختار دالة التفعيل (ReLU, Sigmoid, Tanh, Linear)، وتشوف الشبكة وهيبتتعلم لحظياً. ممتازة لفهم تأثير كل دالة تفعيل عملياً.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://playground.tensorflow.org",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "Google ML Crash Course — Neural Networks (Arabic)",
+              d: "كورس تعليمي من Google فيه شرح تفاعلي للشبكات العصبية ودوال التفعيل والـ Backpropagation، متاح بالعربي عبر تغيير اللغة. مفيد لربط النظري بالعملي مع تمارين وتطبيقات.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الكورس",
+                  url: "https://developers.google.com/machine-learning/crash-course/neural-networks/activation-functions?hl=ar",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+
+      questions: [
+        // ==================== MCQ Questions (1-36) ====================
+        {
+          q: "1. What is the primary inspiration behind neural networks?",
+          options: [
+            "The human brain",
+            "Statistical models",
+            "Computer architecture",
+            "Graph theory",
+          ],
+          correct: 0,
+          translation: "ما هو الإلهام الأساسي وراء الشبكات العصبية؟",
+          explanation:
+            "الإجابة الصحيحة هي العقل البشري لأن الشبكات العصبية بتقلد وظائف الدماغ المعقدة. الاختيارات التانية غلط: النماذج الإحصائية والإلكترونية مفيهاش فكرة المحاكاة البيولوجية للخلايا العصبية.",
+          tags: ["Neural Network Definition", "Biological Inspiration"],
+          ref: "Lecture 2 — Slide 2 (What is a Neural Network?)",
+          likely: "high",
+        },
+        {
+          q: "2. In biological neurons, the connection between two neurons is called:",
+          options: ["Axon", "Synapse", "Dendrite", "Nucleus"],
+          correct: 1,
+          translation:
+            "في الخلايا العصبية البيولوجية، الاتصال بين خليتين عصبيتين بيتسمى:",
+          explanation:
+            "الصحيح هو المشبق (Synapse) لأنه النقطة اللي بتحول الإشارة من خلية لأخرى. الـ Axon هو اللي بينقل الإشارة جوه الخلية، والـ Dendrite بيستقبل الإشارات، والـ Nucleus هو نواة الخلية.",
+          tags: ["Neuron Abstraction", "Synapse"],
+          ref: "Lecture 2 — Slide 3 (Neuron Abstraction)",
+          likely: "high",
+        },
+        {
+          q: '3. The term "synaptic efficacy" refers to:',
+          options: [
+            "The speed of electrical signals in the brain",
+            "The number of neurons in a network",
+            "How well a signal is passed from the presynaptic to the postsynaptic neuron",
+            "The chemical composition of a neuron",
+          ],
+          correct: 2,
+          translation: 'مصطلح "synaptic efficacy" بيشير إلى:',
+          explanation:
+            "الصحيح هو مدى كفاءة انتقال الإشارة من العصبون قبل المشبقي للعصبون بعد المشبقي. ده بيمثل فكرة الأوزان في الشبكات العصبية الاصطناعية. باقي الاختيارات بتعريفات تانية ملهاش علاقة بالكفاءة المشبقية.",
+          tags: ["Neuron Abstraction", "Synaptic Efficacy"],
+          ref: "Lecture 2 — Slide 3 (Neuron Abstraction)",
+          likely: "high",
+        },
+        {
+          q: "4. In an artificial neuron, what does the symbol wij represent?",
+          options: [
+            "The bias of neuron j",
+            "The activation function of neuron j",
+            "The input signal from neuron i",
+            "The connection weight from neuron i to neuron j",
+          ],
+          correct: 3,
+          translation: "في العصبون الاصطناعي، الرمز wij بيمثل إيه؟",
+          explanation:
+            "الصحيح هو وزن الاتصال من العصبون i للعصبون j، وده بيمثل الـ synaptic efficacy البيولوجية. الـ bias هو θj، ودالة التفعيل S(xj)، والإشارة هي si.",
+          tags: ["Artificial Neuron", "Weights"],
+          ref: "Lecture 2 — Slide 6 (Artificial Neuron)",
+          likely: "high",
+        },
+        {
+          q: "5. The total input xj to an artificial neuron is computed as:",
+          options: [
+            "A linear weighted aggregation of inputs modified by an internal threshold",
+            "A nonlinear function of all inputs",
+            "The product of all input signals",
+            "The maximum of all input signals",
+          ],
+          correct: 0,
+          translation: "المدخل الكلي xj للعصبون الاصطناعي بيُحسب إزاي؟",
+          explanation:
+            "الصحيح هو تجميع خطي موزون للمدخلات متعدّل بحد داخلي θj. ده بيتكتب xj = Σ(wij*si) + θj. باقي الاختيارات غلط لأنها بتوصف دوال تانية (nonlinear, product, max).",
+          tags: ["Artificial Neuron", "Weighted Sum"],
+          ref: "Lecture 2 — Slide 6 (Artificial Neuron)",
+          likely: "high",
+        },
+        {
+          q: "6. Which layer of a neural network is responsible for receiving raw data?",
+          options: [
+            "Hidden layer",
+            "Input layer",
+            "Output layer",
+            "Activation layer",
+          ],
+          correct: 1,
+          translation:
+            "أي طبقة في الشبكة العصبية مسؤولة عن استقبال البيانات الخام؟",
+          explanation:
+            "الصحيح هي طبقة الإدخال (Input Layer) لأنها بتستقبل البيانات الخام زي قيم البكسل. الطبقة المخفية بتعمل التحويلات، والمخرج بيطلع النتيجة النهائية.",
+          tags: ["Network Structure", "Input Layer"],
+          ref: "Lecture 2 — Slide 7 (Structure)",
+          likely: "high",
+        },
+        {
+          q: "7. What is the main role of the hidden layers in a neural network?",
+          options: [
+            "To receive the raw input data",
+            "To produce the final prediction",
+            "To perform complex transformations and feature extraction",
+            "To store the training dataset",
+          ],
+          correct: 2,
+          translation:
+            "إيه هو الدور الأساسي للطبقات المخفية في الشبكة العصبية؟",
+          explanation:
+            "الصحيح إنها بتعمل التحويلات المعقدة واستخلاص الميزات (feature extraction). الطبقة الأولى بتجيب البيانات الخام، والأخيرة بتطلع النتيجة النهائية، أما المخفية فبتتعامل مع التمثيلات الوسيطة.",
+          tags: ["Network Structure", "Hidden Layers"],
+          ref: "Lecture 2 — Slide 7 (Structure)",
+          likely: "high",
+        },
+        {
+          q: "8. What is the main purpose of applying an activation function in a neuron?",
+          options: [
+            "To compute the weighted sum of inputs",
+            "To initialize the connection weights",
+            "To reduce the number of parameters",
+            "To introduce non-linearity into the network",
+          ],
+          correct: 3,
+          translation: "إيه هو الهدف الأساسي من تطبيق دالة التفعيل في العصبون؟",
+          explanation:
+            "الصحيح هو إدخال اللاخطية (non-linearity) عشان الشبكة تقدر تتعلم علاقات معقدة. لو مفيش دالة تفعيل، الشبكة هتفضل خطية مهما زودت طبقاتها. الجمع الموزون بيتعمل قبل التفعيل مش بيها.",
+          tags: ["Activation Function", "Non-linearity"],
+          ref: "Lecture 2 — Slide 9 (Neuron Function)",
+          likely: "high",
+        },
+        {
+          q: "9. Which of the following is NOT one of the training stages mentioned in the lecture?",
+          options: [
+            "Data compression",
+            "Forward propagation",
+            "Loss calculation",
+            "Backpropagation",
+          ],
+          correct: 0,
+          translation:
+            "أي واحد من الآتي مش مرحلة من مراحل التدريب المذكورة في المحاضرة؟",
+          explanation:
+            "الصحيح هو ضغط البيانات لأنه مش جزء من التدريب. المراحل المذكورة هي: الانتشار الأمامي (Forward propagation)، حساب الخسارة (Loss calculation)، والانتشار الخلفي (Backpropagation) لتعديل الأوزان.",
+          tags: ["Learning Process", "Training"],
+          ref: "Lecture 2 — Slide 10 (Learning Process)",
+          likely: "high",
+        },
+        {
+          q: "10. Which type of neural network is most suitable for image processing tasks?",
+          options: [
+            "Recurrent Neural Network (RNN)",
+            "Convolutional Neural Network (CNN)",
+            "Feedforward Neural Network (FNN)",
+            "Single-layer Perceptron",
+          ],
+          correct: 1,
+          translation:
+            "أي نوع من الشبكات العصبية مناسب أكتر لمهام معالجة الصور؟",
+          explanation:
+            "الصحيح هو CNN لأنها مصممة للبيانات الشبكية زي الصور باستخدام الالتفاف. الـ RNN للبيانات المتسلسلة، والـ FNN للتدفق العام.",
+          tags: ["Types of Neural Networks", "CNN"],
+          ref: "Lecture 2 — Slide 11 (Types)",
+          likely: "high",
+        },
+        {
+          q: "11. Recurrent Neural Networks (RNNs) are best suited for:",
+          options: [
+            "Image recognition tasks",
+            "Medical diagnosis only",
+            "Sequential data such as text or time series",
+            "Binary classification problems",
+          ],
+          correct: 2,
+          translation: "الشبكات العصبية المتكررة (RNN) مناسبة أكتر لإيه؟",
+          explanation:
+            "الصحيح هو البيانات المتسلسلة زي النص أو السلاسل الزمنية لأنها بتدعم الاتصالات الراجعة. الصور بتتعامل معاها CNN، والتشخيص الطبي مش تطبيقها الأساسي.",
+          tags: ["Types of Neural Networks", "RNN"],
+          ref: "Lecture 2 — Slide 11 (Types)",
+          likely: "high",
+        },
+        {
+          q: "12. A Deep Neural Network (DNN) is defined as:",
+          options: [
+            "A network with no hidden layers",
+            "A network with exactly one hidden layer",
+            "A network used only for regression",
+            "A network with multiple hidden layers",
+          ],
+          correct: 3,
+          translation: "الشبكة العصبية العميقة (DNN) بتتعرّف إزاي؟",
+          explanation:
+            "الصحيح هي شبكة فيها عدة طبقات مخفية. كلمة Deep بتشير لعدد الطبقات المخفية. لو مفيش طبقات مخفية يبقى perceptron، ولو طبقة واحدة يبقى shallow network.",
+          tags: ["Types of Neural Networks", "DNN"],
+          ref: "Lecture 2 — Slide 11 (Types)",
+          likely: "high",
+        },
+        {
+          q: "13. In a Feedforward Neural Network (FNN), data flows:",
+          options: [
+            "In one direction only, with no loops",
+            "In multiple directions with loops",
+            "From the output layer back to the input layer",
+            "Randomly between all layers",
+          ],
+          correct: 0,
+          translation:
+            "في الشبكة العصبية التغذية الأمامية (FNN)، البيانات بتتدفق إزاي؟",
+          explanation:
+            "الصحيح في اتجاه واحد بس من غير حلقات. ده عكس الـ RNN اللي فيها حلقات واتصالات راجعة.",
+          tags: ["Types of Neural Networks", "FNN", "Architecture"],
+          ref: "Lecture 2 — Slide 11 (Types)",
+          likely: "high",
+        },
+        {
+          q: "14. According to the binary threshold function, the output S(xj) equals:",
+          options: [
+            "-1 if xj < 0, and 1 if xj ≥ 0",
+            "1 if xj ≥ 0, and 0 if xj < 0",
+            "A value between 0 and 1",
+            "The same value as the input xj",
+          ],
+          correct: 1,
+          translation: "حسب دالة الحد الثنائي، المخرج S(xj) بيساوي:",
+          explanation:
+            "الصحيح: 1 لو xj ≥ 0، و0 لو xj < 0. ده بينشئ نظام ذو حالتين زي مفتاح ON/OFF. الخيار اللي بيقول -1 و1 ده بيشير لـ bipolar function مش binary.",
+          tags: ["Activation Functions", "Binary Threshold"],
+          ref: "Lecture 2 — Slide 16 (Binary Threshold Function)",
+          likely: "high",
+        },
+        {
+          q: "15. The binary threshold function is also referred to as a:",
+          options: [
+            "Smooth logistic unit",
+            "Linear unit",
+            "Threshold logic unit",
+            "Gaussian unit",
+          ],
+          correct: 2,
+          translation: "دالة الحد الثنائي بتُسمّى بردو:",
+          explanation:
+            "الصحيح هو Threshold Logic Unit لأنها بتشتغل كوحدة منطق بحد. السموث لوجستيك ده وصف الـ Sigmoid، والـ Gaussian نوع تاني خالص.",
+          tags: ["Activation Functions", "Binary Threshold"],
+          ref: "Lecture 2 — Slide 16 (Binary Threshold Function)",
+          likely: "high",
+        },
+        {
+          q: "16. What happens to the sigmoidal activation function as λj approaches infinity?",
+          options: [
+            "It becomes a linear function",
+            "It approaches the Gaussian function",
+            "It becomes unbounded",
+            "It approaches the binary threshold function",
+          ],
+          correct: 3,
+          translation:
+            "إيه اللي بيحصل لدالة التفعيل السيجمويدية لما λj يقرب من اللانهاية؟",
+          explanation:
+            "الصحيح إنها بتقرب من دالة الحد الثنائي لأن المنحدر بيبقى حاد جداً. ده استنتاج مهم اتكرر في المحاضرة. الخيارات التانية غلط لأن السيجمويد مش بيتحول لخطي ولا Gaussian.",
+          tags: ["Activation Functions", "Sigmoid"],
+          ref: "Lecture 2 — Slide 20 (Sigmoidal Activation Function)",
+          likely: "high",
+        },
+        {
+          q: "17. Which of the following properties correctly describes the sigmoidal activation function?",
+          options: [
+            "Monotonic, continuous, and bounded",
+            "Non-monotonic and unbounded",
+            "Discontinuous and bounded",
+            "Linear and unbounded",
+          ],
+          correct: 0,
+          translation: "أي واحد من الآتي بيوصف دالة التفعيل السيجمويدية صح؟",
+          explanation:
+            "الصحيح: رتيبة (monotonic)، مستمرة (continuous)، ومحدودة (bounded) بين 0 و1. ده تلات خصائص مهمة اتذكروا في الشريحة. الـ Gaussian هي اللي non-monotonic.",
+          tags: ["Activation Functions", "Sigmoid"],
+          ref: "Lecture 2 — Slide 20 (Sigmoidal Activation Function)",
+          likely: "high",
+        },
+        {
+          q: "18. Which activation function is described as non-monotonic in the lecture?",
+          options: ["Sigmoid", "Gaussian", "Tanh", "ReLU"],
+          correct: 1,
+          translation: "أي دالة تفعيل وُصفت في المحاضرة بأنها non-monotonic؟",
+          explanation:
+            "الصحيح هو Gaussian لأن شكلها الجرسي بيخليها تطلع وتنزل (مش رتيبة). السيجمويد والتانهوك وReLU كلها رتيبة.",
+          tags: ["Activation Functions", "Gaussian"],
+          ref: "Lecture 2 — Slide 22 (Gaussian Activation Function)",
+          likely: "high",
+        },
+        {
+          q: "19. In the Gaussian activation function, what does the parameter σj represent?",
+          options: [
+            "The center of the function",
+            "The slope of the function",
+            "The Gaussian spread factor",
+            "The internal threshold",
+          ],
+          correct: 2,
+          translation: "في دالة التفعيل الـ Gaussian، البارامتر σj بيمثل إيه؟",
+          explanation:
+            "الصحيح هو معامل الانتشار (spread factor) اللي بيحدد دالة حادة ولا منتشرة. الـ center هو cj، والـ slope خاص بالـ linear threshold.",
+          tags: ["Activation Functions", "Gaussian"],
+          ref: "Lecture 2 — Slide 22 (Gaussian Activation Function)",
+          likely: "high",
+        },
+        {
+          q: "20. The ReLU activation function is defined as:",
+          options: [
+            "S(x) = 1 / (1 + e^(-x))",
+            "S(x) = tanh(x)",
+            "S(x) = min(0, x)",
+            "S(x) = max(0, x)",
+          ],
+          correct: 3,
+          translation: "دالة التفعيل ReLU بتتعرّف إزاي؟",
+          explanation:
+            "الصحيح S(x) = max(0, x) - بترجع x لو موجب، و0 لو سالب. الخيار الأول ده السيجمويد، التاني التانهوك، والتالت غلط (min مش max).",
+          tags: ["Activation Functions", "ReLU"],
+          ref: "Lecture 2 — Slide 24 (ReLU)",
+          likely: "high",
+        },
+        {
+          q: "21. What is a major drawback of the ReLU activation function?",
+          options: [
+            '"Dead neurons" that may stay at zero forever',
+            "Computationally very slow",
+            "Suffers from vanishing gradient",
+            "Bounded output range",
+          ],
+          correct: 0,
+          translation: "إيه هو العيب الأساسي لدالة ReLU؟",
+          explanation:
+            'الصحيح هو ظاهرة "العصبونات الميتة" - لو خرج العصبون صفر، ممكن يفضل صفر للأبد. الـ ReLU سريعة (مش بطيئة)، بتحل مشكلة التلاشي (مش بتعاني منه)، ومش محدودة.',
+          tags: ["Activation Functions", "ReLU", "Dead Neurons"],
+          ref: "Lecture 2 — Slide 25 (ReLU Characteristics)",
+          likely: "high",
+        },
+        {
+          q: "22. Which activation function outputs values in the range [-1, 1]?",
+          options: ["Sigmoid", "Tanh", "ReLU", "Softmax"],
+          correct: 1,
+          translation: "أي دالة تفعيل بتطلع قيم في المدى [-1, 1]؟",
+          explanation:
+            "الصحيح هو Tanh (الظل الزائدي) لأنه بيخرج قيم بين -1 و1. السيجمويد بين 0 و1، وReLU بين 0 و∞، وSoftmax للاحتمالات.",
+          tags: ["Activation Functions", "Tanh", "Comparison"],
+          ref: "Lecture 2 — Slide 26-27 (Comparison Table)",
+          likely: "high",
+        },
+        {
+          q: "23. The sigmoid function is known to suffer from which gradient issue?",
+          options: [
+            "Dying ReLU problem",
+            "Exploding gradient",
+            "Vanishing gradient",
+            "No gradient issues",
+          ],
+          correct: 2,
+          translation:
+            "دالة السيجمويد معروفة بمعاناتها من مشكلة إيه في التدرج؟",
+          explanation:
+            "الصحيح هو تلاشي التدرج (vanishing gradient) لأن ميل السيجمويد بيقرب من صفر في الأطراف. الـ Dying ReLU مشكلة ReLU، والانفجار مش مشكلتها الأساسية.",
+          tags: ["Activation Functions", "Sigmoid", "Vanishing Gradient"],
+          ref: "Lecture 2 — Slide 26-27 (Comparison Table)",
+          likely: "high",
+        },
+        {
+          q: "24. Which activation function is most commonly used in the hidden layers of deep networks?",
+          options: ["Sigmoid", "Tanh", "Softmax", "ReLU"],
+          correct: 3,
+          translation:
+            "أي دالة تفعيل مستخدمة أكتر في الطبقات المخفية للشبكات العميقة؟",
+          explanation:
+            'الصحيح هو ReLU لأنها سريعة وبسيطة وتحل مشكلة التلاشي. ده مذكور صراحةً في شريحة "When to Use Each". السيجمويد للتصنيف الثنائي في المخرج.',
+          tags: ["Activation Functions", "ReLU", "When to Use"],
+          ref: "Lecture 2 — Slide 28 (When to Use Each)",
+          likely: "high",
+        },
+        {
+          q: "25. For binary classification, which activation function is typically used in the output layer?",
+          options: ["Sigmoid", "ReLU", "Tanh", "Linear"],
+          correct: 0,
+          translation:
+            "للتصنيف الثنائي، أي دالة تفعيل بتُستخدم عادةً في طبقة المخرج؟",
+          explanation:
+            "الصحيح هو Sigmoid لأنها بتخرج قيمة بين 0 و1 تمثل احتمال. ReLU للطبقات المخفية، التانهوك لما محتاجين zero-centered.",
+          tags: ["Activation Functions", "Sigmoid", "When to Use"],
+          ref: "Lecture 2 — Slide 28 (When to Use Each)",
+          likely: "high",
+        },
+        {
+          q: "26. According to the eight components of neural networks, how many types of neurons are there?",
+          options: ["Two", "Three", "Four", "Five"],
+          correct: 1,
+          translation:
+            "حسب المكونات الثمانية للشبكات العصبية، كم نوع من العصبونات موجود؟",
+          explanation:
+            "الصحيح 3 أنواع: Input (إدخال)، Hidden (مخفية)، Output (مخرج). ده اتذكر صراحةً في أول مكوّن من المكونات الثمانية.",
+          tags: ["Eight Components", "Neurons"],
+          ref: "Lecture 2 — Slides 30-31 (Eight Components)",
+          likely: "high",
+        },
+        {
+          q: "27. Which type of neuron serves as the entry point to the network?",
+          options: [
+            "Hidden neuron",
+            "Output neuron",
+            "Input neuron",
+            "Bias neuron",
+          ],
+          correct: 2,
+          translation: "أي نوع من العصبونات بيشتغل كنقطة الدخول للشبكة؟",
+          explanation:
+            "الصحيح هو Input neuron لأنه بيستقبل البيانات أو المحفزات الخارجية من البيئة. الـ Hidden بتعمل العمليات الوسيطة، والـ Output بتطلع النتيجة.",
+          tags: ["Eight Components", "Neurons"],
+          ref: "Lecture 2 — Slides 30-31 (Eight Components)",
+          likely: "high",
+        },
+        {
+          q: "28. The activation state vector X represents:",
+          options: [
+            "The connection weights of the network",
+            "Only the input data values",
+            "The final predictions of the network",
+            "The activation levels of individual neurons",
+          ],
+          correct: 3,
+          translation: "متجه حالة التفعيل X بيمثل إيه؟",
+          explanation:
+            "الصحيح: مستويات تفعيل العصبونات الفردية X = [x1, ..., xn]. ده المكوّن التاني من المكونات الثمانية. الأوزان والمدخلات والمخرجات مفاهيم تانية.",
+          tags: ["Eight Components", "Activation State Vector"],
+          ref: "Lecture 2 — Slides 30-31 (Eight Components)",
+          likely: "high",
+        },
+        {
+          q: "29. An excitatory connection between two neurons:",
+          options: [
+            "Increases the activation of the next neuron",
+            "Decreases the activation of the next neuron",
+            "Has no effect on activation",
+            "Resets the activation to zero",
+          ],
+          correct: 0,
+          translation:
+            "الاتصال المثير (excitatory) بين خليتين عصبيتين بيعمل إيه؟",
+          explanation:
+            "الصحيح: بيزيد تفعيل العصبون التالي. ده عكس الـ Inhibitory (-) اللي بيقلل التفعيل. الـ Absent (0) مفيش اتصال أصلاً.",
+          tags: ["Eight Components", "Connectivity Pattern"],
+          ref: "Lecture 2 — Slide 32 (Pattern of Connectivity)",
+          likely: "high",
+        },
+        {
+          q: "30. The activity aggregation rule is typically computed as:",
+          options: [
+            "The maximum of inputs and weights",
+            "The dot product of the input vector and the weight vector",
+            "The element-wise multiplication only",
+            "The concatenation of input and weight vectors",
+          ],
+          correct: 1,
+          translation: "قاعدة تجميع النشاط بتُحسب عادةً إزاي؟",
+          explanation:
+            "الصحيح هو الضرب النقطي (dot product / inner product) بين متجه المدخلات ومتجه الأوزان. ده بيحدد المدخل الكلي للعصبون قبل دالة التفعيل. باقي الطرق مش اللي اتعمل في المحاضرة.",
+          tags: ["Eight Components", "Aggregation Rule"],
+          ref: "Lecture 2 — Slide 32 (Activity Aggregation Rule)",
+          likely: "high",
+        },
+        {
+          q: "31. According to the eight components, the environment of a neural network can be:",
+          options: [
+            "Only deterministic",
+            "Only stochastic",
+            "Either deterministic (noiseless) or stochastic (noisy)",
+            "Always noisy",
+          ],
+          correct: 2,
+          translation: "حسب المكونات الثمانية، بيئة الشبكة العصبية ممكن تكون:",
+          explanation:
+            "الصحيح إما deterministic (بلا ضوضاء) أو stochastic (فيها ضوضاء). ده المكوّن الثامن والأخير. الاتنين ممكنين مش واحد فيهم بس.",
+          tags: ["Eight Components", "Environment"],
+          ref: "Lecture 2 — Slide 33 (Eight Components)",
+          likely: "high",
+        },
+        {
+          q: "32. A feedback (recurrent) architecture is characterized by:",
+          options: [
+            "Data flowing only in the forward direction",
+            "No connections between neurons",
+            "Only a single layer of neurons",
+            "Loops in the network due to feedback connections",
+          ],
+          correct: 3,
+          translation: "المعمارية الراجعة (recurrent) بتتميز بـ:",
+          explanation:
+            "الصحيح: وجود حلقات في الشبكة بسبب اتصالات راجعة. ده عكس الـ feedforward اللي مفيهاش حلقات.",
+          tags: ["Architecture", "Feedback"],
+          ref: "Lecture 2 — Slide 34 (Architectures)",
+          likely: "high",
+        },
+        {
+          q: "33. A network that maps vectors from one space to another, written as f: R^n → R^p, is called:",
+          options: [
+            "A heteroassociator",
+            "An autoassociator",
+            "A feedforward-only network",
+            "A stochastic network",
+          ],
+          correct: 0,
+          translation:
+            "الشبكة اللي بتربط متجهات من فضاء لفضاء تاني (f: R^n → R^p) بتسمّى:",
+          explanation:
+            "الصحيح هو heteroassociator لأنه بيربط نمطين مختلفين (مدخل ≠ مخرج). الـ autoassociator بيربط النمط بنفسه.",
+          tags: ["Mappings", "Heteroassociator"],
+          ref: "Lecture 2 — Slide 35 (Neural Networks Generate Mappings)",
+          likely: "high",
+        },
+        {
+          q: "34. An autoassociator is a network that:",
+          options: [
+            "Maps two different patterns to each other",
+            "Associates a single pattern with itself",
+            "Has no hidden layers at all",
+            "Always uses the ReLU activation",
+          ],
+          correct: 1,
+          translation: "الـ autoassociator هو شبكة بتعمل إيه؟",
+          explanation:
+            "الصحيح: بتربط نمط واحد في R^n بنفسه (لما العصبونات تتصل على نفسها). ده عكس الـ heteroassociator اللي بيربط نمطين مختلفين.",
+          tags: ["Mappings", "Autoassociator"],
+          ref: "Lecture 2 — Slide 35 (Neural Networks Generate Mappings)",
+          likely: "high",
+        },
+        {
+          q: "35. In the linear threshold function, the slope parameter αj equals:",
+          options: ["xm", "xm / 2", "1 / xm", "0"],
+          correct: 2,
+          translation: "في دالة الحد الخطي، معامل الميل αj بيساوي:",
+          explanation:
+            "الصحيح αj = 1/xm. ده مذكور صراحةً في شريحة الـ Linear Threshold. xm هي قيمة الذروة اللي بعدها المخرج بيبقى 1.",
+          tags: ["Activation Functions", "Linear Threshold"],
+          ref: "Lecture 2 — Slide 19 (Linear Threshold Activation Function)",
+          likely: "high",
+        },
+        {
+          q: "36. The signal of a stochastic neuron is assumed to be:",
+          options: [
+            "Continuous only",
+            "Always positive",
+            "Always equal to zero",
+            "Two-state: {0, 1} or {-1, 1}",
+          ],
+          correct: 3,
+          translation:
+            "إشارة العصبون العشوائي (stochastic neuron) بتفترض إنها:",
+          explanation:
+            "الصحيح ذو حالتين إما {0, 1} أو {-1, 1}، والعصبون بيتبدل بينهم بدالة احتمالية P(xj). ده عكس الدوال المستمرة زي السيجمويد.",
+          tags: ["Activation Functions", "Stochastic Neurons"],
+          ref: "Lecture 2 — Slide 23 (Stochastic Neurons)",
+          likely: "medium",
+        },
+
+        // ==================== Essay Questions (1-12) ====================
+        {
+          type: "essay",
+          q: "1. Define a neural network and explain how it relates to the human brain.",
+          translation: "عرّف الشبكة العصبية واشرح علاقتها بالعقل البشري.",
+          answer:
+            "A neural network is a machine learning model that mimics the complex functions of the human brain. " +
+            "It consists of interconnected nodes called neurons that process data, learn patterns, and enable tasks such as pattern recognition, decision making, and prediction.\n" +
+            "Relation to the brain:\n" +
+            "- Biological neurons send signals by converting them from electrical to chemical and back to electrical.\n" +
+            "- The connection between two neurons is called a synapse, and its effectiveness is called synaptic efficacy.\n" +
+            "- In the artificial model, connection weights wij model these synaptic efficacies.\n" +
+            "- The internal threshold θj models the neuron's firing threshold.\n" +
+            "Thus, the artificial neuron is an abstract mathematical model inspired by biological neurons, capturing the idea of weighted signal aggregation and threshold-based firing.",
+          tags: ["Definition", "Biological Inspiration"],
+          ref: "Lecture 2 — Slides 2-3 (Neural Network & Neuron Abstraction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the structure of a neural network and the function of each layer.",
+          translation: "اشرح بنية الشبكة العصبية ووظيفة كل طبقة.",
+          answer:
+            "A neural network is organized into layers of interconnected nodes (neurons). It typically includes three types of layers:\n" +
+            "1. Input Layer: Receives the raw data (e.g., pixel values of an image) and serves as the entry point to the network.\n" +
+            "2. Hidden Layers: Perform complex transformations and feature extraction from the input data. They learn intermediate representations that help solve the task.\n" +
+            "3. Output Layer: Produces the final result, such as a class label or a predicted numerical value.\n" +
+            "Each neuron computes a weighted sum of its inputs, adds a bias, and passes the result through an activation function (e.g., ReLU, sigmoid, tanh) to introduce non-linearity.",
+          tags: ["Structure", "Layers"],
+          ref: "Lecture 2 — Slides 7-9 (Structure, Neuron Function)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Describe the learning (training) process of a neural network in detail.",
+          translation: "اشرح عملية التعلم (التدريب) للشبكة العصبية بالتفصيل.",
+          answer:
+            "Neural networks learn through a process called training, which involves three main stages:\n" +
+            "1. Forward Propagation: The network computes its output from the given inputs by passing data through the layers and applying weights, biases, and activation functions.\n" +
+            "2. Loss Calculation: The error between the predicted output and the actual (target) output is measured using a loss function.\n" +
+            "3. Backpropagation: The network adjusts its weights to minimize the error. This is typically done using optimization algorithms such as gradient descent, which updates the weights in the direction that reduces the loss.\n" +
+            "These three steps are repeated over many training examples until the network's predictions reach an acceptable accuracy.",
+          tags: ["Learning Process", "Training"],
+          ref: "Lecture 2 — Slide 10 (Learning Process)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Compare the four types of neural networks (FNN, CNN, RNN, DNN) in terms of data flow and use cases.",
+          translation:
+            "قارن الأنواع الأربعة للشبكات العصبية (FNN، CNN، RNN، DNN) من حيث تدفق البيانات وحالات الاستخدام.",
+          answer:
+            "1. Feedforward Neural Network (FNN): Data flows in one direction only (no loops). Used for general tasks where data has no spatial or temporal structure.\n" +
+            "2. Convolutional Neural Network (CNN): Specialized for image processing and grid-like data; uses convolution operations to detect spatial features.\n" +
+            "3. Recurrent Neural Network (RNN): Suitable for sequential data such as text or time series; uses feedback connections so previous outputs influence current computation.\n" +
+            "4. Deep Neural Network (DNN): A network with multiple hidden layers; depth allows it to model very complex hierarchical features. DNN is a broad term that can include deep FNNs, CNNs, or RNNs.",
+          tags: ["Types", "Comparison"],
+          ref: "Lecture 2 — Slide 11 (Types)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. What is an activation (signal) function in a neural network and why is it important? List the common types mentioned in the lecture.",
+          translation:
+            "إيه هي دالة التفعيل (الإشارة) في الشبكة العصبية وليه مهمة؟ اذكر الأنواع الشائعة المذكورة في المحاضرة.",
+          answer:
+            "After computing the total input xj, the neuron's activation is passed through an activation function (also called a signal function) denoted by S(x), where sj = S(xj). This function determines the output signal of the neuron.\n" +
+            "Importance: The activation function introduces non-linearity, which is essential for the network to learn complex, non-linear patterns. Without it, stacking layers would still produce only linear transformations.\n" +
+            "Common types from the lecture:\n" +
+            "- Binary Threshold Function: outputs 0 or 1 based on a threshold.\n" +
+            "- Linear Threshold Function: combines linearity and thresholding.\n" +
+            "- Sigmoid Function: smooth, non-linear, used in logistic regression.\n" +
+            "- Gaussian Function: bell-shaped, used in radial basis function networks.\n" +
+            "- Probabilistic Function: outputs a probability value.\n" +
+            "Modern additions: ReLU (max(0, x)), Softmax (multi-class classification), and Tanh (range [-1, 1]).",
+          tags: ["Activation Function", "Types"],
+          ref: "Lecture 2 — Slides 13-15 (Activation Functions)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Explain the binary threshold activation function and how a neuron decides to fire based on the threshold θj.",
+          translation:
+            "اشرح دالة التفعيل الثنائية (binary threshold) وإزاي العصبون بيقرر يطلق إشارة بناءً على الحد θj.",
+          answer:
+            "The binary threshold function is one of the simplest activation functions. It works as follows:\n" +
+            "- S(xj) = 1 if xj >= 0\n" +
+            "- S(xj) = 0 if xj < 0\n" +
+            "Key characteristics: it produces outputs of either 0 or 1 only, creating a two-state system (like an ON/OFF switch). This is why it is called a threshold logic unit.\n" +
+            "Threshold interpretation:\n" +
+            "- The net activation is computed as xj = qj + θj, where qj = Σ(wij * si) is the weighted sum and θj is the internal threshold (bias).\n" +
+            "- The neuron fires (outputs +1) when xj >= 0, which means qj >= -θj.\n" +
+            "- The neuron outputs 0 when qj < -θj.\n" +
+            "In simple terms, the neuron compares the weighted input qj against the negative of the bias (-θj) to decide whether to fire.",
+          tags: [
+            "Activation Functions",
+            "Binary Threshold",
+            "Threshold Interpretation",
+          ],
+          ref: "Lecture 2 — Slides 16-18 (Binary Threshold & Interpretation)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Compare ReLU, Sigmoid, and Tanh activation functions based on output range, zero-centered property, non-linearity, gradient issues, and speed.",
+          translation:
+            "قارن دوال التفعيل ReLU و Sigmoid و Tanh بناءً على مدى المخرج، خاصية التمركز حول الصفر، اللاخطية، مشاكل التدرج، والسرعة.",
+          answer:
+            "Comparison table (from the lecture):\n" +
+            "| Property         | ReLU        | Sigmoid       | Tanh          |\n" +
+            "| Output Range     | [0, ∞)      | (0, 1)        | (-1, 1)       |\n" +
+            "| Zero-centered    | No          | No            | Yes           |\n" +
+            "| Non-linear       | Yes         | Yes           | Yes           |\n" +
+            "| Gradient Issues  | Dying ReLU  | Vanishing Gradient | Vanishing Gradient |\n" +
+            "| Speed            | Fast        | Slower        | Slower        |\n" +
+            "Key points:\n" +
+            "- ReLU is the fastest and helps reduce the vanishing gradient problem, but it can suffer from 'dead neurons'.\n" +
+            "- Sigmoid and Tanh are smooth but suffer from vanishing gradients, especially in deep networks.\n" +
+            "- Tanh is preferred over Sigmoid for hidden layers when zero-centered output is helpful.",
+          tags: ["Activation Functions", "Comparison"],
+          ref: "Lecture 2 — Slides 26-27 (Comparison Table)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Explain when to use ReLU, Sigmoid, and Tanh in a neural network.",
+          translation:
+            "اشرح متى نستخدم ReLU و Sigmoid و Tanh في الشبكة العصبية.",
+          answer:
+            "When to use each activation function:\n" +
+            "1. ReLU: The most common choice. Best for hidden layers in deep networks because it is fast to compute and helps reduce the vanishing gradient problem.\n" +
+            "2. Sigmoid: Used for binary classification in the output layer, where the output needs to be interpreted as a probability in the range (0, 1).\n" +
+            "3. Tanh: Can be better than Sigmoid for hidden layers when zero-centered output is helpful, because its output is in the range (-1, 1), which often makes optimization easier.\n" +
+            "The right choice depends on the task: hidden layers usually use ReLU, while the output layer depends on whether the task is binary classification (Sigmoid), multi-class (Softmax), or regression (Linear).",
+          tags: ["Activation Functions", "When to Use"],
+          ref: "Lecture 2 — Slide 28 (When to Use Each)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. List and briefly explain the eight components of a neural network.",
+          translation: "اذكر واشرح بإيجاز المكونات الثمانية للشبكة العصبية.",
+          answer:
+            "The eight components of a neural network are:\n" +
+            "1. Neurons: Come in three types - Input (receive external data), Hidden (compute intermediate functions and extract features), Output (generate the final result).\n" +
+            "2. Activation state vector: A vector X = [x1, ..., xn] of the activation levels of individual neurons.\n" +
+            "3. Signal function (activation function): Generates the output signal of the neuron based on its activation.\n" +
+            "4. Pattern of Connectivity: Defines how neurons are connected. Connections can be Excitatory (+), Inhibitory (-), or Absent (0).\n" +
+            "5. Activity Aggregation Rule: Explains how a neuron combines input signals, typically as the dot product of the input vector and the weight vector.\n" +
+            "6. Activation rule: Determines the new activation level of a neuron based on its current activation and external inputs.\n" +
+            "7. Learning rule: Modifies connection strengths based on external stimuli and network performance, aiming to improve the latter.\n" +
+            "8. Environment: The environment in which the network operates - either deterministic (noiseless) or stochastic (noisy).",
+          tags: ["Eight Components"],
+          ref: "Lecture 2 — Slides 30-33 (Eight Components)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Describe the three types of connectivity patterns (excitatory, inhibitory, absent) and their effects.",
+          translation:
+            "صف الأنواع الثلاثة من أنماط الاتصال (مثير، مثبط، غائب) وتأثيرها.",
+          answer:
+            "The pattern of connectivity defines how neurons are connected in the network. Each connection between neurons can have one of three effects:\n" +
+            "1. Excitatory (+): Increases the activation of the next neuron. A positive weight strengthens the signal passed forward.\n" +
+            "2. Inhibitory (-): Decreases the activation of the next neuron. A negative weight weakens or suppresses the signal.\n" +
+            "3. Absent (0): No connection between the neurons. The signal is not transmitted at all.\n" +
+            "These three patterns determine the structure of the network and influence which neurons affect which others, thereby shaping the computations the network can perform.",
+          tags: ["Eight Components", "Connectivity"],
+          ref: "Lecture 2 — Slide 32 (Pattern of Connectivity)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "11. Compare feedforward and feedback (recurrent) architectures.",
+          translation:
+            "قارن بين المعماريات الـ feedforward والـ feedback (recurrent).",
+          answer:
+            "Local groups of neurons can be connected in either architecture:\n" +
+            "1. Feedforward Architecture:\n" +
+            "   - The network has no loops.\n" +
+            "   - Data flows only in the forward direction, from input to output.\n" +
+            "   - Examples: FNN, CNN.\n" +
+            "2. Feedback (Recurrent) Architecture:\n" +
+            "   - Loops occur in the network due to feedback connections.\n" +
+            "   - The output of a neuron can influence its own future computation or the computation of neurons in earlier layers.\n" +
+            "   - Suitable for sequential data such as text or time series.\n" +
+            "   - Example: RNN.\n" +
+            "The key difference is the presence or absence of loops, which determines whether the network has memory of previous inputs.",
+          tags: ["Architecture", "Comparison"],
+          ref: "Lecture 2 — Slide 34 (Architectures)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain the difference between heteroassociators and autoassociators.",
+          translation:
+            "اشرح الفرق بين الـ heteroassociator والـ autoassociator.",
+          answer:
+            "Neural networks generate mappings between vector spaces:\n" +
+            "1. Heteroassociator:\n" +
+            "   - A multilayered network that associates vectors from one space to vectors of another space.\n" +
+            "   - It maps two different patterns - one as input and another as output.\n" +
+            "   - Mathematically: f: R^n → R^p (where n and p are different).\n" +
+            "2. Autoassociator:\n" +
+            "   - When neurons in a single field connect back onto themselves.\n" +
+            "   - The network associates a single pattern in R^n with itself.\n" +
+            "   - Used for tasks like pattern completion, where the network reconstructs a stored pattern from a partial or noisy version.\n" +
+            "Key difference: Heteroassociators map input to a different output, while autoassociators map an input to itself.",
+          tags: ["Mappings", "Comparison"],
+          ref: "Lecture 2 — Slide 35 (Neural Networks Generate Mappings)",
+          likely: "high",
+        },
+
+        // ==================== Calculation Questions (1-6) ====================
+        {
+          type: "essay",
+          q: "Calculation 1. A neuron receives two input signals s1 = 2 and s2 = -1 with weights w1j = 0.5 and w2j = 0.8, and an internal threshold θj = -0.5. Using the binary threshold activation function, determine whether the neuron fires (output = 1) or not (output = 0).",
+          translation:
+            "مسألة 1. عصبون بيستقبل إشارتين s1 = 2 و s2 = -1 بأوزان w1j = 0.5 و w2j = 0.8 وحد داخلي θj = -0.5. باستخدام دالة الحد الثنائي، حدد هل العصبون هيطلق إشارة (مخرج = 1) ولا لأ (مخرج = 0).",
+          answer:
+            "Step 1: Compute the net input xj.\n" +
+            "xj = Σ(wij * si) + θj\n" +
+            "xj = (w1j * s1) + (w2j * s2) + θj\n" +
+            "xj = (0.5)(2) + (0.8)(-1) + (-0.5)\n" +
+            "xj = 1.0 - 0.8 - 0.5\n" +
+            "xj = -0.3\n" +
+            "Step 2: Apply the binary threshold function.\n" +
+            "S(xj) = 1 if xj >= 0, else 0\n" +
+            "Since xj = -0.3 < 0, the neuron does NOT fire.\n" +
+            "Output = 0.",
+          tags: ["Calculation", "Binary Threshold"],
+          ref: "Lecture 2 — Slides 16-18 (Binary Threshold & Interpretation)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "Calculation 2. Compute the output of the sigmoidal activation function S(xj) = 1 / (1 + e^(-λj * xj)) for a neuron with net input xj = 0 and gain factor λj = 1.",
+          translation:
+            "مسألة 2. احسب مخرج دالة التفعيل السيجمويدية S(xj) = 1 / (1 + e^(-λj * xj)) لعصبون بمدخل xj = 0 ومعامل كسب λj = 1.",
+          answer:
+            "Formula: S(xj) = 1 / (1 + e^(-λj * xj))\n" +
+            "Given: xj = 0, λj = 1\n" +
+            "Substitute:\n" +
+            "S(0) = 1 / (1 + e^(-1 * 0))\n" +
+            "S(0) = 1 / (1 + e^0)\n" +
+            "Since e^0 = 1:\n" +
+            "S(0) = 1 / (1 + 1)\n" +
+            "S(0) = 1 / 2\n" +
+            "S(0) = 0.5\n" +
+            "Interpretation: When the net input is zero, the sigmoid outputs 0.5 (its midpoint). This is the central property of the sigmoid function.",
+          tags: ["Calculation", "Sigmoid"],
+          ref: "Lecture 2 — Slide 20 (Sigmoidal Activation Function)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "Calculation 3. A neuron has a net input xj = -3.5. Compute the output of the ReLU activation function.",
+          translation:
+            "مسألة 3. عصبون بمدخل xj = -3.5. احسب مخرج دالة التفعيل ReLU.",
+          answer:
+            "Formula: ReLU(xj) = max(0, xj)\n" +
+            "Given: xj = -3.5\n" +
+            "Substitute:\n" +
+            "ReLU(-3.5) = max(0, -3.5)\n" +
+            "Since 0 > -3.5, the maximum is 0.\n" +
+            "Output = 0.\n" +
+            "Note: This illustrates the 'dead neuron' issue - when the input is negative, ReLU outputs 0, and the gradient is also 0, so the neuron may not learn.",
+          tags: ["Calculation", "ReLU"],
+          ref: "Lecture 2 — Slides 24-25 (ReLU)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "Calculation 4. Given a linear threshold activation function with xm = 2 (so αj = 1/xm = 0.5), compute the output S(xj) for: (a) xj = -1, (b) xj = 1, (c) xj = 3.",
+          translation:
+            "مسألة 4. بدالة الحد الخطي xm = 2 (يكون αj = 1/xm = 0.5)، احسب المخرج S(xj) لـ: (أ) xj = -1، (ب) xj = 1، (ج) xj = 3.",
+          answer:
+            "Function definition:\n" +
+            "S(xj) = 0           if xj <= 0\n" +
+            "S(xj) = αj * xj     if 0 < xj < xm\n" +
+            "S(xj) = 1           if xj >= xm\n" +
+            "Given: xm = 2, αj = 0.5\n" +
+            "(a) xj = -1: since xj <= 0, S = 0\n" +
+            "(b) xj = 1: since 0 < 1 < 2, S = αj * xj = 0.5 * 1 = 0.5\n" +
+            "(c) xj = 3: since xj >= xm (3 >= 2), S = 1\n" +
+            "Summary: (a) 0, (b) 0.5, (c) 1",
+          tags: ["Calculation", "Linear Threshold"],
+          ref: "Lecture 2 — Slide 19 (Linear Threshold Activation Function)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "Calculation 5. A neuron receives three input signals s1 = 1, s2 = 1, s3 = 0 with weights w1j = 1, w2j = 1, w3j = 1 and a bias θj = -1.5. Using the binary threshold activation function: (a) Compute the weighted sum qj = Σ(wij * si). (b) Compute the net activation xj = qj + θj. (c) Determine whether the neuron fires.",
+          translation:
+            "مسألة 5. عصبون بيستقبل 3 إشارات s1 = 1، s2 = 1، s3 = 0 بأوزان w1j = 1، w2j = 1، w3j = 1 وحد θj = -1.5. بدالة الحد الثنائي: (أ) احسب المجموع الموزون qj. (ب) احسب التفعيل الكلي xj. (ج) حدد هل العصبون هيطلق.",
+          answer:
+            "(a) Compute the weighted sum qj:\n" +
+            "qj = Σ(wij * si) = (w1j * s1) + (w2j * s2) + (w3j * s3)\n" +
+            "qj = (1)(1) + (1)(1) + (1)(0)\n" +
+            "qj = 1 + 1 + 0\n" +
+            "qj = 2\n" +
+            "(b) Compute the net activation xj:\n" +
+            "xj = qj + θj\n" +
+            "xj = 2 + (-1.5)\n" +
+            "xj = 0.5\n" +
+            "(c) Apply the binary threshold function:\n" +
+            "Since xj = 0.5 >= 0, the neuron fires. Output = 1.\n" +
+            "Alternative check: qj >= -θj → 2 >= 1.5 → True → fires.",
+          tags: ["Calculation", "Binary Threshold", "Threshold Interpretation"],
+          ref: "Lecture 2 — Slide 18 (Interpretation of Threshold)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "Calculation 6. Compute the output of the tanh activation function for xj = 0. Use the formula tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x)).",
+          translation:
+            "مسألة 6. احسب مخرج دالة التفعيل tanh لـ xj = 0. استخدم القانون tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x)).",
+          answer:
+            "Formula: tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x))\n" +
+            "Given: xj = 0\n" +
+            "Substitute:\n" +
+            "tanh(0) = (e^0 - e^(-0)) / (e^0 + e^(-0))\n" +
+            "Since e^0 = 1 and e^(-0) = 1:\n" +
+            "tanh(0) = (1 - 1) / (1 + 1)\n" +
+            "tanh(0) = 0 / 2\n" +
+            "tanh(0) = 0\n" +
+            "Interpretation: When the input is zero, tanh outputs 0. This is why tanh is called zero-centered, unlike sigmoid which outputs 0.5 at the midpoint.",
+          tags: ["Calculation", "Tanh"],
+          ref: "Lecture 2 — Slide 26 (Tanh Activation Function)",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });
