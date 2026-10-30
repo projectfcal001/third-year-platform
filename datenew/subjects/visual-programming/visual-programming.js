@@ -13,7 +13,7 @@ subjects.push({
   // ],
   lectures: [
     {
-      id: "visual-programmingl-lec-01",
+      id: "visual-programming-lecture-01",
       t: "المحاضرة الأولى",
       d: "مقدمة في البرمجة المرئية وواجهات المستخدم الرسومية (GUI).",
       pdf: "datenew/subjects/visual-programming/lectures/Chapter 1.pdf",
@@ -1428,7 +1428,7 @@ subjects.push({
       ],
     },
     {
-      id: "visual-programming-lec-02",
+      id: "visual-programming-lecture-02",
       t: "المحاضرة الثانية",
       d: "Chapter 2 يغطي TextBox، النصوص وربطها، المتغيرات والنطاق، تحويل الأنواع، الاستثناءات، الحقول والثوابت، Focus و Tab Order.",
       pdf: "datenew/subjects/visual-programming/lectures/Chapter 2.pdf",

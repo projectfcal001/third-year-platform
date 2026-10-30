@@ -15,11 +15,11 @@ subjects.push({
     {
       t: "المحاضرة الأولى",
       d: "مقدمة في نظم التشغيل والعمليات Processes.",
-      id: "os-lec-01",
+      id: "operating-systems-lecture-01",
       notes: "من صفحة 1 لي 24.",
-      pdf: "/datenew/subjects/operating-systems/lectures/chapter 1 - OS.pdf",
+      pdf: "datenew/subjects/operating-systems/lectures/chapter 1 - OS.pdf",
       notes: " Slides 1-23 .",
-      pdf2: "/datenew/subjects/operating-systems/questions/Questions on each lecture/OS_Chapter1_Slides1-23_Questions.pdf",
+      pdf2: "datenew/subjects/operating-systems/questions/Questions on each lecture/OS_Chapter1_Slides1-23_Questions.pdf",
       // فئات روابط منظمة مخصصة للجزء الأول فقط (من صفحة 1 إلى صفحة 23) من الفصل الأول
       linkCategories: [
         {
@@ -1223,7 +1223,8 @@ subjects.push({
     {
       t: "المحاضرة الثانية ",
       d: "مقدمة في نظم التشغيل والعمليات: التخزين المؤقت، تعدد البرمجة، المشاركة الزمنية، النمط المزدوج، وإدارة العمليات.",
-      id: "os-lec-02",
+
+      id: "operating-systems-lecture-02",
       pdf: "datenew/subjects/operating-systems/lectures/chapter 1 - OS.pdf",
       notes: "Slides 24 - 30.",
       pdf2: "datenew/subjects/operating-systems/questions/Questions on each lecture/OS_Chapter1_Slides24-30_Questions.pdf",
@@ -1814,9 +1815,10 @@ subjects.push({
       ],
     },
     {
-      id: "os-lecture-03",
-      t: "المحاضرة 3 — Chapter 3: Processes",
-      d: "مفهوم الـ Process وحالاته وPCB والـ Schedulers والـ Context Switch وعمليات الإنشاء والإنهاء والتواصل بين العمليات (IPC).",
+      t: "المحاضرة 3 (Chapter 3 — الجزء الأول): Processes",
+      d: "مفهوم الـ Process وحالاته وPCB والـ Schedulers والـ Context Switch وعمليات الإنشاء والإنهاء والتواصل بين العمليات (IPC) — الجزء الأول من الفصل الثالث.",
+      id: "operating-systems-lecture-03",
+
       pdf: "datenew/subjects/operating-systems/lectures/ch3 Processes-1-25_compressed.pdf",
       pdf2: "datenew/subjects/operating-systems/questions/Questions on each lecture/Lecture-03-Questions.pdf",
       // المحاضرة: Chapter 3 - Processes (Operating System Concepts, Silberschatz) — Process Concept, States, PCB, Scheduling Queues, Schedulers, Context Switch, Process Creation/Termination, Cooperating Processes, IPC
@@ -1828,6 +1830,19 @@ subjects.push({
           description:
             "شرح بالعربي لمفاهيم العمليات (Processes) في أنظمة التشغيل: حالات العملية، PCB، الجدولة، والـ IPC.",
           links: [
+            {
+              t: "د. حسن الأنصاري - Operating System Concepts (Chapter 3 Part 1–4)",
+              d: "قائمة تشغيل تضم الفيديوهات من 16 إلى 19: Operating System Chapter 3 Part 1 (17:38)، Chapter 3 Part 2 (16:31)، Chapter 3 Part 3 (23:15)، Chapter 3 Part 4 (19:25).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM&si=W72cPbhDWdPcJHVf",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
             {
               t: "ما هو Process في نظام التشغيل؟ شرح بالعربي",
               d: "فيديو عربي يشرح مفهوم العملية (Process) في نظام التشغيل والمكونات الأساسية ليها زي Program Counter و Stack و Data Section و Heap. مرتبط مباشرة بقسم Process Concept في المحاضرة.",
@@ -2790,9 +2805,9 @@ subjects.push({
       ],
     },
     {
-      id: "os-lecture-04",
-      t: "المحاضرة 4 (Chapter 3, Lec 2): Processes - Interprocess Communication (IPC)",
-      d: "بنك أسئلة شامل لمحاضرة IPC (Lecture 4 - Chapter 3, Lec 2) في مادة نظم التشغيل: مشكلة المنتج-المستهلك، الاتصال المباشر وغير المباشر، التزامن، التخزين المؤقت، Sockets، RPC، RMI، وتسلسل المعاملات (Marshalling).",
+      t: "المحاضرة 4 (Chapter 3 — الجزء الثاني والأخير): Processes - Interprocess Communication (IPC)",
+      d: "بنك أسئلة شامل لمحاضرة IPC (Lecture 4 - Chapter 3, Lec 2) في نظم التشغيل: المنتج-المستهلك، الاتصال المباشر وغير المباشر، التزامن، التخزين المؤقت، Sockets، RPC، RMI، وMarshalling — الجزء الثاني والأخير من الفصل الثالث.",
+      id: "operating-systems-lecture-04",
       pdf: "datenew/subjects/operating-systems/lectures/lec 4/ch3 Processes-lec 4 .pdf",
       pdf2: "/datenew/subjects/operating-systems/questions/Questions on each lecture/Lecture-04-Questions.pdf",
       // المحاضرة 4 (Chapter 3, Lec 2): Processes — Interprocess Communication (IPC)
@@ -2805,6 +2820,45 @@ subjects.push({
           description:
             "شرح بالعربي لمفاهيم IPC و RPC و Sockets اللي بتغطيها المحاضرة.",
           links: [
+            {
+              t: "د. حسن الأنصاري - Operating System Concepts (Chapter 1 Part 6: OS Operations & Process Management)",
+              d: "الفيديو السادس: Operating System Chapter 1 Part 6. يغطي هذا الجزء: Operating-System Operations، Process Management، Memory Management، وStorage Management. يتضمن شرحًا لمفاهيم العمليات، إدارتها، وجدولة المعالج، وهي مواضيع تتقاطع مع المحاضرة الثانية (صفحات 24–30).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://youtu.be/RBMya76uNZY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "د. أحمد حجاج - Operating Systems | نظم التشغيل (Ch1-4 Storage Structure)",
+              d: "الفيديو الرابع: 04–Operating Systems | Ch1-4 | Storage Structure. يغطي بنية التخزين، هرمية التخزين، والـ Caching.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "SoftwareTube - كورس نظم التشغيل بالعربي (مفاهيم تمهيدية: بنية التخزين، بنية النظام، عمليات النظام)",
+              d: "شاهد الفيديوهات: 4 (Storage Structure - Chapter 1 Part 4)، 5 (Computer Systems Architecture - Chapter 1 Part 5)، و 6 (OS Structure and Operation, OS Definition - Chapter 1 Part 6). تغطي بنية التخزين، بنية نظام الحاسوب، عمليات نظام التشغيل، وتعريف نظام التشغيل. هذه مفاهيم أساسية تمهد لفهم إدارة العمليات.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://youtube.com/playlist?list=PLTr1xN4uMK5seRz6IO7Am9Zp2UKdnzO_n",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
             {
               t: "شرح Remote Procedure Call (RPC) للشبكات وأنظمة التشغيل الموزعة",
               d: "فيديو بالعربي بيشرح مفهوم استدعاء الإجراءات عن بعد (RPC) ومرتبط مباشرة بموضوع RPC و Marshalling في المحاضرة.",
