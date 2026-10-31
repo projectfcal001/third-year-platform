@@ -12,9 +12,9 @@ subjects.push({
          pdf:"datenew/subjects/computer-networks/lectures/lec-01.pdf", questions:[] } */
 
     {
-      id: "networks-lecture-01",
-      t: "المحاضرة الأولى",
-      d: "مقدمة في الشبكات ونموذج الطبقات OSI.",
+      t: "المحاضرة الأولى — الفصل الأول (جزء 1): مقدمة في الشبكات ونموذج الطبقات OSI",
+      d: "مقدمة في شبكات الحاسوب، بنية الإنترنت، ونموذج الطبقات OSI.",
+      id: "computer-networks-lecture-01",
       pdf: "datenew/subjects/computer-networks/lectures/lec 1/Ch01 - Computer Networks - Lec 01.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Chapter 1 - Questions - Computer Networks.pdf",
 
@@ -1461,9 +1461,9 @@ subjects.push({
       ],
     },
     {
-      id: "networks-lecture-02",
-      t: "المحاضرة الثانية",
-      d: "تبديل الدوائر (Circuit Switching)، بنية شبكة الشبكات (Network of Networks)، وتحليل أداء الشبكات (أنواع التأخير العُقدي، كثافة الحركة La/R، وفقدان الحزم).",
+      t: "المحاضرة الثانية — الفصل الأول (جزء 2): تبديل الدوائر وتحليل أداء الشبكات",
+      d: "تبديل الدوائر (Circuit Switching)، بنية شبكة الشبكات (Network of Networks)، وتحليل أداء الشبكات (التأخير العُقدي، كثافة الحركة La/R، وفقدان الحزم).",
+      id: "computer-networks-lecture-02",
       pdf: "datenew/subjects/computer-networks/lectures/lec 2/Ch01 - Computer Networks - Lec 02.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Chapter 1 - Questions - Computer Networks.pdf",
       linkCategories: [
@@ -2358,11 +2358,11 @@ subjects.push({
       ],
     },
     {
-      id: "networks-lecture-03",
-      t: "المحاضرة الثالثة — Throughput, Protocol Layers, Security & History",
-      d: "الـ Throughput والـ bottleneck، طبقات بروتوكولات الإنترنت والـ encapsulation، هجمات الشبكات، وتاريخ الإنترنت (الشابتر الأول).",
+      t: "المحاضرة الثالثة — الفصل الأول (الجزء 3 والأخير): Throughput, Protocol Layers, Security & History",
+      d: "الـ Throughput والـ bottleneck، طبقات بروتوكولات الإنترنت والـ encapsulation، هجمات الشبكات، وتاريخ الإنترنت.",
+      id: "computer-networks-lecture-03",
       pdf: "datenew/subjects/computer-networks/lectures/lec 3/Ch01 - Computer Networks - Lec 03.pdf",
-      pdf2: "/datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Lecture-03-Questions.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch01/Lecture-03-Questions.pdf",
       linkCategories: [
         {
           category: "فيديوهات عربية",
@@ -3086,8 +3086,8 @@ subjects.push({
       ],
     },
     {
-      id: "networks-lecture-04",
-      t: "المحاضرة 1: الفصل الثاني - طبقة التطبيق (مبادئ تطبيقات الشبكة)",
+      id: "computer-networks-lecture-04",
+      t: "المحاضرة 4: الفصل الثاني الجزء الاول - طبقة التطبيق (مبادئ تطبيقات الشبكة)",
       d: "مبادئ تطبيقات الشبكة: معماريات التطبيقات (Client-Server وP2P)، تواصل الـ processes، الـ sockets، العنونة، وخدمات طبقة النقل المتاحة للتطبيقات.",
       pdf: "datenew/subjects/computer-networks/lectures/lec 4/Ch02 - Computer Networks - Lec 01.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Ch02-Lecture-01-Questions.pdf",
@@ -3100,13 +3100,13 @@ subjects.push({
             "شروحات باللغة العربية لكتاب Kurose & Ross تغطي الفصل الثاني: طبقة التطبيقات، مبادئ تطبيقات الشبكة، هندسة العملاء والخوادم ونظام P2P.",
           links: [
             {
-              t: "Computer Networking - Chapter 2 Application Layer 2A",
-              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول مبادئ تطبيقات الشبكة، هندسة التطبيقات (Client-Server و P2P)، والعمليات (Processes) والاتصال [فيديوهات من 8 إلى 9].",
+              t: "Computer Networking - Chapter 2 Application Layer 2A & 2B",
+              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول مبادئ تطبيقات الشبكة، هندسة التطبيقات (Client-Server و P2P)، والعمليات (Processes)  [ فيديوهات من 8 الي 9 الدقيقة 18 :50 ].",
               icon: "🇪🇬",
               actions: [
                 {
                   label: "📖 الشرح",
-                  url: "https://youtube.com/playlist?list=PLYljoJMAPFLHrCVfzuMLkJOZHhCgfSXG-&si=c2A3_89g912REXOZ",
+                  url: "https://www.youtube.com/watch?v=Ygax_GQvrW4&list=PLYljoJMAPFLHrCVfzuMLkJOZHhCgfSXG-&index=8",
                   type: "view",
                   color: "red",
                 },
@@ -3114,12 +3114,12 @@ subjects.push({
             },
             {
               t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
-              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول Throughput، الطبقات الخمس في الإنترنت (Protocol Layers)، وعملية التغليف (Encapsulation) [فيديوهات من 8 إلى 9].",
+              d: "شرح عربي تفصيلي لكتاب Kurose & Ross: يتناول Throughput، الطبقات الخمس في الإنترنت (Protocol Layers)، وعملية التغليف (Encapsulation) [فيديو  8 لحد الدقيقة 27 و 50ثانيه ].",
               icon: "🇪🇬",
               actions: [
                 {
                   label: "📖 الشرح",
-                  url: "https://www.youtube.com/playlist?list=PL8v_bZALWLKE9Lo2BIy8nsdsakbSvQlEo",
+                  url: "https://www.youtube.com/watch?v=LF5VyQqG4mA&list=PL8v_bZALWLKE9Lo2BIy8nsdsakbSvQlEo&index=8",
                   type: "view",
                   color: "red",
                 },
@@ -3746,8 +3746,8 @@ subjects.push({
       ],
     },
     {
-      id: "networks-lecture-05",
-      t: "المحاضرة 5 (Chapter 2 ,lec 2) — Application Layer: Principles of Network Applications & HTTP",
+      id: "computer-networks-lecture-05",
+      t: "المحاضرة 5 (Chapter 2 الجزء الثاني) — Application Layer: Principles of Network Applications & HTTP",
       d: "مبادئ تطبيقات الشبكات (المعماريات، العمليات، الـ Socket، خدمات النقل TCP/UDP) وبروتوكول HTTP.",
       pdf: "datenew/subjects/computer-networks/lectures/lec 5/Chapter 2 lec 2.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-5-Questions.pdf",
@@ -3760,6 +3760,45 @@ subjects.push({
           description:
             "شرح بالعربي لمواضيع المحاضرة: بروتوكول HTTP، والفرق بين TCP و UDP، وطبقة التطبيق في شبكات الحاسوب.",
           links: [
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي كامل لكتاب Kurose & Ross:Application Layer: Principles of Network Applications & HTTP، فديوهات (  من 8 الدقيقة 27 و 50 ثانيه الي 9) ",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PL8v_bZALWLKE9Lo2BIy8nsdsakbSvQlEo",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي كامل لكتاب Kurose & Ross:Application Layer: Principles of Network Applications & HTTP، فديوهات (من  9 الدقيقة 18 و 50 ثانيه  الي 11)  ",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=STnYAKXRUz4&list=PLYljoJMAPFLHrCVfzuMLkJOZHhCgfSXG-&index=9",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Computer Networks — شبكات الحاسوب (قائمة تشغيل)",
+              d: "قائمة تشغيل أكاديمية كاملة لمقرر شبكات الحاسوب، فيها دروس على Transport layer (TCP, UDP) و Application layer. الدرس رقم 9 في القائمة بيشرح Transport layer - part 1.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpHpCzb7rhlV1MbRgGwTIoK1kHW3iWdmh",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
             {
               t: "شرح بروتوكول HTTP بالتفصيل",
               d: "شرح كامل لبروتوكول HTTP بكل مكوناته: الـ request، الـ response، الـ methods (GET/POST/...)، والـ status codes. مناسب لفهم قسم 2.2.3 من المحاضرة.",
@@ -3794,19 +3833,6 @@ subjects.push({
                 {
                   label: "▶ مشاهدة الفيديو",
                   url: "https://www.youtube.com/watch?v=qi6yGq0EOJc",
-                  type: "view",
-                  color: "red",
-                },
-              ],
-            },
-            {
-              t: "Computer Networks — شبكات الحاسوب (قائمة تشغيل)",
-              d: "قائمة تشغيل أكاديمية كاملة لمقرر شبكات الحاسوب، فيها دروس على Transport layer (TCP, UDP) و Application layer. الدرس رقم 9 في القائمة بيشرح Transport layer - part 1.",
-              icon: "🇪🇬",
-              actions: [
-                {
-                  label: "▶ فتح القائمة",
-                  url: "https://www.youtube.com/playlist?list=PLpHpCzb7rhlV1MbRgGwTIoK1kHW3iWdmh",
                   type: "view",
                   color: "red",
                 },
@@ -5133,9 +5159,9 @@ subjects.push({
       ],
     },
     {
-      id: "networks-lecture-6",
-      t: "Computer Networks - Lecture 6 (Ch 2, Lec 3): Cookies, Web Caching, HTTP/2 & HTTP/3",
-      d: "Cookies, Web caching (proxy server), conditional GET, HTTP/2 framing and server push, HTTP/3 over QUIC.",
+      t: "  — المحاضرة 6 (الفصل 2، الجزء الثالث): الكوكيز، التخزين المؤقت للويب، HTTP/2 و HTTP/3",
+      d: "مفاهيم الكوكيز (Cookies)، التخزين المؤقت للويب (Web Caching) عبر الخادم الوسيط، طلبات GET الشرطية (Conditional GET)، تأطير HTTP/2 ودفع الخادم (Server Push)، و HTTP/3 عبر بروتوكول QUIC.",
+      id: "computer-networks-lecture-6",
       pdf: "datenew/subjects/computer-networks/lectures/lec 6/Lecture-6.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-6-Questions.pdf",
       // المحاضرة: Computer Networks — Lecture 6 (Ch 2, Lec 3) — Cookies, Web Caching (Proxy Server), Conditional GET, HTTP/2 (Framing, Prioritization, Server Push), HTTP/3 over QUIC
@@ -5147,6 +5173,32 @@ subjects.push({
           description:
             "شرح بالعربي لمواضيع المحاضرة 6 (المحاضرة 3 داخل الفصل 2): cookies، web caching، HTTP/2 و HTTP/3.",
           links: [
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي كامل لكتاب Kurose & Ross:Application Layer: Principles of Network Applications & HTTP، فديوهات (من 10 الي 11) ",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/playlist?list=PL8v_bZALWLKE9Lo2BIy8nsdsakbSvQlEo",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شبكات الحاسوب - A Top-Down Approach (الكتاب نفسه)",
+              d: "شرح عربي كامل لكتاب Kurose & Ross:Application Layer: Principles of Network Applications & HTTP، فديوهات (12) ",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.youtube.com/watch?v=n1qn1UUaMog&list=PLYljoJMAPFLHrCVfzuMLkJOZHhCgfSXG-&index=12",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
             {
               t: "شرح مفهوم Cookies وكيفية عملها داخل المواقع الإلكترونية",
               d: "شرح بالعربي لآلية عمل cookies: Set-cookie في الـ response، Cookie في الـ request، تخزين الـ cookie file على جهاز اليوزر، والـ back-end database. مناسب لفهم القسم 2.2.4.",
@@ -6573,7 +6625,7 @@ subjects.push({
     {
       t: "الفصل الثاني :(Application Layer) ", // عنوان الفصل
       icon: "📘", // أيقونة (اختياري)
-      lectures: [3, 4, 6], // ← أرقام المحاضرات في الفصل
+      lectures: [3, 4, 5], // ← أرقام المحاضرات في الفصل
       open: true,
     },
   ],
