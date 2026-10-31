@@ -13,7 +13,7 @@ subjects.push({
   // ],
   lectures: [
     {
-      id: "graphics-lecture-lec-01",
+      id: "computer-graphic-lecture-01",
       t: "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       d: "تغطي المفاهيم الأساسية لرسوميات الحاسوب، تحويل المجسمات من 3D إلى 2D باستخدام الإسقاط المنظوري (Perspective Projection)، وخوارزميات تحويل الخطوط إلى بيكسلات (Rasterization).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 1/Lec1-Computer Graphics.pdf",
@@ -704,7 +704,7 @@ subjects.push({
       ],
     },
     {
-      id: "graphics-lecture-02",
+      id: "computer-graphic-lecture-02",
 
       t: "المحاضرة 2: مراجعة الرياضيات (الجزء الأول: الجبر الخطي والـ Vector Spaces)",
       d: "تغطي المفاهيم الأساسية للجبر الخطي في الرسوميات الحاسوبية: مسلمات الفضاءات المتجهة (Vector Spaces)، التمثيل بالإحداثيات الديكارتية، عمليات الجمع والتكبيس (Scaling)، حساب منتصف القطعة (Midpoint)، معاملة الدوال كمتجهات، ومعايير قياس الطول (Euclidean Norm وL2 Norm للدوال).",
@@ -2427,7 +2427,7 @@ subjects.push({
       ],
     },
     {
-      id: "graphics-lecture-04",
+      id: "computer-graphic-lecture-04",
       t: "المحاضرة 4: رسم المثلث (Drawing a Triangle) ومقدمة في الـ Sampling",
       d: "الـ Rasterization، لماذا المثلثات، مشكلة الـ Visibility (Coverage و Occlusion)، الـ Sampling و الـ Reconstruction، وقواعد كسر التعادل (Top/Left edge).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 4/Lecture 4.pdf",
@@ -3334,9 +3334,9 @@ subjects.push({
       ],
     },
     {
-      id: "graphics-lecture-05",
-      t: "Computer Graphics — Lecture 5: Aliasing, Sampling & Reconstruction",
-      d: "محاضرة من كورس CMU 15-462/662 عن التعرّج (Aliasing) في الصور والصوت، عملية أخذ العينات (Sampling) وإعادة البناء (Reconstruction)، تحليل الترددات (Frequencies) في الإشارات والصور، الفلاتر (Low/High/Band-pass) والأمثلة الكلاسيكية زي wagon wheel effect و sin(x^2 + y^2).",
+      id: "computer-graphic-lecture-05",
+      t: "رسومات الحاسوب — المحاضرة 5: التعرّج، أخذ العينات وإعادة البناء (Aliasing, Sampling & Reconstruction)",
+      d: "مقدمة في التعرّج (Aliasing) وأخذ العينات (Sampling) وإعادة البناء (Reconstruction)، تحليل الترددات، والفلاتر (Low/High/Band-pass) مع أمثلة كلاسيكية من كورس CMU 15-462/662.",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 5/drawingatriangle_slides-lec 5.pdf",
       pdf2: "datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-05-Questions.pdf",
 

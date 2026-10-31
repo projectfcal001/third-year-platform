@@ -3541,7 +3541,7 @@ subjects.push({
       pdf: "datenew/subjects/software-engineering/lectures/lec 5/Software Engineering, 10th GLOBAL Edition - Chapter 4 - Requirements engineering-lec 5.pdf",
       pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/Lecture-05-Questions.pdf",
       // المحاضرة: Lecture 5 (Chapter 4, Lec : 2) — Requirements Engineering (Sommerville Ch.4 — Sections 4.4-4.6) — موضوعها: مواصفة المتطلبات، التحقق، وإدارة تغيير المتطلبات، use cases، SRS، traceability.
-
+      notes: "الاسئلة المطلوب حله من 1 لي 8.",
       linkCategories: [
         {
           category: "فيديوهات عربية",
