@@ -3087,7 +3087,7 @@ subjects.push({
     },
     {
       id: "computer-networks-lecture-04",
-      t: "المحاضرة 4: الفصل الثاني الجزء الاول - طبقة التطبيق (مبادئ تطبيقات الشبكة)",
+      t: "المحاضرة 4: الفصل الثاني (الجزء الاول )- طبقة التطبيق (مبادئ تطبيقات الشبكة)",
       d: "مبادئ تطبيقات الشبكة: معماريات التطبيقات (Client-Server وP2P)، تواصل الـ processes، الـ sockets، العنونة، وخدمات طبقة النقل المتاحة للتطبيقات.",
       pdf: "datenew/subjects/computer-networks/lectures/lec 4/Ch02 - Computer Networks - Lec 01.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Ch02-Lecture-01-Questions.pdf",
@@ -3747,7 +3747,7 @@ subjects.push({
     },
     {
       id: "computer-networks-lecture-05",
-      t: "المحاضرة 5 (Chapter 2 الجزء الثاني) — Application Layer: Principles of Network Applications & HTTP",
+      t: "المحاضرة 5 الفصل  الثاني (الجزء الثاني) — Application Layer: Principles of Network Applications & HTTP",
       d: "مبادئ تطبيقات الشبكات (المعماريات، العمليات، الـ Socket، خدمات النقل TCP/UDP) وبروتوكول HTTP.",
       pdf: "datenew/subjects/computer-networks/lectures/lec 5/Chapter 2 lec 2.pdf",
       pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/Ch02/Lecture-5-Questions.pdf",
@@ -5159,7 +5159,7 @@ subjects.push({
       ],
     },
     {
-      t: "  — المحاضرة 6 (الفصل 2، الجزء الثالث): الكوكيز، التخزين المؤقت للويب، HTTP/2 و HTTP/3",
+      t: "  — المحاضرة 6 الفصل الثاني (الجزء الثالث): الكوكيز، التخزين المؤقت للويب، HTTP/2 و HTTP/3",
       d: "مفاهيم الكوكيز (Cookies)، التخزين المؤقت للويب (Web Caching) عبر الخادم الوسيط، طلبات GET الشرطية (Conditional GET)، تأطير HTTP/2 ودفع الخادم (Server Push)، و HTTP/3 عبر بروتوكول QUIC.",
       id: "computer-networks-lecture-6",
       pdf: "datenew/subjects/computer-networks/lectures/lec 6/Lecture-6.pdf",
