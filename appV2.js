@@ -104,7 +104,7 @@ function dupPseudo(s){
   var d=dupIndex(s);
   if(!d.pseudo){
     var mx=d.list.length?d.list[0].occ.length:0;
-    d.pseudo={t:"\uD83D\uDD01 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u0643\u0631\u0631\u0629",d:d.list.length+" \u0633\u0624\u0627\u0644 \u0627\u062A\u0643\u0631\u0631 \u0641\u064A \u0623\u0643\u062A\u0631 \u0645\u0646 \u0645\u0643\u0627\u0646 \u2014 \u0623\u0643\u062A\u0631 \u0633\u0624\u0627\u0644 \u0627\u062A\u0643\u0631\u0631 "+mx+" \u0645\u0631\u0627\u062A",questions:d.list.map(function(g){return g.q})}
+    d.pseudo={t:"\uD83D\uDD01 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u0643\u0631\u0631\u0629",d:d.list.length+" \u0633\u0624\u0627\u0644 \u0627\u062A\u0643\u0631\u0631 \u0641\u064A \u0623\u0643\u062A\u0631 \u0645\u0646 \u0645\u0643\u0627\u0646 \u2014 \u0623\u0643\u062A\u0631 \u0633\u0624\u0627\u0644 \u0627\u062A\u0643\u0631\u0631 "+dupTimes(mx),questions:d.list.map(function(g){return g.q})}
   }
   return d.pseudo
 }
@@ -112,13 +112,15 @@ function dupTabHTML(s){
   var p=dupPseudo(s);
   return p.questions.length?examCardHTML(s,p,"dup",0,p.questions.length,p.t)+'<p class="ld-hint dup-hint">\u0627\u0644\u0645\u0642\u0627\u0631\u0646\u0629 \u0628\u062A\u0634\u0645\u0644 \u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u062D\u0627\u0636\u0631\u0627\u062A \u0648\u0627\u0644\u0645\u064A\u062F\u062A\u064A\u0631\u0645 \u0648\u0627\u0644\u0641\u0627\u064A\u0646\u0644 \u0648\u0628\u0646\u0648\u0643 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u0643\u062A\u0648\u0628\u0629 \u0628\u0630\u0627\u062A\u0647\u0627\u060C \u0645\u0646 \u063A\u064A\u0631 \u0627\u0644\u0628\u0646\u0648\u0643 \u0627\u0644\u0645\u062A\u062C\u0645\u0651\u0639\u0629 \u0645\u0646 \u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u062D\u0627\u0636\u0631\u0627\u062A.</p>':'<p style="color:var(--text-hint)">\u0645\u0641\u064A\u0634 \u0623\u0633\u0626\u0644\u0629 \u0645\u0643\u0631\u0631\u0629 \u0641\u064A \u0627\u0644\u0645\u0627\u062F\u0629 \u062F\u064A.</p>'
 }
+function dupTimes(n){return 2===n?"\u0645\u0631\u062A\u064A\u0646":n<=10?n+" \u0645\u0631\u0627\u062A":n+" \u0645\u0631\u0629"}
+function dupToggle(el){st&&(st.dupOpenIdx=el.open?st.current:null)}
 function dupNoteHTML(q){
   if(!st||!st.subject)return"";
   var c=st.ctx||{},g;
   try{
     if("dup"===c.kind){
       if(!(g=dupGroupOf(st.subject,q)))return"";
-      return'<div class="dup-note"><div class="dup-note-h">\uD83D\uDD01 \u0627\u0644\u0633\u0624\u0627\u0644 \u062F\u0647 \u0627\u062A\u0643\u0631\u0631 '+g.occ.length+' \u0645\u0631\u0627\u062A \u0641\u064A:</div><ul class="dup-note-list">'+g.occ.map(function(o){return"<li>"+esc(o.label)+' <span class="dup-n">\u2014 \u0633\u0624\u0627\u0644 '+o.n+"</span></li>"}).join("")+"</ul></div>"
+      return'<details class="dup-note"'+(null!=st.dupOpenIdx&&st.dupOpenIdx===st.current?" open":"")+' ontoggle="dupToggle(this)"><summary class="dup-note-h"><span class="dup-note-t">\uD83D\uDD01 \u0627\u0644\u0633\u0624\u0627\u0644 \u062F\u0647 \u0627\u062A\u0643\u0631\u0631 '+dupTimes(g.occ.length)+'</span><span class="dup-note-act"><span class="dup-show">\u0639\u0631\u0636 \u0627\u0644\u0623\u0645\u0627\u0643\u0646</span><span class="dup-hide">\u0625\u062E\u0641\u0627\u0621 \u0627\u0644\u0623\u0645\u0627\u0643\u0646</span></span></summary><ul class="dup-note-list">'+g.occ.map(function(o){return"<li>"+esc(o.label)+' <span class="dup-n">\u2014 \u0633\u0624\u0627\u0644 '+o.n+"</span></li>"}).join("")+"</ul></details>"
     }
     if(("lecture"===c.kind||!0===c.own)&&dupGroupOf(st.subject,q))return'<div class="dup-badge">\uD83D\uDD01 \u0633\u0624\u0627\u0644 \u0645\u0643\u0631\u0631</div>'
   }catch(e){}

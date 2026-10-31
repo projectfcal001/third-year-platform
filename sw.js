@@ -1,5 +1,5 @@
 /* Service Worker — غيّري VERSION مع كل تعديل مهم: v1 → v2 → v3 ... */
-const VERSION = "v1793361145536";
+const VERSION = "v1793419567597";
 const CACHE = `study-platform-${VERSION}`;
 
 const APP_SHELL = [
@@ -34,7 +34,15 @@ self.addEventListener("install", (event) => {
     caches
       .open(CACHE)
       .then((cache) =>
-        Promise.allSettled(APP_SHELL.map((url) => cache.add(url))),
+        Promise.allSettled(
+          APP_SHELL.map((url) =>
+            cache.add(
+              new Request(new URL(url, self.location.href).href, {
+                cache: "reload",
+              }),
+            ),
+          ),
+        ),
       ),
   );
 });
@@ -91,13 +99,17 @@ function offlineFramePage() {
 
 async function networkFirst(request, isPage) {
   const cache = await caches.open(CACHE);
-  // قلم PDF بيتفتح بـ query مختلفة لكل ملف → نخزنه تحت مفتاح واحد بدل ما الكاش يتملي نسخ منه
-  const isAnnotator = new URL(request.url).pathname.endsWith(
-    "/pdf-annotator.html",
-  );
-  const key = isAnnotator ? ANNOTATOR_KEY : request;
+  const url = new URL(request.url);
+  // قلم PDF بيتفتح بـ query مختلفة لكل ملف → نخزنه تحت مفتاح واحد
+  const isAnnotator = url.pathname.endsWith("/pdf-annotator.html");
+  // صفحة المنصة نفسها (/ أو /index.html) بتتفتح بـ query كتير (?subject=..&lecture=..&_swu=..)
+  // وكلها نفس الملف → مفتاح واحد بدل ما الكاش يتملي نسخ منه
+  const isAppPage =
+    isPage && (url.pathname === "/" || url.pathname.endsWith("/index.html"));
+  const key = isAnnotator ? ANNOTATOR_KEY : isAppPage ? "./" : request;
   try {
-    const response = await fetch(request);
+    // الصفحات: دايمًا نسأل السيرفر (ETag) بدل ما نعتمد على HTTP cache
+    const response = await fetch(request, isPage ? { cache: "no-cache" } : undefined);
     if (response && response.status === 200) cache.put(key, response.clone());
     return response;
   } catch (err) {
@@ -107,7 +119,7 @@ async function networkFirst(request, isPage) {
     if (request.destination === "iframe") return offlineFramePage();
     if (isPage) {
       const page =
-        (await cache.match("./index.html")) || (await cache.match("./"));
+        (await cache.match("./")) || (await cache.match("./index.html"));
       if (page) return cleanResponse(page);
     }
     return new Response(
@@ -160,10 +172,12 @@ async function networkFirstPwa(request) {
   }
 }
 
-async function staleWhileRevalidate(request) {
+// revalidate=true (ملفات الموقع نفسه): التحديث في الخلفية لازم يسأل السيرفر (ETag)
+// مش HTTP cache — وإلا ملفات المواد (datenew/*.js) ممكن تفضل قديمة لحد ساعة بعد الـ deploy
+async function staleWhileRevalidate(request, revalidate) {
   const cache = await caches.open(CACHE);
   const cached = await cache.match(request);
-  const network = fetch(request)
+  const network = fetch(request, revalidate ? { cache: "no-cache" } : undefined)
     .then((response) => {
       if (response && (response.status === 200 || response.type === "opaque")) {
         cache.put(request, response.clone());
@@ -194,7 +208,7 @@ self.addEventListener("fetch", (event) => {
       // app.js و api — networkFirst عادي (app.js عنده max-age=0, must-revalidate)
       event.respondWith(networkFirst(request, false));
     } else {
-      event.respondWith(staleWhileRevalidate(request));
+      event.respondWith(staleWhileRevalidate(request, true));
     }
     return;
   }
