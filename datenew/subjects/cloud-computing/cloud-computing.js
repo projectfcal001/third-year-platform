@@ -2235,6 +2235,926 @@ subjects.push({
         },
       ],
     },
+    // Cloud Computing - Lecture 05: vSphere and Virtualization Overview
+    // Question Bank (32 MCQ + 12 Essay) - based strictly on lecture content
+
+    {
+      id: "cloud-computing-lec-05",
+      t: "المحاضرة 5: vSphere and Virtualization Overview",
+      d: "نظرة عامة على vSphere والمحاكاة الافتراضية: المفاهيم الأساسية، المصطلحات، مكونات الآلة الافتراضية، مميزاتها، مكونات vSphere، وميزات الكلاستر (vMotion/HA/DRS)، وSDDC، وواجهات vSphere.",
+      pdf: "datenew/subjects/cloud-computing/lectures/lec5/lec 5 -vSphere and Virtualization Overvie.pdf",
+      pdf2: "datenew/subjects/cloud-computing/questions/Questions on each lecture/Lecture-05-Questions.pdf",
+      // المحاضرة: vSphere and Virtualization Overview — المحاكاة الافتراضية، الـ Hypervisor/ESXi، الآلة الافتراضية، vSphere (ESXi+vCenter)، ميزات الكلاستر (vMotion/HA/DRS)، SDDC، وواجهات vSphere
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "قوائم تشغيل عربية على يوتيوب تشرح vSphere والمحاكاة الافتراضية من الصفر للتقدم، مناسبة لفهم محتوى المحاضرة بالعربي.",
+          links: [
+            {
+              t: "VMware vSphere شرح بالعربي - المهندس أيمن سعد الدين",
+              d: "قائمة تشغيل عربية كاملة تبدأ بمقدمة vSphere ثم شرح تثبيت ESXi، وتغطي المفاهيم الأساسية للمحاكاة الافتراضية والـ Hypervisor اللي بتتكلم عنها المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLLlr6jKKdyK0tSCcwciymTV_TDzfFZMpP",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Learning VMware vSphere 7.0 شرح بالعربي - المهندس إبراهيم الدسوقي",
+              d: "قائمة تشغيل عربية تشرح vSphere 7.0 بالتفصيل من المقدمة وحتى الإدارة المتقدمة، وتغطي ESXi و vCenter والكلاستر وميزاته زي vMotion و HA و DRS.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLLlr6jKKdyK38sTiACRPapBUCLXnbcYOp",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: المحاكاة الافتراضية شرح بالعربي",
+              d: "رابط بحث (مش فيديو محدد) بيرجع فيديوهات عربية متعددة عن المحاكاة الافتراضية (Virtualization) ومفاهيمها الأساسية، مفيد لو احتجت شرح إضافي للمفهوم العام.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=المحاكاة+الافتراضية+virtualization+شرح+بالعربي",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "قوائم تشغيل وقنوات يوتيوب عالمية بالإنجليزي تشرح vSphere و ESXi و vCenter وميزات الكلاستر بأسلوب مرئي واضح.",
+          links: [
+            {
+              t: "VMware Tutorial for Beginners vSphere 7 - Ibrahim Quraishi",
+              d: "قائمة تشغيل بالإنجليزي تبدأ من ما هي المحاكاة الافتراضية و ESXi Hypervisor، ثم تشرح vSphere خطوة بخطوة، مناسبة كمكمل مرئي للمحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpv7gC39zKbbfNJIJdUy_8N1_ITUrLIQ1",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "VMware vSphere 8 Full Course",
+              d: "قائمة تشغيل شاملة بالإنجليزي تشرح vSphere 8 بكل تفاصيله، وتتضمن إنشاء الآلات الافتراضية وإدارة vCenter وميزات الكلاستر.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLeqch-0_f39HB3WaTrY46nBtDJ9Vbeejv",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: VMware vMotion HA DRS explained",
+              d: "رابط بحث (مش فيديو محدد) بيرجع فيديوهات إنجليزي كتير بتشرح الفرق بين vMotion و HA و DRS، وهي أهم ميزات الكلاستر اللي بتفرق بينها المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=VMware+vMotion+HA+DRS+explained",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر رسمية ومراجع تعليمية موثوقة تشرح مفاهيم المحاكاة الافتراضية والـ Hypervisor والآلة الافتراضية بالتفصيل.",
+          links: [
+            {
+              t: "What is a Hypervisor? - VMware Official",
+              d: "صفحة VMware الرسمية تشرح تعريف الـ Hypervisor وأنواعه (Type 1 bare-metal و Type 2 hosted) وأمثلته زي ESXi، وبتغطي نفس المصطلحات اللي في جدول Terminology بالمحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.vmware.com/topics/hypervisor",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Virtualization in Cloud Computing and Types - GeeksforGeeks",
+              d: "مقال GeeksforGeeks يشرح المحاكاة الافتراضية وأنواعها (Server, Desktop, Network, Storage) — وهي نفس أنواع الوحدات اللي بتذكرها المحاضرة. كمان بيتعرض VMware vSphere كمثال على Server Virtualization.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.geeksforgeeks.org/cloud-computing/virtualization-cloud-computing-types",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What is a Virtual Machine? - Cloudflare Learning",
+              d: "صفحة Cloudflare Learning تشرح تعريف الآلة الافتراضية (VM) كتمثيل برمجي لكمبيوتر مادي، وبتوضح مكوناتها واستخداماتها، مرتبطة مباشرة بقسم About Virtual Machines بالمحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.cloudflare.com/learning/cloud/what-is-a-virtual-machine",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What Is Virtualization? - IBM",
+              d: "صفحة IBM تشرح المحاكاة الافتراضية كتقنية بتنشئ بيئات افتراضية من جهاز مادي واحد لاستخدام أكفأ للموارد، وتغطي المفهوم العام اللي بتبني عليه المحاضرة فكرتها كلها.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.ibm.com/think/topics/virtualization",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات رسمية ومنصات محاكاة وتوثيق عملي لـ vSphere، تساعدك على التطبيق العملي والتجربة المباشرة للمفاهيم النظرية.",
+          links: [
+            {
+              t: "VMware Hands-on Labs - YouTube Channel",
+              d: "قناة VMware الرسمية للـ Hands-on Labs، بتوفّر جولات مرئية لاستخدام منتجات VMware فعليًا بدون تثبيت، وهي منصة مجانية للتجربة العملية لـ vSphere و ESXi و vCenter.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح القناة",
+                  url: "https://www.youtube.com/c/VMwareHOL1/videos",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "PowerCLI Example Scripts - VMware GitHub",
+              d: "مستودع VMware الرسمي على GitHub لأمثلة سكريبتات PowerCLI، وده واحد من واجهات vSphere اللي بتذكرها المحاضرة. مفيد للي عايز يتعمق في إدارة vSphere عبر سطر الأوامر.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح المستودع",
+                  url: "https://github.com/vmware-archive/PowerCLI-Example-Scripts",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "VMware vSphere 8.0 Documentation - Broadcom TechDocs",
+              d: "التوثيق الرسمي الكامل لـ vSphere 8.0 من Broadcom، ويشمل أدلة إدارة الآلات الافتراضية و ESXi و vCenter، مرجع موثوق للمفاهيم العملية اللي بتغطيها المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "VMware vSphere - Official Product Page",
+              d: "الصفحة الرسمية لمنتج vSphere من VMware، بتلخص المكوّنات الأساسية (ESXi + vCenter) والمميزات الكلاستر (vMotion, HA, DRS) والإصدارات المتاحة — ودي نفس النقاط اللي بتعرضها المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.vmware.com/products/cloud-infrastructure/vsphere",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ============ MCQ (1-32) ============
+        {
+          q: "1. What is virtualization?",
+          options: [
+            "A physical hardware assembly process",
+            "A network security protocol",
+            "The process of creating a software-based representation of a physical unit",
+            "An operating system installation method",
+          ],
+          correct: 2,
+          translation: "ما هي المحاكاة الافتراضية (Virtualization)؟",
+          explanation:
+            "المحاكاة الافتراضية هي عملية إنشاء تمثيل برمجي لوحدة مادية زي خادم أو سطح مكتب أو شبكة أو جهاز تخزين. الخيارات التانية بتصف عمليات مختلفة تمامًا (تجميع هاردوير، بروتوكول أمان، تثبيت نظام تشغيل).",
+          tags: ["Virtualization", "Definitions"],
+          ref: "Lecture 05 — Types of Virtualization",
+          likely: "high",
+        },
+        {
+          q: "2. What is a hypervisor?",
+          options: [
+            "A specialized operating system designed to run virtual machines",
+            "A type of network switch",
+            "A backup utility for physical servers",
+            "A storage controller firmware",
+          ],
+          correct: 0,
+          translation: "ما هو الـ Hypervisor؟",
+          explanation:
+            "الـ Hypervisor هو نظام تشغيل متخصص مصمم لتشغيل الآلات الافتراضية (VMs). الخيارات التانية بتصف مكونات شبكة/تخزين/نسخ احتياطي ومش نظام تشغيل للـ VMs.",
+          tags: ["Hypervisor", "Definitions"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "high",
+        },
+        {
+          q: "3. Which of the following is an example of a hypervisor?",
+          options: [
+            "Microsoft Office",
+            "ESXi",
+            "Windows Server",
+            "Google Chrome",
+          ],
+          correct: 1,
+          translation: "أيٌّ مما يلي يُعد مثالاً على Hypervisor؟",
+          explanation:
+            "ESXi هو hypervisor من VMware. Microsoft Office و Chrome تطبيقات (Applications) مش hypervisors، و Windows Server نظام تشغيل عادي مش متخصص لتشغيل VMs.",
+          tags: ["Hypervisor", "ESXi"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "high",
+        },
+        {
+          q: "4. What is a virtual machine (VM)?",
+          options: [
+            "A physical server with multiple CPUs",
+            "A network router configuration file",
+            "A software representation of a physical computer and its components",
+            "A type of storage device",
+          ],
+          correct: 2,
+          translation: "ما هي الآلة الافتراضية (VM)؟",
+          explanation:
+            "الـ VM هي تمثيل برمجي لجهاز مادي ومكوناته. الخيارات التانية بتصف خادم مادي، ملف راوتر، أو جهاز تخزين — وكلها مادية مش برمجية.",
+          tags: ["Virtual Machine", "Definitions"],
+          ref: "Lecture 05 — About Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: '5. What does the term "Guest" refer to in virtualization?',
+          options: [
+            "The physical computer providing resources",
+            "The hypervisor software",
+            "The network connecting VMs",
+            "The operating system that runs inside a VM",
+          ],
+          correct: 3,
+          translation: 'ماذا يشير مصطلح "Guest" في المحاكاة الافتراضية؟',
+          explanation:
+            "الـ Guest هو نظام التشغيل اللي بيشتغل جوه الـ VM (وسميته المحاضرة guest operating system). الـ Host هو الجهاز المادي، والـ Hypervisor هو البرنامج، والـ Guest هو OS اللي جوه الـ VM.",
+          tags: ["Guest", "Terminology"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "high",
+        },
+        {
+          q: "6. What is a Host in the context of virtualization?",
+          options: [
+            "A physical computer that provides resources to the ESXi hypervisor",
+            "A virtual machine running applications",
+            "A network protocol for VMs",
+            "A type of storage array",
+          ],
+          correct: 0,
+          translation: "ما هو الـ Host في سياق المحاكاة الافتراضية؟",
+          explanation:
+            "الـ Host هو جهاز كمبيوتر مادي بيوفّر الموارد لـ ESXi hypervisor. الخيارات التانية بتصف VM أو بروتوكول أو تخزين، مش الجهاز المادي اللي بيغذّي الـ hypervisor.",
+          tags: ["Host", "Terminology"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "high",
+        },
+        {
+          q: "7. What is vSphere?",
+          options: [
+            "A type of physical server hardware",
+            "The server virtualization product of VMware that combines the ESXi hypervisor and vCenter Server",
+            "A network monitoring tool",
+            "A backup and recovery application",
+          ],
+          correct: 1,
+          translation: "ما هو vSphere؟",
+          explanation:
+            "vSphere هو منتج المحاكاة الافتراضية للخوادم من VMware واللي بيدمج ESXi hypervisor مع منصة إدارة vCenter Server. الخيارات التانية بتصف هاردوير أو أداة مراقبة أو تطبيق نسخ احتياطي.",
+          tags: ["vSphere", "Definitions"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "8. What are the two core administrative components of vSphere?",
+          options: [
+            "Windows and Linux",
+            "vMotion and HA",
+            "ESXi and vCenter",
+            "DRS and SDDC",
+          ],
+          correct: 2,
+          translation: "ما هما المكوّنان الأساسيان للإدارة في vSphere؟",
+          explanation:
+            "المكوّنان هما ESXi (الـ hypervisor اللي بيشتغل عليه الـ VMs) و vCenter (منصة الإدارة المركزية). vMotion و HA و DRS ميزات كلاستر مش مكوّنات أساسية، و Windows/Linux أنظمة تشغيل.",
+          tags: ["vSphere", "ESXi", "vCenter"],
+          ref: "Lecture 05 — About vSphere",
+          likely: "high",
+        },
+        {
+          q: "9. What is the role of vCenter Server?",
+          options: [
+            "It runs virtual machines directly on hardware",
+            "It replaces the ESXi hypervisor",
+            "It is a guest operating system",
+            "It is the central administration platform for ESXi hosts, VMs, storage, and networking",
+          ],
+          correct: 3,
+          translation: "ما هو دور vCenter Server؟",
+          explanation:
+            "vCenter هو منصة الإدارة المركزية لـ ESXi hosts والـ VMs والتخزين والشبكات. الخيارات التانية غلط لأن vCenter مش بيشتغل VMs مباشرة، ولا بيستبدل ESXi، ولا هو guest OS.",
+          tags: ["vCenter", "vSphere"],
+          ref: "Lecture 05 — About vSphere",
+          likely: "high",
+        },
+        {
+          q: "10. What is a cluster in vSphere?",
+          options: [
+            "A group of ESXi hosts whose resources are shared by VMs",
+            "A single virtual machine with multiple disks",
+            "A backup strategy for physical servers",
+            "A network segmentation technique",
+          ],
+          correct: 0,
+          translation: "ما هو الـ Cluster في vSphere؟",
+          explanation:
+            "الـ Cluster هو مجموعة من ESXi hosts بتتشارك مواردها للـ VMs. ده اللي بيمكّن ميزات زي vMotion و HA و DRS. الخيارات التانية بتصف VM واحد أو استراتيجية نسخ احتياطي أو تقسيم شبكة.",
+          tags: ["Cluster", "vSphere"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "11. What is vSphere vMotion?",
+          options: [
+            "A feature that restarts VMs after host failure",
+            "A feature that supports the migration of powered-on VMs from host to host without service interruption",
+            "A feature that balances storage capacity",
+            "A feature that secures network traffic",
+          ],
+          correct: 1,
+          translation: "ما هي ميزة vSphere vMotion؟",
+          explanation:
+            "vMotion بتدعم ترحيل VMs اللي شغّالة (powered-on) من host لـ host من غير انقطاع الخدمة. الخيار الأول ده دور HA، والباقي مش ذكرته المحاضرة.",
+          tags: ["vMotion", "Cluster Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "12. What is the primary purpose of vSphere HA?",
+          options: [
+            "To migrate running VMs between hosts",
+            "To balance CPU load across hosts",
+            "To protect against host hardware failures by restarting VMs on running hosts",
+            "To compress VM files for storage",
+          ],
+          correct: 2,
+          translation: "ما هو الغرض الأساسي من vSphere HA؟",
+          explanation:
+            "HA (High Availability) بتحمي من أعطال هاردوير الـ host عبر إعادة تشغيل الـ VMs على hosts شغّالة. الخيار الأول ده vMotion، والثاني ده DRS، والرابع مش مذكور.",
+          tags: ["HA", "Cluster Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "13. What does vSphere DRS do?",
+          options: [
+            "It encrypts VM disks",
+            "It backs up VM configurations",
+            "It monitors network performance",
+            "It uses vMotion to place VMs on hosts and ensure each VM receives the resources it needs",
+          ],
+          correct: 3,
+          translation: "ماذا تفعل ميزة vSphere DRS؟",
+          explanation:
+            "DRS (Distributed Resource Scheduler) بتستخدم vMotion عشان تحط الـ VMs على الـ hosts وتأكد إن كل VM بياخد الموارد اللي محتاجها. الخيارات التانية (تشفير، نسخ احتياطي، مراقبة شبكة) مش مذكورة.",
+          tags: ["DRS", "Cluster Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "14. Which vSphere feature allows migration of powered-on VMs without service interruption?",
+          options: [
+            "vSphere vMotion",
+            "vSphere HA",
+            "vSphere DRS",
+            "vCenter Server",
+          ],
+          correct: 0,
+          translation:
+            "أي ميزة في vSphere بتسمح بترحيل VMs شغّالة من غير انقطاع الخدمة؟",
+          explanation:
+            "vMotion هي الميزة المسؤولة عن ترحيل VMs مُشغّلة من غير انقطاع. HA بتعيد التشغيل بعد العطل، DRS بتستخدم vMotion لكن هدفها توزيع الموارد، و vCenter منصة إدارة مش ميزة ترحيل.",
+          tags: ["vMotion", "Cluster Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "15. Which feature protects against host hardware failures by restarting VMs?",
+          options: ["vMotion", "vSphere HA", "DRS", "ESXi"],
+          correct: 1,
+          translation:
+            "أي ميزة بتحمي من أعطال هاردوير الـ host عبر إعادة تشغيل الـ VMs؟",
+          explanation:
+            "HA هي اللي بتعيد تشغيل الـ VMs على hosts شغّالة بعد عطل هاردوير. vMotion بترحّل VMs شغّالة، DRS بتوزّع الموارد، و ESXi هو الـ hypervisor نفسه.",
+          tags: ["HA", "Cluster Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "16. Which feature uses vMotion to place VMs on hosts and balance resources?",
+          options: ["vSphere HA", "vCenter", "vSphere DRS", "VMware Tools"],
+          correct: 2,
+          translation:
+            "أي ميزة بتستخدم vMotion لوضع الـ VMs على الـ hosts وتوزيع الموارد؟",
+          explanation:
+            "DRS بتستخدم vMotion لتحديد مكان الـ VMs عشان كل واحدة تاخد الموارد اللي محتاجها. HA بتعيد التشغيل بعد العطل، vCenter منصة إدارة، VMware Tools مكوّن جوه الـ VM.",
+          tags: ["DRS", "Cluster Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          q: "17. What is a Software-Defined Data Center (SDDC)?",
+          options: [
+            "A data center with only physical servers",
+            "A data center without any software",
+            "A data center managed manually by administrators",
+            "A data center where all infrastructure is virtualized and control is automated by software",
+          ],
+          correct: 3,
+          translation: "ما هو مركز البيانات المُعرَّف برمجيًا (SDDC)؟",
+          explanation:
+            "في SDDC كل البنية التحتية مت virtualize والتحكم بيتعمل أتوماتيك عبر السوفتوير. الخيارات التانية بتصف data centers مادية أو يدوية — عكس مفهوم SDDC تمامًا.",
+          tags: ["SDDC", "Definitions"],
+          ref: "Lecture 05 — About the Software-Defined Data Center",
+          likely: "high",
+        },
+        {
+          q: "18. vSphere is considered the foundation of which concept?",
+          options: [
+            "The Software-Defined Data Center (SDDC)",
+            "The traditional physical data center",
+            "The cloud billing system",
+            "The network firewall architecture",
+          ],
+          correct: 0,
+          translation: "يُعتبر vSphere أساسًا لأي مفهوم؟",
+          explanation:
+            "المحاضرة بتقول صراحة: vSphere is the foundation of the SDDC. الخيارات التانية مش مذكورة كأساس لـ vSphere.",
+          tags: ["SDDC", "vSphere"],
+          ref: "Lecture 05 — About the Software-Defined Data Center",
+          likely: "high",
+        },
+        {
+          q: "19. Which of the following is a component of a virtual machine?",
+          options: [
+            "A physical CPU socket",
+            "VMware Tools",
+            "A hardware router",
+            "A physical network switch",
+          ],
+          correct: 1,
+          translation: "أيٌّ مما يلي يُعد مكوّنًا من الآلة الافتراضية؟",
+          explanation:
+            "المحاضرة ذكرت مكونات VM: Guest OS، VMware Tools، وموارد افتراضية (CPU/memory، network adapters، disks/controllers، GPUs). الخيارات التانية عناصر مادية مش مكونات VM.",
+          tags: ["Virtual Machine", "Components"],
+          ref: "Lecture 05 — About Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: "20. Which of the following is NOT a virtual resource of a VM?",
+          options: [
+            "CPU and memory",
+            "Network adapters",
+            "Physical power supply",
+            "Disks and controllers",
+          ],
+          correct: 2,
+          translation: "أيٌّ مما يلي ليس موردًا افتراضيًا للـ VM؟",
+          explanation:
+            "موارد الـ VM الافتراضية هي: CPU/memory، network adapters، disks/controllers، و GPUs. الـ Physical power supply مورد مادي ومش افتراضي ومش مدرج.",
+          tags: ["Virtual Machine", "Components"],
+          ref: "Lecture 05 — About Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: "21. Why are virtual machines independent of physical hardware?",
+          options: [
+            "Because they use special network cables",
+            "Because they require constant hardware upgrades",
+            "Because they are bound to a specific server model",
+            "Because they are encapsulated into files",
+          ],
+          correct: 3,
+          translation:
+            "لماذا تكون الآلات الافتراضية مستقلة عن الهاردوير المادي؟",
+          explanation:
+            "المحاضرة بتقول: VMs independent of physical hardware because VMs are encapsulated into files. يعني الـ VM متخزن كملفات، فمش مرتبط بهاردوير معين. الخيارات التانية بتصف علاقات مادية عكس الاستقلالية.",
+          tags: ["Virtual Machine", "Encapsulation"],
+          ref: "Lecture 05 — Benefits of Using Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: '22. What does it mean that VMs are "isolated"?',
+          options: [
+            "They are separated from other VMs running on the same physical hardware",
+            "They cannot connect to any network",
+            "They run only on offline computers",
+            "They require dedicated storage arrays",
+          ],
+          correct: 0,
+          translation: 'ماذا يعني أن الـ VMs "معزولة" (isolated)؟',
+          explanation:
+            "العزل معناه إن الـ VM منفصل عن الـ VMs التانية اللي شغّالة على نفس الهاردوير المادي — ده بيوفر أمان واستقرار. مش معناه إنها مش بتتصل بالشبكة أو بتشتغل offline.",
+          tags: ["Virtual Machine", "Isolation"],
+          ref: "Lecture 05 — Benefits of Using Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: "23. Which is a constraint of physical machines mentioned in the lecture?",
+          options: [
+            "Easy to move or copy",
+            "Bound to a specific set of hardware components",
+            "Independent of physical hardware",
+            "Encapsulated into files",
+          ],
+          correct: 1,
+          translation: "أيٌّ مما يلي قيد للأجهزة المادية ذُكر في المحاضرة؟",
+          explanation:
+            "المحاضرة ذكرت قيود الأجهزة المادية ومنها: Bound to a specific set of hardware components. الخيارات التانية (سهل النقل، استقلال، تغليف في ملفات) مميزات الـ VMs مش قيود الأجهزة المادية.",
+          tags: ["Physical Machines", "Constraints"],
+          ref: "Lecture 05 — Benefits of Using Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: "24. Which is a benefit of virtual machines?",
+          options: [
+            "Difficult to move or copy",
+            "Bound to specific hardware components",
+            "Insulated from physical hardware changes",
+            "Short life cycle",
+          ],
+          correct: 2,
+          translation: "أيٌّ مما يلي ميزة للآلات الافتراضية؟",
+          explanation:
+            "Insulated from physical hardware changes ميزة من مميزات الـ VMs. الخيارات التانية (صعوبة النقل، الارتباط بهاردوير، دورة حياة قصيرة) كلها قيود للأجهزة المادية مش مميزات VMs.",
+          tags: ["Virtual Machine", "Benefits"],
+          ref: "Lecture 05 — Benefits of Using Virtual Machines",
+          likely: "high",
+        },
+        {
+          q: "25. According to the lecture, which types of units can be virtualized?",
+          options: [
+            "Only servers",
+            "Only desktops",
+            "Only networks",
+            "Server, desktop, network, or storage device",
+          ],
+          correct: 3,
+          translation:
+            "حسب المحاضرة، أي أنواع الوحدات يمكن محاكاتها افتراضيًا؟",
+          explanation:
+            "المحاضرة ذكرت صراحة: server, desktop, network, or storage device. الخيارات التانية بتحصر المحاكاة في نوع واحد، وده تضييق غير صحيح.",
+          tags: ["Virtualization", "Types"],
+          ref: "Lecture 05 — Types of Virtualization",
+          likely: "medium",
+        },
+        {
+          q: "26. What is an operating system according to the lecture?",
+          options: [
+            "Software designed to allocate physical resources to applications",
+            "Hardware that runs virtual machines",
+            "A type of network protocol",
+            "A storage management tool",
+          ],
+          correct: 0,
+          translation: "ما هو نظام التشغيل حسب المحاضرة؟",
+          explanation:
+            "المحاضرة عرّفت الـ OS بأنه Software designed to allocate physical resources to applications. الخيارات التانية بتصف هاردوير أو بروتوكول أو أداة تخزين، مش نظام تشغيل.",
+          tags: ["Operating System", "Terminology"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "medium",
+        },
+        {
+          q: "27. What is an application according to the lecture?",
+          options: [
+            "A specialized operating system for VMs",
+            "Software that runs on an operating system, consuming physical resources",
+            "A physical computer providing resources",
+            "A hypervisor feature",
+          ],
+          correct: 1,
+          translation: "ما هو التطبيق (Application) حسب المحاضرة؟",
+          explanation:
+            "التطبيق هو سوفتوير بيشتغل على نظام تشغيل وبيستهلك موارد مادية (Examples: Microsoft Office, Chrome). الخيارات التانية بتصف hypervisor أو host أو ميزة، مش application.",
+          tags: ["Application", "Terminology"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "medium",
+        },
+        {
+          q: "28. Which of the following is a vSphere user interface?",
+          options: [
+            "Microsoft Word",
+            "Google Chrome",
+            "vSphere Client",
+            "Adobe Photoshop",
+          ],
+          correct: 2,
+          translation: "أيٌّ مما يلي واجهة من واجهات vSphere؟",
+          explanation:
+            "vSphere Client واحدة من واجهات vSphere المذكورة (مع PowerCLI، VMware Host Client، ESXi Shell، ESXCLI). Word و Chrome و Photoshop تطبيقات عامة مش واجهات vSphere.",
+          tags: ["User Interfaces", "vSphere"],
+          ref: "Lecture 05 — vSphere User Interfaces",
+          likely: "medium",
+        },
+        {
+          q: "29. Which of the following is used to interact with the vSphere environment via command line?",
+          options: ["VMware Tools", "Guest OS", "SDDC", "PowerCLI"],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي يُستخدم للتفاعل مع بيئة vSphere عبر سطر الأوامر؟",
+          explanation:
+            "PowerCLI أداة سطر أوامر من واجهات vSphere. VMware Tools مكوّن جوه الـ VM، و Guest OS نظام التشغيل جوه VM، و SDDC مفهوم معماري مش أداة.",
+          tags: ["User Interfaces", "PowerCLI"],
+          ref: "Lecture 05 — vSphere User Interfaces",
+          likely: "medium",
+        },
+        {
+          q: "30. Which statement best describes ESXi?",
+          options: [
+            "A hypervisor on which you run virtual machines",
+            "A central management platform",
+            "A guest operating system",
+            "A type of network adapter",
+          ],
+          correct: 0,
+          translation: "أي عبارة تصف ESXi بأفضل شكل؟",
+          explanation:
+            "ESXi هو الـ hypervisor اللي بيشغّل الـ VMs. vCenter هو منصة الإدارة المركزية، والـ Guest OS نظام التشغيل جوه الـ VM، و network adapter مورد افتراضي.",
+          tags: ["ESXi", "Hypervisor"],
+          ref: "Lecture 05 — About vSphere",
+          likely: "high",
+        },
+        {
+          q: "31. Which component is listed as part of a virtual machine in the lecture?",
+          options: [
+            "A physical motherboard",
+            "VMware Tools",
+            "A hardware firewall",
+            "A physical RAID controller",
+          ],
+          correct: 1,
+          translation: "أي مكوّن مذكور كجزء من الآلة الافتراضية في المحاضرة؟",
+          explanation:
+            "مكونات VM المذكورة: Guest OS، VMware Tools، وموارد افتراضية. الـ motherboard والـ firewall والـ RAID controller كلها عناصر مادية مش مكونات VM.",
+          tags: ["Virtual Machine", "VMware Tools"],
+          ref: "Lecture 05 — About Virtual Machines",
+          likely: "medium",
+        },
+        {
+          q: "32. Which are examples of hypervisors mentioned in the lecture?",
+          options: [
+            "Windows and Linux",
+            "Microsoft Office and Chrome",
+            "ESXi, Workstation, and Fusion",
+            "vMotion and DRS",
+          ],
+          correct: 2,
+          translation: "أيٌّ مما يلي أمثلة على Hypervisors ذُكرت في المحاضرة؟",
+          explanation:
+            "المحاضرة ذكرت أمثلة الـ hypervisor: ESXi, Workstation, Fusion. Windows و Linux أنظمة تشغيل، Office و Chrome تطبيقات، و vMotion و DRS ميزات كلاستر.",
+          tags: ["Hypervisor", "Examples"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "medium",
+        },
+
+        // ============ ESSAY (1-12) ============
+        {
+          type: "essay",
+          q: "1. Define virtualization and explain why it is important for businesses.",
+          translation: "عرّف المحاكاة الافتراضية واشرح أهميتها للأعمال.",
+          answer:
+            "Virtualization is the process of creating a software-based representation of a physical unit, such as a server, desktop, network, or storage device.\n" +
+            "It is the single most effective way to reduce IT expenses while boosting efficiency and agility for all business sizes.\n" +
+            "Virtualization enables multiple virtual machines to run on a single physical host, sharing its resources.\n" +
+            "It forms the foundation for the software-defined data center (SDDC).",
+          tags: ["Virtualization", "Definitions"],
+          ref: "Lecture 05 — Types of Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. What is a hypervisor? Give examples of hypervisors mentioned in the lecture.",
+          translation: "ما هو الـ Hypervisor؟ اذكر أمثلة عليه من المحاضرة.",
+          answer:
+            "A hypervisor is a specialized operating system designed to run virtual machines.\n" +
+            "It abstracts physical hardware resources and presents them to virtual machines as virtual resources.\n" +
+            "Examples of hypervisors mentioned in the lecture are ESXi, Workstation, and Fusion.\n" +
+            "In vSphere, ESXi is the hypervisor used to run virtual machines on hosts.",
+          tags: ["Hypervisor", "ESXi"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Describe vSphere and identify its two core administrative components.",
+          translation: "صف vSphere وحدّد مكوّناته الأساسية للإدارة.",
+          answer:
+            "vSphere is the server virtualization product of VMware.\n" +
+            "It combines the ESXi hypervisor and the vCenter Server management platform.\n" +
+            "The two core administrative components are:\n" +
+            "1. ESXi: The hypervisor on which you run virtual machines.\n" +
+            "2. vCenter: The central administration platform for ESXi hosts, virtual machines, storage, and networking.\n" +
+            "vSphere is the foundation of the software-defined data center (SDDC).",
+          tags: ["vSphere", "ESXi", "vCenter"],
+          ref: "Lecture 05 — About vSphere",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. What is the difference between vSphere vMotion, vSphere HA, and vSphere DRS?",
+          translation: "ما الفرق بين vMotion و HA و DRS؟",
+          answer:
+            "These are three cluster features in vSphere with different purposes:\n" +
+            "1. vSphere vMotion: Supports the migration of powered-on VMs from host to host without service interruption.\n" +
+            "2. vSphere HA (High Availability): Protects against host hardware failures by restarting VMs on hosts that are running normally.\n" +
+            "3. vSphere DRS (Distributed Resource Scheduler): Uses vSphere vMotion to place VMs on hosts and ensure that each VM receives the resources that it needs.\n" +
+            "Key difference: vMotion moves running VMs; HA restarts VMs after a failure; DRS balances resources using vMotion.",
+          tags: ["vMotion", "HA", "DRS", "Comparison"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. List the components of a virtual machine as described in the lecture.",
+          translation: "اذكر مكونات الآلة الافتراضية كما وردت في المحاضرة.",
+          answer:
+            "A virtual machine is a software representation of a physical computer and its components.\n" +
+            "The virtual machine includes the following components:\n" +
+            "1. Guest operating system\n" +
+            "2. VMware Tools\n" +
+            "3. Virtual resources, such as:\n" +
+            "   - CPU and memory\n" +
+            "   - Network adapters\n" +
+            "   - Disks and controllers\n" +
+            "   - GPUs",
+          tags: ["Virtual Machine", "Components"],
+          ref: "Lecture 05 — About Virtual Machines",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Compare physical machines and virtual machines in terms of their constraints and benefits.",
+          translation:
+            "قارن بين الأجهزة المادية والآلات الافتراضية من حيث القيود والمميزات.",
+          answer:
+            "Physical machines have the following constraints:\n" +
+            "- Difficult to move or copy\n" +
+            "- Bound to a specific set of hardware components\n" +
+            "- Often have a short life cycle\n" +
+            "- Require personal contact to upgrade hardware\n" +
+            "Virtual machines provide the following benefits:\n" +
+            "- Easy to move or copy\n" +
+            "- Independent of physical hardware because VMs are encapsulated into files\n" +
+            "- Isolated from other VMs running on the same physical hardware\n" +
+            "- Insulated from physical hardware changes",
+          tags: ["Physical Machines", "Virtual Machine", "Comparison"],
+          ref: "Lecture 05 — Benefits of Using Virtual Machines",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Define the Software-Defined Data Center (SDDC) and explain the role of vSphere in it.",
+          translation:
+            "عرّف مركز البيانات المُعرَّف برمجيًا (SDDC) واشرح دور vSphere فيه.",
+          answer:
+            "In a Software-Defined Data Center (SDDC), all infrastructure is virtualized.\n" +
+            "The control of the data center is automated by software.\n" +
+            "vSphere is the foundation of the SDDC.\n" +
+            "This means vSphere provides the virtualization layer on which all other virtualized infrastructure (compute, network, storage) is built and managed.",
+          tags: ["SDDC", "vSphere"],
+          ref: "Lecture 05 — About the Software-Defined Data Center",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. List the vSphere user interfaces used to interact with the vSphere environment.",
+          translation: "اذكر واجهات vSphere المستخدمة للتفاعل مع البيئة.",
+          answer:
+            "The vSphere user interfaces are:\n" +
+            "1. vSphere Client\n" +
+            "2. PowerCLI\n" +
+            "3. VMware Host Client\n" +
+            "4. vSphere ESXi Shell\n" +
+            "5. ESXCLI\n" +
+            "These tools allow administrators to manage and interact with the vSphere environment.",
+          tags: ["User Interfaces", "vSphere"],
+          ref: "Lecture 05 — vSphere User Interfaces",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "9. Define the following terms: Host, Guest, Hypervisor, and Virtual Machine.",
+          translation:
+            "عرّف المصطلحات التالية: Host، Guest، Hypervisor، Virtual Machine.",
+          answer:
+            "1. Host: A physical computer that provides resources to the ESXi hypervisor.\n" +
+            "2. Guest: The operating system that runs in a VM (also called the guest operating system). Examples: Microsoft Windows, Linux.\n" +
+            "3. Hypervisor: A specialized operating system designed to run VMs. Examples: ESXi, Workstation, Fusion.\n" +
+            "4. Virtual Machine: A specialized application that abstracts hardware resources into software. It is a software representation of a physical computer and its components.",
+          tags: ["Terminology", "Definitions"],
+          ref: "Lecture 05 — Terminology (1)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. What is a cluster in vSphere? Explain the features it enables.",
+          translation:
+            "ما هو الـ Cluster في vSphere؟ اشرح الميزات التي يفعّلها.",
+          answer:
+            "A cluster is a group of ESXi hosts whose resources are shared by VMs.\n" +
+            "Clusters enable features such as:\n" +
+            "1. vSphere vMotion: migration of powered-on VMs between hosts without service interruption.\n" +
+            "2. vSphere HA: protection against host hardware failures by restarting VMs on hosts that are running normally.\n" +
+            "3. vSphere DRS: placement of VMs on hosts (using vMotion) to ensure each VM receives the resources it needs.\n" +
+            "Clusters allow resources to be pooled and used efficiently across multiple hosts.",
+          tags: ["Cluster", "vSphere", "Features"],
+          ref: "Lecture 05 — Terminology (2)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. List the types of virtualization mentioned in the lecture.",
+          translation: "اذكر أنواع المحاكاة الافتراضية المذكورة في المحاضرة.",
+          answer:
+            "The lecture mentions that virtualization can be applied to different physical units:\n" +
+            "1. Server virtualization\n" +
+            "2. Desktop virtualization\n" +
+            "3. Network virtualization\n" +
+            "4. Storage device virtualization\n" +
+            "Virtualization is the process of creating a software-based representation of any of these physical units.",
+          tags: ["Virtualization", "Types"],
+          ref: "Lecture 05 — Types of Virtualization",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: '12. Explain what it means that virtual machines are "encapsulated into files" and why this is important.',
+          translation: 'اشرح معنى أن الـ VMs "مغلّفة في ملفات" ولماذا هذا مهم.',
+          answer:
+            "Virtual machines are encapsulated into files, meaning the entire VM (its configuration, virtual disks, and state) is stored as a set of software files.\n" +
+            "This is important because:\n" +
+            "1. It makes VMs independent of physical hardware.\n" +
+            "2. VMs become easy to move or copy from one host to another.\n" +
+            "3. VMs are insulated from physical hardware changes.\n" +
+            "4. VMs can be backed up, replicated, and restored like ordinary files.\n" +
+            "This encapsulation is a key benefit that distinguishes VMs from physical machines, which are bound to specific hardware components.",
+          tags: ["Virtual Machine", "Encapsulation", "Benefits"],
+          ref: "Lecture 05 — Benefits of Using Virtual Machines",
+          likely: "high",
+        },
+      ],
+    },
   ],
   // testBanks: [
   //   {
