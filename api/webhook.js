@@ -4,6 +4,13 @@ export default async function handler(req, res) {
     return res.status(200).send("Telegram Webhook API is running ✅");
   }
 
+  // 🔐 تحقق إن الطلب جاي من تليجرام فعلًا (لو TG_WEBHOOK_SECRET متضبط)
+  //    لازم نفس القيمة تتبعت في setWebhook كـ secret_token
+  const WH_SECRET = process.env.TG_WEBHOOK_SECRET;
+  if (WH_SECRET && req.headers["x-telegram-bot-api-secret-token"] !== WH_SECRET) {
+    return res.status(401).send("Unauthorized");
+  }
+
   const { message } = req.body || {};
   if (!message || !message.text) {
     return res.status(200).send("OK");
@@ -160,8 +167,7 @@ function buildDailyReport() {
     `🗓️ ${today}\n` +
     `━━━━━━━━━━━━━━━━━━\n\n` +
     `📩 إجمالي الرسائل اليوم: *0*\n` +
-    `📲 من تليجرام: *0*\n` +
-    `💬 من الواتساب: *0*\n\n` +
+    `📲 من تليجرام: *0*\n\n` +
     `⚠️ _الأرقام هتبقى حقيقية بعد ربط Google Sheets_`
   );
 }

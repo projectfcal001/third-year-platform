@@ -45,6 +45,9 @@ function isBlocked(pathname) {
   const p = normalizePath(pathname);
   if (p === null) return true;
   if (BLOCKED_FILES.has(p)) return true;
+  // ملفات Vercel الثابتة جوه api/ (feedback.js و _otp.js و _feedback-core.js و webhook.js ...) → 404
+  // (مسارات الـ Functions نفسها زي /api/feedback من غير .js فمش بتتأثر)
+  if (p.startsWith("/api/") && /\.(?:m|c)?js$/.test(p)) return true;
   // نضيف "/" في الآخر عشان "/functions" نفسها تتمنع زي "/functions/x"
   const withSlash = p + "/";
   return BLOCKED_PREFIXES.some(
