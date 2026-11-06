@@ -4234,4 +4234,18 @@ subjects.push({
       ],
     },
   ],
+  chapters: [
+    {
+      t: "Chapter 1: Introduction", // عنوان الفصل
+      icon: "📘", // أيقونة (اختياري)
+      lectures: [0, 1], // ← أرقام المحاضرات في الفصل
+      open: false,
+    },
+    {
+      t: " Chapter 3: Processes", // عنوان الفصل
+      icon: "📘", // أيقونة (اختياري)
+      lectures: [2, 3], // ← أرقام المحاضرات في الفصل
+      open: true,
+    },
+  ],
 });

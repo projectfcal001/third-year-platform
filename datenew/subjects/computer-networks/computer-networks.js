@@ -6613,6 +6613,1275 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "computer-networks-lecture-7",
+      t: "Computer Networks - Lecture 7 (Ch 3, Lec 1): Transport Layer — Introduction & Transport-Layer Services",
+      d: "Transport layer role, transport vs network layer, IP service model, TCP vs UDP services, multiplexing/demultiplexing.",
+      pdf: "datenew/subjects/computer-networks/lectures/lec 7/Lecture 7  - Computer Networks.pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/CH03/Lecture-7-Questions.pdf",
+      // المحاضرة: Computer Networks — Lecture 7 (Ch 3, Lec 1) — Transport Layer: Introduction & Transport-Layer Services (Transport vs Network Layer, IP service model, TCP vs UDP services, multiplexing/demultiplexing)
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمواضيع المحاضرة 7 (المحاضرة 1 داخل الفصل 3): طبقة النقل، TCP vs UDP، IP، وعلاقة طبقة النقل بطبقة الشبكة.",
+          links: [
+            {
+              t: "شبكات الحاسوب | Transport layer - part 1, TCP , UDP (محمد ب. أبوبكر)",
+              d: "فيديو عربي أكاديمي بشرح Transport layer - part 1: TCP و UDP والفرق بينهم. مناسب جداً لفهم القسم 3.1.2 (Overview of Transport Layer in the Internet).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpHpCzb7rhlV1MbRgGwTIoK1kHW3iWdmh",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح Layer 4 (Transport Layer) يا مهندس – TCP vs UDP بعمق",
+              d: "شرح بالعربي لطبقة النقل (Layer 4): Segments، Ports، TCP vs UDP بعمق. مفيد لفهم القسم 3.1 (Introduction) والقسم 3.1.2 (Overview).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://www.facebook.com/ITWithHossam/posts/1547208943643611",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "ما هو UDP و TCP — شرح بالعربي",
+              d: "مقال بالعربي بشرح TCP و UDP: TCP بروتوكول connection-oriented بضمن سلامة وتسلسل الحزم، UDP بروتوكول connectionless خفيف وسريع. مفهوم للمقارنة بين الاتنين.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://shelleyes.com/ar/posts/what-is-udp-and-tcp",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات إنجليزية مرئية وقنوات معروفة بشرح Transport Layer و TCP/UDP.",
+          links: [
+            {
+              t: "PowerCert Animated Videos — Networking (English Version)",
+              d: "قائمة فيديوهات Animated بتشرح TCP و UDP و OSI Model و Transport Layer بأسلوب بصري مفهوم. الأسلوب البصري بيساعد على تثبيت الفروق بين TCP و UDP في الذاكرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpXfHEl2fzl72d5ne2gsxSyFNagcHyCML",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Hussein Nasser — TCP 3-Way Handshake + Networking Videos",
+              d: "قائمة تشغيل لمهندس باك-إند معروف، فيها شرح TCP / UDP / IP بعمق. مفهوم لفهم إزاي TCP بيحوّل خدمة IP الـ unreliable لـ reliable.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLQnljOFTspQWbBegaU790WhH7gNKcMAl-",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Khan Academy — Internet 101 (Computer Science)",
+              d: "قائمة تشغيل من Khan Academy بتشرح أساسيات الإنترنت بما فيها TCP/IP، packets، و routers. مفهوم كمقدمة للمحاضرة 7 وربطها بالفصول السابقة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLSQl0a2vh4HD8wtmKZh0nKOsOvP1KYaNO",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر مكتوبة رسمية: GeeksforGeeks، Cloudflare Learning، Wikipedia — بشرح Transport Layer و TCP/UDP و IP.",
+          links: [
+            {
+              t: "GeeksforGeeks — Transport Layer in OSI Model",
+              d: "مقال تعليمي بشرح Transport Layer في OSI model: دورها، الـ segments، الـ multiplexing، والفرق بين TCP و UDP. مطابق لمحتوى القسم 3.1.2.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 Transport Layer in OSI Model",
+                  url: "https://www.geeksforgeeks.org/computer-networks/transport-layer-in-osi-model",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 Differences between TCP and UDP",
+                  url: "https://www.geeksforgeeks.org/computer-networks/differences-between-tcp-and-udp",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 User Datagram Protocol (UDP)",
+                  url: "https://www.geeksforgeeks.org/computer-networks/user-datagram-protocol-udp",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Cloudflare Learning Center",
+              d: "مصدر رسمي من Cloudflare بشرح OSI model (مع Transport Layer كـ Layer 4) والـ network layer. مهم لفهم القسم 3.1.1 (Relationship Between Transport and Network Layers).",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 What is the OSI Model? (Layer 4 = Transport)",
+                  url: "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 What is the network layer?",
+                  url: "https://www.cloudflare.com/learning/network-layer/what-is-the-network-layer",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Wikipedia — Transport layer and Internet protocol suite",
+              d: "مقال موسوعي عن Transport layer (دورها، protocols، الـ multiplexing) وعن Internet protocol suite (TCP/IP). يكمل المحاضرة 7 بتفاصيل إضافية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 Transport layer — Wikipedia",
+                  url: "https://en.wikipedia.org/wiki/Transport_layer",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 Internet protocol suite — Wikipedia",
+                  url: "https://en.wikipedia.org/wiki/Internet_protocol_suite",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لمراقبة طبقة النقل — تستخدم في الـ labs لمراقبة segments بتاعت TCP/UDP فعلًا.",
+          links: [
+            {
+              t: "Wireshark — Network Protocol Analyzer",
+              d: "أداة لالتقاط وتحليل باكتات الشبكة. ممكن تستخدمها عشان تشوف TCP segments و UDP segments فعلًا، وكمان الـ port numbers (مهم لمفهوم multiplexing/demultiplexing). أداة معتمدة في معظم مقررات الشبكات.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Cisco Packet Tracer",
+              d: "أداة محاكاة رسمية من Cisco لمحاكاة الشبكات بما فيها TCP/UDP traffic. ممكن تشوف بيها إزاي الـ segments بتتنقل بين hosts و routers. مجانية للطلاب.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ صفحة التحميل الرسمية",
+                  url: "https://www.netacad.com/cisco-packet-tracer",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "nghttp2 — HTTP/2 Command-Line Client",
+              d: "أداة سطر أوامر لاختبار TCP connections و HTTP. ممكن تشوف بيها الـ TCP handshake و الـ segments فعلًا. مفهوم لـ labs عملية على طبقة النقل.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://nghttp2.org",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. Where does the transport layer reside in the layered network architecture?",
+          options: [
+            "Above the application layer",
+            "Between the physical layer and the data link layer",
+            "Between the application layer and the network layer",
+            "Between the network layer and the data link layer",
+          ],
+          correct: 2,
+          translation: "فين طبقة النقل في الـ layered network architecture؟",
+          explanation:
+            "طبقة النقل بين طبقة التطبيق (فوقها) وطبقة الشبكة (تحتها) — ده دور مركزي. مش بين physical و data link، ولا بين network و data link، ولا فوق application.",
+          tags: ["Transport Layer", "Architecture"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1 (intro)",
+          likely: "high",
+        },
+        {
+          q: "2. The transport layer provides communication services directly to:",
+          options: [
+            "Application processes running on different hosts",
+            "Routers along the path",
+            "The physical links only",
+            "DNS servers only",
+          ],
+          correct: 0,
+          translation: "طبقة النقل بتوفّر خدمات اتصال مباشرة لـ إيه؟",
+          explanation:
+            "للـ application processes على hosts مختلفة. ده دورها الأساسي. مش للـ routers ولا الـ links ولا DNS.",
+          tags: ["Transport Layer", "Application processes"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1 (intro)",
+          likely: "high",
+        },
+        {
+          q: "3. A transport-layer protocol provides for logical communication between:",
+          options: [
+            "Application processes running on different hosts",
+            "Hosts only",
+            "Physical links only",
+            "Routers only",
+          ],
+          correct: 0,
+          translation:
+            "بروتوكول طبقة النقل بيوفّر logical communication بين إيه؟",
+          explanation:
+            "بين application processes على hosts مختلفة. من منظور التطبيق، كأن الـ hosts متصلين مباشرة رغم إنهم ممكن يكونوا على جانبي الكوكب.",
+          tags: ["Transport Layer", "Logical communication"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: '4. By "logical communication" between processes, we mean that:',
+          options: [
+            "The processes are physically connected by a wire",
+            "From an application's perspective, it is as if the hosts running the processes were directly connected",
+            "The routers handle the application messages directly",
+            "The transport layer routes packets through the network core",
+          ],
+          correct: 1,
+          translation: 'إيه معنى "logical communication" بين العمليات؟',
+          explanation:
+            "من منظور التطبيق، كأن الـ hosts متصلة مباشرة — رغم إن في الواقع ممكن يكونوا على جانبي الكوكب متصلين عبر راوترز وروابط.",
+          tags: ["Transport Layer", "Logical communication", "Definition"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "5. On the sending side, the transport layer converts application-layer messages into:",
+          options: [
+            "Network-layer datagrams",
+            "Transport-layer segments",
+            "Physical bits",
+            "Application frames",
+          ],
+          correct: 1,
+          translation:
+            "على جانب الإرسال، طبقة النقل بتحوّل رسائل التطبيق لـ إيه؟",
+          explanation:
+            "لـ transport-layer segments. الـ network layer بعدها بـ encapsulate الـ segment جوه datagram. مش datagrams (ده شغل الـ network layer).",
+          tags: ["Transport Layer", "Segments", "Sending side"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "6. How does the transport layer create a transport-layer segment?",
+          options: [
+            "By routing the message through the network core",
+            "By encrypting the entire application message",
+            "By compressing the message into a single byte",
+            "(Possibly) breaking the application messages into smaller chunks and adding a transport-layer header to each chunk",
+          ],
+          correct: 3,
+          translation: "إزاي طبقة النقل بتعمل transport-layer segment؟",
+          explanation:
+            "بتكسر رسالة التطبيق لـ chunks أصغيرة (لو لزم) وتضيف transport-layer header لكل chunk. ده اللي بيعمل segment. مش تشفير ولا توجيه ولا ضغط.",
+          tags: ["Transport Layer", "Segments", "Encapsulation"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "7. The transport layer passes the segment to the network layer, where the segment is:",
+          options: [
+            "Discarded and re-created at the destination",
+            "Encapsulated within a network-layer packet (a datagram) and sent to the destination",
+            "Sent directly to the application layer at the destination",
+            "Stored in the routers along the path",
+          ],
+          correct: 1,
+          translation:
+            "طبقة النقل بتسلم الـ segment لطبقة الشبكة، وهناك الـ segment بيتعمله إيه؟",
+          explanation:
+            "بيـ encapsulate جوه network-layer packet (datagram) ويتابع للـ destination. الـ routers بتشتغل على الـ network-layer fields فقط.",
+          tags: ["Transport Layer", "Network layer", "Encapsulation"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "8. Network routers act on which fields of the datagram?",
+          options: [
+            "Only the network-layer fields; they do not examine the transport-layer segment fields",
+            "Only the transport-layer fields",
+            "Only the application-layer fields",
+            "Both the network-layer and transport-layer fields",
+          ],
+          correct: 0,
+          translation: "الـ routers بتشتغل على أي fields في الـ datagram؟",
+          explanation:
+            "على network-layer fields فقط — ما بتفحصش transport-layer segment fields. ده نقطة مهمة: الـ transport layer بتعيش في الـ end systems فقط.",
+          tags: ["Routers", "Network layer", "Transport layer"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "9. On the receiving side, what does the network layer do with the transport-layer segment?",
+          options: [
+            "Forwards it to another router",
+            "Encrypts it before passing to the transport layer",
+            "Extracts it from the datagram and passes it up to the transport layer",
+            "Discards it after routing",
+          ],
+          correct: 2,
+          translation:
+            "على جانب الاستقبال، طبقة الشبكة بتعمل إيه بالـ transport-layer segment؟",
+          explanation:
+            "بتـ extract الـ segment من الـ datagram وبتسلمه لطبقة النقل فوق. بعدها طبقة النقل بتعالجه وتسلم البيانات للتطبيق.",
+          tags: ["Network layer", "Receiving side"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "10. How many transport-layer protocols does the Internet make available to network applications?",
+          options: [
+            "One — only TCP",
+            "Three — TCP, UDP, and ICMP",
+            "Two — TCP and UDP",
+            "Five",
+          ],
+          correct: 2,
+          translation: "الإنترنت بيوفّر كام بروتوكول نقل للتطبيقات؟",
+          explanation:
+            "بروتوكولين: TCP و UDP. كل واحد بيوفّر set مختلف من خدمات النقل للتطبيق.",
+          tags: ["Transport Layer", "TCP", "UDP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "11. Whereas a transport-layer protocol provides logical communication between processes, a network-layer protocol provides logical communication between:",
+          options: ["Hosts", "Processes", "Applications", "Routers"],
+          correct: 0,
+          translation:
+            "بروتوكول طبقة الشبكة بيوفّر logical communication بين إيه (مقابل طبقة النقل اللي بين العمليات)؟",
+          explanation:
+            "بين hosts. ده فرق أساسي: transport = process-to-process، network = host-to-host. النقطة دي subtle بس مهمة.",
+          tags: ["Transport vs Network", "Hosts", "Processes"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "12. The distinction between transport-layer (process-to-process) and network-layer (host-to-host) communication is:",
+          options: [
+            "Irrelevant",
+            "Subtle but important",
+            "False — both are process-to-process",
+            "False — both are host-to-host",
+          ],
+          correct: 1,
+          translation:
+            "الفرق بين transport layer (process-to-process) و network layer (host-to-host) إيه طبيعته؟",
+          explanation:
+            "subtle لكن مهم. الـ transport بيكمل شغل الـ network بيوصله من host-host لـ process-process. تعريف مهم الدكتور بيشدد عليه.",
+          tags: ["Transport vs Network", "Distinction"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "13. Where do transport-layer protocols live?",
+          options: [
+            "In the physical links",
+            "In the end systems",
+            "In the network core",
+            "In the routers",
+          ],
+          correct: 1,
+          translation: "بروتوكولات طبقة النقل بتعيش فين؟",
+          explanation:
+            "في الـ end systems. مش في الـ routers ولا في الـ network core. ده عشان كده الـ routers ما بتعترفش بمعلومات الـ transport.",
+          tags: ["Transport Layer", "End systems"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "14. Within an end system, what does a transport protocol do (regarding the network edge)?",
+          options: [
+            "Encrypts messages for the network layer",
+            "Moves messages from application processes to the network edge (the network layer) and vice versa",
+            "Manages the routers along the path",
+            "Routes packets through the network core",
+          ],
+          correct: 1,
+          translation:
+            "جوه الـ end system، بروتوكول النقل بيعمل إيه بالنسبة للـ network edge؟",
+          explanation:
+            "بيحرّك رسائل من العمليات لـ network edge (لـ network layer) والعكس. مالوش أي دور في إزاي الرسائل بتتحرك جوه الـ network core.",
+          tags: ["Transport Layer", "Network edge"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "15. Does a transport protocol have any say about how messages are moved within the network core?",
+          options: [
+            "No, it does not have any say",
+            "Yes, it routes the messages itself",
+            "Yes, it encrypts them inside the core",
+            "Yes, it controls the routers",
+          ],
+          correct: 0,
+          translation:
+            "هل بروتوكول النقل عنده أي رأي في إزاي الرسائل بتتحرك جوه الـ network core؟",
+          explanation:
+            "لا — مالوش أي دور. الـ transport بتعيش في الـ end systems فقط والـ routers ما بتعترفش بمعلوماتها.",
+          tags: ["Transport Layer", "Network core"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "16. Intermediate routers recognize what information that the transport layer may have added to application messages?",
+          options: [
+            "They act on it and route based on it",
+            "They encrypt it before forwarding",
+            "They neither act on nor recognize any such information",
+            "They recognize it but do not act on it",
+          ],
+          correct: 2,
+          translation:
+            "الـ routers الوسيطة بتعترف بإيه من معلومات طبقة النقل اللي ممكن تكون اتضافت؟",
+          explanation:
+            "لا بتعترف ولا بتشتغل عليها. الـ routers بتشتغل على network-layer fields فقط — معلومات الـ transport ليها شأنها بس في الـ end systems.",
+          tags: ["Routers", "Transport Layer"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "17. A computer network may make available how many transport protocols?",
+          options: [
+            "None — applications handle transport themselves",
+            "Only one",
+            "Multiple, with each protocol offering a different service model to applications",
+            "Always exactly three",
+          ],
+          correct: 2,
+          translation: "الشبكة ممكن توفّر كام بروتوكول نقل؟",
+          explanation:
+            "ممكن كذا بروتوكول، كل واحد بيوفّر service model مختلف للتطبيقات. الإنترنت عنده TCP و UDP كمثال.",
+          tags: ["Transport Layer", "Service models"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "18. The services that a transport protocol can provide are often constrained by:",
+          options: [
+            "The DNS resolver",
+            "The physical layer's bandwidth only",
+            "The application layer's preferences",
+            "The service model of the underlying network-layer protocol",
+          ],
+          correct: 3,
+          translation:
+            "الخدمات اللي بروتوكول النقل يقدر يوفّرها بتبقى مقيدة غالبًا بـ إيه؟",
+          explanation:
+            "بـ service model بتاع الـ network-layer protocol اللي تحته. لو الـ network ما بيوفرش delay/bandwidth guarantees، الـ transport ما يقدرش يوفرها للتطبيقات.",
+          tags: ["Transport Layer", "Network Layer", "Constraints"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "19. If the network-layer protocol cannot provide delay or bandwidth guarantees, what can the transport-layer protocol do?",
+          options: [
+            "It can still provide them by using a different physical link",
+            "It can still provide them by buffering in the routers",
+            "It cannot provide delay or bandwidth guarantees for application messages sent between processes",
+            "It can still provide them by encrypting the segments",
+          ],
+          correct: 2,
+          translation:
+            "لو الـ network-layer ما بيوفرش delay أو bandwidth guarantees، الـ transport-layer يقدر يعمل إيه؟",
+          explanation:
+            "ما يقدرش يوفّرها. الـ transport بتبقى constrained بـ service model بتاع الـ network اللي تحتها.",
+          tags: ["Transport Layer", "Network Layer", "Constraints"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "20. What service can a transport protocol offer even when the underlying network protocol is unreliable (loses, garbles, or duplicates packets)?",
+          options: [
+            "Lower delay than the network layer",
+            "Reliable data transfer service to an application",
+            "Encryption of all messages",
+            "Higher bandwidth than the network layer",
+          ],
+          correct: 1,
+          translation:
+            "إيه خدمة بروتوكول النقل يقدر يوفّرها حتى لو الـ network protocol مش موثوق؟",
+          explanation:
+            "reliable data transfer service. ده مثال على إن الـ transport يقدر يضيف خدمات حتى لو الـ network تحتها ما بيوفرشها — TCP بيعمل كده فوق IP.",
+          tags: ["Transport Layer", "Reliable data transfer"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "21. What can a transport protocol use to guarantee that application messages are not read by intruders, even when the network layer cannot guarantee confidentiality?",
+          options: [
+            "Encryption",
+            "Acknowlegments",
+            "Sequence numbers",
+            "Timers",
+          ],
+          correct: 0,
+          translation:
+            "بماذا يمكن لبروتوكول النقل أن يضمن عدم قراءة الرسائل من قبل المتسللين، حتى لو كانت طبقة الشبكة لا تستطيع؟",
+          explanation:
+            "encryption. ده موضوع Chapter 8 (network security). نقطة مهمة: الـ transport يقدر يضيف security فوق ما الـ network يوفره.",
+          tags: ["Transport Layer", "Encryption", "Security"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "22. The Internet makes how many distinct transport-layer protocols available to the application layer?",
+          options: ["One", "Two", "Four", "Three"],
+          correct: 1,
+          translation:
+            "الإنترنت بيوفّر كام بروتوكول نقل مختلف للـ application layer؟",
+          explanation:
+            "بروتوكولين: UDP و TCP. نقطة أساسية في بداية القسم 3.1.2.",
+          tags: ["Internet Transport", "TCP", "UDP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (intro)",
+          likely: "high",
+        },
+        {
+          q: "23. UDP (User Datagram Protocol) provides which type of service to the invoking application?",
+          options: [
+            "Reliable, connection-oriented service",
+            "Unreliable, connection-oriented service",
+            "Reliable, connectionless service",
+            "Unreliable, connectionless service",
+          ],
+          correct: 3,
+          translation: "UDP بيوفّر إيه نوع خدمة للتطبيق؟",
+          explanation:
+            "unreliable + connectionless. عكس TCP اللي reliable + connection-oriented. تعريف أساسي.",
+          tags: ["UDP", "Services"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "24. TCP (Transmission Control Protocol) provides which type of service to the invoking application?",
+          options: [
+            "Reliable, connection-oriented service",
+            "Reliable, connectionless service",
+            "Unreliable, connectionless service",
+            "Unreliable, connection-oriented service",
+          ],
+          correct: 0,
+          translation: "TCP بيوفّر إيه نوع خدمة للتطبيق؟",
+          explanation: "reliable + connection-oriented. عكس UDP. تعريف أساسي.",
+          tags: ["TCP", "Services"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "25. When designing a network application, the application developer must:",
+          options: [
+            "Use only TCP",
+            "Specify one of the two transport protocols (TCP or UDP)",
+            "Use only UDP",
+            "Implement their own transport protocol",
+          ],
+          correct: 1,
+          translation: "لما تطور network application، المطور لازم يعمل إيه؟",
+          explanation:
+            "يحدد واحد من البروتوكولين (TCP أو UDP). ما يقدرش يكتب بروتوكول نقله الخاص، ولا هو مضطر يستخدم واحد بس.",
+          tags: ["Transport Layer", "Application developer"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "26. In this book, the transport-layer packet is referred to as:",
+          options: ["A bit", "A segment", "A frame", "A datagram"],
+          correct: 1,
+          translation: "في الكتاب ده، الـ transport-layer packet بيتسمى إيه؟",
+          explanation:
+            'segment. الكتاب اختار ده عشان يتجنب اللبس. RFCs بتستخدم "datagram" للـ UDP ساعات وللـ network-layer ساعات.',
+          tags: ["Transport Layer", "Terminology", "Segment"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (terminology)",
+          likely: "high",
+        },
+        {
+          q: "27. The Internet's network-layer protocol is called:",
+          options: ["HTTP", "UDP", "TCP", "IP (Internet Protocol)"],
+          correct: 3,
+          translation: "بروتوكول طبقة الشبكة في الإنترنت بيتسمى إيه؟",
+          explanation:
+            "IP (Internet Protocol). TCP و UDP بروتوكولات نقل، HTTP بروتوكول تطبيق. تعريف أساسي.",
+          tags: ["Network Layer", "IP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "28. What kind of communication does IP provide?",
+          options: [
+            "Logical communication between routers",
+            "Logical communication between hosts",
+            "Logical communication between processes",
+            "Physical communication between hosts",
+          ],
+          correct: 1,
+          translation: "IP بيوفّر إيه نوع اتصال؟",
+          explanation:
+            "logical communication بين hosts. الـ transport layer (TCP/UDP) بيوصل ده لـ process-to-process.",
+          tags: ["IP", "Logical communication", "Hosts"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "29. The IP service model is best described as:",
+          options: [
+            "A best-effort delivery service",
+            "A reliable delivery service",
+            "A guaranteed-bandwidth delivery service",
+            "A connection-oriented delivery service",
+          ],
+          correct: 0,
+          translation: "IP service model بيتوصف بإيه؟",
+          explanation:
+            "best-effort delivery service. IP بيعمل جهده يوصل الـ segments، بس ما بيضمنش حاجة. تعريف أساسي.",
+          tags: ["IP", "Best-effort", "Service model"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "30. Which of the following does IP NOT guarantee?",
+          options: [
+            "Segment delivery only",
+            "Integrity of data in segments only",
+            "All of these: segment delivery, orderly delivery, and integrity of data in segments",
+            "Orderly delivery of segments only",
+          ],
+          correct: 2,
+          translation: "IP ما بيضمنش إيه؟",
+          explanation:
+            'ما بيضمنش أي حاجة من التلاتة: لا وصول، لا ترتيب، لا سلامة البيانات. عشان كده IP اسمه unreliable service. ده عكس الـ All/None of the above، إجابة "All of these" صحيحة كتفصيل هنا.',
+          tags: ["IP", "Unreliable", "Guarantees"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "31. IP is said to be an unreliable service because:",
+          options: [
+            "It does not guarantee segment delivery, orderly delivery, or integrity of the data in segments",
+            "It always loses packets on purpose",
+            "It only works on local networks",
+            "It encrypts all segments",
+          ],
+          correct: 0,
+          translation: "ليه IP بيتوصف بأنه unreliable service؟",
+          explanation:
+            "لأنه ما بيضمنش أي حاجة: لا وصول الـ segments، لا ترتيبها، لا سلامة بياناتها. تعريف مهم.",
+          tags: ["IP", "Unreliable", "Definition"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "32. Every host has at least one:",
+          options: [
+            "Physical port number",
+            "DNS resolver",
+            "Network-layer address (IP address)",
+            "Transport-layer address only",
+          ],
+          correct: 2,
+          translation: "كل host عنده على الأقل إيه؟",
+          explanation:
+            "IP address (network-layer address). نقطة مهمة: كل host في الإنترنت عنده IP address. هنفصلها في Chapter 4.",
+          tags: ["IP address", "Hosts"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "33. The most fundamental responsibility of UDP and TCP is to:",
+          options: [
+            "Replace IP with a faster protocol",
+            "Provide routing within the network core",
+            "Extend IP's host-to-host delivery service to a process-to-process delivery service",
+            "Encrypt all application messages",
+          ],
+          correct: 2,
+          translation: "إيه الـ fundamental responsibility بتاع UDP و TCP؟",
+          explanation:
+            "يوسّعوا host-to-host delivery بتاع IP لـ process-to-process delivery. ده اسمه transport-layer multiplexing and demultiplexing.",
+          tags: ["UDP", "TCP", "Multiplexing"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "34. Extending host-to-host delivery to process-to-process delivery is called:",
+          options: [
+            "Transport-layer multiplexing and demultiplexing",
+            "Physical-layer modulation",
+            "Application-layer caching",
+            "Network-layer routing",
+          ],
+          correct: 0,
+          translation:
+            "توسيع host-to-host delivery لـ process-to-process delivery بيتسمى إيه؟",
+          explanation:
+            "transport-layer multiplexing and demultiplexing. هنقاشه بالتفصيل في القسم اللي after.",
+          tags: ["Multiplexing", "Demultiplexing", "Definition"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "35. UDP and TCP also provide integrity checking by:",
+          options: [
+            "Compressing the segments",
+            "Encrypting the segments",
+            "Including error-detection fields in their segments' headers",
+            "Routing through different paths",
+          ],
+          correct: 2,
+          translation: "UDP و TCP بيوفّروا integrity checking بإيه؟",
+          explanation:
+            "بيضيفوا error-detection fields في headers بتاعتهم. ده بتاع الخدمة التانية من الخدمتين الأساسيين.",
+          tags: ["UDP", "TCP", "Error detection", "Integrity"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "36. How many minimal transport-layer services does UDP provide?",
+          options: [
+            "One — only process-to-process data delivery",
+            "Three — delivery, error checking, and congestion control",
+            "Two — process-to-process data delivery and error checking",
+            "Four — delivery, error checking, congestion control, and reliability",
+          ],
+          correct: 2,
+          translation: "UDP بيوفّر كام خدمة نقل أساسية؟",
+          explanation:
+            "خدمتين فقط: process-to-process data delivery + error checking. مش بيوفّر reliable transfer ولا congestion control.",
+          tags: ["UDP", "Minimal services"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "37. Like IP, UDP is said to be an unreliable service because:",
+          options: [
+            "It always delays packets by 5 seconds",
+            "It encrypts data so the destination cannot read it",
+            "It does not guarantee that data sent by one process will arrive intact (or at all) to the destination process",
+            "It only works on local networks",
+          ],
+          correct: 2,
+          translation: "زي IP، UDP بيتوصف بأنه unreliable ليه؟",
+          explanation:
+            "ما بيضمنش إن البيانات المبعوتة توصل سليمة (أو توصل أصلاً) للـ process المستقبلة. تعريف مهم.",
+          tags: ["UDP", "Unreliable"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "38. Compared to UDP, TCP offers several additional services to applications. Which is one of them?",
+          options: [
+            "Smaller segment size",
+            "Connectionless communication",
+            "Lower latency than UDP",
+            "Reliable data transfer",
+          ],
+          correct: 3,
+          translation:
+            "بالنسبة لـ UDP، TCP بيوفّر خدمات إضافية. إيه واحدة منها؟",
+          explanation:
+            "reliable data transfer (وأيضاً congestion control). UDP ما بيوفرش أي حاجة من الاتنين.",
+          tags: ["TCP", "Reliable data transfer"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "39. Which techniques does TCP use to ensure data is delivered correctly and in order?",
+          options: [
+            "Compression and decompression",
+            "Routing through different paths",
+            "Flow control, sequence numbers, acknowledgments, and timers",
+            "Encryption only",
+          ],
+          correct: 2,
+          translation:
+            "TCP بيستخدم إيه تقنيات عشان يضمن وصول البيانات صح وبالترتيب؟",
+          explanation:
+            "flow control, sequence numbers, acknowledgments, timers. النقاط دي هنقاشها بالتفصيل في الفصل.",
+          tags: ["TCP", "Reliable data transfer techniques"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "40. TCP converts IP's unreliable service between end systems into:",
+          options: [
+            "A reliable data transport service between processes",
+            "An encrypted service only",
+            "A connectionless service",
+            "A faster, less reliable service",
+          ],
+          correct: 0,
+          translation:
+            "TCP بيحوّل خدمة IP الـ unreliable بين الـ end systems لـ إيه؟",
+          explanation:
+            "لـ reliable data transport service بين العمليات. ده دور TCP الأساسي فوق IP.",
+          tags: ["TCP", "Reliable data transfer", "IP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "41. In addition to reliable data transfer, what other major service does TCP provide?",
+          options: [
+            "Encryption of all messages",
+            "Connectionless communication",
+            "Faster routing than IP",
+            "Congestion control",
+          ],
+          correct: 3,
+          translation:
+            "بالإضافة لـ reliable data transfer، TCP بيوفّر إيه خدمة تانية؟",
+          explanation:
+            "congestion control. بيمنع أي TCP connection من إنه يغرق الـ links و الـ routers بـ traffic زيادة.",
+          tags: ["TCP", "Congestion control"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "42. TCP congestion control prevents any one TCP connection from:",
+          options: [
+            "Sending more than one packet",
+            "Using UDP as a transport",
+            "Swamping the links and routers between communicating hosts with an excessive amount of traffic",
+            "Encrypting all data",
+          ],
+          correct: 2,
+          translation: "TCP congestion control بيمنع أيه؟",
+          explanation:
+            "يمنع أي TCP connection من إنه يغرق الـ links و الـ routers بـ traffic زيادة. ده لحماية الشبكة كلها.",
+          tags: ["TCP", "Congestion control"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "43. Compared to TCP traffic, UDP traffic is:",
+          options: [
+            "Strictly regulated by TCP",
+            "Regulated by the routers",
+            "Always limited to 1 Mbps",
+            "Unregulated — an application using UDP can send at any rate it pleases, for as long as it pleases",
+          ],
+          correct: 3,
+          translation: "بالنسبة لـ TCP traffic، الـ UDP traffic بيتوصف بإيه؟",
+          explanation:
+            "unregulated. التطبيق يقدر يبعت بأي معدل و لأي مدة من غير ما حد يوقفه. ده فرق أساسي بين TCP و UDP.",
+          tags: ["UDP", "Unregulated", "TCP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "44. An application using UDP transport can:",
+          options: [
+            "Only send for a maximum of 60 seconds",
+            "Only send during non-peak hours",
+            "Only send at a rate determined by the routers",
+            "Send at any rate it pleases, for as long as it pleases",
+          ],
+          correct: 3,
+          translation: "التطبيق اللي بيستخدم UDP يقدر يعمل إيه؟",
+          explanation:
+            "يبعت بأي معدل و لأي مدة من غير تنظيم. ده ممكن يسبب مشاكل congestion للشبكة — لكنها مشكلة الشبكة مش التطبيق.",
+          tags: ["UDP", "Unregulated traffic"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "45. Which two minimal services are the only services that UDP provides?",
+          options: [
+            "Encryption and authentication",
+            "Reliable data transfer and congestion control",
+            "Routing and forwarding",
+            "Process-to-process data delivery and error checking",
+          ],
+          correct: 3,
+          translation:
+            "إيه الخدمتين الأساسيين اللي UDP بيوفّرهم وبيقصروا عليهم؟",
+          explanation:
+            "process-to-process data delivery + error checking.UDP ما بيوفرش reliable transfer ولا congestion control.",
+          tags: ["UDP", "Minimal services"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "46. The transport layer in the Internet is the central piece of the layered network architecture because it:",
+          options: [
+            "Manages the physical layer connections",
+            "Routes packets through the network core",
+            "Encodes data into bits for transmission",
+            "Provides communication services directly to application processes running on different hosts",
+          ],
+          correct: 3,
+          translation:
+            "ليه طبقة النقل بتعتبر central piece في الـ layered architecture؟",
+          explanation:
+            "لأنها بتوفّر خدمات اتصال مباشرة لـ application processes على hosts مختلفة. ده دورها المركزي.",
+          tags: ["Transport Layer", "Architecture"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1 (intro)",
+          likely: "high",
+        },
+        {
+          q: "47. Which protocol's service model constrains the services that a transport protocol can offer?",
+          options: [
+            "The physical-layer protocol",
+            "The underlying network-layer protocol",
+            "The data-link-layer protocol",
+            "The application-layer protocol",
+          ],
+          correct: 1,
+          translation: "بروتوكول إيه اللي بيقيّد خدمات الـ transport؟",
+          explanation:
+            "الـ network-layer protocol اللي تحت. لو الـ network ما بيوفرش delay/bandwidth guarantees، الـ transport ما يقدرش يوفرها.",
+          tags: ["Transport Layer", "Network Layer"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          q: "48. When the receiving transport layer processes the received segment, it:",
+          options: [
+            "Discards it to save space",
+            "Makes the data in the segment available to the receiving application",
+            "Forwards it to another router",
+            "Encrypts it before delivery",
+          ],
+          correct: 1,
+          translation:
+            "لما طبقة النقل على جانب الاستقبال تعالج الـ segment، بتعمل إيه؟",
+          explanation:
+            "بتسلم البيانات للتطبيق المستقبل. ده آخر خطوة في رحلة الـ segment من المرسل للمستقبل.",
+          tags: ["Transport Layer", "Receiving side"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          q: "49. Which is NOT a service that the IP service model guarantees?",
+          options: [
+            "Orderly delivery of segments",
+            "All of these are NOT guaranteed by IP",
+            "Segment delivery",
+            "Integrity of the data in segments",
+          ],
+          correct: 1,
+          translation: "إيه اللي مش خدمة بيضمنها IP؟",
+          explanation:
+            'IP ما بيضمنش أي حاجة من التلاتة. عشان كده اسمه unreliable service. ملاحظة: "All of these are NOT guaranteed" بمعنى إن الـ IP مش بيضمن أي واحدة منهم — مختلف عن "All of the above" في صياغة سؤال عادي.',
+          tags: ["IP", "Unreliable"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "50. Which statement best describes the relationship between the transport layer and the network layer?",
+          options: [
+            "The two layers are independent and unrelated",
+            "The network layer extends the transport layer's process-to-process delivery",
+            "The transport layer replaces the network layer",
+            "The transport layer extends the host-to-host delivery of the network layer to a process-to-process delivery",
+          ],
+          correct: 3,
+          translation: "إيه العبارة الأصح عن علاقة طبقة النقل بطبقة الشبكة؟",
+          explanation:
+            "الـ transport بيتوسّع host-to-host بتاع الـ network لـ process-to-process. العلاقة دي hierarchical ومهمة.",
+          tags: ["Transport Layer", "Network Layer", "Relationship"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1 + 3.1.2",
+          likely: "high",
+        },
+        {
+          q: "51. The Internet literature (RFCs) refers to the TCP packet as:",
+          options: ["A segment", "A message", "A datagram", "A frame"],
+          correct: 0,
+          translation: "أدبيات الإنترنت (RFCs) بتعرف الـ TCP packet بإيه؟",
+          explanation:
+            "segment. لكن بتقول إن UDP packet ساعات بيتسمى datagram — ده اللي بيخلق لبس.",
+          tags: ["RFC", "Terminology", "Segment"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (terminology)",
+          likely: "medium",
+        },
+        {
+          q: "52. The Internet literature often refers to the UDP packet as:",
+          options: ["A bit", "A frame", "A datagram", "A segment"],
+          correct: 2,
+          translation: "أدبيات الإنترنت بتعرف الـ UDP packet ساعات بإيه؟",
+          explanation:
+            'datagram. ده بيخلق لبس لإن نفس الاسم بيتستخدم للـ network-layer packet. عشان كده الكتاب اختار "segment" للاتنين.',
+          tags: ["RFC", "Terminology", "Datagram"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (terminology)",
+          likely: "medium",
+        },
+        {
+          q: '53. Why does this book refer to both TCP and UDP packets as "segments"?',
+          options: [
+            'To reserve the term "datagram" for the network-layer packet and avoid confusion',
+            "Because the RFCs require it",
+            "Because TCP and UDP are the same protocol",
+            "Because the network layer does not use datagrams",
+          ],
+          correct: 0,
+          translation: 'ليه الكتاب بيسمي TCP و UDP packets بـ "segments"؟',
+          explanation:
+            'عشان يحجز "datagram" للـ network-layer packet ويقلل اللبس. ملحوظة منهجية مهمة.',
+          tags: ["Terminology", "Segment", "Datagram"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (terminology)",
+          likely: "medium",
+        },
+        {
+          q: "54. Which layer is responsible for breaking application messages into smaller chunks (if needed) on the sending side?",
+          options: [
+            "The data link layer",
+            "The physical layer",
+            "The network layer",
+            "The transport layer",
+          ],
+          correct: 3,
+          translation:
+            "إيه الطبقة المسؤولة عن تكسير رسائل التطبيق لـ chunks أصغر (لو لزم) على جانب الإرسال؟",
+          explanation:
+            "طبقة النقل. بـ (possibly) break لـ chunks أصغر وبتضيف header لكل chunk.",
+          tags: ["Transport Layer", "Sending side"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "medium",
+        },
+        {
+          q: '55. The book uses the term "datagram" to refer specifically to:',
+          options: [
+            "A network-layer packet",
+            "A transport-layer packet (TCP)",
+            "An application-layer message",
+            "A transport-layer packet (UDP)",
+          ],
+          correct: 0,
+          translation: 'الكتاب بيستخدم "datagram" لـ إيه بالظبط؟',
+          explanation:
+            "network-layer packet. عشان يتجنب اللبس مع UDP packet اللي RFCs ساعات بتسميه datagram.",
+          tags: ["Terminology", "Datagram"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (terminology)",
+          likely: "medium",
+        },
+        {
+          q: "56. What is the chapter's discussion of network security (Chapter 8) relevant to in this section?",
+          options: [
+            "UDP cannot use encryption",
+            "TCP requires encryption for all messages",
+            "IP encrypts all packets by default",
+            "A transport protocol can use encryption to guarantee that application messages are not read by intruders",
+          ],
+          correct: 3,
+          translation: "إيه علاقة Chapter 8 (network security) بالقسم ده؟",
+          explanation:
+            "بيوضّح إن الـ transport يقدر يستخدم encryption يحمي بيها الرسائل من المتسللين — حتى لو الـ network layer ما بيضمنش confidentiality. ده مثال على إضافة الـ transport لخدمات فوق الـ network.",
+          tags: ["Security", "Encryption"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: '1. Define the role of the transport layer in the layered network architecture, and explain what is meant by "logical communication between processes".',
+          translation:
+            'عرّف دور طبقة النقل في الـ layered network architecture، واشرح إيه معنى "logical communication between processes".',
+          answer:
+            "The transport layer resides between the application layer and the network layer and is a central piece of the layered network architecture. It has the critical role of providing communication services directly to the application processes running on different hosts.\nA transport-layer protocol provides for logical communication between application processes running on different hosts. By logical communication, we mean that from an application's perspective, it is as if the hosts running the processes were directly connected; in reality, the hosts may be on opposite sides of the planet, connected via numerous routers and a wide range of link types.\nApplication processes use the logical communication provided by the transport layer to send messages to each other, free from the worry of the details of the physical infrastructure used to carry these messages.",
+          tags: ["Transport Layer", "Logical communication", "Definition"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1 (intro)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain what the transport layer does on the sending side and on the receiving side of an end system.",
+          translation:
+            "اشرح إيه اللي طبقة النقل بتعمله على جانب الإرسال وعلى جانب الاستقبال في الـ end system.",
+          answer:
+            "On the sending side, the transport layer converts the application-layer messages it receives from a sending application process into transport-layer packets, known as transport-layer segments in Internet terminology.\nThis is done by (possibly) breaking the application messages into smaller chunks and adding a transport-layer header to each chunk to create the transport-layer segment. The transport layer then passes the segment to the network layer at the sending end system, where the segment is encapsulated within a network-layer packet (a datagram) and sent to the destination.\nIt's important to note that network routers act only on the network-layer fields of the datagram; they do not examine the fields of the transport-layer segment encapsulated with the datagram.\nOn the receiving side, the network layer extracts the transport-layer segment from the datagram and passes the segment up to the transport layer. The transport layer then processes the received segment, making the data in the segment available to the receiving application.",
+          tags: ["Transport Layer", "Sending side", "Receiving side"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Distinguish between the transport layer and the network layer, in terms of what each provides logical communication between and where each protocol lives.",
+          translation:
+            "بيّن الفرق بين طبقة النقل وطبقة الشبكة، من حيث إيه اللي كل واحدة بتوفّر logical communication بينه وفين كل بروتوكول بتعيش.",
+          answer:
+            "Whereas a transport-layer protocol provides logical communication between processes running on different hosts, a network-layer protocol provides logical communication between hosts. This distinction is subtle but important.\nTransport-layer protocols live in the end systems. Within an end system, a transport protocol moves messages from application processes to the network edge (that is, the network layer) and vice versa, but it doesn't have any say about how the messages are moved within the network core.\nIn fact, intermediate routers neither act on, nor recognize, any information that the transport layer may have added to the application messages.\nThe network layer (e.g., IP in the Internet), in contrast, is what gets messages from one host to another across the network core, and routers in the core act on the network-layer fields of the datagram.",
+          tags: ["Transport vs Network", "Distinction"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Explain how the service model of the underlying network-layer protocol constrains the services that a transport protocol can offer, and give an example of a service that a transport protocol can still offer despite an unreliable network layer.",
+          translation:
+            "اشرح إزاي service model بتاع الـ network-layer protocol بيقيّد خدمات الـ transport، واذكر مثال لخدمة الـ transport يقدر يوفّرها رغم إن الـ network مش موثوق.",
+          answer:
+            "A computer network may make available multiple transport protocols, with each protocol offering a different service model to applications. The services that a transport protocol can provide are often constrained by the service model of the underlying network-layer protocol.\nIf the network-layer protocol cannot provide delay or bandwidth guarantees for transport-layer segments sent between hosts, then the transport-layer protocol cannot provide delay or bandwidth guarantees for application messages sent between processes.\nNevertheless, certain services can be offered by a transport protocol even when the underlying network protocol doesn't offer the corresponding service at the network layer:\n- A transport protocol can offer reliable data transfer service to an application even when the underlying network protocol is unreliable — that is, even when the network protocol loses, garbles, or duplicates packets. (TCP over IP is exactly this case.)\n- A transport protocol can use encryption to guarantee that application messages are not read by intruders, even when the network layer cannot guarantee the confidentiality of transport-layer segments (a topic explored in Chapter 8 on network security).",
+          tags: [
+            "Transport Layer",
+            "Network Layer",
+            "Constraints",
+            "Reliable data transfer",
+          ],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. List and briefly explain the two transport-layer protocols available in the Internet and the services each one provides.",
+          translation:
+            "اكتب واشرح باختصار البروتوكولين بتوع النقل اللي الإنترنت بيوفّرهم والخدمات اللي كل واحد بيوفّرها.",
+          answer:
+            "The Internet makes two distinct transport-layer protocols available to the application layer:\n\n1. UDP (User Datagram Protocol) — provides an unreliable, connectionless service to the invoking application. UDP provides only two minimal services: process-to-process data delivery and error checking (via error-detection fields in its segment header). Like IP, UDP is an unreliable service — it does not guarantee that data sent by one process will arrive intact (or at all) to the destination process.\n\n2. TCP (Transmission Control Protocol) — provides a reliable, connection-oriented service to the invoking application. TCP offers several additional services beyond what UDP offers:\n   - Reliable data transfer: using flow control, sequence numbers, acknowledgments, and timers, TCP ensures that data is delivered from sending process to receiving process, correctly and in order. TCP thus converts IP's unreliable service between end systems into a reliable data transport service between processes.\n   - Congestion control: TCP prevents any one TCP connection from swamping the links and routers between communicating hosts with an excessive amount of traffic. UDP traffic, on the other hand, is unregulated — an application using UDP can send at any rate it pleases, for as long as it pleases.",
+          tags: ["TCP", "UDP", "Services", "Comparison"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '6. Define the IP service model and explain why IP is called an "unreliable service".',
+          translation:
+            'عرّف IP service model واشرح ليه IP بيتسمى "unreliable service".',
+          answer:
+            "The Internet's network-layer protocol has a name — IP, for Internet Protocol. IP provides logical communication between hosts.\nThe IP service model is a best-effort delivery service. This means that IP makes its \"best effort\" to deliver segments between communicating hosts, but it makes no guarantees.\nIn particular, IP does not guarantee:\n1. Segment delivery (a segment might be lost).\n2. Orderly delivery of segments (segments might arrive out of order).\n3. The integrity of the data in the segments (a segment's contents might be corrupted).\nFor these reasons, IP is said to be an unreliable service.\nWe also mention that every host has at least one network-layer address, a so-called IP address. IP addressing is examined in detail in Chapter 4.",
+          tags: ["IP", "Service model", "Best-effort", "Unreliable"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Define transport-layer multiplexing and demultiplexing, and explain why it is the most fundamental responsibility of UDP and TCP.",
+          translation:
+            "عرّف transport-layer multiplexing و demultiplexing، واشرح ليه ده الـ fundamental responsibility بتاع UDP و TCP.",
+          answer:
+            "Extending host-to-host delivery (provided by IP) to process-to-process delivery is called transport-layer multiplexing and demultiplexing.\nOn the sending side, multiple application processes on a single host can all send messages through the same transport layer; the transport layer multiplexes these messages onto the network layer (each with appropriate port/header information so the receiver can demultiplex them later).\nOn the receiving side, the transport layer demultiplexes incoming segments: it examines the segment headers to determine which application process should receive each segment, and passes the segment data to that process.\nThis is the most fundamental responsibility of UDP and TCP because it is what extends IP's host-to-host delivery into a process-to-process delivery service — which is exactly what applications need.\nIn addition to multiplexing/demultiplexing, UDP and TCP also provide integrity checking by including error-detection fields in their segments' headers. These two minimal transport-layer services — process-to-process data delivery and error checking — are the only two services that UDP provides; TCP adds reliable data transfer and congestion control on top.",
+          tags: ["Multiplexing", "Demultiplexing", "UDP", "TCP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Compare the services offered by TCP and UDP. State what each protocol does and does NOT provide.",
+          translation:
+            "قارن بين خدمات TCP و UDP. اكتب إيه اللي كل واحد بيوفّره وإيه اللي مش بيوفّره.",
+          answer:
+            "Both TCP and UDP extend IP's host-to-host delivery to process-to-process delivery (multiplexing/demultiplexing) and both provide integrity checking via error-detection fields in the segment header. Beyond these two minimal services, the two protocols differ substantially.\n\nUDP:\n- Provides: process-to-process data delivery and error checking (only two minimal services).\n- Does NOT provide: reliable data transfer, congestion control, connection setup, flow control, sequence numbers, acknowledgments, or timers.\n- Like IP, UDP is an unreliable service — it does not guarantee that data sent by one process will arrive intact (or at all) to the destination process.\n- UDP traffic is unregulated — an application can send at any rate it pleases, for as long as it pleases.\n\nTCP:\n- Provides: process-to-process data delivery, error checking, plus reliable data transfer (using flow control, sequence numbers, acknowledgments, and timers) and congestion control.\n- TCP is connection-oriented.\n- TCP converts IP's unreliable service between end systems into a reliable data transport service between processes.\n- TCP congestion control prevents any one TCP connection from swamping the links and routers between communicating hosts with an excessive amount of traffic.\n\nWhen designing a network application, the application developer must specify one of these two transport protocols.",
+          tags: ["TCP", "UDP", "Comparison"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Explain what is meant by TCP congestion control and how it differs from UDP traffic in terms of regulation.",
+          translation:
+            "اشرح إيه معنى TCP congestion control وإزاي يختلف عن UDP traffic من حيث التنظيم.",
+          answer:
+            "TCP provides congestion control. Loosely speaking, TCP congestion control prevents any one TCP connection from swamping the links and routers between communicating hosts with an excessive amount of traffic.\nEach TCP connection adjusts its sending rate in response to congestion signals (such as packet loss or delay) observed in the network, so that no single TCP connection unfairly consumes the available bandwidth at the expense of other connections or other traffic. (The exact mechanisms of TCP congestion control are studied in detail later in Chapter 3.)\nUDP traffic, on the other hand, is unregulated. An application using UDP transport can send at any rate it pleases, for as long as it pleases. There is no built-in mechanism in UDP to slow down in response to congestion.\nThis difference has practical consequences: a single UDP application could in principle overwhelm the network with its traffic, while a TCP connection will back off when congestion is detected.",
+          tags: ["TCP", "Congestion control", "UDP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '10. Why is the transport layer described as a "central piece of the layered network architecture"? Justify with at least three reasons based on the lecture.',
+          translation:
+            'ليه طبقة النقل بتعتبر "central piece of the layered network architecture"؟ برّر بثلاث أسباب على الأقل من المحاضرة.',
+          answer:
+            "The transport layer is described as a central piece of the layered network architecture for several reasons based on the lecture:\n\n1. Position in the stack: It resides between the application layer and the network layer, acting as the bridge between what applications need and what the network can provide.\n\n2. Direct service to applications: It has the critical role of providing communication services directly to the application processes running on different hosts. From the application's perspective, the transport layer provides logical communication, so processes can exchange messages without worrying about the underlying physical infrastructure.\n\n3. Hides network imperfections from applications: Even when the underlying network layer (IP) is unreliable (loses, garbles, or duplicates packets), a transport protocol such as TCP can offer reliable data transfer to applications — making the network imperfections invisible to the application.\n\n4. Adds new services beyond what the network offers: Beyond reliability, the transport layer can add congestion control (TCP) and even security via encryption (Chapter 8), neither of which is provided by the underlying network layer.",
+          tags: ["Transport Layer", "Architecture", "Role"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1 (intro)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Describe the journey of an application-layer message from a sending process to a receiving process, mentioning the role of the transport and network layers at each step.",
+          translation:
+            "وصّف رحلة application-layer message من process مرسِل لـ process مستقبِل، مع ذكر دور طبقة النقل وطبقة الشبكة في كل خطوة.",
+          answer:
+            "1. On the sending side, the sending application process creates an application-layer message and passes it down to the transport layer.\n2. The transport layer (possibly) breaks the application message into smaller chunks and adds a transport-layer header to each chunk, creating one or more transport-layer segments.\n3. The transport layer passes each segment down to the network layer at the sending end system.\n4. The network layer encapsulates each segment within a network-layer packet (a datagram) and sends it toward the destination. Network routers along the path act only on the network-layer fields of the datagram — they do not examine the transport-layer segment fields inside.\n5. On the receiving side, the network layer at the destination end system extracts the transport-layer segment from the datagram and passes the segment up to the transport layer.\n6. The transport layer on the receiving side processes the received segment (using its header information for demultiplexing and integrity checking) and makes the data in the segment available to the receiving application.\nThroughout this journey, the transport layer lives only in the end systems — the routers in the network core never act on or recognize transport-layer information.",
+          tags: [
+            "Transport Layer",
+            "Network Layer",
+            "Encapsulation",
+            "Journey",
+          ],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. State at least three things that IP does NOT guarantee, and explain the consequence for a transport protocol built on top of IP.",
+          translation:
+            "اكتب على الأقل تلات حاجات IP ما بيضمنشهم، واشرح النتيجة على بروتوكول نقل مبني فوق IP.",
+          answer:
+            "IP (the Internet's network-layer protocol) is a best-effort delivery service and does NOT guarantee:\n1. Segment delivery — a segment might be lost in the network and never arrive at the destination.\n2. Orderly delivery of segments — segments might arrive at the destination in a different order than they were sent.\n3. The integrity of the data in the segments — the contents of a segment might be corrupted in transit.\nBecause of these missing guarantees, IP is said to be an unreliable service.\nConsequence for a transport protocol built on top of IP:\n- If a transport protocol needs to provide reliable data transfer to applications (as TCP does), it must add its own mechanisms to detect lost segments (timers + retransmission), restore order (sequence numbers), and detect corrupted data (error-detection fields + acknowledgments). TCP does all of this using flow control, sequence numbers, acknowledgments, and timers, thereby converting IP's unreliable service into a reliable data transport service between processes.\n- If a transport protocol does not need to provide reliability (as UDP does not), it can simply pass through the unreliability of IP, only adding multiplexing/demultiplexing and integrity checking. UDP is therefore also unreliable, like IP.",
+          tags: ["IP", "Unreliable", "Consequences", "TCP", "UDP"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.1 + 3.1.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '13. Explain the terminology used in the Internet literature for transport-layer and network-layer packets, and why this book chooses to refer to both TCP and UDP packets as "segments".',
+          translation:
+            'اشرح المصطلحات اللي أدبيات الإنترنت بتستخدمها لـ transport-layer و network-layer packets، وليه الكتاب اختار يسمي TCP و UDP packets بـ "segments".',
+          answer:
+            "To simplify terminology, this book refers to the transport-layer packet as a segment. The Internet literature (for example, the RFCs) refers to the transport-layer packet for TCP as a segment but often refers to the packet for UDP as a datagram.\nHowever, this same Internet literature also uses the term datagram for the network-layer packet!\nFor an introductory book on computer networking such as this, referring to both TCP and UDP packets as datagrams would be confusing, because the term datagram would then refer to two different things: a transport-layer packet (UDP) and a network-layer packet (IP).\nTherefore, the book chooses to refer to both TCP and UDP packets as segments, and reserve the term datagram for the network-layer packet. This reduces ambiguity for the reader.",
+          tags: ["Terminology", "Segment", "Datagram"],
+          ref: "Lecture 7 (Ch 3, Lec 1) — Section 3.1.2 (terminology)",
+          likely: "medium",
+        },
+      ],
+    },
   ],
   chapters: [
     {
@@ -6626,6 +7895,12 @@ subjects.push({
       t: "الفصل الثاني :(Application Layer) ", // عنوان الفصل
       icon: "📘", // أيقونة (اختياري)
       lectures: [3, 4, 5], // ← أرقام المحاضرات في الفصل
+      open: false,
+    },
+    {
+      t: "الفصل الثالث :(Application Layer) ", // عنوان الفصل
+      icon: "📘", // أيقونة (اختياري)
+      lectures: [6, 7, 8, 9], // ← أرقام المحاضرات في الفصل
       open: true,
     },
   ],

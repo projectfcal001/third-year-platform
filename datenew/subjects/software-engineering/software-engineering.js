@@ -4573,5 +4573,1265 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "se-lecture-06",
+      t: "Lecture 6 (Chapter 5) — System Modeling (Context, Interaction, Structural, Behavioral, MDE)",
+      d: "نمذجة النظام — الفصول 5.1 حتى 5.4 من كتاب Sommerville: نماذج السياق، التفاعل، البنية، السلوك، وهندسة النمذجة الموجهة (MDE).",
+      pdf: "datenew/subjects/software-engineering/lectures/lec 6/Software Engineering, 10th GLOBAL Edition - Chapter 5 - System modeling.pdf.pdf",
+      pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/Lecture-06-Questions.pdf",
+      // المحاضرة: Lecture 6 (Chapter 5) — System Modeling (Sommerville Ch.5) — موضوعها: نماذج السياق، التفاعل، البنية، والسلوك، UML (Activity, Use Case, Sequence, Class, State diagrams)، generalization، aggregation، DFDs، statecharts، و Model-Driven Engineering (MDE).
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمخططات UML المختلفة (Activity، Use Case، Sequence، Class، State) — مناسب لمراجعة كل أقسام المحاضرة.",
+          links: [
+            {
+              t: "UML Use Case Diagram | شرح مخطط الاستخدام بالعربي",
+              d: "شرح عربي لمخطط حالات الاستخدام (Use Case Diagram): الممثلون (actors)، التفاعلات، والعلاقات. مناسب لفهم القسم 5.2.1 من المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة",
+                  url: "https://www.youtube.com/watch?v=nF18GZmTiYQ",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: UML Activity Diagram بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح مخططات النشاط (Activity Diagrams): البداية، النهاية، الأنشطة، الـ fork/join bars، والـ guards. مناسب لفهم القسم 5.1. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=UML+activity+diagram+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: UML Class Diagram بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح مخططات الفئات (Class Diagrams): الـ attributes، operations، multiplicities، generalization، و aggregation. مناسب لفهم القسم 5.3. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=UML+class+diagram+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: State Diagram بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح مخططات الحالة (State Diagrams): الحالات، الانتقالات، الـ stimuli، والـ superstate. مناسب لفهم القسم 5.4.2. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=UML+state+diagram+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات بالإنجليزي تشرح مخططات UML وأنواعها المختلفة. ملاحظة: كلها روابط بحث يوتيوب لأنه يصعب التحقق من فيديو محدد.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: UML Activity Diagram Tutorial",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح مخططات النشاط: start node، end node، activities، fork/join bars، guards. مناسب لفهم القسم 5.1. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=UML+activity+diagram+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: UML Sequence Diagram Tutorial",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح مخططات التتابع: lifelines، messages، alt fragments، object creation. مناسب لفهم القسم 5.2.2. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=UML+sequence+diagram+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: UML Class Diagram Aggregation Generalization",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح class diagrams بالتفصيل بما فيها aggregation و generalization. مناسب لفهم القسم 5.3. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=UML+class+diagram+aggregation+generalization+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Model Driven Engineering MDE",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح Model-Driven Engineering (MDE) ومفهوم توليد الكود من النماذج. مناسب لفهم القسم 5.4.3. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=model+driven+engineering+MDE+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات مرجعية موثوقة تشرح كل نوع من مخططات UML المذكورة في المحاضرة، بالإضافة إلى MDE و DFDs.",
+          links: [
+            {
+              t: "Unified Modeling Language (UML) Diagrams — GeeksforGeeks",
+              d: "مقدمة شاملة عن UML وأنواعه الـ 13 من المخططات (structural و behavioral و interaction). يشرح الـ 5 الأكثر استخدامًا: Activity، Use Case، Sequence، Class، State. مناسب لمراجعة مقدمة المحاضرة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/unified-modeling-language-uml-introduction",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Activity Diagrams in UML — GeeksforGeeks",
+              d: "شرح مفصّل لمخططات النشاط: start node (filled circle)، end node (filled circle inside circle)، activities (rounded rectangles)، guards، fork/join bars (solid bars). مناسب لفهم القسم 5.1.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/unified-modeling-language-uml-activity-diagrams",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "State Machine Diagrams in UML — GeeksforGeeks",
+              d: "شرح كامل لمخططات الحالة (State Machine Diagrams): states (rounded rectangles)، transitions (labeled arrows)، initial state، final state، composite states (شبيهة بالـ superstate). مناسب لفهم القسم 5.4.2.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/unified-modeling-language-uml-state-diagrams",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "UML 2 Sequence Diagram Tutorial — Sparx Systems",
+              d: "دليل رسمي لـ Sparx Systems يشرح مخططات التتابع بالتفصيل: lifelines، messages (synchronous/asynchronous)، execution occurrence، combined fragments (alt, opt, loop, par). مناسب لفهم القسم 5.2.2.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://sparxsystems.com/resources/tutorials/uml2/sequence-diagram.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "UML 2 State Machine Diagram Tutorial — Sparx Systems",
+              d: "دليل رسمي يشرح UML State Machine Diagrams: state notation، initial/final states، transitions مع triggers و guards و effects، compound states و sub-machine diagrams. مناسب لفهم القسم 5.4.2.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://sparxsystems.com/resources/tutorials/uml2/state-diagram.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "UML Association vs Aggregation vs Composition — Visual Paradigm",
+              d: "مقال ممتاز يفرّق بين association و aggregation و composition في class diagrams. يشرح أن aggregation تعني part-of relationship مع إمكانية وجود الـ parts بشكل مستقل. مناسب لفهم القسم 5.3.3.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "What is DFD (Data Flow Diagram) — GeeksforGeeks",
+              d: "شرح مفصّل لـ Data Flow Diagrams: processes، data stores، data flows. يشرح الـ levels المختلفة (0، 1، 2) والفرق بين logical و physical DFDs. مناسب لفهم القسم 5.4.1.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/what-is-dfddata-flow-diagram",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Model-Driven Engineering — Wikipedia",
+              d: "مقال موسوعي عن MDE: تعريفها، تاريخها، علاقتها بـ OMG's Model-Driven Architecture (MDA)، الفوائد، والأدوات المستخدمة. مناسب لفهم القسم 5.4.3.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://en.wikipedia.org/wiki/Model-driven_engineering",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Unified Modeling Language — Wikipedia",
+              d: "مقال موسوعي عن UML: تاريخه (UML 2 finalized in 2004)، تصنيف الـ 13/14 diagram type إلى structure و behavior و interaction diagrams، واستخداماته في مجالات متعددة. مناسب لمراجعة الخلفية العامة.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://en.wikipedia.org/wiki/Unified_Modeling_Language",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لرسم كل أنواع مخططات UML المذكورة في المحاضرة (Activity، Use Case، Sequence، Class، State).",
+          links: [
+            {
+              t: "Visual Paradigm Online — أداة UML شاملة مجانية",
+              d: "أداة أونلاين مجانية لرسم كل أنواع مخططات UML: Activity، Use Case، Sequence، Class، State diagrams. بمحرر drag-and-drop وقوالب جاهزة وتصدير بصيغ متعددة (PNG, JPG, SVG, PDF). مناسب للتدريب العملي على كل أنواع المخططات في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://online.visual-paradigm.com/diagrams/features/use-case-diagram-software",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Lucidchart — UML Diagram Tool",
+              d: "أداة شائعة لرسم كل أنواع مخططات UML مع شرح للرموز (actors كـ stick figures، use cases كـ ovals، system boundaries). تدعم التعاون الفوري والتصدير بصيغ متعددة. مناسب للتدريب على use case و sequence diagrams.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://lucid.co/diagram/uml/use-case-diagram-tutorial",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Sparx Systems Enterprise Architect",
+              d: "أداة احترافية لتطوير النظم بناءً على UML و MDE. تدعم كل أنواع المخططات وتوليد الكود من النماذج (Model-Driven Engineering). مناسبة لفهم كيف تتحول الـ models إلى implementation كما في القسم 5.4.3.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://sparxsystems.com/resources/tutorials/uml2/sequence-diagram.html",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ============ MCQ — likely: high ============
+        {
+          q: "1. What is system modeling?",
+          options: [
+            "The process of developing abstract models of a system, with each model presenting a different view or perspective of that system.",
+            "The process of writing detailed source code for a system before testing it.",
+            "The process of deploying a system in a production environment.",
+            "The process of gathering requirements from stakeholders using interviews.",
+          ],
+          correct: 0,
+          translation: "ما هي نمذجة النظام (System modeling)؟",
+          explanation:
+            'الإجابة الصحيحة هي الأولى لأن المحاضرة تنص صراحة: "System modeling is the process of developing abstract models of a system, with each model presenting a different view or perspective of that system." الخيارات الأخرى تصف عمليات مختلفة: كتابة الكود، النشر، وجمع المتطلبات.',
+          tags: ["System modeling", "Definitions"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "2. According to the lecture, system modeling now usually means representing a system using:",
+          options: [
+            "Mathematical equations only.",
+            "Graphical notation based on diagram types in the Unified Modeling Language (UML).",
+            "Pseudocode written in natural language.",
+            "Binary machine code.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، نمذجة النظام تعني الآن عادةً تمثيل النظام باستخدام:",
+          explanation:
+            'المحاضرة تقول: "System modeling now usually means representing a system using some kind of graphical notation based on diagram types in the Unified Modeling Language (UML)." النماذج الرياضية تُستخدم كمواصفات تفصيلية رسمية وتُناقش في الفصل 10.',
+          tags: ["System modeling", "UML"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "3. A model that maintains all the information about the entity being represented is called:",
+          options: [
+            "An abstraction.",
+            "A representation.",
+            "A generalization.",
+            "An aggregation.",
+          ],
+          correct: 1,
+          translation:
+            "النموذج الذي يحتفظ بكل المعلومات عن الكيان المُمثَّل يسمى:",
+          explanation:
+            'المحاضرة تفرّق بين representation و abstraction: "A representation of a system should maintain all the information about the entity being represented. An abstraction deliberately simplifies a system design and picks out the most salient characteristics."',
+          tags: ["Abstraction", "Representation", "Definitions"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "4. A model that deliberately simplifies a system design and picks out the most salient characteristics is called:",
+          options: [
+            "A representation.",
+            "An abstraction.",
+            "A generalization.",
+            "An aggregation.",
+          ],
+          correct: 1,
+          translation:
+            "النموذج الذي يبسّط عمدًا تصميم النظام ويختار أبرز الخصائص يسمى:",
+          explanation:
+            "Abstraction هو تبسيط متعمد يختار أبرز الخصائص. مثال المحاضرة: شرائح PowerPoint هي abstraction للنقاط الرئيسية للكتاب، أما ترجمة الكتاب من الإنجليزية للإيطالية فهي representation بديلة.",
+          tags: ["Abstraction", "Representation", "Definitions"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "5. Which perspective models the context or environment of the system?",
+          options: [
+            "External perspective.",
+            "Interaction perspective.",
+            "Structural perspective.",
+            "Behavioral perspective.",
+          ],
+          correct: 0,
+          translation: "أي منظور ينمذج السياق أو البيئة المحيطة بالنظام؟",
+          explanation:
+            "المنظور الخارجي (external) ينمذج السياق والبيئة. الـ interaction ينمذج التفاعلات، الـ structural ينمذج تنظيم النظام أو بيانات المعالجة، والـ behavioral ينمذج السلوك الديناميكي.",
+          tags: ["Perspectives", "Context models"],
+          ref: "Lecture 6 — Section 5 (Perspectives)",
+          likely: "high",
+        },
+        {
+          q: "6. Which perspective models the dynamic behavior of the system and how it responds to events?",
+          options: [
+            "External perspective.",
+            "Interaction perspective.",
+            "Structural perspective.",
+            "Behavioral perspective.",
+          ],
+          correct: 3,
+          translation:
+            "أي منظور ينمذج السلوك الديناميكي للنظام وكيف يستجيب للأحداث؟",
+          explanation:
+            "المنظور السلوكي (behavioral) ينمذج السلوك الديناميكي واستجابة النظام للأحداث. الـ structural ينمذج تنظيم النظام أو بنية البيانات، والـ external ينمذج البيئة.",
+          tags: ["Perspectives", "Behavioral models"],
+          ref: "Lecture 6 — Section 5 (Perspectives)",
+          likely: "high",
+        },
+        {
+          q: "7. According to the survey by Erickson and Siau (2007), how many UML diagram types could represent the essentials of a system according to most users?",
+          options: [
+            "3 diagram types.",
+            "5 diagram types.",
+            "8 diagram types.",
+            "All 13 diagram types.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا لاستطلاع Erickson و Siau (2007)، كم نوع من مخططات UML يمكنها تمثيل أساسيات النظام وفقًا لمعظم المستخدمين؟",
+          explanation:
+            'المحاضرة تقول: "A survey (Erickson and Siau 2007) showed that most users of the UML thought that five diagram types could represent the essentials of a system." وهذه الخمسة هي: Activity, Use case, Sequence, Class, State.',
+          tags: ["UML", "Survey", "Diagrams"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "8. Which of the following is NOT one of the five UML diagram types that the lecture focuses on?",
+          options: [
+            "Activity diagrams.",
+            "Use case diagrams.",
+            "Sequence diagrams.",
+            "Component diagrams.",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي ليس من مخططات UML الخمسة التي تركز عليها المحاضرة؟",
+          explanation:
+            "المحاضرة تركز على 5 أنواع: Activity، Use case، Sequence، Class، State. الـ Component diagrams تُستخدم للنمذجة المعمارية وتُناقش في فصول أخرى (6 و 17).",
+          tags: ["UML", "Diagrams"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "9. In UML activity diagrams, the start of a process is indicated by:",
+          options: [
+            "A filled circle inside another circle.",
+            "A filled circle.",
+            "A diamond shape.",
+            "A rectangle with rounded corners.",
+          ],
+          correct: 1,
+          translation: "في مخططات النشاط UML، بداية العملية تُشار إليها بـ:",
+          explanation:
+            "The start of a process is indicated by a filled circle. أما النهاية فتُشار إليها بـ filled circle inside another circle. الـ rounded rectangles تمثل الأنشطة، والـ solid bars تمثل coordination.",
+          tags: ["Activity diagrams", "Notation"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          q: "10. In UML activity diagrams, the end of a process is indicated by:",
+          options: [
+            "A filled circle.",
+            "A filled circle inside another circle.",
+            "A solid bar.",
+            "A diamond shape.",
+          ],
+          correct: 1,
+          translation: "في مخططات النشاط UML، نهاية العملية تُشار إليها بـ:",
+          explanation:
+            "النهاية هي filled circle inside another circle. البداية هي filled circle فقط. هذا تمييز أساسي في notation.",
+          tags: ["Activity diagrams", "Notation"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          q: "11. In UML activity diagrams, activities (specific subprocesses) are represented as:",
+          options: [
+            "Filled circles.",
+            "Rectangles with rounded corners.",
+            "Diamonds.",
+            "Stick figures.",
+          ],
+          correct: 1,
+          translation:
+            "في مخططات النشاط UML، الأنشطة (العمليات الفرعية المحددة) تُمثَّل على شكل:",
+          explanation:
+            "Rectangles with round corners represent activities. الـ filled circle للبداية، والـ solid bar للـ coordination بين الأنشطة المتوازية.",
+          tags: ["Activity diagrams", "Notation"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          q: "12. In UML activity diagrams, a solid bar indicates:",
+          options: [
+            "The start of a process.",
+            "The end of a process.",
+            "Activity coordination.",
+            "An alternative condition.",
+          ],
+          correct: 2,
+          translation:
+            "في مخططات النشاط UML، الشريط الصلب (solid bar) يشير إلى:",
+          explanation:
+            "A solid bar indicates activity coordination. عندما يتدفق نشاط واحد أو أكثر إلى solid bar، يجب اكتمالهم جميعًا قبل المتابعة. وعندما يتدفق من solid bar إلى عدة أنشطة، تُنفّذ بالتوازي. هذا هو fork/join.",
+          tags: ["Activity diagrams", "Notation", "Fork/Join"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          q: "13. In UML activity diagrams, conditions that specify when a flow is followed are called:",
+          options: [
+            "Guards (in square brackets).",
+            "Stereotypes (in chevrons).",
+            "Lifelines (dotted lines).",
+            "Multiplicities.",
+          ],
+          correct: 0,
+          translation:
+            "في مخططات النشاط UML، الشروط التي تحدد متى يُتَّبع مسار تدفق معين تسمى:",
+          explanation:
+            "Arrows may be annotated with guards (in square brackets) that specify when that flow is followed. مثال من المحاضرة: [dangerous] و [not dangerous] لتحديد مسار المريض الخطر.",
+          tags: ["Activity diagrams", "Guards", "Notation"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          q: "14. In UML, the type of entity shown between chevrons (e.g., «system») is called a:",
+          options: ["Guard.", "Stereotype.", "Lifeline.", "Multiplicity."],
+          correct: 1,
+          translation:
+            "في UML، نوع الكيان المُشار إليه بين قوسين زاويّين (مثل «system») يسمى:",
+          explanation:
+            "Stereotype هي ميزة في UML حيث يُعرض نوع الكيان بين chevrons. في الشكل 5.2 استخدم المؤلف «system» لتمييز الأنظمة الفرعية المنفصلة داخل العملية.",
+          tags: ["UML", "Stereotype", "Notation"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          q: "15. Use case modeling was originally developed by:",
+          options: [
+            "Ivar Jacobsen in the 1990s.",
+            "Grady Booch in the 1980s.",
+            "James Rumbaugh in the 1970s.",
+            "David Harel in 1987.",
+          ],
+          correct: 0,
+          translation: "نمذجة حالات الاستخدام طوّرها أصليًا:",
+          explanation:
+            "Use case modeling was originally developed by Ivar Jacobsen in the 1990s (Jacobsen et al. 1993). David Harel طوّر Statecharts في 1987، أما Booch و Rumbaugh فطوّرا notations أخرى في object-oriented modeling دمجت لاحقًا في UML.",
+          tags: ["Use case", "Jacobsen", "History"],
+          ref: "Lecture 6 — Section 5.2.1",
+          likely: "high",
+        },
+        {
+          q: "16. In a use case diagram, actors are represented as:",
+          options: [
+            "Named ellipses.",
+            "Stick figures.",
+            "Rectangles with rounded corners.",
+            "Diamonds.",
+          ],
+          correct: 1,
+          translation:
+            "في مخطط حالات الاستخدام، الممثلون (actors) يُمثَّلون على شكل:",
+          explanation:
+            "The actors involved in the use case represented as stick figures. الـ use cases نفسها تُمثَّل كـ ellipses. الـ stick figure كان أصلًا للتفاعل البشري لكنه يُستخدم أيضًا للأنظمة الخارجية والـ hardware.",
+          tags: ["Use case", "Actors", "Notation"],
+          ref: "Lecture 6 — Section 5.2.1",
+          likely: "high",
+        },
+        {
+          q: "17. In a use case diagram, a use case is shown as:",
+          options: [
+            "A stick figure.",
+            "An ellipse.",
+            "A rectangle.",
+            "A diamond.",
+          ],
+          correct: 1,
+          translation: "في مخطط حالات الاستخدام، حالة الاستخدام تُعرض على شكل:",
+          explanation:
+            "In its simplest form, a use case is shown as an ellipse. الـ actors يكونوا stick figures. هذا هو الـ notation الأساسي لـ use case diagrams.",
+          tags: ["Use case", "Notation"],
+          ref: "Lecture 6 — Section 5.2.1",
+          likely: "high",
+        },
+        {
+          q: "18. In a UML sequence diagram, the time that an object instance is involved in the computation is called its:",
+          options: ["Lifeline.", "Activation bar.", "Stereotype.", "Guard."],
+          correct: 0,
+          translation:
+            "في مخطط التتابع UML، الفترة الزمنية التي يكون فيها كائن متورطًا في الحساب تسمى:",
+          explanation:
+            "The rectangle on the dotted lines indicates the lifeline of the object concerned (i.e., the time that object instance is involved in the computation). تُقرأ التفاعلات من أعلى لأسفل.",
+          tags: ["Sequence diagrams", "Lifeline", "Notation"],
+          ref: "Lecture 6 — Section 5.2.2",
+          likely: "high",
+        },
+        {
+          q: '19. In a UML sequence diagram, a box named "alt" is used to denote:',
+          options: [
+            "A loop that iterates over a sequence.",
+            "Alternatives (one of several interaction options will be executed).",
+            "Parallel execution of multiple sequences.",
+            "A reference to another sequence diagram.",
+          ],
+          correct: 1,
+          translation:
+            'في مخطط التتابع UML، الصندوق المسمى "alt" يُستخدم للإشارة إلى:',
+          explanation:
+            "A box named alt is used with the conditions indicated in square brackets, with alternative interaction options separated by a dotted line. هذا يعرض if-then-else: أحد الخيارات يُنفَّذ بناءً على الشرط.",
+          tags: ["Sequence diagrams", "alt", "Notation"],
+          ref: "Lecture 6 — Section 5.2.2",
+          likely: "high",
+        },
+        {
+          q: "20. In a sequence diagram, you read the sequence of interactions:",
+          options: [
+            "From bottom to top.",
+            "From top to bottom.",
+            "From left to right only.",
+            "In any order.",
+          ],
+          correct: 1,
+          translation: "في مخطط التتابع، تُقرأ تسلسل التفاعلات:",
+          explanation:
+            "You read the sequence of interactions from top to bottom. الزمن يمر من أعلى لأسفل على الـ lifelines.",
+          tags: ["Sequence diagrams", "Reading order"],
+          ref: "Lecture 6 — Section 5.2.2",
+          likely: "high",
+        },
+        {
+          q: "21. In a UML class diagram, the multiplicities 1..4 mean:",
+          options: [
+            "An indefinite number of objects are involved.",
+            "An exact number of 1 to 4 objects are involved in the association.",
+            "Exactly one object is involved.",
+            "Zero or one object is involved.",
+          ],
+          correct: 1,
+          translation:
+            "في مخطط الفئات UML، الـ multiplicity المكتوبة 1..4 تعني:",
+          explanation:
+            "You can define that an exact number of objects are involved (e.g., 1..4). أما النجمة (*) فتعني عدد غير محدد، و 1 تعني كائن واحد بالضبط، و 1..* تعني واحد أو أكثر.",
+          tags: ["Class diagrams", "Multiplicities"],
+          ref: "Lecture 6 — Section 5.3.1",
+          likely: "high",
+        },
+        {
+          q: '22. In a UML class diagram, the multiplicity "*" means:',
+          options: [
+            "Exactly one object.",
+            "Zero or one object.",
+            "An indefinite number of objects.",
+            "Exactly four objects.",
+          ],
+          correct: 2,
+          translation:
+            'في مخطط الفئات UML، الـ multiplicity المكتوبة "*" تعني:',
+          explanation:
+            "By using a *, indicate that there are an indefinite number of objects involved in the association. هذا مناسب للعلاقات واحد-إلى-كثير.",
+          tags: ["Class diagrams", "Multiplicities"],
+          ref: "Lecture 6 — Section 5.3.1",
+          likely: "high",
+        },
+        {
+          q: "23. In a UML class diagram, the three sections of a class rectangle (from top to bottom) are:",
+          options: [
+            "Attributes, operations, class name.",
+            "Class name, attributes, operations.",
+            "Operations, class name, attributes.",
+            "Class name, operations, attributes.",
+          ],
+          correct: 1,
+          translation:
+            "في مخطط الفئات UML، الأقسام الثلاثة لمستطيل الفئة (من أعلى لأسفل) هي:",
+          explanation:
+            "الترتيب: (1) اسم الفئة في الأعلى، (2) الـ attributes في الوسط، (3) الـ operations في الأسفل. مثال Consultation في الشكل 5.10 يتبع هذا الترتيب.",
+          tags: ["Class diagrams", "Notation", "Attributes", "Operations"],
+          ref: "Lecture 6 — Section 5.3.1 (Figure 5.10)",
+          likely: "high",
+        },
+        {
+          q: "24. In UML, generalization is shown as:",
+          options: [
+            "A diamond shape next to the whole.",
+            "An arrowhead pointing up to the more general class.",
+            "A filled circle inside another circle.",
+            "A solid bar.",
+          ],
+          correct: 1,
+          translation: "في UML، التعميم (generalization) يُعرض كـ:",
+          explanation:
+            "The generalization is shown as an arrowhead pointing up to the more general class. هذا يدل على أن الفئات الفرعية ترث خصائص وعمليات الفئة الأعلى. أما الـ diamond shape فيُستخدم للـ aggregation.",
+          tags: ["Generalization", "Notation", "Class diagrams"],
+          ref: "Lecture 6 — Section 5.3.2",
+          likely: "high",
+        },
+        {
+          q: "25. In UML, aggregation is indicated by:",
+          options: [
+            "An arrowhead pointing up.",
+            "A diamond shape added to the link next to the class that represents the whole.",
+            "A filled circle.",
+            "A solid bar.",
+          ],
+          correct: 1,
+          translation: "في UML، التجميع (aggregation) يُشار إليه بـ:",
+          explanation:
+            "To define aggregation, a diamond shape is added to the link next to the class that represents the whole. مثال الشكل 5.13: Patient record هو aggregate من Patient وعدد غير محدد من Consultations.",
+          tags: ["Aggregation", "Notation", "Class diagrams"],
+          ref: "Lecture 6 — Section 5.3.3",
+          likely: "high",
+        },
+        {
+          q: "26. In a generalization hierarchy, lower-level classes are called:",
+          options: [
+            "Superclasses that inherit from subclasses.",
+            "Subclasses that inherit the attributes and operations from their superclasses.",
+            "Aggregates of the higher-level classes.",
+            "Independent classes with no relationship.",
+          ],
+          correct: 1,
+          translation: "في هرم التعميم، الفئات الأدنى تسمى:",
+          explanation:
+            "The lower-level classes are subclasses that inherit the attributes and operations from their superclasses. ثم تضيف خصائص وعمليات أكثر تحديدًا. مثال: Trainee Doctor و Registered Doctor يرثان من Hospital Doctor.",
+          tags: ["Generalization", "Inheritance", "Subclasses"],
+          ref: "Lecture 6 — Section 5.3.2",
+          likely: "high",
+        },
+        {
+          q: "27. Behavioral models show what happens when a system responds to a stimulus from its environment. The two types of stimuli are:",
+          options: [
+            "Data and events.",
+            "Actors and use cases.",
+            "Classes and associations.",
+            "States and transitions.",
+          ],
+          correct: 0,
+          translation:
+            "النماذج السلوكية تُظهر ما يحدث عندما يستجيب النظام لمُحفّز من بيئته. النوعان من المُحفّزات هما:",
+          explanation:
+            "Stimuli may be either data or events: (1) Data becomes available that has to be processed; (2) An event happens that triggers system processing. الـ business systems غالبًا data-driven، والـ real-time systems غالبًا event-driven.",
+          tags: ["Behavioral models", "Stimuli", "Data vs Events"],
+          ref: "Lecture 6 — Section 5.4",
+          likely: "high",
+        },
+        {
+          q: "28. According to the lecture, real-time systems are usually:",
+          options: [
+            "Data-driven with limited event processing.",
+            "Event-driven with limited data processing.",
+            "Both data-driven and event-driven equally.",
+            "Neither data-driven nor event-driven.",
+          ],
+          correct: 1,
+          translation: "وفقًا للمحاضرة، أنظمة الـ real-time عادةً تكون:",
+          explanation:
+            'Real-time systems are usually event-driven, with limited data processing. مثال: نظام تبديل الهاتف يستجيب لأحداث مثل "handset activated". أما الـ business systems فهي data-driven مثل نظام فواتير الهاتف.',
+          tags: ["Behavioral models", "Real-time systems", "Event-driven"],
+          ref: "Lecture 6 — Section 5.4",
+          likely: "high",
+        },
+        {
+          q: "29. Data-flow diagrams (DFDs) were used in the 1970s as part of:",
+          options: [
+            "Agile development methods.",
+            "Structured design methods.",
+            "Object-oriented design methods.",
+            "Model-driven engineering.",
+          ],
+          correct: 1,
+          translation:
+            "مخططات تدفق البيانات (DFDs) استُخدمت في السبعينيات كجزء من:",
+          explanation:
+            "In the 1970s, structured design methods used data-flow diagrams (DFDs) as a way to illustrate the processing steps in a system. الـ DFDs بسيطة وبديهية ويمكن شرحها للمستخدمين للمشاركة في التحقق.",
+          tags: ["DFD", "Structured design", "History"],
+          ref: "Lecture 6 — Section 5.4.1 (sidebar)",
+          likely: "high",
+        },
+        {
+          q: "30. In the UML, DFDs can be represented using:",
+          options: [
+            "Class diagrams.",
+            "Activity diagrams.",
+            "State diagrams.",
+            "Use case diagrams.",
+          ],
+          correct: 1,
+          translation: "في UML، يمكن تمثيل الـ DFDs باستخدام:",
+          explanation:
+            "Data-flow diagrams can be represented in the UML using the activity diagram type. الـ activities (rounded rectangles) تمثل خطوات المعالجة، والـ objects (rectangles) تمثل البيانات المتدفقة.",
+          tags: ["DFD", "Activity diagrams", "UML"],
+          ref: "Lecture 6 — Section 5.4.1",
+          likely: "high",
+        },
+        {
+          q: "31. Event-driven modeling is based on the assumption that:",
+          options: [
+            "A system has a finite number of states and events may cause transitions between them.",
+            "A system has an infinite number of states.",
+            "All systems are data-driven.",
+            "Events never carry associated data.",
+          ],
+          correct: 0,
+          translation: "النمذجة الموجهة بالأحداث مبنية على افتراض أن:",
+          explanation:
+            'Event-driven modeling is based on the assumption that a system has a finite number of states and that events (stimuli) may cause a transition from one state to another. مثال: نظام التحكم بصمام ينتقل من "Valve open" إلى "Valve closed" عند استلام أمر المشغّل.',
+          tags: ["Event-driven modeling", "State diagrams"],
+          ref: "Lecture 6 — Section 5.4.2",
+          likely: "high",
+        },
+        {
+          q: "32. UML state diagrams are based on:",
+          options: [
+            "Activity diagrams by Jacobsen (1993).",
+            "Statecharts by Harel (1987).",
+            "Class diagrams by Booch (2005).",
+            "Sequence diagrams by Rumbaugh (2004).",
+          ],
+          correct: 1,
+          translation: "مخططات الحالة في UML مبنية على:",
+          explanation:
+            "The UML supports event-based modeling using state diagrams, which are based on Statecharts (Harel 1987). Harel طوّر Statecharts كنمذجة formal للأنظمة reactive.",
+          tags: ["State diagrams", "Statecharts", "Harel"],
+          ref: "Lecture 6 — Section 5.4.2",
+          likely: "high",
+        },
+        {
+          q: "33. In UML state diagrams, system states are represented as:",
+          options: [
+            "Filled circles.",
+            "Rounded rectangles.",
+            "Diamonds.",
+            "Stick figures.",
+          ],
+          correct: 1,
+          translation: "في مخططات الحالة UML، حالات النظام تُمثَّل على شكل:",
+          explanation:
+            'Rounded rectangles represent system states. قد تتضمن وصفًا مختصرًا (بعد "do") للإجراءات. الأسهم المُعنونة تمثل المُحفّزات التي تفرض الانتقال من حالة لأخرى.',
+          tags: ["State diagrams", "Notation", "States"],
+          ref: "Lecture 6 — Section 5.4.2",
+          likely: "high",
+        },
+        {
+          q: "34. In UML state diagrams, the labeled arrows represent:",
+          options: [
+            "Activities in a process.",
+            "Stimuli that force a transition from one state to another.",
+            "Data stores.",
+            "Lifelines of objects.",
+          ],
+          correct: 1,
+          translation: "في مخططات الحالة UML، الأسهم المُعنونة تمثل:",
+          explanation:
+            'The labeled arrows represent stimuli that force a transition from one state to another. مثال: "Door open" يحفّز الانتقال من Operation إلى Disabled في نموذج فرن الميكروويف.',
+          tags: ["State diagrams", "Transitions", "Stimuli"],
+          ref: "Lecture 6 — Section 5.4.2",
+          likely: "high",
+        },
+        {
+          q: '35. A "superstate" in UML state diagrams is used to:',
+          options: [
+            "Increase the number of possible states.",
+            "Encapsulate a number of separate states to hide detail in large models.",
+            "Represent the initial state of the system.",
+            "Indicate the end of all state transitions.",
+          ],
+          correct: 1,
+          translation: 'الـ "superstate" في مخططات الحالة UML يُستخدم لـ:',
+          explanation:
+            'A superstate encapsulates a number of separate states. تظهر كحالة واحدة على الموديل العالي المستوى ثم تُفصَّل في diagram منفصل. مثال: حالة "Operation" في فرن الميكروويف تُفصَّل في الشكل 5.17 لتشمل Checking و Alarm و Cook.',
+          tags: ["State diagrams", "Superstate", "Notation"],
+          ref: "Lecture 6 — Section 5.4.2",
+          likely: "high",
+        },
+        {
+          q: "36. Model-driven engineering (MDE) is an approach to software development whereby:",
+          options: [
+            "Programs rather than models are the principal outputs of the development process.",
+            "Models rather than programs are the principal outputs of the development process.",
+            "Source code is written manually without any models.",
+            "Testing is the principal output of the development process.",
+          ],
+          correct: 1,
+          translation:
+            "هندسة النمذجة الموجهة (MDE) هي منهجية تطوير برمجيات حيث:",
+          explanation:
+            "Model-driven engineering (MDE) is an approach to software development whereby models rather than programs are the principal outputs of the development process. النماذج تُستخدم لتوليد implementation كامل أو جزئي للنظام.",
+          tags: ["MDE", "Definitions"],
+          ref: "Lecture 6 — Section 5.4.3",
+          likely: "high",
+        },
+        {
+          q: "37. According to the lecture, models of the existing system are used during requirements engineering to:",
+          options: [
+            "Generate the source code directly.",
+            "Clarify what the existing system does and focus stakeholder discussion on its strengths and weaknesses.",
+            "Replace the existing system without analysis.",
+            "Document the new system after implementation.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، نماذج النظام الموجود تُستخدم أثناء هندسة المتطلبات لـ:",
+          explanation:
+            "Models of the existing system are used during requirements engineering. They help clarify what the existing system does, and they can be used to focus a stakeholder discussion on its strengths and weaknesses. أما نماذج النظام الجديد فتشرح المتطلبات المقترحة.",
+          tags: ["Models", "Existing system", "Requirements engineering"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "38. The three ways graphical models are commonly used are:",
+          options: [
+            "Stimulate discussion, document an existing system, detailed system description for code generation.",
+            "Stimulate discussion, generate tests, deploy the system.",
+            "Document, test, and maintain the system.",
+            "Gather requirements, design, and implement the system.",
+          ],
+          correct: 0,
+          translation: "الطرق الثلاث الشائعة لاستخدام النماذج الرسومية هي:",
+          explanation:
+            "الطرق الثلاث: (1) stimulate and focus discussion about an existing or proposed system (مثل agile modeling)، (2) document an existing system (يجب أن تكون صحيحة)، (3) detailed system description used to generate a system implementation (يجب أن تكون complete و correct).",
+          tags: ["Models", "Usage", "Comparison"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "39. According to the lecture, the survey showed that most UML users thought the essentials of a system could be represented by how many diagram types?",
+          options: [
+            "3 diagram types.",
+            "5 diagram types.",
+            "10 diagram types.",
+            "All 13 diagram types.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، أظهر الاستطلاع أن معظم مستخدمي UML يعتقدون أن أساسيات النظام يمكن تمثيلها بكم نوع من المخططات؟",
+          explanation:
+            "A survey (Erickson and Siau 2007) showed that most users of the UML thought that five diagram types could represent the essentials of a system. هذه الخمسة هي: Activity, Use case, Sequence, Class, State diagrams.",
+          tags: ["UML", "Survey", "Diagrams"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+
+        // ============ MCQ — likely: medium ============
+        {
+          q: "40. The Mentcare system context model in Figure 5.1 shows that the system is connected to all of the following EXCEPT:",
+          options: [
+            "An appointments system.",
+            "A patient record system.",
+            "A library management system.",
+            "A prescription system.",
+          ],
+          correct: 2,
+          translation:
+            "نموذج سياق نظام Mentcare في الشكل 5.1 يُظهر أن النظام متصل بكل ما يلي ما عدا:",
+          explanation:
+            "الأنظمة المذكورة في الشكل 5.1: Patient record system، Appointments system، Admissions system، Management reporting system، Prescription system، HC statistics system. نظام إدارة المكتبة ليس له علاقة بنظام رعاية الصحة العقلية.",
+          tags: ["Context models", "Mentcare", "Figure 5.1"],
+          ref: "Lecture 6 — Section 5.1 (Figure 5.1)",
+          likely: "medium",
+        },
+
+        // ============ ESSAY — likely: high ============
+        {
+          type: "essay",
+          q: "1. Define system modeling and explain the difference between an abstraction and a representation of a system.",
+          translation:
+            "عرّف نمذجة النظام واشرح الفرق بين الـ abstraction والـ representation للنظام.",
+          answer:
+            "System modeling is the process of developing abstract models of a system, with each model presenting a different view or perspective of that system.\n" +
+            "System modeling now usually means representing a system using some kind of graphical notation based on diagram types in the Unified Modeling Language (UML).\n" +
+            "The difference between abstraction and representation:\n" +
+            "A representation of a system should maintain all the information about the entity being represented. For example, if a book is translated from English into Italian, this would be an alternative representation because the translator maintains all the information.\n" +
+            "An abstraction deliberately simplifies a system design and picks out the most salient characteristics. For example, the PowerPoint slides that accompany a book are an abstraction of the book's key points.\n" +
+            "A system model is therefore an abstraction of the system being studied rather than an alternative representation of that system.",
+          tags: ["System modeling", "Abstraction", "Representation"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. List and explain the four fundamental system modeling perspectives.",
+          translation: "اذكر واشرح المناظير الأربعة الأساسية لنمذجة النظام.",
+          answer:
+            "You may develop different models to represent the system from different perspectives:\n" +
+            "1. An external perspective, where you model the context or environment of the system. This is implemented using context models and activity diagrams.\n" +
+            "2. An interaction perspective, where you model the interactions between a system and its environment, or between the components of a system. This is implemented using use case diagrams and sequence diagrams.\n" +
+            "3. A structural perspective, where you model the organization of a system or the structure of the data processed by the system. This is implemented using class diagrams, including generalization and aggregation.\n" +
+            "4. A behavioral perspective, where you model the dynamic behavior of the system and how it responds to events. This is implemented using activity diagrams (data-driven) and state diagrams (event-driven).",
+          tags: [
+            "Perspectives",
+            "Context",
+            "Interaction",
+            "Structural",
+            "Behavioral",
+          ],
+          ref: "Lecture 6 — Section 5 (Perspectives)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Explain the three ways in which graphical models are commonly used during software development.",
+          translation:
+            "اشرح الطرق الثلاث التي تُستخدم بها النماذج الرسومية أثناء تطوير البرمجيات.",
+          answer:
+            "There are three ways in which graphical models are commonly used:\n" +
+            "1. As a way to stimulate and focus discussion about an existing or proposed system. The purpose of the model is to stimulate and focus discussion among the software engineers involved in developing the system. The models may be incomplete (as long as they cover the key points of the discussion), and they may use the modeling notation informally. This is how models are normally used in agile modeling.\n" +
+            "2. As a way of documenting an existing system. When models are used as documentation, they do not have to be complete, as you may only need to use models to document some parts of a system. However, these models have to be correct — they should use the notation correctly and be an accurate description of the system.\n" +
+            "3. As a detailed system description that can be used to generate a system implementation. Where models are used as part of a model-based development process, the system models have to be both complete and correct. They are used as a basis for generating the source code of the system, and you therefore have to be very careful not to confuse similar symbols, such as stick and block arrowheads, that may have different meanings.",
+          tags: ["Models", "Usage", "Agile modeling", "MDE"],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. What is a context model? Explain why defining the system boundary is important and how it may be influenced by non-technical factors.",
+          translation:
+            "ما هو نموذج السياق؟ اشرح لماذا تحديد حدود النظام مهم وكيف قد يتأثر بعوامل غير تقنية.",
+          answer:
+            "A context model shows the system being developed along with the other systems in its environment. Context models normally show that the environment includes several other automated systems, but they do not show the types of relationships between the systems.\n" +
+            "Defining the system boundary is important because it determines what functionality should be included in the system and what processing should be carried out in the system's operational environment. These decisions should be made early in the process to limit the system costs and the time needed for understanding the system requirements and design.\n" +
+            "The definition of a system boundary is not a value-free judgment. Social and organizational concerns may mean that the position of a system boundary may be determined by nontechnical factors:\n" +
+            "- It may be deliberately positioned so that the complete analysis process can be carried out on one site.\n" +
+            "- It may be chosen so that a particularly difficult manager need not be consulted.\n" +
+            "- It may be positioned so that the system cost is increased and the system development division must therefore expand to design and implement the system.",
+          tags: ["Context models", "System boundary", "Non-technical factors"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Explain the notations used in UML activity diagrams (start, end, activities, bars, guards, stereotypes).",
+          translation:
+            "اشرح الرموز المستخدمة في مخططات النشاط UML (البداية، النهاية، الأنشطة، الأشرطة، الـ guards، الـ stereotypes).",
+          answer:
+            "UML activity diagrams show the activities in a process and the flow of control from one activity to another. The notations are:\n" +
+            "1. Start of a process: indicated by a filled circle.\n" +
+            "2. End of a process: indicated by a filled circle inside another circle.\n" +
+            "3. Activities (specific subprocesses): represented as rectangles with rounded corners.\n" +
+            "4. Objects: may be included in activity charts; systems are shown using the UML stereotype feature, where the type of entity is shown between chevrons (e.g., «system»).\n" +
+            "5. Arrows: represent the flow of work from one activity to another.\n" +
+            "6. Solid bar: indicates activity coordination. When the flow from more than one activity leads to a solid bar, all of these activities must be complete before progress is possible. When the flow from a solid bar leads to a number of activities, these may be executed in parallel.\n" +
+            "7. Guards (in square brackets): arrows may be annotated with guards that specify when that flow is followed. For example, [dangerous] and [not dangerous] in the involuntary detention process.",
+          tags: ["Activity diagrams", "Notation", "Guards", "Stereotype"],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. What is a use case diagram? Describe its components and how it is documented in detail.",
+          translation:
+            "ما هو مخطط حالات الاستخدام؟ صف مكوناته وكيف يُوثَّق بالتفصيل.",
+          answer:
+            "A use case can be taken as a simple description of what a user expects from a system in that interaction. Each use case represents a discrete task that involves external interaction with a system.\n" +
+            "Components of a use case diagram:\n" +
+            "- Use case: shown as an ellipse, representing a discrete interaction.\n" +
+            "- Actors: represented as stick figures. The notation was originally developed to cover human interaction, but it is also used to represent other external systems and hardware.\n" +
+            "- Lines (or arrows): link the actors with the use cases. Formally, use case diagrams should use lines without arrows, as arrows in the UML indicate the direction of flow of messages. However, arrows may be used informally to indicate which actor initiates the transaction.\n" +
+            "Use case diagrams give a simple overview of an interaction, so you need to add more detail for complete interaction description. This detail can be:\n" +
+            "1. A simple textual description.\n" +
+            "2. A structured description in a table (most useful, including fields like Actors, Description, Data, Stimulus, Response, Comments).\n" +
+            "3. A sequence diagram (for detailed interactions).\n" +
+            "Composite use case diagrams show a number of different use cases. When there are too many use cases for a single diagram, you may develop several diagrams, each showing related use cases.",
+          tags: ["Use case", "Actors", "Documentation"],
+          ref: "Lecture 6 — Section 5.2.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the basic notations of UML sequence diagrams (lifelines, messages, alt box).",
+          translation:
+            "اشرح الرموز الأساسية لمخططات التتابع UML (الـ lifelines، الرسائل، صندوق alt).",
+          answer:
+            "Sequence diagrams in the UML are primarily used to model the interactions between the actors and the objects in a system and the interactions between the objects themselves.\n" +
+            "Basic notations:\n" +
+            "1. Objects and actors: listed along the top of the diagram, with a dotted line drawn vertically from each. This dotted line is the lifeline.\n" +
+            "2. Lifeline: the rectangle on the dotted lines indicates the lifeline of the object concerned (i.e., the time that object instance is involved in the computation). You read the sequence of interactions from top to bottom.\n" +
+            "3. Annotated arrows: indicate interactions between objects. The annotations on the arrows indicate the calls to the objects, their parameters, and the return values.\n" +
+            "4. The alt box: a choice box (denoted by 'alt' in the top-left corner) indicating that one of the contained interactions will be executed. The conditions that select the choice are shown in square brackets, and alternative interaction options are separated by a dotted line.\n" +
+            "5. Object creation: an object may be created as part of a sequence of operations (e.g., creating a Summary object during data transfer).",
+          tags: ["Sequence diagrams", "Lifeline", "alt", "Notation"],
+          ref: "Lecture 6 — Section 5.2.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Describe the structure of a UML class diagram, including attributes, operations, and multiplicities.",
+          translation:
+            "صف بنية مخطط الفئات UML، بما في ذلك الـ attributes والـ operations والـ multiplicities.",
+          answer:
+            "Class diagrams are used when developing an object-oriented system model to show the classes in a system and the associations between these classes. An object class can be thought of as a general definition of one kind of system object. An association is a link between classes indicating that some relationship exists between these classes.\n" +
+            "The simplest way of writing these diagrams is to write the class name in a box and draw a line between classes to indicate an association.\n" +
+            "To define objects in more detail, you extend the simple rectangle that represents a class into three sections (from top to bottom):\n" +
+            "1. The name of the object class is in the top section.\n" +
+            "2. The class attributes (the object's characteristics, with optional types) are in the middle section.\n" +
+            "3. The operations (called methods in Java and other OO languages) associated with the object class are in the lower section.\n" +
+            "Multiplicities: class diagrams show how many objects are involved in an association:\n" +
+            "- '1' means a 1:1 relationship (each end has exactly one object).\n" +
+            "- An exact number of objects can be specified (e.g., 1..4).\n" +
+            "- '*' indicates an indefinite number of objects.\n" +
+            "- '1..*' means one or more objects.\n" +
+            "For example, the (1..*) multiplicity on the relationship between Patient and Condition shows that a patient may suffer from several conditions and the same condition may be associated with several patients.",
+          tags: [
+            "Class diagrams",
+            "Attributes",
+            "Operations",
+            "Multiplicities",
+          ],
+          ref: "Lecture 6 — Section 5.3.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. What is generalization in UML class diagrams? Explain how it is shown and its benefits.",
+          translation:
+            "ما هو التعميم في مخططات الفئات UML؟ اشرح كيف يُعرض وما فوائده.",
+          answer:
+            "Generalization is an everyday technique that we use to manage complexity. Rather than learn the detailed characteristics of everything that we experience, we learn about general classes (animals, cars, houses, etc.) and learn the characteristics of these classes. We then reuse knowledge by classifying things and focus on the differences between them and their class.\n" +
+            "When modeling systems, it is often useful to examine the classes in a system to see if there is scope for generalization. This means that common information will be maintained in one place only. This is good design practice because, if changes are proposed, you do not have to look at all classes in the system to see if they are affected. You can make the changes at the most general level. In object-oriented languages such as Java, generalization is implemented using the class inheritance mechanisms.\n" +
+            "The UML notation for generalization:\n" +
+            "- Generalization is shown as an arrowhead pointing up to the more general class.\n" +
+            "- The lower-level classes are subclasses that inherit the attributes and operations from their superclasses.\n" +
+            "- These lower-level classes then add more specific attributes and operations.\n" +
+            "Example: General practitioners and hospital doctors can be generalized as doctors. Hospital doctors have three types: Trainee Doctor, Registered Doctor, and Consultant. All doctors have a name and phone number; hospital doctors additionally have a staff number and carry a pager; general practitioners have a practice name and address.",
+          tags: ["Generalization", "Inheritance", "Class diagrams"],
+          ref: "Lecture 6 — Section 5.3.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. What is aggregation in UML? How does it differ from a regular association? Give an example.",
+          translation:
+            "ما هو التجميع في UML؟ كيف يختلف عن الـ association العادي؟ أعطِ مثالاً.",
+          answer:
+            "Aggregation is a special type of association between classes that means one object (the whole) is composed of other objects (the parts).\n" +
+            "UML notation: to define aggregation, a diamond shape is added to the link next to the class that represents the whole.\n" +
+            "Difference from a regular association:\n" +
+            "- A regular association is a generic link between two classes indicating that some relationship exists between them.\n" +
+            "- Aggregation specifically represents a part-of relationship, where the whole is composed of its parts. This is more specific than a generic association.\n" +
+            "Example from the lecture: A patient record is an aggregate of Patient and an indefinite number of Consultations (Figure 5.13). That is, the record maintains personal patient information as well as an individual record for each consultation with a doctor. The diamond shape is placed on the link next to the Patient record class, indicating that Patient record is the whole composed of Patient and Consultation parts.",
+          tags: ["Aggregation", "Association", "Class diagrams"],
+          ref: "Lecture 6 — Section 5.3.3",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Compare data-driven modeling and event-driven modeling. Which UML diagrams are used for each?",
+          translation:
+            "قارن بين النمذجة الموجهة بالبيانات والنمذجة الموجهة بالأحداث. أي مخططات UML تُستخدم لكل منهما؟",
+          answer:
+            "Behavioral models show what happens when a system responds to a stimulus from its environment. Stimuli may be either data or events.\n" +
+            "Data-driven modeling:\n" +
+            "- Data-driven models show the sequence of actions involved in processing input data and generating an associated output.\n" +
+            "- They show end-to-end processing in a system, from an initial input being processed to the corresponding output.\n" +
+            "- Many business systems are data-processing systems that are primarily driven by data (e.g., a phone billing system).\n" +
+            "- UML diagrams used: data-flow diagrams (DFDs) can be represented using UML activity diagrams. Alternatively, UML sequence diagrams drawn so that messages are only sent from left to right can show sequential data processing.\n" +
+            "Event-driven modeling:\n" +
+            "- Event-driven modeling shows how a system responds to external and internal events.\n" +
+            "- It is based on the assumption that a system has a finite number of states and that events (stimuli) may cause a transition from one state to another.\n" +
+            "- This view is particularly appropriate for real-time systems (e.g., a landline phone switching system).\n" +
+            "- UML diagram used: state diagrams, which are based on Statecharts (Harel 1987).\n" +
+            "In practice, nonexperts find data-flow diagrams more intuitive, but engineers prefer sequence diagrams.",
+          tags: [
+            "Data-driven",
+            "Event-driven",
+            "Activity diagrams",
+            "State diagrams",
+            "Comparison",
+          ],
+          ref: "Lecture 6 — Sections 5.4.1 and 5.4.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain the notations of UML state diagrams and the concept of a superstate.",
+          translation: "اشرح رموز مخططات الحالة UML ومفهوم الـ superstate.",
+          answer:
+            "UML state diagrams show system states and events that cause transitions from one state to another. They do not show the flow of data within the system but may include additional information on the computations carried out in each state.\n" +
+            "Notations:\n" +
+            "1. Rounded rectangles: represent system states. They may include a brief description (following 'do') of the actions taken in that state.\n" +
+            "2. Labeled arrows: represent stimuli that force a transition from one state to another.\n" +
+            "3. Start and end states: indicated using filled circles, as in activity diagrams (filled circle for start; filled circle inside another circle for end).\n" +
+            "4. State description: a state may include 'do: <action>' to describe what happens in that state, and 'exit: <action>' to describe what happens when leaving.\n" +
+            "5. Guards: conditions in square brackets may annotate transitions.\n" +
+            "Superstate:\n" +
+            "- The problem with state-based modeling is that the number of possible states increases rapidly.\n" +
+            "- For large system models, you need to hide detail. One way to do this is by using the notion of a 'superstate' that encapsulates a number of separate states.\n" +
+            "- A superstate looks like a single state on a high-level model but is then expanded to show more detail on a separate diagram.\n" +
+            "- Example: The Operation state in the microwave oven model (Figure 5.16) is a superstate that is expanded in Figure 5.17 to show substates such as Checking, Alarm, and Cook. If the door is opened during operation, the system moves to the disabled state.",
+          tags: [
+            "State diagrams",
+            "Notation",
+            "Superstate",
+            "Microwave example",
+          ],
+          ref: "Lecture 6 — Section 5.4.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. What is model-driven engineering (MDE)? Briefly describe its key idea.",
+          translation:
+            "ما هي هندسة النمذجة الموجهة (MDE)؟ صف فكرتها الرئيسية باختصار.",
+          answer:
+            "Model-driven engineering (MDE) is an approach to software development whereby models rather than programs are the principal outputs of the development process.\n" +
+            "Key idea:\n" +
+            "- In MDE, models are used as a basis for generating the source code of the system, or even for generating a complete or partial system implementation automatically.\n" +
+            "- This means that the system models have to be both complete and correct. They are not just discussion tools or documentation; they are detailed system descriptions that can be used to generate a system implementation.\n" +
+            "- Where models are used as part of a model-based development process, you have to be very careful not to confuse similar symbols, such as stick and block arrowheads, that may have different meanings.\n" +
+            "- Model-driven engineering is mentioned at the end of the chapter as a topic that is discussed in more detail in other parts of the book.",
+          tags: ["MDE", "Model-driven engineering"],
+          ref: "Lecture 6 — Section 5.4.3",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. List the five UML diagram types that the lecture focuses on, and briefly describe what each one shows.",
+          translation:
+            "اذكر الأنواع الخمسة من مخططات UML التي تركز عليها المحاضرة، وصف كلًا منها باختصار.",
+          answer:
+            "According to the survey by Erickson and Siau (2007), most users of the UML thought that five diagram types could represent the essentials of a system. The lecture concentrates on these five:\n" +
+            "1. Activity diagrams: show the activities involved in a process or in data processing. They are used for context models (business processes) and for data-flow diagrams (data-driven behavioral modeling).\n" +
+            "2. Use case diagrams: show the interactions between a system and its environment. They represent discrete tasks involving external interaction, with actors as stick figures and use cases as ellipses.\n" +
+            "3. Sequence diagrams: show interactions between actors and the system and between system components. They organize interactions chronologically along lifelines, with messages as annotated arrows.\n" +
+            "4. Class diagrams: show the object classes in the system and the associations between these classes. They include attributes, operations, multiplicities, generalization, and aggregation.\n" +
+            "5. State diagrams: show how the system reacts to internal and external events. They are based on Statecharts (Harel 1987) and model event-driven behavior with states and transitions.",
+          tags: [
+            "UML",
+            "Diagrams",
+            "Activity",
+            "Use case",
+            "Sequence",
+            "Class",
+            "State",
+          ],
+          ref: "Lecture 6 — Section 5 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "15. Explain why context models are normally used along with other models, such as business process models.",
+          translation:
+            "اشرح لماذا تُستخدم نماذج السياق عادةً مع نماذج أخرى، مثل نماذج العمليات التجارية.",
+          answer:
+            "Context models normally show that the environment includes several other automated systems. However, they have an important limitation: they do not show the types of relationships between the systems in the environment and the system that is being specified.\n" +
+            "External systems might:\n" +
+            "- Produce data for or consume data from the system.\n" +
+            "- Share data with the system.\n" +
+            "- Be connected directly, through a network, or not connected at all.\n" +
+            "- Be physically co-located or located in separate buildings.\n" +
+            "All of these relations may affect the requirements and design of the system being defined and so must be taken into account.\n" +
+            "Therefore, simple context models are used along with other models, such as business process models. These describe human and automated processes in which particular software systems are used.\n" +
+            "UML activity diagrams may be used to show the business processes in which systems are used. For example, Figure 5.2 shows where the Mentcare system is used in the involuntary detention process, including parallel activities (informing social care, next of kin, and updating the register) and guards ([dangerous] vs [not dangerous]).",
+          tags: [
+            "Context models",
+            "Business process models",
+            "Activity diagrams",
+          ],
+          ref: "Lecture 6 — Section 5.1",
+          likely: "high",
+        },
+      ],
+    },
   ],
 });
