@@ -6074,7 +6074,30 @@ subjects.push({
       ],
     },
   ],
+  examSections: {
+    showLectures: false, // الأقسام تظهر بدل شكل المحاضرات العادي
 
+    midterm: {
+      mode: "separate",
+      open: true,
+      notesOpen: false,
+      title: "محتوى الميد",
+      icon: "📝",
+      notes: [
+        "الميد من الفصل الأول والتاني بس",
+        "ركزي على CPM/PERT وحساب المسار الحرج",
+        "أسئلة مقالية متوقعة عن دورة حياة المشروع",
+      ],
+
+      lectures: [
+        "cloud-computing-lec-01",
+        "cloud-computing-lec-02",
+        "cloud-computing-lec-3-4",
+        "cloud-computing-lec-05",
+        "cloud-computing-lec-06",
+      ],
+    },
+  },
   midtermsCategories: [
     {
       category: " Dr. Sara 2026",

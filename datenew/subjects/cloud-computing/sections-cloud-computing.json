@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "cloud-computing-sec-0",
+      "id": "cloud-computing-sec-02",
       "subject": "cloud-computing",
       "lecture": "المحاضرة 3 و4 — Virtualization (المحاكاة الافتراضية)",
       "lectureId": "cloud-computing-lec-3-4",
@@ -60,6 +60,53 @@
         },
 
         "solution": "datenew/subjects/cloud-computing/sections/Lab3-Questions-Solutions.pdf"
+      }
+    },
+    {
+      "id": "cloud-computing-sec-04",
+      "subject": "cloud-computing",
+      "lecture": "المحاضرة 5: vSphere and Virtualization Overview",
+      "lectureId": "cloud-computing-lec-05",
+      "instructorId": "INS-Ahamd",
+      "instructorName": "م. امير",
+      "groupName": "سكشن 4",
+      "status": "available",
+      "sectionTitle": "🌐 لاب 4 -",
+      "materials": {
+        "file": {
+          "label": "ملف اللاب",
+          "url": "datenew/subjects/cloud-computing/sections/Lab4-ESXI installation.pdf",
+          "type": "pdf"
+        },
+
+        "extraFiles": [
+          {
+            "label": "ملف تثبيت ESXI",
+            "url": "datenew/subjects/cloud-computing/sections/Installing and Configuring ESXi.pdf",
+            "type": "pdf"
+          }
+        ],
+        "solution": "datenew/subjects/cloud-computing/sections/Lab4-Questions-Solutions.pdf"
+      }
+    },
+    {
+      "id": "cloud-computing-sec-05",
+      "subject": "cloud-computing",
+      "lecture": "المحاضرة 5: vSphere and Virtualization Overview",
+      "lectureId": "cloud-computing-lec-06",
+      "instructorId": "INS-Ahamd",
+      "instructorName": "م. امير",
+      "groupName": "سكشن 5",
+      "status": "available",
+      "sectionTitle": "🌐 لاب 5 -",
+      "materials": {
+        "file": {
+          "label": "ملف اللاب",
+          "url": "datenew/subjects/cloud-computing/sections/Lab5.pdf",
+          "type": "pdf"
+        },
+
+        "solution": "datenew/subjects/cloud-computing/sections/Lab5-Questions-Solutions.pdf"
       }
     }
   ]

@@ -323,7 +323,7 @@
     btn.className = "hdr-icon-btn pwa-hdr-install";
     btn.title = "تثبيت التطبيق على جهازك";
     btn.setAttribute("aria-label", "ثبّت التطبيق");
-    btn.innerHTML = '📲<span class="lbl">ثبّت التطبيق</span>';
+    btn.innerHTML = '⬇️<span class="lbl">ثبّت التطبيق</span>';
     btn.hidden = true;
     btn.addEventListener("click", doInstall);
     wrap.insertBefore(btn, wrap.firstChild);
@@ -341,7 +341,7 @@
   function doInstall() {
     if (!deferredPrompt) {
       var t = toast(
-        "📲 من قائمة المتصفح ⋮ هتلاقي «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»",
+        "⬇️ من قائمة المتصفح ⋮ هتلاقي «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»",
         null,
         null,
       );
@@ -379,7 +379,7 @@
     box.className = "pwa-ios";
     box.setAttribute("role", "status");
     box.innerHTML =
-      "📲 لتثبيت التطبيق على الآيفون:<br>من زر المشاركة <b>⬆️</b> هتلاقي <b>«إضافة إلى الشاشة الرئيسية»</b><br>";
+      "⬇️ لتثبيت التطبيق على الآيفون:<br>من زر المشاركة <b>⬆️</b> هتلاقي <b>«إضافة إلى الشاشة الرئيسية»</b><br>";
     var ok = document.createElement("button");
     ok.type = "button";
     ok.textContent = "فهمت ✓";

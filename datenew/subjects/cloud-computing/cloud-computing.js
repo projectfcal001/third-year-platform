@@ -10,7 +10,7 @@ subjects.push({
   // ]
   lectures: [
     {
-      id: "cloud-orientation-lec-01",
+      id: "cloud-computing-lec-01",
       t: "جلسة التعريف — Cloud Computing",
       d: "المفهوم، الخصائص، التحديات، أنواع الخدمات، نماذج النشر، الأطراف الرئيسية، التهديدات، الأمان، والوظائف",
       pdf: "datenew/subjects/cloud-computing/lectures/lec1/Cloud Computing Orientation Session.pdf",
@@ -716,7 +716,7 @@ subjects.push({
       ],
     },
     {
-      id: "cloud-orientation-lec-02",
+      id: "cloud-computing-lec-02",
       t: "المحاضرة 2: أساسيات الشبكات (Network Fundamentals)",
       d: "مقدمة عن شبكات الكمبيوتر: المصطلحات الأساسية، أجهزة الشبكة، نماذج OSI وTCP/IP، طرق تعيين الـ IP، وأوامر الشبكة الأساسية.",
       pdf: "datenew/subjects/cloud-computing/lectures/lec2/Network_Fundamentals_Lecture.pdf",
@@ -3155,7 +3155,920 @@ subjects.push({
         },
       ],
     },
+    // Cloud Computing - Lecture 06: vSphere Virtualization of Resources
+    // Question Bank (28 MCQ + 12 Essay) - based strictly on lecture content
+
+    {
+      id: "cloud-computing-lec-06",
+      t: "المحاضرة 6: vSphere Virtualization of Resources",
+      d: "محاكاة موارد vSphere: تفاعل ESXi مع الموارد (CPU، Memory، Networks، Storage، GPUs)، تجريد المكونات المادية إلى برمجية، مشاركة الموارد بين VMs، المحاكاة لكل مورد، وحالات استخدام GPU الافتراضي.",
+      pdf: "datenew/subjects/cloud-computing/lectures/Lec06/vSphere and Virtualization Overview_lec 6.pdf",
+      pdf2: "datenew/subjects/cloud-computing/questions/Questions on each lecture/Lecture-06-Questions.pdf",
+      // المحاضرة: vSphere Virtualization of Resources — تفاعل ESXi مع الموارد (CPU، Memory، Networks، Storage، GPUs)، تجريد المكونات المادية لمكوّنات برمجية، مشاركة الموارد، ومحاكاة GPU وحالات استخدامها
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "قوائم تشغيل وفيديوهات عربية تشرح vSphere ومحاكاة موارده (التخزين، الشبكة، CPU، الذاكرة) من البداية للتقدم، مناسبة لفهم محتوى المحاضرة بالعربي.",
+          links: [
+            {
+              t: "VMware vSphere شرح بالعربي - المهندس أيمن سعد الدين",
+              d: "قائمة تشغيل عربية كاملة تشرح vSphere من المقدمة لغاية الإدارة المتقدمة، وتغطي محاكاة الموارد (CPU، Memory، Network، Storage) اللي بتحكي عنها المحاضرة بشكل عملي.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ تشغيل القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLLlr6jKKdyK0tSCcwciymTV_TDzfFZMpP",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح الـ Datastore في ESXi 8.0 - المهندس خالد صبحي",
+              d: "فيديو عربي مخصص لشرح الـ Datastore والملفات في ESXi 8.0، وده مرتبط مباشرة بقسم Physical File Systems and Datastores في المحاضرة اللي بيتكلم عن البنية الموزّعة للتخزين.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ تشغيل الفيديو",
+                  url: "https://www.youtube.com/watch?v=NN_LiEHPgDY",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: VMware vSphere datastore شرح بالعربي",
+              d: "رابط بحث (مش فيديو محدد) بيرجع فيديوهات عربية متعددة عن الـ datastore والتخزين المشترك في vSphere، مفيد لو احتجت شرح إضافي لقسم التخزين في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=VMware+vSphere+datastore+شرح+بالعربي",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات وقوائم تشغيل بالإنجليزي تشرح محاكاة موارد vSphere (التخزين المشترك، الـ Datastore Cluster، وإدارة الموارد) بأسلوب عملي ومرئي.",
+          links: [
+            {
+              t: "Create Datastore Cluster and Enable Storage DRS - vSphere 9 Full Course (Part 20)",
+              d: "فيديو إنجليزي من كورس vSphere 9 الشامل، بشرح إنشاء Datastore Cluster وتفعيل Storage DRS، وده مرتبط مباشرة بقسم Datastores اللي بيتكلم عن البنية الموزّعة والتخزين المشترك في المحاضرة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ تشغيل الفيديو",
+                  url: "https://www.youtube.com/watch?v=Jr4KRZck0ec",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "How to configure VMware vSphere Shared Storage (iSCSI / NFS) - TeachMeCloud",
+              d: "فيديو إنجليزي عملي بيشرح خطوة بخطوة إعداد التخزين المشترك في vSphere عبر iSCSI و NFS، وده بيوضح مفهوم shared storage اللي بتتكلم عنه المحاضرة في قسم Datastores.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ تشغيل الفيديو",
+                  url: "https://www.youtube.com/watch?v=HKpdo7RnvBc",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: VMware CPU memory virtualization explained",
+              d: "رابط بحث (مش فيديو محدد) بيرجع فيديوهات إنجليزي كتير بتشرح محاكاة الـ CPU والذاكرة في VMware، ودي المفاهيم الأساسية اللي بتغطيها المحاضرة في قسمي CPU Virtualization و Memory Usage.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=VMware+CPU+memory+virtualization+explained",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر رسمية ومراجع تعليمية موثوقة تشرح مفاهيم محاكاة الموارد (CPU، الذاكرة، الشبكة، التخزين) بالتفصيل وبتطابق محتوى المحاضرة.",
+          links: [
+            {
+              t: "CPU Virtualization Basics - Broadcom TechDocs",
+              d: "صفحة التوثيق الرسمي لـ vSphere 8.0 بتشرح أساسيات محاكاة الـ CPU، وبتقول صراحة إن CPU virtualization emphasizes performance و runs directly on the processor — نفس الجمل اللي في محاضرة CPU Virtualization.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-resource-management/cpu-virtualization-basics.html",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Understanding Memory Resource Management in vSphere - VMware PDF",
+              d: "PDF رسمي من VMware بيشرح إدارة الذاكرة في vSphere، وبيقول إن الـ hypervisor بيوصل ذاكرة الـ VM وبتخصّص ذاكرة الـ host للـ VM على أول وصول (first access) — نفس المبدأ اللي ذكرته المحاضرة في قسم Memory Usage.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.vmware.com/files/pdf/perf-vsphere-memory_management.pdf",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What is a VMware vSwitch (Virtual Switch)? - Nakivo",
+              d: "مقال Nakivo بيشرح الـ vSwitch (المفتاح الافتراضي) كبرنامج بيحاكي المفتاح المادي على طبقة Layer-2، وبيذكر إن الـ VMs بتستخدم virtual network adapters و virtual switches للاتصال — نفس المكوّنات اللي ذكرتها المحاضرة في قسم Virtual Networking.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.nakivo.com/blog/what-is-vmware-vswitch",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "What is Server Virtualization? - IBM",
+              d: "صفحة IBM تشرح محاكاة الخوادم كعملية بتقسيم خادم مادي لخوادم افتراضية معزولة، وبتغطي المفهوم العام لتجريد الموارد المادية لموارد افتراضية — وده المبدأ اللي بتبني عليه المحاضرة فكرتها كلها.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 الشرح",
+                  url: "https://www.ibm.com/think/topics/server-virtualization",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "توثيق رسمي وأدوات لـ vSphere بتساعدك على التطبيق العملي لمحاكاة الموارد (التخزين الموزّع، VMFS، و GPU الافتراضي).",
+          links: [
+            {
+              t: "Working with Datastores in vSphere Storage - Broadcom TechDocs",
+              d: "التوثيق الرسمي لـ vSphere 8.0 عن التعامل مع الـ Datastores، وبيوضح إن الـ datastore حاوية منطقية بتخفي تفاصيل التخزين المادي وتوفّر نموذج موحّد — مرتبط مباشرة بقسم Physical File Systems and Datastores بالمحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage/working-with-datastores-in-vsphere-storage-environment.html",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "VMware vSphere VMFS - Official Documentation",
+              d: "التوثيق الرسمي لـ VMFS (نظام ملفات VMware) اللي بيوضح إن الـ Datastore نظام ملفات formatted بيتم تركيبه كمجموعة تخزين مشتركة shared storage pool — وده اللي بيمكّن عدة ESXi hosts من القراءة/الكتابة المتزامنة اللي بتتكلم عنها المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://www.vmware.com/docs/vmware-vsphere-vmfs",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "VMware Horizon and vSphere - NVIDIA Virtual GPU",
+              d: "صفحة NVIDIA الرسمية عن دمج الـ vGPU مع VMware Horizon و vSphere، وبتعرض حالات استخدام زي 3D Content Generation و Autonomous Vehicle Simulation — مرتبطة مباشرة بقسم GPU Virtualization وحالات استخدام الـ virtual GPU في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.nvidia.com/en-us/design-visualization/vmware",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Performance Best Practices for VMware vSphere 8.0 - Official PDF",
+              d: "PDF رسمي من VMware عن أفضل ممارسات الأداء في vSphere 8.0، وبيغطي اعتبارات CPU و Memory و Storage و Networking، وده مرجع موثوق للمفاهيم العملية اللي بتعرضها المحاضرة عن محاكاة كل مورد.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح التوثيق",
+                  url: "https://www.vmware.com/docs/vsphere-esxi-vcenter-server-80-performance-best-practices",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ============ MCQ (1-28) ============
+        {
+          q: "1. According to the learner objectives, which resources does ESXi interact with?",
+          options: [
+            "Only CPUs and memory",
+            "CPUs, memory, networks, storage, and GPUs",
+            "Only networks and storage",
+            "Only GPUs and CPUs",
+          ],
+          correct: 1,
+          translation: "حسب أهداف التعلم، مع أي موارد يتفاعل ESXi؟",
+          explanation:
+            "المحاضرة ذكرت صراحة 5 موارد: CPUs، Memory، Networks، Storage، GPUs. الخيارات التانية بتحصرها في موارد أقل، وده غلط لأن القائمة كاملة بالخمسة.",
+          tags: ["ESXi", "Resources", "Learner Objectives"],
+          ref: "Lecture 06 — Learner Objectives",
+          likely: "high",
+        },
+        {
+          q: "2. What can run in a VM (guest) on an ESXi host?",
+          options: [
+            "Only Linux applications",
+            "Only Windows applications",
+            "Any application in any supported operating system",
+            "Only VMware-specific applications",
+          ],
+          correct: 2,
+          translation: "ما الذي يمكن أن يعمل داخل VM (guest) على ESXi host؟",
+          explanation:
+            "المحاضرة بتقول: Any application in any supported OS can run in a VM (guest). يعني أي تطبيق في أي نظام تشغيل مدعوم. الخيارات التانية بتقيد التطبيقات بنظام معين أو بتطبيقات VMware بس.",
+          tags: ["Virtual Machine", "Guest"],
+          ref: "Lecture 06 — Virtual Machine: Guest and Consumer of ESXi Host",
+          likely: "high",
+        },
+        {
+          q: "3. Which host-based resources can a VM use?",
+          options: [
+            "Only CPU",
+            "Only memory",
+            "Only network",
+            "CPU, memory, disk, and network",
+          ],
+          correct: 3,
+          translation: "أي موارد من الـ host يمكن للـ VM استخدامها؟",
+          explanation:
+            "المحاضرة ذكرت إن الـ VM بيتستهلك CPU، memory، disk، network من موارد الـ host. الخيارات التانية بتحصرها في مورد واحد بس، وده تضييق غير صحيح.",
+          tags: ["Virtual Machine", "Host Resources"],
+          ref: "Lecture 06 — Virtual Machine: Guest and Consumer of ESXi Host",
+          likely: "high",
+        },
+        {
+          q: "4. What does virtualization technology do to physical components?",
+          options: [
+            "It abstracts physical components to software components",
+            "It removes physical components entirely",
+            "It duplicates physical components",
+            "It disables physical components",
+          ],
+          correct: 0,
+          translation: "ماذا تفعل تقنية المحاكاة الافتراضية بالمكونات المادية؟",
+          explanation:
+            "المحاضرة بتقول: Virtualization technology abstracts physical components to software components. يعني بتحوّل المكونات المادية لمكونات برمجية. الخيارات التانية (إزالة/تكرار/تعطيل) مش معنى التجريد.",
+          tags: ["Virtualization", "Abstraction"],
+          ref: "Lecture 06 — Physical and Virtual Architecture",
+          likely: "high",
+        },
+        {
+          q: "5. How do multiple VMs on a physical host use the host's resources?",
+          options: [
+            "Each VM uses a dedicated physical CPU",
+            "They share computing, memory, network, and storage resources of the host",
+            "Only one VM can use resources at a time",
+            "They cannot share resources",
+          ],
+          correct: 1,
+          translation: "كيف تستخدم الـ VMs المتعددة موارد الـ host المادي؟",
+          explanation:
+            "المحاضرة بتوضح إن الـ VMs بتتشارك computing، memory، network، storage resources من الـ host. الخيارات التانية بتقول إن كل VM بياخد CPU مخصص أو إنهم ما بيتشاركوش، وده عكس مفهوم المحاكاة.",
+          tags: ["Resource Sharing", "Virtual Machine"],
+          ref: "Lecture 06 — Physical Resource Sharing",
+          likely: "high",
+        },
+        {
+          q: "6. In a physical environment, who assumes ownership of all physical CPUs?",
+          options: [
+            "The hypervisor",
+            "The virtual machine",
+            "The operating system",
+            "The network switch",
+          ],
+          correct: 2,
+          translation:
+            "في البيئة المادية، من يفترض ملكية جميع الـ CPUs المادية؟",
+          explanation:
+            "المحاضرة بتقول صراحة: In a physical environment, the operating system assumes the ownership of all the physical CPUs. الخيارات التانية (hypervisor/VM/switch) مش بتملك الـ CPUs في البيئة المادية.",
+          tags: ["CPU Virtualization", "Physical Environment"],
+          ref: "Lecture 06 — CPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "7. What does CPU virtualization emphasize?",
+          options: [
+            "Security",
+            "Storage capacity",
+            "Network speed",
+            "Performance",
+          ],
+          correct: 3,
+          translation: "على ماذا تُركّز محاكاة الـ CPU؟",
+          explanation:
+            "المحاضرة بتقول: CPU virtualization emphasizes performance. يعني بتركّز على الأداء. الخيارات التانية (security/storage/network) مش اللي بتركز عليه CPU virtualization.",
+          tags: ["CPU Virtualization", "Performance"],
+          ref: "Lecture 06 — CPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "8. Where does CPU virtualization run?",
+          options: [
+            "Directly on the available CPUs",
+            "On the guest OS only",
+            "On a separate hardware card",
+            "Through the network",
+          ],
+          correct: 0,
+          translation: "أين تعمل محاكاة الـ CPU؟",
+          explanation:
+            "المحاضرة بتقول: CPU virtualization runs directly on the available CPUs. يعني بتشتغل مباشرة على الـ CPUs المتاحة عشان تحافظ على الأداء. الخيارات التانية بتشتغل على OS أو كرت منفصل أو عبر الشبكة.",
+          tags: ["CPU Virtualization"],
+          ref: "Lecture 06 — CPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "9. In a physical environment, who assumes ownership of all physical memory?",
+          options: [
+            "The application",
+            "The operating system",
+            "The hypervisor",
+            "The storage controller",
+          ],
+          correct: 1,
+          translation:
+            "في البيئة المادية، من يفترض ملكية جميع الذاكرة المادية؟",
+          explanation:
+            "المحاضرة بتقول: In a physical environment, the operating system assumes the ownership of all the physical memory. نفس مبدأ الـ CPU — الـ OS بيملك كل الذاكرة في البيئة المادية.",
+          tags: ["Memory Virtualization", "Physical Environment"],
+          ref: "Lecture 06 — Physical and Virtualized Host Memory Usage",
+          likely: "high",
+        },
+        {
+          q: "10. How are memory pages allocated to virtual machines?",
+          options: [
+            "At VM creation time only",
+            "On shutdown",
+            "On first access",
+            "Randomly at boot",
+          ],
+          correct: 2,
+          translation: "كيف يتم تخصيص صفحات الذاكرة للآلات الافتراضية؟",
+          explanation:
+            "المحاضرة بتقول: Memory pages are allocated to virtual machines on first access. يعني صفحة الذاكرة بتتخصّص للـ VM أول مرة الـ VM بيوصلها. الخيارات التانية (وقت الإنشاء/الإيقاف/عشوائي) مش المبدأ اللي ذكرته المحاضرة.",
+          tags: ["Memory Virtualization", "Memory Pages"],
+          ref: "Lecture 06 — Physical and Virtualized Host Memory Usage",
+          likely: "high",
+        },
+        {
+          q: "11. What are the key virtual networking components?",
+          options: [
+            "Physical routers and physical switches",
+            "Virtual CPUs and virtual memory",
+            "Virtual disks and virtual datastores",
+            "Virtual Ethernet adapters and virtual switches",
+          ],
+          correct: 3,
+          translation: "ما هي المكوّنات الأساسية للشبكات الافتراضية؟",
+          explanation:
+            "المحاضرة بتقول: Virtual Ethernet adapters and virtual switches are key virtual networking components. الخيارات التانية بتصف مكونات مادية أو موارد تانية (CPU/memory/disks) مش شبكة افتراضية.",
+          tags: ["Virtual Networking", "Virtual Switches"],
+          ref: "Lecture 06 — Physical and Virtual Networking",
+          likely: "high",
+        },
+        {
+          q: "12. What do vSphere datastores provide?",
+          options: [
+            "A distributed storage architecture",
+            "A single-host storage solution",
+            "A network monitoring tool",
+            "A CPU virtualization layer",
+          ],
+          correct: 0,
+          translation: "ماذا توفّر الـ vSphere datastores؟",
+          explanation:
+            "المحاضرة بتقول: vSphere datastores provide a distributed storage architecture. يعني بنية تخزين موزّعة. الخيارات التانية بتصف حل خادم واحد أو أداة مراقبة أو طبقة CPU — مش تخزين موزّع.",
+          tags: ["Datastores", "Storage"],
+          ref: "Lecture 06 — Physical File Systems and Datastores",
+          likely: "high",
+        },
+        {
+          q: "13. What can multiple ESXi hosts do with shared storage in vSphere datastores?",
+          options: [
+            "Only one host can read at a time",
+            "They can read or write to the shared storage concurrently",
+            "They can only write sequentially",
+            "They cannot access shared storage",
+          ],
+          correct: 1,
+          translation:
+            "ماذا يمكن لعدة ESXi hosts أن تفعل بالتخزين المشترك في الـ datastores؟",
+          explanation:
+            "المحاضرة بتقول: Multiple ESXi hosts can read or write to the shared storage concurrently. يعني ممكن يقرأوا أو يكتبوا في نفس الوقت بشكل متزامن. الخيارات التانية بتقيد الوصول لـ host واحد أو تسلسلي.",
+          tags: ["Datastores", "Shared Storage", "Concurrent Access"],
+          ref: "Lecture 06 — Physical File Systems and Datastores",
+          likely: "high",
+        },
+        {
+          q: "14. What do GPU graphics devices optimize?",
+          options: [
+            "Network traffic",
+            "Memory allocation",
+            "Complex graphics operations",
+            "Storage capacity",
+          ],
+          correct: 2,
+          translation: "ماذا تحسّن أجهزة GPU الرسومية؟",
+          explanation:
+            "المحاضرة بتقول: GPU graphics devices optimize complex graphics operations. يعني بتحسّن العمليات الرسومية المعقدة. الخيارات التانية (شبكة/ذاكرة/تخزين) مش اللي بتحسّنه الـ GPU.",
+          tags: ["GPU Virtualization", "Graphics"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "15. What is the benefit of GPU operations running at high performance?",
+          options: [
+            "They increase network latency",
+            "They consume more memory",
+            "They slow down the CPU",
+            "They run without overloading the CPU",
+          ],
+          correct: 3,
+          translation: "ما فائدة عمل عمليات GPU بأداء عالٍ؟",
+          explanation:
+            "المحاضرة بتقول: These operations can run at high performance without overloading the CPU. يعني بتشتغل بأداء عالي من غير ما تحمّل الـ CPU. الخيارات التانية كلها آثار سلبية مش فوايد.",
+          tags: ["GPU Virtualization", "CPU Offloading"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "16. Which is a use case for adding virtual GPUs to VMs?",
+          options: [
+            "Rich 2D and 3D graphics",
+            "Email routing",
+            "File compression",
+            "Network firewalling",
+          ],
+          correct: 0,
+          translation: "أيٌّ مما يلي حالة استخدام لإضافة GPU افتراضي للـ VMs؟",
+          explanation:
+            "Rich 2D and 3D graphics واحدة من حالات استخدام الـ virtual GPU المذكورة. الخيارات التانية (email routing، file compression، firewalling) مش من قائمة الاستخدامات.",
+          tags: ["GPU Virtualization", "Use Cases"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "17. Which VMware product is mentioned as a use case for virtual GPUs?",
+          options: [
+            "VMware Workstation",
+            "VMware Horizon virtual desktops",
+            "VMware Fusion",
+            "VMware Tools",
+          ],
+          correct: 1,
+          translation: "أي منتج VMware مذكور كحالة استخدام للـ GPU الافتراضي؟",
+          explanation:
+            "المحاضرة ذكرت VMware Horizon virtual desktops كحالة استخدام للـ virtual GPU. Workstation و Fusion و Tools ما اتجاشت في سياق حالات الـ GPU.",
+          tags: ["GPU Virtualization", "VMware Horizon"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "18. Which is a use case for virtual GPUs mentioned in the lecture?",
+          options: [
+            "Database backup",
+            "Network routing",
+            "Graphics-intensive applications",
+            "Antivirus scanning",
+          ],
+          correct: 2,
+          translation:
+            "أيٌّ مما يلي حالة استخدام للـ GPU الافتراضي مذكورة في المحاضرة؟",
+          explanation:
+            "Graphics-intensive applications من قائمة حالات استخدام الـ virtual GPU. الخيارات التانية (database backup، network routing، antivirus) مش من القائمة.",
+          tags: ["GPU Virtualization", "Use Cases"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "19. Which workload type is listed as a use case for virtual GPUs?",
+          options: [
+            "Web hosting",
+            "Email serving",
+            "File sharing",
+            "Artificial intelligence (AI) and machine learning (ML) workloads",
+          ],
+          correct: 3,
+          translation: "أي نوع workload مذكور كحالة استخدام للـ GPU الافتراضي؟",
+          explanation:
+            "المحاضرة ذكرت صراحة: Artificial intelligence (AI) and machine learning (ML) workloads. الخيارات التانية (web/email/file) مش من قائمة استخدامات الـ GPU.",
+          tags: ["GPU Virtualization", "AI", "ML"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "20. Which of the following is NOT a use case for virtual GPUs?",
+          options: [
+            "Database indexing",
+            "Rich 2D and 3D graphics",
+            "Scientific computation applications",
+            "AI and ML workloads",
+          ],
+          correct: 0,
+          translation: "أيٌّ مما يلي ليس حالة استخدام للـ GPU الافتراضي؟",
+          explanation:
+            "Database indexing مش مذكور كحالة استخدام للـ virtual GPU. الخيارات التانية (Rich 2D/3D graphics، Scientific computation، AI/ML) كلها مذكورة في قائمة المحاضرة.",
+          tags: ["GPU Virtualization", "Use Cases"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "21. What is a VM in relation to an ESXi host?",
+          options: [
+            "A physical server",
+            "A guest and consumer of host-based resources",
+            "A network protocol",
+            "A storage device",
+          ],
+          correct: 1,
+          translation: "ما هو الـ VM بالنسبة لـ ESXi host؟",
+          explanation:
+            "عنوان الشريحة بيقول: Virtual Machine: Guest and Consumer of ESXi Host. يعني الـ VM هو guest و consumer للموارد اللي بيوفرها الـ host. الخيارات التانية بتصف خادم مادي/بروتوكول/جهاز تخزين.",
+          tags: ["Virtual Machine", "Guest", "Consumer"],
+          ref: "Lecture 06 — Virtual Machine: Guest and Consumer of ESXi Host",
+          likely: "high",
+        },
+        {
+          q: "22. In virtualization, what is the relationship between physical and virtual components?",
+          options: [
+            "Physical components replace virtual ones",
+            "Virtual components are removed",
+            "Physical components are abstracted to software components",
+            "They are unrelated",
+          ],
+          correct: 2,
+          translation:
+            "في المحاكاة الافتراضية، ما العلاقة بين المكوّنات المادية والافتراضية؟",
+          explanation:
+            "المحاضرة بتقول: Virtualization technology abstracts physical components to software components. يعني المكونات المادية بتتحوّل لمكونات برمجية عبر التجريد. الخيارات التانية بتفصل أو تشيل واحد منهم.",
+          tags: ["Abstraction", "Virtualization"],
+          ref: "Lecture 06 — Physical and Virtual Architecture",
+          likely: "high",
+        },
+        {
+          q: "23. Which statement best describes physical resource sharing?",
+          options: [
+            "Only one VM runs on a host at a time",
+            "VMs cannot share network resources",
+            "Each VM requires a dedicated physical CPU",
+            "Multiple VMs share computing, memory, network, and storage of the host",
+          ],
+          correct: 3,
+          translation: "أي عبارة تصف مشاركة الموارد المادية بأفضل شكل؟",
+          explanation:
+            "المحاضرة بتقول: Multiple VMs, running on a physical host, share computing, memory, network, and storage resources of the host. الخيارات التانية بتنفي المشاركة أو بتفرض موارد مخصصة.",
+          tags: ["Resource Sharing", "Virtual Machine"],
+          ref: "Lecture 06 — Physical Resource Sharing",
+          likely: "high",
+        },
+        {
+          q: "24. Which of the following is NOT one of the five resources that ESXi interacts with?",
+          options: ["Network routing protocols", "Memory", "Storage", "GPUs"],
+          correct: 0,
+          translation:
+            "أيٌّ مما يلي ليس من الموارد الخمسة التي يتفاعل معها ESXi؟",
+          explanation:
+            "الموارد الخمسة هي: CPUs، Memory، Networks، Storage، GPUs. كلمة Network routing protocols مش من القائمة — المذكور هو Networks بشكل عام. الخيارات التانية كلها من القائمة.",
+          tags: ["ESXi", "Resources"],
+          ref: "Lecture 06 — Learner Objectives",
+          likely: "medium",
+        },
+        {
+          q: "25. What is the role of virtual switches in virtual networking?",
+          options: [
+            "They store VM files",
+            "They are key virtual networking components along with virtual Ethernet adapters",
+            "They allocate CPU resources",
+            "They manage memory pages",
+          ],
+          correct: 1,
+          translation: "ما دور الـ virtual switches في الشبكات الافتراضية؟",
+          explanation:
+            "المحاضرة ذكرت إن virtual Ethernet adapters و virtual switches هما key virtual networking components. الخيارات التانية بتصف تخزين/CPU/ذاكرة — مش دور الـ switch.",
+          tags: ["Virtual Switches", "Virtual Networking"],
+          ref: "Lecture 06 — Physical and Virtual Networking",
+          likely: "high",
+        },
+        {
+          q: "26. Which statement about CPU virtualization is correct?",
+          options: [
+            "It runs only on the guest OS",
+            "It requires a separate physical CPU per VM",
+            "It runs directly on the available CPUs and emphasizes performance",
+            "It disables the host operating system",
+          ],
+          correct: 2,
+          translation: "أي عبارة عن محاكاة الـ CPU صحيحة؟",
+          explanation:
+            "المحاضرة ذكرت نقطتين: CPU virtualization emphasizes performance، و runs directly on the available CPUs. الخيار الصح بيجمع النقطتين. الخيارات التانية بتشتغل على OS أو تتطلب CPU مخصص أو تعطّل الـ host OS.",
+          tags: ["CPU Virtualization", "Performance"],
+          ref: "Lecture 06 — CPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "27. Scientific computation applications are listed as a use case for which virtual resource?",
+          options: [
+            "Virtual memory",
+            "Virtual networks",
+            "Virtual datastores",
+            "Virtual GPUs",
+          ],
+          correct: 3,
+          translation:
+            "تطبيقات الحسابات العلمية مذكورة كحالة استخدام لأي مورد افتراضي؟",
+          explanation:
+            "Scientific computation applications من قائمة حالات استخدام الـ virtual GPU في محاكاة GPU. الخيارات التانية (memory/networks/datastores) مش الموارد اللي بتستفيد من GPU للحسابات العلمية.",
+          tags: ["GPU Virtualization", "Scientific Computation"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          q: "28. What type of storage architecture do vSphere datastores provide?",
+          options: [
+            "A distributed storage architecture",
+            "A local-only storage",
+            "A single-disk architecture",
+            "A read-only architecture",
+          ],
+          correct: 0,
+          translation: "أي نوع بنية تخزين توفّر الـ vSphere datastores؟",
+          explanation:
+            "المحاضرة بتقول: vSphere datastores provide a distributed storage architecture. يعني بنية موزّعة بتسمح لعدة hosts بالوصول المتزامن. الخيارات التانية بتصف تخزين محلي أو قرص واحد أو قراءة فقط.",
+          tags: ["Datastores", "Distributed Storage"],
+          ref: "Lecture 06 — Physical File Systems and Datastores",
+          likely: "high",
+        },
+
+        // ============ ESSAY (1-12) ============
+        {
+          type: "essay",
+          q: "1. List the resources that ESXi interacts with, as stated in the learner objectives.",
+          translation:
+            "اذكر الموارد التي يتفاعل معها ESXi كما وردت في أهداف التعلم.",
+          answer:
+            "According to the learner objectives, ESXi interacts with the following five resources:\n" +
+            "1. CPUs\n" +
+            "2. Memory\n" +
+            "3. Networks\n" +
+            "4. Storage\n" +
+            "5. GPUs\n" +
+            "These five resources are virtualized and managed by the ESXi hypervisor to support virtual machines running on the host.",
+          tags: ["ESXi", "Resources", "Learner Objectives"],
+          ref: "Lecture 06 — Learner Objectives",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the role of a virtual machine as a guest and consumer of an ESXi host.",
+          translation:
+            "اشرح دور الآلة الافتراضية كـ guest و consumer لـ ESXi host.",
+          answer:
+            "A virtual machine (VM) acts as a guest that runs on an ESXi host.\n" +
+            "As a guest, any application in any supported operating system can run inside the VM.\n" +
+            "As a consumer, the VM uses host-based resources to operate.\n" +
+            "The host-based resources the VM uses include:\n" +
+            "- CPU\n" +
+            "- Memory\n" +
+            "- Disk\n" +
+            "- Network\n" +
+            "This means the VM consumes resources provided by the ESXi hypervisor running on the physical host.",
+          tags: ["Virtual Machine", "Guest", "Consumer"],
+          ref: "Lecture 06 — Virtual Machine: Guest and Consumer of ESXi Host",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. How does virtualization technology abstract physical components? Explain the physical and virtual architecture.",
+          translation:
+            "كيف تجرد تقنية المحاكاة المكوّنات المادية؟ اشرح البنية المادية والافتراضية.",
+          answer:
+            "Virtualization technology abstracts physical components to software components.\n" +
+            "This abstraction provides solutions for many IT problems.\n" +
+            "In the physical architecture, hardware components (CPU, memory, network, storage, GPU) are directly owned and managed by the operating system.\n" +
+            "In the virtual architecture, these physical components are abstracted into virtual equivalents (virtual CPU, virtual memory, virtual network adapters, virtual disks, virtual GPUs).\n" +
+            "The ESXi hypervisor performs this abstraction, allowing multiple VMs to share the same physical resources while each VM operates as if it has its own dedicated hardware.",
+          tags: ["Abstraction", "Physical and Virtual Architecture"],
+          ref: "Lecture 06 — Physical and Virtual Architecture",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Explain CPU virtualization. How does it differ from the physical environment?",
+          translation: "اشرح محاكاة الـ CPU. كيف تختلف عن البيئة المادية؟",
+          answer:
+            "In a physical environment, the operating system assumes the ownership of all the physical CPUs in the system.\n" +
+            "In CPU virtualization:\n" +
+            "- The ESXi hypervisor manages CPU allocation to VMs.\n" +
+            "- CPU virtualization emphasizes performance.\n" +
+            "- It runs directly on the available CPUs.\n" +
+            "Key difference: In the physical environment, one OS owns all CPUs; in virtualization, the hypervisor allocates CPU time to multiple VMs, each thinking it has its own CPU, while running directly on the physical CPUs for performance.",
+          tags: ["CPU Virtualization", "Comparison"],
+          ref: "Lecture 06 — CPU Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Explain memory virtualization. How are memory pages allocated to virtual machines?",
+          translation:
+            "اشرح محاكاة الذاكرة. كيف يتم تخصيص صفحات الذاكرة للآلات الافتراضية؟",
+          answer:
+            "In a physical environment, the operating system assumes the ownership of all the physical memory in the system.\n" +
+            "In memory virtualization:\n" +
+            "- The ESXi hypervisor manages physical memory and allocates it to VMs.\n" +
+            "- Memory pages are allocated to virtual machines on first access.\n" +
+            "This means memory is not pre-allocated at VM creation; instead, each memory page is assigned to a VM the first time that VM accesses it.\n" +
+            "This approach optimizes memory usage and allows efficient sharing of physical memory among multiple VMs.",
+          tags: ["Memory Virtualization", "Memory Pages"],
+          ref: "Lecture 06 — Physical and Virtualized Host Memory Usage",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Describe the key components of virtual networking in vSphere.",
+          translation: "صف المكوّنات الأساسية للشبكات الافتراضية في vSphere.",
+          answer:
+            "The key virtual networking components are:\n" +
+            "1. Virtual Ethernet adapters\n" +
+            "2. Virtual switches\n" +
+            "Virtual Ethernet adapters are software representations of network interface cards that connect VMs to virtual networks.\n" +
+            "Virtual switches are software-based switches that connect virtual Ethernet adapters to each other and to the physical network.\n" +
+            "These components allow VMs to communicate with each other and with external networks, abstracting the physical network infrastructure into virtual networking.",
+          tags: [
+            "Virtual Networking",
+            "Virtual Ethernet Adapters",
+            "Virtual Switches",
+          ],
+          ref: "Lecture 06 — Physical and Virtual Networking",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. What are vSphere datastores? Explain their distributed storage architecture.",
+          translation:
+            "ما هي الـ vSphere datastores؟ اشرح بنية التخزين الموزّعة.",
+          answer:
+            "vSphere datastores provide a distributed storage architecture.\n" +
+            "In this architecture:\n" +
+            "- Multiple ESXi hosts can read or write to the shared storage concurrently.\n" +
+            "- The datastore abstracts physical file systems into a unified storage layer accessible by multiple hosts.\n" +
+            "- This enables features like vMotion, HA, and DRS, because VM files are stored on shared storage that all hosts in a cluster can access.\n" +
+            "The distributed storage architecture ensures that any host in the cluster can access VM files, enabling migration and high availability.",
+          tags: ["Datastores", "Distributed Storage", "Shared Storage"],
+          ref: "Lecture 06 — Physical File Systems and Datastores",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. What is GPU virtualization? List the use cases for virtual GPUs mentioned in the lecture.",
+          translation:
+            "ما هي محاكاة الـ GPU؟ اذكر حالات استخدام الـ GPU الافتراضي من المحاضرة.",
+          answer:
+            "GPU virtualization allows virtual GPUs to be added to VMs.\n" +
+            "GPU graphics devices optimize complex graphics operations, which can run at high performance without overloading the CPU.\n" +
+            "The use cases for virtual GPUs mentioned in the lecture are:\n" +
+            "1. Rich 2D and 3D graphics\n" +
+            "2. VMware Horizon virtual desktops\n" +
+            "3. Graphics-intensive applications\n" +
+            "4. Scientific computation applications\n" +
+            "5. Artificial intelligence (AI) and machine learning (ML) workloads\n" +
+            "These use cases benefit from GPU acceleration to deliver high-performance graphics and computation.",
+          tags: ["GPU Virtualization", "Use Cases"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Compare physical and virtual architecture in terms of resource ownership.",
+          translation:
+            "قارن بين البنية المادية والافتراضية من حيث ملكية الموارد.",
+          answer:
+            "Physical Architecture:\n" +
+            "- The operating system assumes ownership of all the physical CPUs in the system.\n" +
+            "- The operating system assumes ownership of all the physical memory in the system.\n" +
+            "- Physical components are directly accessed by the OS.\n" +
+            "Virtual Architecture:\n" +
+            "- The ESXi hypervisor abstracts physical components to software components.\n" +
+            "- Multiple VMs share computing, memory, network, and storage resources of the host.\n" +
+            "- The hypervisor manages resource allocation to VMs.\n" +
+            "- VMs are isolated from each other while sharing the same physical hardware.\n" +
+            "Key difference: In physical architecture, one OS owns all resources; in virtual architecture, the hypervisor manages and allocates resources to multiple VMs.",
+          tags: ["Physical Architecture", "Virtual Architecture", "Comparison"],
+          ref: "Lecture 06 — CPU Virtualization & Memory Usage",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain physical resource sharing among multiple VMs on a host.",
+          translation: "اشرح مشاركة الموارد المادية بين عدة VMs على الـ host.",
+          answer:
+            "Multiple VMs, running on a physical host, share computing, memory, network, and storage resources of the host.\n" +
+            "The ESXi hypervisor manages this sharing by:\n" +
+            "- Allocating CPU time to each VM (CPU virtualization runs directly on available CPUs).\n" +
+            "- Allocating memory pages to VMs on first access.\n" +
+            "- Providing virtual Ethernet adapters and virtual switches for network sharing.\n" +
+            "- Providing vSphere datastores for shared storage access.\n" +
+            "This allows efficient utilization of physical resources, as multiple VMs can run on the same hardware simultaneously, each consuming the resources it needs.",
+          tags: ["Resource Sharing", "Virtual Machine"],
+          ref: "Lecture 06 — Physical Resource Sharing",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Why are GPU graphics devices important? What operations do they optimize, and what is the benefit?",
+          translation:
+            "لماذا تكون أجهزة GPU الرسومية مهمة؟ أي عمليات تحسّن وما الفائدة؟",
+          answer:
+            "GPU graphics devices optimize complex graphics operations.\n" +
+            "These operations can run at high performance without overloading the CPU.\n" +
+            "This is important because:\n" +
+            "1. It offloads complex graphics processing from the CPU to the GPU.\n" +
+            "2. It allows the CPU to handle other tasks while the GPU handles graphics.\n" +
+            "3. It enables high-performance graphics and computation for applications that need it.\n" +
+            "Through GPU virtualization, virtual GPUs can be added to VMs, giving them access to GPU acceleration for use cases like rich 2D/3D graphics, VMware Horizon virtual desktops, graphics-intensive applications, scientific computation, and AI/ML workloads.",
+          tags: ["GPU Virtualization", "Graphics", "CPU Offloading"],
+          ref: "Lecture 06 — GPU Virtualization",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. How does a VM use host-based resources? List them and explain the relationship.",
+          translation:
+            "كيف يستخدم الـ VM موارد الـ host؟ اذكرها واشرح العلاقة.",
+          answer:
+            "A VM is a guest and consumer of an ESXi host.\n" +
+            "Any application in any supported OS can run in a VM (guest).\n" +
+            "The VM uses the following host-based resources:\n" +
+            "1. CPU - for computation\n" +
+            "2. Memory - for running processes\n" +
+            "3. Disk - for storage\n" +
+            "4. Network - for communication\n" +
+            "The ESXi hypervisor abstracts these physical resources into virtual equivalents that the VM consumes.\n" +
+            "Multiple VMs share the same physical host resources, with the hypervisor managing the allocation and ensuring isolation between VMs.",
+          tags: ["Virtual Machine", "Host Resources", "Guest"],
+          ref: "Lecture 06 — Virtual Machine: Guest and Consumer of ESXi Host",
+          likely: "high",
+        },
+      ],
+    },
   ],
+  examSections: {
+    showLectures: false, // الأقسام تظهر بدل شكل المحاضرات العادي
+
+    midterm: {
+      mode: "separate",
+      open: true,
+      notesOpen: false,
+      title: "محتوى الميد",
+      icon: "📝",
+      notes: [
+        "و بإذن الله امتحان الميد عليه 25 درجة و  هيكون MCQ و صح و غلط(و الMCQ ممكن تلاقو اسئلة تختارو منها اختيار واحد بس او ممكن تلاقو اسئلة تختارو منها اختيارين مع بعض)  و لسه عدد الاسئلة متحددش لحد دلوقتي عموما",
+      ],
+
+      lectures: [
+        "cloud-computing-lec-01",
+        "cloud-computing-lec-02",
+        "cloud-computing-lec-3-4",
+        "cloud-computing-lec-05",
+        "cloud-computing-lec-06",
+      ],
+    },
+  },
   // testBanks: [
   //   {
   //     t: "بنك أسئلة الحوسبة السحابية",
