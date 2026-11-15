@@ -75,7 +75,7 @@ const PANEL_HTML = `<!DOCTYPE html>
   .chip:hover { background: #1e293b; }
   .chip input { width: 20px; height: 20px; flex: 0 0 20px; margin: 0; padding: 0; accent-color: #38bdf8; cursor: pointer; }
   .chip.on { color: #fff; background: #0c4a6e; }
-  .chips > button.mini { align-self: flex-start; margin: 6px 10px; }
+  .chip-tools { display: flex; gap: 6px; padding: 6px 10px; }
   .sec-group .chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
   .sec-group .chips .chip { border-bottom: 0; border-radius: 6px; margin: 2px; }
   label.colh { display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px; }
@@ -285,7 +285,11 @@ function renderDepts() {
   DEPT_ORDER.forEach(function(d) {
     box.appendChild(makeChip(DEPT_LABELS[d], !!sel.depts[d], function(on) { sel.depts[d] = on; refreshAll(); }));
   });
-  box.appendChild(makeMini('مسح', function() { sel.depts = {}; refreshAll(); }));
+  var dt = document.createElement('div');
+  dt.className = 'chip-tools';
+  dt.appendChild(makeMini('✔ كل الأقسام', function() { DEPT_ORDER.forEach(function(d) { sel.depts[d] = true; }); refreshAll(); }));
+  dt.appendChild(makeMini('مسح', function() { sel.depts = {}; refreshAll(); }));
+  box.appendChild(dt);
 }
 
 function renderPrograms() {
@@ -296,7 +300,11 @@ function renderPrograms() {
   avail.forEach(function(p) {
     box.appendChild(makeChip(p, !!sel.programs[p], function(on) { sel.programs[p] = on; refreshAll(); }));
   });
-  box.appendChild(makeMini('مسح', function() { sel.programs = {}; refreshAll(); }));
+  var pt = document.createElement('div');
+  pt.className = 'chip-tools';
+  pt.appendChild(makeMini('✔ كل البرامج', function() { avail.forEach(function(p) { sel.programs[p] = true; }); refreshAll(); }));
+  pt.appendChild(makeMini('مسح', function() { sel.programs = {}; refreshAll(); }));
+  box.appendChild(pt);
 }
 
 function renderSections() {
