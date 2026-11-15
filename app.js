@@ -2,6 +2,7 @@
 var API_BASE = /\.pages\.dev$/.test(location.hostname)
   ? "https://fcal-third-year.vercel.app"
   : "";
+  var SHEET_BASE = ""; // الـ sheet بيتقرا من نفس الدومين (Cloudflare Function / Vercel Function)
 var DEPT_KEY = "dept_v1";
 function findDept(e) {
   if ("undefined" == typeof DEPARTMENTS || !e) return null;
@@ -5856,19 +5857,19 @@ function pgOpenLecture(e, t) {
         (n.value = a[e] ? e : ""));
     }
     function w(e) {
-      return fetch(API_BASE + "/api/sheet?tab=" + e, {
-        headers: { Accept: "application/json" },
-      })
-        .then(function (e) {
-          return e.json();
-        })
-        .then(function (e) {
-          if (!e.ok) throw new Error(e.code);
-          return e.items;
-        })
-        .catch(function (t) {
-          return "schedule" === e ? Promise.reject(t) : null;
-        });
+return fetch(SHEET_BASE + "/api/sheet?tab=" + e, {
+  headers: { Accept: "application/json" },
+})
+  .then(function (e) {
+    return e.json();
+  })
+  .then(function (e) {
+    if (!e.ok) throw new Error(e.code);
+    return e.items;
+  })
+  .catch(function (t) {
+    return "schedule" === e ? Promise.reject(t) : null;
+  });
     }
     function E(e) {
       var t = o("d-banner");
