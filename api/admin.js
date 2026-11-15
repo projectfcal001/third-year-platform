@@ -157,7 +157,7 @@ const PANEL_HTML = `<!DOCTYPE html>
     <div id="sectionGroups"></div>
     <div class="row">
       <div>
-        <label>المادة (Course)</label>
+        <label>المادة (Course)<span class="cnt" id="courseNote"></span></label>
         <select id="course" onchange="refreshFacets(); updateSummary()">
           <option value="">— كل المواد —</option>
         </select>
@@ -381,8 +381,42 @@ function rowInScope(r) {
 
 var FACET_IDX = { course: 2, classType: 3, instructor: 4 };
 
+// مجموعات الاستهداف: كل سكشن/برنامج مختار مجموعة، ولو مفيش فكل قسم مجموعة
+function scopeGroups() {
+  var depts = getDepts();
+  var deptOk = function(r) { return !depts.length || depts.indexOf(progDept[r[0]]) > -1; };
+  var sc = getScopes();
+  if (sc.length) {
+    return sc.map(function(s) { return function(r) { return deptOk(r) && s.program === r[0] && (s.section === '' || s.section === r[1]); }; });
+  }
+  if (depts.length) {
+    return depts.map(function(d) { return function(r) { return progDept[r[0]] === d; }; });
+  }
+  return [function() { return true; }];
+}
+
+// المواد: المشتركة بين كل المجموعات المختارة (تقاطع) مش دمجها
+function commonCourses(c, t, i) {
+  var common = null;
+  scopeGroups().forEach(function(g) {
+    var set = {};
+    SCHEDULE_DATA.rows.forEach(function(r) {
+      if (!g(r)) return;
+      if (t && r[3] !== t) return;
+      if (i && r[4] !== i) return;
+      set[r[2]] = true;
+    });
+    if (common === null) { common = set; return; }
+    Object.keys(common).forEach(function(k) { if (!set[k]) delete common[k]; });
+  });
+  return Object.keys(common || {});
+}
+
 function facetOptions(field) {
   var c = getVal('course'), t = getVal('classType'), i = getVal('instructor');
+  if (field === 'course') {
+    return commonCourses(c, t, i).sort(function(a, b) { return a.localeCompare(b, 'ar'); });
+  }
   var out = {};
   SCHEDULE_DATA.rows.forEach(function(r) {
     if (!rowInScope(r)) return;
@@ -442,6 +476,8 @@ function updateSummary() {
   document.getElementById('lowerTargets').style.display = deeper ? '' : 'none';
   document.getElementById('lowerHint').style.display = deeper ? 'none' : '';
   var cnt = function(id, n) { document.getElementById(id).textContent = n ? '(' + n + ' مختار)' : ''; };
+  var multi = scopeGroups().length > 1;
+  document.getElementById('courseNote').textContent = multi ? (document.getElementById('course').options.length > 1 ? ' — المواد المشتركة بس' : ' — مفيش مواد مشتركة') : '';
   cnt('cntDept', getDepts().length);
   cnt('cntProg', checkedKeys(sel.programs).length);
   cnt('cntSec', checkedKeys(sel.sections).length);
