@@ -61,39 +61,78 @@ function splitInstructors(s) {
 //  فلترة الاشتراك حسب الاستهداف
 // ============================================================
 //  معاملات الاستهداف (كلها اختيارية — لو مش موجودة، نعامل كـ "all"):
-//  - dept: القسم (cs, is, se, ai, all)
-//  - course: اسم المادة (مثلاً "نظم التشغيل")
-//  - instructor: اسم المعيد/الدكتور (مثلاً "م/ احمد عبدالرحمن")
-//  - program: البرنامج (مثلاً "هندسة البرمجيات 1")
-//  - section: السكشن (رقم)
-//  - classType: نوع الحصة ("lecture" | "lab" | "section")
+//  - dept: القسم — string أو array (مثلاً "cs" أو ["cs","se"]) — "all" = الكل
+//  - scopes: array من {program, section} — سكاشن من برامج/أقسام مختلفة
+//            section فاضي = البرنامج كله. (بيستبدل program/section القديمين)
+//  - program / section: (قديم، لسه شغّال) string أو array
+//  - course / instructor / classType: string أو array (أي واحد منهم يطابق)
 //  - dryRun: لو true → نرجّع matched بس من غير إرسال
 //
-//  منطق الفلترة (AND):
-//  - كل معامل موجود بيتم تطبيقه (لازم يطابق)
-//  - المعاملات المش موجودة بتتعامل كـ "all"
+//  منطق الفلترة (AND بين الأنواع، OR جوه النوع الواحد):
+//  - الطالب لازم يطابق dept (لو محدد)
+//  - وكمان targets الطالب لازم فيها حصة واحدة تطابق (المادة + المعيد + النوع + أي scope) مع بعض
 //
 //  الطالب بيتخزن عنده:
 //  - dept (قسم واحد: cs/is/se/ai)
 //  - targets: array of {course, instructor, program, section, type}
-//             (من الجدول المعتمد أو المختار)
-//
-//  لو الطالب معندهوش targets (اشتراك قديم)، نعامله كـ "all"
+//  لو الطالب معندهوش targets (اشتراك قديم)، بنستخدم program/section المحفوظين
 // ============================================================
-function matchesTarget(subData, params) {
-  // 1) فلترة dept
-  if (params.dept && params.dept !== 'all') {
-    if (subData.dept && subData.dept !== 'all' && subData.dept !== params.dept) {
-      return false;
+function toArr(v) {
+  if (Array.isArray(v)) return v.map(x => String(x).trim()).filter(Boolean);
+  if (v === undefined || v === null || v === '') return [];
+  const s = String(v).trim();
+  return s ? [s] : [];
+}
+
+// بيحوّل scopes (أو program/section القديمين) لقايمة {program, section} متطبّعة
+// program فاضي = أي برنامج، section فاضي = كل سكاشن البرنامج
+function parseScopes({ scopes, program, section }) {
+  const out = [];
+  if (Array.isArray(scopes)) {
+    for (const s of scopes.slice(0, 100)) {
+      if (!s || typeof s !== 'object') continue;
+      const p = norm(s.program);
+      const c = norm(String(s.section == null ? '' : s.section));
+      if (p || c) out.push({ program: p, section: c });
     }
   }
+  if (out.length) return out;
+  const progs = toArr(program).map(norm);
+  const secs = toArr(section).map(norm);
+  if (secs.length) {
+    (progs.length ? progs : ['']).forEach(p => secs.forEach(c => out.push({ program: p, section: c })));
+  } else {
+    progs.forEach(p => out.push({ program: p, section: '' }));
+  }
+  return out;
+}
 
-  // 2) لو مفيش استهداف أدق (course/instructor/section/classType/program) → نوقف
-  if (!params.course && !params.instructor && !params.section && !params.classType && !params.program) {
-    return true; // dept بس
+// هل (البرنامج + السكاشن) دول داخل أي scope؟ — لو مفيش scopes → true
+function inScopes(scopes, prog, secStr) {
+  if (!scopes.length) return true;
+  const p = norm(prog);
+  const secs = String(secStr || '').split(/\s+/).map(norm).filter(Boolean);
+  return scopes.some(sc => (!sc.program || sc.program === p) && (!sc.section || secs.includes(sc.section)));
+}
+
+function matchesTarget(subData, params) {
+  // 1) فلترة dept (واحد أو أكتر)
+  const depts = toArr(params.dept).filter(d => d !== 'all');
+  if (depts.length && subData.dept && subData.dept !== 'all' && !depts.includes(subData.dept)) {
+    return false;
   }
 
-  // 3) نشوف targets الطالب
+  const courses = toArr(params.course).map(norm);
+  const instrs = toArr(params.instructor).flatMap(splitInstructors);
+  const types = toArr(params.classType).map(norm);
+  const scopes = params.scopes || [];
+
+  // 2) لو مفيش استهداف أدق → dept بس
+  if (!courses.length && !instrs.length && !types.length && !scopes.length) {
+    return true;
+  }
+
+  // 3) targets الطالب
   let targets = [];
   try {
     if (subData.targets) {
@@ -105,60 +144,36 @@ function matchesTarget(subData, params) {
     targets = [];
   }
 
-  // 4) لو فيه targets (جدول معتمد) → نفلتر بيهم بدقة
+  // 4) لو فيه targets (جدول معتمد) → لازم حصة واحدة تطابق كل الشروط مع بعض
   if (Array.isArray(targets) && targets.length > 0) {
-    const nCourse = params.course ? norm(params.course) : null;
-    const nInstructors = params.instructor ? splitInstructors(params.instructor) : [];
-    const nSection = params.section ? norm(String(params.section)) : null;
-    const nProgram = params.program ? norm(params.program) : null;
-    const nClassType = params.classType ? norm(params.classType) : null;
-
     for (const t of targets) {
-      if (nCourse && norm(t.course) !== nCourse) continue;
-      if (nInstructors.length > 0) {
+      if (courses.length && !courses.includes(norm(t.course))) continue;
+      if (instrs.length) {
         const tInstrs = splitInstructors(t.instructor || '');
-        const match = nInstructors.some(ni => tInstrs.includes(ni));
-        if (!match) continue;
+        if (!instrs.some(ni => tInstrs.includes(ni))) continue;
       }
-      if (nProgram && norm(t.program) !== nProgram) continue;
-      if (nSection) {
-        const tSecs = String(t.section || '').split(/\s+/).map(norm).filter(Boolean);
-        if (!tSecs.includes(nSection)) continue;
-      }
-      if (nClassType && norm(t.type) !== nClassType) continue;
+      if (types.length && !types.includes(norm(t.type))) continue;
+      if (!inScopes(scopes, t.program, t.section)) continue;
       return true;
     }
     return false;
   }
 
-  // 5) ★ مفيش targets — نبني targets افتراضية من program/section المحفوظين
-  //    ده عشان الطالب اللي اختار قسم/سكشن من غير ما يأكد جدوله
+  // 5) ★ مفيش targets — نستخدم program/section المحفوظين (اللي اختار قسم/سكشن من غير ما يأكد جدوله)
   const subProgram = subData.program || '';
   const subSection = subData.section || '';
 
-  // لو مفيش حتى program/section → نعامله كـ "all" (يستلم أي إشعار)
+  // مفيش حتى program/section → نعامله كـ "all" (يستلم أي إشعار)
   if (!subProgram && !subSection) {
     return true;
   }
 
-  // لو فيه course/instructor/classType في الإشعار بس الطالب مفيش targets
-  // → مش نقدر نفلتر بدقة، فميبعتوش (return false)
-  // ده عشان الإشعار يوصل بس لللي عندهم targets صحيحة (جدول معتمد أو مختار)
-  if (params.course || params.instructor || params.classType) {
+  // لو الإشعار فيه course/instructor/classType والطالب مفيش targets → مش نقدر نفلتر بدقة، فميبعتوش
+  if (courses.length || instrs.length || types.length) {
     return false;
   }
 
-  // فلترة بـ program و section بس
-  const nProgram = params.program ? norm(params.program) : null;
-  const nSection = params.section ? norm(String(params.section)) : null;
-
-  if (nProgram && norm(subProgram) !== nProgram) return false;
-  if (nSection) {
-    const tSecs = String(subSection || '').split(/\s+/).map(norm).filter(Boolean);
-    if (!tSecs.includes(nSection)) return false;
-  }
-
-  return true;
+  return inScopes(scopes, subProgram, subSection);
 }
 
 export default async function handler(req, res) {
@@ -190,9 +205,11 @@ export default async function handler(req, res) {
     //   dryRun: true → من غير إرسال
     const {
       title, body, url,
-      dept, course, instructor, program, section, classType,
+      dept, course, instructor, program, section, classType, scopes,
       type, dryRun, batchSize
     } = req.body || {};
+    // ★ سكاشن من برامج/أقسام مختلفة (scopes) — أو program/section القديمين
+    const parsedScopes = parseScopes({ scopes, program, section });
 
     if (!title || !body) {
       return res.status(400).json({ error: "Title and body are required" });
@@ -206,7 +223,7 @@ export default async function handler(req, res) {
       type: type || "general",
       course: course || null,
       instructor: instructor || null,
-      section: section || null,
+      section: toArr(section).join(' ') || null,
       classType: classType || null
     });
 
@@ -229,7 +246,7 @@ export default async function handler(req, res) {
       for (const key of keys) {
         const subData = await redis.hgetall(key);
         if (!subData || !subData.endpoint) continue;
-        if (matchesTarget(subData, { dept, course, instructor, program, section, classType })) {
+        if (matchesTarget(subData, { dept, course, instructor, classType, scopes: parsedScopes })) {
           matched++;
         }
       }
@@ -266,7 +283,7 @@ export default async function handler(req, res) {
             if (!subData || !subData.endpoint) return { ok: false, key };
 
             // فلترة بالاستهداف
-            if (!matchesTarget(subData, { dept, course, instructor, program, section, classType })) {
+            if (!matchesTarget(subData, { dept, course, instructor, classType, scopes: parsedScopes })) {
               return { skipped: true };
             }
             matched++;
@@ -298,18 +315,20 @@ export default async function handler(req, res) {
 
     // ★ البند 11: إرسال نسخة لبوت تلجرام (منفصل عن بوت الطلاب)
     // لو المتغيرين مش موجودين، يتخطى بهدوء
-    const TG_LOG_TOKEN = process.env.TELEGRAM_LOG_BOT_TOKEN;
-    const TG_LOG_CHAT = process.env.TELEGRAM_LOG_CHAT_ID;
+    const TG_LOG_TOKEN = process.env.TELEGRAM_Notifications_BOT_TOKEN;
+    const TG_LOG_CHAT = process.env.TELEGRAM_Notifications_CHAT_ID;
     
     if (TG_LOG_TOKEN && TG_LOG_CHAT && !dryRun) {
       try {
         // نبني نص الإشعار
         const targeting = [];
-        if (dept && dept !== 'all') targeting.push(`القسم: ${dept}`);
+        const deptTxt = toArr(dept).filter(d => d !== 'all').join(', ');
+        if (deptTxt) targeting.push(`القسم: ${deptTxt}`);
         if (course) targeting.push(`المادة: ${course}`);
         if (instructor) targeting.push(`المعيد: ${instructor}`);
-        if (program) targeting.push(`البرنامج: ${program}`);
-        if (section) targeting.push(`السكشن: ${section}`);
+        if (parsedScopes.length) {
+          targeting.push('السكاشن: ' + parsedScopes.map(s => `${s.program || '*'}${s.section ? ' ' + s.section : ''}`).join('، '));
+        }
         if (classType) targeting.push(`النوع: ${classType}`);
         
         const tgText = `📢 <b>إشعار جديد تم إرساله</b>\n\n` +
