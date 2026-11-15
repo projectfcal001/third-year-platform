@@ -720,7 +720,7 @@ subjects.push({
       t: "المحاضرة 2: أساسيات الشبكات (Network Fundamentals)",
       d: "مقدمة عن شبكات الكمبيوتر: المصطلحات الأساسية، أجهزة الشبكة، نماذج OSI وTCP/IP، طرق تعيين الـ IP، وأوامر الشبكة الأساسية.",
       pdf: "datenew/subjects/cloud-computing/lectures/lec2/Network_Fundamentals_Lecture.pdf",
-      pdf2: "/datenew/subjects/cloud-computing/questions/Questions on each lecture/Lecture-02-Questions.pdf",
+      pdf2: "datenew/subjects/cloud-computing/questions/Questions on each lecture/Lecture-02-Questions.pdf",
       // محاضرة أساسيات الشبكات (Network Fundamentals): تغطي مفاهيم الشبكات، العنونة (IP/MAC)، أجهزة الشبكة، نماذج التواصل (OSI & TCP/IP)، طرق تعيين العناوين (DHCP/DORA/APIPA)، وأوامر الفحص والتشخيص.
 
       linkCategories: [
@@ -4048,24 +4048,27 @@ subjects.push({
     },
   ],
   examSections: {
-    showLectures: false, // الأقسام تظهر بدل شكل المحاضرات العادي
+    showLectures: false,
+    showOthers: true,
 
     midterm: {
       mode: "separate",
-      open: true,
-      notesOpen: false,
+      open: false,
       title: "محتوى الميد",
       icon: "📝",
+      notesOpen: true,
       notes: [
-        "و بإذن الله امتحان الميد عليه 25 درجة و  هيكون MCQ و صح و غلط(و الMCQ ممكن تلاقو اسئلة تختارو منها اختيار واحد بس او ممكن تلاقو اسئلة تختارو منها اختيارين مع بعض)  و لسه عدد الاسئلة متحددش لحد دلوقتي عموما",
+        "الميد من المحاضرة رقم 1 لغاية المحاضرة رقم 6",
+        "تاريخ الامتحان: الخميس 26 نوفمبر",
+        "من الساعة 9:45 إلى 10:45",
       ],
-
+      chapters: [],
       lectures: [
-        "cloud-computing-lec-01",
-        "cloud-computing-lec-02",
-        "cloud-computing-lec-3-4",
-        "cloud-computing-lec-05",
-        "cloud-computing-lec-06",
+        "cloud-computing-lec-01", // المحاضرة 1 — Orientation Session
+        "cloud-computing-lec-02", // المحاضرة 2 — Network Fundamentals
+        "cloud-computing-lec-3-4", // المحاضرات 3 و 4 — Virtualization
+        "cloud-computing-lec-05", // المحاضرة 5 — vSphere and Virtualization Overview
+        "cloud-computing-lec-06", // المحاضرة 6 — (الجديدة)
       ],
     },
   },

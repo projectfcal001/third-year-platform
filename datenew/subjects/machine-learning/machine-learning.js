@@ -3348,7 +3348,7 @@ subjects.push({
     // المحاضرة: Lecture 5 - Linear Models II (Convexity, Learning Rate, Binary Linear Classification, Logistic Regression)
 
     {
-      id: "ml-lecture-05",
+      id: "machine-learning-lecture-05",
       t: "المحاضرة 5 - Linear Models II",
       d: "التحدب Convexity، ضبط معدل التعلم، التصنيف الخطي الثنائي Binary Linear Classification، والانحدار اللوجستي Logistic Regression مع دالة Sigmoid والـ Cross-Entropy Loss.",
       pdf: "datenew/subjects/machine-learning/lectures/Lec 5/Lec 5.pdf",
@@ -4464,4 +4464,35 @@ subjects.push({
       ],
     },
   ],
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  تحديد محتوى الميد والفاينل (examSections)
+  //  الميد: من المحاضرة 1 لغاية المحاضرة 5
+  //  الامتحان: الجمعة 27 نوفمبر | 9:45 → 10:45 (مدة ساعة)
+  // ═══════════════════════════════════════════════════════════════════
+  examSections: {
+    showLectures: false,
+    showOthers: true,
+
+    midterm: {
+      mode: "separate",
+      open: false,
+      title: "محتوى الميد",
+      icon: "📝",
+      notesOpen: true,
+      notes: [
+        "الميد من المحاضرة رقم 1 لغاية المحاضرة رقم 5",
+        "تاريخ الامتحان: الجمعة 27 نوفمبر",
+        "من الساعة 9:45 إلى 10:45 (مدة ساعة)",
+      ],
+      chapters: [],
+      lectures: [
+        "machine-learning-lecture-01", // kNN — مقدمة + أقرب الجيران
+        "machine-learning-lecture-02", // Decision Trees + Bias-Variance
+        "machine-learning-lecture-03", // Linear Regression
+        "machine-learning-lecture-04", //
+        "machine-learning-lecture-05", //
+      ],
+    },
+  },
 });

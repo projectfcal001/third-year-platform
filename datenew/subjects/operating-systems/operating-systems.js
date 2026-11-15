@@ -4234,42 +4234,52 @@ subjects.push({
       ],
     },
   ],
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  chapters — تقسيم المحاضرات على الفصول
+  // ═══════════════════════════════════════════════════════════════════
   chapters: [
     {
-      t: "Chapter 1: Introduction", // عنوان الفصل
-      icon: "📘", // أيقونة (اختياري)
-      lectures: [0, 1], // ← أرقام المحاضرات في الفصل
-      open: false,
+      t: "Chapter 1: Introduction",
+      icon: "📘",
+      d: "مقدمة في نظم التشغيل: مكونات النظام، المقاطعات، بنية التخزين، هرمية التخزين، الـ Caching، وتعدد البرمجة والمشاركة الزمنية",
+      lectures: [
+        "operating-systems-lecture-01", // Slides 1-23
+        "operating-systems-lecture-02", // Slides 24-30
+      ],
     },
     {
-      t: " Chapter 3: Processes", // عنوان الفصل
-      icon: "📘", // أيقونة (اختياري)
-      lectures: [2, 3], // ← أرقام المحاضرات في الفصل
-      open: true,
+      t: "Chapter 3: Processes",
+      icon: "📘",
+      d: "العمليات: المفهوم، الحالات، PCB، الـ Schedulers، الـ Context Switch، إنشاء وإنهاء العمليات، والـ IPC",
+      lectures: [
+        "operating-systems-lecture-03",
+        "operating-systems-lecture-04",
+      ],
     },
   ],
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  examSections — الميد = Chapter 1 + Chapter 3 كاملين
+  //  الامتحان: الثلاثاء 24 نوفمبر | 12:15 → 1:15
+  // ═══════════════════════════════════════════════════════════════════
   examSections: {
-    showLectures: false, // الأقسام تظهر بدل شكل المحاضرات العادي
+    showLectures: false,
+    showOthers: true,
 
     midterm: {
       mode: "separate",
       open: true,
-      notesOpen: false,
       title: "محتوى الميد",
       icon: "📝",
+      notesOpen: true,
       notes: [
-        "الميد من الفصل الأول والتاني بس",
-        "ركزي على CPM/PERT وحساب المسار الحرج",
-        "أسئلة مقالية متوقعة عن دورة حياة المشروع",
+        "الميد: Chapter 1 + Chapter 3 (كاملين)",
+        "تاريخ الامتحان: الثلاثاء 24 نوفمبر",
+        "من الساعة 12:15 إلى 1:15 (مدة ساعة)",
       ],
-
-      lectures: [
-        "cloud-computing-lec-01",
-        "cloud-computing-lec-02",
-        "cloud-computing-lec-3-4",
-        "cloud-computing-lec-05",
-        "cloud-computing-lec-06",
-      ],
+      chapters: ["Chapter 1: Introduction", "Chapter 3: Processes"],
+      lectures: [],
     },
   },
 });

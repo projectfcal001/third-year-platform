@@ -4574,7 +4574,7 @@ subjects.push({
       ],
     },
     {
-      id: "se-lecture-06",
+      id: "software-engineering-lec-06",
       t: "Lecture 6 (Chapter 5) — System Modeling (Context, Interaction, Structural, Behavioral, MDE)",
       d: "نمذجة النظام — الفصول 5.1 حتى 5.4 من كتاب Sommerville: نماذج السياق، التفاعل، البنية، السلوك، وهندسة النمذجة الموجهة (MDE).",
       pdf: "datenew/subjects/software-engineering/lectures/lec 6/Software Engineering, 10th GLOBAL Edition - Chapter 5 - System modeling.pdf.pdf",
@@ -5833,29 +5833,1345 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "software-engineering-lec-07",
+      t: "Lecture 7 (Chapter 6 — Part 1) — Architectural Design (Decisions, Views, Patterns Intro)",
+      d: "التصميم المعماري — الجزء الأول من الفصل 6 من كتاب Sommerville: قرارات التصميم المعماري، الـ views (4+1)، ومقدمة الـ Architectural patterns.",
+      pdf: "datenew/subjects/software-engineering/lectures/CH06/lec 7/S.W_Lec07_(Chapter 6 - Architectural design Lec1).pdf",
+      pdf2: "datenew/subjects/software-engineering/questions/Questions on each lecture/CH06/lec 7/Lecture-07-Questions.pdf",
+      // المحاضرة: Lecture 7 (Chapter 6 — Part 1) — Architectural Design (Sommerville Ch.6) — موضوعها: تصميم المعمارية، القرارات المعمارية الأساسية، الـ architectural views (4+1 view model)، الـ Architectural patterns (مقدمة)، والـ ADLs.
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي للتصميم المعماري للبرمجيات والمفاهيم الأساسية: القرارات المعمارية، الـ views، والـ architectural patterns. ملاحظة: كلها روابط بحث يوتيوب.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: Architectural Design شرح بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح التصميم المعماري للبرمجيات: تعريفه، دوره في عملية التطوير، وعلاقته بهندسة المتطلبات. مناسب لفهم مقدمة المحاضرة. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=architectural+design+software+engineering+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: 4+1 View Model بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح موديل 4+1 view لـ Krutchen: logical، process، development، physical views + scenarios. مناسب لفهم القسم 6.2. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=4+1+view+model+architecture+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Architectural Patterns بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح الـ architectural patterns (styles): client-server، layered، pipe-filter، إلخ. مناسب لفهم القسم 6.3. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=architectural+patterns+styles+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Non-functional Requirements Architecture بالعربي",
+              d: "صفحة بحث يوتيوب لفيديوهات عربية تشرح كيف تؤثر المتطلبات غير الوظيفية (performance، security، safety، availability، maintainability) على التصميم المعماري. مناسب لفهم القسم 6.1. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=non+functional+requirements+architecture+شرح+بالعربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات بالإنجليزي تشرح التصميم المعماري ومفاهيمه الأساسية. ملاحظة: كلها روابط بحث يوتيوب.",
+          links: [
+            {
+              t: "🔎 بحث في يوتيوب: Software Architecture Tutorial",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح software architecture: تعريفها، أهميتها، وعمليات التصميم. مناسب لمراجعة مقدمة المحاضرة. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=software+architecture+tutorial+for+beginners",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Kruchten 4+1 View Model",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح موديل 4+1 view لـ Krutchen بالتفصيل: logical، process، development، physical، و scenarios. مناسب لفهم القسم 6.2. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=kruchten+4+1+view+model+software+architecture",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Architectural Patterns and Styles",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح architectural patterns/styles (client-server، layered، pipe-filter، repository). مناسب لفهم القسم 6.3. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=architectural+patterns+styles+software+engineering+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "🔎 بحث في يوتيوب: Architecture Description Languages ADL",
+              d: "صفحة بحث يوتيوب لفيديوهات عالمية تشرح ADLs (Architecture Description Languages) ومقارنتها بـ UML. مناسب لفهم النقاش عن ADLs في القسم 6.2. ملاحظة: هذا رابط بحث وليس فيديو محدد.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=architecture+description+language+ADL+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مقالات مرجعية موثوقة تشرح كل مفاهيم المحاضرة: التصميم المعماري، الـ 4+1 view model، الـ patterns، والـ ADLs.",
+          links: [
+            {
+              t: "Architectural Design in Software Engineering — GeeksforGeeks",
+              d: "مقال مفصّل عن التصميم المعماري: تعريف IEEE، مكونات النظام (components، connectors)، وتصنيف الـ architectural styles (data centered، data flow، call and return، object oriented، layered). مناسب لمراجعة مقدمة المحاضرة والقسم 6.1.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/software-engineering-architectural-design",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Types of Software Architecture Patterns — GeeksforGeeks",
+              d: "مقال شامل عن 10 أنواع من architectural patterns: Layered، Client-Server، Event-Driven، Microkernel، Microservices، Space-Based، Master-Slave، Pipe-Filter، Broker، Peer-to-Peer. لكل pattern: description، advantages، disadvantages، use cases. مناسب لفهم القسم 6.3.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/software-engineering/types-of-software-architecture-patterns",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "4+1 Architectural View Model — Wikipedia",
+              d: "مقال موسوعي عن موديل 4+1 view: تاريخه (Krutchen)، شرح الـ views الخمسة (logical، process، development، physical، scenarios)، والـ UML diagrams المستخدمة لكل view. مناسب لفهم القسم 6.2.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://en.wikipedia.org/wiki/4%2B1_architectural_view_model",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Architecture Description Language — Wikipedia",
+              d: "مقال موسوعي عن ADLs: تعريف ISO/IEC/IEEE 42010، أمثلة (Acme، AADL، C2، Darwin، Wright، ArchiMate، EAST-ADL)، التاريخ، الخصائص، والمفاهيم (object connection architecture و interface connection architecture). مناسب لفهم النقاش عن ADLs.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://en.wikipedia.org/wiki/Architecture_description_language",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "System Design Tutorial — GeeksforGeeks",
+              d: "سلسلة شاملة عن System Design تشمل: architectural styles (monolithic، microservices، event-driven)، scalability، databases، CAP theorem، load balancing. مناسب لتعميق فهم العلاقة بين المعمارية والمتطلبات non-functional.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "📖 فتح المقال",
+                  url: "https://www.geeksforgeeks.org/system-design/system-design-tutorial",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Architectural Blueprints — The 4+1 View Model (Kruchten paper)",
+              d: "الورقة البحثية الأصلية لـ Philippe Krutchen (2020) عن موديل 4+1 view model. المرجع الأساسي للموديل المذكور في القسم 6.2. تنزل من arXiv مجانًا.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "⭳ تحميل الورقة",
+                  url: "https://arxiv.org/pdf/2006.04975",
+                  type: "download",
+                  color: "orange",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لرسم وتوثيق معمارية البرمجيات وتطبيق الـ architectural patterns.",
+          links: [
+            {
+              t: "Visual Paradigm Online — أداة UML و Architecture مجانية",
+              d: "أداة أونلاين مجانية لرسم architectural diagrams: block diagrams، UML diagrams (class، component، deployment)، و architectural patterns templates. تدعم التصدير بصيغ متعددة. مناسب للتدريب على رسم الـ architectural views المذكورة في القسم 6.2.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://online.visual-paradigm.com/diagrams/features/use-case-diagram-software",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Lucidchart — Architectural Diagram Tool",
+              d: "أداة شائعة لرسم architectural diagrams بأنواعها: block diagrams، layered architecture، client-server، و 4+1 view model templates. تدعم التعاون الفوري. مناسب للتدريب على تمثيل المعمارية بشكل informally كما في المحاضرة.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://lucid.co/diagram/uml/use-case-diagram-tutorial",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Draw.io (diagrams.net) — أداة مجانية مفتوحة المصدر",
+              d: "أداة مجانية تمامًا لرسم architectural diagrams و block diagrams. مناسبة لرسم الـ informal block diagrams المذكورة في المحاضرة: صناديق للمكونات، أسهم لتدفق البيانات، و صناديق داخل صناديق للـ subcomponents. لا تتطلب تسجيل.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🚀 فتح الأداة",
+                  url: "https://app.diagrams.net/",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        // ============ MCQ — likely: high ============
+        {
+          q: "1. What is architectural design concerned with?",
+          options: [
+            "Understanding how a software system should be organized and designing the overall structure of that system.",
+            "Writing detailed source code for individual components of the system.",
+            "Testing the system against its functional requirements only.",
+            "Deploying the system in a production environment.",
+          ],
+          correct: 0,
+          translation: "بماذا يهتم التصميم المعماري (Architectural design)؟",
+          explanation:
+            'الإجابة الصحيحة هي الأولى لأن المحاضرة تنص: "Architectural design is concerned with understanding how a software system should be organized and designing the overall structure of that system." الخيارات الأخرى تصف عمليات مختلفة: كتابة الكود، الاختبار، والنشر.',
+          tags: ["Architectural design", "Definitions"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "2. According to the lecture, architectural design is the first stage in the software design process and is the critical link between:",
+          options: [
+            "Implementation and testing.",
+            "Design and requirements engineering.",
+            "Deployment and maintenance.",
+            "Project management and coding.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، التصميم المعماري هو المرحلة الأولى في عملية تصميم البرمجيات وهو الرابط الحرج بين:",
+          explanation:
+            'المحاضرة تقول: "It is the critical link between design and requirements engineering, as it identifies the main structural components in a system and the relationships between them." التصميم المعماري بيحدد المكونات الرئيسية وعلاقاتها.',
+          tags: ["Architectural design", "Requirements engineering"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "3. The output of the architectural design process is:",
+          options: [
+            "A list of test cases for the system.",
+            "Source code for all components.",
+            "An architectural model that describes how the system is organized as a set of communicating components.",
+            "A user manual for the system.",
+          ],
+          correct: 2,
+          translation: "المُخرَج من عملية التصميم المعماري هو:",
+          explanation:
+            'المحاضرة تنص: "The output of the architectural design process is an architectural model that describes how the system is organized as a set of communicating components." هذا الموديل بيوصف تنظيم النظام كمجموعة مكونات متواصلة.',
+          tags: ["Architectural design", "Output"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "4. According to the lecture, in agile processes, incremental development of architectures is usually:",
+          options: [
+            "Highly successful and recommended.",
+            "Not usually successful because refactoring the system architecture is expensive.",
+            "Mandatory for all agile projects.",
+            "Cheaper than refactoring individual components.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، في عمليات الـ agile، التطوير المتزايد للمعمارية عادةً:",
+          explanation:
+            'المحاضرة تقول: "Incremental development of architectures is not usually successful. Refactoring components in response to changes is usually relatively easy. However, refactoring the system architecture is expensive because you may need to modify most system components to adapt them to the architectural changes."',
+          tags: ["Agile", "Architecture refactoring"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "5. Architecture in the small is concerned with:",
+          options: [
+            "The architecture of complex enterprise systems distributed over different computers.",
+            "The architecture of individual programs and how an individual program is decomposed into components.",
+            "The architecture of distributed systems owned by different companies.",
+            "The architecture of hardware components only.",
+          ],
+          correct: 1,
+          translation: "الـ Architecture in the small تهتم بـ:",
+          explanation:
+            'المحاضرة تفرّق بين نوعين: "Architecture in the small is concerned with the architecture of individual programs... how an individual program is decomposed into components." أما architecture in the large فتهتم بالأنظمة المؤسسية المعقدة الموزعة.',
+          tags: ["Architecture in the small", "Architecture in the large"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "6. Architecture in the large is concerned with:",
+          options: [
+            "The architecture of individual programs only.",
+            "The way a single program is decomposed into components.",
+            "The architecture of complex enterprise systems that may be distributed over different computers owned by different companies.",
+            "The internal structure of a single function.",
+          ],
+          correct: 2,
+          translation: "الـ Architecture in the large تهتم بـ:",
+          explanation:
+            "Architecture in the large تهتم بالأنظمة المؤسسية المعقدة اللي بتشمل أنظمة وبرامج ومكونات برمجية أخرى، وقد تكون موزعة على أجهزة مختلفة يملكها ويديرها شركات مختلفة. هذا الموضوع يُغطى في الفصلين 17 و 18.",
+          tags: ["Architecture in the large", "Enterprise systems"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "7. According to Bosch (2000), the dominant influence on the non-functional system characteristics is:",
+          options: [
+            "The individual components only.",
+            "The system's architecture.",
+            "The programming language used.",
+            "The development team's experience.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا لـ Bosch (2000)، التأثير المهيمن على الخصائص غير الوظيفية للنظام هو:",
+          explanation:
+            'المحاضرة تقول: "Individual components implement the functional system requirements, but the dominant influence on the non-functional system characteristics is the system\'s architecture." المكونات الفردية تنفذ المتطلبات الوظيفية لكن المعمارية تحدد الخصائص non-functional.',
+          tags: ["Non-functional requirements", "Architecture", "Bosch"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "8. According to Chen et al. (2013), which type of requirements had the most significant effect on the system's architecture?",
+          options: [
+            "Functional requirements.",
+            "Non-functional requirements.",
+            "User interface requirements.",
+            "Database requirements.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا لـ Chen et al. (2013)، أي نوع من المتطلبات كان له التأثير الأكبر على معمارية النظام؟",
+          explanation:
+            'Chen et al. أكدوا في دراستهم عن "architecturally significant requirements" أن non-functional requirements لها التأثير الأكبر على معمارية النظام. هذا يؤكد ملاحظة Bosch.',
+          tags: ["Non-functional requirements", "Architecture", "Chen"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "9. According to Bass et al. (2012), explicitly designing and documenting software architecture has how many advantages?",
+          options: [
+            "Two advantages.",
+            "Three advantages.",
+            "Five advantages.",
+            "Seven advantages.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا لـ Bass et al. (2012)، تصميم وتوثيق المعمارية بشكل صريح له كم ميزة؟",
+          explanation:
+            "Bass et al. ذكر 3 ميزات: (1) Stakeholder communication، (2) System analysis، (3) Large-scale reuse. هذه الميزات الثلاث مذكورة صراحة في المحاضرة.",
+          tags: ["Architecture", "Bass", "Advantages"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "10. Which of the following is NOT one of the three advantages of explicit architectural design (Bass et al. 2012)?",
+          options: [
+            "Stakeholder communication.",
+            "System analysis.",
+            "Large-scale reuse.",
+            "Automatic code generation.",
+          ],
+          correct: 3,
+          translation:
+            "أيٌّ مما يلي ليس من الميزات الثلاث للتصميم المعماري الصريح (Bass et al. 2012)؟",
+          explanation:
+            "الميزات الثلاث المذكورة هي: (1) Stakeholder communication كأداة نقاش، (2) System analysis لتحليل الأداء والموثوقية، (3) Large-scale reuse لإعادة استخدام نفس المعمارية في أنظمة مشابهة. الـ Automatic code generation ليست من الميزات المذكورة.",
+          tags: ["Architecture", "Bass", "Advantages"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "11. In a block diagram for architectural modeling, what does each box represent?",
+          options: [
+            "A database table.",
+            "A component.",
+            "A user interface element.",
+            "A test case.",
+          ],
+          correct: 1,
+          translation:
+            "في الـ block diagram للنمذجة المعمارية، ماذا يمثل كل صندوق؟",
+          explanation:
+            "Each box in the diagram represents a component. الـ boxes within boxes indicate that the component has been decomposed to subcomponents. والأسهم تمثل data و control signals بين المكونات.",
+          tags: ["Block diagrams", "Notation", "Components"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "12. In a block diagram, what do boxes within boxes indicate?",
+          options: [
+            "That the component has been decomposed to subcomponents.",
+            "That two components are unrelated.",
+            "That the component has been deleted.",
+            "That the component is external to the system.",
+          ],
+          correct: 0,
+          translation: "في الـ block diagram، ماذا تدل الصناديق داخل الصناديق؟",
+          explanation:
+            "Boxes within boxes indicate that the component has been decomposed to subcomponents. هذا يسمح بعرض هرمي للنظام: مكون رئيسي يحتوي على مكونات فرعية.",
+          tags: ["Block diagrams", "Notation", "Decomposition"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "13. In a block diagram, arrows mean that:",
+          options: [
+            "Data and/or control signals are passed from component to component in the direction of the arrows.",
+            "Components are unrelated to each other.",
+            "Components should be deleted.",
+            "Components are part of the same layer.",
+          ],
+          correct: 0,
+          translation: "في الـ block diagram، الأسهم تعني أن:",
+          explanation:
+            "Arrows mean that data and or control signals are passed from component to component in the direction of the arrows. هذا يمثل تدفق البيانات والإشارات بين المكونات.",
+          tags: ["Block diagrams", "Notation", "Arrows"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "14. Bass et al. (2012) dislike informal block diagrams for describing an architecture because:",
+          options: [
+            "They are too expensive to produce.",
+            "They show neither the type of the relationships among system components nor the components' externally visible properties.",
+            "They cannot be understood by anyone.",
+            "They require specialized software to view.",
+          ],
+          correct: 1,
+          translation:
+            "Bass et al. (2012) لا يحبون الـ informal block diagrams لوصف المعمارية لأن:",
+          explanation:
+            "Bass et al. يدّعون أن informal diagrams هي poor architectural representations لأنها لا تُظهر نوع العلاقات بين المكونات ولا الخصائص الظاهرة خارجيًا للمكونات. مع ذلك، المحاضرة تشير إنها لسهال شائعة الاستخدام في الصناعة.",
+          tags: ["Block diagrams", "Bass", "Criticism"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "15. According to the lecture, an architectural model of a program is used in which two ways?",
+          options: [
+            "As a way of encouraging discussions about the system design, and as a way of documenting an architecture that has been designed.",
+            "As a way of generating test cases, and as a way of deploying the system.",
+            "As a way of writing code, and as a way of debugging.",
+            "As a way of managing the project, and as a way of marketing the system.",
+          ],
+          correct: 0,
+          translation:
+            "وفقًا للمحاضرة، الموديل المعماري لبرنامج يُستخدم بأي طريقتين؟",
+          explanation:
+            "الطريقتان: (1) As a way of encouraging discussions about the system design — مفيد للتواصل مع stakeholders، (2) As a way of documenting an architecture that has been designed — لإنتاج موديل كامل يُظهر المكونات والـ interfaces والروابط.",
+          tags: ["Architecture models", "Usage"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "16. Architectural Description Languages (ADLs) were developed to:",
+          options: [
+            "Replace all natural language in software documentation.",
+            "Provide a more rigorous notation for architectural description.",
+            "Generate test cases automatically.",
+            "Translate code between programming languages.",
+          ],
+          correct: 1,
+          translation: "لُغات وصف المعمارية (ADLs) طُوّرت لـ:",
+          explanation:
+            "Ideally, if the architecture of a system is to be documented in detail, it is better to use a more rigorous notation for architectural description. Various ADLs طُوّرت لهذا الغرض. عناصرها الأساسية هي components و connectors.",
+          tags: ["ADLs", "Documentation"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "17. According to the lecture, why are ADLs not widely used in practice?",
+          options: [
+            "Because they are too simple and do not provide enough detail.",
+            "Because developing a detailed architectural description is expensive and time-consuming, and it is practically impossible to know whether or not it is cost-effective.",
+            "Because they cannot describe software architectures.",
+            "Because they require internet access to use.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، لماذا الـ ADLs غير مستخدمة على نطاق واسع في الممارسة العملية؟",
+          explanation:
+            'المحاضرة تقول: "However, developing a detailed architectural description is an expensive and time-consuming process. It is practically impossible to know whether or not it is cost-effective, so this approach is not widely used."',
+          tags: ["ADLs", "Cost", "Limitations"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          q: "18. According to the lecture, architectural design is best considered as:",
+          options: [
+            "A sequence of activities to be followed strictly.",
+            "A series of decisions to be made rather than a sequence of activities.",
+            "A single decision made by the project manager.",
+            "An automated process using tools.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، التصميم المعماري يُعتبر بشكل أفضل على أنه:",
+          explanation:
+            'Architectural design is a creative process. المحاضرة تقول: "Consequently, I think it is best to consider architectural design as a series of decisions to be made rather than a sequence of activities." القرارات دي بتعتمد على نوع النظام وخبرة الـ architect.',
+          tags: ["Architectural design", "Decisions"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "19. An Architectural pattern (as defined by Garlan and Shaw 1993) is:",
+          options: [
+            "A description of a system organization, such as a client-server organization or a layered architecture.",
+            "A specific implementation of a single component.",
+            "A test case for validating the architecture.",
+            "A type of database schema.",
+          ],
+          correct: 0,
+          translation:
+            "الـ Architectural pattern (كما عرّفها Garlan و Shaw 1993) هو:",
+          explanation:
+            "An Architectural pattern is a description of a system organization (Garlan and Shaw 1993), such as a client-server organization or a layered architecture. تلتقط جوهر معمارية استُخدمت في أنظمة مختلفة.",
+          tags: ["Architectural patterns", "Garlan and Shaw", "Definitions"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "20. According to the lecture, Garlan and Shaw's notion of an architectural style covers which of the fundamental architectural questions?",
+          options: [
+            "Questions 1 to 3 only.",
+            "Questions 4 to 6 in the list of fundamental architectural questions.",
+            "Questions 7 to 9 only.",
+            "All the fundamental questions.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، مفهوم Garlan و Shaw للـ architectural style يغطي أي من الأسئلة المعمارية الأساسية؟",
+          explanation:
+            "Garlan and Shaw's notion of an architectural style covers questions 4 to 6: (4) the fundamental approach used to structure the system، (5) how to decompose structural components into sub-components، (6) the strategy for controlling component operation.",
+          tags: ["Architectural style", "Garlan and Shaw", "Questions"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "21. If performance is a critical requirement, the architecture should be designed to:",
+          options: [
+            "Use fine-grain, self-contained components distributed across the network.",
+            "Localize critical operations within a small number of components deployed on the same computer.",
+            "Use a layered structure with the most critical assets in the innermost layers.",
+            "Include redundant components for fault tolerance.",
+          ],
+          correct: 1,
+          translation:
+            "إذا كان الأداء (performance) متطلبًا حرجًا، يجب تصميم المعمارية لـ:",
+          explanation:
+            "Performance: localize critical operations within a small number of components, deployed on the same computer. هذا يقلل عدد اتصالات المكونات وبيستخدم مكونات كبيرة نسبيًا بدلًا من fine-grain.",
+          tags: ["Performance", "Non-functional requirements", "Architecture"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "22. If security is a critical requirement, the architecture should use:",
+          options: [
+            "A few large components deployed on the same computer.",
+            "A layered structure with the most critical assets protected in the innermost layers.",
+            "Redundant components for high availability.",
+            "Fine-grain, self-contained components with no shared data.",
+          ],
+          correct: 1,
+          translation:
+            "إذا كان الأمان (security) متطلبًا حرجًا، يجب أن تستخدم المعمارية:",
+          explanation:
+            "Security: a layered structure for the architecture should be used, with the most critical assets protected in the innermost layers and a high level of security validation applied to these layers.",
+          tags: [
+            "Security",
+            "Layered architecture",
+            "Non-functional requirements",
+          ],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "23. If safety is a critical requirement, the architecture should be designed so that:",
+          options: [
+            "Safety-related operations are distributed across many components to maximize redundancy.",
+            "Safety-related operations are co-located in a single component or in a small number of components.",
+            "All components are deployed on different computers.",
+            "Fine-grain components are used throughout the system.",
+          ],
+          correct: 1,
+          translation:
+            "إذا كانت السلامة (safety) متطلبًا حرجًا، يجب تصميم المعمارية بحيث:",
+          explanation:
+            "Safety: safety-related operations co-located in a single component or in a small number of components. هذا يقلل تكلفة ومشاكل safety validation وبيسهّل توفير أنظمة حماية لإيقاف النظام بأمان عند الفشل.",
+          tags: ["Safety", "Non-functional requirements", "Architecture"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "24. If availability is a critical requirement, the architecture should be designed to:",
+          options: [
+            "Localize all operations in a single component.",
+            "Include redundant components so that it is possible to replace and update components without stopping the system.",
+            "Avoid any redundancy to keep the system simple.",
+            "Use only one computer to avoid network issues.",
+          ],
+          correct: 1,
+          translation:
+            "إذا كانت التوفرية (availability) متطلبًا حرجًا، يجب تصميم المعمارية لـ:",
+          explanation:
+            "Availability: architecture should include redundant components so that it is possible to replace and update components without stopping the system. الـ fault-tolerant system architectures تُغطى في الفصل 11.",
+          tags: ["Availability", "Redundancy", "Non-functional requirements"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "25. If maintainability is a critical requirement, the architecture should be designed using:",
+          options: [
+            "A few large components to reduce communication.",
+            "Fine-grain, self-contained components that may readily be changed, with producers of data separated from consumers.",
+            "A single monolithic component.",
+            "Only one layer of components.",
+          ],
+          correct: 1,
+          translation:
+            "إذا كانت القابلية للصيانة (maintainability) متطلبًا حرجًا، يجب تصميم المعمارية باستخدام:",
+          explanation:
+            "Maintainability: fine-grain, self-contained components that may readily be changed. Producers of data should be separated from consumers, and shared data structures should be avoided.",
+          tags: [
+            "Maintainability",
+            "Fine-grain components",
+            "Non-functional requirements",
+          ],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "26. According to the lecture, there is potential conflict between which two non-functional requirements?",
+          options: [
+            "Security and safety.",
+            "Performance and maintainability (large components improve performance, small fine-grain components improve maintainability).",
+            "Availability and security.",
+            "Safety and availability.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، يوجد تعارض محتمل بين أي متطلبين non-functional؟",
+          explanation:
+            "Using large components improves performance, and using small, fine-grain components improves maintainability. لو الاتنين مهمين، لازم find a compromise — أحيانًا باستخدام patterns مختلفة لأجزاء مختلفة من النظام.",
+          tags: ["Performance", "Maintainability", "Conflict"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          q: "27. The 4+1 view model of software architecture was proposed by:",
+          options: [
+            "Bass, Clements, and Kazman in 2012.",
+            "Krutchen in 1995.",
+            "Hofmeister, Nord, and Soni in 2000.",
+            "Bosch in 2000.",
+          ],
+          correct: 1,
+          translation: "موديل 4+1 view لمعمارية البرمجيات اقترحه:",
+          explanation:
+            "Krutchen (1995) في well-known 4+1 view model اقترح 4 architectural views أساسية يمكن ربطها عبر common use cases أو scenarios (الـ +1). Hofmeister et al. (2000) أضافوا conceptual view.",
+          tags: ["4+1 view model", "Krutchen", "History"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "28. In Krutchen's 4+1 view model, which view shows the key abstractions in the system as objects or object classes?",
+          options: [
+            "Logical view.",
+            "Process view.",
+            "Development view.",
+            "Physical view.",
+          ],
+          correct: 0,
+          translation:
+            "في موديل 4+1 view لـ Krutchen، أي view يُظهر التجريدات الأساسية في النظام كأObjects أو object classes؟",
+          explanation:
+            "Logical view shows the key abstractions in the system as objects or object classes. يجب أن يكون من الممكن ربط متطلبات النظام بالكيانات في هذا الـ view.",
+          tags: ["4+1 view model", "Logical view"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "29. In Krutchen's 4+1 view model, which view shows how, at runtime, the system is composed of interacting processes?",
+          options: [
+            "Logical view.",
+            "Process view.",
+            "Development view.",
+            "Physical view.",
+          ],
+          correct: 1,
+          translation:
+            "في موديل 4+1 view، أي view يُظهر كيف في وقت التشغيل يتكون النظام من عمليات متفاعلة؟",
+          explanation:
+            "Process view shows how, at runtime, the system is composed of interacting processes. مفيد للحكم على الخصائص non-functional زي الأداء والتوفرية.",
+          tags: ["4+1 view model", "Process view"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "30. In Krutchen's 4+1 view model, which view shows how the software is decomposed for development?",
+          options: [
+            "Logical view.",
+            "Process view.",
+            "Development view.",
+            "Physical view.",
+          ],
+          correct: 2,
+          translation:
+            "في موديل 4+1 view، أي view يُظهر كيف يتم تفكيك البرنامج لأغراض التطوير؟",
+          explanation:
+            "Development view shows how the software is decomposed for development; breakdown into components implemented by a single developer or team. مفيد لـ software managers و programmers.",
+          tags: ["4+1 view model", "Development view"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "31. In Krutchen's 4+1 view model, which view shows the system hardware and how software components are distributed across the processors?",
+          options: [
+            "Logical view.",
+            "Process view.",
+            "Development view.",
+            "Physical view.",
+          ],
+          correct: 3,
+          translation:
+            "في موديل 4+1 view، أي view يُظهر هاردوير النظام وكيفية توزيع مكونات البرنامج على المعالجات؟",
+          explanation:
+            "Physical view shows the system hardware and how software components are distributed across the processors in the system. مفيد لـ systems engineers planning a system deployment.",
+          tags: ["4+1 view model", "Physical view"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "32. In Krutchen's 4+1 view model, the four views can be linked through:",
+          options: [
+            "Common use cases or scenarios.",
+            "A single block diagram.",
+            "A database schema.",
+            "Source code.",
+          ],
+          correct: 0,
+          translation: "في موديل 4+1 view، يمكن ربط الـ views الأربعة عبر:",
+          explanation:
+            'The four fundamental architectural views can be linked through common use cases or scenarios. هذا هو الـ "+1" — الـ scenarios هي الـ view الخامس اللي بيربط الباقي.',
+          tags: ["4+1 view model", "Scenarios", "Use cases"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "33. Hofmeister, Nord, and Soni (2000) added which view to Krutchen's model?",
+          options: [
+            "A conceptual view.",
+            "A deployment view.",
+            "A testing view.",
+            "A user interface view.",
+          ],
+          correct: 0,
+          translation:
+            "Hofmeister، Nord، و Soni (2000) أضافوا أي view إلى موديل Krutchen؟",
+          explanation:
+            "Hofmeister et al. suggest the use of similar views but add the notion of a conceptual view — an abstract view of the system basis for decomposing high-level requirements, decisions about reusable components, and representing a product line. Figure 6.1 (packing robot) هو مثال.",
+          tags: ["Conceptual view", "Hofmeister"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "34. According to the lecture, which view of a system's architecture is almost always developed during the design process?",
+          options: [
+            "The physical view only.",
+            "The conceptual view.",
+            "The development view only.",
+            "All four views from Krutchen's model.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا للمحاضرة، أي view من معمارية النظام يتم تطويره دائمًا تقريبًا أثناء عملية التصميم؟",
+          explanation:
+            "In practice, conceptual views of a system's architecture are almost always developed during the design process. تُستخدم لشرح المعمارية لـ stakeholders ولتوجيه القرارات المعمارية. باقي الـ views قد تتطور عند الحاجة لكن نادرًا ما يتطلب تطوير description كامل من كل المنظورات.",
+          tags: ["Conceptual view", "Design process"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "35. According to a survey by Lange, Chaudron, and Muskens (2006), when the UML was used for architectural description, it was mostly applied:",
+          options: [
+            "In a formal and rigorous way.",
+            "In an informal way.",
+            "Only for database design.",
+            "Only for testing.",
+          ],
+          correct: 1,
+          translation:
+            "وفقًا لاستطلاع Lange، Chaudron، و Muskens (2006)، عندما يُستخدم UML لوصف المعمارية، يُستخدم غالبًا:",
+          explanation:
+            "A survey in 2006 (Lange, Chaudron, and Muskens 2006) showed that, when the UML was used, it was mostly applied in an informal way. الكتاب argued إن ده شيء سيء لكن المؤلف disagreed.",
+          tags: ["UML", "Lange survey", "Informal"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "36. According to the author of the lecture, the UML is of most value when:",
+          options: [
+            "Brainstorming during the early design process.",
+            "Documenting an architecture in detail or using model-driven development.",
+            "Communicating with non-technical stakeholders.",
+            "Sketching on a whiteboard.",
+          ],
+          correct: 1,
+          translation: "وفقًا لمؤلف المحاضرة، UML يكون ذا قيمة أكبر عندما:",
+          explanation:
+            'المؤلف يقول: "I don\'t find the UML to be useful during the design process itself and prefer informal notations... The UML is of most value when you are documenting an architecture in detail or using model-driven development."',
+          tags: ["UML", "Documentation", "Model-driven"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "37. The basic elements of Architectural Description Languages (ADLs) are:",
+          options: [
+            "Classes and objects.",
+            "Components and connectors, with rules and guidelines for well-formed architectures.",
+            "Tables and forms.",
+            "Use cases and actors.",
+          ],
+          correct: 1,
+          translation: "العناصر الأساسية للـ ADLs هي:",
+          explanation:
+            "The basic elements of ADLs are components and connectors, and they include rules and guidelines for well-formed architectures. لكن domain و application specialists بيواجهوا صعوبة في فهمها واستخدامها.",
+          tags: ["ADLs", "Components", "Connectors"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          q: "38. The book that triggered the adoption of patterns in software engineering was published by:",
+          options: [
+            "Garlan and Shaw in 1993.",
+            "Gamma et al. in 1995 (on object-oriented design patterns).",
+            "Buschmann et al. in 1996.",
+            "Shaw and Garlan in 1996.",
+          ],
+          correct: 1,
+          translation:
+            "الكتاب اللي أطلق تبني الـ patterns في هندسة البرمجيات نُشر بواسطة:",
+          explanation:
+            "The trigger for this was the publication of a book on object-oriented design patterns (Gamma et al. 1995). هذا الكتاب أطلق تطوير أنواع أخرى من patterns: organizational، usability، cooperative interaction، configuration management.",
+          tags: ["Patterns", "Gamma et al.", "History"],
+          ref: "Lecture 7 — Section 6.3",
+          likely: "high",
+        },
+        {
+          q: "39. Architectural patterns were proposed in the 1990s under the name:",
+          options: [
+            '"Architectural styles" (Shaw and Garlan 1996).',
+            '"Design patterns" (Gamma et al. 1995).',
+            '"Organizational patterns" (Coplien and Harrison 2004).',
+            '"Usability patterns" (Usability Group 1998).',
+          ],
+          correct: 0,
+          translation:
+            "الـ Architectural patterns طُرحت في التسعينيات تحت اسم:",
+          explanation:
+            'Architectural patterns were proposed in the 1990s under the name "architectural styles" (Shaw and Garlan 1996). A very detailed five-volume series of handbooks on pattern-oriented software architecture نُشرت بين 1996 و 2007.',
+          tags: [
+            "Architectural patterns",
+            "Architectural styles",
+            "Shaw and Garlan",
+          ],
+          ref: "Lecture 7 — Section 6.3",
+          likely: "high",
+        },
+
+        // ============ MCQ — likely: medium ============
+        {
+          q: "40. How many volumes are in the handbook series on pattern-oriented software architecture (Buschmann et al.)?",
+          options: [
+            "Two volumes.",
+            "Three volumes.",
+            "Five volumes.",
+            "Ten volumes.",
+          ],
+          correct: 2,
+          translation:
+            "كم مجلد في سلسلة الـ handbooks عن pattern-oriented software architecture (Buschmann et al.)؟",
+          explanation:
+            "A very detailed five-volume series of handbooks on pattern-oriented software architecture was published between 1996 and 2007 (Buschmann et al. 1996; Schmidt et al. 2000; Buschmann, Henney, and Schmidt 2007a, 2007b; Kircher and Jain 2004).",
+          tags: ["Patterns", "Buschmann", "Handbooks"],
+          ref: "Lecture 7 — Section 6.3",
+          likely: "medium",
+        },
+
+        // ============ ESSAY — likely: high ============
+        {
+          type: "essay",
+          q: "1. Define architectural design and explain its role as a link between requirements engineering and detailed design.",
+          translation:
+            "عرّف التصميم المعماري واشرح دوره كرابط بين هندسة المتطلبات والتصميم التفصيلي.",
+          answer:
+            "Architectural design is concerned with understanding how a software system should be organized and designing the overall structure of that system.\n" +
+            "In the model of the software development process, architectural design is the first stage in the software design process.\n" +
+            "It is the critical link between design and requirements engineering, as it identifies the main structural components in a system and the relationships between them.\n" +
+            "The output of the architectural design process is an architectural model that describes how the system is organized as a set of communicating components.\n" +
+            "In practice, there is a significant overlap between the processes of requirements engineering and architectural design. Although ideally a system specification should not include any design information, this is unrealistic except for very small systems. You need to identify the main architectural components as these reflect the high-level features of the system.\n" +
+            "As part of the requirements engineering process, you might propose an abstract system architecture where you associate groups of system functions or features with large-scale components or sub-systems, then use this decomposition to discuss the requirements with stakeholders.",
+          tags: ["Architectural design", "Requirements engineering", "Link"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '2. Distinguish between "architecture in the small" and "architecture in the large."',
+          translation:
+            'فرّق بين "architecture in the small" و "architecture in the large".',
+          answer:
+            "You can design software architectures at two levels of abstraction:\n" +
+            "1. Architecture in the small is concerned with the architecture of individual programs. At this level, we are concerned with the way that an individual program is decomposed into components. This chapter (Chapter 6) is mostly concerned with program architectures.\n" +
+            "2. Architecture in the large is concerned with the architecture of complex enterprise systems that include other systems, programs, and program components. These enterprise systems may be distributed over different computers, which may be owned and managed by different companies. Architecture in the large is covered in Chapters 17 and 18.\n" +
+            "The key distinction is the scope: architecture in the small focuses on a single program and its internal decomposition, while architecture in the large focuses on systems of systems, distributed across organizations and computers.",
+          tags: [
+            "Architecture in the small",
+            "Architecture in the large",
+            "Comparison",
+          ],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. List and explain the three advantages of explicitly designing and documenting software architecture (Bass et al. 2012).",
+          translation:
+            "اذكر واشرح الميزات الثلاث لتصميم وتوثيق المعمارية بشكل صريح (Bass et al. 2012).",
+          answer:
+            "Bass et al. (2012) suggest that explicitly designing and documenting software architecture has three advantages:\n" +
+            "1. Stakeholder communication: The architecture is a high-level presentation of the system that may be used as a focus for discussion by a range of different stakeholders. Because it abstracts away from implementation detail, stakeholders from different disciplines can relate to it and discuss the system as a whole.\n" +
+            "2. System analysis: Making the system architecture explicit at an early stage in the system development requires some analysis. Architectural design decisions have a profound effect on whether or not the system can meet critical requirements such as performance, reliability, and maintainability. Early analysis can reveal problems before they become expensive to fix.\n" +
+            "3. Large-scale reuse: An architectural model is a compact, manageable description of how a system is organized and how the components interoperate. The system architecture is often the same for systems with similar requirements and so can support large-scale software reuse. Product-line architectures (Chapter 15) reuse the same architecture across a range of related systems.",
+          tags: [
+            "Architecture",
+            "Bass",
+            "Advantages",
+            "Stakeholder communication",
+            "System analysis",
+            "Reuse",
+          ],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Explain the two ways in which an architectural model of a program is used, and why informal block diagrams remain widely used despite criticism.",
+          translation:
+            "اشرح الطريقتين اللتين يُستخدم بهما الموديل المعماري لبرنامج، ولماذا تظل الـ informal block diagrams مستخدمة على نطاق واسع رغم الانتقادات.",
+          answer:
+            "There are two ways in which an architectural model of a program is used:\n" +
+            "1. As a way of encouraging discussions about the system design: A high-level architectural view of a system is useful for communication with system stakeholders and project planning because it is not cluttered with detail. Stakeholders can relate to it and understand an abstract view of the system. They can then discuss the system as a whole without being confused by detail. The architectural model identifies the key components that are to be developed so that managers can start assigning people to plan the development of these systems.\n" +
+            "2. As a way of documenting an architecture that has been designed: The aim here is to produce a complete system model that shows the different components in a system, their interfaces and their connections. The argument for such a model is that such a detailed architectural description makes it easier to understand and evolve the system.\n" +
+            "Why informal block diagrams remain widely used despite Bass et al.'s criticism:\n" +
+            "Bass et al. (2012) dislike informal block diagrams because they show neither the type of the relationships among system components nor the components' externally visible properties.\n" +
+            "However, block diagrams are a good way of supporting communications between the people involved in the software design process. They are intuitive, and domain experts and software engineers can relate to them and participate in discussions about the system. Managers find them helpful in planning the project. For many projects, block diagrams are the only architectural description.\n" +
+            "Using more rigorous notations (such as ADLs) is expensive and time-consuming, and it is practically impossible to know whether or not it is cost-effective. Therefore, the informal approach remains dominant in industrial practice.",
+          tags: ["Architecture models", "Block diagrams", "Usage", "ADLs"],
+          ref: "Lecture 7 — Section 6 (Introduction)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. List the fundamental architectural design decisions that system architects have to consider (Figure 6.2).",
+          translation:
+            "اذكر القرارات المعمارية الأساسية اللي يجب على الـ system architects مراعاتها (الشكل 6.2).",
+          answer:
+            "During the architectural design process, system architects have to make a number of structural decisions. Based on their knowledge and experience, they have to consider the following fundamental questions:\n" +
+            "1. Is there a generic application architecture that can act as a template for the system that is being designed?\n" +
+            "2. How will the system be distributed across hardware cores or processors?\n" +
+            "3. What Architectural patterns or styles might be used?\n" +
+            "4. What will be the fundamental approach used to structure the system?\n" +
+            "5. How will the structural components in the system be decomposed into sub-components?\n" +
+            "6. What strategy will be used to control the operation of the components in the system?\n" +
+            "7. What architectural organization is best for delivering the non-functional requirements of the system?\n" +
+            "8. How should the architecture of the system be documented?\n" +
+            "Garlan and Shaw's notion of an architectural style covers questions 4 to 6 — the choice of structure, the strategy for decomposing components, and the control modeling process.",
+          tags: ["Architectural design decisions", "Figure 6.2"],
+          ref: "Lecture 7 — Section 6.1 (Figure 6.2)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Explain how each of the following non-functional requirements influences the choice of architectural style: Performance, Security, Safety, Availability, and Maintainability.",
+          translation:
+            "اشرح كيف يؤثر كل من المتطلبات غير الوظيفية التالية على اختيار الـ architectural style: الأداء، الأمان، السلامة، التوفرية، والقابلية للصيانة.",
+          answer:
+            "Because of the close relationship between non-functional system characteristics and software architecture, the choice of architectural style and structure should depend on the non-functional requirements of the system:\n" +
+            "1. Performance: If performance is a critical requirement, the architecture should be designed to localize critical operations within a small number of components, with these components deployed on the same computer rather than distributed across the network. This may mean using a few relatively large components rather than small, finer-grain components. Using large components reduces the number of component communications. Runtime organizations that allow replication and execution on different processors may also be considered.\n" +
+            "2. Security: If security is a critical requirement, a layered structure for the architecture should be used, with the most critical assets protected in the innermost layers and a high level of security validation applied to these layers.\n" +
+            "3. Safety: If safety is a critical requirement, the architecture should be designed so that safety-related operations are co-located in a single component or in a small number of components. This reduces the costs and problems of safety validation and may make it possible to provide related protection systems that can safely shut down the system in the event of failure.\n" +
+            "4. Availability: If availability is a critical requirement, the architecture should be designed to include redundant components so that it is possible to replace and update components without stopping the system.\n" +
+            "5. Maintainability: If maintainability is a critical requirement, the system architecture should be designed using fine-grain, self-contained components that may readily be changed. Producers of data should be separated from consumers, and shared data structures should be avoided.\n" +
+            "There is potential conflict between some of these. For example, using large components improves performance, and using small, fine-grain components improves maintainability. If both performance and maintainability are important system requirements, some compromise must be found — sometimes by using different Architectural patterns for separate parts of the system.",
+          tags: [
+            "Non-functional requirements",
+            "Performance",
+            "Security",
+            "Safety",
+            "Availability",
+            "Maintainability",
+          ],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Describe Krutchen's 4+1 view model of software architecture, including all five views.",
+          translation:
+            "صف موديل 4+1 view لمعمارية البرمجيات لـ Krutchen، بما في ذلك الـ views الخمسة جميعها.",
+          answer:
+            'Krutchen (1995) in his well-known 4+1 view model of software architecture suggests that there should be four fundamental architectural views, which can be linked through common use cases or scenarios (the "+1"). The views are:\n' +
+            "1. A logical view, which shows the key abstractions in the system as objects or object classes. It should be possible to relate the system requirements to entities in this logical view.\n" +
+            "2. A process view, which shows how, at runtime, the system is composed of interacting processes. This view is useful for making judgments about non-functional system characteristics such as performance and availability.\n" +
+            "3. A development view, which shows how the software is decomposed for development; that is, it shows the breakdown of the software into components that are implemented by a single developer or development team. This view is useful for software managers and programmers.\n" +
+            "4. A physical view, which shows the system hardware and how software components are distributed across the processors in the system. This view is useful for systems engineers planning a system deployment.\n" +
+            '5. Scenarios (the "+1"): The four views can be linked through common use cases or scenarios. Scenarios are used to illustrate and validate the architecture, showing how the views work together to support important system behavior.\n' +
+            "It is impossible to represent all relevant information about a system's architecture in a single diagram, because a graphical model can only show one view or perspective of the system. Therefore, multiple views are usually needed for both design and documentation.",
+          tags: [
+            "4+1 view model",
+            "Krutchen",
+            "Logical",
+            "Process",
+            "Development",
+            "Physical",
+            "Scenarios",
+          ],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. What is the conceptual view proposed by Hofmeister, Nord, and Soni (2000), and how does it differ from Krutchen's four views?",
+          translation:
+            "ما هو الـ conceptual view اللي اقترحه Hofmeister، Nord، و Soni (2000)، وكيف يختلف عن الـ views الأربعة لـ Krutchen؟",
+          answer:
+            "Hofmeister, Nord, and Soni (2000) suggest the use of views similar to Krutchen's four views, but they add the notion of a conceptual view.\n" +
+            "The conceptual view is an abstract view of the system that can be:\n" +
+            "- The basis for decomposing high-level requirements into more detailed specifications.\n" +
+            "- A help to engineers making decisions about components that can be reused.\n" +
+            "- A representation of a product line (discussed in Chapter 15) rather than a single system.\n" +
+            "How it differs from Krutchen's four views:\n" +
+            "Krutchen's views (logical, process, development, physical) each focus on a specific perspective of the system: object classes, runtime processes, development decomposition, and hardware distribution.\n" +
+            "The conceptual view, by contrast, is a higher-level, more abstract view that focuses on the overall organization and concepts of the system. It is used to explain the system architecture to stakeholders and to inform architectural decision-making at an early stage.\n" +
+            "Example: Figure 6.1, which describes the architecture of a packing robot, is an example of a conceptual system view.\n" +
+            "In practice, conceptual views are almost always developed during the design process. Some of the other views may also be developed when different aspects of the system are discussed, but it is rarely necessary to develop a complete description from all perspectives.",
+          tags: ["Conceptual view", "Hofmeister", "4+1 view model"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Discuss the use of UML for architectural description, including the survey findings and the author's view.",
+          translation:
+            "ناقش استخدام UML لوصف المعمارية، بما في ذلك نتائج الاستطلاع ورأي المؤلف.",
+          answer:
+            "There are differing views about whether or not software architects should use the UML for describing and documenting software architectures.\n" +
+            "Survey findings:\n" +
+            "A survey in 2006 (Lange, Chaudron, and Muskens 2006) showed that, when the UML was used, it was mostly applied in an informal way. The authors of that paper argued that this was a bad thing — that informal use of UML weakens its value as a rigorous modeling notation.\n" +
+            "The author's view (disagreement):\n" +
+            "The author disagrees with this view. The UML was designed for describing object-oriented systems, and at the architectural design stage you often want to describe systems at a higher level of abstraction. Object classes are too close to the implementation to be useful for architectural description.\n" +
+            "The author does not find the UML to be useful during the design process itself and prefers informal notations that are quicker to write and that can be easily drawn on a whiteboard.\n" +
+            "The UML is of most value when:\n" +
+            "- Documenting an architecture in detail (after the design has been decided).\n" +
+            "- Using model-driven development (as discussed in Chapter 5).\n" +
+            "Conclusion: Informal models and notations, such as the UML used informally, will remain the most commonly used ways of documenting system architectures.",
+          tags: ["UML", "Lange survey", "Informal notation"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. What are Architectural Description Languages (ADLs)? Discuss their advantages and why they are not widely used in mainstream practice.",
+          translation:
+            "ما هي الـ Architectural Description Languages (ADLs)؟ ناقش مزاياها ولماذا ليست مستخدمة على نطاق واسع في الممارسة العامة.",
+          answer:
+            "A number of researchers (Bass, Clements, and Kazman 2012) have proposed the use of more specialized architectural description languages (ADLs) to describe system architectures.\n" +
+            "Definition and basic elements:\n" +
+            "ADLs are specialized, more rigorous notations for architectural description. The basic elements of ADLs are components and connectors, and they include rules and guidelines for well-formed architectures.\n" +
+            "Advantages:\n" +
+            "- A more detailed and complete description means that there is less scope for misunderstanding the relationships between the architectural components.\n" +
+            "- ADLs support rigorous analysis and validation of architectures.\n" +
+            "- They can represent hierarchical levels of detail and common architectural styles.\n" +
+            "Why ADLs are not widely used in mainstream practice:\n" +
+            "1. ADLs are specialist languages, so domain and application specialists find it hard to understand and use them. This limits their value for stakeholder communication.\n" +
+            "2. Developing a detailed architectural description using an ADL is an expensive and time-consuming process.\n" +
+            "3. It is practically impossible to know whether or not it is cost-effective, so this approach is not widely adopted.\n" +
+            "4. There may be some value in using domain-specific ADLs as part of model-driven development, but they are unlikely to become part of mainstream software engineering practice.\n" +
+            "Conclusion: Informal models and notations, such as the UML used informally, will remain the most commonly used ways of documenting system architectures.",
+          tags: ["ADLs", "Components", "Connectors", "Limitations"],
+          ref: "Lecture 7 — Section 6 (Introduction) and 6.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. What is an Architectural pattern? Discuss its origins and the books that triggered the patterns movement.",
+          translation:
+            "ما هو الـ Architectural pattern؟ ناقش أصله والكتب اللي أطلقت حركة الـ patterns.",
+          answer:
+            "An Architectural pattern is a description of a system organization (Garlan and Shaw 1993), such as a client-server organization or a layered architecture.\n" +
+            "Architectural patterns capture the essence of an architecture that has been used in different software systems. You should be aware of common patterns, where they can be used, and their strengths and weaknesses when making decisions about the architecture of a system.\n" +
+            "Origins of the patterns movement:\n" +
+            "The idea of patterns as a way of presenting, sharing, and reusing knowledge about software systems has been adopted in a number of areas of software engineering.\n" +
+            "The trigger for this was the publication of a book on object-oriented design patterns (Gamma et al. 1995). This book introduced the concept of design patterns — reusable solutions to common problems in object-oriented design.\n" +
+            "Books and developments that followed:\n" +
+            "This prompted the development of other types of patterns:\n" +
+            "- Patterns for organizational design (Coplien and Harrison 2004).\n" +
+            "- Usability patterns (Usability Group 1998).\n" +
+            "- Patterns of cooperative interaction (Martin and Sommerville 2004).\n" +
+            "- Configuration management patterns (Berczuk and Appleton 2002).\n" +
+            "Architectural patterns specifically:\n" +
+            'Architectural patterns were proposed in the 1990s under the name "architectural styles" (Shaw and Garlan 1996). A very detailed five-volume series of handbooks on pattern-oriented software architecture was published between 1996 and 2007 (Buschmann et al. 1996; Schmidt et al. 2000; Buschmann, Henney, and Schmidt 2007a, 2007b; Kircher and Jain 2004).',
+          tags: [
+            "Architectural patterns",
+            "Garlan and Shaw",
+            "Gamma et al.",
+            "Patterns history",
+          ],
+          ref: "Lecture 7 — Sections 6.1 and 6.3",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain why architectural design is considered a creative process rather than a formulaic sequence of activities.",
+          translation:
+            "اشرح لماذا يُعتبر التصميم المعماري عملية إبداعية بدلًا من سلسلة صيغية من الأنشطة.",
+          answer:
+            "Architectural design is a creative process in which you design a system organization that will satisfy the functional and non-functional requirements of a system.\n" +
+            "There is no formulaic architectural design process. It depends on three main factors:\n" +
+            "1. The type of system being developed — different types of systems (embedded, business, real-time, etc.) require different architectural approaches.\n" +
+            "2. The background and experience of the system architect — experienced architects draw on past projects and patterns they know.\n" +
+            "3. The specific requirements for the system — both functional and non-functional requirements shape the architecture.\n" +
+            "Consequently, the author thinks it is best to consider architectural design as a series of decisions to be made rather than a sequence of activities.\n" +
+            "The decisions include:\n" +
+            "- Whether there is a generic application architecture that can act as a template.\n" +
+            "- How the system will be distributed across hardware cores or processors.\n" +
+            "- What Architectural patterns or styles might be used.\n" +
+            "- The fundamental approach used to structure the system.\n" +
+            "- How structural components will be decomposed into sub-components.\n" +
+            "- The strategy for controlling the operation of components.\n" +
+            "- The architectural organization best for delivering non-functional requirements.\n" +
+            "- How the architecture should be documented.\n" +
+            "Although each software system is unique, systems in the same application domain often have similar architectures that reflect the fundamental concepts of the domain. Application product lines are built around a core architecture with variants for specific customers.",
+          tags: ["Architectural design", "Creative process", "Decisions"],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. Discuss the relationship between agile methods and architectural design.",
+          translation: "ناقش العلاقة بين الـ agile methods والتصميم المعماري.",
+          answer:
+            "In agile processes, it is generally accepted that an early stage of an agile development process should focus on designing an overall system architecture.\n" +
+            "Why early architecture matters in agile:\n" +
+            "Incremental development of architectures is not usually successful. While refactoring components in response to changes is usually relatively easy, refactoring the system architecture is expensive because you may need to modify most system components to adapt them to the architectural changes.\n" +
+            "Therefore, even in agile processes, an early architectural design stage is recommended to establish a stable overall structure before incremental development begins.\n" +
+            "Agile view on architectural documentation:\n" +
+            "Users of agile methods claim that detailed design documentation is mostly unused. It is, therefore, a waste of time and money to develop these documents.\n" +
+            "The author largely agrees with this view, and thinks that, except for critical systems, it is not worth developing a detailed architectural description from Krutchen's four perspectives.\n" +
+            "Recommendation:\n" +
+            "You should develop the views that are useful for communication and not worry about whether or not your architectural documentation is complete. Conceptual views, which are almost always developed during the design process, are particularly useful for explaining the system architecture to stakeholders and informing architectural decision-making.",
+          tags: ["Agile", "Architecture", "Refactoring", "Documentation"],
+          ref: "Lecture 7 — Sections 6 (Introduction) and 6.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "14. Why is it impossible to represent all relevant information about a system's architecture in a single diagram? Explain the need for multiple views.",
+          translation:
+            "لماذا من المستحيل تمثيل كل المعلومات ذات الصلة بمعمارية النظام في diagram واحد؟ اشرح الحاجة لـ multiple views.",
+          answer:
+            "It is impossible to represent all relevant information about a system's architecture in a single diagram, because a graphical model can only show one view or perspective of the system.\n" +
+            "A single diagram might show:\n" +
+            "- How a system is decomposed into modules (a logical or development view).\n" +
+            "- How the runtime processes interact (a process view).\n" +
+            "- The different ways in which system components are distributed across a network (a physical view).\n" +
+            "Because all of these are useful at different times, for both design and documentation, you usually need to present multiple views of the software architecture.\n" +
+            "Different stakeholders need different views:\n" +
+            "- End-users and customers relate to logical or conceptual views that show the system's key abstractions.\n" +
+            "- Software managers and programmers need the development view to plan and assign work.\n" +
+            "- Systems engineers planning deployment need the physical view.\n" +
+            "- Those concerned with non-functional characteristics like performance and availability need the process view.\n" +
+            "Krutchen's 4+1 view model and Hofmeister's conceptual view provide a framework for organizing these multiple perspectives. The '+1' (scenarios) links the views by showing how they work together to support important system behavior.\n" +
+            "In practice, conceptual views of a system's architecture are almost always developed during the design process, but it is rarely necessary to develop a complete description from all perspectives. You should develop only the views that are useful for communication.",
+          tags: ["Multiple views", "4+1 view model", "Stakeholders"],
+          ref: "Lecture 7 — Section 6.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "15. Discuss the potential conflicts between non-functional requirements when designing a software architecture, and how these conflicts may be resolved.",
+          translation:
+            "ناقش التعارضات المحتملة بين المتطلبات غير الوظيفية عند تصميم معمارية البرمجيات، وكيف يمكن حل هذه التعارضات.",
+          answer:
+            "Because of the close relationship between non-functional system characteristics and software architecture, the choice of architectural style and structure should depend on the non-functional requirements of the system. However, there is potential conflict between some of these requirements.\n" +
+            "Example conflicts:\n" +
+            "1. Performance vs. Maintainability: Using large components improves performance (by reducing component communications and localizing critical operations), and using small, fine-grain components improves maintainability (by making components self-contained and easy to change). These two requirements pull the architecture in opposite directions.\n" +
+            "2. Security vs. Performance: A layered structure with strict security validation in the innermost layers may slow down access to critical functions, affecting performance.\n" +
+            "3. Availability vs. Simplicity: Adding redundant components for high availability increases system complexity and cost.\n" +
+            "How conflicts may be resolved:\n" +
+            "1. Compromise: If both performance and maintainability are important system requirements, then some compromise must be found. For example, you might use medium-sized components that balance both concerns.\n" +
+            "2. Different patterns for different parts of the system: You can sometimes resolve conflicts by using different Architectural patterns or styles for separate parts of the system. For example, you might use a layered architecture for the security-critical parts and a more performance-oriented structure for the high-throughput parts.\n" +
+            "3. Prioritization: Security is now almost always a critical requirement, so you have to design an architecture that maintains security while also satisfying other non-functional requirements.\n" +
+            "Evaluating architectural design is difficult because the true test of an architecture is how well the system meets its functional and non-functional requirements when it is in use. However, you can do some evaluation by comparing your design against reference architectures or generic Architectural patterns. Bosch's description of the non-functional characteristics of some Architectural patterns can help with architectural evaluation.",
+          tags: [
+            "Non-functional requirements",
+            "Conflict",
+            "Compromise",
+            "Architecture",
+          ],
+          ref: "Lecture 7 — Section 6.1",
+          likely: "high",
+        },
+      ],
+    },
   ],
+
+  chapters: [
+    {
+      t: "الفصل الأول: مقدمة في هندسة البرمجيات",
+      icon: "📘",
+      d: "Introduction — تعريف هندسة البرمجيات، Generic vs Customized، خصائص البرمجيات الجيدة (Figure 1.2)، Ethics، و Case Studies",
+      lectures: ["software-engineering-lec-01"],
+    },
+    {
+      t: "الفصل الثاني: عمليات البرمجيات",
+      icon: "📘",
+      d: "Software Processes — Waterfall / Incremental / Reuse-oriented، الأنشطة الأساسية الأربعة، والتعامل مع التغيير (Prototyping & Incremental Delivery)",
+      lectures: ["software-engineering-lec-02"],
+    },
+    {
+      t: "الفصل الثالث: التطوير الرشيق للبرمجيات",
+      icon: "📘",
+      d: "Agile Software Development — Agile Manifesto، XP (user stories, refactoring, test-first, pair programming)، و Scrum. ملحوظة: 3.4 Scaling agile للقراءة فقط",
+      lectures: ["software-engineering-lec-03"],
+    },
+    {
+      t: "الفصل الرابع: هندسة المتطلبات",
+      icon: "📘",
+      d: "Requirements Engineering — متطلبات المستخدم والنظام، الوظيفية وغير الوظيفية، الاستنباط (Interviews, Ethnography, Stories, Scenarios)، المواصفة، التحقق، وإدارة التغيير",
+      lectures: ["software-engineering-lec-04", "software-engineering-lec-05"],
+    },
+    {
+      t: "الفصل الخامس: نمذجة النظام",
+      icon: "📘",
+      d: "System Modeling — Context, Interaction, Structural, Behavioral Diagrams، و Model-Driven Engineering (MDE)",
+      lectures: ["software-engineering-lec-06"],
+    },
+    {
+      t: "الفصل السادس: التصميم المعماري",
+      icon: "📘",
+      d: "التصميم المعماري — قرارات التصميم المعماري، وجهات النظر المعمارية (Logical / Process / Development / Physical / Conceptual)، الأنماط المعمارية مثل MVC والطبقات والمستودع، ومعماريات التطبيقات.",
+      lectures: ["software-engineering-lec-07", "software-engineering-lec-08"],
+    },
+  ],
+
   examSections: {
-    showLectures: false, // الأقسام تظهر بدل شكل المحاضرات العادي
+    showLectures: false,
+    showOthers: true,
 
     midterm: {
       mode: "separate",
-      open: true,
-      notesOpen: false,
+      open: false,
       title: "محتوى الميد",
       icon: "📝",
+      notesOpen: true,
       notes: [
-        "الميد من الفصل الأول والتاني بس",
-        "ركزي على CPM/PERT وحساب المسار الحرج",
-        "أسئلة مقالية متوقعة عن دورة حياة المشروع",
+        "الميد لحد الفصل الرابع (المحاضرات 1 → 5)",
+        "تاريخ الامتحان: الجمعة 20 نوفمبر",
+        "من الساعة 9:45 إلى 10:45",
       ],
-
-      lectures: [
-        "cloud-computing-lec-01",
-        "cloud-computing-lec-02",
-        "cloud-computing-lec-3-4",
-        "cloud-computing-lec-05",
-        "cloud-computing-lec-06",
+      chapters: [
+        "الفصل الأول: مقدمة في هندسة البرمجيات",
+        "الفصل الثاني: عمليات البرمجيات",
+        "الفصل الثالث: التطوير الرشيق للبرمجيات",
+        "الفصل الرابع: هندسة المتطلبات",
       ],
+      lectures: [],
     },
   },
 });

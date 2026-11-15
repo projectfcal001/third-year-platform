@@ -13,7 +13,7 @@ subjects.push({
   // ],
   lectures: [
     {
-      id: "computer-graphic-lecture-01",
+      id: "computer-graphics-lecture-01",
       t: "المحاضرة 1: مقدمة الرسوميات، الإسقاط المنظوري، والـ Rasterization",
       d: "تغطي المفاهيم الأساسية لرسوميات الحاسوب، تحويل المجسمات من 3D إلى 2D باستخدام الإسقاط المنظوري (Perspective Projection)، وخوارزميات تحويل الخطوط إلى بيكسلات (Rasterization).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 1/Lec1-Computer Graphics.pdf",
@@ -704,7 +704,7 @@ subjects.push({
       ],
     },
     {
-      id: "computer-graphic-lecture-02",
+      id: "computer-graphics-lecture-02",
 
       t: "المحاضرة 2: مراجعة الرياضيات (الجزء الأول: الجبر الخطي والـ Vector Spaces)",
       d: "تغطي المفاهيم الأساسية للجبر الخطي في الرسوميات الحاسوبية: مسلمات الفضاءات المتجهة (Vector Spaces)، التمثيل بالإحداثيات الديكارتية، عمليات الجمع والتكبيس (Scaling)، حساب منتصف القطعة (Midpoint)، معاملة الدوال كمتجهات، ومعايير قياس الطول (Euclidean Norm وL2 Norm للدوال).",
@@ -2427,7 +2427,7 @@ subjects.push({
       ],
     },
     {
-      id: "computer-graphic-lecture-04",
+      id: "computer-graphics-lecture-04",
       t: "المحاضرة 4: رسم المثلث (Drawing a Triangle) ومقدمة في الـ Sampling",
       d: "الـ Rasterization، لماذا المثلثات، مشكلة الـ Visibility (Coverage و Occlusion)، الـ Sampling و الـ Reconstruction، وقواعد كسر التعادل (Top/Left edge).",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 4/Lecture 4.pdf",
@@ -3334,7 +3334,7 @@ subjects.push({
       ],
     },
     {
-      id: "computer-graphic-lecture-05",
+      id: "computer-graphics-lecture-05",
       t: "رسومات الحاسوب — المحاضرة 5: التعرّج، أخذ العينات وإعادة البناء (Aliasing, Sampling & Reconstruction)",
       d: "مقدمة في التعرّج (Aliasing) وأخذ العينات (Sampling) وإعادة البناء (Reconstruction)، تحليل الترددات، والفلاتر (Low/High/Band-pass) مع أمثلة كلاسيكية من كورس CMU 15-462/662.",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 5/drawingatriangle_slides-lec 5.pdf",
@@ -4391,4 +4391,41 @@ subjects.push({
       ],
     },
   ],
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  تحديد محتوى الميد والفاينل (examSections)
+  //  الميد: من المحاضرة 1 لغاية المحاضرة 5 (حسب إعلان الشلة)
+  //  ⚠️ خد بالك من عدم اتساق الـ IDs:
+  //     - lecture-01, lecture-02: computer-graphic-* (بدون s)
+  //     - lecture-03: computer-graphics-* (فيها s)
+  //     - 04, 05: لسه مش موجودة — ضيفها أول ما تنزل
+  // ═══════════════════════════════════════════════════════════════════
+  examSections: {
+    showLectures: false,
+    showOthers: true,
+
+    midterm: {
+      mode: "separate",
+      open: false,
+      title: "محتوى الميد",
+      icon: "📝",
+      notesOpen: true,
+      notes: [
+        "الميد من المحاضرة رقم 1 لغاية المحاضرة رقم 5",
+        "تاريخ الامتحان: الاثنين 23 نوفمبر",
+        "من الساعة 11 إلى 12",
+      ],
+      chapters: [],
+      lectures: [
+        "computer-graphics-lecture-01", // مقدمة الرسوميات + Perspective + Rasterization
+        "computer-graphics-lecture-02", // مراجعة رياضيات (1): Linear Algebra & Vector Spaces
+        "computer-graphics-lecture-03", // مراجعة رياضيات (2): Inner Product, Linear Maps, Span, Basis
+        ,
+        // ⚠️ ضيف هنا أول ما تنزل:
+        "computer-graphics-lecture-04",
+        ,
+        "computer-graphics-lecture-05",
+      ],
+    },
+  },
 });

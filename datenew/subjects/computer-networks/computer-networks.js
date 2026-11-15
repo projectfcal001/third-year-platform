@@ -6617,8 +6617,8 @@ subjects.push({
       id: "computer-networks-lecture-7",
       t: "المحاضرة السابعة — الفصل الثالث (جزء 1): طبقة النقل — مقدمة وخدمات طبقة النقل",
       d: "دور طبقة النقل، الفرق بين طبقة النقل وطبقة الشبكة، نموذج خدمة IP، خدمات TCP وUDP، والـ Multiplexing/Demultiplexing.",
-      pdf: "datenew/subjects/computer-networks/lectures/lec 7/Lecture 7  - Computer Networks.pdf",
-      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/CH03/Lecture-7-Questions.pdf",
+      pdf: "datenew/subjects/computer-networks/lectures/CH03/lec07/Computer_Networks_Lecture07_(CH03_Lec1).pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/CH03/Lec07/Lecture-7-Questions.pdf",
       // المحاضرة: Computer Networks — Lecture 7 (Ch 3, Lec 1) — Transport Layer: Introduction & Transport-Layer Services (Transport vs Network Layer, IP service model, TCP vs UDP services, multiplexing/demultiplexing)
 
       linkCategories: [
@@ -7882,6 +7882,1675 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "computer-networks-lecture-8",
+
+      t: "المحاضرة 8 (الفصل 3، المحاضرة 2): تعدد الإرسال/فصل الإرسال، ومبادئ UDP ونقل البيانات الموثوق",
+
+      d: "تعدد الإرسال وفصل الإرسال (مقابس UDP وTCP، وأرقام المنافذ)، وبنية مقطع UDP، ومجموع تحقق UDP، ومبادئ نقل البيانات الموثوق.",
+
+      pdf: "datenew/subjects/computer-networks/lectures/CH03/lec08/Computer_Networks_Lecture08_(CH03_Lec2).pdf",
+      pdf2: "datenew/subjects/computer-networks/questions/Questions on each lecture/CH03/Lec08/Lecture-8-Questions.pdf",
+      // المحاضرة: Computer Networks — Lecture 8 (Ch 3, Lec 2) — Multiplexing/Demultiplexing, UDP (Connectionless Transport), UDP Segment Structure, UDP Checksum, Principles of Reliable Data Transfer
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description:
+            "شرح بالعربي لمواضيع المحاضرة 8 (المحاضرة 2 داخل الفصل 3): multiplexing/demultiplexing، UDP، port numbers، و reliable data transfer.",
+          links: [
+            {
+              t: "شبكات الحاسوب | Transport layer - part 1, TCP , UDP (محمد ب. أبوبكر)",
+              d: "قائمة تشغيل عربية أكاديمية بشرح Transport layer - part 1: TCP و UDP والفرق بينهم، ومنها دروس عن UDP segment structure و checksum. مناسب جداً لفهم القسم 3.3 (Connectionless Transport: UDP).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "▶ مشاهدة القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpHpCzb7rhlV1MbRgGwTIoK1kHW3iWdmh",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "شرح Layer 4 (Transport Layer) يا مهندس – TCP vs UDP بعمق",
+              d: "شرح بالعربي لطبقة النقل (Layer 4): Segments، Ports، TCP vs UDP بعمق. مفيد لفهم القسم 3.2 (Multiplexing و Demultiplexing) والقسم 3.3 (UDP).",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://www.facebook.com/ITWithHossam/posts/1547208943643611",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "ما هو UDP و TCP — شرح بالعربي",
+              d: "مقال بالعربي بشرح TCP و UDP: TCP بروتوكول connection-oriented بيضمن سلامة وتسلسل الحزم، UDP بروتوكول connectionless خفيف وسريع. مفهوم للمقارنة بين الاتنين في القسم 3.3.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🌐 فتح المقال",
+                  url: "https://shelleyes.com/ar/posts/what-is-udp-and-tcp",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description:
+            "فيديوهات إنجليزية مرئية وقنوات معروفة بشرح Multiplexing/Demultiplexing و UDP.",
+          links: [
+            {
+              t: "PowerCert Animated Videos — Networking (English Version)",
+              d: "قائمة فيديوهات Animated بتشرح TCP و UDP و OSI Model و Transport Layer و Port Numbers بأسلوب بصري مفهوم. مفيد جداً لفهم الـ multiplexing/demultiplexing والفرق بين TCP و UDP.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLpXfHEl2fzl72d5ne2gsxSyFNagcHyCML",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Transport Layer and User Datagram Protocol Explained (Richard G Clegg)",
+              d: "شرح أكاديمي كامل للـ Transport Layer و UDP — رغم إنه قديم شوية، المحتوى عن UDP segment structure و checksum واضح ومفهوم. مفيد لفهم القسم 3.3.1 و 3.3.2.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ مشاهدة الفيديو",
+                  url: "https://www.youtube.com/watch?v=Y-wAt2jOtAw",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "Khan Academy — Internet 101 (Computer Science)",
+              d: "قائمة تشغيل من Khan Academy بتشرح أساسيات الإنترنت بما فيها TCP/IP، packets، routers. مفهوم كمقدمة للمحاضرة 8 وربطها بالفصول السابقة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "▶ فتح القائمة",
+                  url: "https://www.youtube.com/playlist?list=PLSQl0a2vh4HD8wtmKZh0nKOsOvP1KYaNO",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description:
+            "مصادر مكتوبة رسمية: GeeksforGeeks، Cloudflare Learning، Wikipedia، MDN — بشرح Multiplexing و UDP و Reliable Data Transfer.",
+          links: [
+            {
+              t: "GeeksforGeeks — Multiplexing and Demultiplexing + UDP",
+              d: "مقالات تعليمية بشرح Multiplexing/Demultiplexing في طبقة النقل، User Datagram Protocol، و Examples على UDP Header. مطابق لمحتوى القسم 3.2 و 3.3.1.",
+              icon: "📚",
+              actions: [
+                {
+                  label:
+                    "🌐 Multiplexing and Demultiplexing in Transport Layer",
+                  url: "https://www.geeksforgeeks.org/multiplexing-and-demultiplexing-in-transport-layer",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 User Datagram Protocol (UDP)",
+                  url: "https://www.geeksforgeeks.org/computer-networks/user-datagram-protocol-udp",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 Examples on UDP Header",
+                  url: "https://www.geeksforgeeks.org/computer-networks/examples-on-udp-header",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Cloudflare Learning Center — UDP",
+              d: "مصدر رسمي من Cloudflare بشرح User Datagram Protocol (UDP) و UDP flood DDoS attack. مهم لفهم القسم 3.3 (UDP) والـ congestion warning عن UDP traffic.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 What is UDP?",
+                  url: "https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 UDP Flood DDoS Attack",
+                  url: "https://www.cloudflare.com/learning/ddos/udp-flood-ddos-attack",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Wikipedia — User Datagram Protocol + Reliable Data Transfer",
+              d: "مقال موسوعي عن UDP (RFC 768، segment structure، checksum، pseudo-header) وعن Reliable Data Transfer concept. يكمل المحاضرة 8 بتفاصيل إضافية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 User Datagram Protocol — Wikipedia",
+                  url: "https://en.wikipedia.org/wiki/User_Datagram_Protocol",
+                  type: "view",
+                  color: "blue",
+                },
+                {
+                  label: "🌐 Reliable Data Transfer — Wikipedia",
+                  url: "https://en.wikipedia.org/wiki/Reliable_Data_Transfer",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "MDN Web Docs (Mozilla) — UDP Glossary",
+              d: "تعريف موجز ودقيق لـ UDP في MDN: connectionless، checksums for data integrity، port numbers for addressing. مفهوم لمراجعة سريعة للقسم 3.3.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 UDP — MDN Glossary",
+                  url: "https://developer.mozilla.org/en-US/docs/Glossary/UDP",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description:
+            "أدوات عملية لمراقبة طبقة النقل — تستخدم في الـ labs لمراقبة UDP segments و port numbers فعلًا.",
+          links: [
+            {
+              t: "Wireshark — Network Protocol Analyzer",
+              d: "أداة لالتقاط وتحليل باكتات الشبكة. ممكن تستخدمها عشان تشوف UDP segments فعلًا، وتفحص الـ port numbers (source و destination) و الـ header fields و الـ checksum. أداة معتمدة في معظم مقررات الشبكات.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ تحميل الأداة",
+                  url: "https://www.wireshark.org",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Cisco Packet Tracer",
+              d: "أداة محاكاة رسمية من Cisco لمحاكاة الشبكات بما فيها TCP/UDP traffic. ممكن تشوف بيها إزاي الـ segments بتتنقل بين hosts و routers. مجانية للطلاب.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "⭳ صفحة التحميل الرسمية",
+                  url: "https://www.netacad.com/cisco-packet-tracer",
+                  type: "download",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "netcat — The TCP/IP Swiss Army Knife",
+              d: "أداة سطر أوامر شهيرة لـ debugging TCP و UDP. ممكن تستخدمها عشان تـ send و receive UDP packets يدوياً، وتشوف إزاي الـ port numbers بتشتغل. مفهوم لـ labs عملية على multiplexing/demultiplexing.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://nc110.sourceforge.io",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. Transport-layer multiplexing and demultiplexing extend which service to a process-to-process delivery service?",
+          options: [
+            "The host-to-host delivery service provided by the network layer",
+            "The frame-delivery service of the data-link layer",
+            "The application-layer routing service",
+            "The bit-level delivery service of the physical layer",
+          ],
+          correct: 0,
+          translation:
+            "transport-layer multiplexing و demultiplexing بيوسّعوا إيه خدمة لـ process-to-process delivery؟",
+          explanation:
+            "host-to-host delivery بتاع الـ network layer بيتوسّع لـ process-to-process delivery. ده التعريف الأساسي من القسم 3.2.",
+          tags: ["Multiplexing", "Demultiplexing", "Definition"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "2. At the destination host, the transport layer receives segments from which layer?",
+          options: [
+            "The data-link layer",
+            "The physical layer",
+            "The network layer just below",
+            "The application layer above",
+          ],
+          correct: 2,
+          translation:
+            "على الـ destination host، طبقة النقل بتستقبل segments من أنهي طبقة؟",
+          explanation:
+            "من الـ network layer اللي تحتها. بعدها بتسلم البيانات للـ process المناسب.",
+          tags: ["Transport Layer", "Network Layer"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "3. The transport layer in the receiving host delivers data to which intermediary?",
+          options: [
+            "Directly to the process",
+            "Directly to the application layer",
+            "A socket",
+            "Directly to a router",
+          ],
+          correct: 2,
+          translation: "طبقة النقل على الـ receiving host بتسلم البيانات لمين؟",
+          explanation:
+            "لـ socket مش لـ process مباشرة. الـ process بياخد البيانات عبر الـ socket.",
+          tags: ["Sockets", "Demultiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (sockets)",
+          likely: "high",
+        },
+        {
+          q: "4. Because there can be more than one socket in the receiving host, each socket has:",
+          options: [
+            "A duplicate identifier shared with other sockets",
+            "An identifier only on the sending side",
+            "A unique identifier",
+            "No identifier at all",
+          ],
+          correct: 2,
+          translation:
+            "بما إن في أكتر من socket على الـ receiving host، كل socket عنده إيه؟",
+          explanation:
+            "unique identifier. ده ضروري عشان الـ demultiplexing يقدر يوجّه الـ segment للـ socket الصح.",
+          tags: ["Sockets", "Identifiers"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "5. The job of delivering the data in a transport-layer segment to the correct socket is called:",
+          options: [
+            "Encapsulation",
+            "Multiplexing",
+            "Routing",
+            "Demultiplexing",
+          ],
+          correct: 3,
+          translation:
+            "شغل توصيل بيانات الـ segment للـ socket الصح بيتسمى إيه؟",
+          explanation:
+            'demultiplexing (الـ "de" معناها توزيع/فصل). عكس multiplexing اللي بيجمع.',
+          tags: ["Demultiplexing", "Definition"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (definition)",
+          likely: "high",
+        },
+        {
+          q: "6. The job of gathering data chunks at the source host from different sockets, encapsulating each chunk with header information, and passing the segments to the network layer is called:",
+          options: [
+            "Routing",
+            "Demultiplexing",
+            "Multiplexing",
+            "Decapsulation",
+          ],
+          correct: 2,
+          translation:
+            "شغل جمع data chunks من sockets مختلفة على الـ source host و encapsulate كل chunk بـ header وتمريرها لطبقة الشبكة بيتسمى إيه؟",
+          explanation:
+            'multiplexing (الـ "multi" معناها جمع). عكس demultiplexing.',
+          tags: ["Multiplexing", "Definition"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (definition)",
+          likely: "high",
+        },
+        {
+          q: "7. Transport-layer multiplexing requires which two things?",
+          options: [
+            "(1) sockets have unique identifiers, and (2) each segment has special fields that indicate the socket to which the segment is to be delivered",
+            "(1) routers have unique IP addresses, and (2) packets have TTL fields",
+            "(1) applications have unique names, and (2) messages have priority fields",
+            "(1) hosts have MAC addresses, and (2) frames have FCS fields",
+          ],
+          correct: 0,
+          translation: "transport-layer multiplexing بيحتاج إيه حاجتين؟",
+          explanation:
+            " sockets بـ unique identifiers + segments فيها special fields بتشير للـ socket الصح. نقطة مرقمة مهمة.",
+          tags: ["Multiplexing", "Requirements"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (requirements)",
+          likely: "high",
+        },
+        {
+          q: "8. The special fields used by the transport layer to indicate the receiving socket are:",
+          options: [
+            "The TTL and checksum fields",
+            "The sequence number and acknowledgment number fields",
+            "The source IP address and destination IP address",
+            "The source port number field and the destination port number field",
+          ],
+          correct: 3,
+          translation:
+            "الـ special fields اللي طبقة النقل بتستخدمها لتحدد الـ socket المستقبل هي إيه؟",
+          explanation:
+            "source port number + destination port number. الـ IP addresses شغل الـ network layer.",
+          tags: ["Port numbers", "Multiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Figure 3.3)",
+          likely: "high",
+        },
+        {
+          q: "9. Each port number is a how-many-bit number?",
+          options: ["64-bit", "16-bit", "8-bit", "32-bit"],
+          correct: 1,
+          translation: "كل port number عبارة عن كام bit؟",
+          explanation: "16-bit. بتتراوح من 0 لـ 65535.",
+          tags: ["Port numbers", "Size"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "10. Port numbers range from:",
+          options: ["0 to 65535", "0 to 1023", "0 to 4096", "0 to 255"],
+          correct: 0,
+          translation: "port numbers بتتراوح من كم لكم؟",
+          explanation:
+            "0 لـ 65535 (لأنها 16-bit). 0-1023 خاصة بالـ well-known.",
+          tags: ["Port numbers", "Range"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "11. The port numbers ranging from 0 to 1023 are called:",
+          options: [
+            "Dynamic port numbers",
+            "Ephemeral port numbers",
+            "Reserved port numbers for routers only",
+            "Well-known port numbers",
+          ],
+          correct: 3,
+          translation: "port numbers من 0 لـ 1023 بيتسموا إيه؟",
+          explanation:
+            "well-known port numbers — reserved للتطبيقات المعروفة (HTTP 80، FTP 21).",
+          tags: ["Port numbers", "Well-known"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "12. Well-known port numbers are restricted, meaning they are reserved for:",
+          options: [
+            "Ephemeral client-side ports",
+            "DNS root servers only",
+            "Router-to-router communication only",
+            "Well-known application protocols (such as HTTP and FTP)",
+          ],
+          correct: 3,
+          translation: "well-known port numbers محجوزة لـ إيه؟",
+          explanation:
+            "للتطبيقات المعروفة. مثلاً HTTP بـ port 80 و FTP بـ port 21.",
+          tags: ["Port numbers", "Well-known"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "13. HTTP uses which well-known port number?",
+          options: ["25", "443", "80", "21"],
+          correct: 2,
+          translation: "HTTP بيستخدم بورت كم؟",
+          explanation: "80. 21 لـ FTP، 25 لـ SMTP، 443 لـ HTTPS.",
+          tags: ["Port numbers", "HTTP"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "14. FTP uses which well-known port number?",
+          options: ["53", "21", "80", "23"],
+          correct: 1,
+          translation: "FTP بيستخدم بورت كم؟",
+          explanation: "21. 80 لـ HTTP، 23 لـ Telnet، 53 لـ DNS.",
+          tags: ["Port numbers", "FTP"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "15. When we develop a new application, we must:",
+          options: [
+            "Assign the application a port number",
+            "Use a random IP address",
+            "Use only port 80",
+            "Use only port 21",
+          ],
+          correct: 0,
+          translation: "لما نطوّر application جديد، لازم نعمل إيه؟",
+          explanation:
+            "نـ assign port number للتطبيق. مش بنستخدم بورت ثابت ولا IP عشوائي.",
+          tags: ["Port numbers", "Application"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          q: "16. In UDP, on the client side, the port number is typically:",
+          options: [
+            "Reserved by the router",
+            "Always 80",
+            "Automatically (and transparently) assigned by the transport layer",
+            "Manually chosen by the user",
+          ],
+          correct: 2,
+          translation:
+            "في UDP، على جانب الـ client، الـ port number بيتحدد إزاي؟",
+          explanation:
+            "الـ transport layer بـ assign port تلقائياً وشفافاً. الـ server side بيـ assign port محدد.",
+          tags: ["UDP", "Multiplexing", "Client"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connectionless Mux/Demux)",
+          likely: "high",
+        },
+        {
+          q: "17. In UDP, the server side of the application typically:",
+          options: [
+            "Lets the transport layer auto-assign the port",
+            "Asks the client for a port number",
+            "Assigns a specific port number",
+            "Uses no port at all",
+          ],
+          correct: 2,
+          translation: "في UDP، على جانب الـ server، الـ port بيتحدد إزاي؟",
+          explanation:
+            "السيرفر بيـ assign port محدد (زي 80 لـ HTTP). عكس الـ client اللي بيتـ auto-assign.",
+          tags: ["UDP", "Multiplexing", "Server"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connectionless Mux/Demux)",
+          likely: "high",
+        },
+        {
+          q: "18. When a UDP segment arrives at Host B, how does the transport layer deliver the segment to the correct socket?",
+          options: [
+            "By examining the segment length field only",
+            "By examining the source IP address only",
+            "By examining the destination port number in the segment",
+            "By examining the destination IP address only",
+          ],
+          correct: 2,
+          translation:
+            "لما UDP segment يوصل لـ Host B، إزاي طبقة النقل تسلّمه للـ socket الصح؟",
+          explanation:
+            "بتفحص destination port number في الـ segment. الـ IP address شغل الـ network layer.",
+          tags: ["UDP", "Demultiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connectionless Mux/Demux)",
+          likely: "high",
+        },
+        {
+          q: "19. In the A-to-B UDP segment, the source port number serves as:",
+          options: [
+            "The destination port for B",
+            "A sequence number",
+            'Part of a "return address"',
+            "An acknowledgment number",
+          ],
+          correct: 2,
+          translation:
+            "في الـ A-to-B UDP segment، الـ source port number بيشتغل كـ إيه؟",
+          explanation:
+            "part of return address — لما B يبعت segment لـ A، الـ destination port في الـ B-to-A segment بياخد قيمته من الـ source port بتاع الـ A-to-B segment.",
+          tags: ["UDP", "Source port", "Return address"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Figure 3.4 commentary)",
+          likely: "high",
+        },
+        {
+          q: "20. A TCP socket is identified by which set of values?",
+          options: [
+            "(sequence number, acknowledgment number)",
+            "(source port number, destination port number) only",
+            "(source IP address, destination IP address) only",
+            "(source IP address, source port number, destination IP address, destination port number)",
+          ],
+          correct: 3,
+          translation: "TCP socket بيتحدد بأيه قيم؟",
+          explanation:
+            "four-tuple: source IP، source port، destination IP، destination port. عكس UDP اللي بـ destination port بس.",
+          tags: ["TCP", "Socket", "Four-tuple"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connection-Oriented Mux/Demux)",
+          likely: "high",
+        },
+        {
+          q: "21. When a TCP segment arrives at a host, the host uses how many fields to direct the segment to the appropriate socket?",
+          options: [
+            "Only the destination IP address",
+            "Only the source IP address",
+            "Only the destination port",
+            "All four: source IP address, source port, destination IP address, destination port",
+          ],
+          correct: 3,
+          translation:
+            "لما TCP segment يوصل، الـ host بيستخدم كام field عشان يوجّهه للـ socket الصح؟",
+          explanation:
+            "الاتنين الأربعة. ده عكس UDP اللي بـ destination port بس.",
+          tags: ["TCP", "Demultiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connection-Oriented Mux/Demux)",
+          likely: "high",
+        },
+        {
+          q: "22. Why is it NOT a problem if Host A and Host C both assign source port 26145 to their HTTP connections to server B?",
+          options: [
+            "Because TCP only uses destination ports",
+            "Because UDP is used instead of TCP",
+            "Because both hosts use the same IP address",
+            "Because server B uses all four values to demultiplex, and the two connections have different source IP addresses",
+          ],
+          correct: 3,
+          translation:
+            "ليه مش مشكلة لو Host A و Host C الانتين بيـ assign source port 26145 لـ HTTP connections لـ server B؟",
+          explanation:
+            "لأن السيرفر بيستخدم الـ four-tuple كله، والاتنين عندهم source IP مختلف. نقطة مهمة عن الـ TCP demux.",
+          tags: ["TCP", "Demultiplexing", "Source port"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Figure 3.5 commentary)",
+          likely: "high",
+        },
+        {
+          q: "23. How does a Web server running on port 80 distinguish segments from different clients?",
+          options: [
+            "Using source IP addresses and source port numbers",
+            "Using only the destination port",
+            "Using only the destination IP address",
+            "Using sequence numbers only",
+          ],
+          correct: 0,
+          translation:
+            "إزاي Web server بيشتغل على port 80 يفرّق بين segments من clients مختلفة؟",
+          explanation:
+            "بالـ source IP + source port. كل client عنده source IP مختلف و/أو source port مختلف.",
+          tags: ["TCP", "Web Server", "Demultiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Web Servers and TCP)",
+          likely: "high",
+        },
+        {
+          q: "24. Today's high-performing Web servers often use:",
+          options: [
+            "A new process for each connection",
+            "A single thread for all connections",
+            "Only one process, and create a new thread with a new connection socket for each new client connection",
+            "A single socket for all clients",
+          ],
+          correct: 2,
+          translation: "Web servers عالية الأداء دلوقتي بتستخدم إيه؟",
+          explanation:
+            "process واحد بس، وبيخلقوا thread جديد مع connection socket جديد لكل client جديد. عكس الـ older approach اللي كان بيـ spawn process جديد لكل connection.",
+          tags: ["TCP", "Web Server", "Threads"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Web Servers and TCP)",
+          likely: "high",
+        },
+        {
+          q: "25. For a Web server using persistent HTTP, when does the client and server exchange HTTP messages via the same server socket?",
+          options: [
+            "Only for the first request",
+            "Never — a new socket is created for every message",
+            "Throughout the duration of the persistent connection",
+            "Only for the first response",
+          ],
+          correct: 2,
+          translation:
+            "في Web server بيستخدم persistent HTTP، إمتى الـ client و الـ server يتبادلوا HTTP messages عبر نفس الـ server socket؟",
+          explanation:
+            "طول مدة الـ persistent connection. عكس non-persistent اللي بـ create socket جديد لكل request/response.",
+          tags: ["TCP", "Web Server", "Persistent HTTP"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Web Servers and TCP)",
+          likely: "high",
+        },
+        {
+          q: "26. For non-persistent HTTP, what happens for every request/response?",
+          options: [
+            "UDP is used instead",
+            "A new TCP connection is created and closed",
+            "No socket is created",
+            "The same socket is reused",
+          ],
+          correct: 1,
+          translation:
+            "في non-persistent HTTP، إيه اللي بيحصل لكل request/response؟",
+          explanation:
+            "TCP connection جديد بيخلق ويقفل لكل request/response. ده ممكن يأثر على أداء الـ Web server المشغول.",
+          tags: ["TCP", "Web Server", "Non-persistent HTTP"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 2.2 (Web Servers and TCP)",
+          likely: "high",
+        },
+        {
+          q: "27. Aside from the multiplexing/demultiplexing function and some light error checking, UDP adds what to IP?",
+          options: [
+            "Congestion control",
+            "Connection setup",
+            "Reliable data transfer",
+            "Nothing — it adds nothing to IP",
+          ],
+          correct: 3,
+          translation:
+            "بخلاف الـ multiplexing/demultiplexing و light error checking، UDP بيضيف إيه لـ IP؟",
+          explanation:
+            'ما بيضيفش أي حاجة — ده اللي بيخليه "almost directly talking with IP". تعريف أساسي.',
+          tags: ["UDP", "Services"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3",
+          likely: "high",
+        },
+        {
+          q: "28. If the application developer chooses UDP instead of TCP, then the application is:",
+          options: [
+            "Talking directly to the physical layer",
+            "Almost directly talking with IP",
+            "Talking only to DNS",
+            "Guaranteed reliable delivery",
+          ],
+          correct: 1,
+          translation: "لو المطور اختار UDP بدل TCP، التطبيق هيكون إزاي؟",
+          explanation:
+            "بيتكلم تقريباً مباشرة مع IP. عشان UDP ما بيضيفش حاجة تقريباً على IP.",
+          tags: ["UDP", "IP"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3",
+          likely: "high",
+        },
+        {
+          q: "29. UDP takes messages from the application process and attaches which fields for the multiplexing/demultiplexing service?",
+          options: [
+            "Source and destination port number fields",
+            "Congestion window and RTT",
+            "IP addresses only",
+            "Sequence and acknowledgment numbers",
+          ],
+          correct: 0,
+          translation:
+            "UDP بياخد messages من الـ process وبيضيف إيه fields للـ multiplexing/demultiplexing؟",
+          explanation:
+            "source + destination port numbers. بعد كده بيمرر الـ segment للـ network layer.",
+          tags: ["UDP", "Port numbers"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3",
+          likely: "high",
+        },
+        {
+          q: "30. UDP is said to be connectionless because:",
+          options: [
+            "It requires DNS first",
+            "It cannot send any data",
+            "There is no handshaking between sending and receiving transport-layer entities before sending a segment",
+            "It uses IP addresses only",
+          ],
+          correct: 2,
+          translation: "UDP بيتوصف بأنه connectionless ليه؟",
+          explanation:
+            "مفيش handshaking قبل إرسال segment. عكس TCP اللي بيعمل 3-way handshake.",
+          tags: ["UDP", "Connectionless", "Definition"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3",
+          likely: "high",
+        },
+        {
+          q: "31. Which application-layer protocol typically uses UDP?",
+          options: ["DNS", "SMTP", "HTTP", "FTP"],
+          correct: 0,
+          translation: "إيه بروتوكول تطبيق بيستخدم UDP عادةً؟",
+          explanation:
+            "DNS. HTTP و FTP و SMTP بتستخدم TCP عشان محتاجة reliable data transfer.",
+          tags: ["UDP", "DNS", "Applications"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (DNS example)",
+          likely: "high",
+        },
+        {
+          q: "32. When a DNS application in a host wants to make a query, what happens (in terms of UDP)?",
+          options: [
+            "UDP first performs a three-way handshake with the destination",
+            "It passes the DNS query message to UDP; UDP adds header fields and passes the resulting segment to the network layer without any handshaking",
+            "UDP encrypts the message before sending",
+            "UDP waits for the destination to be ready",
+          ],
+          correct: 1,
+          translation:
+            "لما DNS application عايز يعمل query، إيه اللي بيحصل (بالنسبة لـ UDP)؟",
+          explanation:
+            "UDP بيضيف header fields ويمرر segment للـ network layer من غير handshaking. ده عكس TCP.",
+          tags: ["UDP", "DNS", "Connectionless"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (DNS example)",
+          likely: "high",
+        },
+        {
+          q: "33. If DNS does not receive a reply to its query, it might:",
+          options: [
+            "Try resending the query, try sending to another name server, or inform the invoking application that it can't get a reply",
+            "Switch to TCP automatically",
+            "Crash the application",
+            "Wait forever",
+          ],
+          correct: 0,
+          translation: "لو DNS ما استقبلش رد على query، ممكن يعمل إيه؟",
+          explanation:
+            "يحاول resend، أو يبعت لـ name server تاني، أو يـ inform التطبيق. مفيش انتظار للأبد ولا switch تلقائي لـ TCP.",
+          tags: ["UDP", "DNS", "Retransmission"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (DNS example)",
+          likely: "high",
+        },
+        {
+          q: "34. Which is NOT a reason why some applications are better suited for UDP than TCP?",
+          options: [
+            "Finer application-level control over what data is sent, and when",
+            "No connection state",
+            "Built-in reliable data transfer",
+            "No connection establishment",
+          ],
+          correct: 2,
+          translation: "إيه اللي مش سبب إن التطبيقات تفضل UDP؟",
+          explanation:
+            "UDP ما بيوفرش reliable data transfer — دي ميزة TCP. الأسباب التانية كلها أسباب حقيقية لتفضيل UDP.",
+          tags: ["UDP", "Advantages"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (reasons)",
+          likely: "high",
+        },
+        {
+          q: "35. Under UDP, as soon as an application process passes data to UDP:",
+          options: [
+            "UDP will throttle the sending rate",
+            "UDP will wait for a handshake",
+            "UDP will retransmit until acknowledged",
+            "UDP will package the data inside a UDP segment and immediately pass the segment to the network layer",
+          ],
+          correct: 3,
+          translation:
+            "تحت UDP، أول ما التطبيق يمرر data لـ UDP، إيه اللي بيحصل؟",
+          explanation:
+            "UDP بيـ package الـ data في segment ويمرره للـ network layer على طول. عكس TCP اللي ممكن يـ throttle أو يستنى ACK.",
+          tags: ["UDP", "Application control"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (finer control)",
+          likely: "high",
+        },
+        {
+          q: "36. TCP's congestion-control mechanism throttles the transport-layer TCP sender when:",
+          options: [
+            "The destination buffer is full",
+            "The DNS server is down",
+            "One or more links between the source and destination hosts become excessively congested",
+            "The router runs out of memory",
+          ],
+          correct: 2,
+          translation:
+            "TCP congestion-control mechanism بيـ throttle الـ sender إمتى؟",
+          explanation:
+            "لما واحد أو أكتر من الـ links يبقى congested زيادة. عكس UDP اللي ما بيعملش throttling.",
+          tags: ["TCP", "Congestion control"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (finer control)",
+          likely: "high",
+        },
+        {
+          q: "37. Why does DNS run over UDP rather than TCP?",
+          options: [
+            "Because UDP encrypts the queries",
+            "Because UDP is more reliable than TCP",
+            "Because TCP cannot carry DNS queries",
+            "Because UDP does not introduce any delay to establish a connection (no handshaking)",
+          ],
+          correct: 3,
+          translation: "ليه DNS بيشتغل فوق UDP مش TCP؟",
+          explanation:
+            "عشان UDP ما بيعملش handshaking، فمفيش delay لإنشاء connection. DNS هيكون أبطل لو اشتغل فوق TCP.",
+          tags: ["UDP", "DNS", "No connection setup"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (no connection establishment)",
+          likely: "high",
+        },
+        {
+          q: "38. HTTP uses TCP rather than UDP because:",
+          options: [
+            "Reliability is critical for Web pages with text",
+            "HTTP requires connectionless transport",
+            "HTTP requires DNS",
+            "HTTP needs no congestion control",
+          ],
+          correct: 0,
+          translation: "HTTP بيستخدم TCP مش UDP ليه؟",
+          explanation:
+            "لأن الـ reliability حرجة لصفحات الـ Web (نصوص). UDP ما بيوفرش reliability.",
+          tags: ["TCP", "HTTP", "Reliability"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (no connection establishment)",
+          likely: "high",
+        },
+        {
+          q: "39. A server devoted to a particular application can typically support many more active clients when the application runs over UDP rather than TCP because:",
+          options: [
+            "UDP does not maintain connection state",
+            "UDP has faster routing",
+            "UDP encrypts all traffic",
+            "UDP uses larger segments",
+          ],
+          correct: 0,
+          translation:
+            "ليه السيرفر يقدر يـ support عملاء أكتر لما التطبيق يشتغل فوق UDP؟",
+          explanation:
+            "UDP ما بـ maintain connection state — مفيش buffers ولا congestion-control parameters ولا sequence/ACK parameters زي TCP.",
+          tags: ["UDP", "Connection state", "Scalability"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (no connection state)",
+          likely: "high",
+        },
+        {
+          q: "40. TCP connection state includes which of the following?",
+          options: [
+            "Receive and send buffers, congestion-control parameters, and sequence and acknowledgment number parameters",
+            "Only the destination IP address",
+            "Only the segment length",
+            "Only the source port number",
+          ],
+          correct: 0,
+          translation: "TCP connection state بيشمل إيه؟",
+          explanation:
+            "receive/send buffers، congestion-control parameters، sequence/ACK parameters. النقاط دي محتاجة لكل connection — عكس UDP.",
+          tags: ["TCP", "Connection state"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (no connection state)",
+          likely: "high",
+        },
+        {
+          q: "41. The TCP segment has how many bytes of header overhead per segment?",
+          options: ["16 bytes", "8 bytes", "20 bytes", "40 bytes"],
+          correct: 2,
+          translation: "TCP segment فيها كام byte من header overhead؟",
+          explanation: "20 bytes. UDP عنده 8 bytes بس — ده فرق مهم.",
+          tags: ["TCP", "Header overhead"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (small header overhead)",
+          likely: "high",
+        },
+        {
+          q: "42. The UDP segment has how many bytes of header overhead per segment?",
+          options: ["20 bytes", "8 bytes", "4 bytes", "40 bytes"],
+          correct: 1,
+          translation: "UDP segment فيها كام byte من header overhead؟",
+          explanation:
+            "8 bytes. TCP عنده 20 bytes — ليه UDP أنسب للتطبيقات اللي بتحتاج small packet overhead.",
+          tags: ["UDP", "Header overhead"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (small header overhead)",
+          likely: "high",
+        },
+        {
+          q: "43. Which set of applications typically runs over TCP?",
+          options: [
+            "DNS only",
+            "E-mail, remote terminal access, and file transfer",
+            "Video conferencing only",
+            "Internet phone only",
+          ],
+          correct: 1,
+          translation: "إيه التطبيقات اللي بتشتغل عادة فوق TCP؟",
+          explanation:
+            "e-mail، remote terminal، file transfer — كلهم محتاجين reliable data transfer بتاع TCP.",
+          tags: ["TCP", "Applications"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (Figure 3.6)",
+          likely: "high",
+        },
+        {
+          q: "44. Multimedia applications (Internet phone, video conferencing, streaming) can:",
+          options: [
+            "Be blocked by all routers",
+            "Not tolerate any packet loss at all",
+            "Only work over TCP",
+            "Tolerate a small amount of packet loss, so reliable data transfer is not absolutely critical",
+          ],
+          correct: 3,
+          translation:
+            "تطبيقات الـ multimedia (Internet phone، video conferencing) تعمل إزاي؟",
+          explanation:
+            "بتتحمل small packet loss — عشان كده مش محتاجة reliable transfer absoluta. كمان بتتفاعل poorly مع TCP congestion control.",
+          tags: ["UDP", "Multimedia", "Packet loss"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (Figure 3.6 commentary)",
+          likely: "high",
+        },
+        {
+          q: "45. Real-time applications like Internet phone and video conferencing react how to TCP's congestion control?",
+          options: [
+            "Very well",
+            "Very poorly",
+            "They ignore it",
+            "They require it",
+          ],
+          correct: 1,
+          translation:
+            "التطبيقات real-time زي Internet phone و video conferencing بتتفاعل إزاي مع TCP congestion control؟",
+          explanation: "very poorly. عشان كده المطورين بيفضلوا UDP.",
+          tags: ["UDP", "TCP", "Real-time"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (multimedia paragraph)",
+          likely: "high",
+        },
+        {
+          q: "46. If everyone were to start streaming high-bit-rate video without using any congestion control, what would happen?",
+          options: [
+            "There would be so much packet overflow at routers that very few UDP packets would successfully traverse the source-to-destination path",
+            "All packets would arrive faster",
+            "The network would become more reliable",
+            "TCP traffic would speed up",
+          ],
+          correct: 0,
+          translation:
+            "لو الكل بدأ يبعت high-bit-rate video من غير congestion control، إيه اللي هيحصل؟",
+          explanation:
+            "overflow عند الـ routers، وفقدان معظم الـ UDP packets.UDP ما عندهوش congestion control.",
+          tags: ["UDP", "Congestion", "Routers"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (congestion warning)",
+          likely: "high",
+        },
+        {
+          q: "47. High loss rates induced by uncontrolled UDP senders would cause TCP senders to:",
+          options: [
+            "Stop sending entirely",
+            "Switch to UDP",
+            "Increase their rates",
+            "Dramatically decrease their rates",
+          ],
+          correct: 3,
+          translation:
+            "loss rates العالية اللي سببها UDP senders غير المتحكم فيها هتخلي TCP senders يعملوا إيه؟",
+          explanation:
+            "TCP senders بيقللوا معدلهم بشكل كبير — UDP بـ crowd out الـ TCP sessions.",
+          tags: ["UDP", "TCP", "Congestion"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (congestion warning)",
+          likely: "high",
+        },
+        {
+          q: "48. Is it possible for an application to have reliable data transfer when using UDP?",
+          options: [
+            "Yes, if reliability is built into the application itself (e.g., by adding acknowledgment and retransmission mechanisms)",
+            "Yes, but only when the network is reliable",
+            "Yes, but only with DNS",
+            "No, UDP is always unreliable",
+          ],
+          correct: 0,
+          translation:
+            "هل ممكن التطبيق يكون عنده reliable data transfer لما بيستخدم UDP؟",
+          explanation:
+            "آه، لو الـ reliability متبني جوه التطبيق نفسه (ACKs + retransmission). QUIC بيعمل كده — reliability فوق UDP.",
+          tags: ["UDP", "Reliable data transfer", "QUIC"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (reliability over UDP)",
+          likely: "high",
+        },
+        {
+          q: "49. Which protocol implements reliability in an application-layer protocol on top of UDP?",
+          options: ["QUIC", "DNS", "TCP", "HTTP"],
+          correct: 0,
+          translation:
+            "إيه بروتوكول بيعمل reliability كـ application-layer فوق UDP؟",
+          explanation:
+            "QUIC. ده مثال على إن التطبيقات تقدر تضيف reliability فوق UDP — بس دي مهمة صعبة.",
+          tags: ["UDP", "QUIC", "Reliability"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (reliability over UDP)",
+          likely: "high",
+        },
+        {
+          q: "50. In the UDP segment, the application data occupies which field?",
+          options: [
+            "The header field",
+            "The checksum field",
+            "The length field",
+            "The data field",
+          ],
+          correct: 3,
+          translation: "في UDP segment، الـ application data بيشغل أنهي field؟",
+          explanation:
+            "data field. مثلاً لـ DNS، الـ data field فيها query أو response message.",
+          tags: ["UDP", "Segment Structure", "Data field"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "51. The UDP header has how many fields?",
+          options: ["Six", "Two", "Four", "Eight"],
+          correct: 2,
+          translation: "UDP header فيها كام field؟",
+          explanation:
+            "4 fields: source port، destination port، length، checksum.",
+          tags: ["UDP", "Segment Structure", "Header"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "52. Each field in the UDP header consists of how many bytes?",
+          options: ["Four bytes", "Eight bytes", "Two bytes", "One byte"],
+          correct: 2,
+          translation: "كل field في UDP header فيها كام byte؟",
+          explanation:
+            "2 bytes. 4 fields × 2 bytes = 8 bytes total header (وده الـ overhead الصغير).",
+          tags: ["UDP", "Segment Structure", "Header"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "53. Which of the following is one of the four UDP header fields?",
+          options: [
+            "Sequence number",
+            "Source port number",
+            "Acknowledgment number",
+            "Congestion window",
+          ],
+          correct: 1,
+          translation: "إيه واحد من الـ 4 fields في UDP header؟",
+          explanation:
+            "source port number. الـ 4 fields: source port، destination port، length، checksum. التلاتة التانيين من TCP.",
+          tags: ["UDP", "Segment Structure", "Header fields"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "54. The length field in the UDP segment specifies:",
+          options: [
+            "The IP header length",
+            "The number of bytes in the UDP segment (header plus data)",
+            "Only the number of bytes in the data",
+            "Only the number of bytes in the header",
+          ],
+          correct: 1,
+          translation: "length field في UDP segment بيشير لإيه؟",
+          explanation:
+            "عدد bytes في الـ UDP segment كله (header + data). explicit value مهم عشان حجم الـ data ممكن يختلف.",
+          tags: ["UDP", "Segment Structure", "Length field"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "55. Why is an explicit length value needed in the UDP segment?",
+          options: [
+            "Because the checksum needs it",
+            "Because IP requires it",
+            "Because the header size varies",
+            "Because the size of the data field may differ from one UDP segment to the next",
+          ],
+          correct: 3,
+          translation: "ليه explicit length value لازم في UDP segment؟",
+          explanation:
+            "حجم الـ data field ممكن يختلف من segment للتاني. لازم قيمة explicit.",
+          tags: ["UDP", "Segment Structure", "Length field"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "56. The checksum field in the UDP segment is used to:",
+          options: [
+            "Route the segment",
+            "Check whether errors have been introduced into the segment",
+            "Encrypt the segment",
+            "Compress the segment",
+          ],
+          correct: 1,
+          translation: "checksum field في UDP segment بتستخدم لـ إيه؟",
+          explanation:
+            "للـ error detection — تتأكد إن مفيش bits اتغيرت في الـ segment.",
+          tags: ["UDP", "Segment Structure", "Checksum"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          q: "57. The UDP checksum provides for:",
+          options: [
+            "Compression",
+            "Error detection",
+            "Encryption",
+            "Error correction",
+          ],
+          correct: 1,
+          translation: "UDP checksum بيوفّر إيه؟",
+          explanation:
+            "error detection — تحديد لو الـ bits اتغيّرت. مش correction.",
+          tags: ["UDP", "Checksum", "Error detection"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          q: "58. The UDP checksum is used to determine whether bits within the UDP segment have been altered by:",
+          options: [
+            "Compression by the network layer",
+            "Encryption by the sender",
+            "Noise in the links or while stored in a router",
+            "Routing protocols only",
+          ],
+          correct: 2,
+          translation:
+            "UDP checksum بيتحدد بيه لو الـ bits في الـ segment اتغيّرت بسبب إيه؟",
+          explanation:
+            "noise في الـ links أو لما الـ segment يتخزّن في راوتر. مصادر تانية للـ bit errors.",
+          tags: ["UDP", "Checksum", "Bit errors"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          q: "59. Why does UDP provide a checksum, even though many link-layer protocols (including Ethernet) also provide error checking?",
+          options: [
+            "Because there is no guarantee that all the links between source and destination provide error checking",
+            "Because the checksum is faster than Ethernet",
+            "Because the application demands it",
+            "Because UDP requires it for routing",
+          ],
+          correct: 0,
+          translation:
+            "ليه UDP بيوفر checksum رغم إن link-layer protocols بتوفر error checking؟",
+          explanation:
+            "مفيش ضمان إن كل الـ links بتوفر error checking. كمان bit errors ممكن تحصل لما الـ segment يتخزّن في راوتر.",
+          tags: ["UDP", "Checksum", "End-to-end"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          q: "60. Even if segments are correctly transferred across a link, bit errors could be introduced when:",
+          options: [
+            "The application is busy",
+            "A segment is stored in a router's memory",
+            "The destination process is sleeping",
+            "The network layer is overloaded",
+          ],
+          correct: 1,
+          translation:
+            "حتى لو الـ segments اتنقلت صح على link، bit errors ممكن تحصل إمتى؟",
+          explanation:
+            "لما الـ segment يتخزّن في router memory. ده سبب تاني إن UDP لازم يوفر error detection end-to-end.",
+          tags: ["UDP", "Checksum", "Router memory"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          q: "61. UDP must provide error detection at the transport layer, on an end-end basis, because:",
+          options: [
+            "IP requires it",
+            "Neither link-by-link reliability nor in-memory error detection is guaranteed",
+            "TCP requires it",
+            "The application requires it",
+          ],
+          correct: 1,
+          translation:
+            "UDP لازم يوفّر error detection في طبقة النقل end-to-end ليه؟",
+          explanation:
+            "link-by-link reliability و in-memory error detection الاتنين مش guaranteed. عشان كده لازم end-to-end.",
+          tags: ["UDP", "Checksum", "End-to-end"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          q: "62. Although UDP provides error checking, it does not do anything to:",
+          options: [
+            "Detect an error",
+            "Encrypt the data",
+            "Recover from an error",
+            "Compress the segment",
+          ],
+          correct: 2,
+          translation: "UDP بيوفّر error checking بس مش بيعمل إيه؟",
+          explanation:
+            "ما بيعملش حاجة لـ recover من الـ error — detection فقط. بعض الـ implementations بـ discard، تانية بتمررها مع warning.",
+          tags: ["UDP", "Checksum", "No recovery"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          q: "63. A protocol that provides reliable data transfer and congestion control is necessarily:",
+          options: ["Simple", "Complex", "Always TCP", "Trivial"],
+          correct: 1,
+          translation:
+            "بروتوكول بيوفّر reliable data transfer و congestion control بيكون إزاي؟",
+          explanation:
+            "complex — محتاج sections كتير في الفصل. عشان كده TCP معقد أكتر من UDP.",
+          tags: ["Reliable Data Transfer", "Complexity"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "64. The service abstraction provided to the upper-layer entities in reliable data transfer is:",
+          options: [
+            "A connectionless socket",
+            "An unreliable channel like IP",
+            "A reliable channel through which data can be transferred",
+            "A noisy physical link",
+          ],
+          correct: 2,
+          translation:
+            "إيه الـ service abstraction اللي reliable data transfer بيوفّرها للـ upper layers؟",
+          explanation:
+            "reliable channel — ما بتفقدش bits، ما بتـ corrupt، بيوصل بالترتيب. ده اللي TCP بيوفّره للتطبيقات.",
+          tags: ["Reliable Data Transfer", "Service abstraction"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "65. With a reliable channel, which of the following is true?",
+          options: [
+            "Bits may be delivered out of order",
+            "No transferred data bits are corrupted or lost, and all are delivered in the order in which they were sent",
+            "Bits may be lost but not corrupted",
+            "Bits may be corrupted but not lost",
+          ],
+          correct: 1,
+          translation: "في reliable channel، إيه اللي بيحصل؟",
+          explanation:
+            "ما بيحصلش corruption ولا loss، وكل البيانات بيوصل بالترتيب. ده service model بتاع TCP.",
+          tags: ["Reliable Data Transfer", "Reliable channel"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "66. The task of implementing reliable data transfer is made difficult by:",
+          options: [
+            "The fact that the network layer is always reliable",
+            "The fact that the physical layer is always reliable",
+            "The fact that the application layer is unreliable",
+            "The fact that the layer below the reliable data transfer protocol may be unreliable",
+          ],
+          correct: 3,
+          translation: "ليه تنفيذ reliable data transfer صعب؟",
+          explanation:
+            "الطبقة اللي تحت ممكن تكون unreliable. مثلاً TCP فوق IP (unreliable) لازم يحوّلها لـ reliable.",
+          tags: ["Reliable Data Transfer", "Difficulty"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "67. TCP is a reliable data transfer protocol implemented on top of:",
+          options: [
+            "A reliable data-link layer",
+            "A reliable network layer",
+            "A reliable physical layer",
+            "An unreliable (IP) end-to-end network layer",
+          ],
+          correct: 3,
+          translation: "TCP بروتوكول reliable data transfer مبني فوق إيه؟",
+          explanation:
+            "IP (unreliable). ده مثال رئيسي على إن الـ transport يقدر يضيف reliability فوق unreliable network.",
+          tags: ["TCP", "IP", "Reliable Data Transfer"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "68. On the sending side of the data transfer protocol, what is the function called that is invoked from above?",
+          options: ["rdt_send()", "rdt_rcv()", "udt_send()", "deliver_data()"],
+          correct: 0,
+          translation: "على جانب الإرسال، إيه الـ function اللي بتنادى من فوق؟",
+          explanation:
+            "rdt_send(). rdt_rcv() على جانب الاستقبال. udt_send() للـ unreliable data transfer.",
+          tags: ["Reliable Data Transfer", "rdt_send", "Interface"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (interfaces)",
+          likely: "high",
+        },
+        {
+          q: "69. On the receiving side, which function is called when a packet arrives?",
+          options: ["rdt_rcv()", "deliver_data()", "udt_send()", "rdt_send()"],
+          correct: 0,
+          translation:
+            "على جانب الاستقبال، إيه الـ function اللي بتنادى لما packet يوصل؟",
+          explanation:
+            "rdt_rcv(). ده على جانب الاستقبال — رد على rdt_send() بتاع المرسل.",
+          tags: ["Reliable Data Transfer", "rdt_rcv", "Interface"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (interfaces)",
+          likely: "high",
+        },
+        {
+          q: "70. When the rdt protocol wants to deliver data to the upper layer, it does so by calling:",
+          options: ["udt_send()", "deliver_data()", "rdt_rcv()", "rdt_send()"],
+          correct: 1,
+          translation:
+            "لما rdt protocol عايز يسلّم data للطبقة اللي فوق بيعمل إيه؟",
+          explanation:
+            "deliver_data(). ده الـ interface بين rdt والتطبيق المستقبل.",
+          tags: ["Reliable Data Transfer", "deliver_data", "Interface"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (interfaces)",
+          likely: "high",
+        },
+        {
+          q: "71. Both the send and receive sides of rdt send packets to the other side by a call to:",
+          options: [
+            "udt_send() (unreliable data transfer)",
+            "rdt_rcv()",
+            "deliver_data()",
+            "rdt_send()",
+          ],
+          correct: 0,
+          translation:
+            "الاتنين send و receive sides بتاع rdt بيبعتوا packets للطرف التاني بإيه؟",
+          explanation:
+            "udt_send() — unreliable data transfer. ده لإن الـ channel اللي تحت ممكن يكون unreliable.",
+          tags: ["Reliable Data Transfer", "udt_send", "Interface"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (interfaces)",
+          likely: "high",
+        },
+        {
+          q: "72. Although only unidirectional data transfer is considered, the sending and receiving sides will need to:",
+          options: [
+            "Transmit packets in both directions (control packets as well as data packets)",
+            "Only receive control packets",
+            "Only send data packets one way",
+            "Never transmit any packets",
+          ],
+          correct: 0,
+          translation:
+            "رغم إن unidirectional بس، الـ sending و receiving sides محتاجين يعملوا إيه؟",
+          explanation:
+            "يبعتوا packets في الاتنين الاتجاهات — data + control packets (ACKs, NAKs).",
+          tags: ["Reliable Data Transfer", "Bidirectional control"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "73. In addition to exchanging packets containing data, the sending and receiving sides of rdt will also need to exchange:",
+          options: [
+            "Encryption keys only",
+            "Control packets back and forth",
+            "DNS queries",
+            "IP addresses only",
+          ],
+          correct: 1,
+          translation:
+            "بالإضافة لـ data packets، الـ rdt sides محتاجة تتبادل إيه؟",
+          explanation:
+            "control packets (ACKs, NAKs, إلخ). دي بتتحرك في الاتنين الاتجاهات.",
+          tags: ["Reliable Data Transfer", "Control packets"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "high",
+        },
+        {
+          q: "74. The list of well-known port numbers is given in:",
+          options: ["RFC 791", "RFC 2616", "RFC 768", "RFC 1700"],
+          correct: 3,
+          translation: "قائمة well-known port numbers موجودة في RFC كام؟",
+          explanation:
+            "RFC 1700 (وتتحدّث في iana.org). RFC 768 لـ UDP، RFC 791 لـ IP، RFC 2616 لـ HTTP/1.1.",
+          tags: ["Port numbers", "RFC"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "medium",
+        },
+        {
+          q: "75. UDP is defined in which RFC?",
+          options: ["RFC 768 and RFC 793", "RFC 791", "RFC 768", "RFC 1700"],
+          correct: 2,
+          translation: "UDP متعرف في RFC كام؟",
+          explanation:
+            "RFC 768. RFC 791 لـ IP، RFC 1700 لـ well-known ports، RFC 793 لـ TCP.",
+          tags: ["UDP", "RFC"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3",
+          likely: "medium",
+        },
+        {
+          q: "76. The UDP segment structure is defined in:",
+          options: ["RFC 2616", "RFC 768", "RFC 791", "RFC 1700"],
+          correct: 1,
+          translation: "UDP segment structure متعرف في RFC كام؟",
+          explanation: "RFC 768. ده نفس الـ RFC اللي عرّف UDP كله.",
+          tags: ["UDP", "Segment Structure", "RFC"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "medium",
+        },
+        {
+          q: "77. In truth, the UDP checksum is also calculated over which additional fields?",
+          options: [
+            "Only the application data",
+            "A few of the fields in the IP header in addition to the UDP segment",
+            "Only the source and destination ports",
+            "Only the UDP header fields",
+          ],
+          correct: 1,
+          translation: "بالحقيقة، الـ UDP checksum بيتحسب كمان على إيه؟",
+          explanation:
+            "على بعض fields في الـ IP header بالإضافة للـ UDP segment. ده اسمه pseudo-header.",
+          tags: ["UDP", "Segment Structure", "Checksum", "Pseudo-header"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "medium",
+        },
+        {
+          q: "78. Some implementations of UDP, when an error is detected:",
+          options: [
+            "Simply discard the damaged segment",
+            "Convert to TCP",
+            "Encrypt the segment",
+            "Always retransmit the segment",
+          ],
+          correct: 0,
+          translation: "بعض UDP implementations لما يكتشف error بيعمل إيه؟",
+          explanation:
+            "discard للـ damaged segment. تانية بتمررها للتطبيق مع warning.",
+          tags: ["UDP", "Checksum", "Discard"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "medium",
+        },
+        {
+          q: "79. Other implementations of UDP, when an error is detected:",
+          options: [
+            "Discard silently without warning",
+            "Always retransmit the segment",
+            "Send an ACK back",
+            "Pass the damaged segment to the application with a warning",
+          ],
+          correct: 3,
+          translation: "UDP implementations تانية لما يكتشف error بتعمل إيه؟",
+          explanation:
+            "تمرر الـ damaged segment للتطبيق مع warning. implementations بتختلف.",
+          tags: ["UDP", "Checksum", "Warning"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "medium",
+        },
+        {
+          q: "80. The approach taken in this chapter is to:",
+          options: [
+            "Alternate between basic principles and the TCP protocol",
+            "Cover only principles without TCP",
+            "Cover UDP only",
+            "Cover only TCP without principles",
+          ],
+          correct: 0,
+          translation: "الـ approach في الفصل ده هو إيه؟",
+          explanation:
+            "alternate بين principles و TCP. مثلاً: reliable data transfer بشكل عام الأول، بعدها إزاي TCP بيوفّره.",
+          tags: ["Reliable Data Transfer", "Approach"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "medium",
+        },
+        {
+          q: "81. What assumption is adopted throughout the discussion of reliable data transfer?",
+          options: [
+            "Packets are always encrypted",
+            "Packets are always delivered reliably",
+            "Packets will be delivered in the order in which they were sent, with some packets possibly being lost",
+            "Packets may be reordered but never lost",
+          ],
+          correct: 2,
+          translation:
+            "إيه الـ assumption المتبنّى في نقاش reliable data transfer؟",
+          explanation:
+            "الـ underlying channel ما بيعيدش ترتيب الـ packets، بس ممكن يفقد بعضها. تبسيط للـ model.",
+          tags: ["Reliable Data Transfer", "Assumptions"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro)",
+          likely: "medium",
+        },
+        {
+          q: "82. In this section, the case considered is:",
+          options: [
+            "Multicast data transfer",
+            "Broadcast data transfer",
+            "Bidirectional (full-duplex) data transfer only",
+            "Unidirectional data transfer (from sending to receiving side)",
+          ],
+          correct: 3,
+          translation: "في القسم ده، بيتعتبر أيه case؟",
+          explanation:
+            "unidirectional — من المرسل للمستقبل بس. bidirectional مش أصعب بس tedious في الشرح.",
+          tags: ["Reliable Data Transfer", "Unidirectional"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (unidirectional)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. Define transport-layer multiplexing and demultiplexing, and explain why they are needed.",
+          translation:
+            "عرّف transport-layer multiplexing و demultiplexing، واشرح ليه محتاجينهم.",
+          answer:
+            "Transport-layer multiplexing and demultiplexing extend the host-to-host delivery service provided by the network layer to a process-to-process delivery service for applications running on the hosts.\nA multiplexing/demultiplexing service is needed for all computer networks.\nAt the destination host, the transport layer receives segments from the network layer just below. The transport layer has the responsibility of delivering the data in these segments to the appropriate application process running in the host.\nBecause at any given time there can be more than one application process running on a host (e.g., a Web browser, an FTP session, and two Telnet sessions), the transport layer needs to direct the received data to one specific process. This directing of incoming segments to the appropriate socket (and hence process) is demultiplexing.\nConversely, on the sending side, gathering data chunks from different sockets, encapsulating each with header information, and passing the resulting segments down to the network layer is multiplexing.\nThus, multiplexing/demultiplexing is the bridge that turns the network layer's host-to-host delivery into the process-to-process delivery that applications actually need.",
+          tags: ["Multiplexing", "Demultiplexing", "Definition"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain how a receiving host directs an incoming transport-layer segment to the appropriate socket, including the role of port numbers.",
+          translation:
+            "اشرح إزاي الـ receiving host بيوجّه الـ transport-layer segment للـ socket الصح، مع دور port numbers.",
+          answer:
+            "Each transport-layer segment has a set of fields in the segment for the purpose of directing it to the appropriate socket. These special fields are the source port number field and the destination port number field.\nEach port number is a 16-bit number, ranging from 0 to 65535. The port numbers ranging from 0 to 1023 are called well-known port numbers and are restricted, meaning that they are reserved for use by well-known application protocols such as HTTP (port 80) and FTP (port 21).\nWhen a segment arrives at the host, the transport layer examines the destination port number in the segment and directs the segment to the corresponding socket. The segment's data then passes through the socket into the attached process.\nOn the sending side, the transport layer attaches the source port number (so the receiver knows where to send replies) and the destination port number (so the receiver knows which socket to deliver to).",
+          tags: ["Multiplexing", "Port numbers", "Demultiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. Distinguish between connectionless (UDP) and connection-oriented (TCP) multiplexing/demultiplexing.",
+          translation:
+            "بيّن الفرق بين connectionless (UDP) و connection-oriented (TCP) multiplexing/demultiplexing.",
+          answer:
+            "Connectionless (UDP) multiplexing/demultiplexing:\n- A UDP socket is identified by a destination port number only (and the destination host's IP address, which the network layer uses).\n- When a UDP segment arrives at a host, the transport layer examines the destination port number and delivers the segment to the socket identified by that port.\n- The client side typically lets the transport layer auto-assign the port number; the server side assigns a specific port number.\n- The source port in the A-to-B segment serves as part of a 'return address' for B's reply.\n\nConnection-oriented (TCP) multiplexing/demultiplexing:\n- A TCP socket is identified by a four-tuple: (source IP address, source port number, destination IP address, destination port number).\n- When a TCP segment arrives from the network to a host, the host uses all four values to direct (demultiplex) the segment to the appropriate socket.\n- The server host may support many simultaneous TCP connection sockets, each identified by its own four-tuple.\n- Because all four fields are used, two clients can independently choose the same source port number without causing a problem — the server distinguishes them by their different source IP addresses.",
+          tags: ["Multiplexing", "TCP", "UDP", "Comparison"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connectionless vs Connection-Oriented)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Describe how a Web server uses TCP port numbers to handle multiple simultaneous client connections.",
+          translation:
+            "وصّف إزاي Web server بيستخدم TCP port numbers عشان يتعامل مع كذا client connection في نفس الوقت.",
+          answer:
+            "Consider a host running a Web server (such as Apache) on port 80. When clients (browsers) send segments to the server, all segments will have destination port 80.\nIn particular, both the initial connection-establishment segments and the segments carrying HTTP request messages will have destination port 80.\nThe server distinguishes the segments from the different clients using source IP addresses and source port numbers — because the TCP socket is identified by the four-tuple (source IP, source port, destination IP, destination port), each connection has a unique identifier even though the destination port is the same.\nToday's high-performing Web servers often use only one process and create a new thread with a new connection socket for each new client connection. So at any given time there may be many connection sockets (with different identifiers) attached to the same process.\nIf the client and server use persistent HTTP, then throughout the duration of the persistent connection the client and server exchange HTTP messages via the same server socket.\nIf they use non-persistent HTTP, a new TCP connection is created and closed for every request/response, and hence a new socket is created and later closed for every request/response — this frequent creating and closing of sockets can severely impact the performance of a busy Web server.",
+          tags: ["TCP", "Web Server", "Multiplexing"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Web Servers and TCP)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: '5. Explain what UDP does when sending a segment from a process, and why UDP is said to be "connectionless".',
+          translation:
+            'اشرح إيه اللي UDP بيعمله لما يبعت segment من process، وليه UDP بيتوصف بأنه "connectionless".',
+          answer:
+            "UDP takes messages from the application process, attaches source and destination port number fields for the multiplexing/demultiplexing service, adds two other small fields, and passes the resulting segment to the network layer.\nThe network layer encapsulates the transport-layer segment into an IP datagram and then makes a best-effort attempt to deliver the segment to the receiving host.\nIf the segment arrives at the receiving host, UDP uses the destination port number to deliver the segment's data to the correct application process.\nThere is no handshaking between sending and receiving transport-layer entities before sending a segment. For this reason, UDP is said to be connectionless.\nDNS is an example of an application-layer protocol that typically uses UDP: when the DNS application in a host wants to make a query, it constructs a DNS query message and passes it to UDP. Without performing any handshaking, the host-side UDP adds header fields to the message and passes the resulting segment to the network layer.",
+          tags: ["UDP", "Connectionless", "DNS"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. List and explain the four reasons why an application developer might choose UDP over TCP.",
+          translation:
+            "اكتب واشرح الأسباب الأربعة اللي ممكن تخلي المطور يختار UDP بدل TCP.",
+          answer:
+            "1. Finer application-level control over what data is sent, and when: Under UDP, as soon as an application process passes data to UDP, UDP will package the data inside a UDP segment and immediately pass the segment to the network layer. TCP, on the other hand, has a congestion-control mechanism that throttles the sender when links become congested, and will continue to resend a segment until it is acknowledged. Since real-time applications often require a minimum sending rate, do not want to overly delay segment transmission, and can tolerate some data loss, TCP's service model is not particularly well matched to these applications' needs.\n\n2. No connection establishment: TCP uses a three-way handshake before it starts to transfer data. UDP just blasts away without any formal preliminaries. Thus UDP does not introduce any delay to establish a connection. This is the principal reason why DNS runs over UDP rather than TCP.\n\n3. No connection state: TCP maintains connection state in the end systems, including receive and send buffers, congestion-control parameters, and sequence and acknowledgment number parameters. UDP does not maintain connection state and does not track any of these parameters. For this reason, a server devoted to a particular application can typically support many more active clients when the application runs over UDP rather than TCP.\n\n4. Small packet header overhead: The TCP segment has 20 bytes of header overhead in every segment, whereas UDP has only 8 bytes of overhead.",
+          tags: ["UDP", "TCP", "Advantages", "Comparison"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (reasons)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. Explain the UDP segment structure, including each header field and its purpose.",
+          translation:
+            "اشرح UDP segment structure، بما فيها كل header field و هدفه.",
+          answer:
+            "The UDP segment structure, defined in RFC 768, has the application data occupying the data field of the segment (e.g., for DNS, the data field contains either a query message or a response message; for a streaming audio application, audio samples fill the data field).\nThe UDP header has only four fields, each consisting of two bytes:\n1. Source port number — allows the destination host to know which process (and socket) sent the segment, so the destination can reply.\n2. Destination port number — allows the destination host to pass the application data to the correct process running on the destination end system (i.e., to perform the demultiplexing function).\n3. Length — specifies the number of bytes in the UDP segment (header plus data). An explicit length value is needed since the size of the data field may differ from one UDP segment to the next.\n4. Checksum — used by the receiving host to check whether errors have been introduced into the segment. (In truth, the checksum is also calculated over a few of the fields in the IP header in addition to the UDP segment, using a pseudo-header.)\nThe total header overhead is 8 bytes (4 fields × 2 bytes each).",
+          tags: ["UDP", "Segment Structure", "Header"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.1",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Explain why UDP provides a checksum at the transport layer, even though many link-layer protocols also provide error checking.",
+          translation:
+            "اشرح ليه UDP بيوفّر checksum في طبقة النقل، رغم إن link-layer protocols بتوفّر error checking.",
+          answer:
+            "The UDP checksum provides for error detection — it is used to determine whether bits within the UDP segment have been altered (e.g., by noise in the links or while stored in a router) as it moved from source to destination.\nAlthough many link-layer protocols (including the popular Ethernet protocol) also provide error checking, UDP provides a checksum for the following reasons:\n1. There is no guarantee that all the links between source and destination provide error checking; that is, one of the links may use a link-layer protocol that does not provide error checking.\n2. Even if segments are correctly transferred across a link, it is possible that bit errors could be introduced when a segment is stored in a router's memory.\nGiven that neither link-by-link reliability nor in-memory error detection is guaranteed, UDP must provide error detection at the transport layer, on an end-to-end basis. Because IP is supposed to run over just about any layer-2 protocol, it is useful for the transport layer to provide error checking as a safety measure.\nHowever, although UDP provides error checking, it does not do anything to recover from an error. Some implementations simply discard the damaged segment; others pass the damaged segment to the application with a warning.",
+          tags: ["UDP", "Checksum", "Error detection", "End-to-end"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3.2",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Describe the framework for the study of reliable data transfer, including the service abstraction and the interfaces used.",
+          translation:
+            "وصّف framework لدراسة reliable data transfer، بما فيها الـ service abstraction و الـ interfaces.",
+          answer:
+            "The service abstraction provided to the upper-layer entities is that of a reliable channel through which data can be transferred. With a reliable channel, no transferred data bits are corrupted (flipped from 0 to 1, or vice versa) or lost, and all are delivered in the order in which they were sent. This is precisely the service model offered by TCP to the Internet applications that invoke it.\nIt is the responsibility of a reliable data transfer protocol (rdt) to implement this service abstraction. This task is made difficult by the fact that the layer below the reliable data transfer protocol may be unreliable. For example, TCP is a reliable data transfer protocol implemented on top of an unreliable (IP) end-to-end network layer.\nAssumption: packets will be delivered in the order in which they were sent, with some packets possibly being lost; that is, the underlying channel will not reorder packets.\nThe interfaces are:\n- rdt_send(): called from above on the sending side to pass data down to be delivered to the upper layer at the receiving side.\n- rdt_rcv(): called on the receiving side when a packet arrives from the receiving side of the channel.\n- deliver_data(): called by the rdt protocol to deliver data to the upper layer.\n- udt_send(): called by both send and receive sides to send packets to the other side via the unreliable channel (udt = unreliable data transfer).\nThe section considers only unidirectional data transfer, but the sending and receiving sides nonetheless need to transmit packets in both directions — including control packets such as acknowledgments.",
+          tags: ["Reliable Data Transfer", "Service abstraction", "Interfaces"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.4 (intro + interfaces)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Compare the port-number-based demultiplexing of UDP with the four-tuple-based demultiplexing of TCP, and explain the practical implication for Web servers handling many clients.",
+          translation:
+            "قارن بين demultiplexing في UDP (المبني على port number) و في TCP (المبني على four-tuple)، واشرح الأثر العملي على Web servers اللي بتخدم عملاء كتير.",
+          answer:
+            "UDP demultiplexing uses only the destination port number to direct an incoming segment to the appropriate socket. So when a UDP segment arrives at Host B, the transport layer examines the destination port number in the segment and delivers the segment to its socket identified by that port. Host B can be running multiple processes, each with its own UDP socket and associated port number, and segments are routed to the appropriate socket based solely on the destination port.\n\nTCP demultiplexing uses all four values of the four-tuple: (source IP address, source port number, destination IP address, destination port number). When a TCP segment arrives at a host, all four fields are used to direct the segment to the appropriate socket. The server host may support many simultaneous TCP connection sockets, each identified by its own four-tuple.\n\nPractical implication for Web servers: A Web server running on port 80 receives segments from many clients — all of which have destination port 80. Because TCP demultiplexing uses the source IP and source port in addition to the destination fields, the server can correctly distinguish segments from different clients even if two clients happen to choose the same source port number (because their source IP addresses differ). This is why a single Web server can handle many simultaneous TCP connections to the same port 80 — each connection has a unique four-tuple.\nWith UDP, by contrast, all segments destined to the same destination port go to the same socket, so a UDP server must do its own application-level demultiplexing if it wants to handle multiple clients on a single socket.",
+          tags: ["UDP", "TCP", "Demultiplexing", "Web Server"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connectionless vs Connection-Oriented + Web Servers)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Discuss the dangers of running multimedia applications over UDP without congestion control, and what mechanisms researchers have proposed to address them.",
+          translation:
+            "ناقش مخاطر تشغيل تطبيقات multimedia فوق UDP من غير congestion control، وإيه mechanisms اللي الباحثين اقترحوها للتعامل معاها.",
+          answer:
+            "Although commonly done today, running multimedia applications over UDP needs to be done with care. UDP has no congestion control.\nCongestion control is needed to prevent the network from entering a congested state in which very little useful work is done. If everyone were to start streaming high-bit-rate video without using any congestion control, there would be so much packet overflow at routers that very few UDP packets would successfully traverse the source-to-destination path.\nMoreover, the high loss rates induced by the uncontrolled UDP senders would cause the TCP senders (which, as we'll see, do decrease their sending rates in the face of congestion) to dramatically decrease their rates. Thus, the lack of congestion control in UDP can result in:\n- High loss rates between a UDP sender and receiver.\n- The crowding out of TCP sessions (TCP traffic is starved because UDP traffic consumes the bandwidth).\nMany researchers have proposed new mechanisms to force all sources, including UDP sources, to perform adaptive congestion control (e.g., Mahdavi 1997; Floyd 2000; Kohler 2006: RFC 4340, which is DCCP — the Datagram Congestion Control Protocol).\nAdditionally, because some organizations block UDP traffic for security reasons (see Chapter 8), TCP becomes an increasingly attractive protocol for streaming media transport, despite its congestion control.",
+          tags: ["UDP", "Congestion control", "Multimedia", "TCP fairness"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (multimedia + congestion warning)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain whether it is possible for an application to have reliable data transfer when using UDP, and how this is achieved.",
+          translation:
+            "اشرح هل ممكن التطبيق يكون عنده reliable data transfer لما بيستخدم UDP، وإزاي بيتحقق ده.",
+          answer:
+            "Yes, it is possible for an application to have reliable data transfer when using UDP. This can be done if reliability is built into the application itself (for example, by adding acknowledgment and retransmission mechanisms such as those studied in the next section).\nThe QUIC protocol implements reliability in an application-layer protocol on top of UDP — QUIC is built directly on UDP and provides its own acknowledgment, retransmission, and congestion-control mechanisms at the application layer.\nHowever, this is a nontrivial task that would keep an application developer busy debugging for a long time. Building reliability on top of UDP means re-implementing many of the same mechanisms that TCP already provides (sequence numbers, acknowledgments, timers, retransmission strategies, congestion control). Developers generally only do this when they need features TCP cannot provide (such as QUIC's faster connection establishment, multiplexing of multiple streams without head-of-line blocking, and built-in encryption).",
+          tags: [
+            "UDP",
+            "Reliable data transfer",
+            "QUIC",
+            "Application-level reliability",
+          ],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (reliability over UDP)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "1. Suppose Host A (with UDP port 19157) wants to send application data to Host B (with UDP port 46428). Walk through exactly what happens at the transport layer on both the sending and receiving sides.",
+          translation:
+            "(مسألة تطبيقية) لنفترض إن Host A (UDP port 19157) عايز يبعت data لـ Host B (UDP port 46428). اتمم إيه اللي بيحصل في طبقة النقل على الاتنين الإرسال والاستقبال.",
+          answer:
+            "Sending side (Host A):\n1. The application process at Host A (which has UDP port 19157) passes the chunk of application data down to UDP.\n2. The transport layer in Host A creates a transport-layer segment that includes:\n   - The application data.\n   - The source port number: 19157.\n   - The destination port number: 46428.\n   - Two other small fields (length and checksum — discussed later).\n3. The transport layer passes the resulting segment to the network layer.\n4. The network layer encapsulates the segment in an IP datagram (with source IP = A's IP and destination IP = B's IP) and makes a best-effort attempt to deliver the segment to the receiving host.\n\nReceiving side (Host B):\n1. If the segment arrives at Host B, the transport layer at the receiving host examines the destination port number in the segment (46428).\n2. The transport layer delivers the segment to the socket identified by port 46428.\n3. The segment's data then passes through that socket into the attached process.\n\nNote that Host B could be running multiple processes, each with its own UDP socket and associated port number. As UDP segments arrive from the network, Host B directs (demultiplexes) each segment to the appropriate socket by examining the segment's destination port number.\n\nReturn path: When Host B wants to send a segment back to Host A, the destination port in the B-to-A segment will take its value from the source port value of the A-to-B segment (i.e., 19157) — so the source port in A's segment serves as part of a 'return address'.",
+          tags: [
+            "UDP",
+            "Multiplexing",
+            "Demultiplexing",
+            "Example",
+            "Calculation reasoning",
+          ],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.2 (Connectionless Mux/Demux example)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. (Calculation) A UDP segment has 1000 bytes of application data. Calculate the total segment size (header + data) and the percentage overhead.",
+          translation:
+            "(مسألة) UDP segment فيه 1000 bytes من application data. احسب إجمالي حجم الـ segment (header + data) ونسبة الـ overhead.",
+          answer:
+            "Given:\n- Application data size = 1000 bytes.\n- UDP header size = 8 bytes (4 fields × 2 bytes each: source port, destination port, length, checksum).\n\nStep 1 — Total segment size = header size + data size = 8 + 1000 = 1008 bytes.\n\nStep 2 — Overhead percentage = (header size / total segment size) × 100\n        = (8 / 1008) × 100\n        ≈ 0.79%.\n\nAnswer:\n- Total segment size = 1008 bytes.\n- Overhead percentage ≈ 0.79% (very small).\n\nComparison with TCP: TCP header overhead is 20 bytes per segment, so for the same 1000 bytes of application data the total TCP segment would be 1020 bytes and the overhead would be (20 / 1020) × 100 ≈ 1.96%. UDP has roughly 2.5× less overhead than TCP for this payload size — this is one of the reasons UDP is preferred for small-payload applications like DNS.",
+          tags: ["Calculation", "UDP", "Header overhead", "Segment size"],
+          ref: "Lecture 8 (Ch 3, Lec 2) — Section 3.3 (small header overhead) + 3.3.1 (header structure)",
+          likely: "high",
+        },
+      ],
+    },
   ],
   chapters: [
     {
@@ -7914,7 +9583,7 @@ subjects.push({
       icon: "📝", // اختياري
       notesOpen: true, // الملاحظات: true = مفتوحة | false = مقلّصة (والطالب يقدر يفتحها ويقفلها)
       notes: [
-        "الميد من الفصل الأول والتاني والتالت (كل المحاضرات)",
+        "",
         "ركّز على: طبقات الشبكة ووحدات البيانات، TCP/UDP، DNS، HTTP، الـ Delays، Circuit vs Packet Switching",
         "أسئلة مقالية متوقعة: طبقات OSI، Encapsulation، Client-Server vs P2P، TCP vs UDP، DNS Hierarchy",
         "ركّز على أسئلة الـ Sockets وعددها في سيرفر TCP مع عدد clients",
@@ -7934,442 +9603,30 @@ subjects.push({
 
   midtermsCategories: [
     {
-      category: "Dr. Ebram Kamal",
-      icon: "👨‍🏫",
-      description: "Computer Networks midterms by Dr. Ebram Kamal",
+      category: "Dr. Ebram Kamal - Midterms",
+      icon: "📚",
+      description: "Computer Networks midterm exams extracted from PDF files",
       items: [
         {
-          t: "MidTerm 2023 — Dr. Ebram",
-          d: "Questions & answers — IT351, 2023",
+          t: "MidTerm 2023 — Dr. Ebram (PDF)",
+          d: "Midterm exam — 18/11/2023, IT351, Assiut University",
           pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2023/MidTerm 2023 - Questions - Networks-Answers.pdf",
           questions: [
             {
               q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
               options: ["15", "None of the options", "13", "12", "14"],
               correct: 4,
-              translation:
-                "كم عدد الـ Sockets في سيرفر TCP بيتواصل مع 13 عميل في نفس الوقت؟",
+              translation: "كم عدد الـ Sockets في سيرفر TCP يتواصل مع 13 عميل؟",
               explanation:
-                "14 — واحد للاستقبال (welcoming socket) + 13 واحد لكل عميل.",
+                "14 — واحد للاستقبال (welcoming socket) + 13 للعملاء.",
             },
             {
-              q: "Which statement is true about TCP and not true about UDP?",
-              options: [
-                "Provides timing service.",
-                "Provides reliable transport service.",
-                "Provides security service.",
-                "Provides minimum throughput guarantee service.",
-              ],
-              correct: 1,
-              translation: "أي عبارة صحيحة عن TCP وليست صحيحة عن UDP؟",
-              explanation:
-                "يوفر خدمة نقل موثوقة (Reliable Transport) — TCP يضمن الوصول، UDP لا.",
-            },
-            {
-              q: "Top-level domain (TLD) servers are organization's own DNS server(s), providing authoritative hostname-to-IP mappings for organization's named hosts.",
-              options: ["No", "Yes"],
-              correct: 0,
-              translation:
-                "سيرفرات النطاق الأعلى (TLD) هي سيرفرات DNS الخاصة بالمنظمة.",
-              explanation:
-                "لا — TLD سيرفرات مسؤولة عن النطاقات (com, org)، مش عن المنظمات الفردية.",
-            },
-            {
-              q: "Which layer doesn't appear in the Internet Protocol Stack?",
-              options: [
-                "Physical layer",
-                "Session layer",
-                "Application layer",
-                "None of the options",
-              ],
-              correct: 1,
-              translation: "أي طبقة لا تظهر في حزمة بروتوكولات الإنترنت؟",
-              explanation:
-                "طبقة الجلسة (Session) — غير موجودة في Internet Stack (5 طبقات فقط).",
-            },
-            {
-              q: "Which statement is true about circuit switching?",
-              options: [
-                "The path between a source and a destination is not fixed",
-                "Packet transmission can use the full link bandwidth",
-                "None of the options",
-                "Resources are pre-allocated regardless of demand",
-                "All of the options",
-              ],
-              correct: 3,
-              translation: "أي عبارة صحيحة عن تبديل الدوائر؟",
-              explanation:
-                "الموارد تُخصص مسبقاً بغض النظر عن الطلب — ده جوهر Circuit Switching.",
-            },
-            {
-              q: "What is the queuing delay? (packets L bits, link rate R bps, n waiting packets, x bits of current packet transmitted)",
-              options: [
-                "(nL + (L - x)) / R",
-                "nL / R",
-                "n(L - x) / R",
-                "nL + (L - x) / R",
-                "(nL + (x - L)) / R",
-              ],
-              correct: 0,
-              translation: "ما هو تأخير الانتظار في الطابور؟",
-              explanation:
-                "(nL + (L-x))/R — مجموع بتات الحزم المنتظرة + الباقي من الحزمة الحالية ÷ معدل الرابط.",
-            },
-            {
-              q: "In Go-back-N protocol, what are the sizes of the sender and receiver buffers required for a window size of N?",
-              options: ["N; N", "N; 1", "1; 1", "N - 1; N - 1", "N - 1; 1"],
-              correct: 1,
-              translation:
-                "في بروتوكول Go-back-N، ما أحجام مخازن المرسل والمستقبل لحجم نافذة N؟",
-              explanation:
-                "N; 1 — المرسل يحتاج N، المستقبل يحتاج 1 فقط لأن GBN يرفض خارج الترتيب.",
-            },
-            {
-              q: "Which statement about DNS is TRUE?",
-              options: [
-                "None of the options",
-                "Every Web server must have a canonical name.",
-                "Local DNS server sometimes may provide out-of-date hostname-to-IP-address mapping.",
-                "DNS server listens to TCP port 53.",
-                "TLD servers store all the hostname to IP mappings of the Internet.",
-              ],
-              correct: 2,
-              translation: "أي عبارة عن DNS صحيحة؟",
-              explanation:
-                "سيرفر DNS المحلي قد يقدم أحياناً تعيينات قديمة — بسبب الـ Caching.",
-            },
-            {
-              q: "HTTP protocol keeps state information at the server side about past client requests.",
-              options: ["True", "False"],
-              correct: 1,
-              translation:
-                "بروتوكول HTTP يحتفظ بمعلومات الحالة في السيرفر عن طلبات العميل السابقة.",
-              explanation: "خطأ — HTTP بروتوكول عديم الحالة (Stateless).",
-            },
-            {
-              q: "In Non-persistent HTTP, the client closes the TCP connection after fetching one object (one pair of HTTP request and HTTP response).",
-              options: ["False", "True"],
-              correct: 1,
-              translation:
-                "في HTTP غير المستمر، يُغلق العميل اتصال TCP بعد جلب كائن واحد.",
-              explanation: "صح — اتصال TCP جديد لكل كائن.",
-            },
-            {
-              q: "In circuit switching, a circuit segment is idle if not used by a call.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "في تبديل الدوائر، قطاع الدائرة يكون خاملاً إذا لم يُستخدم في مكالمة.",
-              explanation: "صح — الموارد محجوزة حتى لو مش مستخدمة = هدر.",
-            },
-            {
-              q: "Which statement is true about packet switching?",
-              options: [
-                "In packet switching, dedicated allocation is done between nodes.",
-                "In packet switching, time is divided into 'slots' between the nodes.",
-                "In packet switching, bandwidth is divided into 'pieces' between the nodes.",
-                "In packet switching, resources are reserved for nodes.",
-                "None of the options.",
-              ],
-              correct: 4,
-              translation: "أي عبارة صحيحة عن تبديل الحزم؟",
-              explanation:
-                "لا شيء — كل الاختيارات الأخرى تصف Circuit Switching.",
-            },
-          ],
-        },
-        {
-          t: "MidTerm 2024 — Dr. Ebram",
-          d: "Midterm questions — 2024",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks.pdf",
-          questions: [
-            {
-              q: "Which statement is true about Client-Server Architecture?",
-              options: [
-                "In Client-Server Architecture, the server waits for incoming requests while the client initiates contact with server.",
-                "In Client-Server Architecture, the client waits for incoming requests while the server initiates contact with server.",
-                "In Client-Server Architecture, the server typically requests service from the client while the client provides requested service to server.",
-                "All of the options.",
-              ],
-              correct: 0,
-              translation: "أي عبارة صحيحة عن معمارية العميل-السيرفر؟",
-              explanation:
-                "السيرفر ينتظر الطلبات والعميل يبدأ التواصل — التعريف الأساسي.",
-            },
-            {
-              q: "Which layer doesn't appear in the Internet Protocol Stack?",
-              options: [
-                "Application layer",
-                "Network layer",
-                "Transport layer",
-                "Session layer",
-              ],
-              correct: 3,
-              translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation: "طبقة الجلسة (Session).",
-            },
-            {
-              q: "In circuit switching, a circuit segment is idle if not used by a call.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "في تبديل الدوائر، قطاع الدائرة يكون خاملاً إذا لم يُستخدم.",
-              explanation: "صح — موارد محجوزة حتى لو خاملة.",
-            },
-            {
-              q: "Which statement about DNS is TRUE?",
-              options: [
-                "TLD servers store all the hostname-to-IP mappings of the Internet.",
-                "Every Web server must have a canonical name.",
-                "Local DNS server sometimes may provide out-of-date hostname-to-IP-address mapping.",
-                "DNS server listens to TCP port 53.",
-              ],
-              correct: 2,
-              translation: "أي عبارة عن DNS صحيحة؟",
-              explanation:
-                "سيرفر DNS المحلي قد يقدم بيانات قديمة بسبب الـ Caching.",
-            },
-            {
-              q: "In Go-back-N protocol, what are the sizes of the sender and receiver buffers required for a window size of N?",
-              options: ["1; 1", "N - 1; 1", "N - 1; N - 1", "N; 1"],
-              correct: 3,
-              translation: "في Go-back-N، أحجام المخازن لحجم نافذة N؟",
-              explanation: "N; 1 — المرسل N والمستقبل 1.",
-            },
-            {
-              q: "Using Conditional GET in HTTP Protocol, the number of RTT is reduced if the object is not modified since the date of the cached copy!",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "باستخدام Conditional GET في HTTP، عدد RTT يقل لو الكائن لم يتغير.",
-              explanation: "صح — يوفر نقل الكائن كامل إذا لم يتغير.",
-            },
-            {
-              q: "End-to-end delay is the time taken for a packet to travel from source to destination. It consists of which of the following delays?",
-              options: [
-                "Transmission delay.",
-                "Propagation delay.",
-                "Queuing and Processing delays.",
-                "All of the options",
-              ],
-              correct: 3,
-              translation: "تأخير النهاية-للنهاية يتكون من أي تأخيرات؟",
-              explanation:
-                "كل التأخيرات الأربعة: Transmission + Propagation + Queuing + Processing.",
-            },
-            {
-              q: "Which statement is true?",
-              options: [
-                "Both the Internet and traditional telephone networks use packet-switching.",
-                "Performance metrics such as end-to-end delay and throughput can be guaranteed in the Internet, if TCP is chosen as the transport layer protocol.",
-                "The Internet uses packet switching and traditional telephone networks use circuit switching.",
-                "In the Internet, packets from the same source always take the same path to reach destination.",
-              ],
-              correct: 2,
-              translation: "أي عبارة صحيحة؟",
-              explanation:
-                "الإنترنت يستخدم packet switching، والهاتف التقليدي يستخدم circuit switching.",
-            },
-            {
-              q: "HTTP protocol keeps state information at the server side about past client requests.",
-              options: ["True", "False"],
-              correct: 1,
-              translation:
-                "HTTP يحتفظ بمعلومات الحالة في السيرفر عن الطلبات السابقة.",
-              explanation: "خطأ — HTTP stateless.",
-            },
-            {
-              q: "Which statement is true about TCP and not true about UDP?",
-              options: [
-                "Provides timing service.",
-                "Provides minimum throughput guarantee service.",
-                "Provides security service.",
-                "Provides reliable transport service.",
-              ],
-              correct: 3,
-              translation: "أي عبارة صحيحة عن TCP وليست عن UDP؟",
-              explanation: "يوفر نقل موثوق (Reliable transport).",
-            },
-            {
-              q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
-              options: ["13", "14", "15", "12"],
-              correct: 1,
-              translation: "كم socket في سيرفر TCP يتواصل مع 13 عميل؟",
-              explanation: "14 — 13 + 1 للاستقبال.",
-            },
-          ],
-        },
-        {
-          t: "MidTerm 2024 — Dr. Ebram (Version 2)",
-          d: "Midterm questions — 2024, second set",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks(2).pdf",
-          questions: [
-            {
-              q: "In BitTorrent, Alice requests small-size chunks first from her neighbors.",
-              options: ["True", "False"],
-              correct: 1,
-              translation:
-                "في BitTorrent، أليس تطلب القطع الصغيرة أولاً من جيرانها.",
-              explanation: "خطأ — تطلب الأندر (rarest first) أولاً.",
-            },
-            {
-              q: "Which services can be guaranteed and cannot be guaranteed by TCP when it uses flow control and congestion control?",
-              options: [
-                "TCP only guarantees reliability but does not guarantee security, timing, or throughput.",
-                "TCP guarantees security and timing.",
-                "TCP guarantees throughput and delay.",
-                "TCP guarantees all services.",
-              ],
-              correct: 0,
-              translation: "أي الخدمات يضمنها TCP ولا يضمنها؟",
-              explanation:
-                "TCP يضمن الموثوقية فقط — لا يضمن الأمان ولا التوقيت ولا معدل النقل.",
-            },
-            {
-              q: "Why is a Web cache considered both a server and a client at the same time?",
-              options: [
-                "It sends requested messages to clients (acts as server) and requests pages from the main server to cache them (acts as client).",
-                "It only acts as a server.",
-                "It only acts as a client.",
-                "It acts as a router.",
-              ],
-              correct: 0,
-              translation:
-                "لماذا يُعتبر Web Cache سيرفراً وعميلاً في نفس الوقت؟",
-              explanation:
-                "يرسل للعملاء (كـ سيرفر) ويطلب من السيرفر الأصلي (كـ عميل).",
-            },
-            {
-              q: "Why do Mail servers use SMTP handshaking in application layer although there is a TCP handshaking in the transport layer?",
-              options: [
-                "To check if the sender is not blocked and to check if the receiver mail is in the mail server.",
-                "To encrypt the email.",
-                "To compress the email.",
-                "To route the email.",
-              ],
-              correct: 0,
-              translation:
-                "لماذا تستخدم سيرفرات البريد SMTP handshaking رغم وجود TCP handshaking؟",
-              explanation:
-                "للتحقق من أن المرسل غير محظور وأن بريد المستقبل موجود.",
-            },
-            {
-              q: "Dial-up and DSL are both dedicated access technology, where HFC and FTTH(PON) are completely shared along the path.",
-              options: ["True", "False"],
-              correct: 1,
-              translation:
-                "Dial-up و DSL كلاهما مخصص، و HFC و FTTH مشتركة بالكامل.",
-              explanation:
-                "خطأ — DSL مخصص لكن FTTH مش مشترك بالكامل، HFC مشترك جزئياً.",
-            },
-            {
-              q: "Assume that a file of size F is to be distributed to N clients in client-server architecture. If the upload rate of the server's access link is us, then the time to distribute the file to N clients is equal to NF / us.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "بافتراض توزيع ملف حجمه F على N عميل في client-server. زمن التوزيع = NF/us.",
-              explanation: "صح — السيرفر لازم يرسل الملف N مرة بمعدل us.",
-            },
-          ],
-        },
-        {
-          t: "BIS 2025 — Dr. Ebram",
-          d: "Fill in blanks + problems — 2025",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2025/BIS 2025 - Dr. Ebram - Computer Networks.pdf",
-          questions: [
-            {
-              q: "In a host sending data to the network, UDP receives data from the Transport layer and sends data to the Network layer.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "في مضيف يرسل بيانات، UDP يستقبل من طبقة النقل ويرسل لطبقة الشبكة.",
-              explanation: "صح — UDP بروتوكول نقل (Transport layer).",
-            },
-            {
-              q: "HTTP is an Application layer protocol that typically runs on top of TCP.",
-              options: ["True", "False"],
-              correct: 0,
-              translation: "HTTP بروتوكول طبقة تطبيق يعمل فوق TCP.",
-              explanation: "صح — HTTP يستخدم TCP افتراضياً (منفذ 80).",
-            },
-            {
-              q: "UDP is a connectionless de-multiplexing while TCP is a connection-oriented de-multiplexing to dispatch incoming packets to different processes in the same host.",
-              options: ["True", "False"],
-              correct: 0,
-              translation: "UDP هو de-multiplexing بدون اتصال، TCP مع اتصال.",
-              explanation: "صح — UDP يستخدم 2-tuple، TCP يستخدم 4-tuple.",
-            },
-            {
-              q: "In client/server paradigm, the server must always be alive and offers service while the client requests for service from the server.",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "في client/server، السيرفر يجب أن يكون حياً دائمًا ويقدم الخدمة.",
-              explanation: "صح — السيرفر always-on.",
-            },
-            {
-              q: "DNS provides hostname to IP address mapping and typically listens to port 53.",
-              options: ["True", "False"],
-              correct: 0,
-              translation: "DNS يوفر تعيين اسم المضيف إلى IP ويستمع للمنفذ 53.",
-              explanation: "صح — المنفذ 53 قياسي لـ DNS.",
-            },
-            {
-              q: "The transport layer of the Internet protocol stack is responsible for delivering data from sending process to receiving process while the Application layer is responsible for delivering data from sending host to receiving host.",
-              options: ["True", "False"],
-              correct: 1,
-              translation:
-                "طبقة النقل مسؤولة عن التسليم من عملية لعملية، وطبقة التطبيق من مضيف لمضيف.",
-              explanation:
-                "خطأ — التسليم من مضيف لمضيف هي مسؤولية طبقة الشبكة (Network layer).",
-            },
-            {
-              q: "Host A sends 5 data packets to host B using TCP protocol. Each data packet contains 10 bytes of application data. Suppose 5 data packets arrive in order and all are accepted by B. The last ACK packet sent by B has ACK number 99. What is the sequence number of the first data packet sent by A?",
-              options: ["49", "50", "59", "99"],
-              correct: 0,
-              translation: "ما هو الرقم التسلسلي لأول حزمة بيانات أرسلها A؟",
-              explanation:
-                "49 — آخر ACK هو 99، بإجمالي 50 بايت بيانات (5 حزم * 10 بايت)، يعني أول بايت كان 49.",
-            },
-            {
-              q: "Two hosts A and B are 2000 km apart and are connected by a direct link of 200 kbps. Propagation speed on the link is 2.5 * 10^8 m/s. A is sending 10 packets to B continuously. Each packet is 100 bytes in size. Suppose the channel is error-free, how long (in seconds) does it take for B to receive all the packets?",
-              options: ["0.084", "0.048", "0.008", "0.04"],
-              correct: 1,
-              translation:
-                "كم من الوقت (بالثواني) يستغرقه B لاستلام جميع الحزم؟",
-              explanation:
-                "0.048 ثانية. (وقت الإرسال = 10 * 100 * 8 / 200,000 = 0.04s، وقت الانتشار = 2,000,000 / 2.5*10^8 = 0.008s، الإجمالي = 0.048s).",
-            },
-            {
-              q: "A UDP server needs only one socket to communicate with n different clients simultaneously. How many sockets would a TCP server have ever created for the same situation?",
-              options: ["n", "n + 1", "2n", "1"],
-              correct: 1,
-              translation:
-                "كم عدد السوكيتات التي سينشئها سيرفر TCP للتواصل مع n عميل؟",
-              explanation: "n + 1 — واحد للاستقبال و n للعملاء.",
-            },
-          ],
-        },
-        {
-          t: "Mid 2023 Bio — Dr. Ebram",
-          d: "Midterm 2023 — Bio",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2023/Mid 2023 Bio.pdf",
-          questions: [
-            {
-              q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
-              options: ["15", "None of the options", "13", "12", "14"],
-              correct: 4,
-              translation:
-                "كم عدد الـ Sockets في سيرفر TCP بيتواصل مع 13 عميل؟",
-              explanation: "14 — واحد للاستقبال + 13 للعملاء.",
-            },
-            {
-              q: "A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. What is the throughput (in bps) of transmission?",
+              q: "A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. Suppose ACK packets are of negligible size and transmission channel is perfectly reliable. What is the throughput (in bps) of transmission?",
               options: ["100", "500", "400", "None of the options", "200"],
               correct: 1,
               translation: "ما هو معدل النقل (Throughput)؟",
               explanation:
-                "500 — (100 * 2000) / (100 * (1 + 3000) * 10^-3) ≈ 500 bps.",
+                "500 bps — (100 * 2000) / (100 * (1 + 3000) * 10^-3) ≈ 500 bps.",
             },
             {
               q: "Which of the following statements is true about TCP and not true about UDP?",
@@ -8381,7 +9638,8 @@ subjects.push({
               ],
               correct: 1,
               translation: "أي عبارة صحيحة عن TCP وليست صحيحة عن UDP؟",
-              explanation: "يوفر خدمة نقل موثوقة (Reliable transport service).",
+              explanation:
+                "Provides reliable transport service — TCP يوفر نقل موثوق، UDP لا.",
             },
             {
               q: "Top-level domain (TLD) servers are organization's own DNS server(s), providing authoritative hostname to IP mappings for organization's named hosts.",
@@ -8390,7 +9648,7 @@ subjects.push({
               translation:
                 "سيرفرات النطاق الأعلى (TLD) هي سيرفرات DNS الخاصة بالمنظمة.",
               explanation:
-                "لا — TLD سيرفرات مسؤولة عن النطاقات (com, org)، مش عن المنظمات.",
+                "No — TLD مسؤولة عن النطاقات (com, org)، مش عن المنظمات الفردية.",
             },
             {
               q: "Which of the following layers doesn't appear in the Internet Protocol Stack?",
@@ -8404,10 +9662,11 @@ subjects.push({
               ],
               correct: 1,
               translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation: "طبقة الجلسة (Session).",
+              explanation:
+                "Session layer — غير موجودة في Internet Stack (5 طبقات فقط).",
             },
             {
-              q: "Consider the following pseudo-code for rdt 3.0 receiver. Which of the following statements is TRUE?",
+              q: "Consider the following pseudo-code for rdt 3.0 receiver. Here, seq is the expected sequence number (either 0 or 1) by the receiver. We say that the receiver waits forever, if it is blocked at the while loop, waiting to receive a packet that will never arrive. We say that the sender loops forever, if it repeatedly retransmits the same packet over and over again. Which of the following statements is TRUE?",
               options: [
                 "A single loss ACK packet is sufficient to cause the sender to loop forever.",
                 "A single corrupted data packet is sufficient to cause the sender to loop forever.",
@@ -8417,7 +9676,7 @@ subjects.push({
               correct: 2,
               translation: "في rdt 3.0، أي عبارة صحيحة؟",
               explanation:
-                "حزمة بيانات تالفة واحدة كافية لجعل المستقبل ينتظر للأبد (لأنه سيرسل NAK أو يتجاهل، لكن المرسل لن يعيد الإرسال إذا لم ينتهي الـ timeout).",
+                "حزمة بيانات تالفة واحدة كافية لجعل المستقبل ينتظر للأبد.",
             },
             {
               q: "Which of the following statements is true about circuit switching?",
@@ -8430,28 +9689,29 @@ subjects.push({
               ],
               correct: 3,
               translation: "أي عبارة صحيحة عن circuit switching؟",
-              explanation: "الموارد تُخصص مسبقاً بغض النظر عن الطلب.",
+              explanation: "Resources are pre-allocated regardless of demand.",
             },
             {
-              q: "A packet switch receives a packet and determines the outbound link to which the packet should be forwarded. When the packet arrives, x bits of the currently-being-transmitted packet have been transmitted on this outbound link and n other packets are waiting to be transmitted. What is the queuing delay?",
+              q: "A packet switch receives a packet and determines the outbound link to which the packet should be forwarded. When the packet arrives, x bits of the currently-being-transmitted packet have been transmitted on this outbound link and n other packets are waiting to be transmitted. Packets are transmitted continuously in order of arrival. Suppose all packets are L bits and the link rate is R bps. What is the queuing delay?",
               options: [
-                "(nL + (L - x)) / R",
-                "nL / R",
-                "n(L - x) / R",
-                "nL + (L - x) / R",
-                "(nL + (x - L)) / R",
+                "(nL + (L-x))/R",
+                "nL/R",
+                "n(L-x)/R",
+                "nL +(L-x)/R",
+                "(nL + (x-L))/R",
               ],
               correct: 0,
               translation: "ما هو تأخير الانتظار (Queuing Delay)؟",
-              explanation: "(nL + (L - x)) / R.",
+              explanation:
+                "(nL + (L-x))/R — مجموع بتات الحزم المنتظرة + الباقي من الحزمة الحالية ÷ معدل الرابط.",
             },
             {
               q: "In Go-back-N protocol, what are the size of the respective sender and receiver buffers required for a window size of N?",
-              options: ["N; N", "N; 1", "1; 1", "N - 1; N - 1", "N - 1; 1"],
+              options: ["N; N", "N;1", "1,1", "N-1,N-1", "N-1;1"],
               correct: 1,
               translation:
                 "في Go-back-N، ما أحجام مخازن المرسل والمستقبل لحجم نافذة N؟",
-              explanation: "N; 1.",
+              explanation: "N; 1 — المرسل N والمستقبل 1.",
             },
             {
               q: "Which of the following statements about DNS is TRUE?",
@@ -8465,7 +9725,7 @@ subjects.push({
               correct: 2,
               translation: "أي عبارة عن DNS صحيحة؟",
               explanation:
-                "سيرفر DNS المحلي قد يقدم بيانات قديمة بسبب الـ Caching.",
+                "Local DNS server may provide out-of-date mapping — بسبب Caching.",
             },
             {
               q: "A Web server stores a webpage that comprises a base HTML file and 2 images referenced by the base HTML file. The HTML file is 100 bytes and each image is 200 bytes. A client is connected to the Web server through a direct link of 1 Mbps. Propagation delay between the Web server and the client is 50 milliseconds. The client downloads the webpage using persistent HTTP but without pipelining. Hong long (in milliseconds) does it take?",
@@ -8473,14 +9733,14 @@ subjects.push({
               correct: 3,
               translation: "كم يستغرق تحميل الصفحة؟",
               explanation:
-                "404 مللي ثانية. (3 RTTs لطلبات HTTP + 3 RTTs لنقل البيانات = 6 * 50 = 300 + 3 * 0.0024 ≈ 404).",
+                "404 ms — 6 RTTs (50ms) = 300 + transmission time ≈ 404ms.",
             },
             {
               q: "HTTP protocol keeps state information at the server side about past client requests.",
               options: ["True", "False"],
               correct: 1,
               translation: "HTTP يحتفظ بمعلومات الحالة في السيرفر؟",
-              explanation: "خطأ — HTTP stateless.",
+              explanation: "False — HTTP stateless.",
             },
             {
               q: "Which of the following statements is true about packet switching?",
@@ -8494,15 +9754,15 @@ subjects.push({
               correct: 4,
               translation: "أي عبارة صحيحة عن packet switching؟",
               explanation:
-                "لا شيء — كل الاختيارات الأخرى تصف Circuit Switching.",
+                "None of the options — كل الخيارات الأخرى تصف Circuit Switching.",
             },
             {
-              q: "In Non-persistent HTTP, the client closes the TCP connection after fetching one object (one pair of HTTP request and HTTP response).",
+              q: "In Non-persistent HTTP, the client closes the TCP connection after fetching one object (one pair of HTTP request and HTTP response)",
               options: ["False", "True"],
               correct: 1,
               translation:
-                "في HTTP غير المستمر، يُغلق العميل اتصال TCP بعد جلب كائن واحد.",
-              explanation: "صح.",
+                "في Non-persistent HTTP، العميل يغلق اتصال TCP بعد جلب كائن واحد.",
+              explanation: "True — اتصال TCP جديد لكل كائن.",
             },
             {
               q: "Can HTTP response message contains an empty body? If yes, When can this happen?",
@@ -8514,16 +9774,16 @@ subjects.push({
               ],
               correct: 3,
               translation:
-                "هل يمكن أن تحتوي رسالة استجابة HTTP على جسم فارغ؟ ومتى يحدث ذلك؟",
-              explanation:
-                "نعم، إذا تم نقل الكائن المطلوب إلى موقع جديد (استجابة 301/302).",
+                "هل يمكن أن تحتوي رسالة HTTP response على جسم فارغ؟ ومتى؟",
+              explanation: "Yes, if moved to a new location (status 301/302).",
             },
             {
               q: "In circuit switching, circuit segment is idle if not used by call.",
               options: ["True", "False"],
               correct: 0,
-              translation: "قطاع الدائرة خامل لو لم يُستخدم.",
-              explanation: "صح.",
+              translation:
+                "في circuit switching، قطاع الدائرة خامل لو لم يُستخدم.",
+              explanation: "True — الموارد محجوزة حتى لو خاملة.",
             },
             {
               q: "A browser requests to download index.html from a Web server. The HTTP response header received by the browser is shown below. Which of the following statements is TRUE? (Header includes: Set-Cookie: PHPSESSID=..., Content-Length: 1256)",
@@ -8537,7 +9797,7 @@ subjects.push({
               correct: 4,
               translation: "بناءً على الهيدر، أي عبارة صحيحة؟",
               explanation:
-                "وجود Set-Cookie يعني أن السيرفر يستخدم الكوكيز للحفاظ على حالة العميل.",
+                "Set-Cookie يعني السيرفر يستخدم الكوكيز للحفاظ على حالة العميل.",
             },
             {
               q: "Assume a sender and a receiver connected via one packet-switch. The sender sends a message of size 24 KBytes using packets of length 1000 Bytes. The bit rates are 2 kbps and 5 kbps for the first and the second link, respectively. Using store and forward, what is the end-to-end delay (in seconds)? You may ignore the propagation delay!",
@@ -8552,7 +9812,7 @@ subjects.push({
               translation:
                 "ما هو تأخير النهاية إلى النهاية (بالثواني) باستخدام store and forward؟",
               explanation:
-                "134.4 — وقت الإرسال للرابط الأول = 24,000 * 8 / 2000 = 96s، والثاني = 24,000 * 8 / 5000 = 38.4s. الإجمالي = 134.4s.",
+                "134.4s — link1: 24000*8/2000 = 96s + link2: 24000*8/5000 = 38.4s.",
             },
             {
               q: "End-to-end delay is the time taken for a packet to travel from source to destination. It consists of which of the following delays?",
@@ -8566,7 +9826,8 @@ subjects.push({
               ],
               correct: 3,
               translation: "تأخير النهاية-للنهاية يتكون من أي تأخيرات؟",
-              explanation: "كل التأخيرات الأربعة.",
+              explanation:
+                "All the options — Transmission + Propagation + Queuing + Processing.",
             },
             {
               q: "Which of the following statements is true?",
@@ -8580,10 +9841,10 @@ subjects.push({
               correct: 0,
               translation: "أي عبارة صحيحة؟",
               explanation:
-                "الإنترنت يستخدم packet switching، والهاتف التقليدي يستخدم circuit switching.",
+                "Internet = packet switching، الهاتف = circuit switching.",
             },
             {
-              q: "Which of the following HTTP protocols does the given figure represent to fetch a web page with 2 reference objects? (Figure shows persistent connections)",
+              q: "Which of the following HTTP protocols does the given figure represent to fetch a web page with 2 reference objects?",
               options: [
                 "Persistent HTTP with pipelining.",
                 "Non-persistent HTTP.",
@@ -8591,8 +9852,9 @@ subjects.push({
                 "Non-persistent HTTP with parallel connection.",
               ],
               correct: 0,
-              translation: "أي بروتوكول HTTP يمثله الشكل التالي؟",
-              explanation: "Persistent HTTP with pipelining.",
+              translation: "أي بروتوكول HTTP يمثله المخطط؟",
+              explanation:
+                "Persistent HTTP with pipelining — بناءً على المخطط.",
             },
             {
               q: "Which of the following statements about socket programming with TCP is true?",
@@ -8605,7 +9867,7 @@ subjects.push({
               correct: 2,
               translation: "أي عبارة صحيحة عن برمجة السوكيت باستخدام TCP؟",
               explanation:
-                "السيرفر يستخرج عنوان IP الخاص بالمرسل ورقم المنفذ من الحزمة المستلمة.",
+                "Server extracts sender IP address and port number from received packet.",
             },
             {
               q: "Which of the following statements is true about Client-Server Architecture?",
@@ -8621,13 +9883,11 @@ subjects.push({
               explanation: "السيرفر ينتظر والعميل يبدأ التواصل.",
             },
             {
-              q: "A Selective Repeat sender just receives an ACK packet with ACK number 7. This ACK number falls within sender window which has the window size 3. Every data packet embeds a k-bit sequence number field. Which of the following definitely CANNOT be the sequence number of the next packet transmitted by the sender?",
+              q: "A Selective Repeat sender just receives an ACK packet with ACK number 7. This ACK number falls within sender window which has the window size 3. Every data packet embeds a k-bit sequence number field (k is an constant unknown to you). Which of the following definitely CANNOT be the sequence number of the next packet transmitted by the sender?",
               options: ["3", "0", "10", "2", "6"],
               correct: 4,
-              translation:
-                "أي من الأرقام التالية لا يمكن أن يكون الرقم التسلسلي للحزمة التالية التي يرسلها المرسل؟",
-              explanation:
-                "6 — بناءً على آلية Selective Repeat ونافذة الإرسال، الرقم 6 لا يمكن أن يكون التالي.",
+              translation: "أي رقم لا يمكن أن يكون seq للحزمة التالية؟",
+              explanation: "6 — لا يمكن أن يكون seq للحزمة التالية.",
             },
             {
               q: "Using Conditional GET in HTTP Protocol, the number of RTT is reduced if the object is not modified since the date of the cached copy!",
@@ -8635,10 +9895,10 @@ subjects.push({
               correct: 1,
               translation:
                 "باستخدام Conditional GET، عدد RTT يقل لو الكائن لم يتغير.",
-              explanation: "صح.",
+              explanation: "True — يوفر نقل الكائن كامل.",
             },
             {
-              q: "Consider the transmission between a UDP sender and a UDP receiver. Which of the following will never happen?",
+              q: "Consider the transmission between a UDP sender and a UDP receiver. Which of the following will never happen? You may assume that the application riding on UDP doesn't implement any reliability mechanisms.",
               options: [
                 "UDP receiver receives duplicate packets from UDP sender.",
                 "None of the above",
@@ -8649,7 +9909,7 @@ subjects.push({
               correct: 4,
               translation: "أي مما يلي لن يحدث أبداً في نقل UDP؟",
               explanation:
-                "يمكن أن يحدث إذا كان الـ checksum معطلاً أو لا يغطي البيانات.",
+                "UDP receiver receives corrupted packets but fails to detect — إذا كان checksum مفعل، يكتشف الأخطاء.",
             },
             {
               q: "What is the checksum (1's complement of the sum) of the following 3 bytes? 11110100, 10010011, 10011001",
@@ -8670,10 +9930,10 @@ subjects.push({
               correct: 3,
               translation:
                 "أي مما يلي موجود في كل من HTTP request line و status line؟",
-              explanation: "رقم إصدار HTTP (HTTP version number).",
+              explanation: "HTTP version number — موجود في كلا السطرين.",
             },
             {
-              q: "Consider the following Python code snippet: s1.bind(('', 8080)) ; s2, addr = s1.accept(). Suppose no exception is raised, which of the following statements is TRUE?",
+              q: "Consider the following Python code snippet: s1.bind(('', 8080)) ; s2, addr = s1.accept(). Suppose no exception is raised when the above code snippet is executed, which of the following statements is TRUE?",
               options: [
                 "s2 listens to a random port number assigned by operation system",
                 "s1 is a UDP socket",
@@ -8684,15 +9944,15 @@ subjects.push({
               correct: 4,
               translation: "بناءً على الكود، أي عبارة صحيحة؟",
               explanation:
-                "s2 يستمع إلى المنفذ 8080 (المنفذ الذي تم ربطه بـ s1).",
+                "s2 listens to port 8080 (نفس المنفذ المرتبط بـ s1).",
             },
             {
-              q: "Consider a sender and a receiver communicating using Selective Repeat protocol. Every packet embeds a 4-bit sequence number field. Sender window size is 4. The third data packet and the second ACK packet are lost. What is the sender window over the sequence number space at time t?",
+              q: "Consider a sender and a receiver communicating using Selective Repeat protocol. Every packet embeds a 4-bit sequence number field. Sender window size is 4. None of the packets shown in the following figure are corrupted packets. However, the third data packet and the second ACK packet are lost. What is the sender window over the sequence number space at time t?",
               options: [
-                "13, 14, 0, 1",
+                "13, 14,0, 1",
                 "12, 13, 14, 15",
-                "13, 14, 15, 0",
-                "13, 14, 20, 16",
+                "13, 14, 15,0",
+                "13, 14, 15, 16",
               ],
               correct: 0,
               translation:
@@ -8702,10 +9962,213 @@ subjects.push({
           ],
         },
         {
-          t: "Mid 2025 National — Dr. Ebram",
-          d: "Midterm 2025 National — Dr. Ebram",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2025/Mid 2025 National Dr. Ebram.pdf",
+          t: "MidTerm 2024 — Dr. Ebram (PDF)",
+          d: "Midterm exam — IT351",
+          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2024/MidTerm 2024 - Questions - Networks.pdf",
           questions: [
+            {
+              q: "Which of the following is present in both HTTP request line and status line?",
+              options: [
+                "HTTP version number",
+                "Request method",
+                "Status code",
+                "URL",
+              ],
+              correct: 0,
+              translation:
+                "أي مما يلي موجود في كل من HTTP request line و status line؟",
+              explanation: "HTTP version number.",
+            },
+            {
+              q: "Which of the following statements is true about circuit switching?",
+              options: [
+                "Resources are pre-allocated regardless of demand",
+                "Packet transmission can use the full link bandwidth",
+                "The path between a source and a destination is not fixed",
+                "All of the options",
+              ],
+              correct: 0,
+              translation: "أي عبارة صحيحة عن circuit switching؟",
+              explanation: "Resources are pre-allocated regardless of demand.",
+            },
+            {
+              q: "Which of the following statements is true about TCP and not true about UDP?",
+              options: [
+                "Provides timing service.",
+                "Provides minimum throughput guarantee service.",
+                "Provides security service.",
+                "Provides reliable transport service.",
+              ],
+              correct: 3,
+              translation: "أي عبارة صحيحة عن TCP وليست عن UDP؟",
+              explanation: "Provides reliable transport service.",
+            },
+            {
+              q: "A Web server stores a webpage that comprises a base HTML file and 2 images referenced by the base HTML file. The HTML file is 100 bytes and each image is 200 bytes. A client is connected to the Web server through a direct link of 1 Mbps. Propagation delay between the Web server and the client is 50 milliseconds. The client downloads the webpage using persistent HTTP but without pipelining. Hong long (in milliseconds) does it take for the client to download the entire webpage from the Web server?",
+              options: ["404", "604", "204", "402.4"],
+              correct: 0,
+              translation: "كم يستغرق تحميل الصفحة؟",
+              explanation: "404 ms.",
+            },
+            {
+              q: "Consider a sender and a receiver communicating using Selective Repeat protocol. Every packet embeds a 4-bit sequence number field. Sender window size is 4. None of the packets shown in the following figure are corrupted packets. However, the third data packet and the second ACK packet are lost. What is the sender window over the sequence number space at time t?",
+              options: [
+                "12, 13, 14, 15",
+                "13, 14, 0, 1",
+                "13, 14, 15, 0",
+                "13, 14, 15, 16",
+              ],
+              correct: 1,
+              translation: "ما هي نافذة المرسل في الوقت t؟",
+              explanation: "13, 14, 0, 1.",
+            },
+            {
+              q: "Which of the following statements is true?",
+              options: [
+                "Both the Internet and traditional telephone networks use packet-switching.",
+                "Performance metrics such as end-to-end delay and throughput can be guaranteed in the Internet, if TCP is chosen as the transport layer protocol.",
+                "The Internet uses packet switching and traditional telephone networks uses circuit switching.",
+                "In the Internet, packets from the same source always take the same path to reach destination.",
+              ],
+              correct: 2,
+              translation: "أي عبارة صحيحة؟",
+              explanation:
+                "Internet = packet switching، الهاتف = circuit switching.",
+            },
+            {
+              q: "Which of the following statements about DNS is TRUE?",
+              options: [
+                "TLD servers store all the hostname to IP mappings of the Internet.",
+                "Every Web server must have a canonical name.",
+                "Local DNS server sometimes may provide out-of-date hostname-to-IP-address mapping.",
+                "DNS server listens to TCP port 53.",
+              ],
+              correct: 2,
+              translation: "أي عبارة عن DNS صحيحة؟",
+              explanation: "Local DNS server may provide out-of-date mapping.",
+            },
+            {
+              q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
+              options: ["13", "14", "15", "12"],
+              correct: 1,
+              translation: "كم socket في سيرفر TCP يتواصل مع 13 عميل؟",
+              explanation: "14 — 13 + 1 للاستقبال.",
+            },
+            {
+              q: "A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. Suppose ACK packets are of negligible size and transmission channel is perfectly reliable. What is the throughput (in bps) of transmission?",
+              options: ["200", "500", "100", "400"],
+              correct: 1,
+              translation: "ما هو معدل النقل (Throughput)؟",
+              explanation: "500 bps.",
+            },
+            {
+              q: "Which of the following statements is true about packet switching?",
+              options: [
+                "In packet switching, bandwidth is divided into 'pieces' between the nodes.",
+                "In packet switching, dedicated allocation is done between nodes.",
+                "In packet switching, resources are reserved for nodes.",
+                "None of the options.",
+              ],
+              correct: 3,
+              translation: "أي عبارة صحيحة عن packet switching؟",
+              explanation:
+                "None of the options — كل الخيارات الأخرى تصف Circuit Switching.",
+            },
+            {
+              q: "Consider the following Python code snippet. Suppose no exception is raised when the above code snippet is executed, which of the following statements is TRUE? s1.bind(('', 8080)) ; s2, addr = s1.accept()",
+              options: [
+                "s1 is a UDP socket",
+                "Server uses s1 to transmit application data to client",
+                "s2 listens to port 8080",
+                "s2 listens to a random port number assigned by operation system",
+              ],
+              correct: 2,
+              translation: "بناءً على الكود، أي عبارة صحيحة؟",
+              explanation: "s2 listens to port 8080.",
+            },
+            {
+              q: "A browser requests to download index.html from a Web server. The HTTP response header received by the browser is shown below. Which of the following statements is TRUE? (Header includes Set-Cookie: PHPSESSID=..., Content-Length: 1256)",
+              options: [
+                "In the HTTP request, browser has requested for a non-persistent connection.",
+                "Suppose TCP header is 20 bytes, the length of the TCP segment containing the HTTP response is 1276 bytes.",
+                "The index.html file received by the browser may have been corrupted during transmission.",
+                "The Web server uses a cookie to keep the state information of the client.",
+              ],
+              correct: 3,
+              translation: "بناءً على الهيدر، أي عبارة صحيحة؟",
+              explanation: "Set-Cookie يعني السيرفر يستخدم الكوكيز.",
+            },
+            {
+              q: "In circuit switching, circuit segment is idle if not used by call.",
+              options: ["True", "False"],
+              correct: 0,
+              translation: "قطاع الدائرة خامل لو لم يُستخدم.",
+              explanation: "True — الموارد محجوزة حتى لو خاملة.",
+            },
+            {
+              q: "Which of the following layers doesn't appear in the Internet Protocol Stack?",
+              options: [
+                "Application layer",
+                "Network layer",
+                "Transport layer",
+                "Session layer",
+              ],
+              correct: 3,
+              translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
+              explanation: "Session layer.",
+            },
+            {
+              q: "Which of the following HTTP protocols does the given figure represent to fetch a web page with 2 reference objects?",
+              options: [
+                "Non-persistent HTTP.",
+                "Persistent HTTP.",
+                "Non-persistent HTTP with parallel connection.",
+                "Persistent HTTP with pipelining.",
+              ],
+              correct: 3,
+              translation: "أي بروتوكول HTTP يمثله المخطط؟",
+              explanation: "Persistent HTTP with pipelining.",
+            },
+            {
+              q: "Can HTTP response message contains an empty body? If yes, When can this happen?",
+              options: [
+                "No, an HTTP response message can never have an empty body.",
+                "Yes, if the requested object has been moved to a new location.",
+                "Yes, if the requested object is recently modified.",
+                "Yes, if the requested object is very small in size.",
+              ],
+              correct: 1,
+              translation:
+                "هل يمكن أن تحتوي رسالة HTTP response على جسم فارغ؟ ومتى؟",
+              explanation: "Yes, if moved to a new location (301/302).",
+            },
+            {
+              q: "A packet switch receives a packet and determines the outbound link to which the packet should be forwarded. When the packet arrives, x bits of the currently-being-transmitted packet have been transmitted on this outbound link and n other packets are waiting to be transmitted. Packets are transmitted continuously in order of arrival. Suppose all packets are L bits and the link rate is R bps. What is the queuing delay?",
+              options: [
+                "nL / R",
+                "(nL + (x - L)) / R",
+                "n(L - x) / R",
+                "(nL + (L - x)) / R",
+              ],
+              correct: 3,
+              translation: "ما هو تأخير الانتظار؟",
+              explanation: "(nL + (L - x)) / R.",
+            },
+            {
+              q: "In Go-back-N protocol, what are the size of the respective sender and receiver buffers required for a window size of N?",
+              options: ["1; 1", "N – 1; 1", "N – 1; N – 1", "N; 1"],
+              correct: 3,
+              translation: "في Go-back-N، ما أحجام المخازن لحجم نافذة N؟",
+              explanation: "N; 1.",
+            },
+            {
+              q: "Using Conditional GET in HTTP Protocol, the number of RTT is reduced if the object is not modified since the date of the cached copy!",
+              options: ["True", "False"],
+              correct: 0,
+              translation:
+                "باستخدام Conditional GET، عدد RTT يقل لو الكائن لم يتغير.",
+              explanation: "True.",
+            },
             {
               q: "Which of the following statements is true about Client-Server Architecture?",
               options: [
@@ -8719,63 +10182,24 @@ subjects.push({
               explanation: "السيرفر ينتظر والعميل يبدأ التواصل.",
             },
             {
-              q: "Which of the following layers doesn't appear in the Internet Protocol Stack?",
+              q: "HTTP protocol keeps state information at the server side about past client requests.",
+              options: ["True", "False"],
+              correct: 1,
+              translation: "HTTP يحتفظ بمعلومات الحالة في السيرفر؟",
+              explanation: "False — HTTP stateless.",
+            },
+            {
+              q: "Consider the transmission between a UDP sender and a UDP receiver. Which of the following will never happen? You may assume that the application riding on UDP doesn't implement any reliability mechanisms.",
               options: [
-                "Application layer",
-                "Network layer",
-                "Transport layer",
-                "Session layer",
+                "UDP receiver fails to receive any packet from UDP sender.",
+                "UDP receiver receives out-of-order packets from UDP sender.",
+                "UDP receiver receives duplicate packets from UDP sender.",
+                "UDP receiver receives corrupted packets from UDP sender but fails to detect bit errors.",
               ],
               correct: 3,
-              translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation: "طبقة الجلسة (Session).",
-            },
-            {
-              q: "In circuit switching, circuit segment is idle if not used by call.",
-              options: ["True", "False"],
-              correct: 0,
-              translation: "قطاع الدائرة خامل لو لم يُستخدم.",
-              explanation: "صح.",
-            },
-            {
-              q: "Which of the following statements about DNS is TRUE?",
-              options: [
-                "TLD servers store all the hostname to IP mappings of the Internet.",
-                "Every Web server must have a canonical name.",
-                "Local DNS server sometimes may provide out-of-date hostname-to-IP-address mapping.",
-                "DNS server listens to TCP port 53.",
-              ],
-              correct: 2,
-              translation: "أي عبارة عن DNS صحيحة؟",
-              explanation: "بيانات قديمة بسبب الـ Caching.",
-            },
-            {
-              q: "In Go-back-N protocol, what are the size of the respective sender and receiver buffers required for a window size of N?",
-              options: ["1; 1", "N – 1; 1", "N – 1; N – 1", "N; 1"],
-              correct: 3,
-              translation:
-                "في Go-back-N، ما أحجام مخازن المرسل والمستقبل لحجم نافذة N؟",
-              explanation: "N; 1.",
-            },
-            {
-              q: "Consider the following Python code snippet: s1.bind(('', 8080)) ; s2, addr = s1.accept(). Suppose no exception is raised, which of the following statements is TRUE?",
-              options: [
-                "s1 is a UDP socket",
-                "Server uses s1 to transmit application data to client",
-                "s2 listens to port 8080",
-                "s2 listens to a random port number assigned by operation system",
-              ],
-              correct: 2,
-              translation: "بناءً على الكود، أي عبارة صحيحة؟",
-              explanation: "s2 يستمع إلى المنفذ 8080.",
-            },
-            {
-              q: "Using Conditional GET in HTTP Protocol, the number of RTT is reduced if the object is not modified since the date of the cached copy!",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "باستخدام Conditional GET، عدد RTT يقل لو الكائن لم يتغير.",
-              explanation: "صح.",
+              translation: "أي مما يلي لن يحدث أبداً في نقل UDP؟",
+              explanation:
+                "UDP receiver receives corrupted packets but fails to detect bit errors.",
             },
             {
               q: "End-to-end delay is the time taken for a packet to travel from source to destination. It consists of which of the following delays?",
@@ -8787,298 +10211,256 @@ subjects.push({
               ],
               correct: 3,
               translation: "تأخير النهاية-للنهاية يتكون من أي تأخيرات؟",
-              explanation: "كل التأخيرات الأربعة.",
+              explanation: "All of the options — الأربعة.",
             },
             {
-              q: "Which of the following statements is true?",
-              options: [
-                "Both the Internet and traditional telephone networks use packet-switching.",
-                "Performance metrics such as end-to-end delay and throughput can be guaranteed in the Internet, if TCP is chosen as the transport layer protocol.",
-                "The Internet uses packet switching and traditional telephone networks uses circuit switching.",
-                "In the Internet, packets from the same source always take the same path to reach destination.",
-              ],
-              correct: 2,
-              translation: "أي عبارة صحيحة؟",
-              explanation:
-                "الإنترنت = packet switching، الهاتف = circuit switching.",
-            },
-            {
-              q: "A Web server stores a webpage that comprises a base HTML file and 2 images referenced by the base HTML file. The HTML file is 100 bytes and each image is 200 bytes. A client is connected to the Web server through a direct link of 1 Mbps. Propagation delay between the Web server and the client is 50 milliseconds. The client downloads the webpage using persistent HTTP but without pipelining. Hong long (in milliseconds) does it take?",
-              options: ["404", "604", "204", "402.4"],
-              correct: 0,
-              translation: "كم يستغرق تحميل الصفحة؟",
-              explanation: "404 مللي ثانية.",
-            },
-            {
-              q: "HTTP protocol keeps state information at the server side about past client requests.",
+              q: "In Non-persistent HTTP, the client closes the TCP connection after fetching one object (one pair of HTTP request and HTTP response)",
               options: ["True", "False"],
-              correct: 1,
-              translation: "HTTP يحتفظ بمعلومات الحالة في السيرفر؟",
-              explanation: "خطأ — HTTP stateless.",
-            },
-            {
-              q: "Which of the following statements is true about TCP and not true about UDP?",
-              options: [
-                "Provides timing service.",
-                "Provides minimum throughput guarantee service.",
-                "Provides security service.",
-                "Provides reliable transport service.",
-              ],
-              correct: 3,
-              translation: "أي عبارة صحيحة عن TCP وليست عن UDP؟",
-              explanation: "يوفر نقل موثوق (Reliable transport).",
-            },
-            {
-              q: "A browser requests to download index.html from a Web server. The HTTP response header received by the browser is shown below. Which of the following statements is TRUE? (Header includes: Set-Cookie: PHPSESSID=..., Content-Length: 1256)",
-              options: [
-                "In the HTTP request, browser has requested for a non-persistent connection.",
-                "Suppose TCP header is 20 bytes, the length of the TCP segment containing the HTTP response is 1276 bytes.",
-                "The index.html file received by the browser may have been corrupted during transmission.",
-                "The Web server uses a cookie to keep the state information of the client.",
-              ],
-              correct: 3,
-              translation: "بناءً على الهيدر، أي عبارة صحيحة؟",
-              explanation:
-                "وجود Set-Cookie يعني أن السيرفر يستخدم الكوكيز للحفاظ على حالة العميل.",
-            },
-            {
-              q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
-              options: ["13", "14", "15", "12"],
-              correct: 1,
-              translation: "كم socket في سيرفر TCP يتواصل مع 13 عميل؟",
-              explanation: "14 — 13 + 1 للاستقبال.",
-            },
-            {
-              q: "Consider the transmission between a UDP sender and a UDP receiver. Which of the following will never happen?",
-              options: [
-                "UDP receiver fails to receive any packet from UDP sender.",
-                "UDP receiver receives out-of-order packets from UDP sender.",
-                "UDP receiver receives duplicate packets from UDP sender.",
-                "UDP receiver receives corrupted packets from UDP sender but fails to detect bit errors.",
-              ],
-              correct: 3,
-              translation: "أي مما يلي لن يحدث أبداً في نقل UDP؟",
-              explanation:
-                "يمكن أن يحدث إذا كان الـ checksum معطلاً أو لا يغطي البيانات.",
-            },
-            {
-              q: "Which of the following statements is true about packet switching?",
-              options: [
-                "In packet switching, bandwidth is divided into 'pieces' between the nodes.",
-                "In packet switching, dedicated allocation is done between nodes.",
-                "In packet switching, resources are reserved for nodes.",
-                "None of the options.",
-              ],
-              correct: 3,
-              translation: "أي عبارة صحيحة عن packet switching؟",
-              explanation:
-                "لا شيء — كل الاختيارات الأخرى تصف Circuit Switching.",
-            },
-            {
-              q: "Consider a sender and a receiver communicating using Selective Repeat protocol. Every packet embeds a 4-bit sequence number field. Sender window size is 4. The third data packet and the second ACK packet are lost. What is the sender window over the sequence number space at time t?",
-              options: [
-                "12, 13, 14, 15",
-                "13, 14, 0, 1",
-                "13, 14, 15, 0",
-                "13, 14, 15, 16",
-              ],
-              correct: 1,
-              translation:
-                "ما هي نافذة المرسل على مساحة الأرقام التسلسلية في الوقت t؟",
-              explanation: "13, 14, 0, 1.",
-            },
-            {
-              q: "Top-level domain (TLD) servers are organization's own DNS server(s), providing authoritative hostname to IP mappings for organization's named hosts.",
-              options: ["Yes", "No"],
-              correct: 1,
-              translation:
-                "سيرفرات النطاق الأعلى (TLD) هي سيرفرات DNS الخاصة بالمنظمة.",
-              explanation: "لا.",
-            },
-            {
-              q: "Which of the following is present in both HTTP request line and status line?",
-              options: [
-                "HTTP version number",
-                "Request method",
-                "Status code",
-                "URL",
-              ],
               correct: 0,
               translation:
-                "أي مما يلي موجود في كل من HTTP request line و status line؟",
-              explanation: "رقم إصدار HTTP.",
+                "في Non-persistent HTTP، العميل يغلق اتصال TCP بعد جلب كائن واحد.",
+              explanation: "True.",
             },
             {
-              q: "Which of the following HTTP protocols does the given figure represent to fetch a web page with 2 reference objects? (Figure shows persistent connections)",
-              options: [
-                "Non-persistent HTTP.",
-                "Persistent HTTP.",
-                "Non-persistent HTTP with parallel connection.",
-                "Persistent HTTP with pipelining.",
-              ],
+              q: "A Selective Repeat sender just receives an ACK packet with ACK number 7. This ACK number falls within sender window which has the window size 3. Every data packet embeds a k-bit sequence number field (k is an constant unknown to you). Which of the following definitely CANNOT be the sequence number of the next packet transmitted by the sender?",
+              options: ["0", "2", "3", "6"],
               correct: 3,
-              translation: "أي بروتوكول HTTP يمثله الشكل التالي؟",
-              explanation: "Persistent HTTP with pipelining.",
-            },
-            {
-              q: "A packet switch receives a packet and determines the outbound link to which the packet should be forwarded. When the packet arrives, x bits of the currently-being-transmitted packet have been transmitted on this outbound link and n other packets are waiting to be transmitted. What is the queuing delay?",
-              options: [
-                "nL / R",
-                "(nL + (x - L)) / R",
-                "n(L - x) / R",
-                "(nL + (L - x)) / R",
-              ],
-              correct: 3,
-              translation: "ما هو تأخير الانتظار (Queuing Delay)؟",
-              explanation: "(nL + (L - x)) / R.",
+              translation: "أي رقم لا يمكن أن يكون seq للحزمة التالية؟",
+              explanation: "6.",
             },
             {
               q: "Assume a sender and a receiver connected via one packet-switch. The sender sends a message of size 24 KBytes using packets of length 1000 Bytes. The bit rates are 2 kbps and 5 kbps for the first and the second link, respectively. Using store and forward, what is the end-to-end delay (in seconds)? You may ignore the propagation delay!",
               options: ["16.8", "134.4", "0.1008", "16800"],
               correct: 1,
               translation: "ما هو تأخير النهاية إلى النهاية (بالثواني)؟",
-              explanation: "134.4 ثانية.",
+              explanation: "134.4s.",
             },
             {
-              q: "In Non-persistent HTTP, the client closes the TCP connection after fetching one object (one pair of HTTP request and HTTP response).",
-              options: ["True", "False"],
-              correct: 0,
-              translation:
-                "في HTTP غير المستمر، يُغلق العميل اتصال TCP بعد جلب كائن واحد.",
-              explanation: "صح.",
-            },
-            {
-              q: "A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. What is the throughput (in bps) of transmission?",
-              options: ["200", "500", "100", "400"],
+              q: "Top-level domain (TLD) servers are organization's own DNS server(s), providing authoritative hostname to IP mappings for organization's named hosts.",
+              options: ["Yes", "No"],
               correct: 1,
-              translation: "ما هو معدل النقل (Throughput)؟",
-              explanation: "500 bps.",
-            },
-            {
-              q: "Which of the following statements is true about circuit switching?",
-              options: [
-                "Resources are pre-allocated regardless of demand",
-                "Packet transmission can use the full link bandwidth",
-                "The path between a source and a destination is not fixed",
-                "All of the options",
-              ],
-              correct: 0,
-              translation: "أي عبارة صحيحة عن circuit switching؟",
-              explanation: "الموارد تُخصص مسبقاً.",
-            },
-            {
-              q: "A Selective Repeat sender just receives an ACK packet with ACK number 7. This ACK number falls within sender window which has the window size 3. Every data packet embeds a k-bit sequence number field. Which of the following definitely CANNOT be the sequence number of the next packet transmitted by the sender?",
-              options: ["0", "2", "3", "6"],
-              correct: 3,
-              translation:
-                "أي من الأرقام التالية لا يمكن أن يكون الرقم التسلسلي للحزمة التالية التي يرسلها المرسل؟",
-              explanation: "6.",
-            },
-            {
-              q: "Can HTTP response message contains an empty body? If yes, When can this happen?",
-              options: [
-                "No, an HTTP response message can never have an empty body.",
-                "Yes, if the requested object has been moved to a new location.",
-                "Yes, if the requested object is recently modified.",
-                "Yes, if the requested object is very small in size.",
-              ],
-              correct: 1,
-              translation:
-                "هل يمكن أن تحتوي رسالة استجابة HTTP على جسم فارغ؟ ومتى يحدث ذلك؟",
-              explanation: "نعم، إذا تم نقل الكائن المطلوب إلى موقع جديد.",
+              translation: "سيرفرات TLD هي سيرفرات DNS الخاصة بالمنظمة.",
+              explanation: "No — TLD مسؤولة عن النطاقات.",
             },
           ],
         },
         {
-          t: "Mid 2023 Summer — Dr. Ebram",
-          d: "Summer midterm 2023",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2023/Mid 2023 Summer.pdf",
+          t: "BIS 2025 — Dr. Ebram (PDF)",
+          d: "Midterm Exam 1 — Nov 2025 — Q1 fill-in-the-blanks (a)-(j) + Q2 problems (a)-(i)",
+          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Ebram/2025/BIS 2025 - Dr. Ebram - Computer Networks.pdf",
           questions: [
+            // ================= Q1: Fill in the blanks =================
             {
-              q: "Which layer doesn't appear in the Internet Protocol Stack?",
+              q: "[Q1(a)] In a host that is sending data to the network, UDP receives data from the ____ layer and sends data to the ____ layer.",
               options: [
-                "Application layer",
-                "Network layer",
-                "Transport layer",
-                "Session layer",
-                "Physical layer",
-              ],
-              correct: 3,
-              translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation: "طبقة الجلسة (Session).",
-            },
-            {
-              q: "Which statement is true?",
-              options: [
-                "Both the Internet and traditional telephone networks use packet-switching.",
-                "Performance metrics such as end-to-end delay and throughput can be guaranteed in the Internet, if TCP is chosen as the transport layer protocol.",
-                "In the Internet, packets from the same source always take the same path to reach destination.",
-                "The Internet uses packet switching and traditional telephone networks use circuit switching.",
-                "None of the above",
-              ],
-              correct: 3,
-              translation: "أي عبارة صحيحة؟",
-              explanation:
-                "الإنترنت = packet switching، الهاتف = circuit switching.",
-            },
-            {
-              q: "Which statement is true about circuit switching?",
-              options: [
-                "Resources are pre-allocated regardless of demand",
-                "Packet transmission can use the full link bandwidth",
-                "The path between a source and a destination is not fixed",
-                "None of the above",
-                "All of the above",
-              ],
-              correct: 0,
-              translation: "أي عبارة صحيحة عن circuit switching؟",
-              explanation: "الموارد تُخصص مسبقاً بغض النظر عن الطلب.",
-            },
-            {
-              q: "Which of the following is present in both HTTP request line and status line?",
-              options: [
-                "HTTP version number",
-                "Request method",
-                "Status code",
-                "URL",
-                "None of the above",
+                "Application / Network",
+                "Transport / Network",
+                "Application / Link",
+                "Network / Transport",
               ],
               correct: 0,
               translation:
-                "أي مما يلي موجود في HTTP request line وstatus line معاً؟",
-              explanation: "رقم إصدار HTTP.",
+                "في الجهاز المُرسِل، يستقبل UDP البيانات من طبقة ____ ويرسلها إلى طبقة ____.",
+              explanation:
+                "Application / Network — UDP يعمل في طبقة Transport: يأخذ البيانات من طبقة Application ويمررها لطبقة Network (IP).",
             },
             {
-              q: "Which statement about DNS is TRUE?",
+              q: "[Q1(b)] HTTP is an ____ layer protocol that typically runs on top of ____.",
               options: [
-                "TLD servers store all the hostname-to-IP mappings of the Internet.",
-                "Every Web server must have a canonical name.",
-                "Local DNS server sometimes may provide out-of-date hostname-to-IP-address mapping.",
-                "DNS server listens to TCP port 53.",
-                "None of the above",
+                "Application / TCP",
+                "Transport / UDP",
+                "Application / IP",
+                "Network / TCP",
               ],
+              correct: 0,
+              translation: "HTTP بروتوكول في طبقة ____ وعادةً يعمل فوق ____.",
+              explanation:
+                "Application / TCP — HTTP بروتوكول طبقة التطبيق ويستخدم TCP (منفذ 80) لأنه يحتاج نقلاً موثوقاً.",
+            },
+            {
+              q: "[Q1(c)] UDP is a ____ tuple de-multiplexing while TCP is a ____ tuple de-multiplexing to dispatch incoming packets to different processes in the same host.",
+              options: [
+                "two / four",
+                "four / two",
+                "two / two",
+                "three / four",
+              ],
+              correct: 0,
+              translation:
+                "UDP يستخدم demultiplexing بـ ____ عناصر بينما TCP يستخدم ____ عناصر لتوزيع الحزم على العمليات داخل نفس الجهاز.",
+              explanation:
+                "two / four — UDP: (destination IP, destination port) = 2-tuple. TCP: (source IP, source port, destination IP, destination port) = 4-tuple.",
+            },
+            {
+              q: "[Q1(d)] In client/server paradigm, ____ must always be alive and offers service while ____ requests for service from server.",
+              options: [
+                "server / client",
+                "client / server",
+                "server / server",
+                "client / client",
+              ],
+              correct: 0,
+              translation:
+                "في نموذج client/server، ____ يجب أن يكون دائماً شغّالاً ويقدّم الخدمة بينما ____ يطلب الخدمة من السيرفر.",
+              explanation:
+                "server / client — السيرفر دائماً شغّال وينتظر الطلبات، والعميل (client) هو من يبدأ الطلب.",
+            },
+            {
+              q: "[Q1(e)] ____ provides hostname to IP address mapping and typically listens to ____ port 53.",
+              options: ["DNS / UDP", "DNS / TCP", "HTTP / UDP", "DHCP / TCP"],
+              correct: 0,
+              translation:
+                "____ يوفّر تحويل اسم المضيف إلى عنوان IP وعادةً يستمع على المنفذ 53 الخاص بـ ____.",
+              explanation:
+                "DNS / UDP — DNS يحوّل hostname إلى IP ويستمع عادةً على UDP port 53 (ويستخدم TCP في حالات خاصة مثل الردود الكبيرة).",
+            },
+            {
+              q: "[Q1(f)] The ____ layer of the Internet protocol stack is responsible for delivering data from sending process to receiving process while the ____ layer of the Internet protocol stack is responsible for delivering data from sending host to receiving host.",
+              options: [
+                "Transport / Network",
+                "Network / Transport",
+                "Application / Transport",
+                "Transport / Application",
+              ],
+              correct: 0,
+              translation:
+                "طبقة ____ مسؤولة عن توصيل البيانات من العملية المُرسِلة إلى العملية المستقبِلة، بينما طبقة ____ مسؤولة عن التوصيل من الجهاز المُرسِل إلى الجهاز المستقبِل.",
+              explanation:
+                "Transport / Network — Transport = process-to-process (عن طريق ports)، Network = host-to-host (عن طريق IP).",
+            },
+            {
+              q: "[Q1(g)] ____ delay, ____ delay, ____ delay and ____ delay make up the end-to-end delay.",
+              options: [
+                "Transmission, propagation, processing and queuing",
+                "Transmission, propagation, processing and routing",
+                "Transmission, propagation, queuing and handshake",
+                "Propagation, processing, queuing and encryption",
+              ],
+              correct: 0,
+              translation:
+                "الأنواع الأربعة للتأخير التي تكوّن التأخير الكلي من البداية للنهاية.",
+              explanation:
+                "Transmission delay + Propagation delay + Processing delay + Queuing delay = end-to-end (nodal) delay.",
+            },
+            {
+              q: "[Q1(h)] The first line in an HTTP request message is called the ____ line. The first line in an HTTP response message is called the ____ line.",
+              options: [
+                "request / status",
+                "status / request",
+                "header / request",
+                "request / header",
+              ],
+              correct: 0,
+              translation:
+                "السطر الأول في رسالة HTTP request اسمه ____ line، والسطر الأول في رسالة HTTP response اسمه ____ line.",
+              explanation:
+                "request line / status line — مثال: 'GET /index.html HTTP/1.1' هو request line، و'HTTP/1.1 200 OK' هو status line.",
+            },
+            {
+              q: "[Q1(i)] HTTP stands for ____.",
+              options: [
+                "HyperText Transfer Protocol",
+                "HyperText Transmission Protocol",
+                "High Transfer Text Protocol",
+                "HyperLink Transfer Protocol",
+              ],
+              correct: 0,
+              translation: "HTTP هي اختصار لـ ____.",
+              explanation: "HTTP = HyperText Transfer Protocol.",
+            },
+            {
+              q: "[Q1(j)] The ____ layer is responsible for moving datagrams from the source host to the destination host.",
+              options: ["Network", "Transport", "Link", "Application"],
+              correct: 0,
+              translation:
+                "طبقة ____ مسؤولة عن نقل الـ datagrams من الجهاز المصدر إلى الجهاز الوجهة.",
+              explanation:
+                "Network — طبقة الشبكة (IP + routing) تنقل الـ datagrams من host المصدر إلى host الوجهة.",
+            },
+
+            // ================= Q2: Problems =================
+            {
+              q: "[Q2(a)] Host A sends 5 data packets to host B using TCP protocol. Each data packet contains 10 bytes of application data. Suppose 5 data packets arrive in order and all are accepted by B. The last ACK packet sent by B has ACK number 99. What is the sequence number of the first data packet sent by A?",
+              options: ["49", "50", "59", "99"],
+              correct: 0,
+              translation:
+                "ما هو الرقم التسلسلي (sequence number) لأول حزمة بيانات أرسلها A؟",
+              explanation:
+                "49 — إجمالي البيانات = 5 × 10 = 50 بايت. ACK number = رقم البايت التالي المتوقع = seq الأولى + 50 = 99، إذن seq الأولى = 99 − 50 = 49.",
+            },
+            {
+              q: "[Q2(b)] Two hosts A and B are 2000 km apart and are connected by a direct link of 200 kbps. Propagation speed on the link is 2.5 * 10^8 m/s. A is sending 10 packets to B continuously. Each packet is 100 bytes in size. Suppose the channel is error-free, how long (in seconds) does it take for B to receive all the packets?",
+              options: ["0.084", "0.048", "0.028", "0.024"],
+              correct: 1,
+              translation:
+                "كم من الوقت (بالثواني) يستغرقه B لاستلام جميع الحزم؟",
+              explanation:
+                "0.048 s — Transmission = (10 × 100 × 8) / 200,000 = 8000 / 200,000 = 0.04 s. Propagation = 2,000,000 m / 2.5×10^8 = 0.008 s. المجموع = 0.04 + 0.008 = 0.048 s.",
+            },
+            {
+              q: "[Q2(c)] A UDP server needs only one socket to communicate with n different clients simultaneously. How many sockets would a TCP server have ever created for the same situation?",
+              options: ["n", "n + 1", "2n", "1"],
+              correct: 1,
+              translation:
+                "سيرفر UDP يحتاج socket واحد فقط للتواصل مع n عميل. كم عدد الـ sockets التي سينشئها سيرفر TCP لنفس الحالة؟",
+              explanation:
+                "n + 1 — socket واحد للاستماع (welcoming socket) + socket مستقل لكل عميل (n).",
+            },
+            {
+              q: "[Q2(d)] A Web server supports both HTTP/1.0 and HTTP/1.1. So far 40 clients have downloaded a web page from the server, which contains 1 HTML file and 3 other Web objects referenced by the HTML file. Half of the clients run HTTP/1.0 and the other half run HTTP/1.1. How many sockets has the Web server ever created since it starts running?",
+              options: ["80", "100", "101", "240"],
               correct: 2,
-              translation: "أي عبارة عن DNS صحيحة؟",
-              explanation: "بيانات قديمة بسبب Caching.",
+              translation:
+                "كم socket أنشأها الويب سيرفر منذ بدء التشغيل؟ (40 عميل: نصفهم HTTP/1.0 ونصفهم HTTP/1.1، والصفحة فيها ملف HTML + 3 كائنات).",
+              explanation:
+                "101 — HTTP/1.0 (non-persistent): كل كائن له اتصال مستقل = 4 اتصالات × 20 عميل = 80. HTTP/1.1 (persistent): اتصال واحد لكل عميل = 20. المجموع = 100 socket اتصال + 1 welcoming socket = 101 (وتكون 100 لو لم يُحسب socket الاستماع).",
             },
             {
-              q: "What is the queuing delay? (packets L bits, link rate R bps, n waiting packets, x bits of current packet transmitted)",
-              options: [
-                "nL / R",
-                "L / R",
-                "n(L - x) / R",
-                "nL + (L - x) / R",
-                "(nL + (L - x)) / R",
-                "(nL + (x - L)) / R",
-              ],
-              correct: 4,
-              translation: "ما هو تأخير الانتظار؟",
-              explanation: "(nL + (L - x)) / R.",
+              q: "[Q2(e)] What is the checksum of the following 3 bytes? (the first byte shown is 11110100 — the other two bytes are in the figure)",
+              options: ["(open answer)"],
+              correct: 0,
+              translation: "ما هو الـ checksum للبايتات الثلاثة التالية؟",
+              explanation:
+                "طريقة الحل: اجمع البايتات الثلاثة (8 bit لكل واحد) وأي carry خارج من الـ 8 بتات يُضاف على الناتج (wrap-around)، ثم اعمل one's complement (اقلب كل البتات). ملاحظة: في صورة الورقة ظهر البايت الأول فقط (11110100) والباقي مخفي بالإصبع، فلازم تراجع البايتين الباقيين من الورقة الأصلية.",
+            },
+            {
+              q: "[Q2(f)] A huge file is transferred over an existing TCP connection (i.e., 3-way handshake is already done). The connection is still open after transmission. The first and last TCP segments have the sequence numbers 12345 and 2345 respectively. The last TCP segment carries 1000 bytes of data. What could be the size of the file transferred in bytes?",
+              options: ["(open answer)"],
+              correct: 0,
+              translation: "ما هو حجم الملف المنقول بالبايت؟",
+              explanation:
+                "4,294,958,296 بايت (= 2^32 − 9000) — الـ sequence number التف حول 2^32 (wrap-around). آخر segment يبدأ عند 2345 وتحمل 1000 بايت، فالبايت التالي = 3345. الحجم = 2^32 − 12345 + 3345 = 4,294,967,296 − 9,000 = 4,294,958,296. (ويمكن أن يكون أي مضاعف إضافي لـ 2^32 لأن السؤال 'could be').",
+            },
+            {
+              q: "[Q2(g)] A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. Suppose ACK packets are of negligible size and transmission channel is perfectly reliable. What is the throughput (in bps) of transmission?",
+              options: ["(open answer)"],
+              correct: 0,
+              translation: "ما هو معدل النقل الفعلي (Throughput) بالـ bps؟",
+              explanation:
+                "500 bps — Propagation = 3×10^8 m / 2×10^8 = 1.5 s. Transmission = 2000 / 2000 = 1 s. RDT 2.2 هو stop-and-wait فكل حزمة تأخذ 1 + 1.5 + 1.5 = 4 s. الزمن الكلي = 100 × 4 = 400 s. Throughput = (100 × 2000) / 400 = 500 bps.",
+            },
+            {
+              q: "[Q2(h)] A source and a destination are separated by 20,000 km and are connected by a direct link of 2 Mbps. The propagation speed over the link is 2.5 * 10^8 m/s. The source sends 20 data packets to the destination using a stop-and-wait protocol. Each data packet is 5,000 bytes long. Suppose ACK packets are of negligible size, and 10% of the data packets are corrupted but retransmission is always successful. How long does it take for the source to know all data packets are successfully received by the destination? Write down your answer in seconds.",
+              options: ["(open answer)"],
+              correct: 0,
+              translation:
+                "كم من الوقت يستغرقه المصدر ليعرف أن كل الـ 20 packet وصلت بنجاح؟ (بالثواني)",
+              explanation:
+                "3.96 s — Transmission = (5000 × 8) / 2×10^6 = 0.02 s. Propagation = 2×10^7 / 2.5×10^8 = 0.08 s. الزمن لكل محاولة = 0.02 + 0.08 + 0.08 (ACK راجع) = 0.18 s. عدد الإرسالات = 20 + 10% × 20 = 22. الزمن الكلي = 22 × 0.18 = 3.96 s.",
+            },
+            {
+              q: "[Q2(i)] The following graph shows a sequence of TCP segments sent from host X to host Y. Each dot represents a TCP segment, plotting its sequence number versus the time it is received by Y. Each segment carries exactly 100 bytes of payload. The segments labelled with A and F are the first and last segments sent by X, respectively. Assume that no segment is corrupted during transmission and Y buffers out-of-order segments for eventual delivery to the application. What will be the ACK number in the last ACK segment sent by Y?",
+              options: ["(open answer)"],
+              correct: 0,
+              translation: "ما هو ACK number في آخر ACK segment أرسله Y؟",
+              explanation:
+                "800 (حسب قراءة الرسم) — الـ segments تغطي أرقام 100 إلى 700 بدون فجوات (A=100 … والأخيرة F=700 وتحمل 100 بايت)، وY يخزّن الـ out-of-order، فبعد وصول آخر segment يكون ACK التراكمي = 700 + 100 = 800. تنبيه: الرسم في الصورة غير واضح تماماً، فتأكد من قيم المحور الرأسي من الورقة الأصلية.",
             },
           ],
         },
       ],
     },
+
     {
       category: "Dr. Tarek Mohamed",
       icon: "👨‍🏫",
@@ -9087,11 +10469,12 @@ subjects.push({
         {
           t: "MidTerm 2022 — Computer Networks",
           d: "Introduction to Computer Networks — 2022",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/Other/2022/MidTerm 2022 - Questions - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Tarek/2022/MidTerm 2026 - National - Networks.pdf",
 
           questions: [
-            /* ---------- 25 MCQs ---------- */
+            /* ---------- 25 MCQ (بنفس ترتيب ملف الإجابات) ---------- */
 
+            /* Q1 */
             {
               q: "The number of layers in ISO OSI reference model is ______",
               options: ["5", "7", "6", "10"],
@@ -9101,6 +10484,7 @@ subjects.push({
                 "نموذج OSI المرجعي يتكون من 7 طبقات، من الأسفل للأعلى: Physical (الفيزيائية)، Data Link (ربط البيانات)، Network (الشبكة)، Transport (النقل)، Session (الجلسة)، Presentation (العرض)، Application (التطبيق).",
             },
 
+            /* Q2 */
             {
               q: "A ______ set of rules that governs data communication.",
               options: ["Protocols", "Standards", "RFCs", "Servers"],
@@ -9111,6 +10495,7 @@ subjects.push({
                 "البروتوكول (Protocol) هو مجموعة قواعد ومواصفات تحكم تبادل البيانات بين الأجهزة، مثل كيفية الإرسال والتلقي ومعالجة الأخطاء. المعايير (Standards) هي القواعد المعتمدة، و RFCs هي وثائق اقتراحات الإنترنت، أما الخوادم فهي أجهزة وليست قواعد.",
             },
 
+            /* Q3 */
             {
               q: "The structure or format of data is called ______",
               options: ["Syntax", "Semantics", "Struct", "Formatting"],
@@ -9120,6 +10505,7 @@ subjects.push({
                 "البنية (Syntax) تصف شكل البيانات وترتيبها (مثلاً: أي حقل يأتي أولاً في الترويسة). الدلالات (Semantics) تصف معنى كل حقل وكيف يجب تفسيره.",
             },
 
+            /* Q4 */
             {
               q: "A ______ is the physical path over which a message travels.",
               options: ["Path", "Medium", "Protocol", "Route"],
@@ -9130,6 +10516,7 @@ subjects.push({
                 "الوسيط (Medium) هو القناة الفيزيائية (سلك نحاسي، ألياف ضوئية، أو لاسلكي) التي تنتقل عبرها الإشارات بين المرسل والمستقبل.",
             },
 
+            /* Q5 */
             {
               q: "Which of this is not a network edge device?",
               options: ["PC", "Smartphones", "Servers", "Switch"],
@@ -9140,6 +10527,7 @@ subjects.push({
                 "أجهزة طرف الشبكة (edge devices) هي التي تستضيف تطبيقات المستخدم النهائي مثل PC والهواتف الذكية والخوادم. المحول (Switch) هو جهاز شبكة داخلي (core) يعمل في طبقة ربط البيانات لربط الأجهزة داخل الشبكة المحلية.",
             },
 
+            /* Q6 */
             {
               q: "A ______ is a device that forwards packets between networks by processing the routing information included in the packet.",
               options: ["bridge", "firewall", "router", "hub"],
@@ -9150,6 +10538,7 @@ subjects.push({
                 "الموجه (Router) يعمل في طبقة الشبكة (Layer 3) ويستخدم عنوان IP ومعلومات جدول التوجيه لإعادة توجيه الحزم بين شبكات مختلفة. الجسر (Bridge) يعمل في Layer 2، والجدار الناري (Firewall) يفلتر الحركة، والموزع (Hub) مجرد مكبر إشارة.",
             },
 
+            /* Q7 */
             {
               q: "A list of protocols used by a system, one protocol per layer, is called ______",
               options: [
@@ -9165,6 +10554,7 @@ subjects.push({
                 "مكدس البروتوكولات (Protocol Stack) هو القائمة المرتبة للبروتوكولات المستخدمة في كل طبقة (مثلاً: Ethernet / IP / TCP / HTTP). مجموعة البروتوكولات (Protocol Suite) هي كل البروتوكولات معاً بدون ترتيب طبقي صريح.",
             },
 
+            /* Q8 */
             {
               q: "Network congestion occurs ______",
               options: [
@@ -9179,6 +10569,7 @@ subjects.push({
                 "ازدحام الشبكة يحدث عندما يفوق حجم البيانات المرسلة قدرة الموجهات والرواتر على المعالجة، فيتراكم في الطوابير ويزداد التأخير وقد تُفقد الحزم. إنهاء نظام أو إنهاء اتصال لا يُسمى ازدحاماً.",
             },
 
+            /* Q9 */
             {
               q: "P2P applications face the challenge",
               options: ["ISP Friendly", "Security", "all of the mentioned"],
@@ -9188,6 +10579,7 @@ subjects.push({
                 "تطبيقات الند للند (P2P) تواجه تحديات متعددة منها: تحدي الود مع مزودي خدمة الإنترنت (ISP friendly) لأنها تستهلك عرض نطاق ترددي عالياً وغير متماثل، وتحديات الأمان لأنه لا يوجد خادم مركزي للتحكم أو التحقق.",
             },
 
+            /* Q10 */
             {
               q: "the rate at which data is transferred is referred to ______",
               options: [
@@ -9201,6 +10593,7 @@ subjects.push({
                 "معدل النقل (Transmission Rate) هو كمية البيانات المرسلة في وحدة الزمن، ويُقاس عادةً بالبت في الثانية (bps) أو مضاعفاتها (Kbps, Mbps, Gbps).",
             },
 
+            /* Q11 */
             {
               q: "End systems access the Internet through",
               options: [
@@ -9214,6 +10607,7 @@ subjects.push({
                 "تتصل الأنظمة الطرفية (end systems) بالإنترنت عبر مزودي خدمة الإنترنت (ISPs). أما DSL فهي تقنية خط سماوي تستخدم للوصول إلى ISP، و CPE هي الأعدات الموجودة عند العميل لكن الدخول الفعلي للإنترنت يتم عبر ISP.",
             },
 
+            /* Q12 */
             {
               q: "The only control that the application developer has on the transport-layer side is",
               options: [
@@ -9228,6 +10622,7 @@ subjects.push({
                 "مطور التطبيق لا يستطيع تغيير طبقة النقل نفسها، لكنه يستطيع: (1) اختيار بروتوكول النقل (TCP أو UDP)، و (2) ضبط بعض المعاملات مثل حجم المخزن المؤقت. لذا الإجابة الصحيحة هي 'كل ما سبق'.",
             },
 
+            /* Q13 */
             {
               q: "Processes on two different end systems communicate with each other",
               options: [
@@ -9242,6 +10637,7 @@ subjects.push({
                 "العمليات على أنظمة مختلفة تتواصل عبر تبادل الرسائل (messages) عبر الشبكة. الـ Interprocess Communication (IPC) هو فقط للعمليات على نفس الجهاز، وليس عبر الشبكة.",
             },
 
+            /* Q14 */
             {
               q: "Two devices are in network if",
               options: [
@@ -9255,6 +10651,7 @@ subjects.push({
                 "شرط وجود شبكة هو قدرة عملية على جهاز من تبادل المعلومات مع عملية على جهاز آخر. مجرد وجود عملية قيد التشغيل على كلا الجهازين أو تطابق PIDs لا يعني وجود شبكة.",
             },
 
+            /* Q15 */
             {
               q: "What is client process",
               options: [
@@ -9268,6 +10665,7 @@ subjects.push({
                 "عملية العميل (client) هي التي تبدأ الاتصال وترسل الطلب الأول. عملية الخادم (server) هي التي تنتظر طلبات العملاء الواردة على منفذ معروف.",
             },
 
+            /* Q16 */
             {
               q: "When this client-server interaction is taking place over TCP, the application developer needs to make an important decision—should each request/response pair be sent over a separate TCP connection, or should all of the requests and their corresponding responses be sent over the same TCP connection? In the former approach, the application is said to use ---",
               options: [
@@ -9282,6 +10680,7 @@ subjects.push({
                 "الاتصالات غير المستمرة (non-persistent) تفتح اتصال TCP جديداً لكل زوج طلب/استجابة ثم تغلقه فوراً. الاتصالات المستمرة (persistent) تبقي اتصال TCP مفتوحاً لطلبات متعددة، مما يقلل زمن المصافحة ويحسّن الأداء.",
             },
 
+            /* Q17 */
             {
               q: "The RTT includes",
               options: [
@@ -9295,6 +10694,7 @@ subjects.push({
                 "RTT (Round-Trip Time) هو الزمن الكلي لذهاب الحزمة وإيابها، ويتضمن: زمن الإرسال (transmission)، زمن الانتشار (propagation)، زمن المعالجة (processing) في الرواتر، وزمن الانتظار في الطوابير (queuing). لذا الإجابة هي 'كل ما سبق'.",
             },
 
+            /* Q18 */
             {
               q: "malware can record keystrokes, web sites visited, upload info to collection site",
               options: ["virus", "worm", "spyware"],
@@ -9305,6 +10705,7 @@ subjects.push({
                 "برامج التجسس (Spyware) تتجسس على نشاط المستخدم وتجمع معلومات (ضغطات مفاتيح، مواقع) وترسلها لطرف ثالث دون علم المستخدم. الفيروس (Virus) يلتصق بملفات لينتشر، والدودة (Worm) تنتشر ذاتياً عبر الشبكة بدون الحاجة لمضيف.",
             },
 
+            /* Q19 */
             {
               q: "Which is not a application layer protocol",
               options: ["HTTP", "SMTP", "TCP"],
@@ -9314,6 +10715,7 @@ subjects.push({
                 "HTTP و SMTP هما بروتوكولا طبقة التطبيق (Layer 7). أما TCP فهو بروتوكول طبقة النقل (Layer 4)، وليس بروتوكول تطبيق.",
             },
 
+            /* Q20 */
             {
               q: "What is the HTTP port number",
               options: ["25", "110", "80"],
@@ -9323,6 +10725,7 @@ subjects.push({
                 "منفذ HTTP الافتراضي هو 80. المنفذ 25 مخصص لـ SMTP (إرسال بريد)، والمنفذ 110 مخصص لـ POP3 (استقبال بريد).",
             },
 
+            /* Q21 */
             {
               q: "---------- can make use of as much, or as little, throughput as happens to be available",
               options: [
@@ -9337,6 +10740,7 @@ subjects.push({
                 "التطبيقات المرنة (Elastic) مثل البريد الإلكتروني و FTP و WWW يمكنها التكيف مع أي قدر متاح من الإنتاجية وتعمل بدرجة مقبولة. التطبيقات الحساسة لعرض النطاق (bandwidth-sensitive) مثل المكالمات الصوتية والفيديو تتطلب إنتاجية محددة لتعمل بشكل صحيح.",
             },
 
+            /* Q22 */
             {
               q: "Which protocol is a protocol of application layer",
               options: ["HTTP", "TCP", "IP"],
@@ -9346,6 +10750,7 @@ subjects.push({
                 "HTTP هو بروتوكول طبقة تطبيق (Layer 7). TCP هو بروتوكول طبقة نقل (Layer 4)، و IP هو بروتوكول طبقة شبكة (Layer 3).",
             },
 
+            /* Q23 */
             {
               q: "The structure or format of data is called ________",
               options: ["Syntax", "Semantics", "Struct"],
@@ -9355,6 +10760,7 @@ subjects.push({
                 "البنية (Syntax) تصف شكل البيانات وترتيبها. الدلالات (Semantics) تصف معنى كل حقل وكيف يجب تفسيره.",
             },
 
+            /* Q24 */
             {
               q: "data over DSL phone line goes to....................",
               options: ["internet", "telephone net", "none of the above"],
@@ -9364,6 +10770,7 @@ subjects.push({
                 "DSL (Digital Subscriber Line) يستخدم خطوط الهاتف النحاسية لإرسال بيانات الإنترنت عالية السرعة. إشارة البيانات تذهب إلى شبكة الإنترنت، بينما المكالمات الصوتية تذهب إلى شبكة الهاتف العادية، والاثنتان تعملان معاً بفضل تقسيم الترددات.",
             },
 
+            /* Q25 */
             {
               q: "In computer network nodes are ________",
               options: [
@@ -9376,13 +10783,25 @@ subjects.push({
               explanation:
                 "العقدة (node) في الشبكة هي أي جهاز قادر على إنشاء البيانات أو استقبالها أو توجيهها. هذا يشمل الأجهزة المُصدِّرة للبيانات (PC، خادم) والأجهزة المُوجِّهة (router، switch). لذا الإجابة هي 'كل ما سبق'.",
             },
+
+            /* ---------- السؤال المفقود من ورقة الامتحان (Q10 في ملف الأسئلة) ---------- */
+            /* Q26 — مُضاف في النهاية لأنه غير موجود في ملف الإجابات */
+            {
+              q: "In the layer hierarchy as the data packet moves from the upper to the lower layers, headers are ___________",
+              options: ["Added", "Removed", "Rearranged"],
+              correct: 0,
+              translation:
+                "في التسلسل الطبقي، عندما تنتقل حزمة البيانات من الطبقات العليا إلى الطبقات السفلى، فإن الترويسات ___________",
+              explanation:
+                "عند نزول البيانات من الطبقات العليا إلى السفلى في نموذج OSI أو TCP/IP، كل طبقة تضيف ترويسة (header) خاصة بها إلى البيانات القادمة من الطبقة الأعلى — تسمى هذه العملية التغليف (encapsulation). أما عند الصعود من الطبقات السفلى إلى العليا فإن كل طبقة تزيل ترويستها (decapsulation). لذا الإجابة الصحيحة هي 'Added'.",
+            },
           ],
         },
 
         {
           t: "MidTerm 2026 — National — Computer Networks",
           d: "Introduction to Computer Networks — National Midterm Exam",
-          pdf: "datenew/subjects/computer-networks/questions/Mid/National/2026/MidTerm 2026 - National - Networks.pdf.jpg",
+          pdf: "datenew/subjects/computer-networks/questions/Mid/Dr. Tarek/MidTerm 2026 - National - Networks.pdf.pdf",
 
           questions: [
             /* ---------- 5 MCQs (2 marks each) ---------- */
@@ -10324,42 +11743,193 @@ subjects.push({
             {
               q: "Why do Mail servers use SMTP handshaking in application layer although there is a TCP handshaking in the transport layer?",
               options: [
-                "to check if the email is sender is not blocked and ok to send and to check if the receiver mail is in the mail server",
+                "to check if the email sender is not blocked and ok to send and to check if the receiver mail is in the mail server",
               ],
               correct: 0,
-              translation: "لماذا تستخدم خوادم البريد مصافحة SMTP؟",
-              explanation: "للتحقق من حالة المرسل والمستقبل.",
+              translation:
+                "لماذا تستخدم خوادم البريد مصافحة SMTP في طبقة التطبيق رغم وجود مصافحة TCP في طبقة النقل؟",
+              explanation:
+                "للتحقق من أن المرسل غير محظور وأن بريد المستقبل موجود على خادم البريد.",
             },
             {
               q: "List the components of cookie technology.",
               options: [
-                "1- cookie header in response message 2- cookie header in request message 3-cookie file in the user's end system 4- back-end database",
+                "1- cookie header in response message 2- cookie header in request message 3- cookie file in the user's end system 4- back-end database",
               ],
               correct: 0,
               translation: "اذكر مكونات تقنية الكوكيز.",
               explanation:
-                "ترويسة في الاستجابة، ترويسة في الطلب، ملف في النظام الطرفي، قاعدة بيانات خلفية.",
+                "ترويسة Cookie في رسالة الاستجابة، ترويسة Cookie في رسالة الطلب، ملف Cookie في النظام الطرفي للمستخدم، وقاعدة بيانات خلفية.",
             },
             {
-              q: "Consider that there are 20 servers, and 20 clients connected to the core of the computer network. Assume that there are 20 simultaneous downloads taking place, involving 20 client-server pairs. Suppose that these 20 downloads are the only traffic in the network at the current time. Consider that there is a common link with transmission rate of 5Mbps in the core traversed by all 20 downloads. Suppose that every server access link has rate of 2 Mbps; every client access link has rate of 1Mbps; the transmission rates of other links in the core except the one common link are much larger than 5 Mbps. What is the end-to-end throughput for each download? (Answer with justification).",
+              q: "Which services can be granted and can't be granted by TCP when it uses flow control and congestion control? (Justify your answer)",
               options: [
-                "it will be the smallest rate which is (5/20) = 0.25Mbps",
+                "TCP guarantees reliable delivery, flow control, and congestion control, but it does not guarantee security, delay/timing, or throughput.",
+              ],
+              correct: 0,
+              translation:
+                "ما الخدمات التي يضمنها TCP وما لا يضمنها عند استخدام التحكم في التدفق والازدحام؟",
+              explanation:
+                "TCP يضمن النقل الموثوق والتحكم في التدفق والازدحام، لكنه لا يضمن الأمان ولا التأخير ولا معدل النقل/الإنتاجية.",
+            },
+            {
+              q: "Describe two advantages and two challenges of peer-to-peer application architecture.",
+              options: [
+                "Advantages: scalability and distributing the traffic/load. Challenges: security and motivating peers to contribute with others.",
+              ],
+              correct: 0,
+              translation: "اذكر ميزتين وتحديين لبنية تطبيقات الند للند P2P.",
+              explanation:
+                "المزايا: قابلية التوسع وتوزيع الحمل. التحديات: الأمان وتحفيز الأقران على المشاركة.",
+            },
+            {
+              q: "Consider an institution has an access line of 15 Mbps. The access line services 20 requests per second. Suppose that the average size of a request is 1 Mbits. Consider that the Internet delay is 2 sec; LAN delay is 50 msec. What is the average delay experienced by requests when using proxy server with hit rate = 20%? (justify your answer).",
+              options: [
+                "Traffic intensity on access link = (20 * 1*10^6 * 0.8) / 15*10^6 = 1.0667; since traffic intensity > 1, the delay is infinity (cannot determine a finite average delay).",
+              ],
+              correct: 0,
+              translation:
+                "ما متوسط التأخير الذي تختبره الطلبات عند استخدام خادم وكيل بنسبة إصابة 20%؟",
+              explanation:
+                "شدة المرور = (20 × 10^6 × 0.8) / 15×10^6 ≈ 1.0667 وهي أكبر من 1، لذلك التأخير لا نهائي/غير محدد.",
+            },
+            {
+              q: "Why a Web cache is considered both a server and a client at the same time?",
+              options: [
+                "It sends requested objects to clients, so it acts like a server; and it requests pages from the origin server to cache them, so it acts as a client.",
+              ],
+              correct: 0,
+              translation: "لماذا يعتبر Web cache خادمًا وعميلًا في نفس الوقت؟",
+              explanation:
+                "يرسل الكائنات المطلوبة إلى العملاء فيعمل كخادم، ويطلب الصفحات من الخادم الأصلي ليخزنها فيعمل كعميل.",
+            },
+            {
+              q: "Consider that there are 20 servers, and 20 clients connected to the core of the computer network. Assume that there are 20 simultaneous downloads taking place, involving 20 client-server pairs. Suppose that these 20 downloads are the only traffic in the network at the current time. Consider that there is a common link with transmission rate of 5 Mbps in the core traversed by all 20 downloads. Suppose that every server access link has rate of 2 Mbps; every client access link has rate of 1 Mbps; the transmission rates of other links in the core except the one common link are much larger than 5 Mbps. What is the end-to-end throughput for each download? (Answer with justification).",
+              options: [
+                "It will be the smallest rate, which is (5/20) = 0.25 Mbps.",
               ],
               correct: 0,
               translation: "ما هي الإنتاجية من طرف إلى طرف لكل تنزيل؟",
-              explanation: "0.25 Mbps",
+              explanation:
+                "الرابط المشترك 5 Mbps مقسوم على 20 تنزيلًا، فيكون لكل تنزيل 0.25 Mbps، وهو أصغر من معدلات روابط الخوادم والعملاء.",
             },
             {
               q: "Consider that there are two hosts (A & B) connected by 2 packet-switches and three links; every link has transmission rate of R bps. Consider that host (A) sends 4 packets to host (B) back-to-back; each packet has length of L bits. Let di and si, for i = 1, 2, 3, denote the length and the propagation speed respectively of link i starting from host(A). Ignore the processing delay and find with justification the time that the 4 packets take to reach Host (B) in case of one of the packet-switches uses store and forward and the other one uses cut-through.",
               options: [
-                "L/R+d1/s1+L/R+d2/s2+d3/s3",
-                "L/R+L/R+d1/s1+L/R+d2/s2+d3/s3",
-                "2L/R+L/R+d1/s1+L/R+d2/s2+d3/s3",
-                "3L/R+L/R+d1/s1+L/R+d2/s2+d3/s3",
+                "L/R + d1/s1 + L/R + d2/s2 + d3/s3",
+                "L/R + L/R + d1/s1 + L/R + d2/s2 + d3/s3",
+                "2L/R + L/R + d1/s1 + L/R + d2/s2 + d3/s3",
+                "3L/R + L/R + d1/s1 + L/R + d2/s2 + d3/s3",
               ],
               correct: 2,
-              translation: "احسب الوقت الإجمالي للوصول.",
-              explanation: "2L/R + L/R + d1/s1 + L/R + d2/s2 + d3/s3",
+              translation:
+                "احسب الزمن الكلي لوصول 4 حزم في حالة استخدام أحد المبدلين store-and-forward والآخر cut-through.",
+              explanation: "الزمن = 2L/R + L/R + d1/s1 + L/R + d2/s2 + d3/s3.",
+            },
+            {
+              q: "Consider a sender can transmit at a rate of 1 Mbps bits/sec in both directions. Suppose packets containing only control (e.g., ACK or handshaking or request) are 100 bits long. Consider the HTTP protocol, and suppose that the initial downloaded object contains 3 referenced objects from the same server. Suppose that each downloaded object is 100 Kbits long except the last one which has 200 Kbits. Let RTT denotes the round trip time between the local host and the server containing the objects. Find with justification the total time needed to download the objects assuming parallel persistent HTTP.",
+              options: [
+                "3RTT + (3*100/10^6) + (100*10^3/10^6) + (100/10^6/3) + (200*10^3/10^6/3)",
+              ],
+              correct: 0,
+              translation:
+                "احسب الزمن الكلي اللازم لتنزيل الكائنات بافتراض HTTP المستمر المتوازي.",
+              explanation:
+                "المعادلة المطلوبة: 3RTT + (3×100)/10^6 + (100×10^3)/10^6 + (100/10^6)/3 + (200×10^3)/10^6/3.",
+            },
+          ],
+        },
+        {
+          t: "Exam",
+          d: "MidTerm Answers and Short Questions",
+          pdf: "datenew/subjects/computer-networks/questions/Mid/Other/Exam.pdf",
+          questions: [
+            {
+              q: "Can an HTTP response message contain an empty body? If yes, when can this happen?",
+              options: [
+                "Yes, if the requested object is recently modified.",
+                "Yes, if the requested object has been moved to a new location.",
+                "No, an HTTP response message can never have an empty body.",
+                "Yes, if the requested object is very small in size.",
+              ],
+              correct: 0,
+              translation:
+                "هل يمكن أن تحتوي رسالة استجابة HTTP على جسم فارغ؟ إذا كان الجواب نعم، متى يمكن أن يحدث ذلك؟",
+              explanation:
+                "يمكن أن تحتوي استجابة HTTP على جسم فارغ في ظروف معينة، مثل عندما يكون الكائن المطلوب معدلاً مؤخرًا، أو إذا لم يكن هناك محتوى لإرجاعه (مثل رمز الحالة 204 No Content).",
+            },
+            {
+              q: "Using Conditional GET in the HTTP Protocol, the number of RTT (Round Trip Time) is reduced if the object has not been modified since the date of the cached copy!",
+              options: ["False", "True"],
+              correct: 1,
+              translation:
+                "باستخدام Conditional GET في بروتوكول HTTP، يتم تقليل عدد RTT (وقت الذهاب والإياب) إذا لم يتم تعديل الكائن منذ تاريخ النسخة المخزنة مؤقتًا!",
+              explanation:
+                "يقلل استخدام Conditional GET من عدد RTTs عندما لا يتغير الكائن المخزن مؤقتًا، حيث سيعيد الخادم استجابة 304 Not Modified.",
+            },
+            {
+              q: "Top-level domain (TLD) servers are an organization's own DNS servers, providing authoritative hostname to IP mappings for the organization's named hosts.",
+              options: ["Yes", "No"],
+              correct: 1,
+              translation:
+                "خوادم النطاق الأعلى (TLD) هي خوادم DNS الخاصة بالمؤسسة، وتوفر تعيينات اسم المضيف إلى IP الموثوقة لمضيفي المؤسسة المسمين.",
+              explanation:
+                "خوادم TLD ليست خاصة بأي مؤسسة واحدة. فهي تتعامل مع تحليل اسم النطاق الموثوق للنطاقات العليا مثل .com و .org، ولكن ليس لتعيينات المضيفين الداخلية للمؤسسة.",
+            },
+            {
+              q: "How many sockets are there in a TCP server communicating with 13 clients concurrently?",
+              options: [
+                "13 sockets",
+                "14 sockets",
+                "1 socket",
+                "None of the options",
+              ],
+              correct: 1,
+              translation:
+                "كم عدد المقابس (sockets) الموجودة في خادم TCP الذي يتواصل مع 13 عميلاً في نفس الوقت؟",
+              explanation:
+                "يستخدم الخادم مقبسًا واحدًا للاستماع إلى الاتصالات الواردة، ومقبسًا واحدًا لكل عميل من العملاء الـ 13، لذا يوجد 14 مقبسًا في المجموع.",
+            },
+            {
+              q: "Which of the following statements about DNS is TRUE?",
+              options: [
+                "TLD servers store all the hostname-to-IP mappings of the Internet.",
+                "DNS servers listen to TCP port 53.",
+                "Every Web server must have a canonical name.",
+                "The local DNS server sometimes may provide out-of-date hostname-to-IP-address mapping.",
+              ],
+              correct: 3,
+              translation: "أي من العبارات التالية حول DNS صحيحة؟",
+              explanation:
+                "قد توفر خوادم DNS المحلية أحيانًا تعيينات قديمة بسبب البيانات المخزنة مؤقتًا.",
+            },
+            {
+              q: "A source and a destination are separated by 300,000 kilometers and are connected by a direct link with a speed of 2 Kbps. The propagation speed over the link is 20,000 meters/second. The source sends 100 packets to the destination using RDT2.2. Each packet is 2 ×10^43 bits long. Suppose ACK packets are of negligible size and the transmission channel is error-free. What will be the transmission time?",
+              options: [
+                "5 seconds",
+                "100 seconds",
+                "It depends on the propagation delay",
+                "Transmission time cannot be calculated",
+              ],
+              correct: 2,
+              translation:
+                "يفصل بين المصدر والوجهة مسافة 300,000 كيلومتر ويتم توصيلهما عبر رابط مباشر بسرعة 2 كيلوبت في الثانية. سرعة الانتشار عبر الرابط هي 20,000 متر/ثانية. يرسل المصدر 100 حزمة إلى الوجهة باستخدام RDT2.2. كل حزمة يبلغ طولها 2 × 10^43 بت. لنفترض أن حزم ACK ذات حجم ضئيل وأن قناة الإرسال خالية من الأخطاء. ما سيكون وقت الإرسال؟",
+              explanation:
+                "يتم حساب وقت الإرسال مع الأخذ في الاعتبار الوقت المستغرق لإرسال الحزم وتأخير الانتشار عبر المسافة. يجب دمج كلا العاملين.",
+            },
+            {
+              q: "What happens if the packets are too small in size for HTTP or TCP protocols?",
+              options: [
+                "The packets are lost due to insufficient bandwidth.",
+                "The network load increases due to an increased number of packets.",
+                "The protocols automatically adjust the packet size.",
+                "It has no impact on the network.",
+              ],
+              correct: 1,
+              translation:
+                "ماذا يحدث إذا كانت الحزم صغيرة جدًا بالنسبة لبروتوكولات HTTP أو TCP؟",
+              explanation:
+                "تؤدي الحزم الصغيرة إلى زيادة الحمل على الشبكة بسبب زيادة عدد الحزم.",
             },
           ],
         },
@@ -10369,13 +11939,13 @@ subjects.push({
 
   finalsCategories: [
     {
-      category: "Dr. Ebram Kamal - Finals",
+      category: "Dr. Ebram Kamal - Finals (Updated)",
       icon: "🎓",
-      description: "Computer Networks final exams by Dr. Ebram Kamal",
+      description: "Computer Networks final exams extracted from PDF files",
       items: [
         {
-          t: "Final 2023 — Dr. Ebram",
-          d: "Final exam questions — 2023",
+          t: "Final 2023 — Dr. Ebram (PDF)",
+          d: "Final exam — 10/9/2023, 9:00-11:00, IT351, Assiut University",
           pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Ebram/2023/Final 2023 Dr. Ebram.pdf",
           questions: [
             {
@@ -10388,12 +11958,11 @@ subjects.push({
                 "None of the above",
               ],
               correct: 2,
-              translation: "أي مما يلي عبارة عن subnet mask صالح؟",
-              explanation:
-                "255.0.0.0 — قناع صحيح (1s متتالية ثم 0s). 255.244.0.0 غير صالح لأن 244 = 11110100 يحتوي على 0s في المنتصف.",
+              translation: "أي مما يلي subnet mask صالح؟",
+              explanation: "255.0.0.0 — قناع صحيح (1s متتالية ثم 0s).",
             },
             {
-              q: "A browser requests to download index.html from a Web server. The HTTP response header received by the browser is shown below. Which of the following statements is TRUE? (Header includes: HTTP/1.1 200 OK, Accept-Ranges: bytes, Content-Type: text/html, Date, Expires, Last-Modified, Set-Cookie: PHPSESSID=..., Content-Length: 1256)",
+              q: "A browser requests to download index.html from a Web server. The HTTP response header received by the browser is shown below. Which of the following statements is TRUE? (Header: HTTP/1.1 200 OK, Set-Cookie: PHPSESSID=..., Content-Length: 1256)",
               options: [
                 "In the HTTP request, browser has requested for a non-persistent connection.",
                 "The Web server uses a cookie to keep the state information of the client.",
@@ -10402,10 +11971,8 @@ subjects.push({
                 "None of the above",
               ],
               correct: 1,
-              translation:
-                "متصفح يطلب تحميل index.html من سيرفر. هيدر HTTP response موضّح بالأسفل. أي عبارة صحيحة؟",
-              explanation:
-                "وجود Set-Cookie يعني السيرفر يستخدم الكوكيز للحفاظ على حالة العميل.",
+              translation: "بناءً على الهيدر، أي عبارة صحيحة؟",
+              explanation: "Set-Cookie يعني السيرفر يستخدم الكوكيز.",
             },
             {
               q: "Which of the following is a public IP address?",
@@ -10419,16 +11986,14 @@ subjects.push({
               correct: 3,
               translation: "أي مما يلي عنوان IP عام؟",
               explanation:
-                "192.169.10.10 — عناوين 10.x و 172.16-31.x و 192.168.x خاصة. 192.169.x عامة.",
+                "192.169.10.10 — عناوين 10.x و 172.16-31.x و 192.168.x خاصة.",
             },
             {
               q: "A Web server stores a webpage that comprises a base HTML file and 2 images referenced by the base HTML file. The HTML file is 100 bytes and each image is 200 bytes. A client is connected to the Web server through a direct link of 1 Mbps. Propagation delay between the Web server and the client is 50 milliseconds. The client downloads the webpage using persistent HTTP but without pipelining. Hong long (in milliseconds) does it take?",
               options: ["204", "200", "304", "None of the above"],
               correct: 2,
-              translation:
-                "سيرفر يخزّن صفحة HTML + صورتين. العميل متصل بـ 1 Mbps وتأخير الانتشار 50ms. يستخدم persistent HTTP بدون pipelining. كم مللي ثانية يستغرق التحميل؟",
-              explanation:
-                "304 ms — 3 كائنات × (50ms طلب + 50ms استجابة) = 300ms + وقت إرسال (0.8 + 1.6 + 1.6) ≈ 304ms.",
+              translation: "كم يستغرق تحميل الصفحة؟",
+              explanation: "304 ms — 6 RTTs × 50ms = 300 + transmission ≈ 304.",
             },
             {
               q: "Which of the following statements is true?",
@@ -10442,10 +12007,10 @@ subjects.push({
               correct: 2,
               translation: "أي عبارة صحيحة؟",
               explanation:
-                "الإنترنت يستخدم packet switching والهاتف التقليدي يستخدم circuit switching.",
+                "Internet = packet switching، الهاتف = circuit switching.",
             },
             {
-              q: "Consider the following Python code snippet: s1.bind(('', 8080)) ; s2, addr = s1.accept(). Suppose no exception is raised, which of the following statements is TRUE?",
+              q: "Consider the following Python code snippet. Suppose no exception is raised when the above code snippet is executed, which of the following statements is TRUE? s1.bind(('', 8080)) ; s2, addr = s1.accept()",
               options: [
                 "s1 is a UDP socket",
                 "Server uses s1 to transmit application data to client",
@@ -10454,9 +12019,8 @@ subjects.push({
                 "None of the above",
               ],
               correct: 3,
-              translation: "بناءً على كود Python، أي عبارة صحيحة؟",
-              explanation:
-                "s2 يستمع على المنفذ 8080 (نفس المنفذ المرتبط بـ s1)، لكن بعنوان عميل مختلف.",
+              translation: "بناءً على الكود، أي عبارة صحيحة؟",
+              explanation: "s2 listens to port 8080.",
             },
             {
               q: "What is the checksum (1's complement of the sum) of the following 3 bytes? 11110100, 10010011, 10011001",
@@ -10469,18 +12033,15 @@ subjects.push({
                 "None of the above",
               ],
               correct: 2,
-              translation:
-                "ما هو الـ checksum (مكمل 1 لمجموع) البايتات الثلاثة التالية؟",
-              explanation:
-                "11011101 — المجموع = 244+147+153 = 544، بعد wrap = 00100010، مكمل 1 = 11011101.",
+              translation: "ما هو الـ checksum للبايتات الثلاثة؟",
+              explanation: "11011101.",
             },
             {
               q: "The following diagram shows two hosts X and Y communicating over a channel using TCP. X and Y are sending data to each other. Each TCP segment contains 100 bytes of data. None of the segments shown in the figure are retransmitted, out-of-order or corrupted packets. The first segment received by X has the sequence number 100 and ACK number 150. What would be the ACK number (A) in the last segment received by Y?",
               options: ["250", "100", "150", "50", "None of the above"],
               correct: 0,
-              translation:
-                "في مخطط TCP بين X و Y، أول segment وصل لـ X له seq=100 و ACK=150. ما ACK number في آخر segment يصل لـ Y؟",
-              explanation: "250 — بناءً على تبادل segments في المخطط.",
+              translation: "ما ACK number في آخر segment يصل لـ Y؟",
+              explanation: "250 — بناءً على المخطط.",
             },
             {
               q: "Which of the following commands would NOT cause a DNS query to be generated?",
@@ -10493,7 +12054,7 @@ subjects.push({
               correct: 1,
               translation: "أي أمر لا يُولّد DNS query؟",
               explanation:
-                "telnet — يعتمد على hostname لكن بعض التطبيقات قد تستخدم IP مباشر. الأوامر dig و nslookup متخصصة في DNS.",
+                "telnet — قد يستخدم IP مباشر. dig و nslookup متخصصان في DNS.",
             },
             {
               q: "There are many nodes in a shared medium network and most nodes are likely to transmit frequently. Which of the following multiple access protocol(s) is (are) suitable?",
@@ -10509,22 +12070,20 @@ subjects.push({
               correct: 3,
               translation:
                 "في شبكة medium مشترك فيها عقد كثيرة تنقل كثيراً، أي بروتوكول مناسب؟",
-              explanation:
-                "Token passing — مناسب للحمل العالي لأنه يتفادى التصادم. CSMA و ALOHA غير مناسبين للحمل العالي.",
+              explanation: "Token passing — مناسب للحمل العالي.",
             },
             {
               q: "A packet switch receives a packet and determines the outbound link to which the packet should be forwarded. When the packet arrives, x bits of the currently-being-transmitted packet have been transmitted on this outbound link and n other packets are waiting to be transmitted. Packets are transmitted continuously in order of arrival. Suppose all packets are L bits and the link rate is R bps. What is the queuing delay?",
               options: [
-                "nL / R",
-                "L / R",
-                "n(L - x) / R",
-                "nL + (L - x) / R",
-                "(nL + (x - L)) / R",
+                "nL/R",
+                "L/R",
+                "n(L-x)/R",
+                "nL +(L-x)/R",
+                "(nL + (x-L))/R",
               ],
               correct: 3,
-              translation: "ما هو تأخير الانتظار (Queuing Delay)؟",
-              explanation:
-                "(nL + (L - x)) / R — مجموع بتات الحزم المنتظرة + الباقي من الحزمة الحالية ÷ معدل الرابط.",
+              translation: "ما هو تأخير الانتظار؟",
+              explanation: "(nL + (L-x))/R.",
             },
             {
               q: "Which of the following layers doesn't appear in the Internet Protocol Stack?",
@@ -10537,8 +12096,7 @@ subjects.push({
               ],
               correct: 3,
               translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation:
-                "طبقة الجلسة (Session) — غير موجودة في Internet Stack (5 طبقات فقط).",
+              explanation: "Session layer.",
             },
             {
               q: "Which of the following statements is true about circuit switching?",
@@ -10550,8 +12108,7 @@ subjects.push({
               ],
               correct: 2,
               translation: "أي عبارة صحيحة عن circuit switching؟",
-              explanation:
-                "None of the above — الخيار الصحيح (الموارد تُخصص مسبقاً) غير موجود في الاختيارات، وباقي الخيارات خاطئة.",
+              explanation: "None of the above — الخيار الصحيح غير موجود.",
             },
             {
               q: "Which of the following statements about DHCP is FALSE?",
@@ -10565,7 +12122,7 @@ subjects.push({
               correct: 2,
               translation: "أي عبارة عن DHCP خاطئة؟",
               explanation:
-                "DHCP يمكنه تخصيص عناوين خاصة وعامة، ليس فقط خاصة. باقي العبارات صحيحة.",
+                "DHCP can only allocate private IP addresses — خاطئة، DHCP يخصص عناوين خاصة وعامة.",
             },
             {
               q: "Which of the following statements about DNS is TRUE?",
@@ -10578,17 +12135,15 @@ subjects.push({
               ],
               correct: 3,
               translation: "أي عبارة عن DNS صحيحة؟",
-              explanation:
-                "سيرفر DNS المحلي قد يقدم بيانات قديمة بسبب الـ Caching.",
+              explanation: "Local DNS may provide out-of-date mapping.",
             },
             {
               q: "Consider the generator, G=1001, what is the CRC value R if data D = 11000111010?",
               options: ["110", "011", "101", "001", "111", "None of the above"],
               correct: 0,
               translation:
-                "باستخدام G=1001، ما قيمة CRC R للبيانات D = 11000111010؟",
-              explanation:
-                "110 — بعد إلحاق 3 أصفار و القسمة XOR بـ 1001، الباقي = 110.",
+                "باستخدام G=1001، ما CRC R للبيانات D = 11000111010؟",
+              explanation: "110.",
             },
             {
               q: "A TCP client sends a sequence of packets to a TCP server. Each packet is 1000 bytes and the link rate is 2 Mbps. The propagation delay between the client and server is 6 ms. Which of following is the best timeout value chosen by the TCP client?",
@@ -10597,25 +12152,23 @@ subjects.push({
               translation:
                 "TCP client يرسل packets لـ server. كل packet 1000 بايت، link rate 2 Mbps، propagation 6ms. ما أفضل timeout؟",
               explanation:
-                "18ms — RTT ≈ 2*6 + 1000*8/2*10^6*1000 = 16ms، timeout يجب أن يكون > RTT.",
+                "18ms — RTT > 12ms، timeout يجب أن يكون أكبر من RTT.",
             },
             {
-              q: "Consider a datagram network using 8-bit host addresses. Suppose a router uses longest prefix matching and has the following forwarding table: 10→3, 1010→1, 110→2, otherwise→0. What is the number of destination host addresses that is associated with interface 3?",
+              q: "Consider a datagram network using 8-bit host addresses. Suppose a router uses longest prefix matching and has the following forwarding table. What is the number of destination host addresses that is associated with interface 3? (10→3, 1010→1, 110→2, otherwise→0)",
               options: ["40", "58", "48", "50", "128"],
               correct: 2,
-              translation:
-                "في شبكة 8-bit، router يستخدم longest prefix matching. كم عنوان مرتبط بـ interface 3 (prefix 10)؟",
+              translation: "كم عنوان مرتبط بـ interface 3 (prefix 10)؟",
               explanation:
-                "48 — prefix 10 يطابق 64 عنوان، لكن 16 منها (prefix 1010) تذهب لـ interface 1، فيبقى 64-16 = 48.",
+                "48 — prefix 10 يطابق 64 عنوان، نخصم 16 (prefix 1010) = 48.",
             },
             {
               q: "Suppose 5 data packets arrive at a TCP receiver. Each packet contains 10 bytes of application data. The sequence numbers of these 5 packets (shown in the order of arrival) are 50, 60, 90, 70 and 80 respectively. After receiving each packet, the TCP receiver sends an ACK packet. Suppose the first ACK packet has ACK number 60. What is the ACK number of the 3rd ACK packet?",
               options: ["60", "50", "90", "70", "80", "None of the above"],
               correct: 3,
-              translation:
-                "وصلت 5 packets بتسلسل 50, 60, 90, 70, 80 (كل واحد 10 بايت). أول ACK = 60. ما ACK number الـ 3rd ACK؟",
+              translation: "ما هو ACK number للـ 3rd ACK packet؟",
               explanation:
-                "70 — بعد receipt 50 و 60، المتوقع = 70. الـ 3rd packet (seq 90) خارج الترتيب، فيبقى ACK = 70 (duplicate).",
+                "70 — بعد receipt 50 و 60، المتوقع = 70. الـ 3rd packet (seq 90) خارج الترتيب.",
             },
             {
               q: "An IP address block 192.168.108/19 can be further divided into X subnets, each supporting a maximum of Y hosts. Which of the following is NOT a valid assignment?",
@@ -10628,25 +12181,22 @@ subjects.push({
               ],
               correct: 1,
               translation:
-                "كتلة IP 192.168.108/19 يمكن تقسيمها لـ X subnet كل واحد يدعم Y host. أي تقسيم غير صالح؟",
-              explanation:
-                "X=32, Y=260 — /19 يمكن تقسيمها لـ 16 subnets من /23 (وليس 32) كل واحد يدعم 510 hosts (وليس 260).",
+                "كتلة 192.168.108/19 يمكن تقسيمها لـ X subnet يدعم كل واحد Y hosts. أي تقسيم غير صالح؟",
+              explanation: "X=32, Y=260 — غير صالح.",
             },
             {
-              q: "The following diagram shows two hosts X and Y communicating over a channel using TCP. X and Y are sending data to each other. Each TCP segment contains 100 bytes of data. None of the segments shown in the figure are retransmitted, out-of-order or corrupted packets. The first segment received by X has the sequence number 100 and ACK number 150. What would be the sequence number (S) in the last segment received by Y?",
+              q: "The following diagram shows two hosts X and Y communicating over a channel using TCP. X and Y are sending data to each other. Each TCP segment contains 100 bytes of data. The first segment received by X has the sequence number 100 and ACK number 150. What would be the sequence number (S) in the last segment received by Y?",
               options: ["250", "200", "100", "150", "50", "None of the above"],
               correct: 1,
-              translation:
-                "في مخطط TCP بين X و Y، أول segment وصل لـ X له seq=100 و ACK=150. ما seq number في آخر segment يصل لـ Y؟",
-              explanation: "200 — بناءً على تبادل segments في المخطط.",
+              translation: "ما seq number في آخر segment يصل لـ Y؟",
+              explanation: "200 — بناءً على المخطط.",
             },
             {
               q: "In Go-back-N protocol, what are the size of the respective sender and receiver buffers required for a window size of N?",
-              options: ["1,1", "N-1;1", "N-1;N-1", "N;1"],
-              correct: 3,
-              translation:
-                "في Go-back-N، ما أحجام مخازن المرسل والمستقبل لحجم نافذة N؟",
-              explanation: "N; 1 — المرسل يحتاج N والمستقبل يحتاج 1 فقط.",
+              options: ["1,1", "N-1;1", "N;1"],
+              correct: 2,
+              translation: "في Go-back-N، ما أحجام المخازن لحجم نافذة N؟",
+              explanation: "N; 1.",
             },
             {
               q: "Which of the following is present in both HTTP request line and status line?",
@@ -10660,7 +12210,7 @@ subjects.push({
               correct: 2,
               translation:
                 "أي مما يلي موجود في كل من HTTP request line و status line؟",
-              explanation: "HTTP version number — موجود في كلا السطرين.",
+              explanation: "HTTP version number.",
             },
             {
               q: "Consider the transmission between a UDP sender and a UDP receiver. Which of the following will never happen? You may assume that the application riding on UDP doesn't implement any reliability mechanisms.",
@@ -10674,22 +12224,21 @@ subjects.push({
               correct: 3,
               translation: "أي مما يلي لن يحدث أبداً في نقل UDP؟",
               explanation:
-                "UDP receiver receives corrupted packets but fails to detect bit errors — إذا كان checksum مفعل، يتم اكتشاف الأخطاء دائماً.",
+                "UDP receiver receives corrupted packets but fails to detect bit errors.",
             },
             {
               q: "A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. Suppose ACK packets are of negligible size and transmission channel is perfectly reliable. What is the throughput (in bps) of transmission?",
               options: ["500", "550", "600", "450", "400", "None of the above"],
               correct: 0,
               translation: "ما هو معدل النقل (Throughput)؟",
-              explanation:
-                "500 bps — (100 * 2000) / (100 * (1 + 3000) * 10^-3) ≈ 500 bps.",
+              explanation: "500 bps.",
             },
           ],
         },
         {
-          t: "Final 2025 — Dr. Ebram",
-          d: "Final exam questions — 2025",
-          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Ebram/2025/Final 2025 Dr. Ebram.pdf",
+          t: "Final 2025 — Dr. Ebram (PDF)",
+          d: "Final exam — 28/12/2024, 12:00-2:00",
+          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Ebram/2026/Final 2025 Dr. Ebram.pdf",
           questions: [
             {
               q: "1s complement is used as checksum in __________.",
@@ -10701,15 +12250,14 @@ subjects.push({
               ],
               correct: 3,
               translation: "مكمل 1 يُستخدم كـ checksum في __________.",
-              explanation:
-                "Both TCP and UDP — كلا البروتوكولين يستخدم مكمل 1 في checksum.",
+              explanation: "Both TCP and UDP.",
             },
             {
               q: "FTP runs over UDP – need to ensure files are uploaded/downloaded intact;",
               options: ["True", "False"],
               correct: 1,
               translation: "FTP يعمل فوق UDP — لضمان رفع وتحميل الملفات سليمة.",
-              explanation: "خطأ — FTP يعمل فوق TCP (يحتاج نقل موثوق)، ليس UDP.",
+              explanation: "False — FTP يعمل فوق TCP.",
             },
             {
               q: "Which of the following is present in both HTTP request line and status line?",
@@ -10722,16 +12270,14 @@ subjects.push({
               correct: 1,
               translation:
                 "أي مما يلي موجود في كل من HTTP request line و status line؟",
-              explanation: "HTTP version number — موجود في كلا السطرين.",
+              explanation: "HTTP version number.",
             },
             {
               q: "Host A sends 5 data packets to host B using TCP protocol. Each data packet contains 10 bytes of application data. Suppose 5 data packets arrive in order and all are accepted by B. The last ACK packet sent by B has ACK number 99. What is the sequence number of the first data packet sent by A?",
               options: ["58", "100", "99", "49"],
               correct: 3,
-              translation:
-                "A يرسل 5 packets لـ B عبر TCP، كل packet 10 بايت. آخر ACK = 99. ما seq number لأول packet؟",
-              explanation:
-                "49 — آخر ACK = 99، بإجمالي 50 بايت (5*10)، يعني أول بايت كان 49.",
+              translation: "ما هو seq number لأول packet أرسله A؟",
+              explanation: "49.",
             },
             {
               q: "If the fragment offset in an IP header has a value of 100, it means that __________.",
@@ -10743,18 +12289,18 @@ subjects.push({
               ],
               correct: 3,
               translation:
-                "إذا كانت قيمة fragment offset في IP header = 100، فهذا يعني __________.",
+                "إذا كانت قيمة fragment offset = 100، فهذا يعني __________.",
               explanation:
-                "this first byte of payload is byte 800 — fragment offset بوحدات 8 بايت، فـ 100 * 8 = 800.",
+                "byte 800 — fragment offset بوحدات 8 بايت، فـ 100*8 = 800.",
             },
             {
               q: "Suppose the propagation delay between furthest nodes is d and link rate is r. What is the minimal frame size L to ensure collision will always be detected in CSMA/CD protocol?",
               options: ["2 * d * r", "2 * d + r", "d + r", "2 * (d + r)"],
               correct: 0,
               translation:
-                "إذا كان propagation delay = d و link rate = r، ما أقل حجم frame L لضمان اكتشاف التصادم في CSMA/CD؟",
+                "ما أقل حجم frame L لضمان اكتشاف التصادم في CSMA/CD؟",
               explanation:
-                "L = 2 * d * r — ضمان أن الإرسال يستمر لمدة RTT على الأقل.",
+                "L = 2 * d * r — ضمان استمرار الإرسال لمدة RTT على الأقل.",
             },
             {
               q: "Which of the following protocols run at the application layer? i) SMTP ii) UDP iii) POP iv) DNS",
@@ -10765,43 +12311,38 @@ subjects.push({
                 "(i) and (iii) only",
               ],
               correct: 1,
-              translation:
-                "أي البروتوكولات تعمل في طبقة التطبيق؟ i) SMTP ii) UDP iii) POP iv) DNS",
+              translation: "أي البروتوكولات تعمل في طبقة التطبيق؟",
               explanation:
-                "(i), (iii) and (iv) only — SMTP و POP و DNS في طبقة التطبيق. UDP في طبقة النقل.",
+                "(i), (iii), (iv) — SMTP, POP, DNS. UDP في طبقة النقل.",
             },
             {
               q: "What is the 1s complement of the sum of the following 2 bytes: 11011010 and 01100101?",
               options: ["00111110", "11000001", "01000000", "10111111"],
               correct: 3,
-              translation: "ما هو مكمل 1 لمجموع البايتين 11011010 و 01100101؟",
+              translation: "ما هو مكمل 1 لمجموع البايتين؟",
               explanation:
-                "10111111 — المجموع = 218 + 101 = 319، بعد wrap = 01000000، مكمل 1 = 10111111.",
+                "10111111 — المجموع = 218+101 = 319، بعد wrap = 01000000، مكمل 1 = 10111111.",
             },
             {
               q: "In a subnet, the first IP address is 172.18.176.0 and the last IP address is 172.18.183.255. What is the length of network prefix of this subnet?",
               options: ["29", "28", "22", "21"],
               correct: 3,
-              translation:
-                "في subnet، أول IP = 172.18.176.0 و آخر IP = 172.18.183.255. ما طول network prefix؟",
-              explanation:
-                "21 — عدد العناوين = 8*256 = 2048 = 2^11، فطول prefix = 32 - 11 = 21.",
+              translation: "ما طول network prefix للـ subnet؟",
+              explanation: "21 — 8*256 = 2048 = 2^11، prefix = 32-11 = 21.",
             },
             {
-              q: "The access method for wireless LAN as defined by IEEE 802.11 is based on ________.",
+              q: "The access method for wireless LAN as defined by IEEE 802.11 is based on ______.",
               options: ["CSMA/CD", "Polling", "CSMA", "CSMA/CA"],
               correct: 3,
               translation:
-                "طريقة الوصول للـ wireless LAN حسب IEEE 802.11 تعتمد على ________.",
-              explanation:
-                "CSMA/CA — تجنب التصادم (Collision Avoidance)، يستخدم في Wi-Fi.",
+                "طريقة الوصول للـ wireless LAN حسب IEEE 802.11 تعتمد على ______.",
+              explanation: "CSMA/CA — Collision Avoidance.",
             },
             {
               q: "How many of the following IP addresses belong to the subnet 192.168.160.0/20? i) 192.168.15.1 ii) 192.168.177.254 iii) 192.188.168.230 iv) 192.168.169.31",
               options: ["0", "3", "1", "2"],
               correct: 2,
-              translation:
-                "كم عنوان من التالي ينتمي لـ subnet 192.168.160.0/20؟",
+              translation: "كم عنوان ينتمي لـ subnet 192.168.160.0/20؟",
               explanation:
                 "1 — فقط 192.168.169.31 (range: 192.168.160.0 - 192.168.175.255).",
             },
@@ -10809,18 +12350,15 @@ subjects.push({
               q: "The _______ layer of the Internet protocol stack is responsible for delivering data from sending process to receiving process.",
               options: ["application", "transport", "network", "link"],
               correct: 1,
-              translation:
-                "طبقة _______ في Internet protocol stack مسؤولة عن التسليم من عملية لعملية.",
-              explanation:
-                "transport — طبقة النقل مسؤولة عن process-to-process delivery.",
+              translation: "طبقة _______ مسؤولة عن التسليم من عملية لعملية.",
+              explanation: "transport — process-to-process delivery.",
             },
             {
               q: "Which of the following is the Web's application layer protocol?",
               options: ["HTTP", "UDP", "TCP", "DHCP"],
               correct: 0,
-              translation: "أي مما يلي هو بروتوكول طبقة التطبيق للويب؟",
-              explanation:
-                "HTTP — HyperText Transfer Protocol هو بروتوكول الويب.",
+              translation: "أي مما يلي بروتوكول طبقة التطبيق للويب؟",
+              explanation: "HTTP.",
             },
             {
               q: "What does HTTP stand for?",
@@ -10852,8 +12390,7 @@ subjects.push({
               ],
               correct: 1,
               translation: "أي مما يلي subnet mask صالح؟",
-              explanation:
-                "255.255.255.128 — 1s متتالية ثم 0s. 255.254.0.1 و 254.240.0.0 غير صالحين لوجود 1s بعد 0s.",
+              explanation: "255.255.255.128 — 1s متتالية ثم 0s.",
             },
             {
               q: "Which of the following statements regarding the Internet is TRUE?",
@@ -10879,16 +12416,14 @@ subjects.push({
               correct: 3,
               translation:
                 "حقل ________ في IP header يمنع تجوال datagram بلا حدود.",
-              explanation:
-                "TTL (Time To Live) — يُنقص عند كل قفزة ويتخلص من الحزمة عند الوصول لـ 0.",
+              explanation: "TTL.",
             },
             {
               q: "Which of the following layers doesn't appear in the Internet Protocol Stack?",
               options: ["session", "transport", "application", "network"],
               correct: 0,
               translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation:
-                "session — طبقة الجلسة غير موجودة في Internet Stack.",
+              explanation: "session.",
             },
             {
               q: "Two hosts A and B are 2000 km apart and are connected by a direct link of 200 kbps. Propagation speed on the link is 2.5 * 10^8 m/s. A is sending 10 packets to B continuously. Each packet is 100 bytes in size. Suppose the channel is error-free, how long (in seconds) does it take for B to receive all the packets?",
@@ -10899,10 +12434,8 @@ subjects.push({
                 "0.04 seconds",
               ],
               correct: 1,
-              translation:
-                "كم من الوقت (بالثواني) يستغرقه B لاستلام جميع الحزم؟",
-              explanation:
-                "0.048s — transmission = 10*100*8/200000 = 0.04s, propagation = 2000000/2.5e8 = 0.008s, total = 0.048s.",
+              translation: "كم من الوقت يستغرقه B لاستلام جميع الحزم؟",
+              explanation: "0.048s — 0.04 + 0.008.",
             },
             {
               q: "Can HTTP response message contains an empty body? If yes, When can this happen?",
@@ -10915,8 +12448,7 @@ subjects.push({
               correct: 3,
               translation:
                 "هل يمكن أن تحتوي رسالة HTTP response على جسم فارغ؟ ومتى؟",
-              explanation:
-                "Yes, if the requested object has been moved to a new location (status 301/302).",
+              explanation: "Yes, if moved to a new location (301/302).",
             },
             {
               q: "An IP datagram with destination address 192.168.1.10 reaches a router with the following 4 routing entries. Which entry will be used to forward this packet?",
@@ -10928,9 +12460,8 @@ subjects.push({
               ],
               correct: 0,
               translation:
-                "IP datagram وجهته 192.168.1.10 يصل لـ router بـ 4 entries. أي entry سيُستخدم؟",
-              explanation:
-                "192.168.1.0/24 — longest prefix matching. /24 أطول من /23.",
+                "أي entry سيُستخدم لتوجيه packet وجهته 192.168.1.10؟",
+              explanation: "192.168.1.0/24 — longest prefix matching.",
             },
             {
               q: "Consider a datagram network using 8-bit IP addresses. Suppose a router uses longest prefix matching and has the following forwarding table. For interface 4, give the associated range of destination IP addresses and the number of destination IP addresses in that range.",
@@ -10941,8 +12472,7 @@ subjects.push({
                 "1101 0000 – 1101 1111, 16",
               ],
               correct: 3,
-              translation:
-                "في شبكة 8-bit، router يستخدم longest prefix matching. ما الـ range لـ interface 4 وعدد العناوين؟",
+              translation: "ما الـ range لـ interface 4 وعدد العناوين؟",
               explanation:
                 "1101 0000 – 1101 1111, 16 — prefix /28 يطابق 16 عنوان.",
             },
@@ -10951,18 +12481,16 @@ subjects.push({
               options: ["application", "link", "transport", "network"],
               correct: 3,
               translation:
-                "طبقة ________ مسؤولة عن نقل datagrams من المصدر إلى الوجهة.",
-              explanation:
-                "network — طبقة الشبكة مسؤولة عن host-to-host delivery.",
+                "طبقة ________ مسؤولة عن نقل datagrams من المصدر للوجهة.",
+              explanation: "network — host-to-host delivery.",
             },
             {
               q: "Live video streaming often runs over TCP – fast; relatively stable throughput!",
               options: ["True", "False"],
               correct: 1,
-              translation:
-                "البث المباشر للفيديو يعمل غالباً فوق TCP — سريع ومستقر!",
+              translation: "البث المباشر للفيديو يعمل غالباً فوق TCP.",
               explanation:
-                "خطأ — البث المباشر غالباً يستخدم UDP لتفادي تأخير إعادة الإرسال.",
+                "False — غالباً يستخدم UDP لتفادي تأخير إعادة الإرسال.",
             },
             {
               q: "Consider sending a sequence of packets from a host in Assiut University to another host in Assiut National University. Packets may be of different length but all go through the same route to the destination. Which of the following end-to-end delay component is a constant (i.e. doesn't vary from packet to packet)?",
@@ -10974,9 +12502,8 @@ subjects.push({
               ],
               correct: 2,
               translation:
-                "إرسال packets من مصدر لوجهة بنفس المسار لكن بأطوال مختلفة. أي مكون من end-to-end delay ثابت؟",
-              explanation:
-                "Propagation delay — يعتمد على المسافة والسرعة فقط، ثابت لنفس المسار.",
+                "أي مكون من end-to-end delay ثابت لنفس المسار لكن packets بأطوال مختلفة؟",
+              explanation: "Propagation delay — يعتمد على المسافة والسرعة فقط.",
             },
             {
               q: "Knowing that you have taken Computer Networks, a friend approaches you for help with his laptop. He says that he cannot access the Web page hosted at www.example.org. Using the tools you have learned in Computer Networks, you run the following commands on his laptop to troubleshoot what could be the reason.",
@@ -10988,8 +12515,8 @@ subjects.push({
               ],
               correct: 3,
               translation:
-                "صديق لا يستطيع الوصول لـ www.example.org. أي أمر تستخدمه للتشخيص؟",
-              explanation: "dig — للتحقق من قدرة DNS server على حل اسم المضيف.",
+                "صديق لا يستطيع الوصول لـ www.example.org. أي أمر تستخدمه؟",
+              explanation: "dig — للتحقق من قدرة DNS على حل اسم المضيف.",
             },
             {
               q: "Which of the following best characterizes CSMA/CD protocol?",
@@ -11000,16 +12527,16 @@ subjects.push({
                 "Send whenever there is data and then listen to the channel for collision.",
               ],
               correct: 0,
-              translation: "أي مما يلي يصف بروتوكول CSMA/CD بشكل أفضل؟",
+              translation: "أي مما يلي يصف CSMA/CD بشكل أفضل؟",
               explanation:
-                "Listen before accessing AND continue listening during transmission — هذا هو CSMA/CD.",
+                "Listen before AND continue listening during transmission.",
             },
             {
               q: "CSMA/CD is a (an) ___________ layer protocol.",
               options: ["transport", "application", "link", "network"],
               correct: 2,
               translation: "CSMA/CD هو بروتوكول طبقة ___________.",
-              explanation: "link — CSMA/CD بروتوكول طبقة الربط.",
+              explanation: "link.",
             },
             {
               q: "For the following screenshot taken on a hand phone, what is the IP address of the hand phone in CIDR format?",
@@ -11020,13 +12547,11 @@ subjects.push({
                 "117.91.224.0/24",
               ],
               correct: 1,
-              translation:
-                "بناءً على screenshot لهاتف، ما IP address بالـ CIDR format؟",
-              explanation:
-                "117.91.226.234/22 — عنوان محدد للهاتف، ليس عنوان شبكة.",
+              translation: "ما IP address للهاتف بالـ CIDR format؟",
+              explanation: "117.91.226.234/22 — عنوان محدد للهاتف.",
             },
             {
-              q: "A sender and a receiver communicate over an unreliable channel of the following characteristics: packets may be lost or delayed for arbitrarily long time but won't be corrupted or reordered. We would like to design a stop-and-wait, NAK-free protocol called rdt 4.0 to ensure reliable transmission. In rdt 4.0, sender keeps a timer for a sent but unacknowledged packet. When timer expires, sender deems the packet is lost and will retransmit it. You are to design other features of rdt 4.0 to make it a reliable protocol for the given scenario. The features you design must not conflict with the features/specifications given above. Which of the following statements about your rdt 4.0 is TRUE?",
+              q: "A sender and a receiver communicate over an unreliable channel of the following characteristics: packets may be lost or delayed for arbitrarily long time but won't be corrupted or reordered. We would like to design a stop-and-wait, NAK-free protocol called rdt 4.0 to ensure reliable transmission. In rdt 4.0, sender keeps a timer for a sent but unacknowledged packet. When timer expires, sender deems the packet is lost and will retransmit it. You are to design other features of rdt 4.0 to make it a reliable protocol for the given scenario. Which of the following statements about your rdt 4.0 is TRUE?",
               options: [
                 "Receiver must maintain a timer for the ACK sent. If no packet arrives before timer expires, receiver should retransmit the ACK.",
                 "Sender must resend data packet if a duplicate ACK is received.",
@@ -11034,10 +12559,8 @@ subjects.push({
                 "Receiver must send ACKs for duplicate packets.",
               ],
               correct: 3,
-              translation:
-                "في تصميم rdt 4.0 (stop-and-wait, NAK-free) لقناة قد تفقد أو تأخر الحزم لكن لا تالفها أو تعيد ترتيبها، أي عبارة صحيحة؟",
-              explanation:
-                "Receiver must send ACKs for duplicate packets — حتى يعرف المرسل أن الحزمة وصلت.",
+              translation: "في تصميم rdt 4.0، أي عبارة صحيحة؟",
+              explanation: "Receiver must send ACKs for duplicate packets.",
             },
             {
               q: "In a host that is sending data to the network, UDP receives data from the _______ layer and sends data to the _________ layer.",
@@ -11050,8 +12573,7 @@ subjects.push({
               correct: 2,
               translation:
                 "في host يرسل بيانات، UDP يستقبل من طبقة _______ ويرسل لطبقة _______.",
-              explanation:
-                "application; network — UDP (طبقة نقل) يستقبل من التطبيق (فوق) ويرسل للشبكة (تحت).",
+              explanation: "application; network.",
             },
             {
               q: "Which of the following statement regarding TCP is TRUE?",
@@ -11063,8 +12585,7 @@ subjects.push({
               ],
               correct: 3,
               translation: "أي عبارة عن TCP صحيحة؟",
-              explanation:
-                "TCP provides a connection-oriented service — TCP بروتوكول موجه بالاتصال. الخيارات الأخرى خاطئة.",
+              explanation: "TCP provides a connection-oriented service.",
             },
             {
               q: "In circuit switching, circuit segment is idle if not used by call.",
@@ -11072,7 +12593,7 @@ subjects.push({
               correct: 0,
               translation:
                 "في circuit switching، قطاع الدائرة خامل إذا لم يُستخدم.",
-              explanation: "Agree — الموارد محجوزة حتى لو خاملة.",
+              explanation: "Agree.",
             },
             {
               q: "A host uses a variety of protocols to discover information about the network it is connected to. Which of the following statements is FALSE?",
@@ -11083,10 +12604,8 @@ subjects.push({
                 "To send a packet outside the host's subnet, the host must first discover the IP address of its first-hop router using DHCP.",
               ],
               correct: 2,
-              translation:
-                "host يستخدم بروتوكولات لاكتشاف معلومات الشبكة. أي عبارة خاطئة؟",
-              explanation:
-                "To get an IP address assigned, a host must first discover the IP address of its DHCP server using DNS — DHCP يُكتشف عبر broadcast، ليس DNS.",
+              translation: "أي عبارة خاطئة؟",
+              explanation: "DHCP يُكتشف عبر broadcast، ليس DNS.",
             },
             {
               q: "The first line in an HTTP request message is called the _________ line. The first line in an HTTP response message is called the _________ line.",
@@ -11099,8 +12618,7 @@ subjects.push({
               correct: 1,
               translation:
                 "أول سطر في HTTP request message يسمى سطر _________. أول سطر في HTTP response message يسمى سطر _________.",
-              explanation:
-                "request; status — request line للطلب و status line للاستجابة.",
+              explanation: "request; status.",
             },
             {
               q: "Is it necessary for an IP datagram to carry both the source and the destination IP addresses?",
@@ -11120,8 +12638,7 @@ subjects.push({
               ],
               correct: 2,
               translation: "أي مما يلي يكوّن end-to-end delay؟",
-              explanation:
-                "processing, propagation, queueing, transmission — المكونات الأربعة.",
+              explanation: "processing, propagation, queueing, transmission.",
             },
             {
               q: "Which of the following fields is present in both UDP header and TCP header?",
@@ -11133,8 +12650,7 @@ subjects.push({
               ],
               correct: 0,
               translation: "أي حقل موجود في كل من UDP header و TCP header؟",
-              explanation:
-                "Checksum — موجود في كلا البروتوكولين. destination IP في IP header، و ACK و seq في TCP فقط.",
+              explanation: "Checksum — موجود في كلا البروتوكولين.",
             },
             {
               q: "The data value to be transmitted is 10100110 and the CRC generator is 11001. What is the CRC value computed?",
@@ -11142,8 +12658,7 @@ subjects.push({
               correct: 3,
               translation:
                 "بيانات 10100110 و CRC generator 11001. ما قيمة CRC؟",
-              explanation:
-                "1100 — بعد إلحاق 4 أصفار و القسمة XOR، الباقي = 1100.",
+              explanation: "1100.",
             },
             {
               q: "Ethernet provides an unreliable service. Therefore,",
@@ -11155,11 +12670,10 @@ subjects.push({
               ],
               correct: 1,
               translation: "Ethernet يقدم خدمة غير موثوقة. لذلك،",
-              explanation:
-                "Ethernet drops a frame that fails error checking without retransmission — لا يوجد إعادة إرسال في Ethernet.",
+              explanation: "Ethernet drops a frame without retransmission.",
             },
             {
-              q: "Suppose there is a 10 Mbps microwave link between a geostationary satellite and its base station on Earth, which are 3.6 * 10^7 meters apart. The satellite takes a digital photo once in a while and then sends it to the base station. Assume a propagation speed of 2.4 * 10^8 meters/second. What is the propagation delay (in seconds) of the link? Suppose the satellite takes a photo every 24 seconds and let x denote the size of the photo. What is the minimum value of x (in bits) for the microwave link to be fully utilized (i.e. satellite is always busy transmitting)?",
+              q: "Suppose there is a 10 Mbps microwave link between a geostationary satellite and its base station on Earth, which are 3.6 * 10^7 meters apart. The satellite takes a digital photo once in a while and then sends it to the base station. Assume a propagation speed of 2.4 * 10^8 meters/second. What is the propagation delay (in seconds) of the link? Suppose the satellite takes a photo every 24 seconds and let x denote the size of the photo. What is the minimum value of x (in bits) for the microwave link to be fully utilized?",
               options: [
                 "The propagation delay is 0.15 seconds and the minimum value of x is 2.4 * 10^8.",
                 "The propagation delay is 0.15 seconds and the minimum value of x is 0.024 * 10^8.",
@@ -11168,9 +12682,8 @@ subjects.push({
               ],
               correct: 0,
               translation:
-                "وصلة microwave 10 Mbps بين قمر صناعي ومحطة أرضية بُعد 3.6*10^7m، سرعة انتشار 2.4*10^8. ما propagation delay؟ وما أقل x (bits) لاستغلال الوصلة بالكامل إذا التقط صورة كل 24s؟",
-              explanation:
-                "0.15s propagation delay, x = 2.4*10^8 bits — propagation = 3.6e7/2.4e8 = 0.15s، x = 10e6 * 24 = 2.4e8 bits.",
+                "ما propagation delay للوصلة وما أقل x لاستغلال الوصلة بالكامل؟",
+              explanation: "0.15s propagation, x = 2.4*10^8 bits.",
             },
             {
               q: "Which of the following statements regarding application layer protocol is FALSE?",
@@ -11183,7 +12696,7 @@ subjects.push({
               correct: 1,
               translation: "أي عبارة عن بروتوكولات طبقة التطبيق خاطئة؟",
               explanation:
-                "A browser can open only one TCP connection at a time — خاطئة، المتصفح يمكنه فتح عدة connections.",
+                "A browser can open only one TCP connection at a time — خاطئة.",
             },
             {
               q: "Which of the following technique/mechanism is most essential in the design of reliable transmission protocols?",
@@ -11195,9 +12708,8 @@ subjects.push({
               ],
               correct: 3,
               translation:
-                "أي تقنية/ميكانيزم أساسي في تصميم بروتوكولات النقل الموثوقة؟",
-              explanation:
-                "Error detection — لا يمكن ضمان الموثوقية بدون اكتشاف الأخطاء.",
+                "أي تقنية أساسية في تصميم بروتوكولات النقل الموثوقة؟",
+              explanation: "Error detection.",
             },
             {
               q: "Which of the following statement about 2-dimensional parity bits is FALSE?",
@@ -11208,9 +12720,9 @@ subjects.push({
                 "It can detect any two-bit error.",
               ],
               correct: 0,
-              translation: "أي عبارة عن 2-dimensional parity bits خاطئة؟",
+              translation: "أي عبارة عن 2D parity bits خاطئة؟",
               explanation:
-                "It can correct any two-bit error — خاطئة، 2D parity يكتشف خطأين (أحياناً) لكن لا يصححهما.",
+                "It can correct any two-bit error — خاطئة، يكتشف خطأين لكن لا يصححهما.",
             },
             {
               q: "Ethernet uses a __________ physical address that is imprinted on the network interface card (NIC).",
@@ -11218,15 +12730,14 @@ subjects.push({
               correct: 2,
               translation:
                 "Ethernet يستخدم عنوان فيزيائي __________ مطبوع على NIC.",
-              explanation: "6-byte — عنوان MAC في Ethernet هو 6 بايت (48 بت).",
+              explanation: "6-byte — عنوان MAC هو 6 بايت (48 بت).",
             },
             {
               q: "The _______ layer is responsible for moving frames from one hop (node) to the next.",
               options: ["application", "transport", "network", "link"],
               correct: 3,
               translation: "طبقة _______ مسؤولة عن نقل frames من hop لـ hop.",
-              explanation:
-                "link — طبقة الربط مسؤولة عن node-to-node (hop-to-hop) delivery.",
+              explanation: "link — hop-to-hop delivery.",
             },
             {
               q: "Which of the following statements about TCP/UDP checksum are TRUE? i) It is used to detect packet lost and corruption. ii) It can correct any 1-bit error. iii) It is computed using 1's complement. iv) It is computed over application data only, exclusive of TCP/UDP header. v) It can detect any 1-bit error.",
@@ -11238,17 +12749,15 @@ subjects.push({
               ],
               correct: 2,
               translation: "أي عبارات عن TCP/UDP checksum صحيحة؟",
-              explanation:
-                "(iii) and (v) only — checksum يستخدم مكمل 1 و يكتشف أي خطأ 1-bit. لا يصحح ولا يكتشف الفقد، و يشمل الـ header.",
+              explanation: "(iii) and (v) only — مكمل 1 و يكتشف أي خطأ 1-bit.",
             },
             {
               q: "A huge file is transferred over an existing TCP connection (i.e., 3-way handshake is already done). The connection is still open after transmission. The first and last TCP segments have the sequence numbers 12,345 and 2,105 respectively. Each TCP segment carries 1,024 bytes of app data. How many TCP segments are used to transfer the file, assuming the communication channel is perfectly reliable?",
               options: ["4,194,303", "10", "4,194,295", "4,194,294"],
               correct: 2,
-              translation:
-                "ملف ضخم عبر TCP connection، أول segment seq=12345 و آخر segment seq=2105 (بعد wrap). كل segment 1024 بايت. كم segment استُخدم؟",
+              translation: "كم segment استُخدم لنقل الملف؟",
               explanation:
-                "4,194,295 — (N-1)*1024 = 2^32 - 10240, N = 2^22 - 10 + 1 = 4,194,295.",
+                "4,194,295 — (N-1)*1024 = 2^32 - 10240, N = 2^22 - 10 + 1.",
             },
             {
               q: "In Non-persistent HTTP, the client closes the TCP connection after fetching one object (one pair of HTTP request and HTTP response)",
@@ -11256,47 +12765,44 @@ subjects.push({
               correct: 1,
               translation:
                 "في Non-persistent HTTP، العميل يغلق اتصال TCP بعد جلب كائن واحد.",
-              explanation: "True — اتصال TCP جديد لكل كائن.",
+              explanation: "True.",
             },
           ],
         },
         {
-          t: "Final 2026 — Dr. Ebram",
-          d: "Final exam questions — 2026 (Credit)",
+          t: "Final 2026 — Dr. Ebram (PDF)",
+          d: "Final exam — Computer Networks - Credit",
           pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Ebram/2026/Final 2026 - Computer Networks - Credit - Dr. Ebram.pdf",
           questions: [
             {
               q: "In Go-back-N protocol, what are the size of the respective sender and receiver buffers required for a window size of N?",
               options: ["1; 1", "N – 1; 1", "N; N", "N; 1"],
               correct: 3,
-              translation:
-                "في Go-back-N، ما أحجام مخازن المرسل والمستقبل لحجم نافذة N؟",
-              explanation: "N; 1 — المرسل N والمستقبل 1.",
+              translation: "في Go-back-N، ما أحجام المخازن لحجم نافذة N؟",
+              explanation: "N; 1.",
             },
             {
               q: "Assume a sender and a receiver connected via one packet-switch. The sender sends a message of size 24 KBytes using packets of length 1000 Bytes. The bit rates are 2 kbps and 5 kbps for the first and the second link, respectively. Using store and forward, what is the end-to-end delay (in seconds)? You may ignore the propagation delay!",
               options: ["16.8", "134.4", "124", "16800"],
               correct: 1,
-              translation:
-                "ما هو تأخير النهاية إلى النهاية (بالثواني) باستخدام store and forward؟",
-              explanation:
-                "134.4s — link1: 24000*8/2000 = 96s, link2: 24000*8/5000 = 38.4s, total = 134.4s.",
+              translation: "ما هو تأخير النهاية إلى النهاية؟",
+              explanation: "134.4s — 96 + 38.4.",
             },
             {
               q: "Consider sending a 1500-byte IP datagram into a link that has an MTU of 500 bytes. Suppose that IP header is 20 bytes long. How many fragments will be generated?",
               options: ["3", "4", "5", "2"],
               correct: 1,
               translation:
-                "إرسال IP datagram بحجم 1500 بايت عبر link بـ MTU 500. IP header 20 بايت. كم fragment سيُولّد؟",
+                "إرسال IP datagram 1500 بايت عبر link بـ MTU 500. IP header 20 بايت. كم fragment؟",
               explanation:
-                "4 — payload = 1480 بايت، كل fragment يحمل 480 بايت (500-20). 1480/480 = 3.08، فيكون 4 fragments.",
+                "4 — payload = 1480، كل fragment يحمل 480 (500-20). 1480/480 = 3.08 → 4.",
             },
             {
               q: "The following diagram shows a simple network topology with 4 nodes. The links in the diagram are labeled with the cost of each link. The nodes run distance vector routing protocol. The protocol has just started, at node X, what is the cost to node z?",
               options: ["6", "3", "5", "23"],
               correct: 1,
               translation:
-                "في مخطط بشبكة 4 عقد، العقد تستخدم distance vector. البروتوكول بدأ للتو. ما التكلفة من X إلى Z؟",
+                "في distance vector عند البدء، ما التكلفة من X إلى Z؟",
               explanation:
                 "3 — عند البدء، X يعرف فقط تكلفة الروابط المباشرة لجيرانه.",
             },
@@ -11305,7 +12811,7 @@ subjects.push({
               options: ["R2, R1", "R2, R2", "R1, R1", "R1, R2"],
               correct: 3,
               translation:
-                "Router R3 استلم datagramين بعناوين 200.23.19.3 و 200.23.18.33. لأي router يسلّم كل منهما؟",
+                "Router R3 استلم datagramين بعناوين 200.23.19.3 و 200.23.18.33. لأي router يسلّم؟",
               explanation: "R1, R2 — بناءً على جدول التوجيه.",
             },
             {
@@ -11313,7 +12819,7 @@ subjects.push({
               options: ["ARP", "DNS", "DHCP", "None of the options"],
               correct: 3,
               translation:
-                "أي بروتوكول يمكن استخدامه للحصول على mapping بين IP و MAC لعقد في subnet مختلف؟",
+                "أي بروتوكول للحصول على mapping بين IP و MAC لعقد في subnet مختلف؟",
               explanation:
                 "None of the options — ARP يعمل فقط داخل نفس الـ subnet.",
             },
@@ -11328,7 +12834,7 @@ subjects.push({
               correct: 3,
               translation: "أي مما يلي لن يحدث أبداً في نقل UDP؟",
               explanation:
-                "UDP receiver receives corrupted packets but fails to detect bit errors — إذا كان checksum مفعل، يتم اكتشاف الأخطاء.",
+                "UDP receiver receives corrupted packets but fails to detect bit errors.",
             },
             {
               q: "Can HTTP response message contains an empty body? If yes, When can this happen?",
@@ -11341,8 +12847,7 @@ subjects.push({
               correct: 1,
               translation:
                 "هل يمكن أن تحتوي رسالة HTTP response على جسم فارغ؟ ومتى؟",
-              explanation:
-                "Yes, if the requested object has been moved to a new location (status 301/302).",
+              explanation: "Yes, if moved to a new location (301/302).",
             },
             {
               q: "Which of the following statements is true?",
@@ -11355,7 +12860,7 @@ subjects.push({
               correct: 3,
               translation: "أي عبارة صحيحة؟",
               explanation:
-                "Internet uses packet switching و telephone uses circuit switching.",
+                "Internet = packet switching، الهاتف = circuit switching.",
             },
             {
               q: "Consider the following diagram, what is the destination MAC address in the frame transmitted from node A if node A is sending to node B?",
@@ -11366,10 +12871,8 @@ subjects.push({
                 "49-BD-D2-C7-56-2A",
               ],
               correct: 0,
-              translation:
-                "في المخطط، ما destination MAC address في frame المرسل من A إلى B؟",
-              explanation:
-                "74-29-9C-E8-FF-55 — عنوان MAC لـ next-hop router أو للوجهة B.",
+              translation: "ما destination MAC address في frame من A إلى B؟",
+              explanation: "74-29-9C-E8-FF-55 — بناءً على المخطط.",
             },
             {
               q: "Which of the following is present in both HTTP request line and status line?",
@@ -11382,7 +12885,7 @@ subjects.push({
               correct: 0,
               translation:
                 "أي مما يلي موجود في كل من HTTP request line و status line؟",
-              explanation: "HTTP version number — موجود في كلا السطرين.",
+              explanation: "HTTP version number.",
             },
             {
               q: "Which of the following HTTP protocols does the given figure represent to fetch a web page with 2 reference objects?",
@@ -11393,10 +12896,8 @@ subjects.push({
                 "Persistent HTTP with pipelining.",
               ],
               correct: 3,
-              translation:
-                "أي بروتوكول HTTP يمثله المخطط لجلب صفحة بـ 2 reference objects؟",
-              explanation:
-                "Persistent HTTP with pipelining — بناءً على المخطط.",
+              translation: "أي بروتوكول HTTP يمثله المخطط؟",
+              explanation: "Persistent HTTP with pipelining.",
             },
             {
               q: "Considering the operation of a learning switch and its forwarding table in the following figure. Which interface will the switch forward a frame transmitted from node D to node A?",
@@ -11404,8 +12905,7 @@ subjects.push({
               correct: 3,
               translation:
                 "في learning switch، أي interface سيُحيل frame من D إلى A؟",
-              explanation:
-                "1, 2, 4 — إذا لم يكن A في الـ table، يُحيل لكل interfaces ما عدا interface المستقبِل (flooding).",
+              explanation: "1, 2, 4 — flooding (إذا A غير معروف في الـ table).",
             },
             {
               q: "Consider a 4-bit generator G with value 1001, what is the CRC checksum R if data D has the value 10001100001?",
@@ -11413,16 +12913,14 @@ subjects.push({
               correct: 2,
               translation:
                 "باستخدام G=1001 (4-bit)، ما CRC checksum R للبيانات D=10001100001؟",
-              explanation:
-                "110 — بعد إلحاق 3 أصفار و القسمة XOR بـ 1001، الباقي = 110.",
+              explanation: "110.",
             },
             {
               q: "Given a subnet with network prefix 192.168.1.0/24, how many hosts can be connected to this subnet?",
               options: ["256", "255", "253", "254"],
               correct: 3,
               translation: "بـ subnet 192.168.1.0/24، كم host يمكن توصيله؟",
-              explanation:
-                "254 — 2^8 - 2 = 254 (استثناء عنوان الشبكة و عنوان البث).",
+              explanation: "254 — 2^8 - 2.",
             },
             {
               q: "Which of the following statements is true about TCP and not true about UDP?",
@@ -11434,8 +12932,7 @@ subjects.push({
               ],
               correct: 3,
               translation: "أي عبارة صحيحة عن TCP وليست عن UDP؟",
-              explanation:
-                "Provides reliable transport service — TCP يوفر نقل موثوق، UDP لا.",
+              explanation: "Provides reliable transport service.",
             },
             {
               q: "Which of the following statements is true about circuit switching?",
@@ -11459,7 +12956,7 @@ subjects.push({
               ],
               correct: 3,
               translation: "أي طبقة لا تظهر في Internet Protocol Stack؟",
-              explanation: "Session layer — غير موجودة في Internet Stack.",
+              explanation: "Session layer.",
             },
             {
               q: "Which of the following statements about DNS is TRUE?",
@@ -11471,41 +12968,35 @@ subjects.push({
               ],
               correct: 2,
               translation: "أي عبارة عن DNS صحيحة؟",
-              explanation:
-                "Local DNS server sometimes may provide out-of-date mapping — بسبب الـ Caching.",
+              explanation: "Local DNS may provide out-of-date mapping.",
             },
             {
               q: "Which of the following protocols can be used by routers for error signaling?",
               options: ["DHCP", "ICMP", "ARP", "NAT"],
               correct: 1,
               translation: "أي بروتوكول يستخدمه router للإشارة للأخطاء؟",
-              explanation:
-                "ICMP — Internet Control Message Protocol للإشارة للأخطاء (مثل destination unreachable).",
+              explanation: "ICMP — Internet Control Message Protocol.",
             },
             {
               q: "A Web server stores a webpage that comprises a base HTML file and 2 images referenced by the base HTML file. The HTML file is 100 bytes and each image is 200 bytes. A client is connected to the Web server through a direct link of 1 Mbps. Propagation delay between the Web server and the client is 50 milliseconds. The client downloads the webpage using persistent HTTP but without pipelining. Hong long (in milliseconds) does it take?",
               options: ["404", "604", "204", "402.4"],
               correct: 0,
-              translation:
-                "كم يستغرق تحميل الصفحة (HTML + صورتين) بـ persistent HTTP بدون pipelining؟",
-              explanation:
-                "404 ms — 3 RTTs (request + response) لكل كائن = 6 * 50 = 300 + transmission ≈ 404.",
+              translation: "كم يستغرق تحميل الصفحة؟",
+              explanation: "404 ms.",
             },
             {
               q: "A source and a destination are separated by 3*10^5 kilometers and are connected by a direct link of 2 Kbps. The propagation speed over the link is 2*10^8 meters/second. The source sends 100 packets to the destination using RDT 2.2. Each packet is of 2*10^3 bits long. Suppose ACK packets are of negligible size and transmission channel is perfectly reliable. What is the throughput (in bps) of transmission?",
               options: ["200", "500", "100", "400"],
               correct: 1,
               translation: "ما هو معدل النقل (Throughput)؟",
-              explanation:
-                "500 bps — (100 * 2000) / (100 * (1 + 3000) * 10^-3) ≈ 500.",
+              explanation: "500 bps.",
             },
             {
-              q: "A Selective Repeat sender just receives an ACK packet with ACK number 7. This ACK number falls within sender window which has the window size 3. Every data packet embeds a k-bit sequence number field. Which of the following definitely CANNOT be the sequence number of the next packet transmitted by the sender?",
+              q: "A Selective Repeat sender just receives an ACK packet with ACK number 7. This ACK number falls within sender window which has the window size 3. Every data packet embeds a k-bit sequence number field (k is an constant unknown to you). Which of the following definitely CANNOT be the sequence number of the next packet transmitted by the sender?",
               options: ["0", "2", "3", "6"],
               correct: 3,
-              translation:
-                "في Selective Repeat، ACK=7 داخل نافذة المرسل (size 3). أي رقم لا يمكن أن يكون seq للحزمة التالية؟",
-              explanation: "6 — لا يمكن أن يكون seq للحزمة التالية.",
+              translation: "أي رقم لا يمكن أن يكون seq للحزمة التالية؟",
+              explanation: "6.",
             },
             {
               q: "Consider a sender and a receiver communicating using Selective Repeat protocol. Every packet embeds a 4-bit sequence number field. Sender window size is 4. None of the packets shown in the following figure are corrupted packets. However, the third data packet and the second ACK packet are lost. What is the sender window over the sequence number space at time t?",
@@ -11516,8 +13007,7 @@ subjects.push({
                 "13, 14, 15, 16",
               ],
               correct: 1,
-              translation:
-                "في Selective Repeat بـ 4-bit seq و window 4، الحزمة الثالثة و ACK الثاني فقدا. ما نافذة المرسل في t؟",
+              translation: "ما هي نافذة المرسل في الوقت t؟",
               explanation: "13, 14, 0, 1.",
             },
             {
@@ -11530,7 +13020,7 @@ subjects.push({
               ],
               correct: 3,
               translation:
-                "router مفعّل بـ NAT، ما source IP عند توجيه datagram من host (172.26.184.3) لـ server (128.119.40.186)؟",
+                "router NAT-enabled، ما source IP عند توجيه datagram من host (172.26.184.3) لـ server (128.119.40.186)؟",
               explanation:
                 "137.132.228.5 — NAT يبدل source IP بعنوان الـ WAN-side للـ router.",
             },
@@ -11538,6 +13028,7 @@ subjects.push({
         },
       ],
     },
+
     {
       category: "Dr. Nago",
       icon: "👨‍🏫",
@@ -12114,7 +13605,7 @@ subjects.push({
               explanation: "خطأ، التطابق لا يضمن غياب الأخطاء.",
             },
             {
-              q: "The following figure represents correct operation of the GBN protocol for a window size of 4 packets. Assume the protocol starts operation by sending from pkt0.",
+              q: "The following figure represents correct operation of the GBN protocol for the case of a window size of 4 packets. Consider that there is no problem that the protocol starts the operation by sending from pkt0.\n\n(انظر إلى السؤال رقم 12 في ملف الامتحان بالأعلى 👆)",
               options: ["True", "False"],
               correct: 0,
               translation:
@@ -12140,7 +13631,7 @@ subjects.push({
               explanation: "صحيح، /23 مقسمة إلى أربع كتل /25.",
             },
             {
-              q: "Suppose the network and routing tables shown in the figure use the RIP protocol. The figure shows router D’s routing table, an advertisement received by D from router A, and the resulting updated routing table. Is the illustrated update correct?",
+              q: "Suppose the following network and consider the RIP protocol. Suppose the following figure shows the routing table for router 'D'... If router 'D' receives from router 'A' the advertisement... Then router 'D' will update its routing table, as shown in the following figure. Is the illustrated update correct?\n\n(انظر إلى السؤال رقم 15 في ملف الامتحان بالأعلى 👆)",
               options: ["True", "False"],
               correct: 1,
               translation:
@@ -12157,7 +13648,7 @@ subjects.push({
               explanation: "خطأ، هذا وصف packet switching.",
             },
             {
-              q: "The following figure represents correct operation of the TCP protocol.",
+              q: "The following figure represents correct operation of the TCP protocol.\n\n(انظر إلى السؤال رقم 17 في ملف الامتحان بالأعلى 👆)",
               options: ["True", "False"],
               correct: 0,
               translation: "الشكل التالي يمثل التشغيل الصحيح لبروتوكول TCP.",
@@ -12190,7 +13681,7 @@ subjects.push({
                 "خطأ، A يطلب MAC الخاص بواجهة الراوتر (gateway) وليس B.",
             },
             {
-              q: "The following FSM for the rdt3 sender side is working in a correct way to prevent premature (early) timeout.",
+              q: "The following FSM for rdt3 sender side is working in a correct and good way to premature (early) timeout.\n\n(انظر إلى السؤال رقم 20 في ملف الامتحان بالأعلى 👆)",
               options: ["True", "False"],
               correct: 1,
               translation:
@@ -12207,7 +13698,7 @@ subjects.push({
               explanation: "صحيح.",
             },
             {
-              q: "Consider the following forwarding table in the router. Prefix matches: 11001000 00010111 00010 → interface 0; 11001000 00010111 00011000 → interface 1; 11001000 00010111 00001111 → interface 2; otherwise → interface 3. The destination address is 11001000 00010111 00011000 10101010. Which link interface will be used?",
+              q: "Consider the following forwarding table in the router. Prefix matches: 11001000 00010111 00010 → interface 0; 11001000 00010111 00011000 → interface 1; 11001000 00010111 00001111 → interface 2; otherwise → interface 3. The destination address is 11001000 00010111 00011000 10101010. Which link interface will be used?\n\n(انظر إلى السؤال رقم 22 في ملف الامتحان بالأعلى 👆)",
               options: [
                 "Link Interface 0",
                 "Link Interface 1",
@@ -12231,7 +13722,7 @@ subjects.push({
               explanation: "خطأ حسب مفتاح الـ PDF.",
             },
             {
-              q: "Consider the network and link costs shown in the figure. Using Dijkstra’s shortest-path algorithm from node z, the resulting shortest-path computation is as shown in the table. Is the result correct?",
+              q: "Consider the network and link costs shown in the figure. Using Dijkstra’s shortest-path algorithm from node z, the resulting shortest-path computation is as shown in the table. Is the result correct?\n\n(انظر إلى السؤال رقم 24 في ملف الامتحان بالأعلى 👆)",
               options: ["True", "False"],
               correct: 0,
               translation:
@@ -12402,7 +13893,7 @@ subjects.push({
               explanation: "صحيح.",
             },
             {
-              q: "Consider a packet of length L that begins at end system A and travels over 4 links to destination end system B. The 4 links are connected by 3 packet switches; 2 switches use store-and-forward and 1 uses cut-through. Let dᵢ and sᵢ denote the propagation distance and propagation speed of link i (i = 1,2,3,4). Ignore processing delay and suppose R₁ = R₂ = R₃ = R₄ = R. The statement in the figure gives the total end-to-end delay as 4L/R + d₁/s₁ + d₂/s₂ + d₃/s₃ + d₄/s₄. Is this statement correct?",
+              q: "Consider a packet of length L that begins at end system A and travels over 4 links to destination end system B. The 4 links are connected by 3 packet switches; 2 switches use store-and-forward and 1 uses cut-through. Let dᵢ and sᵢ denote the propagation distance and propagation speed of link i (i = 1,2,3,4). Ignore processing delay and suppose R₁ = R₂ = R₃ = R₄ = R. The statement in the figure gives the total end-to-end delay as 4L/R + d₁/s₁ + d₂/s₂ + d₃/s₃ + d₄/s₄. Is this statement correct?\n\n(انظر إلى السؤال رقم 42 في ملف الامتحان بالأعلى 👆)",
               options: ["True", "False"],
               correct: 1,
               translation:
@@ -12483,10 +13974,631 @@ subjects.push({
       icon: "👨‍🏫",
       description: "Computer Networks finals by Dr. Tarek Mohamed",
       items: [
+        // Final 2026 - National - Dr.Tarek (GEPZ) - JavaScript module
+        {
+          t: "Final 2026 - National - Dr.Tarek",
+          d: "Final Answers and Short Questions",
+          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Tarek/Final 2026 - National - Dr.Tarek.pdf",
+          questions: [
+            {
+              q: "What is an HTTP cookie used for?",
+              options: [
+                "Like dessert, cookies are used at the end of a transaction, to indicate the end of the transaction",
+                "A cookies is a code used by a server, carried on a client’s HTTP request, to access information the server had earlier stored about an earlier interaction with this person. [Think about the distinction between a browser and a person.]",
+                "A cookie is a code used by a server, carried on a client’s HTTP request, to access information the server had earlier stored about an earlier interaction with this Web browser. [Think about the distinction between a browser and a person.]",
+                "A cookie is a code used by a client to authenticate a person’s identity to an HTTP server.",
+              ],
+              correct: 2,
+              translation: "ما هو استخدام ملف تعريف ارتباط HTTP (Cookie)؟",
+              explanation:
+                "الكوكي هو كود يستخدمه الخادم ويُحمل على طلب HTTP من العميل للوصول إلى معلومات خزّنها الخادم سابقًا عن تفاعل سابق مع هذا المتصفح، وليس بالضرورة مع الشخص نفسه.",
+            },
+            {
+              q: "an IPv4 datagram has a",
+              options: [
+                "4-byte header",
+                "8-byte header",
+                "20-byte header",
+                "20+ byte header",
+              ],
+              correct: 3,
+              translation: "حزمة IPv4 datagram تحتوي على:",
+              explanation:
+                "رأس IPv4 يكون 20 بايت كحد أدنى، ويمكن أن يزيد عند وجود خيارات (Options)، لذلك 20+ byte header هو الأنسب.",
+            },
+            {
+              q: "Which of the characteristics below are associated with a client-server approach to structuring network applications (as opposed to a P2P approach)",
+              options: [
+                "A process requests service from those it contacts and will provide service to processes that contact it.",
+                "There is a server with a well known server IP address.",
+                "There is not a server that is always on",
+                "None of the above",
+              ],
+              correct: 1,
+              translation:
+                "أي الخصائص التالية ترتبط بنهج client-server في بناء تطبيقات الشبكة (بدلاً من P2P)؟",
+              explanation:
+                "في client-server يوجد خادم معروف بعنوان IP معروف، وعادة يكون دائم التشغيل. الخيار الآخر يصف P2P.",
+            },
+            {
+              q: "Transfer of a bit into and out of a transmission media",
+              options: [
+                "Application Layer",
+                "Transport layer",
+                "Network layer",
+                "Physical layer",
+              ],
+              correct: 3,
+              translation: "نقل البت إلى داخل وخارج وسيط الإرسال",
+              explanation: "هذه وظيفة الطبقة الفيزيائية (Physical layer).",
+            },
+            {
+              q: "What specifies the format of packets that are sent and received among routers and end systems",
+              options: ["TCP", "UDP", "IP", "DNS"],
+              correct: 2,
+              translation:
+                "ما الذي يحدد تنسيق الحزم التي تُرسل وتُستقبل بين الموجهات وأنظمة النهاية؟",
+              explanation: "بروتوكول IP هو الذي يحدد تنسيق حزم IP (datagrams).",
+            },
+            {
+              q: "Which of the following descriptions below correspond to a 'services' view of the Internet?",
+              options: [
+                "A platform for building network applications",
+                "A collection of billions of computing devices, and packet switches interconnected by links",
+                "A 'network of networks'.",
+                "A collection of hardware and software components executing protocols that define the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.",
+              ],
+              correct: 0,
+              translation:
+                "أي من الأوصاف التالية يمثل النظرة الخدمية (services view) للإنترنت؟",
+              explanation:
+                "النظرة الخدمية ترى الإنترنت كمنصة لبناء تطبيقات الشبكة وتقديم الخدمات للتطبيقات.",
+            },
+            {
+              q: "Match the function of a server to a given type of DNS server in the DNS server hierarchy. Replies to DNS query by local host, by contacting other DNS servers to answer the query.",
+              options: [
+                "Local DNS server",
+                "Authoritative DNS server",
+                "DNS root servers",
+                "Top Level Domain (TLD) servers",
+              ],
+              correct: 0,
+              translation:
+                "طابق وظيفة الخادم مع نوع خادم DNS في التسلسل الهرمي. يرد على استعلام DNS من المضيف المحلي بالاتصال بخوادم DNS أخرى للإجابة.",
+              explanation: "هذا هو دور Local DNS server (الخادم المحلي).",
+            },
+            {
+              q: "Time spent transmitting packets bits into the link",
+              options: [
+                "Processing delay",
+                "Propagation delay",
+                "Transmission delay",
+                "Queueing delay",
+              ],
+              correct: 2,
+              translation: "الوقت المستغرق لإرسال بتات الحزمة إلى الرابط",
+              explanation: "هذا هو Transmission delay (تأخير الإرسال).",
+            },
+            {
+              q: "Which of the following are changes between HTTP 1.1 and HTTP/2?",
+              options: [
+                "HTTP/2 allows a large object to be broken down into smaller pieces, and the transmission of those pieces to be interleaved with transmission other smaller objects, thus preventing a large object from forcing many smaller objects to wait their turn for transmission.",
+                "HTTP/2 provides enhanced security by using transport layer security (TLS).",
+                "HTTP/2 has many new HTTP methods and status codes.",
+                "All of the above",
+              ],
+              correct: 0,
+              translation: "أي مما يلي يمثل تغييرات بين HTTP 1.1 و HTTP/2؟",
+              explanation:
+                "HTTP/2 يسمح بتقسيم الكائنات الكبيرة وتداخل إرسالها مع كائنات أصغر (multiplexing). TLS ليس شرطًا في مواصفة HTTP/2، ولا توجد طرق وأكواد حالة جديدة كثيرة.",
+            },
+            {
+              q: "Match the name of an Internet layer with unit of data that is exchanged among protocol entities at that layer, Application layer",
+              options: ["Datagram", "Message", "Bit", "Segment"],
+              correct: 1,
+              translation:
+                "طابق اسم طبقة الإنترنت مع وحدة البيانات المتبادلة بين كيانات البروتوكول في تلك الطبقة: طبقة التطبيق",
+              explanation:
+                "وحدة البيانات في طبقة التطبيق تسمى Message (رسالة).",
+            },
+            {
+              q: "Forwarding is the local action of moving arriving packets from router’s input link to appropriate router output link, while routing is the global action of determining the source-destination paths taken by packets.",
+              options: ["True", "False"],
+              correct: 0,
+              translation:
+                "إعادة التوجيه (Forwarding) هي العملية المحلية لنقل الحزم الواردة من رابط إدخال الموجه إلى رابط الإخراج المناسب، بينما التوجيه (Routing) هو العملية العامة لتحديد المسارات من المصدر إلى الوجهة التي تأخذها الحزم.",
+              explanation: "العبارة صحيحة.",
+            },
+            {
+              q: "When an application uses a UDP socket, what transport services are provided to the application by UDP?",
+              options: [
+                "Throughput guarantee. The socket can be configured to provide a minimum throughput guarantee between sender and receiver.",
+                "Congestion control. The service will control senders so that the senders do not collectively send more data than links in the network can handle.",
+                "Best effort service. The service will make a best effort to deliver data to the destination but makes no guarantees that any particular segment of data will actually get there.",
+                "Flow Control. The provided service will ensure that the sender does not send so fast as to overflow receiver buffers.",
+              ],
+              correct: 2,
+              translation:
+                "عندما يستخدم تطبيق مقبس UDP، ما الخدمات التي يوفرها UDP للتطبيق؟",
+              explanation:
+                "UDP يقدم خدمة best-effort، دون ضمانات تسليم أو تحكم في الازدحام أو التدفق.",
+            },
+            {
+              q: "What is the purpose of a cookie value in the HTTP GET request?",
+              options: [
+                "The cookie value encodes a default set of preferences that the user has previously specified for this web site",
+                "The cookie value encodes the format of the reply preferred by the client in the response to this GET request",
+                "The cookie value itself doesn't mean anything. It is just a value that was returned by a web server to this client during an earlier interaction",
+                "The cookie value indicates whether the user wants to use HTTP/1, HTTP/1.1, or HTTP/2 for this GET request.",
+              ],
+              correct: 2,
+              translation: "ما الغرض من قيمة الكوكي في طلب HTTP GET؟",
+              explanation:
+                "قيمة الكوكي نفسها لا تعني شيئًا محددًا؛ هي مجرد قيمة أرجعها الخادم للعميل في تفاعل سابق.",
+            },
+            {
+              q: "What is the purpose of the HTTP GET message?",
+              options: [
+                "The HTTP GET request message is sent by a web server to a web client to get the identity of the web client.",
+                "The HTTP GET request message is sent by a web server to a web client to get the next request from the web client.",
+                "The HTTP GET request message is used by a web client to request a web server to send the requested object from the server to the client.",
+                "The HTTP GET request message is used by a web client to post an object on a web server.",
+              ],
+              correct: 2,
+              translation: "ما الغرض من رسالة HTTP GET؟",
+              explanation:
+                "يستخدمها عميل الويب لطلب كائن من خادم الويب وإرساله إلى العميل.",
+            },
+            {
+              q: "Which of the fields below are in a UDP segment header",
+              options: [
+                "Internet checksum",
+                "Upper layer protocol",
+                "Data (payload)",
+                "Sequence number",
+              ],
+              correct: 0,
+              translation: "أي الحقول التالية موجود في رأس مقطع UDP؟",
+              explanation:
+                "رأس UDP يحتوي على منفذ المصدر، منفذ الوجهة، الطول، والمجموع الاختباري (checksum).",
+            },
+            {
+              q: "Time spent waiting in packet buffers for link transmission",
+              options: [
+                "Processing delay",
+                "Propagation delay",
+                "Transmission delay",
+                "Queueing delay",
+              ],
+              correct: 3,
+              translation:
+                "الوقت المستغرق في الانتظار في مخازن الحزم قبل الإرسال على الرابط",
+              explanation: "هذا هو Queueing delay (تأخير الانتظار في الطابور).",
+            },
+            {
+              q: "What do we mean when we say 'HTTP is stateless'? In answering this question, assume that cookies are not used",
+              options: [
+                "The HTTP protocol is not licensed in any country.",
+                "An HTTP client does not remember anything about what happened during earlier steps in interacting with any HTTP server.",
+                "An HTTP server does not remember anything about what happened during earlier steps in interacting with this HTTP client",
+                "An HTTP client does not remember the identities of the servers with which it has interacted.",
+              ],
+              correct: 2,
+              translation:
+                "ماذا نعني بقولنا إن HTTP عديم الحالة (stateless)؟ بافتراض عدم استخدام الكوكيز.",
+              explanation:
+                "الخادم لا يحتفظ بمعلومات عن الخطوات السابقة في تفاعله مع هذا العميل.",
+            },
+            {
+              q: "What is the purpose of the HTTP GET message?",
+              options: [
+                "The HTTP GET request message is sent by a web server to a web client to get the identity of the web client.",
+                "The HTTP GET request message is sent by a web server to a web client to get the next request from the web client.",
+                "The HTTP GET request message is used by a web client to request a web server to send the requested object from the server to the client.",
+                "The HTTP GET request message is used by a web client to post an object on a web server.",
+              ],
+              correct: 2,
+              translation: "ما الغرض من رسالة HTTP GET؟",
+              explanation: "يستخدمها عميل الويب لطلب كائن من خادم الويب.",
+            },
+            {
+              q: "Time spent waiting in packet buffers for link transmission",
+              options: [
+                "Processing delay",
+                "Propagation delay",
+                "Transmission delay",
+                "Queueing delay",
+              ],
+              correct: 3,
+              translation:
+                "الوقت المستغرق في الانتظار في مخازن الحزم قبل الإرسال على الرابط",
+              explanation: "هذا هو Queueing delay.",
+            },
+            {
+              q: "Which of the characteristics below are associated with the technique of circuit switching?",
+              options: [
+                "This technique is used in the Internet",
+                "Congestion loss and variable end-end delays are possible with this technique",
+                "Resources are used on demand, not reserved in advance",
+                "Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM) are two approaches for implementing this technique",
+              ],
+              correct: 3,
+              translation:
+                "أي الخصائص التالية ترتبط بتقنية تبديل الدوائر (circuit switching)؟",
+              explanation:
+                "تبديل الدوائر يحجز الموارد مسبقًا، ومن طرق تنفيذه FDM و TDM.",
+            },
+            {
+              q: "When we say that the Internet is a 'network of networks,' we mean?",
+              options: [
+                "The Internet is the largest network ever built",
+                "The Internet is made up of a lot of different networks that are interconnected to each other",
+                "The Internet is the fastest network ever built",
+                "All of the above",
+              ],
+              correct: 1,
+              translation:
+                "عندما نقول إن الإنترنت 'شبكة من الشبكات'، فإننا نعني؟",
+              explanation:
+                "الإنترنت مكوّن من العديد من الشبكات المختلفة المترابطة معًا.",
+            },
+            {
+              q: "What is the purpose of the conditional HTTP GET request message?",
+              options: [
+                "To allow a server to only send the requested object to the client if the server is not overloaded.",
+                "To allow a server to only send the requested object to the client if this object has changed since the server last sent this object to the client",
+                "To allow a server to only send the requested object to the client if the client is authorized to received that object.",
+                "To allow a server to only send the requested object to the client if the client has never requested that object before",
+              ],
+              correct: 1,
+              translation: "ما الغرض من رسالة HTTP GET الشرطية؟",
+              explanation:
+                "تسمح للخادم بإرسال الكائن فقط إذا تغير منذ آخر مرة أرسله فيها إلى العميل.",
+            },
+            {
+              q: "Time need for bits to physically propagate through the transmission medium from end one of a link to the other",
+              options: [
+                "Processing delay",
+                "Propagation delay",
+                "Transmission delay",
+                "Queueing delay",
+              ],
+              correct: 1,
+              translation:
+                "الوقت اللازم للبتات لتنتشر فيزيائيًا عبر وسيط الإرسال من طرف الرابط إلى الطرف الآخر",
+              explanation: "هذا هو Propagation delay (تأخير الانتشار).",
+            },
+            {
+              q: "Match the name of an Internet layer with unit of data that is exchanged among protocol entities at that layer, Link layer",
+              options: ["Datagram", "Message", "Segment", "Frame"],
+              correct: 3,
+              translation:
+                "طابق اسم طبقة الإنترنت مع وحدة البيانات المتبادلة بين كيانات البروتوكول في تلك الطبقة: طبقة الرابط (Link layer)",
+              explanation: "وحدة البيانات في طبقة الرابط تسمى Frame (إطار).",
+            },
+            {
+              q: "Match the name of an Internet layer with unit of data that is exchanged among protocol entities at that layer, Transport layer",
+              options: ["Datagram", "Message", "Bit", "Segment"],
+              correct: 3,
+              translation:
+                "طابق اسم طبقة الإنترنت مع وحدة البيانات المتبادلة بين كيانات البروتوكول في تلك الطبقة: طبقة النقل (Transport layer)",
+              explanation: "وحدة البيانات في طبقة النقل تسمى Segment (مقطع).",
+            },
+            {
+              q: "What is the purpose of the conditional HTTP GET request message?",
+              options: [
+                "To allow a server to only send the requested object to the client if the server is not overloaded.",
+                "To allow a server to only send the requested object to the client if this object has changed since the server last sent this object to the client.",
+                "To allow a server to only send the requested object to the client if the client is authorized to received that object.",
+                "To allow a server to only send the requested object to the client if the client has never requested that object before",
+              ],
+              correct: 1,
+              translation: "ما الغرض من رسالة HTTP GET الشرطية؟",
+              explanation:
+                "تسمح للخادم بإرسال الكائن فقط إذا تغير منذ آخر إرسال له إلى العميل.",
+            },
+            {
+              q: "Delivery of datagrams from a source host to a destination host (typically)",
+              options: [
+                "Link layer",
+                "Application Layer",
+                "Transport layer",
+                "Network layer",
+              ],
+              correct: 3,
+              translation:
+                "تسليم مخططات البيانات (datagrams) من مضيف المصدر إلى مضيف الوجهة (عادة)",
+              explanation: "هذه وظيفة طبقة الشبكة (Network layer).",
+            },
+            {
+              q: "Which of the characteristics below are associated with the technique of packet switching?",
+              options: [
+                "Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM) are two approaches for implementing this technique.",
+                "This technique was the basis for the telephone call switching during the 20th century and into the beginning of this current century.",
+                "Data may be queued before being transmitted due to other user's data that's also queueing for transmission.",
+                "Reserves resources needed for a call from source to destination",
+              ],
+              correct: 2,
+              translation:
+                "أي الخصائص التالية ترتبط بتقنية تبديل الحزم (packet switching)؟",
+              explanation:
+                "في تبديل الحزم قد تنتظر البيانات في الطوابير بسبب بيانات مستخدمين آخرين. لا يحجز الموارد مسبقًا.",
+            },
+            {
+              q: "P2P networks do not need a server",
+              options: ["True", "False"],
+              correct: 0,
+              translation: "شبكات P2P لا تحتاج إلى خادم.",
+              explanation:
+                "شبكات P2P لا تحتاج بالضرورة إلى خادم دائم التشغيل؛ الأقران يمكنهم تقديم وطلب الخدمات.",
+            },
+            {
+              q: "When an application uses a UDP socket, what transport services are provided to the application by UDP?",
+              options: [
+                "Throughput guarantee. The socket can be configured to provide a minimum throughput guarantee between sender and receiver.",
+                "Congestion control. The service will control senders so that the senders do not collectively send more data than links in the network can handle.",
+                "Best effort service. The service will make a best effort to deliver data to the destination but makes no guarantees that any particular segment of data will actually get there.",
+                "Flow Control. The provided service will ensure that the sender does not send so fast as to overflow receiver buffers.",
+              ],
+              correct: 2,
+              translation:
+                "عندما يستخدم تطبيق مقبس UDP، ما خدمات النقل التي يوفرها UDP للتطبيق؟",
+              explanation: "UDP يقدم خدمة best-effort فقط.",
+            },
+            {
+              q: "Match the function of a server to a given type of DNS server in the DNS server hierarchy. Provides authoritative hostname to IP mappings for organization's named hosts.",
+              options: [
+                "Local DNS server",
+                "Authoritative DNS server",
+                "DNS root servers",
+                "Top Level Domain (TLD) servers",
+              ],
+              correct: 1,
+              translation:
+                "طابق وظيفة الخادم مع نوع خادم DNS في التسلسل الهرمي. يوفر تعيينات اسم المضيف إلى IP الموثوقة لمضيفي المؤسسة المسمين.",
+              explanation:
+                "هذا دور Authoritative DNS server (خادم DNS الموثوق).",
+            },
+            {
+              q: "Transfer of data between one process and another process (typically on different hosts)",
+              options: [
+                "Link layer",
+                "Application Layer",
+                "Transport layer",
+                "Network layer",
+              ],
+              correct: 2,
+              translation:
+                "نقل البيانات بين عملية وأخرى (عادة على مضيفين مختلفين)",
+              explanation: "هذه وظيفة طبقة النقل (Transport layer).",
+            },
+            {
+              q: "Which of the following descriptions below correspond to a 'nuts-and-bolts' view of the Internet?",
+              options: [
+                "A platform for building network applications",
+                "A 'network of networks'",
+                "A place I go for information, entertainment, and to communicate with people",
+                "All of the above",
+              ],
+              correct: 1,
+              translation:
+                "أي من الأوصاف التالية يمثل النظرة المادية/التفصيلية (nuts-and-bolts) للإنترنت؟",
+              explanation:
+                "النظرة المادية تصف الإنترنت كشبكة من الشبكات مكونة من أجهزة وروابط ومبدلات.",
+            },
+            {
+              q: "Where is transport-layer functionality primarily implemented",
+              options: [
+                "Transport layer functions are implemented primarily at the hosts at the 'edge' of the network",
+                "Transport layer functions are implemented primarily at the routers and switches in the network",
+                "Transport layer functions are implemented primarily at each end of a physical link connecting one host/router/switch to another one host/router/switch",
+                "None of the above",
+              ],
+              correct: 0,
+              translation: "أين تُنفذ وظائف طبقة النقل بشكل أساسي؟",
+              explanation:
+                "تُنفذ بشكل أساسي في المضيفات عند أطراف الشبكة (edge).",
+            },
+            {
+              q: "Match the name of an Internet layer with unit of data that is exchanged among protocol entities at that layer, Network layer",
+              options: ["Datagram", "Message", "Segment", "Frame"],
+              correct: 0,
+              translation:
+                "طابق اسم طبقة الإنترنت مع وحدة البيانات المتبادلة بين كيانات البروتوكول في تلك الطبقة: طبقة الشبكة (Network layer)",
+              explanation: "وحدة البيانات في طبقة الشبكة تسمى Datagram.",
+            },
+            {
+              q: "UDP packet has",
+              options: [
+                "2 byte header",
+                "8 byte header",
+                "12 byte header",
+                "16 byte header",
+              ],
+              correct: 1,
+              translation: "حزمة UDP تحتوي على:",
+              explanation: "رأس UDP ثابت الطول ويساوي 8 بايت.",
+            },
+            {
+              q: "Which of the characteristics below are associated with a P2P approach to structuring network applications (as opposed to a client-server approach)?",
+              options: [
+                "There is a server that is always on",
+                "HTTP uses this application structure",
+                "There is a server with a well known server IP address",
+                "There is not a server that is always on",
+              ],
+              correct: 3,
+              translation:
+                "أي الخصائص التالية ترتبط بنهج P2P في بناء تطبيقات الشبكة (بدلاً من client-server)؟",
+              explanation: "في P2P لا يوجد خادم دائم التشغيل بالضرورة.",
+            },
+            {
+              q: "What is the purpose of a cookie value in the HTTP GET request?",
+              options: [
+                "The cookie value encodes a default set of preferences that the user has previously specified for this web site.",
+                "The cookie value encodes the format of the reply preferred by the client in the response to this GET request.",
+                "The cookie value itself doesn't mean anything. It is just a value that was returned by a web server to this client during an earlier interaction.",
+                "The cookie value indicates whether the user wants to use HTTP/1, HTTP/1.1, or HTTP/2 for this GET request.",
+              ],
+              correct: 2,
+              translation: "ما الغرض من قيمة الكوكي في طلب HTTP GET؟",
+              explanation:
+                "قيمة الكوكي نفسها مجرد قيمة أرجعها الخادم للعميل في تفاعل سابق.",
+            },
+            {
+              q: "Match the name of an Internet layer with unit of data that is exchanged among protocol entities at that layer, Physical layer",
+              options: ["Datagram", "Message", "Bit", "Segment"],
+              correct: 2,
+              translation:
+                "طابق اسم طبقة الإنترنت مع وحدة البيانات المتبادلة بين كيانات البروتوكول في تلك الطبقة: الطبقة الفيزيائية (Physical layer)",
+              explanation: "وحدة البيانات في الطبقة الفيزيائية هي Bit.",
+            },
+            {
+              q: "Match the function of a server to a given type of DNS server in the DNS server hierarchy. Responsible for a domain (e.g., *.com, *.edu); knows how to contact authoritative name servers",
+              options: [
+                "Local DNS server",
+                "Authoritative DNS server",
+                "DNS root servers",
+                "Top Level Domain (TLD) servers",
+              ],
+              correct: 3,
+              translation:
+                "طابق وظيفة الخادم مع نوع خادم DNS في التسلسل الهرمي. مسؤول عن نطاق مثل *.com و *.edu؛ ويعرف كيفية الاتصال بخوادم الأسماء الموثوقة.",
+              explanation: "هذا دور خوادم Top Level Domain (TLD) servers.",
+            },
+            {
+              q: "Which of the definitions below describe what is meant by the term 'encapsulation'?",
+              options: [
+                "Determining the name of the destination host, translating that name to an IP address and then placing that value in a packet header field.",
+                "Starting a transport layer timer for a transmitted segment, and then if an ACK segment isn't received before the timeout, placing that segment in a retransmission queue.",
+                "Taking data from the layer above, adding header fields appropriate for this layer, and then placing the data in the payload field of the 'packet' for that layer.",
+                "Receiving a 'packet' from the layer below, extracting the payload field, and after some internal actions possibly delivering that payload to an upper layer protocol.",
+              ],
+              correct: 2,
+              translation:
+                "أي التعريفات التالية يصف مصطلح 'التغليف' (encapsulation)؟",
+              explanation:
+                "التغليف هو أخذ البيانات من الطبقة الأعلى وإضافة حقول رأس مناسبة لهذه الطبقة ثم وضع البيانات في حقل الحمولة.",
+            },
+            {
+              q: "Match the function of a server to a given type of DNS server in the DNS server hierarchy. Highest level of the DNS hierarchy, knows how to reach servers responsible for a given domain (e.g., *.com, *.edu)",
+              options: [
+                "Local DNS server",
+                "Authoritative DNS server",
+                "DNS root servers",
+                "Top Level Domain (TLD) servers",
+              ],
+              correct: 2,
+              translation:
+                "طابق وظيفة الخادم مع نوع خادم DNS في التسلسل الهرمي. أعلى مستوى في هرمية DNS، ويعرف كيفية الوصول إلى الخوادم المسؤولة عن نطاق معين مثل *.com و *.edu.",
+              explanation: "هذا هو دور DNS root servers.",
+            },
+            {
+              q: "Which of the characteristics below are associated with a client-server approach to structuring network applications (as opposed to a P2P approach)",
+              options: [
+                "A process requests service from those it contacts and will provide service to processes that contact it.",
+                "There is a server with a well known server IP address",
+                "There is not a server that is always on",
+                "All of the above",
+              ],
+              correct: 1,
+              translation:
+                "أي الخصائص التالية ترتبط بنهج client-server في بناء تطبيقات الشبكة (بدلاً من P2P)؟",
+              explanation: "في client-server يوجد خادم بعنوان IP معروف.",
+            },
+            {
+              q: "Transfer of data between neighboring network devices",
+              options: [
+                "Link layer",
+                "Application Layer",
+                "Transport layer",
+                "Network layer",
+              ],
+              correct: 0,
+              translation: "نقل البيانات بين أجهزة الشبكة المتجاورة",
+              explanation: "هذه وظيفة طبقة الرابط (Link layer).",
+            },
+            {
+              q: "When there is not enough memory to buffer an incoming packet, a decision must be made to either drop the arriving packet (a policy known as drop-tail) or remove one or more already-queued packets to make room for the newly arrived packet.",
+              options: ["True", "False"],
+              correct: 0,
+              translation:
+                "عندما لا توجد ذاكرة كافية لتخزين حزمة واردة مؤقتًا، يجب اتخاذ قرار إما بإسقاط الحزمة القادمة (سياسة تُعرف باسم drop-tail) أو إزالة حزمة أو أكثر من الحزم الموجودة في الطابور لإفساح مجال للحزمة القادمة.",
+              explanation: "العبارة صحيحة.",
+            },
+            {
+              q: "Time needed to perform an integrity check, lookup packet information in a local table and move the packet from an input link to an output link in a router.",
+              options: [
+                "Processing delay",
+                "Propagation delay",
+                "Transmission delay",
+                "Queueing delay",
+              ],
+              correct: 0,
+              translation:
+                "الوقت اللازم لإجراء فحص سلامة، والبحث عن معلومات الحزمة في جدول محلي، ونقل الحزمة من رابط إدخال إلى رابط إخراج في موجه.",
+              explanation: "هذا هو Processing delay (تأخير المعالجة).",
+            },
+            {
+              q: "Protocols that are part of a distributed network application",
+              options: [
+                "Link layer",
+                "Application Layer",
+                "Transport layer",
+                "Network layer",
+              ],
+              correct: 1,
+              translation: "البروتوكولات التي تشكل جزءًا من تطبيق شبكة موزع",
+              explanation:
+                "بروتوكولات تطبيقات الشبكة الموزعة تكون في طبقة التطبيق (Application Layer).",
+            },
+            {
+              q: "Which of the following physical layer technologies has the highest transmission rate and lowest bit error rate in practice?",
+              options: [
+                "Twisted pair (e.g., CAT5, CAT6)",
+                "Coaxial cable",
+                "Satellite channel",
+                "Fiber optic cable",
+              ],
+              correct: 3,
+              translation:
+                "أي من تقنيات الطبقة الفيزيائية التالية لديها أعلى معدل إرسال وأقل معدل خطأ بت عمليًا؟",
+              explanation:
+                "الألياف البصرية (Fiber optic cable) هي الأعلى في معدل النقل والأقل في معدل الخطأ.",
+            },
+            {
+              q: "When an application uses a TCP socket, what transport services are provided to the application by TCP?",
+              options: [
+                "Throughput guarantee. The socket can be configured to provide a minimum throughput guarantee between sender and receiver.",
+                "Real-time delivery. The service will guarantee that data will be delivered to the receiver within a specified time bound.",
+                "Congestion control. The service will control senders so that the senders do not collectively send more data than links in the network can handle.",
+                "Best effort service. The service will make a best effort to deliver data to the destination but makes no guarantees that any particular segment of data will actually get there.",
+              ],
+              correct: 2,
+              translation:
+                "عندما يستخدم تطبيق مقبس TCP، ما خدمات النقل التي يوفرها TCP للتطبيق؟",
+              explanation:
+                "TCP يوفر التحكم في الازدحام (Congestion control) بالإضافة إلى النقل الموثوق والتحكم في التدفق.",
+            },
+            {
+              q: "When an application uses a TCP socket, what transport services are provided to the application by TCP?",
+              options: [
+                "Throughput guarantee. The socket can be configured to provide a minimum throughput guarantee between sender and receiver.",
+                "Real-time delivery. The service will guarantee that data will be delivered to the receiver within a specified time bound.",
+                "Congestion control. The service will control senders so that the senders do not collectively send more data than links in the network can handle.",
+                "Best effort service. The service will make a best effort to deliver data to the destination but makes no guarantees that any particular segment of data will actually get there.",
+              ],
+              correct: 2,
+              translation:
+                "عندما يستخدم تطبيق مقبس TCP، ما خدمات النقل التي يوفرها TCP للتطبيق؟",
+              explanation: "TCP يوفر التحكم في الازدحام (Congestion control).",
+            },
+          ],
+        },
         {
           t: "Final Exam (Dr. Tarek) — 50 MCQs",
           d: "Comprehensive final exam by Dr. Tarek",
-          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Tarek/امتحان فانيل شبكات دكتور طارق.pdf",
+          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Tarek/Computer_Networks_Final_Dr_Tarek.pdf",
           questions: [
             {
               q: "Digital Subscriber Line (DSL) uses existing ......... lines to connect machines to the Internet.",
@@ -13039,7 +15151,7 @@ subjects.push({
         {
           t: "Final 2023 — Answers (MCQs & T/F) — 50 Questions",
           d: "Final exam 2023 (30 MCQ + 20 True/False)",
-          pdf: "datenew/subjects/computer-networks/questions/Final/Other/Final 2023 - Answers - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Tarek/Final 2023 - Answers - Computer Networks.pdf",
           questions: [
             {
               q: "time for a small packet to travel from a client to server and come back.",
@@ -13475,7 +15587,7 @@ subjects.push({
         {
           t: "Final MC354 — Answers (10 MCQ + 57 T/F)",
           d: "Final Exam MC354",
-          pdf: "datenew/subjects/computer-networks/questions/Final/Other/Final MC354 - Answers - Computer Networks.pdf",
+          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Tarek/Final_MC354-Answers-Computer_Networks.pdf",
           questions: [
             {
               q: "check bit errors.",
@@ -14023,9 +16135,9 @@ subjects.push({
           ],
         },
         {
-          t: "Final Exam (Other) — Q16 to Q50",
+          t: "Final Exam  — Q16 to Q50",
           d: "Same exam as Final 2023 (questions 16–50), partially highlighted",
-          pdf: "datenew/subjects/computer-networks/questions/Final/Other/امتحان فانيل شبكات.pdf",
+          pdf: "datenew/subjects/computer-networks/questions/Final/Dr. Tarek/Computer Networks Final.pdf",
           questions: [
             {
               q: "The only control that the application developer has on the transport-layer side is",
@@ -14891,6 +17003,7 @@ subjects.push({
         },
       ],
     },
+
     {
       t: "Test Bank - Answers",
       d: "General Test Bank",
@@ -15213,6 +17326,7 @@ subjects.push({
         },
       ],
     },
+
     {
       t: "Test Bank Network 4 chapters",
       d: "Chapters 1-4 Test Bank",

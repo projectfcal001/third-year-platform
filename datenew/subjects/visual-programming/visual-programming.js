@@ -6073,28 +6073,1049 @@ subjects.push({
         },
       ],
     },
+    {
+      id: "visual-programming-lecture-06",
+      t: "المحاضرة 6 — Arrays and Lists",
+      d: "بنك أسئلة شامل لمحاضرة المصفوفات والقوائم في C# يغطي التعريفات، المقارنات، الأكواد، والمسائل الحسابية.",
+      pdf: "datenew/subjects/visual-programming/lectures/Lec06/Chapter 6_compressed.pdf",
+      pdf2: "/datenew/subjects/visual-programming/questions/Questions on each lecture/Lec06/Lecture-06-Arrays-Lists-Questions.pdf",
+      // المحاضرة: Chapter 6 — Arrays and Lists (د. سارة طارق)
+      // الموضوع الرئيسي: المصفوفات، التهيئة، foreach، تمرير المصفوفات للدوال، البحث التسلسلي،
+      // الترتيب بالاختيار، المصفوفات ثنائية الأبعاد والمسننة، List<T>، و StreamWriter.
+
+      linkCategories: [
+        {
+          category: "فيديوهات عربية",
+          icon: "🇪🇬",
+          description: "شرح بالعربي للمفاهيم الأساسية للمصفوفات والقوائم في C#",
+          links: [
+            {
+              t: "المصفوفات في C# — شرح عربي",
+              d: "شرح تعريف المصفوفات، التهيئة، الوصول للعناصر، وحلقة foreach. مناسب لفهم أساسيات arrays في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+arrays+شرح+عربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "القوائم List<T> في C# — شرح عربي",
+              d: "شرح دوال Add و Remove و RemoveAt و IndexOf و Count. يغطّي الفرق بين List و Array.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+List+T+شرح+عربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "خوارزميات الترتيب والبحث — شرح عربي",
+              d: "شرح selection sort و sequential search بأمثلة عملية. يوضّح خطوات الخوارزميات اللي بتكرر في المحاضرة.",
+              icon: "🇪🇬",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=selection+sort+sequential+search+شرح+عربي",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "فيديوهات عالمية",
+          icon: "🌍",
+          description: "فيديوهات بالإنجليزي تشرح المفاهيم بأسلوب مرئي واضح",
+          links: [
+            {
+              t: "C# Arrays Tutorial — Selection Sort & Linear Search",
+              d: "شرح مرئي لخوارزميات البحث التسلسلي والترتيب بالاختيار، مع أكواد C# عملية.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+selection+sort+linear+search+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "C# List<T> Tutorial — Add, Remove, IndexOf",
+              d: "شرح عملي لكلاس List في C# وطريقة استخدام دواله الأساسية مع مقارنته بالمصفوفة.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+List+T+Add+Remove+IndexOf+tutorial",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+            {
+              t: "C# Jagged Arrays and 2D Arrays Explained",
+              d: "فيديو يوضّح الفرق بين jagged arrays و multidimensional arrays في C# مع أمثلة إعلان ووصول للعناصر.",
+              icon: "🌍",
+              actions: [
+                {
+                  label: "🔎 بحث في يوتيوب",
+                  url: "https://www.youtube.com/results?search_query=C%23+jagged+array+multidimensional+array+explained",
+                  type: "view",
+                  color: "red",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "مواقع ومراجع",
+          icon: "📚",
+          description: "مصادر رسمية وموثوقة لفهم المفاهيم بالتفصيل",
+          links: [
+            {
+              t: "Arrays in C# — Microsoft Learn",
+              d: "المرجع الرسمي من مايكروسوفت لتعريف المصفوفات، التهيئة، الوصول للعناصر، والمراجع vs القيم. أساس المحاضرة كله.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Iteration statements (for, foreach) — Microsoft Learn",
+              d: "شرح رسمي لحلقة foreach وكيفية استخدامها مع المصفوفات. يوضّح متى تكون foreach أنسب من for.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "Method parameters (ref, out) — Microsoft Learn",
+              d: "شرح رسمي لاستخدام ref و out مع parameters، يغطّي تمرير المصفوفات بالمرجع وقواعد كل كلمة مفتاحية.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+            {
+              t: "How to write text to a file — Microsoft Learn (.NET)",
+              d: "المرجع الرسمي لاستخدام StreamWriter داخل using block، والفرق بين overwrite و append. مطابق لـ slides 56-57.",
+              icon: "📚",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://learn.microsoft.com/en-us/dotnet/standard/io/how-to-write-text-to-a-file",
+                  type: "view",
+                  color: "blue",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "أدوات ومحاكاة",
+          icon: "🔧",
+          description: "أدوات تفاعلية لتجربة الأكواد وفهم الخوارزميات بسرعة",
+          links: [
+            {
+              t: "Selection Sort Algorithm — W3Schools DSA",
+              d: "محاكاة مرئية لخوارزمية selection sort خطوة بخطوة مع شرح كل pass. مفيد لفهم عملي للخوارزمية.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.w3schools.com/dsa/dsa_algo_selectionsort.php",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "Linear Search Algorithm — W3Schools DSA",
+              d: "شرح تفاعلي لخوارزمية البحث التسلسلي (linear/sequential search) مع مثال مرئي.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.w3schools.com/dsa/dsa_algo_linearsearch.php",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              t: "List<T>.RemoveAt Method — GeeksforGeeks",
+              d: "مرجع عملي لدالة RemoveAt في List مع أمثلة كود قابلة للتجربة. يوضّح سلوك الـ Count بعد الحذف.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.geeksforgeeks.org/c-sharp/c-sharp-how-to-remove-the-element-from-the-specified-index-of-the-list",
+                  type: "view",
+                  color: "orange",
+                },
+              ],
+            },
+            {
+              t: "C# Arrays — W3Schools",
+              d: "محرّر C# تفاعلي لتجربة إعلان المصفوفات والوصول لعناصرها مباشرة في المتصفح بدون Visual Studio.",
+              icon: "🔧",
+              actions: [
+                {
+                  label: "🌐 فتح الموقع",
+                  url: "https://www.w3schools.com/cs/cs_arrays.php",
+                  type: "view",
+                  color: "green",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      questions: [
+        {
+          q: "1. Which keyword is used to create an array object in memory and return a reference to it?",
+          options: ["create", "new", "init", "array"],
+          correct: 1,
+          translation:
+            "أي كلمة مفتاحية تُستخدم لإنشاء كائن مصفوفة في الذاكرة وإرجاع مرجع إليه؟",
+          explanation:
+            "كلمة new هي اللي بتنشئ الكائن في الذاكرة وترجع reference له، والـ = بيسند المرجع للمتغير. create و init مش كلمات C# معروفة هنا.",
+          tags: ["Array Basics", "new keyword"],
+          ref: "Chapter 6 — Slide 4 (Array Basics)",
+          likely: "high",
+        },
+        {
+          q: "2. What does the expression int[] indicate about the variable numbersArray?",
+          options: [
+            "It stores a single int value",
+            "It is a reference to an int array",
+            "It is a regular int variable with brackets",
+            "It is an array of references to ints",
+          ],
+          correct: 1,
+          translation: "ماذا يشير التعبير int[] عن المتغير numbersArray؟",
+          explanation:
+            "int[] بيدل إن المتغير reference لمصفوفة int مش قيمة int واحدة. عشان كده مينفعش نخزن int فيه مباشرة، إنما نسنند له مرجع مصفوفة.",
+          tags: ["Array Basics", "Reference Type"],
+          ref: "Chapter 6 — Slide 3 (Array Basics)",
+          likely: "high",
+        },
+        {
+          q: "3. What is the index of the first element in a C# array?",
+          options: ["Depends on the array size", "0", "1", "-1"],
+          correct: 1,
+          translation: "ما هو فهرس أول عنصر في مصفوفة C#؟",
+          explanation:
+            "الفهرسة في C# تبدأ من 0، فأول عنصر في الفهرس 0 واللي قبله ما فيش.",
+          tags: ["Array Basics", "Indexing"],
+          ref: "Chapter 6 — Slide 9 (Array Initialization)",
+          likely: "high",
+        },
+        {
+          q: "4. Which property holds the number of elements in a C# array?",
+          options: ["Size", "Count", "Length", "Items"],
+          correct: 2,
+          translation: "أي خاصية تحتوي على عدد عناصر مصفوفة C#؟",
+          explanation:
+            "كل المصفوفات في C# عندها خاصية Length بعدد العناصر. Count خاصية List مش array، و Size و Items مش موجودين.",
+          tags: ["Array", "Length Property"],
+          ref: "Chapter 6 — Slide 10 (Length Property)",
+          likely: "high",
+        },
+        {
+          q: "5. What is an initialization list in C#?",
+          options: [
+            "A list of variable names separated by commas",
+            "A list of method names to call",
+            "A list of array properties",
+            "A series of values inside braces separated by commas",
+          ],
+          correct: 3,
+          translation: "ما هي قائمة التهيئة (initialization list) في C#؟",
+          explanation:
+            "قائمة التهيئة هي قيم بين أقواس معقوفة { } مفصولة بفواصل، بتتحط لما نعمل declare للمصفوفة، والقيم بتتخزن بالترتيب من الفهرس 0.",
+          tags: ["Array Initialization", "Syntax"],
+          ref: "Chapter 6 — Slide 9 (Array Initialization)",
+          likely: "high",
+        },
+        {
+          q: "6. When using a foreach loop with an array, what does the loop automatically know?",
+          options: [
+            "The index of each element",
+            "The number of elements in the array",
+            "The memory address of each element",
+            "The data type of the elements",
+          ],
+          correct: 1,
+          translation:
+            "لما تستخدم حلقة foreach مع مصفوفة، إيه اللي الحلقة بتعرفه تلقائياً؟",
+          explanation:
+            "foreach بيعرف عدد العناصر تلقائياً، فمش محتاج counter variable زي for العادية. لكن مش بيدّيك الـ index، وعشان كده مينفعش تعدّل العناصر جواه.",
+          tags: ["foreach Loop", "Array Iteration"],
+          ref: "Chapter 6 — Slide 13 (foreach Loop with Arrays)",
+          likely: "high",
+        },
+        {
+          q: "7. When you pass an array as an argument to a method (without ref or out), how is it passed?",
+          options: ["By reference", "By value", "By default value", "By copy"],
+          correct: 0,
+          translation:
+            "لما تمرر مصفوفة كـ argument لدالة (من غير ref أو out)، إزاي بتمرر؟",
+          explanation:
+            "المحاضرة بتقول صراحة: Arrays are always passed by reference. يعني الدالة بتوصل للمصفوفة الأصلية وممكن تعدّل عناصرها مباشرة.",
+          tags: ["Passing Arrays", "Reference Type"],
+          ref: "Chapter 6 — Slide 24 (Example 3)",
+          likely: "high",
+        },
+        {
+          q: "8. Which operator CANNOT be used to compare the contents of two array reference variables?",
+          options: ["Compare", "Equals", "==", "!="],
+          correct: 2,
+          translation:
+            "أي معامل مش ممكن يستخدم لمقارنة محتوى متغيري مرجع مصفوفة؟",
+          explanation:
+            "المحاضرة بتقول إن == بيقارن المراجع (هل بيشاوروا على نفس المصفوفة) مش المحتوى. عشان تقارن المحتوى لازم تقارن العناصر عنصر بعنصر.",
+          tags: ["Comparing Arrays", "Operators"],
+          ref: "Chapter 6 — Slide 35 (Comparing Arrays)",
+          likely: "high",
+        },
+        {
+          q: "9. How does the sequential search algorithm work?",
+          options: [
+            "It accesses elements in random order",
+            "It uses binary division to halve the search area",
+            "It sorts the array first then searches",
+            "It uses a loop to step through the array sequentially from element 0",
+          ],
+          correct: 3,
+          translation: "إزاي بيشتغل خوارزمية البحث التسلسلي؟",
+          explanation:
+            "البحث التسلسلي بيستخدم loop يمشي على المصفوفة من أول عنصر (index 0) ويقارن كل عنصر بالقيمة المطلوبة لحد ما يلاقيها أو يوصل الآخر.",
+          tags: ["Sequential Search", "Algorithm"],
+          ref: "Chapter 6 — Slide 31 (Sequential Search Algorithm)",
+          likely: "high",
+        },
+        {
+          q: "10. How does the selection sort algorithm begin sorting an array?",
+          options: [
+            "By swapping the first two elements",
+            "By reversing the entire array",
+            "By locating the smallest value and moving it to element 0",
+            "By finding the largest value and moving it to the end",
+          ],
+          correct: 2,
+          translation: "إزاي بيبدأ ترتيب المصفوفة بخوارزمية selection sort؟",
+          explanation:
+            "Selection sort بيبدأ بمسح المصفوفة من element 0، يلاقي أصغر قيمة، ويعمل swap بينها وبين element 0. بعدين يبدأ من element 1 ويعيد العملية.",
+          tags: ["Selection Sort", "Algorithm"],
+          ref: "Chapter 6 — Slide 42 (Selection Sort Algorithm)",
+          likely: "high",
+        },
+        {
+          q: "11. In the selection sort, after the smallest value is moved to element 0, where does the next scan begin?",
+          options: [
+            "Element 1",
+            "The middle element",
+            "The last element",
+            "Element 0 again",
+          ],
+          correct: 0,
+          translation:
+            "في الـ selection sort، بعد ما أصغر قيمة تتحرك لـ element 0، منين بيبدأ المسح التالي؟",
+          explanation:
+            "لأن element 0 فيه أصغر قيمة بالفعل، المسح التالي بيبدأ من element 1 عشان يلاقي تاني أصغر قيمة ويحطها في element 1.",
+          tags: ["Selection Sort", "Algorithm"],
+          ref: "Chapter 6 — Slide 43 (Selection Sort Algorithm)",
+          likely: "high",
+        },
+        {
+          q: "12. How many size declarators are required to declare a two-dimensional array?",
+          options: ["Two", "Four", "Three", "One"],
+          correct: 0,
+          translation: "كم محدد حجم مطلوب للإعلان عن مصفوفة ثنائية الأبعاد؟",
+          explanation:
+            "المصفوفة ثنائية الأبعاد محتاجة declarator واحد للصفوف (rows) وواحد للأعمدة (columns)، يعني اتنين. زي int[,] values = new int[3,4].",
+          tags: ["2D Array", "Declaration"],
+          ref: "Chapter 6 — Slide 49 (Two-Dimensional Array)",
+          likely: "high",
+        },
+        {
+          q: "13. In a two-dimensional array declaration int[,] values = new int[3,4], what does the number 3 represent?",
+          options: [
+            "Starting index",
+            "Number of columns",
+            "Total number of elements",
+            "Number of rows",
+          ],
+          correct: 3,
+          translation:
+            "في إعلان مصفوفة ثنائية الأبعاد int[,] values = new int[3,4]، إيه اللي بيمثله الرقم 3؟",
+          explanation:
+            "أول رقم بيمثل عدد الصفوف (rows)، والتاني بيمثل عدد الأعمدة (columns). فالـ 3 دي عدد الصفوف.",
+          tags: ["2D Array", "Rows and Columns"],
+          ref: "Chapter 6 — Slide 49 (Two-Dimensional Array)",
+          likely: "high",
+        },
+        {
+          q: "14. What is a jagged array?",
+          options: [
+            "An unsorted one-dimensional array",
+            "An array with random-sized elements",
+            "An array where each element is also a one-dimensional array",
+            "A two-dimensional array with equal row lengths",
+          ],
+          correct: 2,
+          translation: "إيه هي الـ jagged array؟",
+          explanation:
+            "الـ jagged array هي مصفوفة أحادية البعد، كل عنصر فيها كمان مصفوفة أحادية البعد. يعني array of arrays، وعشان كده الصفوف ممكن تكون بأطوال مختلفة.",
+          tags: ["Jagged Array", "Definition"],
+          ref: "Chapter 6 — Slide 63 (Jagged Array)",
+          likely: "high",
+        },
+        {
+          q: "15. What is the main difference between a jagged array and a two-dimensional array?",
+          options: [
+            "Rows in a jagged array can have different lengths",
+            "Jagged arrays use less memory always",
+            "Jagged arrays are slower",
+            "Two-dimensional arrays cannot be initialized",
+          ],
+          correct: 0,
+          translation:
+            "إيه الفرق الأساسي بين الـ jagged array والمصفوفة ثنائية الأبعاد؟",
+          explanation:
+            "في الـ jagged array كل صف ممكن يكون بطول مختلف، لأنه array of arrays. أما الـ 2D array فكل الصفوف بنفس عدد الأعمدة.",
+          tags: ["Jagged Array", "2D Array", "Comparison"],
+          ref: "Chapter 6 — Slide 63 (Jagged Array)",
+          likely: "high",
+        },
+        {
+          q: "16. Which of the following is an advantage of a List<T> over an array?",
+          options: [
+            "A List uses less memory than an array",
+            "A List can only store integers",
+            "A List is always faster than an array",
+            "A List automatically expands as items are added to it",
+          ],
+          correct: 3,
+          translation: "أي من الآتي ميزة للـ List على المصفوفة؟",
+          explanation:
+            "المحاضرة بتعدد ميزات List، وأهمها إنها بتتوسع تلقائياً لما تضيف عناصر وتتقلص لما تحذف. مش شرط تكون أسرع أو أقل استهلاك للذاكرة.",
+          tags: ["List", "Advantages"],
+          ref: "Chapter 6 — Slide 68 (List Collection)",
+          likely: "high",
+        },
+        {
+          q: "17. Which method is used to add an item to a List<T> object?",
+          options: ["Insert", "Append", "Add", "Push"],
+          correct: 2,
+          translation: "أي دالة تُستخدم لإضافة عنصر لكائن List<T>؟",
+          explanation:
+            "دالة Add بتضيف العنصر لنهاية الـ List. Insert بتضيف عند index معين، و Push و Append مش دوال في List C#.",
+          tags: ["List", "Add Method"],
+          ref: "Chapter 6 — Slide 70 (Adding Items to a List)",
+          likely: "high",
+        },
+        {
+          q: "18. Which property holds the number of items stored in a List<T>?",
+          options: ["Count", "Length", "Capacity", "Size"],
+          correct: 0,
+          translation: "أي خاصية تحتوي على عدد العناصر المخزنة في List<T>؟",
+          explanation:
+            "List عندها خاصية Count بعدد العناصر الفعلية. Length للمصفوفات، و Capacity بيكون حجم الذاكرة المخصصة (ممكن أكبر من Count).",
+          tags: ["List", "Count Property"],
+          ref: "Chapter 6 — Slide 71 (Count Property)",
+          likely: "high",
+        },
+        {
+          q: "19. What is the difference between RemoveAt and Remove methods of a List<T>?",
+          options: [
+            "Both take an index",
+            "RemoveAt takes a value, Remove takes an index",
+            "RemoveAt takes an index, Remove takes a value",
+            "Both take a value",
+          ],
+          correct: 2,
+          translation: "إيه الفرق بين دوال RemoveAt و Remove في الـ List؟",
+          explanation:
+            "RemoveAt(int index) بتحذف العنصر عند فهرس معين. Remove(value) بتاخد قيمة، تدور عليها، وتحذفها لو لقتها.",
+          tags: ["List", "RemoveAt", "Remove", "Comparison"],
+          ref: "Chapter 6 — Slide 72 (Removing Items from a List)",
+          likely: "high",
+        },
+        {
+          q: "20. What does the Remove method of a List<T> return?",
+          options: [
+            "The removed item",
+            "Nothing (void)",
+            "The index of the removed item",
+            "A Boolean value indicating whether the item was removed",
+          ],
+          correct: 3,
+          translation: "إيه اللي بترجعه دالة Remove في الـ List؟",
+          explanation:
+            "Remove بترجع bool: true لو لقت العنصر وحذفته، false لو ملقتهوش. ده مهم عشان تعرف إذا كان الحذف حصل فعلاً.",
+          tags: ["List", "Remove Method"],
+          ref: "Chapter 6 — Slide 73 (Remove method)",
+          likely: "high",
+        },
+        {
+          q: "21. What does the IndexOf method return if the value is not found in a List<T>?",
+          options: ["0", "-1", "Throws an exception", "null"],
+          correct: 1,
+          translation:
+            "إيه اللي بترجعه دالة IndexOf لو القيمة مش موجودة في الـ List؟",
+          explanation:
+            "IndexOf بترجع -1 كقيمة اصطلاحية تعني 'غير موجود'. لو لقت القيمة بترجع الفهرس بتاعها.",
+          tags: ["List", "IndexOf"],
+          ref: "Chapter 6 — Slide 75 (IndexOf method)",
+          likely: "high",
+        },
+        {
+          q: "22. Which statement ensures that a StreamWriter object is automatically closed even if an exception occurs?",
+          options: [
+            "using statement",
+            "finally block only",
+            "dispose statement",
+            "close statement",
+          ],
+          correct: 0,
+          translation:
+            "أي عبارة بتضمن إن كائن StreamWriter يتقفل تلقائياً حتى لو حصل استثناء؟",
+          explanation:
+            "using block بيستدعي Dispose تلقائياً، اللي بيعمل flush و close للـ StreamWriter. مش محتاج call Close() يدوياً، وحتى لو exception حصل الملف بيتقفل.",
+          tags: ["StreamWriter", "using statement", "File I/O"],
+          ref: "Chapter 6 — Slide 56 (File handling)",
+          likely: "high",
+        },
+        {
+          q: "23. What happens when you create a StreamWriter with the append parameter set to true?",
+          options: [
+            "The file is opened in read-only mode",
+            "The file is overwritten with new content",
+            "An exception is thrown if the file exists",
+            "New text is added to the end of the existing file",
+          ],
+          correct: 3,
+          translation: "إيه اللي بيحصل لما تعمل StreamWriter مع append=true؟",
+          explanation:
+            "append=true بيخلي الكتابة تتم من نهاية الملف بدون مسح المحتوى القديم. لو append=false (الافتراضي) الملف بيتعمل overwrite.",
+          tags: ["StreamWriter", "Append", "File I/O"],
+          ref: "Chapter 6 — Slide 57 (File handling)",
+          likely: "high",
+        },
+        {
+          q: "24. Which of the following correctly declares a jagged array of integers with 3 rows?",
+          options: [
+            "int[] arr = new int[3][];",
+            "int[,] arr = new int[3,3];",
+            "int[][] arr = new int[][];",
+            "int[][] arr = new int[3][];",
+          ],
+          correct: 3,
+          translation:
+            "أي من الآتي إعلان صحيح لـ jagged array من الأعداد الصحيحة بـ 3 صفوف؟",
+          explanation:
+            "int[][] arr = new int[3][]; بتعرف 3 صفوف، كل صف لسه محتاج تعرفه. int[,] دي 2D array مش jagged، و new int[][] ناقصة الحجم.",
+          tags: ["Jagged Array", "Syntax"],
+          ref: "Chapter 6 — Slide 64 (Jagged Array)",
+          likely: "high",
+        },
+        {
+          q: "25. Which namespace contains the StreamWriter class in .NET?",
+          options: [
+            "System.IO",
+            "System.Text",
+            "System.Collections",
+            "System.Windows.Forms",
+          ],
+          correct: 0,
+          translation: "أي namespace بيحتوي على كلاس StreamWriter في .NET؟",
+          explanation:
+            "StreamWriter موجود في System.IO (Input/Output). System.Text للنصوص، و System.Windows.Forms للواجهات، و System.Collections للمجموعات.",
+          tags: ["StreamWriter", "Namespaces"],
+          ref: "Chapter 6 — Slide 56 (File handling)",
+          likely: "high",
+        },
+        {
+          q: "26. Which loop type is most commonly used to process all elements of a two-dimensional array?",
+          options: [
+            "Nested loops",
+            "A while loop only",
+            "A single foreach loop",
+            "A do-while loop",
+          ],
+          correct: 0,
+          translation:
+            "أي نوع حلقة بيُستخدم بكثرة لمعالجة كل عناصر مصفوفة ثنائية الأبعاد؟",
+          explanation:
+            "المحاضرة بتقول إن البرامج بتستخدم nested loops (حلقات متداخلة) عشان تمر على الصفوف والأعمدة. حلقة خارجية للصفوف وداخلية للأعمدة.",
+          tags: ["2D Array", "Nested Loops"],
+          ref: "Chapter 6 — Slide 50 (Accessing Elements in a 2D Array)",
+          likely: "medium",
+        },
+        {
+          q: "27. When a method assigns a new array to the iArray parameter WITHOUT using ref (e.g. iArray = new int[5];), what happens to the original array passed as an argument?",
+          options: [
+            "The original array is replaced by the new one",
+            "The original array is unchanged and still references the same memory",
+            "An exception is thrown",
+            "The original array is cleared",
+          ],
+          correct: 1,
+          translation:
+            "لما دالة تسند مصفوفة جديدة للـ parameter iArray من غير ref، إيه اللي بيحصل للمصفوفة الأصلية؟",
+          explanation:
+            "بدون ref، الـ parameter بيشاور على مصفوفة جديدة، لكن المتغير الأصلي بره الدالة لسه بيشاور على المصفوفة القديمة. التغيير مش بيرجع للـ caller.",
+          tags: ["Passing Arrays", "Reference vs ref"],
+          ref: "Chapter 6 — Slide 27 (Example 4)",
+          likely: "medium",
+        },
+        {
+          q: "28. When the ref keyword is used with an array parameter, what is the effect?",
+          options: [
+            "The parameter variable refers to the original variable, so changes affect the caller",
+            "The array is locked from modification",
+            "An exception is thrown at runtime",
+            "A copy of the array is made",
+          ],
+          correct: 0,
+          translation: "لما تستخدم ref مع array parameter، إيه التأثير؟",
+          explanation:
+            "ref بتخلي الـ parameter يشاور على المتغير الأصلي نفسه، فأي تعديل (حتى إسناد مصفوفة جديدة) بينعكس على الـ caller.",
+          tags: ["ref keyword", "Passing Arrays"],
+          ref: "Chapter 6 — Slide 30 (Example 5)",
+          likely: "medium",
+        },
+        {
+          q: "29. In a jagged array, what does the Length property of the outer array hold?",
+          options: [
+            "The number of rows",
+            "The length of the longest row",
+            "The total number of elements across all rows",
+            "The number of columns",
+          ],
+          correct: 0,
+          translation:
+            "في الـ jagged array، إيه اللي خاصية Length للمصفوفة الخارجية بتحمله؟",
+          explanation:
+            "الـ jagged array هي array of arrays، فـ Length بتدّيك عدد الصفوف. كل صف ليه Length خاص بيه بعدد عناصره.",
+          tags: ["Jagged Array", "Length Property"],
+          ref: "Chapter 6 — Slide 65 (Jagged Array)",
+          likely: "medium",
+        },
+        {
+          q: "30. How do you access an element in a two-dimensional array?",
+          options: [
+            "By using a single subscript",
+            "By using the element name only",
+            "By using two subscripts",
+            "By using the Length property",
+          ],
+          correct: 2,
+          translation: "إزاي توصل لعنصر في مصفوفة ثنائية الأبعاد؟",
+          explanation:
+            "محتاج subscript اتنين: واحد للصف والتاني للعمود. زي values[row, col]. subscript واحد مش كفاية.",
+          tags: ["2D Array", "Accessing Elements"],
+          ref: "Chapter 6 — Slide 50 (Accessing Elements in a 2D Array)",
+          likely: "medium",
+        },
+        {
+          q: "31. What is the recommended practice for an array's size declarator according to the lecture?",
+          options: [
+            "Use a floating-point value",
+            "Use a named constant",
+            "Use a magic number",
+            "Use a string value",
+          ],
+          correct: 1,
+          translation:
+            "إيه الممارسة المُوصى بها لمُحدد حجم المصفوفة حسب المحاضرة؟",
+          explanation:
+            "المحاضرة بتقول من الأفضل تستخدم named constant زي const int SIZE = 6; عشان الكود يكون أوضح وأسهل في التعديل.",
+          tags: ["Array Basics", "Best Practice"],
+          ref: "Chapter 6 — Slide 5 (Array Basics)",
+          likely: "medium",
+        },
+        {
+          q: "32. Which of the following is NOT an advantage of List<T> mentioned in the lecture?",
+          options: [
+            "A List automatically expands as items are added",
+            "A List is always faster than an array",
+            "You do not have to know the number of items when creating a List",
+            "A List automatically shrinks as items are removed",
+          ],
+          correct: 1,
+          translation: "أي من الآتي ليس ميزة للـ List مذكورة في المحاضرة؟",
+          explanation:
+            "المحاضرة ذكرت 4 ميزات: مش محتاج تعرف العدد مسبقاً، تتوسع تلقائياً مع الإضافة، تقدر تحذف عناصر، وتتقلص تلقائياً مع الحذف. ماذكرتش إنها أسرع من array.",
+          tags: ["List", "Advantages"],
+          ref: "Chapter 6 — Slide 68 (List Collection)",
+          likely: "medium",
+        },
+        {
+          q: "33. How many arguments does the simplest form of the IndexOf method take when searching a List<T>?",
+          options: ["Two", "Three", "Zero", "One"],
+          correct: 3,
+          translation:
+            "كم argument بتاخد أبسط صورة من دالة IndexOf لما بتدور في List؟",
+          explanation:
+            "الصورة الأساسية بتاخد argument واحد (القيمة المطلوب البحث عنها). في نسخ تانية بتاخد start index، ونسخة تالتة بتاخد start و end index.",
+          tags: ["List", "IndexOf"],
+          ref: "Chapter 6 — Slide 75 (IndexOf method)",
+          likely: "medium",
+        },
+        {
+          q: "34. What happens if you pass an invalid index as a starting position to the IndexOf method of a List<T>?",
+          options: [
+            "It returns -1",
+            "An exception occurs",
+            "It returns 0",
+            "It ignores the index and searches the whole list",
+          ],
+          correct: 1,
+          translation:
+            "إيه اللي بيحصل لو مررت فهرس غير صالح كبداية لـ IndexOf في الـ List؟",
+          explanation:
+            "المحاضرة بتقول صراحة: لو index غير صالح، exception بيحصل. مش بترجع -1 ولا بتجاهله.",
+          tags: ["List", "IndexOf", "Exceptions"],
+          ref: "Chapter 6 — Slide 76 (IndexOf method)",
+          likely: "medium",
+        },
+        {
+          q: "35. When initializing a two-dimensional array with an initialization list, what must you provide to indicate the number of dimensions?",
+          options: [
+            "A comma in the declaration",
+            "A semicolon after the braces",
+            "The keyword dims",
+            "The size in the second pair of brackets",
+          ],
+          correct: 0,
+          translation:
+            "لما تهيّئ مصفوفة ثنائية الأبعاد بقائمة تهيئة، إيه اللي لازم توفره للإشارة لعدد الأبعاد؟",
+          explanation:
+            "لازم فاصلة (comma) في تعريف النوع، زي int[,] values = {{...}, {...}}; عشان C# يعرف إنها 2D. من غير الفاصلة بتتحسب 1D.",
+          tags: ["2D Array", "Initialization"],
+          ref: "Chapter 6 — Slide 51 (Implicit Sizing and Initialization of 2D Arrays)",
+          likely: "medium",
+        },
+        {
+          q: "36. Which of the following correctly declares and creates a List of strings?",
+          options: [
+            "List string names = new List();",
+            "List names = new List<string>;",
+            "string<List> names = new string<List>();",
+            "List<string> names = new List<string>();",
+          ],
+          correct: 3,
+          translation: "أي من الآتي إعلان صحيح وإنشاء لـ List من النصوص؟",
+          explanation:
+            "الصيغة الصحيحة List<string> names = new List<string>();. لازم تحدد نوع العناصر بين < >، والـ () للإنشاء.",
+          tags: ["List", "Syntax"],
+          ref: "Chapter 6 — Slide 69 (Creating and Initializing a List)",
+          likely: "medium",
+        },
+        {
+          q: "37. After executing the statement int[] numbersArray = new int[6];, how many elements can the array hold?",
+          options: ["5", "7", "0", "6"],
+          correct: 3,
+          translation:
+            "بعد تنفيذ int[] numbersArray = new int[6];، كم عنصر ممكن المصفوفة تتحمل؟",
+          explanation:
+            "الرقم 6 هو محدد الحجم، فالمصفوفة بتعمل 6 عناصر بفهارس من 0 لـ 5.",
+          tags: ["Array Basics", "Size"],
+          ref: "Chapter 6 — Slide 4 (Array Basics)",
+          likely: "medium",
+        },
+        {
+          type: "calculation",
+          q: "1. Given the following array declaration: int[] numbers = {10, 20, 30, 40, 50}; What is the value of numbers[3], and what is numbers.Length?",
+          translation:
+            "بعد إعلان المصفوفة int[] numbers = {10, 20, 30, 40, 50}; ما قيمة numbers[3] وما قيمة numbers.Length؟",
+          answer:
+            "Given: int[] numbers = {10, 20, 30, 40, 50};\nStep 1 — Indexing starts at 0:\n  numbers[0] = 10\n  numbers[1] = 20\n  numbers[2] = 30\n  numbers[3] = 40\n  numbers[4] = 50\nStep 2 — Length returns the total number of elements = 5.\nResult: numbers[3] = 40, and numbers.Length = 5.",
+          tags: ["Array", "Indexing", "Length"],
+          ref: "Chapter 6 — Slides 9 & 10",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: "2. Given the array int[] arr = {5, 1, 4, 2, 8}; Show the array after the FIRST pass of the selection sort algorithm.",
+          translation:
+            "بالنظر للمصفوفة int[] arr = {5, 1, 4, 2, 8}; اعرض المصفوفة بعد المرور الأول من الـ selection sort.",
+          answer:
+            "Given: arr = {5, 1, 4, 2, 8}\nStep 1 — Scan from element 0 to find the smallest value.\n  Candidates: 5, 1, 4, 2, 8  ->  Smallest = 1 at index 1.\nStep 2 — Swap the smallest value with element 0.\n  Swap arr[0]=5 with arr[1]=1.\nResult after first pass: {1, 5, 4, 2, 8}.\nNote: The next pass will start scanning from element 1.",
+          tags: ["Selection Sort", "Algorithm", "Calculation"],
+          ref: "Chapter 6 — Slide 43 (Selection Sort Algorithm Example)",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: "3. Given List<int> list = new List<int>{10, 20, 30, 40, 50}; Then: list.Remove(30); list.RemoveAt(0); What is list.Count and what are the remaining elements?",
+          translation:
+            "بعد List<int> list = new List<int>{10, 20, 30, 40, 50}; ثم list.Remove(30); ثم list.RemoveAt(0); ما قيمة list.Count وما العناصر المتبقية؟",
+          answer:
+            "Initial list: {10, 20, 30, 40, 50}, Count = 5.\nStep 1 — list.Remove(30): searches for value 30, finds it at index 2, removes it.\n  list becomes: {10, 20, 40, 50}, Count = 4. Remove returns true.\nStep 2 — list.RemoveAt(0): removes the element at index 0, which is 10.\n  list becomes: {20, 40, 50}, Count = 3.\nResult: list.Count = 3, and the remaining elements are 20, 40, 50.",
+          tags: ["List", "Remove", "RemoveAt", "Count"],
+          ref: "Chapter 6 — Slides 71 & 72",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: '4. Given List<string> names = new List<string>{"Alice", "Bob", "Charlie", "Diane"}; What does names.IndexOf("Diane") return, and what does names.IndexOf("Eve") return?',
+          translation:
+            'بالنظر لـ List<string> names = {"Alice", "Bob", "Charlie", "Diane"}; ماذا ترجع names.IndexOf("Diane") وماذا ترجع names.IndexOf("Eve")؟',
+          answer:
+            'Given: names = {"Alice", "Bob", "Charlie", "Diane"}.\nStep 1 — IndexOf("Diane"):\n  Alice -> index 0 (no match)\n  Bob   -> index 1 (no match)\n  Charlie -> index 2 (no match)\n  Diane -> index 3 (match!) -> returns 3.\nStep 2 — IndexOf("Eve"):\n  Scan all elements, no match found.\n  By convention, IndexOf returns -1 when the value is not found.\nResult: IndexOf("Diane") = 3, and IndexOf("Eve") = -1.',
+          tags: ["List", "IndexOf"],
+          ref: "Chapter 6 — Slide 75 (IndexOf method)",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: "5. Given int[,] matrix = new int[2,3]; How many total elements does the array have? List the valid index combinations for the first row.",
+          translation:
+            "بالنظر لـ int[,] matrix = new int[2,3]; كم إجمالي العناصر في المصفوفة؟ اعرض فهارس الصف الأول الصالحة.",
+          answer:
+            "Given: int[,] matrix = new int[2,3];\nStep 1 — First declarator = number of rows = 2.\nStep 2 — Second declarator = number of columns = 3.\nStep 3 — Total elements = rows x columns = 2 x 3 = 6.\nValid index combinations for the first row (row = 0):\n  matrix[0, 0], matrix[0, 1], matrix[0, 2].\nResult: 6 total elements; first row indices are [0,0], [0,1], [0,2].",
+          tags: ["2D Array", "Size Calculation"],
+          ref: "Chapter 6 — Slide 49 (Two-Dimensional Array)",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: "6. Given int[][] jagged = new int[2][]; jagged[0] = new int[3]; jagged[1] = new int[5]; What is jagged.Length and what is jagged[1].Length?",
+          translation:
+            "بالنظر لـ int[][] jagged = new int[2][]; jagged[0] = new int[3]; jagged[1] = new int[5]; ما قيمة jagged.Length وما قيمة jagged[1].Length؟",
+          answer:
+            "Given: jagged has 2 rows; row 0 has 3 elements; row 1 has 5 elements.\nStep 1 — jagged.Length:\n  The Length property of the outer jagged array returns the number of rows = 2.\nStep 2 — jagged[1].Length:\n  jagged[1] is the second row (an int[5]), so its Length = 5.\nResult: jagged.Length = 2, and jagged[1].Length = 5.\nNote: This is the key difference from a 2D array — each row has its own Length.",
+          tags: ["Jagged Array", "Length Property", "Calculation"],
+          ref: "Chapter 6 — Slide 65 (Jagged Array)",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: "7. Given int[] numbers = {15, 22, 8, 45, 3}; Find the highest value, the lowest value, and the average.",
+          translation:
+            "بالنظر لـ int[] numbers = {15, 22, 8, 45, 3}; أوجد أعلى قيمة وأقل قيمة والمتوسط.",
+          answer:
+            "Given: numbers = {15, 22, 8, 45, 3}, Length = 5.\nStep 1 — Highest value:\n  Initialize highest = numbers[0] = 15.\n  Compare: 22 > 15 -> highest = 22.\n  Compare: 8  < 22 -> no change.\n  Compare: 45 > 22 -> highest = 45.\n  Compare: 3  < 45 -> no change.\n  Highest = 45.\nStep 2 — Lowest value:\n  Initialize lowest = numbers[0] = 15.\n  Compare: 22 > 15 -> no change.\n  Compare: 8  < 15 -> lowest = 8.\n  Compare: 45 > 8  -> no change.\n  Compare: 3  < 8  -> lowest = 3.\n  Lowest = 3.\nStep 3 — Average = sum / Length = (15+22+8+45+3) / 5 = 93 / 5 = 18.6.\nResult: Highest = 45, Lowest = 3, Average = 18.6.",
+          tags: ["Array", "Highest", "Lowest", "Average"],
+          ref: "Chapter 6 — Slides 37-41 (Example 7 - Test Average)",
+          likely: "high",
+        },
+        {
+          type: "calculation",
+          q: '8. Given string[] days = {"Mon", "Tue", "Wed"}; What is the value of days[2] and what is days.Length?',
+          translation:
+            'بالنظر لـ string[] days = {"Mon", "Tue", "Wed"}; ما قيمة days[2] وما قيمة days.Length؟',
+          answer:
+            'Given: days = {"Mon", "Tue", "Wed"}.\nStep 1 — Indexing from 0:\n  days[0] = "Mon"\n  days[1] = "Tue"\n  days[2] = "Wed"\nStep 2 — Length = 3 (three elements).\nResult: days[2] = "Wed", and days.Length = 3.',
+          tags: ["Array", "String Array", "Length"],
+          ref: "Chapter 6 — Slides 9 & 10",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "1. Define what an array is in C# and explain why arrays are useful when processing large numbers of items.",
+          translation:
+            "عرّف المصفوفة في C# واشرح ليه المصفوفات مفيدة لما نعالج عدد كبير من العناصر.",
+          answer:
+            "An array is a data structure that allows you to store a group of items of the same data type together in memory under a single variable name.\nEach item is accessed by its index (starting from 0).\nArrays are useful because:\n1) Processing a large number of items in an array is usually easier than processing the same number of items stored in separate variables (imagine declaring 100 separate int variables vs. one int[100]).\n2) You can use loops (for, foreach) to iterate over all elements with a few lines of code.\n3) You can pass the whole array to a method as a single argument instead of passing many variables.\n4) They allow the use of a named constant as a size declarator (e.g. const int SIZE = 6), making the code easier to maintain.",
+          tags: ["Array", "Definition"],
+          ref: "Chapter 6 — Slide 2 (Array Basics)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "2. Explain the difference between declaring an array variable and creating an array object. Give an example.",
+          translation:
+            "اشرح الفرق بين الإعلان عن متغير مصفوفة وإنشاء كائن مصفوفة. اذكر مثال.",
+          answer:
+            "Declaring an array variable only creates a reference variable; it does not create the actual array in memory.\nExample: int[] numbersArray;  -> numbersArray is just a reference to an int array, but no array exists yet.\nCreating the array object uses the new keyword, which allocates memory for the elements and returns a reference.\nExample: numbersArray = new int[6];  -> now numbersArray references a real int array that can hold six values.\nThe two steps can be combined: int[] numbersArray = new int[6];\nKey point: the brackets [] after the type (int[]) indicate a reference to an array, not a single int value, so we cannot use it to store an int directly.",
+          tags: ["Array", "Declaration", "new keyword"],
+          ref: "Chapter 6 — Slides 3 & 4 (Array Basics)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "3. List the advantages of using a List<T> over an array as mentioned in the lecture.",
+          translation:
+            "اذكر ميزات استخدام List<T> مقارنة بالمصفوفة كما وردت في المحاضرة.",
+          answer:
+            "A List object is similar to an array but offers several advantages:\n1) You do not have to know the number of items you intend to store when creating a List.\n2) A List automatically expands as items are added to it.\n3) In addition to adding items, you can also remove items from a List.\n4) A List automatically shrinks as items are removed from it.\nThese features make List<T> more flexible than a fixed-size array when the number of elements is unknown or changes at runtime.",
+          tags: ["List", "Advantages", "Comparison"],
+          ref: "Chapter 6 — Slide 68 (List Collection)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "4. Compare the RemoveAt and Remove methods of a List<T>. Include what each takes as an argument and what each returns.",
+          translation:
+            "قارن بين دوال RemoveAt و Remove في الـ List. اذكر الـ argument بتاع كل واحدة وإيه اللي بترجعه.",
+          answer:
+            'RemoveAt(int index):\n- Takes an integer index as its argument.\n- Removes the item located at that specific index.\n- If the index is out of range, an exception (ArgumentOutOfRangeException) is thrown.\n- Useful when you know the position but not the value.\nRemove(T item):\n- Takes the value of the item you want to remove as its argument.\n- Searches the List for that value; if found, it removes the first occurrence.\n- Returns a Boolean: true if the item was found and removed, false if the item was not in the List.\n- Useful when you know the value but not its index.\nExample: list.RemoveAt(2) removes the element at index 2; list.Remove("Susan") searches for "Susan" and removes it only if found.',
+          tags: ["List", "RemoveAt", "Remove", "Comparison"],
+          ref: "Chapter 6 — Slides 72-74 (Removing Items / Remove method)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "5. Explain step by step how the Selection Sort algorithm sorts an array. Use the array {5, 1, 4, 2, 8} as an example.",
+          translation:
+            "اشرح خطوة بخطوة إزاي الـ Selection Sort بيرتب مصفوفة. استخدم المصفوفة {5, 1, 4, 2, 8} كمثال.",
+          answer:
+            "The selection sort works by repeatedly finding the smallest value in the unsorted part of the array and moving it to the front.\nPass 1: Scan from element 0. The smallest value is 1 (at index 1). Swap it with element 0. Array becomes: {1, 5, 4, 2, 8}.\nPass 2: Scan from element 1 (element 0 is already sorted). The smallest value is 2 (at index 3). Swap it with element 1. Array becomes: {1, 2, 4, 5, 8}.\nPass 3: Scan from element 2. The smallest value is 4 (already at index 2). No swap needed, or swap with itself. Array stays: {1, 2, 4, 5, 8}.\nPass 4: Scan from element 3. The smallest value is 5 (already at index 3). Array stays: {1, 2, 4, 5, 8}.\nAt this point only one element (8) is left, which is automatically in its correct position. The array is fully sorted: {1, 2, 4, 5, 8}.",
+          tags: ["Selection Sort", "Algorithm", "Step-by-step"],
+          ref: "Chapter 6 — Slides 42-45 (Selection Sort Algorithm)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "6. Explain how the Sequential Search algorithm works, and what happens when the value is not in the array.",
+          translation:
+            "اشرح إزاي خوارزمية البحث التسلسلي بتشتغل، وإيه اللي بيحصل لما القيمة مش في المصفوفة.",
+          answer:
+            "The sequential search (also called linear search) uses a loop to step through the array sequentially, starting with the first element (index 0).\nAt each element, it compares the element with the value being searched for.\nIf the value is found, the search stops and returns (typically) the index of that element.\nIf the value is NOT in the array, the algorithm continues searching to the end of the array and then reports that the value was not found (e.g. returns -1).\nThis algorithm is simple to implement and works on unsorted arrays, but it can be slow for very large arrays because in the worst case every element must be examined.",
+          tags: ["Sequential Search", "Algorithm"],
+          ref: "Chapter 6 — Slide 31 (Sequential Search Algorithm)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "7. What is a jagged array, and how does it differ from a two-dimensional array? Mention how each is declared.",
+          translation:
+            "إيه هي الـ jagged array، وإيه الفرق بينها وبين المصفوفة ثنائية الأبعاد؟ اذكر إزاي بتتعرف كل واحدة.",
+          answer:
+            "A jagged array is a one-dimensional array whose elements are themselves one-dimensional arrays; it is essentially an array of arrays.\nDifference from a 2D array: in a jagged array, each row can have a different length, whereas in a two-dimensional array all rows have the same number of columns.\nDeclaration of a 2D array (uses a comma and two size declarators): int[,] values = new int[3,4];  -> 3 rows, 4 columns, all rows are length 4.\nDeclaration of a jagged array (uses two pairs of brackets): int[][] jagged = new int[3][];  -> 3 rows, each row is created separately and may have a different length (e.g. jagged[0] = new int[5]; jagged[1] = new int[2];).\nLength property: a jagged array's Length returns the number of rows; each row then has its own Length property for its column count.",
+          tags: ["Jagged Array", "2D Array", "Comparison", "Declaration"],
+          ref: "Chapter 6 — Slides 49 & 63-65",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "8. Explain why you cannot use the == operator to compare the contents of two arrays. How should you compare two arrays instead?",
+          translation:
+            "اشرح ليه مينفعش تستخدم معامل == لمقارنة محتوى مصفوفتين. إزاي تقارن مصفوفتين بدلاً من ذلك؟",
+          answer:
+            "When you use == between two array reference variables, C# compares the references (i.e. whether the two variables point to the same array object in memory), NOT the contents of the arrays.\nSo even if two arrays have exactly the same elements in the same order, == returns false because they are different objects.\nTo compare the contents of two arrays, you must compare the elements of the two arrays yourself. Typically you:\n1) First check whether both arrays have the same Length. If not, they are not equal.\n2) Use a loop to compare each pair of elements at the same index.\n3) If any pair differs, the arrays are not equal. If all pairs match, the arrays are equal in content.",
+          tags: ["Comparing Arrays", "Reference Type", "Operators"],
+          ref: "Chapter 6 — Slide 35 (Comparing Arrays)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "9. Describe how arrays are passed to methods in C#, and the implication of passing by reference.",
+          translation:
+            "وصف كيفية تمرير المصفوفات للدوال في C#، ومضاعفات التمرير بالمرجع.",
+          answer:
+            "In C#, arrays are reference types and are always passed by reference to methods.\nWhen you pass an array as an argument, the method's parameter variable receives a reference to the same array object that the caller passed.\nImplication: the method has direct access to the original array through its parameter variable. Any modification the method makes to the array's elements (e.g. setting an element to 0) affects the caller's array because both reference the same memory.\nHowever, if the method assigns a NEW array to the parameter variable (e.g. iArray = new int[5];), the caller's variable is NOT affected, because the parameter now points to a new object while the caller still points to the old one.\nTo make even the assignment of a new array affect the caller, you must use the ref (or out) keyword on the parameter.",
+          tags: ["Passing Arrays", "Reference Type", "ref"],
+          ref: "Chapter 6 — Slides 20-24 & 27-30",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "10. Explain the difference between using the ref keyword and the out keyword with array parameters.",
+          translation:
+            "اشرح الفرق بين استخدام كلمة ref وكلمة out مع array parameters.",
+          answer:
+            "Both ref and out cause the parameter to be passed by reference, so that changes inside the method affect the caller's variable.\nref keyword:\n- The argument MUST be initialized by the caller before it is passed.\n- The method may or may not assign a new value to the parameter.\n- Used when the caller already has a value and wants the method to potentially modify or replace it.\nout keyword:\n- The argument does NOT need to be initialized before being passed; an uninitialized value is acceptable.\n- The method MUST assign a value to the parameter before the method returns.\n- Used when the method is supposed to produce/return a value through the parameter.\nExample from the lecture: when a method assigns iArray = new int[5];, using ref makes the caller's variable also reference the new five-element array, while without ref the caller keeps the original array.",
+          tags: ["ref", "out", "Passing Arrays", "Comparison"],
+          ref: "Chapter 6 — Slides 28-30 (Example 5 - Using ref and out)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "11. Describe the foreach loop. When is it preferred over a regular for loop when working with arrays?",
+          translation:
+            "وصف حلقة foreach. متى تُفضّل على حلقة for العادية عند التعامل مع المصفوفات؟",
+          answer:
+            "The foreach loop automatically iterates once for each element in an array (or any collection).\nSyntax: foreach (Type VariableName in ArrayName) { ... }\n- Type is the data type of the values in the array.\n- VariableName is the name of the iteration variable.\n- in is a required keyword.\n- ArrayName is the array to iterate over.\nThe foreach loop automatically knows the number of elements, so you do NOT need a counter variable or a Length check, unlike a regular for loop.\nIt is preferred when you only need to READ each element and do not need the element's index and do not need to modify the element. It produces cleaner, less error-prone code.\nIt is NOT suitable when you need to modify the array's elements or when you need the index value, because the iteration variable is read-only and its index is not exposed.",
+          tags: ["foreach", "Iteration", "Comparison"],
+          ref: "Chapter 6 — Slides 13-14 (foreach Loop with Arrays)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "12. Explain the purpose of the using statement when working with StreamWriter, and give an example.",
+          translation:
+            "اشرح غرض عبارة using عند التعامل مع StreamWriter، واذكر مثال.",
+          answer:
+            'The using statement creates and manages a StreamWriter object and ensures that the object is properly disposed of when the block ends.\nPurpose:\n1) It automatically calls Dispose on the StreamWriter when the block exits, which flushes and closes the stream.\n2) This happens even if an exception occurs inside the block, so the file is never left open accidentally.\n3) You do not need to call writer.Close() manually.\nExample:\n  using (StreamWriter writer = new StreamWriter("data.txt"))\n  {\n      writer.WriteLine("Hello");\n  }  // writer is automatically closed here.\nTo append instead of overwrite, pass true as the second argument: new StreamWriter("data.txt", true).',
+          tags: ["StreamWriter", "using", "File I/O"],
+          ref: "Chapter 6 — Slides 56-57 (File handling)",
+          likely: "high",
+        },
+        {
+          type: "essay",
+          q: "13. List the steps to write an array's contents to a text file.",
+          translation: "اذكر خطوات كتابة محتويات مصفوفة في ملف نصي.",
+          answer:
+            'Steps to write an array\'s contents to a text file:\n1) Make sure the System.IO namespace is available (it contains StreamWriter).\n2) Decide on the file path (e.g. "Values.txt").\n3) Create a StreamWriter inside a using block: using (StreamWriter outputFile = new StreamWriter("Values.txt")) { ... }\n4) Use a loop (for or foreach) to iterate over each element of the array.\n5) Inside the loop, call outputFile.WriteLine(array[i]) to write each element on its own line.\n6) When the using block ends, the StreamWriter is automatically flushed and closed.\n7) To append to an existing file instead of overwriting it, pass true as the second argument to the StreamWriter constructor: new StreamWriter("Values.txt", true).\nResult: the file will contain one array element per line, which can later be read back into an array or list.',
+          tags: ["File I/O", "StreamWriter", "Array"],
+          ref: "Chapter 6 — Slides 15-17 (Working with Files and Arrays)",
+          likely: "medium",
+        },
+        {
+          type: "essay",
+          q: "14. Describe how to declare and access elements in a two-dimensional array. Give an example declaration and one access statement.",
+          translation:
+            "صف كيفية الإعلان عن مصفوفة ثنائية الأبعاد والوصول لعناصرها. اذكر مثال إعلان وجملة وصول واحدة.",
+          answer:
+            "Declaration: a two-dimensional array requires two size declarators. The first is the number of rows and the second is the number of columns.\nExample: int[,] values = new int[3, 4];  -> 3 rows and 4 columns, 12 total elements.\nYou can also use an initialization list with braces, but you must include the comma to indicate two dimensions:\n  int[,] values = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };\nAccessing an element: you must use TWO subscripts, one for the row and one for the column.\nExample: int x = values[1, 2];  -> retrieves the element at row 1, column 2 (which is 7 in the example above).\nPrograms typically use nested loops (an outer loop over rows and an inner loop over columns) to process all elements of a 2D array.",
+          tags: ["2D Array", "Declaration", "Accessing Elements"],
+          ref: "Chapter 6 — Slides 49-51",
+          likely: "medium",
+        },
+      ],
+    },
   ],
   examSections: {
-    showLectures: false, // الأقسام تظهر بدل شكل المحاضرات العادي
+    showLectures: false, // خليها true لو عايز المحاضرات العادية تظهر كمان
+    showOthers: true,
 
     midterm: {
       mode: "separate",
       open: true,
-      notesOpen: false,
       title: "محتوى الميد",
       icon: "📝",
+      notesOpen: true,
       notes: [
-        "الميد من الفصل الأول والتاني بس",
-        "ركزي على CPM/PERT وحساب المسار الحرج",
-        "أسئلة مقالية متوقعة عن دورة حياة المشروع",
+        "محتوى الميد: من الفصل الأول لحد الفصل الخامس.",
+        "امتحان البرمجة المرئية: الثلاثاء 24 نوفمبر، من 11:00 إلى 12:00.",
       ],
-
+      chapters: [],
       lectures: [
-        "cloud-computing-lec-01",
-        "cloud-computing-lec-02",
-        "cloud-computing-lec-3-4",
-        "cloud-computing-lec-05",
-        "cloud-computing-lec-06",
+        "visual-programming-lecture-01",
+        "visual-programming-lecture-02",
+        "visual-programming-lecture-03",
+        "visual-programming-lecture-04",
+        "visual-programming-lecture-05",
       ],
     },
   },
