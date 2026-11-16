@@ -16449,7 +16449,7 @@ subjects.push({
     {
       t: "Test Bank Dr. Tarek",
       d: "Comprehensive Test Bank by Dr. Tarek",
-      pdf: "datenew/subjects/computer-networks/questions/TestBank/Dr. Tarek/Test Bank Dr. Tarek.pdf",
+      pdf: "datenew/subjects/computer-networks/questions/Test Bank/Dr. Tarek/Test Bank Dr. Tarek.pdf",
       questions: [
         {
           q: "A computer network:",
@@ -17007,7 +17007,7 @@ subjects.push({
     {
       t: "Test Bank - Answers",
       d: "General Test Bank",
-      pdf: "datenew/subjects/computer-networks/questions/TestBank/Other/Test Bank - Answers - Computer Networks.pdf",
+      pdf: "datenew/subjects/computer-networks/questions/Test Bank/Other/Test Bank - Answers - Computer Networks.pdf",
       questions: [
         {
           q: "check bit errors.",
@@ -17330,7 +17330,7 @@ subjects.push({
     {
       t: "Test Bank Network 4 chapters",
       d: "Chapters 1-4 Test Bank",
-      pdf: "datenew/subjects/computer-networks/questions/TestBank/Other/Test Bank Network 4 chapters.pdf",
+      pdf: "datenew/subjects/computer-networks/questions/Test Bank/Other/Test Bank Network 4 chapters.pdf",
       questions: [
         {
           q: "What are the two most prominent types of packet switches in today's Internet?",

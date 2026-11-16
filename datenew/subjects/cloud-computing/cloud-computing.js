@@ -4053,7 +4053,7 @@ subjects.push({
 
     midterm: {
       mode: "separate",
-      open: false,
+      open: trq,
       title: "محتوى الميد",
       icon: "📝",
       notesOpen: true,
