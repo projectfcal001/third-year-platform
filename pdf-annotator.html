@@ -107,6 +107,9 @@
   body.tool-draw .textLayer,
   body.tool-draw .textLayer > span,
   body.tool-draw .textLayer > br{pointer-events:none !important;}
+  /* المظلّل الحر: فوق النص بيحدد النص (زي التسطير والشطب)، وفي أي مكان تاني بيرسم حر */
+  body.tool-hl .textLayer{pointer-events:none;}
+  body.tool-hl .textLayer > span{pointer-events:auto !important;cursor:text;}
   .textLayer ::selection{background:rgba(47,111,237,.35);}
   .textLayer ::-moz-selection{background:rgba(47,111,237,.35);}
 
@@ -920,20 +923,59 @@
 
   // ============ Zoom ============
   function clampZoom(z){ return Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z)); }
+  // ===== زوم سلس: معاينة فورية بـ CSS transform، وبعدها إعادة رسم حادّة مع تثبيت النقطة اللي تحت الماوس =====
+  let zoomPending = null, zoomBusy = false;
+  function zoomOrigin(pa){
+    const mr = mainEl.getBoundingClientRect(), vr = viewer.getBoundingClientRect();
+    pa.ox = (mr.left + pa.vx) - vr.left;
+    pa.oy = (mr.top + pa.vy) - vr.top;
+  }
+  function captureZoomAnchor(anchor){
+    const mr = mainEl.getBoundingClientRect();
+    const vx = anchor ? anchor.x - mr.left : mr.width/2;
+    const vy = anchor ? anchor.y - mr.top  : mr.height/2;
+    const cx = mr.left + vx, cy = mr.top + vy;
+    let best = null, bestD = Infinity;
+    viewer.querySelectorAll(".page-wrap").forEach(w => {
+      const r = w.getBoundingClientRect();
+      const dy = cy < r.top ? r.top - cy : (cy > r.bottom ? cy - r.bottom : 0);
+      if(dy < bestD){ bestD = dy; best = { page: parseInt(w.dataset.page,10), r: r }; }
+    });
+    const pa = { page: best ? best.page : 1, fx: 0, fy: 0, vx: vx, vy: vy, ox: 0, oy: 0 };
+    if(best){ pa.fx = (cx - best.r.left) / Math.max(1,best.r.width); pa.fy = (cy - best.r.top) / Math.max(1,best.r.height); }
+    zoomOrigin(pa);
+    return pa;
+  }
+  function applyZoomAnchor(pa){
+    const w = viewer.querySelector('.page-wrap[data-page="'+pa.page+'"]');
+    if(!w) return;
+    const mr = mainEl.getBoundingClientRect(), wr = w.getBoundingClientRect();
+    mainEl.scrollTop  += (wr.top  + pa.fy * wr.height) - (mr.top  + pa.vy);
+    mainEl.scrollLeft += (wr.left + pa.fx * wr.width ) - (mr.left + pa.vx);
+  }
+  function setViewerPreview(){
+    if(!zoomPending || !renderedZoom){ viewer.style.transform = ""; viewer.style.transformOrigin = ""; return; }
+    const sc = zoom / renderedZoom;
+    viewer.style.transformOrigin = zoomPending.ox + "px " + zoomPending.oy + "px";
+    viewer.style.transform = Math.abs(sc-1) < 0.001 ? "" : "scale(" + sc + ")";
+  }
   function setZoom(nz, anchor){
     nz = clampZoom(nz);
     if(Math.abs(nz-zoom)<0.001) return;
-    const rect = mainEl.getBoundingClientRect();
-    let ax=null,ay=null,vx=rect.width/2,vy=rect.height/2;
-    if(anchor){ ax=anchor.x-rect.left+mainEl.scrollLeft; ay=anchor.y-rect.top+mainEl.scrollTop; vx=anchor.x-rect.left; vy=anchor.y-rect.top; }
-    const lz = renderedZoom;
+    if(!pdfDoc) return;
+    if(!zoomPending) zoomPending = captureZoomAnchor(anchor);
     zoom = nz; zoomLabel.textContent = Math.round(zoom*100)+"%";
+    setViewerPreview();
+    selBar.classList.remove("show");
     clearTimeout(renderDebounce);
-    renderDebounce = setTimeout(async ()=>{
-      await renderAllPages();
-      if(ax!==null){ const r=zoom/lz; mainEl.scrollLeft=Math.max(0,ax*r-vx); mainEl.scrollTop=Math.max(0,ay*r-vy); }
-      updateSelBar();
-    }, 130);
+    renderDebounce = setTimeout(applyZoomRender, 170);
+  }
+  async function applyZoomRender(){
+    if(zoomBusy){ renderDebounce = setTimeout(applyZoomRender, 80); return; }
+    zoomBusy = true;
+    try{ await renderAllPages(false); }catch(e){ console.error(e); }
+    zoomBusy = false;
+    updateSelBar();
   }
   function zoomBy(f){ const r=mainEl.getBoundingClientRect(); setZoom(zoom*f,{x:r.left+r.width/2,y:r.top+r.height/2}); }
   $("#btnZoomIn").addEventListener("click",()=>zoomBy(1.2));
@@ -941,12 +983,16 @@
   $("#btnZoomFit").addEventListener("click",()=>setZoom(1,null));
   zoomLabel.addEventListener("click",()=>setZoom(1,null));
 
-  mainEl.addEventListener("wheel", e => {
+  // Ctrl/Cmd + عجلة الماوس (أو pinch التراك باد) = زوم للمستند — شغّال مع كل الأدوات (قلم، نص، ...) وفوق أي عنصر
+  window.addEventListener("wheel", e => {
     if(!e.ctrlKey && !e.metaKey) return;
+    if(e.target && e.target.closest && e.target.closest("#translatePanel, #helpOverlay")) return;
     e.preventDefault();
-    let dy = e.deltaY; if(e.deltaMode===1) dy*=16;
-    setZoom(zoom*Math.exp(-dy*0.0018), {x:e.clientX, y:e.clientY});
-  }, {passive:false});
+    if(!pdfDoc) return;
+    let dy = e.deltaY; if(e.deltaMode===1) dy*=16; else if(e.deltaMode===2) dy*=400;
+    dy = Math.max(-120, Math.min(120, dy));
+    setZoom(zoom*Math.exp(-dy*0.0022), {x:e.clientX, y:e.clientY});
+  }, {passive:false, capture:true});
 
   function tDist(e){ return Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY); }
   mainEl.addEventListener("touchstart", e => { if(e.touches.length===2){ pinchState={d:tDist(e),z:zoom}; panState=null; } }, {passive:true});
@@ -1195,27 +1241,41 @@
   async function renderAllPages(keepPos){
     if(!pdfDoc) return;
     const savedPos = keepPos ? captureScrollPos() : null;
-    if(pageObserver) pageObserver.disconnect();
-    viewer.innerHTML = "";
-    renderedPages.clear();
+    const z = zoom;
     const cw = Math.min(mainEl.clientWidth-60, 900);
     const dpr = Math.min(3, Math.max(window.devicePixelRatio||1, 2));
+    const wraps = [];
     for(let p=1; p<=numPages; p++){
       const page = await pdfDoc.getPage(p);
       const vp1 = page.getViewport({scale:1});
       if(p===1) baseScale = cw/vp1.width;
-      const w = Math.round(vp1.width*baseScale*zoom);
-      const h = Math.round(vp1.height*baseScale*zoom);
+      const w = Math.round(vp1.width*baseScale*z);
+      const h = Math.round(vp1.height*baseScale*z);
       const wrap = document.createElement("div");
       wrap.className = "page-wrap"; wrap.dataset.page = p;
       wrap.style.width = w+"px"; wrap.style.height = h+"px";
       const ph = document.createElement("div");
       ph.className = "page-ph"; ph.textContent = p+" / "+numPages;
       wrap.appendChild(ph);
-      viewer.appendChild(wrap);
+      wraps.push(wrap);
       pageMeta[p] = { width:w, height:h, page:page, ptW:vp1.width, ptH:vp1.height, dpr:dpr };
     }
-    restoreScrollPos(savedPos);
+    // ← استبدال متزامن (بدون وميض)
+    if(pageObserver) pageObserver.disconnect();
+    renderedPages.clear();
+    viewer.innerHTML = "";
+    wraps.forEach(w => viewer.appendChild(w));
+    viewer.style.transform = ""; viewer.style.transformOrigin = "";
+    renderedZoom = z;
+    if(zoomPending){
+      applyZoomAnchor(zoomPending);
+      if(Math.abs(zoom - z) > 0.001){      // المستخدم كمّل زوم أثناء الرسم
+        zoomOrigin(zoomPending);
+        setViewerPreview();
+        clearTimeout(renderDebounce);
+        renderDebounce = setTimeout(applyZoomRender, 120);
+      } else zoomPending = null;
+    } else restoreScrollPos(savedPos);
     pageObserver = new IntersectionObserver(entries => {
       for(const en of entries) if(en.isIntersecting){
         const p = parseInt(en.target.dataset.page,10);
@@ -1223,7 +1283,6 @@
       }
     }, {root:mainEl, rootMargin:"500px 0px"});
     viewer.querySelectorAll(".page-wrap").forEach(w => pageObserver.observe(w));
-    renderedZoom = zoom;
     updateCanvasInteractivity();
     updatePageIndicator();
     updateNavBar();
@@ -1417,12 +1476,11 @@
     ctx.save();
     ctx.globalAlpha = anno.opacity ?? 0.42;
     ctx.globalCompositeOperation = "multiply";
-    const padX = 2, padY = anno.h * 0.15;
-    const x = (anno.x - padX / scale) * scale;
-    const y = (anno.y - padY) * scale;
-    const w = (anno.w + (2 * padX) / scale) * scale;
-    const h = (anno.h + 2 * padY) * scale;
-    const r = Math.min(3 * scale, h / 3);
+    const x = anno.x * scale;
+    const y = anno.y * scale;
+    const w = anno.w * scale;
+    const h = anno.h * scale;
+    const r = Math.min(2 * scale, h / 4);
     ctx.fillStyle = anno.color || "#FFE066";
     ctx.beginPath();
     ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r);
@@ -1621,8 +1679,11 @@
       opLbl.style.display = "none";
     }
   }
+  // أثناء سحب سلايدر الحجم نثبّت الشريط مكانه عشان ما يهربش من تحت الماوس لما النص يكبر
+  let selBarFrozen = false;
   function updateSelBar(){
     if(!selectedAnno || !pdfDoc){ selBar.classList.remove("show"); return; }
+    if(selBarFrozen && selBar.classList.contains("show")) return;
     const { stroke, page } = selectedAnno;
     const wrap = viewer.querySelector('.page-wrap[data-page="'+page+'"]');
     if(!wrap){ selBar.classList.remove("show"); return; }
@@ -1674,6 +1735,8 @@
     picker.addEventListener("change", e => { saveCustomColor(e.target.value); refreshCustomColors(); });
     selColorRack.appendChild(picker);
   }
+  ["pointerdown","touchstart"].forEach(ev => selWidth.addEventListener(ev, () => { selBarFrozen = true; }, {passive:true}));
+  ["pointerup","pointercancel","touchend","touchcancel"].forEach(ev => window.addEventListener(ev, () => { selBarFrozen = false; }, true));
   selWidth.addEventListener("input", () => {
     if(!selectedAnno) return;
     const v = parseInt(selWidth.value, 10);
@@ -2027,6 +2090,59 @@
     }
   }
 
+  // يجمع مستطيلات النص المحدد: بيتخطى المسافات اللي على الأطراف، وبيشيل التكرار، وبيدمج الكلمات اللي في نفس السطر
+  function collectTextRects(range, textLayer){
+    const raw = [];
+    const root = range.commonAncestorContainer.nodeType === 1 ? range.commonAncestorContainer : range.commonAncestorContainer.parentNode;
+    const nodes = [];
+    if(range.commonAncestorContainer.nodeType === 3) nodes.push(range.commonAncestorContainer);
+    else {
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      let n; while((n = walker.nextNode())){ if(range.intersectsNode(n)) nodes.push(n); }
+    }
+    for(const node of nodes){
+      if(!textLayer.contains(node)) continue;
+      let st = node === range.startContainer ? range.startOffset : 0;
+      let en = node === range.endContainer ? range.endOffset : node.data.length;
+      if(en <= st) continue;
+      const txt = node.data.slice(st, en);
+      const lead = txt.length - txt.replace(/^\s+/, "").length;
+      const trail = txt.length - txt.replace(/\s+$/, "").length;
+      if(lead + trail >= txt.length) continue;
+      st += lead; en -= trail;
+      const rg = document.createRange();
+      rg.setStart(node, st); rg.setEnd(node, en);
+      for(const r of Array.from(rg.getClientRects())){
+        if(r.width > 1 && r.height > 1) raw.push({ left:r.left, top:r.top, right:r.right, bottom:r.bottom });
+      }
+    }
+    // تجميع على السطور ثم دمج
+    const lines = [];
+    for(const r of raw){
+      let ln = null;
+      for(const l of lines){
+        const ov = Math.min(l.bottom, r.bottom) - Math.max(l.top, r.top);
+        if(ov > 0.5 * Math.min(l.bottom - l.top, r.bottom - r.top)){ ln = l; break; }
+      }
+      if(!ln){ ln = { top:r.top, bottom:r.bottom, items:[] }; lines.push(ln); }
+      ln.items.push(r);
+      ln.top = Math.min(ln.top, r.top); ln.bottom = Math.max(ln.bottom, r.bottom);
+    }
+    const out = [];
+    for(const l of lines){
+      l.items.sort((a,b) => a.left - b.left);
+      const h = l.bottom - l.top;
+      let cur = null;
+      for(const r of l.items){
+        if(cur && r.left <= cur.right + h * 0.8){ cur.right = Math.max(cur.right, r.right); }
+        else { if(cur) out.push(cur); cur = { left:r.left, right:r.right }; }
+      }
+      if(cur) out.push(cur);
+      out.forEach(o => { if(o.top === undefined){ o.top = l.top; o.height = h; } });
+    }
+    return out.map(o => ({ left:o.left, top:o.top, width:o.right - o.left, height:o.height }));
+  }
+
   function applyTextMark(type, overrideColor, overrideWidth){
     if(!selectedRange) return;
     currentMarkupMode = type;
@@ -2038,17 +2154,17 @@
     const pageWrap = textLayer.closest(".page-wrap");
     const pwRect = pageWrap.getBoundingClientRect();
     const scale = pageScale(p);
-    const rects = Array.from(selectedRange.getClientRects()).filter(r => r.width > 2 && r.height > 2);
+    const rects = collectTextRects(selectedRange, textLayer);
     if(!rects.length){ hideContextMenu(); return; }
     const newAnnos = [];
     for(const r of rects){
-      const padX = 2, padY = r.height * 0.12;
+      // بدون أي هامش: عرض التظليل = عرض النص بالظبط
       const anno = {
         tool: type,
-        x: r1((r.left - pwRect.left) / scale - padX / scale),
-        y: r1((r.top - pwRect.top) / scale - padY / scale),
-        w: r1(r.width / scale + (2 * padX) / scale),
-        h: r1(r.height / scale + (2 * padY) / scale)
+        x: r1((r.left - pwRect.left) / scale),
+        y: r1((r.top - pwRect.top) / scale),
+        w: r1(r.width / scale),
+        h: r1(r.height / scale)
       };
       if(type === "text-highlight"){ anno.color = overrideColor || ctxHighlightColor || "#FFE066"; anno.opacity = 0.42; }
       else if(type === "text-underline"){ anno.color = overrideColor || "#1B2430"; anno.lineWidth = overrideWidth || 2; }
@@ -2526,7 +2642,8 @@
   function updateCanvasInteractivity(){
     const drawTools = ["pen","eraser","highlighter","line","arrow","rect","circle","polygon","cloud","callout","text"];
     const fullTextLayer = ["underline","strike"];
-    document.body.classList.toggle("tool-draw", drawTools.includes(currentTool));
+    document.body.classList.toggle("tool-draw", drawTools.includes(currentTool) && currentTool !== "highlighter");
+    document.body.classList.toggle("tool-hl", currentTool === "highlighter");
     const inkOn = !fullTextLayer.includes(currentTool);
     viewer.querySelectorAll("canvas.ink-canvas").forEach(c => {
       c.style.pointerEvents = inkOn ? "auto" : "none";
@@ -2603,7 +2720,10 @@
 
   document.addEventListener("keydown", e => {
     const tag = (e.target && e.target.tagName) || "";
-    if(tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    const itype = ((e.target && e.target.type) || "").toLowerCase();
+    const isTyping = tag === "TEXTAREA" || tag === "SELECT" || (tag === "INPUT" && !["range","color","checkbox","radio","button"].includes(itype));
+    if(isTyping) return;
+    if(tag === "INPUT" && !(e.ctrlKey || e.metaKey)) return;
     if(e.key === "Escape"){
       helpOverlay.classList.remove("show");
       translatePanel.classList.remove("show");
@@ -2619,9 +2739,17 @@
     }
     if(e.ctrlKey || e.metaKey){
       const k = e.key.toLowerCase();
-      if(k === "z"){ e.preventDefault(); $("#btnUndo").click(); return; }
-      if(k === "y"){ e.preventDefault(); $("#btnRedo").click(); return; }
+      // e.code بيشتغل حتى لو الكيبورد عربي (e.key بيبقى حرف عربي)
+      if(e.code === "KeyZ" || k === "z"){
+        e.preventDefault();
+        if(e.shiftKey) $("#btnRedo").click(); else $("#btnUndo").click();
+        return;
+      }
+      if(e.code === "KeyY" || k === "y"){ e.preventDefault(); $("#btnRedo").click(); return; }
       if(k === "c" && selectedRange && !selectedRange.collapsed){ return; }
+      if(e.key === "+" || e.key === "="){ e.preventDefault(); zoomBy(1.2); return; }
+      if(e.key === "-" || e.key === "_"){ e.preventDefault(); zoomBy(1/1.2); return; }
+      if(e.key === "0"){ e.preventDefault(); setZoom(1, null); return; }
       return;
     }
     const key = e.key, lower = key.toLowerCase();

@@ -2161,7 +2161,7 @@ subjects.push({
             "employeeID = 125;",
             'employeeID = "125";',
             "employeeID = int.Parse(125);",
-            "employeeID = 125.ToString();",
+            "employeeID = (string)125;",
           ],
           correct: 1,
           translation: "كيف يمكن تخزين 125 في متغير نصي؟",
