@@ -7095,6 +7095,7 @@ subjects.push({
       ],
     },
   ],
+
   examSections: {
     showLectures: false, // خليها true لو عايز المحاضرات العادية تظهر كمان
     showOthers: true,

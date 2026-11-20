@@ -3335,7 +3335,7 @@ subjects.push({
     },
     {
       id: "computer-graphics-lecture-05",
-      t: "رسومات الحاسوب — المحاضرة 5: التعرّج، أخذ العينات وإعادة البناء (Aliasing, Sampling & Reconstruction)",
+      t: "المحاضرة 5: التعرّج، أخذ العينات وإعادة البناء (Aliasing, Sampling & Reconstruction)",
       d: "مقدمة في التعرّج (Aliasing) وأخذ العينات (Sampling) وإعادة البناء (Reconstruction)، تحليل الترددات، والفلاتر (Low/High/Band-pass) مع أمثلة كلاسيكية من كورس CMU 15-462/662.",
       pdf: "datenew/subjects/computer-graphics/lectures/Lecture 5/drawingatriangle_slides-lec 5.pdf",
       pdf2: "datenew/subjects/computer-graphics/questions/Questions on each lecture/Lecture-05-Questions.pdf",
@@ -4406,7 +4406,7 @@ subjects.push({
 
     midterm: {
       mode: "separate",
-      open: false,
+      open: true,
       title: "محتوى الميد",
       icon: "📝",
       notesOpen: true,

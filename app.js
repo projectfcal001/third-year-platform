@@ -352,6 +352,7 @@ function normalizeSubject(e) {
           t: "بنك أسئلة المادة",
           d: "جميع أسئلة المحاضرات في اختبار واحد",
           lectures: [0, 1, 2, 3],
+          _auto: !0,
         },
       ]),
     e.linkCategories || (e.linkCategories = []),
@@ -2152,6 +2153,9 @@ function examPartMap(e) {
       Object.keys(mc.seen).forEach(function (k) {
         m[k] = "mid";
       })),
+    (e.lectures || []).forEach(function (t, i) {
+      m[i] || (m[i] = "other");
+    }),
     m
   );
 }
@@ -2286,7 +2290,7 @@ function examRestHTML(e, mid, midCol, fin) {
         r.name,
         r.idxs,
         "rest",
-        r.name + " (باقي الفصل)",
+        r.name + " (باقي المحاضرات)",
         "exam-rest",
         fin ? " • تبع الفاينل" : "",
       );
@@ -4889,6 +4893,7 @@ var PROGRESS_KEYS = [
     "qa_",
     "quiz_progress_",
     "qmark_",
+    "qrep_",
     "pdfqalam:",
   ],
   BACKUP_MAX_BYTES = 5242880;
@@ -5154,7 +5159,9 @@ function openProgress(e) {
         location.pathname + "?page=dashboard",
       );
     } catch (e) {}
-  requestAnimationFrame(renderProgress);
+  requestAnimationFrame(function () {
+    setTimeout(renderProgress, 0);
+  });
 }
 function pgSolved(e, t, n) {
   var a = getSavedQuizFor(e, t),
@@ -5342,113 +5349,431 @@ function renderProgress() {
     }, 200);
   });
 }
+/* ===== ملخص التقدم: الميد / الفاينل / بنك الأسئلة ===== */
+var PG_KINDS = [
+  { k: "midterms", icon: "📝", label: "الميد" },
+  { k: "finals", icon: "🎓", label: "الفاينل" },
+  { k: "testBanks", icon: "🏦", label: "بنك الأسئلة" },
+];
+function pgExamCalc(e, kind) {
+  var list = e[kind] || [],
+    groups = e["_" + kind + "Groups"] || [],
+    res = { items: [], solved: 0, total: 0, scores: [] };
+  list.forEach(function (it, i) {
+    if (it && it._auto) return;
+    var qs = getQuizData(e, it) || [],
+      tot = 0;
+    qs.forEach(function (q) {
+      isEssay(q) || tot++;
+    });
+    var s = Math.min(tot, pgSolved(e, it.t, qs)),
+      sc = getScore(e, it.t),
+      c = null;
+    sc &&
+      void 0 !== sc.score &&
+      !isNaN(parseFloat(sc.score)) &&
+      (c = Math.round(parseFloat(sc.score)));
+    var g = groups[i];
+    res.items.push({
+      i: i,
+      t: it.t || "اختبار",
+      d: it.d || "",
+      total: tot,
+      solved: s,
+      score: c,
+      cat: g ? g.category || "" : "",
+      icon: g ? g.icon || "📁" : "",
+      fromLec: !(it.questions && it.questions.length),
+    });
+    res.solved += s;
+    res.total += tot;
+    null !== c && res.scores.push(c);
+  });
+  return res;
+}
+function pgSections(e) {
+  var secs = [
+      { k: "lectures", icon: "📚", label: "المحاضرات", d: pgCalc(e), cnt: (e.lectures || []).length },
+    ],
+    mid = pgExamCalc(e, "midterms"),
+    fin = pgExamCalc(e, "finals"),
+    bank = pgExamCalc(e, "testBanks");
+  mid.items.length &&
+    secs.push({ k: "midterms", icon: "📝", label: "الميد", d: mid, cnt: mid.items.length });
+  fin.items.length &&
+    secs.push({ k: "finals", icon: "🎓", label: "الفاينل", d: fin, cnt: fin.items.length });
+  // بنك الأسئلة بيتحسب بس لو متعرّف في ملف داتا المادة (الافتراضي التلقائي _auto متجاهَل)
+  bank.items.length &&
+    secs.push({ k: "testBanks", icon: "🏦", label: "بنك الأسئلة", d: bank, cnt: bank.items.length });
+  return secs;
+}
+function pgStatLine(d) {
+  var a = pgAvg(d.scores);
+  return (
+    "حليت " +
+    d.solved +
+    " من " +
+    d.total +
+    " • " +
+    (null !== a ? "متوسط الدرجات " + a + "%" : "لا درجات لسه")
+  );
+}
+function pgChipHTML(s) {
+  var av = pgAvg(s.d.scores);
+  return (
+    '<span class="pg-chip"><b>' +
+    s.icon +
+    " " +
+    s.label +
+    " (" +
+    s.cnt +
+    ")</b><span>حليت " +
+    s.d.solved +
+    " من " +
+    s.d.total +
+    "</span><span>" +
+    (null !== av ? "متوسط الدرجات " + av + "%" : "لا درجات لسه") +
+    "</span>" +
+    pgBar(s.d.solved, s.d.total) +
+    "</span>"
+  );
+}
+function pgRowHTML(click, title, sub, solved, total, score) {
+  var st = total && solved >= total ? " ok" : solved > 0 ? " part" : "";
+  return (
+    '<div class="pg-row' +
+    st +
+    '" onclick="' +
+    click +
+    '"><span class="pg-t">' +
+    title +
+    (sub ? '<small class="pg-d">' + sub + "</small>" : "") +
+    '</span><span class="pg-n">' +
+    solved +
+    " / " +
+    total +
+    " سؤال</span>" +
+    pgBadge(score) +
+    pgBar(solved, total) +
+    "</div>"
+  );
+}
+function pgGrpHTML(title, rows, s, n, open) {
+  return (
+    '<div class="pg-grp' +
+    (open ? " open" : "") +
+    '"><button type="button" class="pg-grp-h" aria-expanded="' +
+    (open ? "true" : "false") +
+    '" onclick="pgToggle(this)"><span class="pg-grp-t">' +
+    title +
+    '</span><span class="pg-grp-n">' +
+    s +
+    " / " +
+    n +
+    '</span><i class="pg-arr">▶</i></button><div class="pg-grp-b">' +
+    rows +
+    "</div></div>"
+  );
+}
+function pgGrpsOut(groups) {
+  var titled = groups.filter(function (g) {
+      return g.title;
+    }).length,
+    open = titled <= 3;
+  return groups
+    .map(function (g) {
+      return g.title
+        ? pgGrpHTML(g.title, g.rows.join(""), g.s, g.n, open)
+        : g.rows.join("");
+    })
+    .join("");
+}
+function pgLecRows(si, d) {
+  var groups = [],
+    cur = null;
+  d.lecs.forEach(function (t) {
+    var k = (t.chapter || "") + "|" + (t.part || "");
+    if (t.chapter || t.part) {
+      if (!cur || cur.k !== k) {
+        cur = {
+          k: k,
+          title:
+            (t.chapter ? "📘 " + esc(t.chapter) : "") +
+            (t.part
+              ? ' <span class="pg-part ' +
+                ("other" === t.part ? "rest" : t.part) +
+                '">' +
+                ("mid" === t.part
+                  ? "تبع الميد"
+                  : "other" === t.part || "rest" === t.part
+                    ? "باقي المحاضرات"
+                    : "تبع الفاينل") +
+                "</span>"
+              : ""),
+          rows: [],
+          s: 0,
+          n: 0,
+        };
+        groups.push(cur);
+      }
+    } else if (!cur || "" !== cur.k) {
+      cur = {
+        k: "",
+        title: groups.length ? "📚 باقي المحاضرات" : null,
+        rows: [],
+        s: 0,
+        n: 0,
+      };
+      groups.push(cur);
+    }
+    cur.s += t.solved;
+    cur.n += t.total;
+    cur.rows.push(
+      pgRowHTML(
+        "pgOpenLecture(" + si + "," + t.i + ")",
+        t.i + 1 + ". " + esc(t.t),
+        "",
+        t.solved,
+        t.total,
+        t.score,
+      ),
+    );
+  });
+  return pgGrpsOut(groups) || '<p class="ld-hint">لا توجد محاضرات لهذه المادة.</p>';
+}
+function pgExamRows(si, kind, d) {
+  var groups = [],
+    cur = null;
+  d.items.forEach(function (x) {
+    var k = x.cat || "";
+    if (!cur || cur.k !== k) {
+      cur = {
+        k: k,
+        title: k ? esc(x.icon) + " " + esc(k) : null,
+        rows: [],
+        s: 0,
+        n: 0,
+      };
+      groups.push(cur);
+    }
+    cur.s += x.solved;
+    cur.n += x.total;
+    cur.rows.push(
+      pgRowHTML(
+        "pgOpenExam(" + si + ",'" + kind + "'," + x.i + ")",
+        esc(x.t),
+        x.d ? esc(x.d) : "",
+        x.solved,
+        x.total,
+        x.score,
+      ),
+    );
+  });
+  return pgGrpsOut(groups);
+}
+function pgToggle(btn) {
+  var g = btn && btn.parentNode;
+  if (!g) return;
+  g.classList.toggle("open");
+  btn.setAttribute("aria-expanded", g.classList.contains("open") ? "true" : "false");
+}
+function pgAll(open) {
+  var box = document.getElementById("progress-body");
+  if (!box) return;
+  box.querySelectorAll(".lc-cat, .pg-grp, .pg-box").forEach(function (x) {
+    x.classList.toggle("open", !!open);
+  });
+  box.querySelectorAll("[aria-expanded]").forEach(function (b) {
+    b.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+var PG_SECS = {};
+function pgPaneInner(si, sec) {
+  return (
+    '<p class="pg-sub2">' +
+    pgStatLine(sec.d) +
+    "</p>" +
+    pgBar(sec.d.solved, sec.d.total) +
+    '<div style="height:10px"></div>' +
+    ("lectures" === sec.k ? pgLecRows(si, sec.d) : pgExamRows(si, sec.k, sec.d))
+  );
+}
+function pgBodyHTML(si) {
+  var secs = PG_SECS[si];
+  if (!secs) return "";
+  if (secs.length === 1)
+    return (
+      pgBar(secs[0].d.solved, secs[0].d.total) +
+      '<div style="height:10px"></div>' +
+      pgLecRows(si, secs[0].d)
+    );
+  var tabs = '<div class="pg-tabs">',
+    panes = "";
+  secs.forEach(function (sec, j) {
+    tabs +=
+      '<button type="button" class="pg-tab' +
+      (0 === j ? " active" : "") +
+      '" data-k="' +
+      sec.k +
+      '" onclick="pgTab(this)">' +
+      sec.icon +
+      " " +
+      sec.label +
+      " <small>(" +
+      sec.cnt +
+      ")</small></button>";
+    panes +=
+      '<div class="pg-pane' +
+      (0 === j ? " active" : "") +
+      '" data-k="' +
+      sec.k +
+      '">' +
+      (0 === j ? pgPaneInner(si, sec) : "") +
+      "</div>";
+  });
+  return tabs + "</div>" + panes;
+}
+function pgCat(head, si) {
+  var cat = head && head.parentNode,
+    links = cat && cat.querySelector(".lc-cat-links");
+  if (cat && links && !cat.classList.contains("open") && !links.getAttribute("data-f")) {
+    links.innerHTML = pgBodyHTML(si);
+    links.setAttribute("data-f", "1");
+  }
+  toggleLcCat(head);
+}
+function pgTab(btn) {
+  var box = btn && btn.closest ? btn.closest(".lc-cat-links") : null;
+  if (!box) return;
+  var k = btn.getAttribute("data-k"),
+    si = box.getAttribute("data-si"),
+    secs = PG_SECS[si] || [];
+  box.querySelectorAll(".pg-tab").forEach(function (b) {
+    b.classList.toggle("active", b === btn);
+  });
+  box.querySelectorAll(".pg-pane").forEach(function (p) {
+    var on = p.getAttribute("data-k") === k;
+    p.classList.toggle("active", on);
+    if (on && !p.firstChild) {
+      for (var j = 0; j < secs.length; j++)
+        if (secs[j].k === k) {
+          p.innerHTML = pgPaneInner(si, secs[j]);
+          break;
+        }
+    }
+  });
+}
 function pgDraw(e, t) {
   var n = 0,
     a = 0,
     r = 0,
     i = [],
-    s = [];
-  t.forEach(function (e) {
-    var t = SUBJECTS_INDEX[e],
-      o = subjects[e],
-      c = function (e) {
+    s = [],
+    ex = {};
+  PG_SECS = {};
+  t.forEach(function (idx) {
+    var m = SUBJECTS_INDEX[idx],
+      o = subjects[idx],
+      head = function (dd) {
         return (
-          '<div class="lc-cat-head" onclick="toggleLcCat(this)"><span class="lc-cat-icon">' +
-          (t.icon || "📚") +
+          '<div class="lc-cat-head" onclick="pgCat(this,' +
+          idx +
+          ')"><span class="lc-cat-icon">' +
+          (m.icon || "📚") +
           '</span><span class="lc-cat-main"><span class="lc-cat-tt">' +
-          esc(t.name) +
-          (t.en
-            ? ' <small style="opacity:.7;font-weight:normal;">' +
-              esc(t.en) +
-              "</small>"
+          esc(m.name) +
+          (m.en
+            ? ' <small style="opacity:.7;font-weight:normal;">' + esc(m.en) + "</small>"
             : "") +
           '</span><span class="lc-cat-dd">' +
-          e +
+          dd +
           '</span></span><span class="link-arrow">▶</span></div>'
         );
       };
-    if (o) {
-      var d = pgCalc(o),
-        l = pgAvg(d.scores);
-      ((n += d.lecs.length),
-        (a += d.solved),
-        (r += d.total),
-        d.scores.forEach(function (e) {
-          i.push(e);
-        }));
-      var u =
-          d.lecs.length +
-          " محاضرة • حليت " +
-          d.solved +
-          " من " +
-          d.total +
-          " سؤال" +
-          (null !== l ? " • متوسط الدرجة " + l + "%" : ""),
-        p = null,
-        f =
-          d.lecs
-            .map(function (t) {
-              var n = "",
-                k = (t.chapter || "") + "|" + (t.part || "");
-              return (
-                (t.chapter || t.part) &&
-                  k !== p &&
-                  (n =
-                    '<div class="pg-chap">' +
-                    (t.chapter ? "📘 " + esc(t.chapter) : "") +
-                    (t.part
-                      ? ' <span class="pg-part ' +
-                        t.part +
-                        '">' +
-                        ("mid" === t.part
-                          ? "تبع الميد"
-                          : "rest" === t.part
-                            ? "باقي الفصل"
-                            : "تبع الفاينل") +
-                        "</span>"
-                      : "") +
-                    "</div>"),
-                (p = t.chapter || t.part ? k : p),
-                n +
-                  '<div class="pg-row" onclick="pgOpenLecture(' +
-                  e +
-                  "," +
-                  t.i +
-                  ')"><span class="pg-t">' +
-                  (t.i + 1) +
-                  ". " +
-                  esc(t.t) +
-                  '</span><span class="pg-n">' +
-                  t.solved +
-                  " / " +
-                  t.total +
-                  " سؤال</span>" +
-                  pgBadge(t.score) +
-                  pgBar(t.solved, t.total) +
-                  "</div>"
-              );
-            })
-            .join("") || '<p class="ld-hint">لا توجد محاضرات لهذه المادة.</p>';
+    if (!o) {
       s.push(
         '<div class="lc-cat">' +
-          c(u) +
-          '<div class="lc-cat-body"><div class="lc-cat-links">' +
-          pgBar(d.solved, d.total) +
-          '<div style="height:10px"></div>' +
-          f +
-          "</div></div></div>",
-      );
-    } else
-      s.push(
-        '<div class="lc-cat">' +
-          c("⚠️ تعذّر تحميل المادة") +
+          head("⚠️ تعذّر تحميل المادة") +
           '<div class="lc-cat-body"></div></div>',
       );
+      return;
+    }
+    var secs = pgSections(o),
+      lec = secs[0].d,
+      avg = pgAvg(lec.scores);
+    PG_SECS[idx] = secs;
+    n += lec.lecs.length;
+    a += lec.solved;
+    r += lec.total;
+    lec.scores.forEach(function (x) {
+      i.push(x);
+    });
+    if (secs.length === 1) {
+      // الشكل القديم (محاضرات بس)
+      var u =
+        lec.lecs.length +
+        " محاضرة • حليت " +
+        lec.solved +
+        " من " +
+        lec.total +
+        " سؤال" +
+        (null !== avg ? " • متوسط الدرجة " + avg + "%" : "");
+      s.push(
+        '<div class="lc-cat">' +
+          head(u) +
+          '<div class="lc-cat-body"><div class="lc-cat-links" data-si="' +
+          idx +
+          '"></div></div></div>',
+      );
+      return;
+    }
+    var chips = '<span class="pg-chips">';
+    secs.forEach(function (sec, j) {
+      chips += pgChipHTML(sec);
+      if (j > 0) {
+        var q = ex[sec.k] || (ex[sec.k] = { s: 0, n: 0, sc: [] });
+        q.s += sec.d.solved;
+        q.n += sec.d.total;
+        sec.d.scores.forEach(function (x) {
+          q.sc.push(x);
+        });
+      }
+    });
+    chips += "</span>";
+    s.push(
+      '<div class="lc-cat">' +
+        head(chips) +
+        '<div class="lc-cat-body"><div class="lc-cat-links" data-si="' +
+        idx +
+        '"></div></div></div>',
+    );
   });
   var o = r ? Math.round((100 * a) / r) : 0,
-    c = pgAvg(i);
+    c = pgAvg(i),
+    extra = "";
+  PG_KINDS.forEach(function (kd) {
+    var q = ex[kd.k];
+    if (!q || !q.n) return;
+    var qa = pgAvg(q.sc);
+    extra +=
+      '<div class="pg-stat"><b>' +
+      q.s +
+      " / " +
+      q.n +
+      "</b><span>" +
+      kd.icon +
+      " " +
+      kd.label +
+      " (" +
+      Math.round((100 * q.s) / q.n) +
+      "%)" +
+      (null !== qa ? " • متوسط " + qa + "%" : "") +
+      "</span></div>";
+  });
   e.innerHTML =
-    '<div class="pg-sum"><div class="pg-stat"><b>' +
+    '<div class="pg-box open"><button type="button" class="pg-box-h" aria-expanded="true" onclick="pgToggle(this)"><span class="pg-box-t">📊 الملخص العام</span><span class="pg-box-s">' +
+    o +
+    '% من أسئلة المحاضرات</span><i class="pg-arr">▶</i></button><div class="pg-box-b"><div class="pg-sum"><div class="pg-stat"><b>' +
     t.length +
     '</b><span>مادة</span></div><div class="pg-stat"><b>' +
     n +
@@ -5456,12 +5781,19 @@ function pgDraw(e, t) {
     a +
     " / " +
     r +
-    "</b><span>سؤال محلول (" +
+    "</b><span>سؤال محاضرات محلول (" +
     o +
     '%)</span></div><div class="pg-stat"><b>' +
     (null !== c ? c + "%" : "—") +
-    "</b><span>متوسط الدرجات</span></div></div>" +
+    "</b><span>متوسط درجات المحاضرات</span></div>" +
+    extra +
+    "</div></div></div>" +
     s.join("");
+}
+function pgOpenExam(e, kind, idx) {
+  (document.body.classList.remove("progress-mode"),
+    selectSubject(e, !0),
+    openQuizByType(kind, idx));
 }
 function pgOpenLecture(e, t) {
   (document.body.classList.remove("progress-mode"),
@@ -9397,12 +9729,96 @@ function __bootDept2() {
     return n === 2 ? "مرتين" : n >= 3 && n <= 10 ? n + " مرات" : n + " مرة";
   }
 
+  // ---------- تكرار السؤال اللي بيحدده الطالب من الموقع (محفوظ في المتصفح) ----------
+  var REP_MEM = {};
+  var DUP_FULL = typeof WeakMap === "function" ? new WeakMap() : { set: function () {}, get: function () {} };
+  var DUPF_STATE = {};
+  function repKey(subj) {
+    return "qrep_" + ((subj && subj.name) || "");
+  }
+  function repMap(subj) {
+    var k = repKey(subj);
+    if (!REP_MEM[k]) {
+      try {
+        REP_MEM[k] = JSON.parse(localStorage.getItem(k) || "{}") || {};
+      } catch (e) {
+        REP_MEM[k] = {};
+      }
+    }
+    return REP_MEM[k];
+  }
+  function repPersist(subj) {
+    try {
+      localStorage.setItem(repKey(subj), JSON.stringify(repMap(subj)));
+    } catch (e) {}
+  }
+  function repId(sig) {
+    var h = 5381;
+    for (var i = 0; i < sig.length; i++) h = ((h * 33) ^ sig.charCodeAt(i)) >>> 0;
+    return h.toString(36) + "_" + sig.length;
+  }
+  function userRep(q, subj, sig) {
+    sig = sig || dupSig(q);
+    if (!sig) return null;
+    var m = repMap(subj)[repId(sig)];
+    if (!m || !(m.n > 0)) return null;
+    return {
+      n: m.n,
+      exams: Array.isArray(m.exams) ? m.exams : [],
+      user: true,
+    };
+  }
+  function repExamTitles(subj) {
+    var out = [];
+    ["midterms", "finals"].forEach(function (p) {
+      ((subj && subj[p]) || []).forEach(function (it) {
+        if (it && it.t && out.indexOf(it.t) < 0) out.push(it.t);
+      });
+    });
+    return out;
+  }
+  function repChanged(subj) {
+    try {
+      if (DUP_CACHE) DUP_CACHE.delete(subj);
+      syncDupButton(subj);
+    } catch (e) {}
+  }
+
+  // بيانات التكرار اللي بتتكتب يدوي على السؤال:
+  //   repeat: 3                                    -> اتكرر 3 مرات
+  //   repeat: { times: 3, exams: ["ميد 2023", "فاينل 2024"] }
+  //   repeat: ["ميد 2023", "فاينل 2024"]           -> العدد = عدد الامتحانات
+  //   (أو بشكل منفصل: repeat: 3, repeatExams: [...])
+  function manualRep(q, subj, sig) {
+    if (!q || typeof q !== "object") return null;
+    var u = userRep(q, subj, sig);
+    if (u) return u;
+    var r = q.repeat,
+      n = null,
+      ex = Array.isArray(q.repeatExams) ? q.repeatExams : [];
+    if (typeof r === "number" || typeof r === "string") n = r;
+    else if (Array.isArray(r)) ex = r;
+    else if (r && typeof r === "object") {
+      n = r.times != null ? r.times : r.n != null ? r.n : r.count;
+      if (Array.isArray(r.exams)) ex = r.exams;
+    }
+    ex = ex
+      .map(function (x) {
+        return String(x == null ? "" : x).trim();
+      })
+      .filter(Boolean);
+    n = parseInt(n, 10);
+    if (!(n > 0)) n = ex.length;
+    n = Math.max(n, ex.length);
+    return n < 2 && !ex.length ? null : { n: n, exams: ex };
+  }
+
   // بيحسب المجموعات المكررة للمادة
   function computeDupes(subj) {
     var seenObj = DUP_FLAG ? new WeakSet() : null;
     var map = {},
       order = [];
-    function add(q, label, num) {
+    function add(q, label, num, tags) {
       if (!q || typeof q !== "object") return;
       if (seenObj) {
         if (seenObj.has(q)) return;
@@ -9414,13 +9830,13 @@ function __bootDept2() {
         map[sig] = [];
         order.push(sig);
       }
-      map[sig].push({ q: q, label: label, num: num });
+      map[sig].push({ q: q, label: label, num: num, tags: tags || [] });
     }
     (subj.lectures || []).forEach(function (l, i) {
       if (!l || !Array.isArray(l.questions)) return;
       var label = "📚 " + (l.t || "محاضرة " + (i + 1));
       l.questions.forEach(function (q, j) {
-        add(q, label, j + 1);
+        add(q, label, j + 1, [REP_LEC]);
       });
     });
     SOURCES.forEach(function (src) {
@@ -9428,28 +9844,52 @@ function __bootDept2() {
         // المتجمّع من أسئلة المحاضرات (من غير questions بذاته) بيتخطى
         if (!it || !Array.isArray(it.questions) || !it.questions.length) return;
         var label = src.icon + " " + (it.t || "اختبار " + (i + 1));
+        var tg = [it.t || "اختبار " + (i + 1)];
+        if (src.prop === "testBanks") tg.push(REP_BANK);
         it.questions.forEach(function (q, j) {
-          add(q, label, j + 1);
+          add(q, label, j + 1, tg);
         });
       });
     });
     var groups = [];
     order.forEach(function (sig, idx) {
-      var g = map[sig];
-      if (g.length > 1) groups.push({ list: g, idx: idx });
+      var g = map[sig],
+        man = null;
+      g.forEach(function (o) {
+        man = man || manualRep(o.q, subj, sig);
+      });
+      if (g.length > 1 || man) groups.push({ list: g, idx: idx, man: man });
+    });
+    groups.forEach(function (g) {
+      g.count = g.man ? g.man.n : g.list.length;
     });
     groups.sort(function (a, b) {
-      return b.list.length - a.list.length || a.idx - b.idx;
+      return b.count - a.count || a.idx - b.idx;
     });
     var questions = groups.map(function (g) {
       var copy = {};
       for (var k in g.list[0].q)
         if (Object.prototype.hasOwnProperty.call(g.list[0].q, k))
           copy[k] = g.list[0].q[k];
-      copy._dupCount = g.list.length;
-      copy._dupPlaces = g.list.map(function (o) {
+      var auto = g.list.map(function (o) {
         return o.label + " — سؤال " + o.num;
       });
+      copy._dupCount = g.count;
+      copy._dupExams = g.man ? g.man.exams.length : 0;
+      copy._dupAuto = auto;
+      copy._dupMan = g.man || null;
+      var tags = [];
+      g.list.forEach(function (o) {
+        o.tags.forEach(function (t) {
+          if (tags.indexOf(t) < 0) tags.push(t);
+        });
+      });
+      if (g.man)
+        g.man.exams.forEach(function (t) {
+          if (tags.indexOf(t) < 0) tags.push(t);
+        });
+      copy._dupTags = tags;
+      copy._dupPlaces = g.man ? g.man.exams.concat(auto) : auto;
       g.list.forEach(function (o) {
         if (DUP_FLAG) DUP_FLAG.add(o.q);
       });
@@ -9487,10 +9927,20 @@ function __bootDept2() {
       subj.dupes = item;
     }
     if (DUP_CACHE) DUP_CACHE.set(subj, true);
+    DUP_FULL.set(subj, item[0] || null);
     return item;
   }
   window.ensureDupes = ensureDupes;
   window._dupComputeForTest = computeDupes;
+  window._repControlForTest = function (a, b, c) {
+    return repControl(a, b, c);
+  };
+  window._renderDupForTest = function () {
+    return renderDupList();
+  };
+  window._repIdForTest = function (q) {
+    return repId(dupSig(q));
+  };
 
   function curSubj() {
     return typeof subjects !== "undefined" ? subjects[currentSubject] : null;
@@ -9514,19 +9964,135 @@ function __bootDept2() {
     }
   }
 
+  function dupFull(subj) {
+    ensureDupes(subj);
+    return DUP_FULL.get(subj) || null;
+  }
+
+  function dupfFlatHTML(subj, saved) {
+    var titles = repExamTitles(subj);
+    (subj.testBanks || []).forEach(function (b) {
+      if (b && b.t && b.questions && b.questions.length && titles.indexOf(b.t) < 0)
+        titles.push(b.t);
+    });
+    titles = titles.concat([REP_LEC, REP_BANK]);
+    return (
+      '<div data-repscope="1"><div class="rep-sec-t"><button type="button" class="rep-all" style="margin:0" onclick="repAll(this)">☑️ تحديد الكل</button></div><div class="rep-chks">' +
+      titles
+        .map(function (t) {
+          return (
+            '<label class="rep-chk-l"><input type="checkbox" class="rep-chk" value="' +
+            escAttr(t) +
+            '"' +
+            (saved.indexOf(t) >= 0 ? " checked" : "") +
+            ' onchange="repUpd(this)"> <span>' +
+            esc(t) +
+            "</span></label>"
+          );
+        })
+        .join("") +
+      "</div></div>"
+    );
+  }
+
+  function dupfRead() {
+    var root = document.getElementById("dupes-list");
+    var sel = [];
+    if (root)
+      [].forEach.call(root.querySelectorAll(".rep-chk:checked"), function (c) {
+        sel.push(c.value);
+      });
+    var mo = root && root.querySelector(".dupf-more"),
+      ni = root && root.querySelector(".dupf-num"),
+      n = ni ? parseInt(ni.value, 10) : 2;
+    return { sel: sel, more: !!(mo && mo.checked), n: n >= 2 ? n : 2 };
+  }
+
+  function dupfMatch(item, f) {
+    return item.questions.filter(function (q) {
+      var c = q._dupCount || 0;
+      if (f.more ? c < f.n : c !== f.n) return false;
+      if (!f.sel.length) return true;
+      return (q._dupTags || []).some(function (t) {
+        return f.sel.indexOf(t) >= 0;
+      });
+    });
+  }
+
+  window.dupfChange = function () {
+    var subj = curSubj(),
+      item = subj && dupFull(subj),
+      root = document.getElementById("dupes-list");
+    if (!item || !root) return;
+    var f = dupfRead();
+    DUPF_STATE[repKey(subj)] = f;
+    var n = dupfMatch(item, f).length;
+    var c = root.querySelector(".dupf-n");
+    if (c) c.textContent = n;
+    var m = root.querySelector(".dupf-msg");
+    if (m) m.textContent = "";
+  };
+
+  window.dupfStart = function () {
+    var subj = curSubj(),
+      item = subj && dupFull(subj);
+    if (!item) return;
+    var f = dupfRead(),
+      qs = dupfMatch(item, f);
+    if (!qs.length) {
+      var root = document.getElementById("dupes-list"),
+        m = root && root.querySelector(".dupf-msg");
+      var txt = "❌ مفيش أسئلة مكررة في الاختيار ده، غيّر الاختيار وجرب تاني.";
+      if (m) m.textContent = txt;
+      if (typeof showToast === "function") showToast(txt);
+      return;
+    }
+    var use = item;
+    if (f.sel.length || !f.more || f.n > 2) {
+      var sg =
+          f.sel.slice().sort().join("|") + "#" + (f.more ? 1 : 0) + "#" + f.n,
+        h = repId(sg).split("_")[0].slice(0, 5);
+      use = {
+        t: DUP_TITLE + " — اختيار مخصص (#" + h + ")",
+        d: item.d,
+        questions: qs,
+      };
+    }
+    subj.dupes = [use];
+    if (typeof openQuiz === "function") openQuiz(currentSubject, "dupes", 0);
+  };
+
   function renderDupList() {
     var box = document.getElementById("dupes-list");
     var subj = curSubj();
     if (!box || !subj) return;
-    var item = ensureDupes(subj)[0];
+    var item = dupFull(subj);
     if (!item) {
       box.innerHTML =
         '<p style="color:var(--text-hint)">مفيش أسئلة مكررة في المادة دي.</p>';
       return;
     }
+    repStyle();
+    var f = DUPF_STATE[repKey(subj)] || { sel: [], more: false, n: 2 },
+      n = dupfMatch(item, f).length;
     box.innerHTML =
-      '<p class="ld-hint">🔁 الأسئلة اللي اتكررت في أكتر من مكان (محاضرات / ميدتيرم / فاينل / بنوك أسئلة). تحت كل سؤال هتلاقي كل الأماكن اللي اتكرر فيها.</p>' +
-      examCardHTML(subj, item, "dupes", 0, item.questions.length, item.t);
+      '<div class="dupf"><p class="ld-hint">🔁 الأسئلة اللي اتكررت في أكتر من مكان. حدد الامتحانات اللي عايز أسئلتها المكررة، ولو مختارتش حاجة هتحل كل الأسئلة المكررة.</p>' +
+      '<div class="rep-form" style="display:block">' +
+      '<div class="rep-sub">🔎 حدد الأسئلة المكررة في أنهي امتحانات؟</div>' +
+      (repHasCats(subj)
+        ? '<div class="rep-groups">' + repGroupsHTML(subj, f.sel, true) + "</div>"
+        : dupfFlatHTML(subj, f.sel)) +
+      '<div class="rep-sub">عدد مرات التكرار</div>' +
+      '<div class="rep-row"><label>الأسئلة اللي اتكررت <input type="number" class="rep-n dupf-num" min="2" max="99" value="' +
+      f.n +
+      '" oninput="dupfChange()"> مرات بالظبط</label></div>' +
+      '<label class="rep-chk-l" style="margin-bottom:10px"><input type="checkbox" class="dupf-more"' +
+      (f.more ? " checked" : "") +
+      ' onchange="dupfChange()"> <span>يشمل كمان الأسئلة اللي اتكررت أكتر من العدد ده</span></label>' +
+      '<div class="dupf-msg" role="alert" aria-live="polite" style="color:var(--danger);font-weight:700;min-height:20px;margin-bottom:8px"></div>' +
+      '<div class="rep-btns"><button type="button" onclick="dupfStart()">▶ ابدأ الحل (<span class="dupf-n">' +
+      n +
+      "</span> سؤال)</button></div></div></div>";
   }
 
   // ---------- الـ hooks ----------
@@ -9618,39 +10184,63 @@ function __bootDept2() {
       var idx = st.current,
         q = st.data[idx];
       if (!q) return;
-      var html = "";
-      if (st.ctx && st.ctx.kind === "dupes" && q._dupPlaces) {
+      var subj = st.subject,
+        inDupes = !!(st.ctx && st.ctx.kind === "dupes"),
+        man = manualRep(q, subj) || (inDupes && q._dupMan) || null,
+        html = "";
+      function box(n, places, word) {
         if (st._dupSeen !== idx) {
           st._dupSeen = idx;
           st._dupOpenIdx = -1;
         }
         var open = st._dupOpenIdx === idx;
-        var n = q._dupCount || q._dupPlaces.length;
-        html =
+        return (
           '<div class="dup-box' +
           (open ? " open" : "") +
-          '">' +
-          '<div class="dup-head"><span class="dup-count">🔁 السؤال ده اتكرر ' +
+          '"><div class="dup-head"><span class="dup-count">🔁 السؤال ده اتكرر ' +
           dupTimes(n) +
           "</span>" +
-          '<button type="button" class="dup-toggle" aria-expanded="' +
-          (open ? "true" : "false") +
-          '" onclick="dupToggle(this)">' +
-          '<span class="dup-lbl">' +
-          (open ? "إخفاء الأماكن" : "عرض الأماكن") +
-          '</span><span class="dup-arrow">⌄</span></button></div>' +
-          '<ul class="dup-list"' +
-          (open ? "" : " hidden") +
-          ">" +
-          q._dupPlaces
-            .map(function (p) {
-              return "<li>" + esc(p) + "</li>";
-            })
-            .join("") +
-          "</ul></div>";
-      } else if (DUP_FLAG && DUP_FLAG.has(q) && ownsQuestions()) {
-        html = '<div class="dup-flag">🔁 سؤال مكرر</div>';
+          (places.length
+            ? '<button type="button" class="dup-toggle" data-w="' +
+              word +
+              '" aria-expanded="' +
+              (open ? "true" : "false") +
+              '" onclick="dupToggle(this)"><span class="dup-lbl">' +
+              (open ? "إخفاء " : "عرض ") +
+              word +
+              '</span><span class="dup-arrow">⌄</span></button>'
+            : "") +
+          "</div>" +
+          (places.length
+            ? '<ul class="dup-list"' +
+              (open ? "" : " hidden") +
+              ">" +
+              places
+                .map(function (p) {
+                  return "<li>" + esc(p) + "</li>";
+                })
+                .join("") +
+              "</ul>"
+            : "") +
+          "</div>"
+        );
       }
+      if (inDupes && q._dupPlaces) {
+        var pl = man ? man.exams.concat(q._dupAuto || []) : q._dupPlaces;
+        html = box(
+          man ? man.n : q._dupCount || q._dupPlaces.length,
+          pl,
+          man && man.exams.length ? "الامتحانات" : "الأماكن",
+        );
+      } else if (
+        ((DUP_FLAG && DUP_FLAG.has(q)) || man) &&
+        ownsQuestions()
+      ) {
+        html = man
+          ? box(man.n, man.exams, "الامتحانات")
+          : '<div class="dup-flag">🔁 سؤال مكرر</div>';
+      }
+      if (!inDupes && ownsQuestions()) html += repControl(subj, q, man);
       if (html) qt.insertAdjacentHTML("afterend", html);
     } catch (e) {}
   }
@@ -9672,11 +10262,283 @@ function __bootDept2() {
     else list.setAttribute("hidden", "");
     btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
     var lbl = btn.querySelector(".dup-lbl");
-    if (lbl) lbl.textContent = willOpen ? "إخفاء الأماكن" : "عرض الأماكن";
+    if (lbl) {
+      var w = btn.getAttribute("data-w") || "الأماكن";
+      lbl.textContent = (willOpen ? "إخفاء " : "عرض ") + w;
+    }
     box.classList.toggle("open", willOpen);
     if (st) {
       st._dupSeen = st.current;
       st._dupOpenIdx = willOpen ? st.current : -1;
     }
+  };
+
+  // ---------- واجهة الطالب: تحديد تكرار السؤال ----------
+  function repStyle() {
+    if (document.getElementById("rep-style")) return;
+    var c = document.createElement("style");
+    c.id = "rep-style";
+    c.textContent =
+      ".rep-ctl{margin:0 0 16px}" +
+      ".rep-open{background:var(--bg-card);color:var(--accent);border:2px dashed var(--border);border-radius:20px;padding:6px 14px;cursor:pointer;font:inherit;font-size:13px;font-weight:700;min-height:36px}" +
+      ".rep-open:hover{border-color:var(--accent)}" +
+      ".rep-form{margin-top:10px;padding:12px 14px;background:var(--bg-card);border:2px solid var(--border);border-radius:12px;color:var(--text-primary)}" +
+      ".rep-form[hidden]{display:none}" +
+      ".rep-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;font-weight:700;font-size:14px}" +
+      ".rep-n{width:80px;padding:6px 10px;border:2px solid var(--border);border-radius:8px;background:var(--bg-quiz-card);color:var(--text-primary);font:inherit}" +
+      ".rep-sub{font-weight:700;font-size:14px;margin:6px 0}" +
+      ".rep-chks{display:flex;flex-direction:column;gap:6px;max-height:180px;overflow-y:auto;margin-bottom:10px}" +
+      ".rep-chk-l{display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}" +
+      ".rep-chk-l input{width:18px;height:18px;accent-color:var(--accent)}" +
+      ".rep-other{width:100%;padding:8px 10px;border:2px solid var(--border);border-radius:8px;background:var(--bg-quiz-card);color:var(--text-primary);font:inherit;font-size:14px;margin-bottom:10px;box-sizing:border-box}" +
+      ".rep-groups{margin-bottom:10px}" +
+      ".rep-all{background:var(--bg-quiz-card);color:var(--accent);border:2px solid var(--border);border-radius:16px;padding:3px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;margin-inline-start:8px}" +
+      ".rep-all:hover{border-color:var(--accent)}" +
+      ".rep-sec{margin-bottom:4px}" +
+      ".rep-sec-t{font-weight:800;font-size:14px;color:var(--text-heading);margin:10px 0 6px}" +
+      ".rep-cat{background:var(--bg-quiz-card);border:2px solid var(--border);border-radius:10px;margin-bottom:6px;overflow:hidden}" +
+      ".rep-cat>summary{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;cursor:pointer;font-weight:700;font-size:14px;list-style:none;user-select:none}" +
+      ".rep-cat>summary::-webkit-details-marker{display:none}" +
+      ".rep-cat>summary::after{content:'▾';color:var(--accent);margin-inline-start:6px;transition:transform .2s}" +
+      ".rep-cat[open]>summary::after{transform:rotate(180deg)}" +
+      ".rep-cat>summary>span:first-child{flex:1}" +
+      ".rep-cnt{color:var(--success,#14b8a6);font-size:12px}" +
+      ".rep-cat .rep-chks{padding:4px 12px 10px;margin:0;max-height:none}" +
+      ".rep-extra{margin-bottom:6px}" +
+      ".rep-btns{display:flex;gap:8px;flex-wrap:wrap}" +
+      ".rep-btns button{border:0;border-radius:10px;padding:8px 16px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;color:#fff;background:var(--accent)}" +
+      ".rep-btns .rep-del{background:var(--danger)}" +
+      ".rep-btns .rep-cancel{background:var(--bg-quiz-card);color:var(--text-primary);border:2px solid var(--border)}";
+    document.head.appendChild(c);
+  }
+
+  var REP_LEC = "📚 أسئلة المحاضرات",
+    REP_BANK = "🏦 بنك الأسئلة";
+
+  // لو المادة فيها تقسيمات (midtermsCategories / finalsCategories) بنعرض الاختيار بنفس التقسيمة
+  function repHasCats(subj) {
+    return !!(
+      subj &&
+      ((subj._midtermsGroups && subj._midtermsGroups.length) ||
+        (subj._finalsGroups && subj._finalsGroups.length))
+    );
+  }
+
+  function repGroupsHTML(subj, saved, withAll) {
+    function allBtn(label) {
+      return withAll
+        ? '<button type="button" class="rep-all" onclick="repAll(this)">☑️ ' +
+            label +
+            "</button>"
+        : "";
+    }
+    function chk(t) {
+      return (
+        '<label class="rep-chk-l"><input type="checkbox" class="rep-chk" value="' +
+        escAttr(t) +
+        '"' +
+        (saved.indexOf(t) >= 0 ? " checked" : "") +
+        ' onchange="repUpd(this)"> <span>' +
+        esc(t) +
+        "</span></label>"
+      );
+    }
+    function det(icon, name, items) {
+      var n = items.filter(function (t) {
+        return saved.indexOf(t) >= 0;
+      }).length;
+      return (
+        '<details class="rep-cat"' +
+        (n ? " open" : "") +
+        ' data-repscope="1"><summary><span>' +
+        (icon || "📁") +
+        " " +
+        esc(name) +
+        '</span><span class="rep-cnt">' +
+        (n ? "✓ " + n : "") +
+        '</span></summary><div class="rep-chks">' +
+        (withAll ? allBtn("تحديد الكل في " + esc(name)) : "") +
+        items.map(chk).join("") +
+        "</div></details>"
+      );
+    }
+    var h = "";
+    [
+      ["midterms", "📝", "الميدتيرم"],
+      ["finals", "🎓", "الفاينل"],
+    ].forEach(function (sec) {
+      var arr = subj[sec[0]] || [],
+        g = subj["_" + sec[0] + "Groups"] || [],
+        cats = [],
+        by = {};
+      arr.forEach(function (it, i) {
+        if (!it || !it.t) return;
+        var o = g[i] || { category: "عام", icon: "📁" };
+        if (!by[o.category]) {
+          by[o.category] = { name: o.category, icon: o.icon, items: [] };
+          cats.push(by[o.category]);
+        }
+        if (by[o.category].items.indexOf(it.t) < 0)
+          by[o.category].items.push(it.t);
+      });
+      if (!cats.length) return;
+      h +=
+        '<div class="rep-sec" data-repscope="1"><div class="rep-sec-t">' +
+        sec[1] +
+        " " +
+        sec[2] +
+        allBtn("تحديد كل " + sec[2]) +
+        "</div>" +
+        cats
+          .map(function (c) {
+            return det(c.icon, c.name, c.items);
+          })
+          .join("") +
+        "</div>";
+    });
+    h +=
+      '<div class="rep-sec" data-repscope="1"><div class="rep-sec-t">📚 مصادر تانية' +
+      allBtn("تحديد الكل") +
+      '</div><div class="rep-chks rep-extra">' +
+      chk(REP_LEC) +
+      chk(REP_BANK) +
+      "</div></div>";
+    return h;
+  }
+
+  window.repAll = function (btn) {
+    var sc = btn && btn.closest ? btn.closest("[data-repscope]") : null;
+    if (!sc) return;
+    var boxes = sc.querySelectorAll(".rep-chk"),
+      all = true;
+    [].forEach.call(boxes, function (c) {
+      if (!c.checked) all = false;
+    });
+    [].forEach.call(boxes, function (c) {
+      c.checked = !all;
+    });
+    var ds = sc.tagName === "DETAILS" ? [sc] : sc.querySelectorAll("details");
+    [].forEach.call(ds, function (d) {
+      var n = d.querySelectorAll(".rep-chk:checked").length,
+        c = d.querySelector(".rep-cnt");
+      if (c) c.textContent = n ? "✓ " + n : "";
+      if (n && !d.open) d.open = true;
+    });
+    if (btn.closest(".dupf")) window.dupfChange();
+  };
+
+  window.repUpd = function (inp) {
+    if (inp && inp.closest && inp.closest(".dupf")) window.dupfChange();
+    var d = inp && inp.closest ? inp.closest("details") : null;
+    if (!d) return;
+    var n = d.querySelectorAll(".rep-chk:checked").length,
+      c = d.querySelector(".rep-cnt");
+    if (c) c.textContent = n ? "✓ " + n : "";
+  };
+
+  function repControl(subj, q, man) {
+    repStyle();
+    var cats = repHasCats(subj),
+      titles = repExamTitles(subj).concat(cats ? [REP_LEC, REP_BANK] : []),
+      saved = man && man.user ? man.exams : [],
+      other = saved.filter(function (x) {
+        return titles.indexOf(x) < 0;
+      });
+    return (
+      '<div class="rep-ctl"><button type="button" class="rep-open" onclick="repOpen(this)">' +
+      (man && man.user ? "✏️ تعديل تكرار السؤال" : "🔁 حدد تكرار السؤال") +
+      '</button><div class="rep-form" hidden>' +
+      '<div class="rep-row"><label>اتكرر كام مرة؟ <input type="number" class="rep-n" min="1" max="99" value="' +
+      (man && man.user ? man.n : "") +
+      '"></label></div>' +
+      (cats
+        ? '<div class="rep-sub">طلع في أنهي امتحانات؟</div><div class="rep-groups">' +
+          repGroupsHTML(subj, saved) +
+          "</div>"
+        : titles.length
+        ? '<div class="rep-sub">طلع في أنهي امتحانات؟</div><div class="rep-chks">' +
+          titles
+            .map(function (t) {
+              return (
+                '<label class="rep-chk-l"><input type="checkbox" class="rep-chk" value="' +
+                escAttr(t) +
+                '"' +
+                (saved.indexOf(t) >= 0 ? " checked" : "") +
+                "> <span>" +
+                esc(t) +
+                "</span></label>"
+              );
+            })
+            .join("") +
+          "</div>"
+        : "") +
+      '<div class="rep-sub">امتحانات تانية (اختياري — افصل بينهم بفاصلة)</div>' +
+      '<input type="text" class="rep-other" placeholder="مثال: ميد 2023، فاينل 2024" value="' +
+      escAttr(other.join("، ")) +
+      '">' +
+      '<div class="rep-btns"><button type="button" onclick="repSaveBtn(this)">💾 حفظ</button>' +
+      (man && man.user
+        ? '<button type="button" class="rep-del" onclick="repClearBtn(this)">🗑️ مسح</button>'
+        : "") +
+      '<button type="button" class="rep-cancel" onclick="repOpen(this)">إلغاء</button></div></div></div>'
+    );
+  }
+
+  window.repOpen = function (btn) {
+    var ctl = btn && btn.closest ? btn.closest(".rep-ctl") : null;
+    var f = ctl && ctl.querySelector(".rep-form");
+    if (!f) return;
+    if (f.hasAttribute("hidden")) f.removeAttribute("hidden");
+    else f.setAttribute("hidden", "");
+  };
+
+  function repCurrent() {
+    return st && st.data ? st.data[st.current] : null;
+  }
+
+  window.repSaveBtn = function (btn) {
+    var ctl = btn.closest(".rep-ctl"),
+      q = repCurrent();
+    if (!ctl || !q) return;
+    var ex = [];
+    [].forEach.call(ctl.querySelectorAll(".rep-chk:checked"), function (c) {
+      ex.push(c.value);
+    });
+    (ctl.querySelector(".rep-other").value || "")
+      .split(/[,،\n]/)
+      .forEach(function (x) {
+        x = x.trim();
+        if (x && ex.indexOf(x) < 0) ex.push(x);
+      });
+    var n = parseInt(ctl.querySelector(".rep-n").value, 10);
+    if (!(n > 0)) n = ex.length;
+    n = Math.min(99, Math.max(n, ex.length));
+    if (n < 2 && !ex.length) {
+      if (typeof showToast === "function")
+        showToast("اكتب عدد مرات التكرار (2 أو أكتر) أو اختار امتحان");
+      return;
+    }
+    var sig = dupSig(q);
+    if (!sig) return;
+    repMap(st.subject)[repId(sig)] = { n: n, exams: ex };
+    repPersist(st.subject);
+    q._dupMan = null;
+    repChanged(st.subject);
+    if (typeof showToast === "function") showToast("🔁 تم حفظ تكرار السؤال");
+    renderCurrentQuestion();
+  };
+
+  window.repClearBtn = function (btn) {
+    var q = repCurrent();
+    if (!q) return;
+    var sig = dupSig(q);
+    if (sig) {
+      delete repMap(st.subject)[repId(sig)];
+      repPersist(st.subject);
+    }
+    q._dupMan = null;
+    repChanged(st.subject);
+    if (typeof showToast === "function") showToast("تم مسح تكرار السؤال");
+    renderCurrentQuestion();
   };
 })();
