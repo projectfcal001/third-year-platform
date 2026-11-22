@@ -9586,7 +9586,7 @@ subjects.push({
         "ركّز على: طبقات الشبكة ووحدات البيانات، TCP/UDP، DNS، HTTP، الـ Delays، Circuit vs Packet Switching",
         "أسئلة مقالية متوقعة: طبقات OSI، Encapsulation، Client-Server vs P2P، TCP vs UDP، DNS Hierarchy",
         "ركّز على أسئلة الـ Sockets وعددها في سيرفر TCP مع عدد clients",
-        "تاريخ الامتحان: الاثنين 26 نوفمبر",
+        "تاريخ الامتحان: الخميس 26 نوفمبر",
         "1:15 من الساعة 12:15 إلى ",
       ],
       chapters: [

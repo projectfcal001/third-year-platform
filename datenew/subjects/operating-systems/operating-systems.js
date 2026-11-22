@@ -4275,7 +4275,7 @@ subjects.push({
       notesOpen: true,
       notes: [
         "الميد: Chapter 1 + Chapter 3 (كاملين)",
-        "تاريخ الامتحان: الثلاثاء 28 نوفمبر",
+        "تاريخ الامتحان: السبت 28 نوفمبر",
         "من الساعة 12:15 إلى 1:15 (مدة ساعة)",
       ],
       chapters: ["Chapter 1: Introduction", "Chapter 3: Processes"],
