@@ -7836,7 +7836,7 @@ var _fbOtp = { sid: null, type: null, code: null },
   _recaptchaToken = null,
   _recaptchaWidgetId = null,
   _recaptchaState = "idle",
-  RECAPTCHA_SITEKEY = "6Lc6OA0uAAAAAHUnu3M9TW4LBPT14bdmNT3ku7gq";
+  RECAPTCHA_SITEKEY = "6LermOYtAAAAAMpI8j0HXVM3v8IZdKKflFw1w3be";
 function __fbRenderRecaptcha() {
   var e = document.getElementById("fb-recaptcha-box");
   if (
