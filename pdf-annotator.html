@@ -2864,8 +2864,6 @@
     d.set(PDFName.of('Rect'), pdfDoc.context.obj(rect));
     d.set(PDFName.of('C'), pdfDoc.context.obj([r,g,b]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
-    d.set(PDFName.of('Contents'), PDFString.of(stroke.tool === 'highlighter' ? 'Highlight (drawn)' : 'Ink'));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     const inner = pdfDoc.context.obj(inkList);
     const inkArr = pdfDoc.context.obj([]);
@@ -2896,8 +2894,6 @@
     d.set(PDFName.of('Rect'), pdfDoc.context.obj(rect));
     d.set(PDFName.of('C'), pdfDoc.context.obj([r,g,b]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
-    d.set(PDFName.of('Contents'), PDFString.of(isArrow ? 'Arrow' : 'Line'));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     d.set(PDFName.of('L'), pdfDoc.context.obj([x1,y1,x2,y2]));
     const bs = pdfDoc.context.obj({});
@@ -2928,8 +2924,6 @@
     d.set(PDFName.of('Rect'), pdfDoc.context.obj(rect));
     d.set(PDFName.of('C'), pdfDoc.context.obj([r,g,b]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
-    d.set(PDFName.of('Contents'), PDFString.of(subtype));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     const bs = pdfDoc.context.obj({});
     bs.set(PDFName.of('W'), PDFNumber.of(lw));
@@ -2957,8 +2951,6 @@
     d.set(PDFName.of('Vertices'), pdfDoc.context.obj(flat));
     d.set(PDFName.of('C'), pdfDoc.context.obj([r,g,b]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
-    d.set(PDFName.of('Contents'), PDFString.of('Polygon'));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     const bs = pdfDoc.context.obj({});
     bs.set(PDFName.of('W'), PDFNumber.of(lw));
@@ -3019,8 +3011,6 @@
     d.set(PDFName.of('QuadPoints'), pdfDoc.context.obj(quad));
     d.set(PDFName.of('C'), pdfDoc.context.obj([r,g,b]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
-    d.set(PDFName.of('Contents'), PDFString.of('Highlight'));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     d.set(PDFName.of('CA'), PDFNumber.of(anno.opacity ?? 0.42));
     if(pageRef) d.set(PDFName.of('P'), pageRef);
@@ -3042,8 +3032,6 @@
     d.set(PDFName.of('QuadPoints'), pdfDoc.context.obj([x1, maxY, x2, maxY, x1, minY, x2, minY]));
     d.set(PDFName.of('C'), pdfDoc.context.obj([r,g,b]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
-    d.set(PDFName.of('Contents'), PDFString.of(subtype));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     if(pageRef) d.set(PDFName.of('P'), pageRef);
     return d;
@@ -3078,7 +3066,6 @@
     d.set(PDFName.of('Rect'), pdfDoc.context.obj([rectX1, yTop - boxH, rectX2, yTop]));
     d.set(PDFName.of('F'), PDFNumber.of(4));
     d.set(PDFName.of('Contents'), PDFString.of(s.text || ''));
-    d.set(PDFName.of('T'), PDFString.of(PDF_ANNOT_PRODUCER));
     d.set(PDFName.of('NM'), PDFString.of('pdfqalam-' + Math.random().toString(36).slice(2)));
     const daStr = '/Helv ' + fsPt.toFixed(2) + ' Tf ' + r.toFixed(3) + ' ' + g.toFixed(3) + ' ' + b.toFixed(3) + ' rg';
     d.set(PDFName.of('DA'), PDFString.of(daStr));
