@@ -9813,6 +9813,25 @@ function __bootDept2() {
     return n < 2 && !ex.length ? null : { n: n, exams: ex };
   }
 
+  function dupLecTag(l, i) {
+    return REP_LEC + " — " + ((l && l.t) || "محاضرة " + (i + 1));
+  }
+  function dupLecs(subj) {
+    var out = [];
+    (subj.lectures || []).forEach(function (l, i) {
+      if (l && Array.isArray(l.questions) && l.questions.length)
+        out.push({ v: dupLecTag(l, i), label: l.t || "محاضرة " + (i + 1) });
+    });
+    return out;
+  }
+  function dupBanks(subj) {
+    var out = [];
+    (subj.testBanks || []).forEach(function (b) {
+      if (b && b.t && b.questions && b.questions.length)
+        out.push({ v: b.t, label: b.t });
+    });
+    return out;
+  }
   // بيحسب المجموعات المكررة للمادة
   function computeDupes(subj) {
     var seenObj = DUP_FLAG ? new WeakSet() : null;
@@ -9836,7 +9855,7 @@ function __bootDept2() {
       if (!l || !Array.isArray(l.questions)) return;
       var label = "📚 " + (l.t || "محاضرة " + (i + 1));
       l.questions.forEach(function (q, j) {
-        add(q, label, j + 1, [REP_LEC]);
+        add(q, label, j + 1, [REP_LEC, dupLecTag(l, i)]);
       });
     });
     SOURCES.forEach(function (src) {
@@ -9969,13 +9988,58 @@ function __bootDept2() {
     return DUP_FULL.get(subj) || null;
   }
 
+  function dupfExtraHTML(subj, saved, withAll) {
+    function chk(x, cls) {
+      return (
+        '<label class="rep-chk-l"><input type="checkbox" class="rep-chk ' +
+        cls +
+        '" value="' +
+        escAttr(x.v) +
+        '"' +
+        (saved.indexOf(x.v) >= 0 ? " checked" : "") +
+        ' onchange="repUpd(this)"> <span>' +
+        esc(x.label) +
+        "</span></label>"
+      );
+    }
+    function grp(icon, name, items, cls) {
+      if (!items.length) return "";
+      var n = items.filter(function (x) {
+        return saved.indexOf(x.v) >= 0;
+      }).length;
+      return (
+        '<details class="rep-cat" data-repscope="1"><summary><span>' +
+        icon +
+        " " +
+        name +
+        '</span><span class="rep-cnt">' +
+        (n ? "✓ " + n : "") +
+        '</span></summary><div class="rep-chks">' +
+        (withAll
+          ? '<button type="button" class="rep-all" onclick="repAll(this)">☑️ تحديد كل ' +
+            name +
+            "</button>"
+          : "") +
+        items
+          .map(function (x) {
+            return chk(x, cls);
+          })
+          .join("") +
+        "</div></details>"
+      );
+    }
+    var a = grp("📚", "أسئلة المحاضرات", dupLecs(subj), "dupf-lec"),
+      b = grp("🏦", "بنوك الأسئلة", dupBanks(subj), "dupf-bank");
+    if (!a && !b) return "";
+    return (
+      '<div class="rep-sec"><div class="rep-sec-t">📚 مصادر تانية</div>' +
+      a +
+      b +
+      "</div>"
+    );
+  }
   function dupfFlatHTML(subj, saved) {
     var titles = repExamTitles(subj);
-    (subj.testBanks || []).forEach(function (b) {
-      if (b && b.t && b.questions && b.questions.length && titles.indexOf(b.t) < 0)
-        titles.push(b.t);
-    });
-    titles = titles.concat([REP_LEC, REP_BANK]);
     return (
       '<div data-repscope="1"><div class="rep-sec-t"><button type="button" class="rep-all" style="margin:0" onclick="repAll(this)">☑️ تحديد الكل</button></div><div class="rep-chks">' +
       titles
@@ -9991,9 +10055,162 @@ function __bootDept2() {
           );
         })
         .join("") +
-      "</div></div>"
+      "</div>" +
+      dupfExtraHTML(subj, saved, true) +
+      "</div>"
     );
   }
+
+  // ---------- حالة الفلتر (محفوظة في المتصفح، والافتراضي = كل حاجة متحددة) ----------
+  function dupfAllTitles(subj) {
+    var titles = repExamTitles(subj).slice(),
+      lecs = dupLecs(subj),
+      banks = dupBanks(subj);
+    function push(t) {
+      if (titles.indexOf(t) < 0) titles.push(t);
+    }
+    lecs.forEach(function (x) {
+      push(x.v);
+    });
+    banks.forEach(function (x) {
+      push(x.v);
+    });
+    if (lecs.length) push(REP_LEC);
+    if (banks.length) push(REP_BANK);
+    return titles;
+  }
+  function dupfIsAll(subj, f) {
+    if (!subj || !f) return true;
+    return dupfAllTitles(subj).every(function (t) {
+      return f.sel.indexOf(t) >= 0;
+    });
+  }
+  function dupfStoreKey(subj) {
+    return "qdupf_" + ((subj && subj.name) || "");
+  }
+  function dupfState(subj) {
+    var k = repKey(subj);
+    if (DUPF_STATE[k]) return DUPF_STATE[k];
+    var f = null;
+    try {
+      var raw = JSON.parse(localStorage.getItem(dupfStoreKey(subj)) || "null");
+      if (raw && typeof raw === "object") {
+        var n = parseInt(raw.n, 10);
+        f = {
+          sel: raw.all ? dupfAllTitles(subj) : Array.isArray(raw.sel) ? raw.sel : [],
+          more: !!raw.more,
+          n: n >= 2 ? n : 2,
+        };
+      }
+    } catch (e) {}
+    if (!f) f = { sel: dupfAllTitles(subj), more: false, n: 2 };
+    DUPF_STATE[k] = f;
+    return f;
+  }
+  function dupfSave(subj, f) {
+    DUPF_STATE[repKey(subj)] = f;
+    try {
+      localStorage.setItem(
+        dupfStoreKey(subj),
+        JSON.stringify({
+          all: dupfIsAll(subj, f),
+          sel: f.sel,
+          more: f.more,
+          n: f.n,
+        }),
+      );
+    } catch (e) {}
+  }
+  // هل المستخدم كان بدأ حل؟ (عشان أول ما يدخل التاب تاني يكمل على طول)
+  var DUP_RESUMED = {};
+  function dupfStartedKey(subj) {
+    return "qdupr_" + ((subj && subj.name) || "");
+  }
+  function dupfIsStarted(subj) {
+    try {
+      return localStorage.getItem(dupfStartedKey(subj)) === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+  function dupfSetStarted(subj, on) {
+    try {
+      if (on) localStorage.setItem(dupfStartedKey(subj), "1");
+      else localStorage.removeItem(dupfStartedKey(subj));
+    } catch (e) {}
+  }
+  function dupfClearState(subj) {
+    delete DUPF_STATE[repKey(subj)];
+    try {
+      localStorage.removeItem(dupfStoreKey(subj));
+    } catch (e) {}
+    dupfSetStarted(subj, false);
+  }
+  // بيبني الاختبار حسب الاختيار (نفس العنوان = نفس التقدم المحفوظ)
+  function dupfBuildUse(item, f, qs, subj) {
+    var use = item;
+    if ((f.sel.length && !dupfIsAll(subj, f)) || !f.more || f.n > 2) {
+      var sg =
+          f.sel.slice().sort().join("|") + "#" + (f.more ? 1 : 0) + "#" + f.n,
+        h = repId(sg).split("_")[0].slice(0, 5);
+      use = {
+        t: DUP_TITLE + " — اختيار مخصص (#" + h + ")",
+        d: item.d,
+        questions: qs,
+      };
+    }
+    return use;
+  }
+  function dupfApplySaved(subj) {
+    var item = subj && dupFull(subj);
+    if (!item) return;
+    var f = dupfState(subj),
+      qs = dupfMatch(item, f);
+    if (qs.length) subj.dupes = [dupfBuildUse(item, f, qs, subj)];
+  }
+  window.dupfReset = function () {
+    var subj = curSubj();
+    if (!subj) return;
+    dupfClearState(subj);
+    renderDupList();
+    if (typeof showToast === "function")
+      showToast("🔄 اتعمل إعادة تعيين، كل الامتحانات اتحددت تاني");
+  };
+  // تعديل الاختيار من غير مسح
+  window.dupfQuizEdit = function () {
+    var subj = curSubj();
+    if (!subj) return;
+    try {
+      if (history.state && history.state.qv)
+        history.replaceState({ view: "main" }, "", location.href);
+    } catch (e) {}
+    LAST_QUIZ_DUPES = false;
+    if (ORIG_GBFQ) ORIG_GBFQ();
+    else if (typeof goBackFromQuiz === "function") goBackFromQuiz();
+    try {
+      var db = document.getElementById("tab-btn-dupes");
+      if (db) (ORIG_OPEN || openSubTab)({ currentTarget: db }, "sub-dupes");
+    } catch (e) {}
+  };
+  // الزرار اللي فوق صفحة الحل
+  window.dupfQuizReset = function () {
+    var subj = curSubj();
+    if (!subj) return;
+    dupfClearState(subj);
+    try {
+      if (history.state && history.state.qv)
+        history.replaceState({ view: "main" }, "", location.href);
+    } catch (e) {}
+    LAST_QUIZ_DUPES = false;
+    if (ORIG_GBFQ) ORIG_GBFQ();
+    else if (typeof goBackFromQuiz === "function") goBackFromQuiz();
+    try {
+      var db = document.getElementById("tab-btn-dupes");
+      if (db) (ORIG_OPEN || openSubTab)({ currentTarget: db }, "sub-dupes");
+    } catch (e) {}
+    if (typeof showToast === "function")
+      showToast("🔄 اتعمل إعادة تعيين، اختار الامتحانات من الأول");
+  };
 
   function dupfRead() {
     var root = document.getElementById("dupes-list");
@@ -10001,6 +10218,16 @@ function __bootDept2() {
     if (root)
       [].forEach.call(root.querySelectorAll(".rep-chk:checked"), function (c) {
         sel.push(c.value);
+      });
+    if (root)
+      [
+        [".dupf-lec", REP_LEC],
+        [".dupf-bank", REP_BANK],
+      ].forEach(function (g) {
+        var all = root.querySelectorAll(g[0]),
+          on = root.querySelectorAll(g[0] + ":checked");
+        if (all.length && all.length === on.length && sel.indexOf(g[1]) < 0)
+          sel.push(g[1]);
       });
     var mo = root && root.querySelector(".dupf-more"),
       ni = root && root.querySelector(".dupf-num"),
@@ -10012,7 +10239,7 @@ function __bootDept2() {
     return item.questions.filter(function (q) {
       var c = q._dupCount || 0;
       if (f.more ? c < f.n : c !== f.n) return false;
-      if (!f.sel.length) return true;
+      if (!f.sel.length || dupfIsAll(curSubj(), f)) return true;
       return (q._dupTags || []).some(function (t) {
         return f.sel.indexOf(t) >= 0;
       });
@@ -10025,7 +10252,7 @@ function __bootDept2() {
       root = document.getElementById("dupes-list");
     if (!item || !root) return;
     var f = dupfRead();
-    DUPF_STATE[repKey(subj)] = f;
+    dupfSave(subj, f);
     var n = dupfMatch(item, f).length;
     var c = root.querySelector(".dupf-n");
     if (c) c.textContent = n;
@@ -10039,6 +10266,7 @@ function __bootDept2() {
     if (!item) return;
     var f = dupfRead(),
       qs = dupfMatch(item, f);
+    dupfSave(subj, f);
     if (!qs.length) {
       var root = document.getElementById("dupes-list"),
         m = root && root.querySelector(".dupf-msg");
@@ -10047,17 +10275,9 @@ function __bootDept2() {
       if (typeof showToast === "function") showToast(txt);
       return;
     }
-    var use = item;
-    if (f.sel.length || !f.more || f.n > 2) {
-      var sg =
-          f.sel.slice().sort().join("|") + "#" + (f.more ? 1 : 0) + "#" + f.n,
-        h = repId(sg).split("_")[0].slice(0, 5);
-      use = {
-        t: DUP_TITLE + " — اختيار مخصص (#" + h + ")",
-        d: item.d,
-        questions: qs,
-      };
-    }
+    var use = dupfBuildUse(item, f, qs, subj);
+    dupfSetStarted(subj, true);
+    DUP_RESUMED[repKey(subj)] = true;
     subj.dupes = [use];
     if (typeof openQuiz === "function") openQuiz(currentSubject, "dupes", 0);
   };
@@ -10073,14 +10293,18 @@ function __bootDept2() {
       return;
     }
     repStyle();
-    var f = DUPF_STATE[repKey(subj)] || { sel: [], more: false, n: 2 },
+    var f = dupfState(subj),
       n = dupfMatch(item, f).length;
     box.innerHTML =
-      '<div class="dupf"><p class="ld-hint">🔁 الأسئلة اللي اتكررت في أكتر من مكان. حدد الامتحانات اللي عايز أسئلتها المكررة، ولو مختارتش حاجة هتحل كل الأسئلة المكررة.</p>' +
+      '<div class="dupf"><div class="rep-btns" style="margin-bottom:12px">' +
+      (dupfIsStarted(subj)
+        ? '<button type="button" onclick="dupfStart()">▶ كمّل الحل</button>'
+        : "") +
+      '</div><p class="ld-hint">🔁 الأسئلة اللي اتكررت في أكتر من مكان. كل الامتحانات متحددة افتراضيًا، شيل علامة اللي مش عايزه. اختيارك بيتحفظ لحد ما تغيّره.</p>' +
       '<div class="rep-form" style="display:block">' +
       '<div class="rep-sub">🔎 حدد الأسئلة المكررة في أنهي امتحانات؟</div>' +
       (repHasCats(subj)
-        ? '<div class="rep-groups">' + repGroupsHTML(subj, f.sel, true) + "</div>"
+        ? '<div class="rep-groups">' + repGroupsHTML(subj, f.sel, true, true) + "</div>"
         : dupfFlatHTML(subj, f.sel)) +
       '<div class="rep-sub">عدد مرات التكرار</div>' +
       '<div class="rep-row"><label>الأسئلة اللي اتكررت <input type="number" class="rep-n dupf-num" min="2" max="99" value="' +
@@ -10092,7 +10316,7 @@ function __bootDept2() {
       '<div class="dupf-msg" role="alert" aria-live="polite" style="color:var(--danger);font-weight:700;min-height:20px;margin-bottom:8px"></div>' +
       '<div class="rep-btns"><button type="button" onclick="dupfStart()">▶ ابدأ الحل (<span class="dupf-n">' +
       n +
-      "</span> سؤال)</button></div></div></div>";
+      '</span> سؤال)</button></div></div></div>';
   }
 
   // ---------- الـ hooks ----------
@@ -10140,13 +10364,130 @@ function __bootDept2() {
     };
   });
 
-  hook("openQuiz", function (orig) {
+  var ORIG_OPEN = null,
+    LAST_QUIZ_DUPES = false,
+    PREV_KEY = "qdup_prevtab";
+  function dupPrevGet() {
+    try {
+      return localStorage.getItem(PREV_KEY) || "sub-lectures";
+    } catch (x) {
+      return "sub-lectures";
+    }
+  }
+  function dupPrevSet(id) {
+    try {
+      if (id && id !== "sub-dupes") localStorage.setItem(PREV_KEY, id);
+    } catch (x) {}
+  }
+  function dupSubBtn(id) {
+    var bs = document.querySelectorAll("#sub-tabs-container .sub-tab-button");
+    for (var i = 0; i < bs.length; i++) {
+      var oc = bs[i].getAttribute("onclick") || "";
+      if (oc.indexOf("'" + id + "'") >= 0 && bs[i].style.display !== "none")
+        return bs[i];
+    }
+    return null;
+  }
+  // بعد الرجوع من حل المكررة: نرجّع التاب اللي كان فاتحه قبل ما يدوس على المكررة
+  function dupGoPrevTab() {
+    if (!LAST_QUIZ_DUPES) return;
+    LAST_QUIZ_DUPES = false;
+    try {
+      var id = dupPrevGet(),
+        b = dupSubBtn(id);
+      if (!b) {
+        id = "sub-lectures";
+        b = dupSubBtn(id);
+      }
+      if (b && ORIG_OPEN) ORIG_OPEN({ currentTarget: b }, id);
+    } catch (x) {}
+  }
+  hook("openSubTab", function (orig) {
+    ORIG_OPEN = orig;
     return function (e, t) {
       try {
-        if (t === "dupes" && typeof subjects !== "undefined")
-          ensureDupes(subjects[e]);
+        var act = document.querySelector("#section2 .sub-content.active");
+        if (t === "sub-dupes" && act) dupPrevSet(act.id);
+        else dupPrevSet(t);
+      } catch (x) {}
+      try {
+        var subj = curSubj();
+        if (t === "sub-dupes" && subj && dupfIsStarted(subj)) {
+          var item = dupFull(subj);
+          if (item && dupfMatch(item, dupfState(subj)).length) {
+            // مبنغيّرش التاب: لما يرجع يلاقي نفس التاب اللي كان عليه
+            window.dupfStart();
+            return;
+          }
+          dupfClearState(subj);
+        }
       } catch (x) {}
       return orig.apply(this, arguments);
+    };
+  });
+
+  // زرار الرجوع بتاع المتصفح: نسجّل خطوة لما يتفتح الاختبار، ونقفله لما المتصفح يرجع
+  var ORIG_GBFQ =
+    typeof window.goBackFromQuiz === "function" ? window.goBackFromQuiz : null;
+  function quizViewOpen() {
+    var v = document.getElementById("quiz-view");
+    return !!(v && v.classList.contains("active"));
+  }
+  if (ORIG_GBFQ) {
+    window.goBackFromQuiz = function () {
+      try {
+        if (history.state && history.state.qv) {
+          history.back();
+          return;
+        }
+      } catch (x) {}
+      var r = ORIG_GBFQ.apply(this, arguments);
+      dupGoPrevTab();
+      return r;
+    };
+    window.addEventListener("popstate", function (ev) {
+      try {
+        if (quizViewOpen() && !(ev.state && ev.state.qv)) {
+          ORIG_GBFQ();
+          dupGoPrevTab();
+        }
+      } catch (x) {}
+    });
+  }
+
+  hook("openQuiz", function (orig) {
+    return function (e, t) {
+      LAST_QUIZ_DUPES = t === "dupes";
+      try {
+        var stt = { qv: 1, view: "quiz" };
+        if (history.state && history.state.qv)
+          history.replaceState(stt, "", location.href);
+        else history.pushState(stt, "", location.href);
+      } catch (x) {}
+      try {
+        if (t === "dupes" && typeof subjects !== "undefined") {
+          ensureDupes(subjects[e]);
+          dupfApplySaved(subjects[e]);
+          DUP_RESUMED[repKey(subjects[e])] = true;
+        }
+      } catch (x) {}
+      var res = orig.apply(this, arguments);
+      try {
+        var old = document.getElementById("dupf-quiz-top");
+        if (old) old.remove();
+        if (t === "dupes") {
+          var qt = document.getElementById("quiz-title");
+          if (qt && qt.parentNode) {
+            var bar = document.createElement("div");
+            bar.id = "dupf-quiz-top";
+            bar.style.cssText = "margin:0 0 12px";
+            bar.innerHTML =
+              '<button type="button" class="back-btn" style="background:var(--accent);margin:0 0 6px 6px" onclick="dupfQuizEdit()">⚙️ تعديل الاختيار</button>';
+            qt.parentNode.insertBefore(bar, qt);
+          }
+        }
+      } catch (x) {}
+      return res;
     };
   });
 
@@ -10324,7 +10665,7 @@ function __bootDept2() {
     );
   }
 
-  function repGroupsHTML(subj, saved, withAll) {
+  function repGroupsHTML(subj, saved, withAll, fine) {
     function allBtn(label) {
       return withAll
         ? '<button type="button" class="rep-all" onclick="repAll(this)">☑️ ' +
@@ -10396,6 +10737,7 @@ function __bootDept2() {
           .join("") +
         "</div>";
     });
+    if (fine) return h + dupfExtraHTML(subj, saved, withAll);
     h +=
       '<div class="rep-sec" data-repscope="1"><div class="rep-sec-t">📚 مصادر تانية' +
       allBtn("تحديد الكل") +
